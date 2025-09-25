@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../errors/">
+        <link rel="prev" href="../structs/">
       
       
-        <link rel="next" href="../assert/">
+        <link rel="next" href="../http/overview/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>json - Harneet Language</title>
+        <title>json - Harneet Programming Language</title>
       
     
     
@@ -65,7 +65,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -90,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Harneet Language" class="md-header__button md-logo" aria-label="Harneet Language" data-md-component="logo">
+    <a href="../.." title="Harneet Programming Language" class="md-header__button md-logo" aria-label="Harneet Programming Language" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -104,7 +104,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Harneet Language
+            Harneet Programming Language
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -123,20 +123,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      <label class="md-header__button md-icon" title="Light Mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
       </label>
     
   
@@ -216,13 +216,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Harneet Language" class="md-nav__button md-logo" aria-label="Harneet Language" data-md-component="logo">
+    <a href="../.." title="Harneet Programming Language" class="md-nav__button md-logo" aria-label="Harneet Programming Language" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Harneet Language
+    Harneet Programming Language
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -256,56 +256,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../language_spec/" class="md-nav__link">
+      <a href="../../command_line/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Language Specification
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../interpreter_architecture/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Interpreter Architecture
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../error_handling_guide/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Error Handling Guide
+    Command Line
     
   </span>
   
@@ -325,20 +281,17 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -351,12 +304,35 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             General
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/comments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -411,58 +387,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general/scoping_variable_management/" class="md-nav__link">
+      <a href="../../general/keywords_identifiers/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Scoping and Variable Management
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../general/comments/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Comments
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../general/import_system/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Import System
+    Keywords and Identifiers
     
   </span>
   
@@ -503,12 +433,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general/unicode_support/" class="md-nav__link">
+      <a href="../../general/arrays/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Unicode Support
+    Arrays
     
   </span>
   
@@ -526,12 +456,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general/arrays/" class="md-nav__link">
+      <a href="../../general/maps/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Arrays
+    Maps
     
   </span>
   
@@ -572,6 +502,52 @@
   
   
     <li class="md-nav__item">
+      <a href="../../general/pattern_matching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pattern Matching
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../break_continue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Break & Continue
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../general/block_structure/" class="md-nav__link">
         
   
@@ -595,12 +571,81 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general/keywords_identifiers/" class="md-nav__link">
+      <a href="../../general/scoping_variable_management/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Keywords and Identifiers
+    Scoping and Variable Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cast/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cast
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/import_system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Import System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/unicode_support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unicode Support
     
   </span>
   
@@ -650,20 +695,17 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -676,8 +718,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Functions
           </label>
@@ -736,6 +778,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../functions/functional/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Functional features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../functions/advanced_features/" class="md-nav__link">
         
   
@@ -771,20 +836,15 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
@@ -797,8 +857,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Standard Library
           </label>
@@ -834,12 +894,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../math/" class="md-nav__link">
+      <a href="../input/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    math
+    input
     
   </span>
   
@@ -880,6 +940,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../math/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    math
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../arrays/" class="md-nav__link">
         
   
@@ -903,12 +986,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../datetime/" class="md-nav__link">
+      <a href="../collections/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    datetime
+    collections
     
   </span>
   
@@ -926,104 +1009,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../os/" class="md-nav__link">
+      <a href="../structs/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    os
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../path/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    path
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../file/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    file
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../log/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    log
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../errors/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    errors
+    structs
     
   </span>
   
@@ -1103,7 +1094,7 @@
           <li class="md-nav__item">
   <a href="#marshalvalue" class="md-nav__link">
     <span class="md-ellipsis">
-      Marshal(value)
+       Marshal(value)
     </span>
   </a>
   
@@ -1112,7 +1103,7 @@
           <li class="md-nav__item">
   <a href="#unmarshaljson_string" class="md-nav__link">
     <span class="md-ellipsis">
-      Unmarshal(json_string)
+       Unmarshal(json_string)
     </span>
   </a>
   
@@ -1121,7 +1112,7 @@
           <li class="md-nav__item">
   <a href="#validjson_string" class="md-nav__link">
     <span class="md-ellipsis">
-      Valid(json_string)
+       Valid(json_string)
     </span>
   </a>
   
@@ -1130,7 +1121,7 @@
           <li class="md-nav__item">
   <a href="#indentjson-prefix-indent" class="md-nav__link">
     <span class="md-ellipsis">
-      Indent(json, prefix, indent)
+       Indent(json, prefix, indent)
     </span>
   </a>
   
@@ -1141,9 +1132,379 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#json-maps-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSON-Maps Integration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JSON-Maps Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type Mapping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#round-trip-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Round-trip Conversion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#working-with-api-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with API Responses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      See Also
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    HTTP
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_9">
+            <span class="md-nav__icon md-icon"></span>
+            HTTP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/client/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTTP Client
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/requests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Request Building
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/responses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Response Handling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTTP Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/routing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Routing & Mux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/middleware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Middleware
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/auth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Authentication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/cookies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cookies & Sessions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examples & Patterns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -1163,6 +1524,236 @@
   
   <span class="md-ellipsis">
     assert
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    errors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    file
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    path
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../os/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    os
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datetime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    datetime
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    flags
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    exec
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../regex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    regex
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../box/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    box
     
   </span>
   
@@ -1263,7 +1854,7 @@
           <li class="md-nav__item">
   <a href="#marshalvalue" class="md-nav__link">
     <span class="md-ellipsis">
-      Marshal(value)
+       Marshal(value)
     </span>
   </a>
   
@@ -1272,7 +1863,7 @@
           <li class="md-nav__item">
   <a href="#unmarshaljson_string" class="md-nav__link">
     <span class="md-ellipsis">
-      Unmarshal(json_string)
+       Unmarshal(json_string)
     </span>
   </a>
   
@@ -1281,7 +1872,7 @@
           <li class="md-nav__item">
   <a href="#validjson_string" class="md-nav__link">
     <span class="md-ellipsis">
-      Valid(json_string)
+       Valid(json_string)
     </span>
   </a>
   
@@ -1290,7 +1881,7 @@
           <li class="md-nav__item">
   <a href="#indentjson-prefix-indent" class="md-nav__link">
     <span class="md-ellipsis">
-      Indent(json, prefix, indent)
+       Indent(json, prefix, indent)
     </span>
   </a>
   
@@ -1298,6 +1889,75 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json-maps-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSON-Maps Integration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JSON-Maps Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type Mapping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#round-trip-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Round-trip Conversion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#working-with-api-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with API Responses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      See Also
+    </span>
+  </a>
   
 </li>
       
@@ -1318,16 +1978,17 @@
 
 
 <h1 id="json-module"><code>json</code> Module</h1>
-<p>The <code>json</code> module provides functions for working with JSON data.</p>
+<p>The <code>json</code> module provides functions for working with JSON data, including seamless integration with Harneet's map and array types.</p>
 <h2 id="functions">Functions</h2>
-<h3 id="marshalvalue"><code>Marshal(value)</code></h3>
-<p>Converts a Harneet value to a JSON string.</p>
+<h3 id="marshalvalue"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>Marshal(value)</code></h3>
+<p>Converts a Harneet value to a JSON string. Supports strings, numbers, booleans, arrays, and maps.</p>
 <p><strong>Parameters:</strong>
-- <code>value</code>: The value to convert.</p>
+- <code>value</code>: The value to convert (string, integer, boolean, None, array, or map).</p>
 <p><strong>Returns:</strong>
 - <code>(string, error)</code>: The JSON string representation of the value.</p>
-<p><strong>Example:</strong></p>
-<pre><code class="language-harneet">import fmt
+<p><strong>Examples:</strong></p>
+<p>Basic types:
+<div class="highlight"><pre><span></span><code>import fmt
 import json
 
 var data = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;]
@@ -1337,15 +1998,41 @@ if err != None {
 } else {
     fmt.Println(jsonString) // Output: [&quot;apple&quot;,&quot;banana&quot;,&quot;cherry&quot;]
 }
-</code></pre>
-<h3 id="unmarshaljson_string"><code>Unmarshal(json_string)</code></h3>
-<p>Parses a JSON string into a Harneet value.</p>
+</code></pre></div></p>
+<p>Maps to JSON objects:
+<div class="highlight"><pre><span></span><code>import fmt
+import json
+
+var user = {&quot;name&quot;: &quot;Alice&quot;, &quot;age&quot;: 25, &quot;active&quot;: true}
+var jsonResult, err = json.Marshal(user)
+if err != None {
+    fmt.Println(&quot;Marshal error:&quot;, err)
+} else {
+    fmt.Println(jsonResult) // Output: {&quot;age&quot;:25,&quot;active&quot;:true,&quot;name&quot;:&quot;Alice&quot;}
+}
+</code></pre></div></p>
+<p>Nested structures:
+<div class="highlight"><pre><span></span><code>import fmt
+import json
+
+var config = {&quot;database&quot;: {&quot;host&quot;: &quot;localhost&quot;, &quot;port&quot;: 5432}, &quot;debug&quot;: true}
+var jsonConfig, err = json.Marshal(config)
+if err != None {
+    fmt.Println(&quot;Marshal error:&quot;, err)
+} else {
+    fmt.Println(jsonConfig) // Output: {&quot;database&quot;:{&quot;host&quot;:&quot;localhost&quot;,&quot;port&quot;:5432},&quot;debug&quot;:true}
+}
+</code></pre></div></p>
+<hr />
+<h3 id="unmarshaljson_string"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>Unmarshal(json_string)</code></h3>
+<p>Parses a JSON string into a Harneet value. JSON objects become Harneet maps, JSON arrays become Harneet arrays.</p>
 <p><strong>Parameters:</strong>
 - <code>json_string</code>: The JSON string to parse.</p>
 <p><strong>Returns:</strong>
-- <code>(any, error)</code>: The parsed Harneet value.</p>
-<p><strong>Example:</strong></p>
-<pre><code class="language-harneet">import fmt
+- <code>(any, error)</code>: The parsed Harneet value (string, integer, boolean, None, array, or map).</p>
+<p><strong>Examples:</strong></p>
+<p>JSON arrays to Harneet arrays:
+<div class="highlight"><pre><span></span><code>import fmt
 import json
 
 var jsonString = &quot;[\&quot;apple\&quot;,\&quot;banana\&quot;,\&quot;cherry\&quot;]&quot;
@@ -1355,14 +2042,47 @@ if parseErr != None {
 } else {
     fmt.Println(parsed) // Output: [apple, banana, cherry]
 }
-</code></pre>
-<h3 id="validjson_string"><code>Valid(json_string)</code></h3>
+</code></pre></div></p>
+<p>JSON objects to Harneet maps:
+<div class="highlight"><pre><span></span><code>import fmt
+import json
+
+var jsonUser = &quot;{\&quot;name\&quot;: \&quot;Alice\&quot;, \&quot;age\&quot;: 25, \&quot;active\&quot;: true}&quot;
+var user, err = json.Unmarshal(jsonUser)
+if err != None {
+    fmt.Println(&quot;Parse error:&quot;, err)
+} else {
+    fmt.Printf(&quot;User: %s\n&quot;, user) // Output: User: {name: Alice, age: 25, active: true}
+    // Access map values
+    // var name = user[&quot;name&quot;]  // Returns &quot;Alice&quot;
+    // var age = user[&quot;age&quot;]    // Returns 25
+}
+</code></pre></div></p>
+<p>Nested JSON structures:
+<div class="highlight"><pre><span></span><code>import fmt
+import json
+
+var complexJson = &quot;{\&quot;users\&quot;: [{\&quot;name\&quot;: \&quot;Alice\&quot;}, {\&quot;name\&quot;: \&quot;Bob\&quot;}], \&quot;meta\&quot;: {\&quot;count\&quot;: 2}}&quot;
+var data, err = json.Unmarshal(complexJson)
+if err != None {
+    fmt.Println(&quot;Parse error:&quot;, err)
+} else {
+    fmt.Printf(&quot;Data: %s\n&quot;, data)
+    // Access nested structures
+    // var users = data[&quot;users&quot;]     // Array of user maps
+    // var meta = data[&quot;meta&quot;]       // Meta information map
+    // var count = meta[&quot;count&quot;]     // Returns 2
+}
+</code></pre></div></p>
+<hr />
+<h3 id="validjson_string"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>Valid(json_string)</code></h3>
 <p>Checks if a string is a valid JSON.</p>
 <p><strong>Parameters:</strong>
 - <code>json_string</code>: The string to check.</p>
 <p><strong>Returns:</strong>
 - <code>(boolean, error)</code>: <code>true</code> if the string is valid JSON, <code>false</code> otherwise.</p>
-<h3 id="indentjson-prefix-indent"><code>Indent(json, prefix, indent)</code></h3>
+<hr />
+<h3 id="indentjson-prefix-indent"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>Indent(json, prefix, indent)</code></h3>
 <p>Formats a JSON string with indentation.</p>
 <p><strong>Parameters:</strong>
 - <code>json</code>: The JSON string to format.
@@ -1370,7 +2090,148 @@ if parseErr != None {
 - <code>indent</code>: The indentation string.</p>
 <p><strong>Returns:</strong>
 - <code>(string, error)</code>: The indented JSON string.</p>
-<p>```</p>
+<hr />
+<h2 id="json-maps-integration">JSON-Maps Integration</h2>
+<p>The <code>json</code> module provides seamless integration with Harneet's map and array types, making JSON processing natural and efficient.</p>
+<h3 id="type-mapping">Type Mapping</h3>
+<table>
+<thead>
+<tr>
+<th>JSON Type</th>
+<th>Harneet Type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>object</code></td>
+<td><code>map</code></td>
+<td><code>{"key": "value"}</code> → <code>{key: value}</code></td>
+</tr>
+<tr>
+<td><code>array</code></td>
+<td><code>array</code></td>
+<td><code>[1, 2, 3]</code> → <code>[1, 2, 3]</code></td>
+</tr>
+<tr>
+<td><code>string</code></td>
+<td><code>string</code></td>
+<td><code>"hello"</code> → <code>"hello"</code></td>
+</tr>
+<tr>
+<td><code>number</code></td>
+<td><code>int</code> or <code>float64</code></td>
+<td><code>42</code> → <code>42</code>, <code>3.14</code> → <code>3.14</code></td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td><code>bool</code></td>
+<td><code>true</code> → <code>true</code></td>
+</tr>
+<tr>
+<td><code>null</code></td>
+<td><code>None</code></td>
+<td><code>null</code> → <code>None</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="round-trip-conversion">Round-trip Conversion</h3>
+<p>JSON data can be converted to Harneet types and back without data loss:</p>
+<div class="highlight"><pre><span></span><code>import fmt
+import json
+
+// Original Harneet data
+var original = {&quot;name&quot;: &quot;Alice&quot;, &quot;scores&quot;: [95, 87, 92], &quot;active&quot;: true}
+
+// Convert to JSON
+var jsonStr, err1 = json.Marshal(original)
+if err1 != None {
+    fmt.Println(&quot;Marshal error:&quot;, err1)
+    return
+}
+
+fmt.Printf(&quot;JSON: %s\n&quot;, jsonStr)
+
+// Convert back to Harneet
+var restored, err2 = json.Unmarshal(jsonStr)
+if err2 != None {
+    fmt.Println(&quot;Unmarshal error:&quot;, err2)
+    return
+}
+
+fmt.Printf(&quot;Restored: %s\n&quot;, restored)
+// Output: Restored: {name: Alice, scores: [95, 87, 92], active: true}
+</code></pre></div>
+<h3 id="working-with-api-responses">Working with API Responses</h3>
+<p>JSON APIs can be easily processed using Harneet's map operations:</p>
+<div class="highlight"><pre><span></span><code>import fmt
+import json
+
+// Simulate API response
+var apiResponse = &quot;{\&quot;users\&quot;: [{\&quot;id\&quot;: 1, \&quot;name\&quot;: \&quot;Alice\&quot;}, {\&quot;id\&quot;: 2, \&quot;name\&quot;: \&quot;Bob\&quot;}], \&quot;total\&quot;: 2}&quot;
+
+var data, err = json.Unmarshal(apiResponse)
+if err != None {
+    fmt.Println(&quot;API parse error:&quot;, err)
+    return
+}
+
+// Access API data using map operations
+// var users = data[&quot;users&quot;]
+// var total = data[&quot;total&quot;]
+// var firstUser = users[0]
+// var firstName = firstUser[&quot;name&quot;]
+
+fmt.Printf(&quot;API Data: %s\n&quot;, data)
+</code></pre></div>
+<h3 id="configuration-management">Configuration Management</h3>
+<p>JSON configuration files can be loaded as Harneet maps:</p>
+<div class="highlight"><pre><span></span><code>import fmt
+import json
+
+var configJson = &quot;{\&quot;database\&quot;: {\&quot;host\&quot;: \&quot;localhost\&quot;, \&quot;port\&quot;: 5432}, \&quot;cache\&quot;: {\&quot;ttl\&quot;: 300, \&quot;enabled\&quot;: true}}&quot;
+
+var config, err = json.Unmarshal(configJson)
+if err != None {
+    fmt.Println(&quot;Config parse error:&quot;, err)
+    return
+}
+
+// Access configuration values
+// var dbHost = config[&quot;database&quot;][&quot;host&quot;]
+// var cacheEnabled = config[&quot;cache&quot;][&quot;enabled&quot;]
+
+fmt.Printf(&quot;Configuration: %s\n&quot;, config)
+</code></pre></div>
+<h3 id="error-handling">Error Handling</h3>
+<p>The JSON module provides comprehensive error handling for invalid data:</p>
+<div class="highlight"><pre><span></span><code>import fmt
+import json
+
+// Invalid JSON
+var invalidJson = &quot;{\&quot;name\&quot;: \&quot;Alice\&quot;, \&quot;age\&quot;: }&quot;
+var data, err = json.Unmarshal(invalidJson)
+if err != None {
+    fmt.Printf(&quot;JSON Error: %s\n&quot;, err)
+} else {
+    fmt.Printf(&quot;Data: %s\n&quot;, data)
+}
+
+// Map with non-string keys (not JSON compatible)
+var invalidMap = {42: &quot;number key&quot;, &quot;string&quot;: &quot;string key&quot;}
+var jsonStr, marshalErr = json.Marshal(invalidMap)
+if marshalErr != None {
+    fmt.Printf(&quot;Marshal Error: %s\n&quot;, marshalErr)
+} else {
+    fmt.Printf(&quot;JSON: %s\n&quot;, jsonStr)
+}
+</code></pre></div>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="../../general/maps/">Maps</a> - Harneet's map data structure</li>
+<li><a href="../../general/arrays/">Arrays</a> - Harneet's array data structure</li>
+<li><a href="../../error_handling_system/">Error Handling</a> - Error handling patterns</li>
+</ul>
 
 
 
@@ -1403,15 +2264,54 @@ if parseErr != None {
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../structs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: structs">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                structs
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../http/overview/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Overview
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      © 2025 Harneet Programming Language — Built with ❤️ by Gagan Janjua
+    </div>
   
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
   
 </div>
       
@@ -1424,10 +2324,12 @@ if parseErr != None {
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.collapse", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.footer", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>

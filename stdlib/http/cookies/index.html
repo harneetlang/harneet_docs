@@ -1,0 +1,3098 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../auth/">
+      
+      
+        <link rel="next" href="../advanced/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Cookies & Sessions - Harneet Programming Language</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/css/custom.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cookies-sessions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Harneet Programming Language" class="md-header__button md-logo" aria-label="Harneet Programming Language" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Harneet Programming Language
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cookies & Sessions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light Mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Harneet Programming Language" class="md-nav__button md-logo" aria-label="Harneet Programming Language" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Harneet Programming Language
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../command_line/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Command Line
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    General
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/comments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/data_types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Types
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/variable_declaration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variable Declaration & Assignment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/keywords_identifiers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Keywords and Identifiers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/operators_and_expressions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operators and Expressions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/arrays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrays
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/maps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Maps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/control_flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Control Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/pattern_matching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pattern Matching
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../break_continue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Break & Continue
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/block_structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Block Structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/scoping_variable_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scoping and Variable Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cast/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cast
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/import_system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Import System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/unicode_support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unicode Support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../error_handling_system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Error Handling System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Functions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Functions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../functions/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../functions/arrow_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrow Functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../functions/functional/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Functional features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../functions/advanced_features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Standard Library
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Standard Library
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fmt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    fmt
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    input
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    strings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    math
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arrays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    arrays
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../collections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    collections
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    structs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    json
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    HTTP
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_9">
+            <span class="md-nav__icon md-icon"></span>
+            HTTP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../client/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTTP Client
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Request Building
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../responses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Response Handling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTTP Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../routing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Routing & Mux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../middleware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Middleware
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Authentication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Cookies & Sessions
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cookies & Sessions
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cookie-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cookie Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cookie Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#httpsetcookieresponse-name-value-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      http.SetCookie(response, name, value, options)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#httpgetcookierequest-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      http.GetCookie(request, name)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cookie-deletion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cookie Deletion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#session-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Session Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Session Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#session-store-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Session Store Implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-middleware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Session Middleware
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login-with-session-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Login with Session Creation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shopping-cart-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shopping Cart Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#secure-cookie-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secure Cookie Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Session Security
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csrf-protection-with-sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSRF Protection with Sessions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-session-based-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete Session-Based Application
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices Summary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-cookie-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Cookie Security
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-session-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Session Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-security-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Security Measures
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Performance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examples & Patterns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    assert
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    errors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    file
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    path
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../os/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    os
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datetime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    datetime
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    flags
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    exec
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../regex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    regex
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../box/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    box
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../type_system_safety/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Type System & Safety
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../comprehensive_examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comprehensive Language Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cookie-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cookie Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cookie Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#httpsetcookieresponse-name-value-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      http.SetCookie(response, name, value, options)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#httpgetcookierequest-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      http.GetCookie(request, name)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cookie-deletion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cookie Deletion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#session-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Session Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Session Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#session-store-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Session Store Implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-middleware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Session Middleware
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login-with-session-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Login with Session Creation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shopping-cart-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shopping Cart Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#secure-cookie-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secure Cookie Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Session Security
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csrf-protection-with-sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSRF Protection with Sessions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-session-based-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete Session-Based Application
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices Summary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-cookie-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Cookie Security
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-session-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Session Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-security-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Security Measures
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Performance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="cookies-sessions">Cookies &amp; Sessions</h1>
+<p>Cookies and sessions are essential for maintaining state in web applications. This section covers cookie management, session handling, and security best practices for stateful HTTP applications.</p>
+<h2 id="cookie-management">Cookie Management</h2>
+<h3 id="httpsetcookieresponse-name-value-options">http.SetCookie(response, name, value, options)</h3>
+<p>Sets a cookie in the HTTP response.</p>
+<p><strong>Syntax:</strong>
+<div class="highlight"><pre><span></span><code>http.SetCookie(response, name, value, options) (error)
+</code></pre></div></p>
+<p><strong>Parameters:</strong>
+- <code>response</code> (map) - Response writer object
+- <code>name</code> (string) - Cookie name
+- <code>value</code> (string) - Cookie value
+- <code>options</code> (map) - Cookie options (domain, path, expires, etc.)</p>
+<p><strong>Examples:</strong></p>
+<p><em>Basic Cookie Setting:</em>
+<div class="highlight"><pre><span></span><code>import http
+import fmt
+
+function setCookieHandler(request map, response map) {
+    // Set a simple cookie
+    http.SetCookie(response, &quot;user_preference&quot;, &quot;dark_theme&quot;, {})
+
+    // Set a cookie with options
+    http.SetCookie(response, &quot;session_id&quot;, &quot;abc123xyz&quot;, {
+        &quot;httpOnly&quot;: true,        // Prevent JavaScript access
+        &quot;secure&quot;: true,          // HTTPS only
+        &quot;sameSite&quot;: &quot;strict&quot;,    // CSRF protection
+        &quot;maxAge&quot;: 3600,          // 1 hour expiration
+        &quot;path&quot;: &quot;/&quot;,             // Available site-wide
+        &quot;domain&quot;: &quot;.example.com&quot; // Available on subdomains
+    })
+
+    // Set a persistent cookie (expires in 30 days)
+    var thirtyDaysFromNow = getCurrentTimestamp() + (30 * 24 * 3600)
+    http.SetCookie(response, &quot;remember_me&quot;, &quot;true&quot;, {
+        &quot;expires&quot;: thirtyDaysFromNow,
+        &quot;httpOnly&quot;: true,
+        &quot;secure&quot;: true,
+        &quot;sameSite&quot;: &quot;lax&quot;
+    })
+
+    http.WriteResponse(response, 200, &quot;text/plain&quot;, &quot;Cookies set successfully&quot;)
+}
+</code></pre></div></p>
+<p><em>Cookie Configuration Options:</em>
+<div class="highlight"><pre><span></span><code>import http
+
+// Comprehensive cookie configuration
+function setSecureCookie(response map, name string, value string) {
+    var cookieOptions = {
+        &quot;httpOnly&quot;: true,           // Prevent XSS attacks
+        &quot;secure&quot;: true,             // HTTPS only
+        &quot;sameSite&quot;: &quot;strict&quot;,       // CSRF protection
+        &quot;maxAge&quot;: 3600,             // 1 hour
+        &quot;path&quot;: &quot;/&quot;,                // Available site-wide
+        &quot;domain&quot;: &quot;&quot;,               // Current domain only
+    }
+
+    http.SetCookie(response, name, value, cookieOptions)
+}
+
+// Session cookie (expires when browser closes)
+function setSessionCookie(response map, name string, value string) {
+    var sessionOptions = {
+        &quot;httpOnly&quot;: true,
+        &quot;secure&quot;: true,
+        &quot;sameSite&quot;: &quot;strict&quot;,
+        &quot;path&quot;: &quot;/&quot;
+        // No maxAge or expires = session cookie
+    }
+
+    http.SetCookie(response, name, value, sessionOptions)
+}
+
+// Persistent cookie (long-term storage)
+function setPersistentCookie(response map, name string, value string, days int) {
+    var expirationTime = getCurrentTimestamp() + (days * 24 * 3600)
+
+    var persistentOptions = {
+        &quot;httpOnly&quot;: true,
+        &quot;secure&quot;: true,
+        &quot;sameSite&quot;: &quot;lax&quot;,
+        &quot;expires&quot;: expirationTime,
+        &quot;path&quot;: &quot;/&quot;
+    }
+
+    http.SetCookie(response, name, value, persistentOptions)
+}
+</code></pre></div></p>
+<h3 id="httpgetcookierequest-name">http.GetCookie(request, name)</h3>
+<p>Gets a cookie value from the HTTP request.</p>
+<p><strong>Syntax:</strong>
+<div class="highlight"><pre><span></span><code>http.GetCookie(request, name) (value, error)
+</code></pre></div></p>
+<p><strong>Parameters:</strong>
+- <code>request</code> (map) - Request object
+- <code>name</code> (string) - Cookie name</p>
+<p><strong>Examples:</strong></p>
+<p><em>Reading Cookies:</em>
+<div class="highlight"><pre><span></span><code>import http
+import json
+import fmt
+
+function getCookieHandler(request map, response map) {
+    // Get a specific cookie
+    var sessionResult = http.GetCookie(request, &quot;session_id&quot;)
+    var sessionId = sessionResult[0]
+    var sessionErr = sessionResult[1]
+
+    if sessionErr != None {
+        fmt.Printf(&quot;No session cookie found: %s\n&quot;, sessionErr)
+    } else {
+        fmt.Printf(&quot;Session ID: %s\n&quot;, sessionId)
+    }
+
+    // Get user preferences
+    var themeResult = http.GetCookie(request, &quot;user_preference&quot;)
+    var theme = themeResult[0]
+    var themeErr = themeResult[1]
+
+    var responseData = {
+        &quot;sessionId&quot;: sessionId,
+        &quot;theme&quot;: theme,
+        &quot;hasSession&quot;: sessionErr == None,
+        &quot;hasTheme&quot;: themeErr == None
+    }
+
+    var jsonData, _ = json.Marshal(responseData)
+    http.WriteResponse(response, 200, &quot;application/json&quot;, jsonData)
+}
+
+// Get all cookies from request
+function getAllCookies(request map) {
+    var cookies = request[&quot;cookies&quot;]
+    if cookies == None {
+        return {}
+    }
+    return cookies
+}
+
+function listCookiesHandler(request map, response map) {
+    var allCookies = getAllCookies(request)
+
+    var cookieList = []
+    for name, value in allCookies {
+        cookieList = append(cookieList, {
+            &quot;name&quot;: name,
+            &quot;value&quot;: value
+        })
+    }
+
+    var responseData = {
+        &quot;cookies&quot;: cookieList,
+        &quot;count&quot;: len(cookieList)
+    }
+
+    var jsonData, _ = json.Marshal(responseData)
+    http.WriteResponse(response, 200, &quot;application/json&quot;, jsonData)
+}
+</code></pre></div></p>
+<h3 id="cookie-deletion">Cookie Deletion</h3>
+<div class="highlight"><pre><span></span><code>import http
+
+// Delete a cookie by setting it to expire immediately
+function deleteCookie(response map, name string) {
+    http.SetCookie(response, name, &quot;&quot;, {
+        &quot;httpOnly&quot;: true,
+        &quot;secure&quot;: true,
+        &quot;sameSite&quot;: &quot;strict&quot;,
+        &quot;maxAge&quot;: -1,    // Expire immediately
+        &quot;path&quot;: &quot;/&quot;
+    })
+}
+
+function deleteCookieHandler(request map, response map) {
+    var query = request[&quot;query&quot;]
+    var cookieName = query[&quot;name&quot;]
+
+    if cookieName == None or cookieName == &quot;&quot; {
+        http.WriteResponse(response, 400, &quot;application/json&quot;, &quot;{\&quot;error\&quot;: \&quot;Cookie name required\&quot;}&quot;)
+        return
+    }
+
+    deleteCookie(response, cookieName)
+
+    var responseData = {
+        &quot;message&quot;: &quot;Cookie deleted&quot;,
+        &quot;cookieName&quot;: cookieName
+    }
+
+    var jsonData, _ = json.Marshal(responseData)
+    http.WriteResponse(response, 200, &quot;application/json&quot;, jsonData)
+}
+</code></pre></div>
+<h2 id="session-management">Session Management</h2>
+<h3 id="session-store-implementation">Session Store Implementation</h3>
+<div class="highlight"><pre><span></span><code>import http
+import json
+import fmt
+
+// In-memory session store (use Redis/database in production)
+var sessionStore = {}
+
+// Session structure
+type Session struct {
+    id string
+    userId string
+    data map
+    createdAt int
+    lastAccessed int
+    expiresAt int
+}
+
+// Create a new session
+function createSession(userId string, sessionData map) {
+    var sessionId = generateSessionId()
+    var currentTime = getCurrentTimestamp()
+
+    var session = {
+        &quot;id&quot;: sessionId,
+        &quot;userId&quot;: userId,
+        &quot;data&quot;: sessionData,
+        &quot;createdAt&quot;: currentTime,
+        &quot;lastAccessed&quot;: currentTime,
+        &quot;expiresAt&quot;: currentTime + 3600  // 1 hour default
+    }
+
+    sessionStore[sessionId] = session
+    return session
+}
+
+// Get session by ID
+function getSession(sessionId string) {
+    var session = sessionStore[sessionId]
+
+    if session == None {
+        return None
+    }
+
+    // Check if session is expired
+    if isSessionExpired(session) {
+        delete(sessionStore, sessionId)
+        return None
+    }
+
+    // Update last accessed time
+    session[&quot;lastAccessed&quot;] = getCurrentTimestamp()
+    return session
+}
+
+// Update session data
+function updateSession(sessionId string, data map) {
+    var session = sessionStore[sessionId]
+    if session != None {
+        session[&quot;data&quot;] = data
+        session[&quot;lastAccessed&quot;] = getCurrentTimestamp()
+        return true
+    }
+    return false
+}
+
+// Destroy session
+function destroySession(sessionId string) {
+    delete(sessionStore, sessionId)
+}
+
+// Check if session is expired
+function isSessionExpired(session map) {
+    var expiresAt = session[&quot;expiresAt&quot;]
+    var currentTime = getCurrentTimestamp()
+    return currentTime &gt; expiresAt
+}
+
+// Generate secure session ID
+function generateSessionId() {
+    // In a real implementation, use cryptographically secure random generator
+    return &quot;sess_&quot; + generateRandomString(64)
+}
+
+// Clean up expired sessions (run periodically)
+function cleanupExpiredSessions() {
+    var currentTime = getCurrentTimestamp()
+    var expiredSessions = []
+
+    for sessionId, session in sessionStore {
+        if currentTime &gt; session[&quot;expiresAt&quot;] {
+            expiredSessions = append(expiredSessions, sessionId)
+        }
+    }
+
+    for sessionId in expiredSessions {
+        delete(sessionStore, sessionId)
+    }
+
+    fmt.Printf(&quot;Cleaned up %d expired sessions\n&quot;, len(expiredSessions))
+}
+</code></pre></div>
+<h3 id="session-middleware">Session Middleware</h3>
+<div class="highlight"><pre><span></span><code>import http
+import fmt
+
+// Session middleware that loads session data into request
+function sessionMiddleware(next function) {
+    return function(request map, response map) {
+        var sessionId = getSessionIdFromCookie(request)
+
+        if sessionId != &quot;&quot; {
+            var session = getSession(sessionId)
+            if session != None {
+                // Add session to request context
+                request[&quot;session&quot;] = session
+                request[&quot;sessionId&quot;] = sessionId
+                request[&quot;userId&quot;] = session[&quot;userId&quot;]
+                request[&quot;sessionData&quot;] = session[&quot;data&quot;]
+            }
+        }
+
+        next(request, response)
+    }
+}
+
+function getSessionIdFromCookie(request map) {
+    var cookieResult = http.GetCookie(request, &quot;session_id&quot;)
+    var sessionId = cookieResult[0]
+    var err = cookieResult[1]
+
+    if err != None {
+        return &quot;&quot;
+    }
+
+    return sessionId
+}
+
+// Session-aware handler example
+function sessionAwareHandler(request map, response map) {
+    var session = request[&quot;session&quot;]
+    var sessionData = request[&quot;sessionData&quot;]
+
+    if session == None {
+        // No session - show login prompt
+        var responseData = {
+            &quot;authenticated&quot;: false,
+            &quot;message&quot;: &quot;Please log in&quot;
+        }
+        var jsonData, _ = json.Marshal(responseData)
+        http.WriteResponse(response, 401, &quot;application/json&quot;, jsonData)
+        return
+    }
+
+    // Session exists - show user data
+    var responseData = {
+        &quot;authenticated&quot;: true,
+        &quot;userId&quot;: session[&quot;userId&quot;],
+        &quot;sessionData&quot;: sessionData,
+        &quot;lastAccessed&quot;: session[&quot;lastAccessed&quot;]
+    }
+
+    var jsonData, _ = json.Marshal(responseData)
+    http.WriteResponse(response, 200, &quot;application/json&quot;, jsonData)
+}
+</code></pre></div>
+<h3 id="login-with-session-creation">Login with Session Creation</h3>
+<div class="highlight"><pre><span></span><code>import http
+import json
+import fmt
+
+function loginWithSessionHandler(request map, response map) {
+    var method = request[&quot;method&quot;]
+
+    if method != &quot;POST&quot; {
+        http.WriteResponse(response, 405, &quot;application/json&quot;, &quot;{\&quot;error\&quot;: \&quot;Method not allowed\&quot;}&quot;)
+        return
+    }
+
+    var body = request[&quot;body&quot;]
+    var loginData, parseErr = json.Unmarshal(body)
+
+    if parseErr != None {
+        http.WriteResponse(response, 400, &quot;application/json&quot;, &quot;{\&quot;error\&quot;: \&quot;Invalid JSON\&quot;}&quot;)
+        return
+    }
+
+    var username = loginData[&quot;username&quot;]
+    var password = loginData[&quot;password&quot;]
+    var rememberMe = loginData[&quot;rememberMe&quot;]
+
+    // Authenticate user
+    var user = authenticateUser(username, password)
+    if user == None {
+        http.WriteResponse(response, 401, &quot;application/json&quot;, &quot;{\&quot;error\&quot;: \&quot;Invalid credentials\&quot;}&quot;)
+        return
+    }
+
+    // Create session with user data
+    var sessionData = {
+        &quot;username&quot;: user[&quot;username&quot;],
+        &quot;email&quot;: user[&quot;email&quot;],
+        &quot;roles&quot;: user[&quot;roles&quot;],
+        &quot;loginTime&quot;: getCurrentTimestamp()
+    }
+
+    var session = createSession(user[&quot;id&quot;], sessionData)
+
+    // Set session cookie
+    var cookieOptions = {
+        &quot;httpOnly&quot;: true,
+        &quot;secure&quot;: true,
+        &quot;sameSite&quot;: &quot;strict&quot;,
+        &quot;path&quot;: &quot;/&quot;
+    }
+
+    // Set expiration based on &quot;remember me&quot;
+    if rememberMe == true {
+        cookieOptions[&quot;maxAge&quot;] = 30 * 24 * 3600  // 30 days
+        session[&quot;expiresAt&quot;] = getCurrentTimestamp() + (30 * 24 * 3600)
+    } else {
+        // Session cookie (expires when browser closes)
+        session[&quot;expiresAt&quot;] = getCurrentTimestamp() + 3600  // 1 hour
+    }
+
+    http.SetCookie(response, &quot;session_id&quot;, session[&quot;id&quot;], cookieOptions)
+
+    var loginResponse = {
+        &quot;success&quot;: true,
+        &quot;user&quot;: {
+            &quot;id&quot;: user[&quot;id&quot;],
+            &quot;username&quot;: user[&quot;username&quot;],
+            &quot;email&quot;: user[&quot;email&quot;]
+        },
+        &quot;sessionId&quot;: session[&quot;id&quot;]
+    }
+
+    var jsonData, _ = json.Marshal(loginResponse)
+    http.WriteResponse(response, 200, &quot;application/json&quot;, jsonData)
+}
+
+function logoutWithSessionHandler(request map, response map) {
+    var sessionId = getSessionIdFromCookie(request)
+
+    if sessionId != &quot;&quot; {
+        destroySession(sessionId)
+    }
+
+    // Clear session cookie
+    deleteCookie(response, &quot;session_id&quot;)
+
+    var logoutResponse = {
+        &quot;success&quot;: true,
+        &quot;message&quot;: &quot;Logged out successfully&quot;
+    }
+
+    var jsonData, _ = json.Marshal(logoutResponse)
+    http.WriteResponse(response, 200, &quot;application/json&quot;, jsonData)
+}
+</code></pre></div>
+<h2 id="shopping-cart-example">Shopping Cart Example</h2>
+<div class="highlight"><pre><span></span><code>import http
+import json
+import fmt
+
+// Shopping cart using sessions
+function addToCartHandler(request map, response map) {
+    var method = request[&quot;method&quot;]
+
+    if method != &quot;POST&quot; {
+        http.WriteResponse(response, 405, &quot;application/json&quot;, &quot;{\&quot;error\&quot;: \&quot;Method not allowed\&quot;}&quot;)
+        return
+    }
+
+    var body = request[&quot;body&quot;]
+    var cartData, parseErr = json.Unmarshal(body)
+
+    if parseErr != None {
+        http.WriteResponse(response, 400, &quot;application/json&quot;, &quot;{\&quot;error\&quot;: \&quot;Invalid JSON\&quot;}&quot;)
+        return
+    }
+
+    var productId = cartData[&quot;productId&quot;]
+    var quantity = cartData[&quot;quantity&quot;]
+
+    if productId == None or quantity == None {
+        http.WriteResponse(response, 400, &quot;application/json&quot;, &quot;{\&quot;error\&quot;: \&quot;Product ID and quantity required\&quot;}&quot;)
+        return
+    }
+
+    // Get or create session
+    var sessionId = getSessionIdFromCookie(request)
+    var session = None
+
+    if sessionId != &quot;&quot; {
+        session = getSession(sessionId)
+    }
+
+    if session == None {
+        // Create new session for anonymous user
+        session = createSession(&quot;anonymous&quot;, {&quot;cart&quot;: {}})
+
+        http.SetCookie(response, &quot;session_id&quot;, session[&quot;id&quot;], {
+            &quot;httpOnly&quot;: true,
+            &quot;secure&quot;: true,
+            &quot;sameSite&quot;: &quot;strict&quot;,
+            &quot;maxAge&quot;: 3600,  // 1 hour
+            &quot;path&quot;: &quot;/&quot;
+        })
+    }
+
+    // Get current cart
+    var sessionData = session[&quot;data&quot;]
+    var cart = sessionData[&quot;cart&quot;]
+    if cart == None {
+        cart = {}
+    }
+
+    // Add item to cart
+    var currentQuantity = cart[productId]
+    if currentQuantity == None {
+        currentQuantity = 0
+    }
+    cart[productId] = currentQuantity + quantity
+
+    // Update session
+    sessionData[&quot;cart&quot;] = cart
+    updateSession(session[&quot;id&quot;], sessionData)
+
+    var cartResponse = {
+        &quot;success&quot;: true,
+        &quot;cart&quot;: cart,
+        &quot;itemCount&quot;: getCartItemCount(cart)
+    }
+
+    var jsonData, _ = json.Marshal(cartResponse)
+    http.WriteResponse(response, 200, &quot;application/json&quot;, jsonData)
+}
+
+function getCartHandler(request map, response map) {
+    var sessionId = getSessionIdFromCookie(request)
+    var cart = {}
+
+    if sessionId != &quot;&quot; {
+        var session = getSession(sessionId)
+        if session != None {
+            var sessionData = session[&quot;data&quot;]
+            cart = sessionData[&quot;cart&quot;]
+            if cart == None {
+                cart = {}
+            }
+        }
+    }
+
+    var cartResponse = {
+        &quot;cart&quot;: cart,
+        &quot;itemCount&quot;: getCartItemCount(cart),
+        &quot;total&quot;: calculateCartTotal(cart)
+    }
+
+    var jsonData, _ = json.Marshal(cartResponse)
+    http.WriteResponse(response, 200, &quot;application/json&quot;, jsonData)
+}
+
+function getCartItemCount(cart map) {
+    var count = 0
+    for productId, quantity in cart {
+        count = count + quantity
+    }
+    return count
+}
+
+function calculateCartTotal(cart map) {
+    // In a real implementation, look up product prices
+    var total = 0.0
+    for productId, quantity in cart {
+        var price = getProductPrice(productId)  // Mock function
+        total = total + (price * quantity)
+    }
+    return total
+}
+</code></pre></div>
+<h2 id="security-best-practices">Security Best Practices</h2>
+<h3 id="secure-cookie-configuration">Secure Cookie Configuration</h3>
+<div class="highlight"><pre><span></span><code>import http
+
+// Production-ready secure cookie settings
+function setSecureSessionCookie(response map, sessionId string) {
+    var secureOptions = {
+        &quot;httpOnly&quot;: true,        // Prevent XSS attacks
+        &quot;secure&quot;: true,          // HTTPS only
+        &quot;sameSite&quot;: &quot;strict&quot;,    // CSRF protection
+        &quot;maxAge&quot;: 3600,          // 1 hour expiration
+        &quot;path&quot;: &quot;/&quot;,             // Available site-wide
+        &quot;domain&quot;: &quot;&quot;,            // Current domain only (no subdomains)
+    }
+
+    http.SetCookie(response, &quot;session_id&quot;, sessionId, secureOptions)
+}
+
+// Development cookie settings (less restrictive)
+function setDevelopmentCookie(response map, name string, value string) {
+    var devOptions = {
+        &quot;httpOnly&quot;: true,
+        &quot;secure&quot;: false,         // Allow HTTP in development
+        &quot;sameSite&quot;: &quot;lax&quot;,       // Less restrictive for development
+        &quot;maxAge&quot;: 3600,
+        &quot;path&quot;: &quot;/&quot;
+    }
+
+    http.SetCookie(response, name, value, devOptions)
+}
+</code></pre></div>
+<h3 id="session-security">Session Security</h3>
+<div class="highlight"><pre><span></span><code>import http
+import fmt
+
+// Session security middleware
+function sessionSecurityMiddleware(next function) {
+    return function(request map, response map) {
+        var sessionId = getSessionIdFromCookie(request)
+
+        if sessionId != &quot;&quot; {
+            var session = getSession(sessionId)
+
+            if session != None {
+                // Check for session hijacking
+                if detectSessionHijacking(request, session) {
+                    fmt.Printf(&quot;Potential session hijacking detected for session: %s\n&quot;, sessionId)
+                    destroySession(sessionId)
+                    deleteCookie(response, &quot;session_id&quot;)
+
+                    http.WriteResponse(response, 401, &quot;application/json&quot;, &quot;{\&quot;error\&quot;: \&quot;Session security violation\&quot;}&quot;)
+                    return
+                }
+
+                // Regenerate session ID periodically
+                if shouldRegenerateSessionId(session) {
+                    var newSessionId = regenerateSessionId(session)
+                    http.SetCookie(response, &quot;session_id&quot;, newSessionId, {
+                        &quot;httpOnly&quot;: true,
+                        &quot;secure&quot;: true,
+                        &quot;sameSite&quot;: &quot;strict&quot;,
+                        &quot;maxAge&quot;: 3600,
+                        &quot;path&quot;: &quot;/&quot;
+                    })
+                }
+            }
+        }
+
+        next(request, response)
+    }
+}
+
+function detectSessionHijacking(request map, session map) {
+    // Check IP address consistency
+    var currentIP = getClientIP(request)
+    var sessionIP = session[&quot;data&quot;][&quot;ipAddress&quot;]
+
+    if sessionIP != None and sessionIP != currentIP {
+        return true
+    }
+
+    // Check User-Agent consistency
+    var currentUA = request[&quot;headers&quot;][&quot;User-Agent&quot;]
+    var sessionUA = session[&quot;data&quot;][&quot;userAgent&quot;]
+
+    if sessionUA != None and sessionUA != currentUA {
+        return true
+    }
+
+    return false
+}
+
+function shouldRegenerateSessionId(session map) {
+    var lastRegeneration = session[&quot;data&quot;][&quot;lastRegeneration&quot;]
+    var currentTime = getCurrentTimestamp()
+
+    // Regenerate every 30 minutes
+    return lastRegeneration == None or (currentTime - lastRegeneration) &gt; 1800
+}
+
+function regenerateSessionId(oldSession map) {
+    var newSessionId = generateSessionId()
+    var oldSessionId = oldSession[&quot;id&quot;]
+
+    // Copy session data to new ID
+    oldSession[&quot;id&quot;] = newSessionId
+    oldSession[&quot;data&quot;][&quot;lastRegeneration&quot;] = getCurrentTimestamp()
+
+    sessionStore[newSessionId] = oldSession
+    delete(sessionStore, oldSessionId)
+
+    return newSessionId
+}
+</code></pre></div>
+<h3 id="csrf-protection-with-sessions">CSRF Protection with Sessions</h3>
+<div class="highlight"><pre><span></span><code>import http
+import json
+
+// Generate CSRF token for session
+function generateCSRFToken(sessionId string) {
+    var token = generateRandomString(32)
+    var session = getSession(sessionId)
+
+    if session != None {
+        session[&quot;data&quot;][&quot;csrfToken&quot;] = token
+        updateSession(sessionId, session[&quot;data&quot;])
+    }
+
+    return token
+}
+
+// CSRF protection middleware using sessions
+function sessionCSRFMiddleware(next function) {
+    return function(request map, response map) {
+        var method = request[&quot;method&quot;]
+
+        // Only check CSRF for state-changing methods
+        if method == &quot;POST&quot; or method == &quot;PUT&quot; or method == &quot;DELETE&quot; or method == &quot;PATCH&quot; {
+            var sessionId = getSessionIdFromCookie(request)
+            var session = getSession(sessionId)
+
+            if session == None {
+                http.WriteResponse(response, 401, &quot;application/json&quot;, &quot;{\&quot;error\&quot;: \&quot;No session found\&quot;}&quot;)
+                return
+            }
+
+            var sessionCSRFToken = session[&quot;data&quot;][&quot;csrfToken&quot;]
+            var requestCSRFToken = request[&quot;headers&quot;][&quot;X-CSRF-Token&quot;]
+
+            if sessionCSRFToken == None or requestCSRFToken == None or sessionCSRFToken != requestCSRFToken {
+                http.WriteResponse(response, 403, &quot;application/json&quot;, &quot;{\&quot;error\&quot;: \&quot;CSRF token mismatch\&quot;}&quot;)
+                return
+            }
+        }
+
+        next(request, response)
+    }
+}
+
+// Endpoint to get CSRF token
+function getCSRFTokenHandler(request map, response map) {
+    var sessionId = getSessionIdFromCookie(request)
+
+    if sessionId == &quot;&quot; {
+        http.WriteResponse(response, 401, &quot;application/json&quot;, &quot;{\&quot;error\&quot;: \&quot;No session found\&quot;}&quot;)
+        return
+    }
+
+    var csrfToken = generateCSRFToken(sessionId)
+
+    var tokenResponse = {
+        &quot;csrfToken&quot;: csrfToken
+    }
+
+    var jsonData, _ = json.Marshal(tokenResponse)
+    http.WriteResponse(response, 200, &quot;application/json&quot;, jsonData)
+}
+</code></pre></div>
+<h2 id="complete-session-based-application">Complete Session-Based Application</h2>
+<div class="highlight"><pre><span></span><code>import http
+import json
+import fmt
+
+// Complete session-based web application setup
+function setupSessionBasedApp() {
+    var mux = http.NewMux()[0]
+
+    // Public routes
+    http.HandleFunc(mux, &quot;/&quot;, homeHandler)
+    http.HandleFunc(mux, &quot;/login&quot;, loginWithSessionHandler)
+    http.HandleFunc(mux, &quot;/register&quot;, registerHandler)
+
+    // Session-protected routes
+    var sessionMux = http.NewMux()[0]
+
+    // Apply session middleware to all protected routes
+    var sessionHandler = sessionMiddleware(sessionMux)
+
+    // Protected endpoints
+    http.HandleFunc(sessionMux, &quot;/profile&quot;, profileHandler)
+    http.HandleFunc(sessionMux, &quot;/logout&quot;, logoutWithSessionHandler)
+    http.HandleFunc(sessionMux, &quot;/cart&quot;, getCartHandler)
+    http.HandleFunc(sessionMux, &quot;/cart/add&quot;, addToCartHandler)
+    http.HandleFunc(sessionMux, &quot;/csrf-token&quot;, getCSRFTokenHandler)
+
+    // Mount session-protected routes
+    http.Handle(mux, &quot;/app/&quot;, http.StripPrefix(&quot;/app&quot;, sessionHandler))
+
+    return mux
+}
+
+function startSessionServer() {
+    var mux = setupSessionBasedApp()
+    var server = http.NewServer(&quot;:8080&quot;)[0]
+
+    // Add security middleware
+    var secureHandler = chainMiddleware([
+        loggingMiddleware,
+        corsMiddleware,
+        securityHeadersMiddleware,
+        sessionSecurityMiddleware,
+        sessionCSRFMiddleware
+    ])(mux)
+
+    http.SetHandler(server, secureHandler)
+
+    // Start session cleanup routine
+    go cleanupExpiredSessions()  // Run in background
+
+    fmt.Println(&quot;🍪 Session-based server starting on :8080&quot;)
+    http.ListenAndServe(server)
+}
+</code></pre></div>
+<h2 id="best-practices-summary">Best Practices Summary</h2>
+<h3 id="1-cookie-security">1. Cookie Security</h3>
+<ul>
+<li>Always use <code>httpOnly</code> for session cookies</li>
+<li>Use <code>secure</code> flag for HTTPS</li>
+<li>Set appropriate <code>sameSite</code> values</li>
+<li>Use reasonable expiration times</li>
+</ul>
+<h3 id="2-session-management">2. Session Management</h3>
+<ul>
+<li>Generate cryptographically secure session IDs</li>
+<li>Store minimal data in sessions</li>
+<li>Implement session expiration and cleanup</li>
+<li>Regenerate session IDs periodically</li>
+</ul>
+<h3 id="3-security-measures">3. Security Measures</h3>
+<ul>
+<li>Implement CSRF protection</li>
+<li>Detect and prevent session hijacking</li>
+<li>Use secure cookie configurations</li>
+<li>Validate session integrity</li>
+</ul>
+<h3 id="4-performance">4. Performance</h3>
+<ul>
+<li>Clean up expired sessions regularly</li>
+<li>Use external session stores (Redis) for scalability</li>
+<li>Implement session data compression if needed</li>
+<li>Monitor session storage usage</li>
+</ul>
+<h2 id="next-steps">Next Steps</h2>
+<ul>
+<li><strong><a href="../auth/">Authentication</a></strong> - Go back to authentication concepts</li>
+<li><strong><a href="../middleware/">Middleware</a></strong> - Learn about middleware patterns</li>
+<li><strong><a href="../routing/">Routing &amp; Mux</a></strong> - URL routing and request handling</li>
+<li><strong><a href="../examples/">Examples &amp; Patterns</a></strong> - See real-world implementation examples</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../auth/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Authentication">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Authentication
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../advanced/" class="md-footer__link md-footer__link--next" aria-label="Next: Advanced">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Advanced
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2025 Harneet Programming Language — Built with ❤️ by Gagan Janjua
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.collapse", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.footer", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

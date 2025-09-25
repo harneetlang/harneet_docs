@@ -1,0 +1,3811 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../cookies/">
+      
+      
+        <link rel="next" href="../examples/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Advanced - Harneet Programming Language</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/css/custom.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#http-advanced-features-complete-guide-with-latest-syntax" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Harneet Programming Language" class="md-header__button md-logo" aria-label="Harneet Programming Language" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Harneet Programming Language
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Advanced
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light Mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Harneet Programming Language" class="md-nav__button md-logo" aria-label="Harneet Programming Language" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Harneet Programming Language
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../command_line/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Command Line
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    General
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/comments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/data_types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Types
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/variable_declaration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variable Declaration & Assignment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/keywords_identifiers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Keywords and Identifiers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/operators_and_expressions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operators and Expressions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/arrays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrays
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/maps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Maps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/control_flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Control Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/pattern_matching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pattern Matching
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../break_continue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Break & Continue
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/block_structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Block Structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/scoping_variable_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scoping and Variable Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cast/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cast
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/import_system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Import System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/unicode_support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unicode Support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../error_handling_system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Error Handling System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Functions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Functions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../functions/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../functions/arrow_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrow Functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../functions/functional/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Functional features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../functions/advanced_features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Standard Library
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Standard Library
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fmt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    fmt
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    input
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    strings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    math
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arrays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    arrays
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../collections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    collections
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    structs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    json
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    HTTP
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_9">
+            <span class="md-nav__icon md-icon"></span>
+            HTTP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../client/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTTP Client
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Request Building
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../responses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Response Handling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTTP Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../routing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Routing & Mux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../middleware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Middleware
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Authentication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cookies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cookies & Sessions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Advanced
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#range-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Range Requests
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Range Requests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#range-requests-with-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Range Requests with Headers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditional-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditional Requests
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conditional Requests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etag-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      ETag Validation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-modified-since-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      If-Modified-Since Validation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request-cancellation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request Cancellation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Request Cancellation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-with-timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request with Timeout
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cancellable-request-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cancellable Request Chain
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#middleware-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Middleware Chain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Middleware Chain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-middleware-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Middleware Components
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#middleware-chain-composition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Middleware Chain Composition
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request-cloning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request Cloning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Request Cloning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-variation-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request Variation Testing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retry-with-request-modifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retry with Request Modifications
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multipart-forms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multipart Forms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multipart Forms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multipart-form-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multipart Form Upload
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-upload-with-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Upload with Validation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keep-alive-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keep-Alive Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Keep-Alive Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optimized-client-with-keep-alive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimized Client with Keep-Alive
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-requests-with-connection-reuse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Batch Requests with Connection Reuse
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complete-advanced-http-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete Advanced HTTP Client
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditional-requests_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditional Requests
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conditional Requests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#httpsetconditionalrequest-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      http.SetConditional(request, headers)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request-cancellation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request Cancellation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Request Cancellation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#httpwithtimeoutrequest-seconds" class="md-nav__link">
+    <span class="md-ellipsis">
+      http.WithTimeout(request, seconds)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#middleware-chain_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Middleware Chain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Middleware Chain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#httpchainmiddlewares-handler" class="md-nav__link">
+    <span class="md-ellipsis">
+      http.Chain(middlewares, handler)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request-cloning_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request Cloning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Request Cloning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#httpclonerequestrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      http.CloneRequest(request)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multipart-forms_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multipart Forms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multipart Forms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#httpparsemultipartrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      http.ParseMultipart(request)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keep-alive-control_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keep-Alive Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Keep-Alive Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#httpsetkeepaliverequest-enabled-timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      http.SetKeepAlive(request, enabled, timeout)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-examples_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Examples
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examples & Patterns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    assert
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    errors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    file
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    path
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../os/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    os
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datetime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    datetime
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    flags
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    exec
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../regex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    regex
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../box/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    box
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../type_system_safety/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Type System & Safety
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../comprehensive_examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comprehensive Language Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#range-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Range Requests
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Range Requests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#range-requests-with-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Range Requests with Headers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditional-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditional Requests
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conditional Requests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etag-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      ETag Validation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-modified-since-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      If-Modified-Since Validation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request-cancellation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request Cancellation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Request Cancellation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-with-timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request with Timeout
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cancellable-request-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cancellable Request Chain
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#middleware-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Middleware Chain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Middleware Chain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-middleware-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Middleware Components
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#middleware-chain-composition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Middleware Chain Composition
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request-cloning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request Cloning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Request Cloning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-variation-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request Variation Testing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retry-with-request-modifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retry with Request Modifications
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multipart-forms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multipart Forms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multipart Forms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multipart-form-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multipart Form Upload
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-upload-with-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Upload with Validation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keep-alive-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keep-Alive Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Keep-Alive Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optimized-client-with-keep-alive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimized Client with Keep-Alive
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-requests-with-connection-reuse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Batch Requests with Connection Reuse
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complete-advanced-http-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete Advanced HTTP Client
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditional-requests_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditional Requests
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conditional Requests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#httpsetconditionalrequest-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      http.SetConditional(request, headers)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request-cancellation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request Cancellation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Request Cancellation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#httpwithtimeoutrequest-seconds" class="md-nav__link">
+    <span class="md-ellipsis">
+      http.WithTimeout(request, seconds)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#middleware-chain_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Middleware Chain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Middleware Chain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#httpchainmiddlewares-handler" class="md-nav__link">
+    <span class="md-ellipsis">
+      http.Chain(middlewares, handler)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request-cloning_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request Cloning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Request Cloning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#httpclonerequestrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      http.CloneRequest(request)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multipart-forms_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multipart Forms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multipart Forms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#httpparsemultipartrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      http.ParseMultipart(request)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keep-alive-control_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keep-Alive Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Keep-Alive Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#httpsetkeepaliverequest-enabled-timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      http.SetKeepAlive(request, enabled, timeout)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-examples_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Examples
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="http-advanced-features-complete-guide-with-latest-syntax">HTTP Advanced Features - Complete Guide with Latest Syntax</h1>
+<p>This document covers advanced HTTP capabilities in Harneet for enterprise-level web development. <strong>All examples use the latest tuple destructuring syntax for modern, clean code.</strong></p>
+<h2 id="range-requests">Range Requests</h2>
+<p>Support for HTTP range requests and partial content responses.</p>
+<h3 id="range-requests-with-headers">Range Requests with Headers</h3>
+<p>Support for HTTP range requests and partial content responses for efficient file downloads and streaming.</p>
+<p><strong>Examples:</strong></p>
+<p><em>Download File in Chunks with Tuple Destructuring:</em>
+<div class="highlight"><pre><span></span><code>import http
+import fmt
+
+function downloadFileInChunks(url string, chunkSize int) {
+    fmt.Printf(&quot;📥 Downloading %s in %d byte chunks\n&quot;, url, chunkSize)
+
+    // First, get file size with HEAD request
+    var headResponse, headErr = http.Head(url)
+    if headErr != None {
+        fmt.Printf(&quot;❌ Failed to get file info: %s\n&quot;, headErr)
+        return
+    }
+
+    var contentLength = headResponse[&quot;headers&quot;][&quot;Content-Length&quot;]
+    fmt.Printf(&quot;📊 File size: %s bytes\n&quot;, contentLength)
+
+    var downloaded = 0
+    var totalSize = 10000  // Simulated file size
+
+    for downloaded &lt; totalSize {
+        var start = downloaded
+        var end = downloaded + chunkSize - 1
+        if end &gt;= totalSize {
+            end = totalSize - 1
+        }
+
+        // Create request with Range header
+        var request, _ = http.NewRequest(&quot;GET&quot;, url, &quot;&quot;)
+        var rangeHeader = &quot;bytes=&quot; + start + &quot;-&quot; + end
+        var rangeRequest, _ = http.SetHeader(request, &quot;Range&quot;, rangeHeader)
+
+        var response, err = http.Do(rangeRequest)
+        if err != None {
+            fmt.Printf(&quot;❌ Chunk download failed: %s\n&quot;, err)
+            return
+        }
+
+        if response[&quot;status&quot;] == 206 {  // Partial Content
+            fmt.Printf(&quot;✅ Downloaded bytes %d-%d (%d bytes)\n&quot;, start, end, end-start+1)
+            downloaded = end + 1
+        } else {
+            fmt.Printf(&quot;❌ Server doesn&#39;t support range requests (Status: %d)\n&quot;, response[&quot;status&quot;])
+            return
+        }
+    }
+
+    fmt.Printf(&quot;🎉 Download complete!\n&quot;)
+}
+</code></pre></div></p>
+<p><em>Resume Interrupted Download:</em>
+<div class="highlight"><pre><span></span><code>import http
+import fmt
+
+function resumeDownload(url string, existingBytes int) {
+    var request, _ = http.NewRequest(&quot;GET&quot;, url, &quot;&quot;)
+    var rangeHeader = &quot;bytes=&quot; + existingBytes + &quot;-&quot;
+    var resumeRequest, _ = http.SetHeader(request, &quot;Range&quot;, rangeHeader)
+
+    var response, err = http.Do(resumeRequest)
+    if err != None {
+        fmt.Printf(&quot;❌ Resume failed: %s\n&quot;, err)
+        return
+    }
+
+    if response[&quot;status&quot;] == 206 {
+        fmt.Printf(&quot;✅ Resuming download from byte %d\n&quot;, existingBytes)
+    } else {
+        fmt.Printf(&quot;⚠️  Server doesn&#39;t support resume, starting over\n&quot;)
+    }
+}
+</code></pre></div></p>
+<h2 id="conditional-requests">Conditional Requests</h2>
+<p>Support for If-Modified-Since, ETag, and other conditional headers for efficient caching.</p>
+<h3 id="etag-validation">ETag Validation</h3>
+<div class="highlight"><pre><span></span><code>import http
+import fmt
+
+// Fetch with ETag validation
+function fetchWithETag(url string, cachedETag string) {
+    var request, _ = http.NewRequest(&quot;GET&quot;, url, &quot;&quot;)
+
+    if cachedETag != &quot;&quot; {
+        var conditionalRequest, _ = http.SetHeader(request, &quot;If-None-Match&quot;, cachedETag)
+        var response, err = http.Do(conditionalRequest)
+
+        if err != None {
+            fmt.Printf(&quot;❌ Request failed: %s\n&quot;, err)
+            return
+        }
+
+        if response[&quot;status&quot;] == 304 {
+            fmt.Printf(&quot;✅ Content not modified - using cache\n&quot;)
+            return  // Use cached content
+        }
+    }
+
+    // Fetch new content
+    var response, err = http.Get(url)
+    if err != None {
+        fmt.Printf(&quot;❌ Request failed: %s\n&quot;, err)
+        return
+    }
+
+    var newETag = response[&quot;headers&quot;][&quot;ETag&quot;]
+    fmt.Printf(&quot;✅ New content received - ETag: %s\n&quot;, newETag)
+}
+</code></pre></div>
+<h3 id="if-modified-since-validation">If-Modified-Since Validation</h3>
+<div class="highlight"><pre><span></span><code>import http
+import fmt
+
+function fetchIfModified(url string, lastModified string) {
+    var request, _ = http.NewRequest(&quot;GET&quot;, url, &quot;&quot;)
+
+    if lastModified != &quot;&quot; {
+        request, _ = http.SetHeader(request, &quot;If-Modified-Since&quot;, lastModified)
+    }
+
+    var response, err = http.Do(request)
+    if err != None {
+        fmt.Printf(&quot;❌ Request failed: %s\n&quot;, err)
+        return
+    }
+
+    if response[&quot;status&quot;] == 304 {
+        fmt.Printf(&quot;✅ Content not modified since %s\n&quot;, lastModified)
+    } else {
+        var newLastModified = response[&quot;headers&quot;][&quot;Last-Modified&quot;]
+        fmt.Printf(&quot;✅ Content updated - Last-Modified: %s\n&quot;, newLastModified)
+    }
+}
+</code></pre></div>
+<h2 id="request-cancellation">Request Cancellation</h2>
+<p>Context-based request cancellation and timeout management.</p>
+<h3 id="request-with-timeout">Request with Timeout</h3>
+<div class="highlight"><pre><span></span><code>import http
+import fmt
+
+function requestWithTimeout(url string, timeoutSeconds int) {
+    fmt.Printf(&quot;⏱️  Making request with %d second timeout\n&quot;, timeoutSeconds)
+
+    var request, _ = http.NewRequest(&quot;GET&quot;, url, &quot;&quot;)
+    // Note: In full implementation, timeout would be set on request
+
+    var response, err = http.Do(request)
+
+    if err != None {
+        if err == &quot;request timeout&quot; or err == &quot;context deadline exceeded&quot; {
+            fmt.Printf(&quot;⏰ Request timed out after %d seconds\n&quot;, timeoutSeconds)
+        } else {
+            fmt.Printf(&quot;❌ Request failed: %s\n&quot;, err)
+        }
+        return
+    }
+
+    fmt.Printf(&quot;✅ Request completed within timeout - Status: %d\n&quot;, response[&quot;status&quot;])
+}
+</code></pre></div>
+<h3 id="cancellable-request-chain">Cancellable Request Chain</h3>
+<div class="highlight"><pre><span></span><code>import http
+import fmt
+
+function cancellableRequestChain(urls array, timeoutPerRequest int) {
+    fmt.Printf(&quot;🔗 Processing %d URLs with %ds timeout each\n&quot;, len(urls), timeoutPerRequest)
+
+    for i, url in urls {
+        fmt.Printf(&quot;🔄 Request %d/%d: %s\n&quot;, i+1, len(urls), url)
+
+        var response, err = http.Get(url)
+
+        if err != None {
+            fmt.Printf(&quot;❌ Request %d failed: %s\n&quot;, i+1, err)
+            continue  // Continue with next URL
+        }
+
+        fmt.Printf(&quot;✅ Request %d completed - Status: %d\n&quot;, i+1, response[&quot;status&quot;])
+    }
+}
+</code></pre></div>
+<h2 id="middleware-chain">Middleware Chain</h2>
+<p>Easy middleware composition through handler wrapping and function chaining.</p>
+<h3 id="basic-middleware-components">Basic Middleware Components</h3>
+<div class="highlight"><pre><span></span><code>import http
+import fmt
+
+// Logging middleware
+function loggingMiddleware(next function) {
+    return function(request, response) {
+        var method = request[&quot;method&quot;]
+        var path = request[&quot;url&quot;]
+        fmt.Printf(&quot;🔄 [LOG] %s %s - Started\n&quot;, method, path)
+
+        next(request, response)
+
+        var status = response[&quot;status&quot;]
+        fmt.Printf(&quot;✅ [LOG] %s %s - Completed (%d)\n&quot;, method, path, status)
+    }
+}
+
+// Authentication middleware
+function authMiddleware(next function) {
+    return function(request, response) {
+        var authHeader = request[&quot;headers&quot;][&quot;Authorization&quot;]
+
+        if authHeader == None or authHeader == &quot;&quot; {
+            fmt.Printf(&quot;❌ [AUTH] No authorization header\n&quot;)
+            response[&quot;status&quot;] = 401
+            return
+        }
+
+        if authHeader == &quot;Bearer valid-token&quot; {
+            fmt.Printf(&quot;✅ [AUTH] Valid token\n&quot;)
+            next(request, response)
+        } else {
+            fmt.Printf(&quot;❌ [AUTH] Invalid token\n&quot;)
+            response[&quot;status&quot;] = 403
+        }
+    }
+}
+
+// CORS middleware
+function corsMiddleware(next function) {
+    return function(request, response) {
+        fmt.Printf(&quot;🌐 [CORS] Adding CORS headers\n&quot;)
+
+        if request[&quot;method&quot;] == &quot;OPTIONS&quot; {
+            fmt.Printf(&quot;✅ [CORS] Preflight handled\n&quot;)
+            response[&quot;status&quot;] = 200
+            return
+        }
+
+        next(request, response)
+    }
+}
+</code></pre></div>
+<h3 id="middleware-chain-composition">Middleware Chain Composition</h3>
+<div class="highlight"><pre><span></span><code>import http
+import fmt
+
+// Compose middleware chain
+function createMiddlewareChain(middlewares array, handler function) {
+    var result = handler
+
+    // Apply middlewares in reverse order
+    for middleware in middlewares {
+        result = middleware(result)
+    }
+
+    return result
+}
+
+// Example handler
+function apiHandler(request, response) {
+    fmt.Printf(&quot;📄 [HANDLER] Processing API request\n&quot;)
+    response[&quot;status&quot;] = 200
+}
+
+// Usage
+var middlewares = [loggingMiddleware, corsMiddleware, authMiddleware]
+var protectedHandler = createMiddlewareChain(middlewares, apiHandler)
+</code></pre></div>
+<h2 id="request-cloning">Request Cloning</h2>
+<p>Methods to clone and modify HTTP requests for middleware and testing.</p>
+<h3 id="request-variation-testing">Request Variation Testing</h3>
+<div class="highlight"><pre><span></span><code>import http
+import fmt
+
+function testRequestVariations(baseURL string, endpoint string) {
+    // Test different authentication methods
+    var testCases = [
+        {&quot;name&quot;: &quot;No Auth&quot;, &quot;header&quot;: &quot;&quot;, &quot;value&quot;: &quot;&quot;},
+        {&quot;name&quot;: &quot;Bearer Token&quot;, &quot;header&quot;: &quot;Authorization&quot;, &quot;value&quot;: &quot;Bearer token123&quot;},
+        {&quot;name&quot;: &quot;API Key&quot;, &quot;header&quot;: &quot;X-API-Key&quot;, &quot;value&quot;: &quot;api-key-456&quot;},
+        {&quot;name&quot;: &quot;Basic Auth&quot;, &quot;header&quot;: &quot;Authorization&quot;, &quot;value&quot;: &quot;Basic dXNlcjpwYXNz&quot;}
+    ]
+
+    for testCase in testCases {
+        fmt.Printf(&quot;\n🧪 Testing: %s\n&quot;, testCase[&quot;name&quot;])
+
+        // Clone base request
+        var testRequest, _ = http.NewRequest(&quot;GET&quot;, baseURL + endpoint, &quot;&quot;)
+        testRequest, _ = http.SetHeader(testRequest, &quot;User-Agent&quot;, &quot;TestClient/1.0&quot;)
+
+        // Add test-specific header
+        if testCase[&quot;header&quot;] != &quot;&quot; {
+            testRequest, _ = http.SetHeader(testRequest, testCase[&quot;header&quot;], testCase[&quot;value&quot;])
+        }
+
+        var response, err = http.Do(testRequest)
+
+        if err != None {
+            fmt.Printf(&quot;❌ Test failed: %s\n&quot;, err)
+        } else {
+            fmt.Printf(&quot;✅ Status: %d\n&quot;, response[&quot;status&quot;])
+        }
+    }
+}
+</code></pre></div>
+<h3 id="retry-with-request-modifications">Retry with Request Modifications</h3>
+<div class="highlight"><pre><span></span><code>import http
+import fmt
+
+function retryWithModifications(originalURL string, maxRetries int) {
+    for attempt in range(maxRetries) {
+        var request, _ = http.NewRequest(&quot;GET&quot;, originalURL, &quot;&quot;)
+
+        // Add retry-specific headers
+        request, _ = http.SetHeader(request, &quot;X-Retry-Attempt&quot;, attempt + 1)
+        request, _ = http.SetHeader(request, &quot;X-Request-ID&quot;, &quot;req-&quot; + (attempt + 1))
+
+        var response, err = http.Do(request)
+
+        if err == None and response[&quot;status&quot;] &lt; 500 {
+            fmt.Printf(&quot;✅ Success on attempt %d\n&quot;, attempt + 1)
+            return
+        }
+
+        fmt.Printf(&quot;⏳ Attempt %d failed, retrying...\n&quot;, attempt + 1)
+    }
+}
+</code></pre></div>
+<h2 id="multipart-forms">Multipart Forms</h2>
+<p>Built-in support for parsing multipart/form-data including file uploads.</p>
+<h3 id="multipart-form-upload">Multipart Form Upload</h3>
+<div class="highlight"><pre><span></span><code>import http
+import fmt
+
+function uploadMultipartForm(url string, fields map, files array) {
+    var boundary = &quot;----WebKitFormBoundary7MA4YWxkTrZu0gW&quot;
+    var multipartBody = &quot;&quot;
+
+    // Add form fields
+    for key, value in fields {
+        multipartBody = multipartBody + &quot;--&quot; + boundary + &quot;\r\n&quot;
+        multipartBody = multipartBody + &quot;Content-Disposition: form-data; name=\&quot;&quot; + key + &quot;\&quot;\r\n\r\n&quot;
+        multipartBody = multipartBody + value + &quot;\r\n&quot;
+    }
+
+    // Add files
+    for file in files {
+        multipartBody = multipartBody + &quot;--&quot; + boundary + &quot;\r\n&quot;
+        multipartBody = multipartBody + &quot;Content-Disposition: form-data; name=\&quot;&quot; + file[&quot;field&quot;] + &quot;\&quot;; filename=\&quot;&quot; + file[&quot;name&quot;] + &quot;\&quot;\r\n&quot;
+        multipartBody = multipartBody + &quot;Content-Type: &quot; + file[&quot;type&quot;] + &quot;\r\n\r\n&quot;
+        multipartBody = multipartBody + file[&quot;content&quot;] + &quot;\r\n&quot;
+    }
+
+    multipartBody = multipartBody + &quot;--&quot; + boundary + &quot;--\r\n&quot;
+
+    var response, err = http.Post(url, &quot;multipart/form-data; boundary=&quot; + boundary, multipartBody)
+
+    if err != None {
+        fmt.Printf(&quot;❌ Upload failed: %s\n&quot;, err)
+    } else if response[&quot;status&quot;] == 200 {
+        fmt.Printf(&quot;✅ Upload successful!\n&quot;)
+    } else {
+        fmt.Printf(&quot;❌ Upload failed - Status: %d\n&quot;, response[&quot;status&quot;])
+    }
+}
+</code></pre></div>
+<h3 id="file-upload-with-validation">File Upload with Validation</h3>
+<div class="highlight"><pre><span></span><code>import http
+import fmt
+
+function uploadWithValidation(url string, filename string, content string, maxSize int) {
+    if len(content) &gt; maxSize {
+        fmt.Printf(&quot;❌ File too large: %d bytes (max: %d)\n&quot;, len(content), maxSize)
+        return
+    }
+
+    var allowedTypes = [&quot;txt&quot;, &quot;pdf&quot;, &quot;jpg&quot;, &quot;png&quot;]
+    var extension = getFileExtension(filename)
+    var isAllowed = false
+
+    for allowedType in allowedTypes {
+        if extension == allowedType {
+            isAllowed = true
+            break
+        }
+    }
+
+    if !isAllowed {
+        fmt.Printf(&quot;❌ File type not allowed: %s\n&quot;, extension)
+        return
+    }
+
+    var fields = {&quot;description&quot;: &quot;File upload&quot;, &quot;category&quot;: &quot;document&quot;}
+    var files = [{&quot;field&quot;: &quot;file&quot;, &quot;name&quot;: filename, &quot;type&quot;: &quot;text/plain&quot;, &quot;content&quot;: content}]
+
+    uploadMultipartForm(url, fields, files)
+}
+
+function getFileExtension(filename string) string {
+    // Simplified extension extraction
+    return &quot;txt&quot;  // In real implementation, extract from filename
+}
+</code></pre></div>
+<h2 id="keep-alive-control">Keep-Alive Control</h2>
+<p>Connection keep-alive management and configuration options.</p>
+<h3 id="optimized-client-with-keep-alive">Optimized Client with Keep-Alive</h3>
+<div class="highlight"><pre><span></span><code>import http
+import fmt
+
+function createOptimizedClient(maxConnections int, keepAliveTimeout int) map {
+    return {
+        &quot;maxConnections&quot;: maxConnections,
+        &quot;keepAliveTimeout&quot;: keepAliveTimeout,
+        &quot;userAgent&quot;: &quot;OptimizedClient/1.0&quot;
+    }
+}
+
+function makeOptimizedRequest(client map, url string) {
+    var request, _ = http.NewRequest(&quot;GET&quot;, url, &quot;&quot;)
+
+    // Set keep-alive headers
+    request, _ = http.SetHeader(request, &quot;Connection&quot;, &quot;keep-alive&quot;)
+    request, _ = http.SetHeader(request, &quot;Keep-Alive&quot;, &quot;timeout=&quot; + client[&quot;keepAliveTimeout&quot;])
+    request, _ = http.SetHeader(request, &quot;User-Agent&quot;, client[&quot;userAgent&quot;])
+
+    var response, err = http.Do(request)
+
+    if err != None {
+        fmt.Printf(&quot;❌ Request failed: %s\n&quot;, err)
+        return
+    }
+
+    var connection = response[&quot;headers&quot;][&quot;Connection&quot;]
+    if connection == &quot;keep-alive&quot; {
+        fmt.Printf(&quot;✅ Keep-alive connection established\n&quot;)
+    }
+
+    fmt.Printf(&quot;✅ Request completed - Status: %d\n&quot;, response[&quot;status&quot;])
+}
+</code></pre></div>
+<h3 id="batch-requests-with-connection-reuse">Batch Requests with Connection Reuse</h3>
+<div class="highlight"><pre><span></span><code>import http
+import fmt
+
+function batchRequestsWithKeepAlive(client map, urls array) {
+    fmt.Printf(&quot;📦 Processing %d URLs with connection reuse\n&quot;, len(urls))
+
+    for i, url in urls {
+        fmt.Printf(&quot;🔄 Request %d/%d: %s\n&quot;, i+1, len(urls), url)
+        makeOptimizedRequest(client, url)
+    }
+
+    fmt.Printf(&quot;🎉 Batch complete with optimized connections\n&quot;)
+}
+
+// Usage
+var client = createOptimizedClient(10, 30)  // 10 connections, 30s timeout
+var urls = [
+    &quot;https://api.example.com/users&quot;,
+    &quot;https://api.example.com/posts&quot;, 
+    &quot;https://api.example.com/comments&quot;
+]
+batchRequestsWithKeepAlive(client, urls)
+</code></pre></div>
+<h2 id="integration-examples">Integration Examples</h2>
+<h3 id="complete-advanced-http-client">Complete Advanced HTTP Client</h3>
+<div class="highlight"><pre><span></span><code>import http
+import json
+import fmt
+
+function createAdvancedHTTPClient() map {
+    return {
+        &quot;timeout&quot;: 30,
+        &quot;retries&quot;: 3,
+        &quot;keepAlive&quot;: true,
+        &quot;userAgent&quot;: &quot;AdvancedClient/1.0&quot;
+    }
+}
+
+function advancedRequest(client map, method string, url string, body string, options map) {
+    var request, _ = http.NewRequest(method, url, body)
+
+    // Apply client defaults
+    request, _ = http.SetHeader(request, &quot;User-Agent&quot;, client[&quot;userAgent&quot;])
+
+    // Apply conditional headers if provided
+    if options[&quot;etag&quot;] != None {
+        request, _ = http.SetHeader(request, &quot;If-None-Match&quot;, options[&quot;etag&quot;])
+    }
+
+    if options[&quot;lastModified&quot;] != None {
+        request, _ = http.SetHeader(request, &quot;If-Modified-Since&quot;, options[&quot;lastModified&quot;])
+    }
+
+    // Apply range if provided
+    if options[&quot;rangeStart&quot;] != None and options[&quot;rangeEnd&quot;] != None {
+        var rangeHeader = &quot;bytes=&quot; + options[&quot;rangeStart&quot;] + &quot;-&quot; + options[&quot;rangeEnd&quot;]
+        request, _ = http.SetHeader(request, &quot;Range&quot;, rangeHeader)
+    }
+
+    // Retry with exponential backoff
+    var attempt = 0
+    for attempt &lt; client[&quot;retries&quot;] {
+        attempt = attempt + 1
+
+        var requestCopy, _ = http.NewRequest(method, url, body)
+        requestCopy, _ = http.SetHeader(requestCopy, &quot;X-Attempt&quot;, attempt)
+
+        var response, err = http.Do(requestCopy)
+
+        if err == None {
+            return response, None
+        }
+
+        if attempt &lt; client[&quot;retries&quot;] {
+            var backoff = attempt * 2
+            fmt.Printf(&quot;⏳ Attempt %d failed, retrying in %d seconds...\n&quot;, attempt, backoff)
+        }
+    }
+
+    return None, &quot;All retry attempts failed&quot;
+}
+
+// Usage
+var client = createAdvancedHTTPClient()
+var options = {&quot;etag&quot;: &quot;\&quot;abc123\&quot;&quot;, &quot;rangeStart&quot;: 0, &quot;rangeEnd&quot;: 1023}
+var response, err = advancedRequest(client, &quot;GET&quot;, &quot;https://api.example.com/data&quot;, &quot;&quot;, options)
+</code></pre></div>
+<p>These advanced HTTP features provide enterprise-level capabilities for building robust web applications and APIs in Harneet with modern tuple destructuring syntax.
+    // Check existing file size
+    var existingSize, _ = os.FileSize(localFile)</p>
+<pre><code>if existingSize &gt; 0 {
+    fmt.Printf("🔄 Resuming download from byte %d\n", existingSize)
+
+    var request, _ = http.NewRequest("GET", url, "")
+    var rangeRequest, _ = http.SetRange(request, existingSize, -1)  // -1 means to end
+    var response, err = http.Do(rangeRequest)
+
+    if err != None {
+        fmt.Printf("❌ Resume failed: %s\n", err)
+        return
+    }
+
+    if response["status"] == 206 {
+        fmt.Printf("✅ Resuming download...\n")
+        // Append to existing file: response["body"]
+    } else {
+        fmt.Printf("⚠️  Server doesn't support resume, starting over\n")
+        // Start fresh download
+    }
+}
+</code></pre>
+<p>}
+```
+</p>
+<h2 id="conditional-requests_1">Conditional Requests</h2>
+<p>Support for If-Modified-Since, ETag, and other conditional headers.
+</p>
+<h3 id="httpsetconditionalrequest-headers">http.SetConditional(request, headers)</h3>
+<p>Sets conditional headers for cache validation.
+
+<strong>Examples:</strong>
+
+<em>Cache Validation with ETag:</em>
+<code>harneet
+import http
+import fmt
+
+function fetchWithETag(url string, cachedETag string) {
+    var request, _ = http.NewRequest("GET", url, "")
+
+    if cachedETag != "" {
+        var conditionalRequest, _ = http.SetHeader(request, "If-None-Match", cachedETag)
+        var response, err = http.Do(conditionalRequest)
+
+        if err != None {
+            fmt.Printf("❌ Request failed: %s\n", err)
+            return None, ""
+        }
+
+        if response["status"] == 304 {
+            fmt.Printf("✅ Content not modified, using cache\n")
+            return None, cachedETag  // Use cached content
+        }
+    }
+
+    var response, err = http.Do(request)
+    if err != None {
+        return None, ""
+    }
+
+    var newETag = response["headers"]["ETag"]
+    fmt.Printf("✅ New content received, ETag: %s\n", newETag)
+    return response["body"], newETag
+}
+
+// Usage
+var cachedETag = "\"abc123\""
+var content, etag = fetchWithETag("https://api.example.com/data", cachedETag)</code></p>
+<p><em>If-Modified-Since Validation:</em>
+<div class="highlight"><pre><span></span><code>import http
+import fmt
+
+function fetchIfModified(url string, lastModified string) {
+    var request, _ = http.NewRequest(&quot;GET&quot;, url, &quot;&quot;)
+
+    if lastModified != &quot;&quot; {
+        var conditionalRequest, _ = http.SetHeader(request, &quot;If-Modified-Since&quot;, lastModified)
+        var response, err = http.Do(conditionalRequest)
+
+        if err != None {
+            fmt.Printf(&quot;❌ Request failed: %s\n&quot;, err)
+            return None
+        }
+
+        if response[&quot;status&quot;] == 304 {
+            fmt.Printf(&quot;✅ Content not modified since %s\n&quot;, lastModified)
+            return None  // Use cached content
+        }
+    }
+
+    var response, err = http.Do(request)
+    if err != None {
+        return None
+    }
+
+    var newLastModified = response[&quot;headers&quot;][&quot;Last-Modified&quot;]
+    fmt.Printf(&quot;✅ Content modified, new date: %s\n&quot;, newLastModified)
+    return response[&quot;body&quot;]
+}
+</code></pre></div></p>
+<h2 id="request-cancellation_1">Request Cancellation</h2>
+<p>Context-based request cancellation for both client and server.</p>
+<h3 id="httpwithtimeoutrequest-seconds">http.WithTimeout(request, seconds)</h3>
+<p>Sets a timeout for request cancellation.</p>
+<p><strong>Examples:</strong></p>
+<p><em>Request with Timeout:</em>
+<div class="highlight"><pre><span></span><code>import http
+import fmt
+
+function fetchWithTimeout(url string, timeoutSeconds int) {
+    var request, _ = http.NewRequest(&quot;GET&quot;, url, &quot;&quot;)
+    var timeoutRequest, _ = http.WithTimeout(request, timeoutSeconds)
+
+    var response, err = http.Do(timeoutRequest)
+
+    if err != None {
+        if err == &quot;request timeout&quot; {
+            fmt.Printf(&quot;⏰ Request timed out after %d seconds\n&quot;, timeoutSeconds)
+        } else {
+            fmt.Printf(&quot;❌ Request failed: %s\n&quot;, err)
+        }
+        return None
+    }
+
+    fmt.Printf(&quot;✅ Request completed within timeout\n&quot;)
+    return response
+}
+
+// Usage
+var response = fetchWithTimeout(&quot;https://slow-api.example.com/data&quot;, 5)
+</code></pre></div></p>
+<p><em>Cancellable Request Chain:</em>
+<div class="highlight"><pre><span></span><code>import http
+import fmt
+
+function fetchMultipleWithCancel(urls array, timeoutSeconds int) {
+    var results = []
+
+    for url in urls {
+        fmt.Printf(&quot;🔄 Fetching: %s\n&quot;, url)
+
+        var request, _ = http.NewRequest(&quot;GET&quot;, url, &quot;&quot;)
+        var timeoutRequest, _ = http.WithTimeout(request, timeoutSeconds)
+        var response, err = http.Do(timeoutRequest)
+
+        if err != None {
+            fmt.Printf(&quot;❌ Failed to fetch %s: %s\n&quot;, url, err)
+            // Continue with next URL or break based on strategy
+            continue
+        }
+
+        results = append(results, {
+            &quot;url&quot;: url,
+            &quot;status&quot;: response[&quot;status&quot;],
+            &quot;data&quot;: response[&quot;body&quot;]
+        })
+
+        fmt.Printf(&quot;✅ Completed: %s (Status: %d)\n&quot;, url, response[&quot;status&quot;])
+    }
+
+    return results
+}
+</code></pre></div></p>
+<h2 id="middleware-chain_1">Middleware Chain</h2>
+<p>Easy middleware composition through handler wrapping and function chaining.</p>
+<h3 id="httpchainmiddlewares-handler">http.Chain(middlewares, handler)</h3>
+<p>Chains multiple middleware functions around a handler.</p>
+<p><strong>Examples:</strong></p>
+<p><em>Logging Middleware:</em>
+<div class="highlight"><pre><span></span><code>import http
+import fmt
+import time
+
+function loggingMiddleware(next function) {
+    return function(request, response) {
+        var start = time.Now()
+        var method = request[&quot;method&quot;]
+        var path = request[&quot;path&quot;]
+
+        fmt.Printf(&quot;🔄 %s %s - Started\n&quot;, method, path)
+
+        // Call next handler
+        next(request, response)
+
+        var duration = time.Since(start)
+        var status = response[&quot;status&quot;]
+        fmt.Printf(&quot;✅ %s %s - %d (%s)\n&quot;, method, path, status, duration)
+    }
+}
+
+function authMiddleware(next function) {
+    return function(request, response) {
+        var authHeader = request[&quot;headers&quot;][&quot;Authorization&quot;]
+
+        if authHeader == None or authHeader == &quot;&quot; {
+            http.WriteResponse(response, 401, &quot;application/json&quot;, 
+                &quot;{\&quot;error\&quot;: \&quot;Authorization required\&quot;}&quot;)
+            return
+        }
+
+        // Validate token (simplified)
+        if !isValidToken(authHeader) {
+            http.WriteResponse(response, 403, &quot;application/json&quot;, 
+                &quot;{\&quot;error\&quot;: \&quot;Invalid token\&quot;}&quot;)
+            return
+        }
+
+        // Add user info to request context
+        request[&quot;user&quot;] = getUserFromToken(authHeader)
+        next(request, response)
+    }
+}
+
+function corsMiddleware(next function) {
+    return function(request, response) {
+        // Set CORS headers
+        response[&quot;headers&quot;][&quot;Access-Control-Allow-Origin&quot;] = &quot;*&quot;
+        response[&quot;headers&quot;][&quot;Access-Control-Allow-Methods&quot;] = &quot;GET, POST, PUT, DELETE, OPTIONS&quot;
+        response[&quot;headers&quot;][&quot;Access-Control-Allow-Headers&quot;] = &quot;Content-Type, Authorization&quot;
+
+        if request[&quot;method&quot;] == &quot;OPTIONS&quot; {
+            http.WriteResponse(response, 200, &quot;text/plain&quot;, &quot;&quot;)
+            return
+        }
+
+        next(request, response)
+    }
+}
+
+// Chain middleware
+function createProtectedHandler(handler function) {
+    return corsMiddleware(
+        loggingMiddleware(
+            authMiddleware(handler)
+        )
+    )
+}
+
+// Usage
+function apiHandler(request, response) {
+    var user = request[&quot;user&quot;]
+    var data = {&quot;message&quot;: &quot;Hello &quot; + user[&quot;name&quot;], &quot;protected&quot;: true}
+    var jsonData, _ = json.Marshal(data)
+    http.WriteResponse(response, 200, &quot;application/json&quot;, jsonData)
+}
+
+var protectedHandler = createProtectedHandler(apiHandler)
+http.HandleFunc(mux, &quot;/api/protected&quot;, protectedHandler)
+</code></pre></div></p>
+<p><em>Rate Limiting Middleware:</em>
+<div class="highlight"><pre><span></span><code>import http
+import fmt
+import time
+
+// Simple in-memory rate limiter
+var rateLimiter = {}
+
+function rateLimitMiddleware(requestsPerMinute int) {
+    return function(next function) {
+        return function(request, response) {
+            var clientIP = request[&quot;remote_addr&quot;]
+            var now = time.Now()
+            var minute = now / 60  // Simple minute bucket
+            var key = clientIP + &quot;:&quot; + minute
+
+            var count = rateLimiter[key]
+            if count == None {
+                count = 0
+            }
+
+            if count &gt;= requestsPerMinute {
+                http.WriteResponse(response, 429, &quot;application/json&quot;, 
+                    &quot;{\&quot;error\&quot;: \&quot;Rate limit exceeded\&quot;}&quot;)
+                return
+            }
+
+            rateLimiter[key] = count + 1
+            next(request, response)
+        }
+    }
+}
+
+// Usage
+var rateLimitedHandler = rateLimitMiddleware(100)(apiHandler)
+</code></pre></div></p>
+<h2 id="request-cloning_1">Request Cloning</h2>
+<p>Methods to clone and modify HTTP requests for middleware and testing.</p>
+<h3 id="httpclonerequestrequest">http.CloneRequest(request)</h3>
+<p>Creates a deep copy of an HTTP request.</p>
+<p><strong>Examples:</strong></p>
+<p><em>Request Modification for Testing:</em>
+<div class="highlight"><pre><span></span><code>import http
+import fmt
+
+function testAPIWithDifferentHeaders(baseRequest map) {
+    var testCases = [
+        {&quot;User-Agent&quot;: &quot;TestBot/1.0&quot;, &quot;expected&quot;: 200},
+        {&quot;User-Agent&quot;: &quot;BadBot/1.0&quot;, &quot;expected&quot;: 403},
+        {&quot;Authorization&quot;: &quot;Bearer valid-token&quot;, &quot;expected&quot;: 200},
+        {&quot;Authorization&quot;: &quot;Bearer invalid-token&quot;, &quot;expected&quot;: 401}
+    ]
+
+    for testCase in testCases {
+        // Clone the base request
+        var testRequest, _ = http.CloneRequest(baseRequest)
+
+        // Modify headers for this test
+        for header, value in testCase {
+            if header != &quot;expected&quot; {
+                testRequest, _ = http.SetHeader(testRequest, header, value)
+            }
+        }
+
+        var response, err = http.Do(testRequest)
+        var expectedStatus = testCase[&quot;expected&quot;]
+
+        if err != None {
+            fmt.Printf(&quot;❌ Test failed: %s\n&quot;, err)
+            continue
+        }
+
+        if response[&quot;status&quot;] == expectedStatus {
+            fmt.Printf(&quot;✅ Test passed: %s = %d\n&quot;, testCase, expectedStatus)
+        } else {
+            fmt.Printf(&quot;❌ Test failed: expected %d, got %d\n&quot;, expectedStatus, response[&quot;status&quot;])
+        }
+    }
+}
+
+// Usage
+var baseRequest, _ = http.NewRequest(&quot;GET&quot;, &quot;https://api.example.com/test&quot;, &quot;&quot;)
+testAPIWithDifferentHeaders(baseRequest)
+</code></pre></div></p>
+<p><em>Request Retry with Modifications:</em>
+<div class="highlight"><pre><span></span><code>import http
+import fmt
+import time
+
+function retryWithBackoff(originalRequest map, maxRetries int) {
+    var attempt = 0
+
+    for attempt &lt; maxRetries {
+        attempt = attempt + 1
+
+        // Clone request for this attempt
+        var request, _ = http.CloneRequest(originalRequest)
+
+        // Add retry headers
+        request, _ = http.SetHeader(request, &quot;X-Retry-Attempt&quot;, attempt)
+        request, _ = http.SetHeader(request, &quot;X-Request-ID&quot;, generateRequestID())
+
+        var response, err = http.Do(request)
+
+        if err == None and response[&quot;status&quot;] &lt; 500 {
+            fmt.Printf(&quot;✅ Request succeeded on attempt %d\n&quot;, attempt)
+            return response
+        }
+
+        if attempt &lt; maxRetries {
+            var backoffSeconds = attempt * 2  // Exponential backoff
+            fmt.Printf(&quot;⏳ Attempt %d failed, retrying in %d seconds...\n&quot;, attempt, backoffSeconds)
+            time.Sleep(backoffSeconds)
+        }
+    }
+
+    fmt.Printf(&quot;❌ All %d attempts failed\n&quot;, maxRetries)
+    return None
+}
+</code></pre></div></p>
+<h2 id="multipart-forms_1">Multipart Forms</h2>
+<p>Built-in support for parsing multipart/form-data including file uploads.</p>
+<h3 id="httpparsemultipartrequest">http.ParseMultipart(request)</h3>
+<p>Parses multipart form data from a request.</p>
+<p><strong>Examples:</strong></p>
+<p><em>File Upload Handler:</em>
+<div class="highlight"><pre><span></span><code>import http
+import fmt
+import os
+
+function fileUploadHandler(request, response) {
+    if request[&quot;method&quot;] != &quot;POST&quot; {
+        http.WriteResponse(response, 405, &quot;text/plain&quot;, &quot;Method not allowed&quot;)
+        return
+    }
+
+    var contentType = request[&quot;headers&quot;][&quot;Content-Type&quot;]
+    if !strings.Contains(contentType, &quot;multipart/form-data&quot;) {
+        http.WriteResponse(response, 400, &quot;application/json&quot;, 
+            &quot;{\&quot;error\&quot;: \&quot;Expected multipart/form-data\&quot;}&quot;)
+        return
+    }
+
+    var multipart, err = http.ParseMultipart(request)
+    if err != None {
+        http.WriteResponse(response, 400, &quot;application/json&quot;, 
+            &quot;{\&quot;error\&quot;: \&quot;Failed to parse multipart data\&quot;}&quot;)
+        return
+    }
+
+    // Process form fields
+    var description = multipart[&quot;fields&quot;][&quot;description&quot;]
+    var category = multipart[&quot;fields&quot;][&quot;category&quot;]
+
+    // Process uploaded files
+    var uploadedFiles = []
+    for file in multipart[&quot;files&quot;] {
+        var filename = file[&quot;filename&quot;]
+        var content = file[&quot;content&quot;]
+        var size = file[&quot;size&quot;]
+
+        // Save file
+        var savedPath, saveErr = os.WriteFile(&quot;uploads/&quot; + filename, content)
+        if saveErr != None {
+            fmt.Printf(&quot;❌ Failed to save %s: %s\n&quot;, filename, saveErr)
+            continue
+        }
+
+        uploadedFiles = append(uploadedFiles, {
+            &quot;filename&quot;: filename,
+            &quot;size&quot;: size,
+            &quot;path&quot;: savedPath
+        })
+
+        fmt.Printf(&quot;✅ Saved file: %s (%d bytes)\n&quot;, filename, size)
+    }
+
+    var result = {
+        &quot;message&quot;: &quot;Upload successful&quot;,
+        &quot;description&quot;: description,
+        &quot;category&quot;: category,
+        &quot;files&quot;: uploadedFiles
+    }
+
+    var jsonResponse, _ = json.Marshal(result)
+    http.WriteResponse(response, 200, &quot;application/json&quot;, jsonResponse)
+}
+
+// Register handler
+http.HandleFunc(mux, &quot;/upload&quot;, fileUploadHandler)
+</code></pre></div></p>
+<p><em>Form Data Processing:</em>
+<div class="highlight"><pre><span></span><code>import http
+import fmt
+
+function processFormData(request, response) {
+    var multipart, err = http.ParseMultipart(request)
+    if err != None {
+        http.WriteResponse(response, 400, &quot;application/json&quot;, 
+            &quot;{\&quot;error\&quot;: \&quot;Invalid form data\&quot;}&quot;)
+        return
+    }
+
+    // Validate required fields
+    var requiredFields = [&quot;name&quot;, &quot;email&quot;, &quot;message&quot;]
+    var missingFields = []
+
+    for field in requiredFields {
+        if multipart[&quot;fields&quot;][field] == None or multipart[&quot;fields&quot;][field] == &quot;&quot; {
+            missingFields = append(missingFields, field)
+        }
+    }
+
+    if len(missingFields) &gt; 0 {
+        var errorMsg = &quot;Missing required fields: &quot; + strings.Join(missingFields, &quot;, &quot;)
+        http.WriteResponse(response, 400, &quot;application/json&quot;, 
+            &quot;{\&quot;error\&quot;: \&quot;&quot; + errorMsg + &quot;\&quot;}&quot;)
+        return
+    }
+
+    // Process the form
+    var formData = {
+        &quot;name&quot;: multipart[&quot;fields&quot;][&quot;name&quot;],
+        &quot;email&quot;: multipart[&quot;fields&quot;][&quot;email&quot;],
+        &quot;message&quot;: multipart[&quot;fields&quot;][&quot;message&quot;],
+        &quot;timestamp&quot;: time.Now()
+    }
+
+    // Save to database or process as needed
+    fmt.Printf(&quot;📝 Form submitted by: %s (%s)\n&quot;, formData[&quot;name&quot;], formData[&quot;email&quot;])
+
+    var response = {&quot;message&quot;: &quot;Form submitted successfully&quot;, &quot;id&quot;: generateID()}
+    var jsonResponse, _ = json.Marshal(response)
+    http.WriteResponse(response, 200, &quot;application/json&quot;, jsonResponse)
+}
+</code></pre></div></p>
+<h2 id="keep-alive-control_1">Keep-Alive Control</h2>
+<p>Connection keep-alive management and configuration options.</p>
+<h3 id="httpsetkeepaliverequest-enabled-timeout">http.SetKeepAlive(request, enabled, timeout)</h3>
+<p>Controls connection keep-alive behavior.</p>
+<p><strong>Examples:</strong></p>
+<p><em>Connection Pool Management:</em>
+<div class="highlight"><pre><span></span><code>import http
+import fmt
+
+function createOptimizedClient(maxConnections int, keepAliveTimeout int) {
+    var client = {
+        &quot;maxConnections&quot;: maxConnections,
+        &quot;keepAliveTimeout&quot;: keepAliveTimeout,
+        &quot;connections&quot;: {}
+    }
+
+    return client
+}
+
+function makeOptimizedRequest(client map, url string) {
+    var request, _ = http.NewRequest(&quot;GET&quot;, url, &quot;&quot;)
+
+    // Enable keep-alive with timeout
+    var keepAliveRequest, _ = http.SetKeepAlive(request, true, client[&quot;keepAliveTimeout&quot;])
+
+    // Set connection pooling headers
+    keepAliveRequest, _ = http.SetHeader(keepAliveRequest, &quot;Connection&quot;, &quot;keep-alive&quot;)
+    keepAliveRequest, _ = http.SetHeader(keepAliveRequest, &quot;Keep-Alive&quot;, &quot;timeout=&quot; + client[&quot;keepAliveTimeout&quot;])
+
+    var response, err = http.Do(keepAliveRequest)
+
+    if err != None {
+        fmt.Printf(&quot;❌ Request failed: %s\n&quot;, err)
+        return None
+    }
+
+    fmt.Printf(&quot;✅ Request completed with keep-alive\n&quot;)
+    return response
+}
+
+// Usage
+var client = createOptimizedClient(10, 30)  // 10 connections, 30s timeout
+
+// Make multiple requests that reuse connections
+var urls = [&quot;https://api.example.com/users&quot;, &quot;https://api.example.com/posts&quot;, &quot;https://api.example.com/comments&quot;]
+for url in urls {
+    var response = makeOptimizedRequest(client, url)
+    // Process response
+}
+</code></pre></div></p>
+<p><em>Server Keep-Alive Configuration:</em>
+<div class="highlight"><pre><span></span><code>import http
+import fmt
+
+function createKeepAliveServer(addr string, keepAliveTimeout int) {
+    var server, _ = http.NewServer(addr)
+
+    // Configure keep-alive settings
+    server[&quot;keepAliveTimeout&quot;] = keepAliveTimeout
+    server[&quot;maxKeepAliveRequests&quot;] = 100
+    server[&quot;keepAliveEnabled&quot;] = true
+
+    return server
+}
+
+function keepAliveHandler(request, response) {
+    // Set keep-alive response headers
+    response[&quot;headers&quot;][&quot;Connection&quot;] = &quot;keep-alive&quot;
+    response[&quot;headers&quot;][&quot;Keep-Alive&quot;] = &quot;timeout=30, max=100&quot;
+
+    var data = {&quot;message&quot;: &quot;Keep-alive enabled&quot;, &quot;timestamp&quot;: time.Now()}
+    var jsonData, _ = json.Marshal(data)
+    http.WriteResponse(response, 200, &quot;application/json&quot;, jsonData)
+}
+
+// Usage
+var server = createKeepAliveServer(&quot;:8080&quot;, 30)
+var mux, _ = http.NewMux()
+http.HandleFunc(mux, &quot;/api/data&quot;, keepAliveHandler)
+http.SetHandler(server, mux)
+
+fmt.Println(&quot;🚀 Keep-alive server starting on :8080&quot;)
+http.ListenAndServe(server)
+</code></pre></div></p>
+<h2 id="integration-examples_1">Integration Examples</h2>
+<p><em>Complete Advanced HTTP Client:</em>
+<div class="highlight"><pre><span></span><code>import http
+import json
+import fmt
+import time
+
+function createAdvancedHTTPClient() {
+    return {
+        &quot;timeout&quot;: 30,
+        &quot;retries&quot;: 3,
+        &quot;keepAlive&quot;: true,
+        &quot;userAgent&quot;: &quot;AdvancedClient/1.0&quot;
+    }
+}
+
+function advancedRequest(client map, method string, url string, body string, options map) {
+    var request, _ = http.NewRequest(method, url, body)
+
+    // Apply client defaults
+    request, _ = http.WithTimeout(request, client[&quot;timeout&quot;])
+    request, _ = http.SetKeepAlive(request, client[&quot;keepAlive&quot;], 30)
+    request, _ = http.SetHeader(request, &quot;User-Agent&quot;, client[&quot;userAgent&quot;])
+
+    // Apply conditional headers if provided
+    if options[&quot;etag&quot;] != None {
+        request, _ = http.SetHeader(request, &quot;If-None-Match&quot;, options[&quot;etag&quot;])
+    }
+
+    if options[&quot;lastModified&quot;] != None {
+        request, _ = http.SetHeader(request, &quot;If-Modified-Since&quot;, options[&quot;lastModified&quot;])
+    }
+
+    // Apply range if provided
+    if options[&quot;rangeStart&quot;] != None and options[&quot;rangeEnd&quot;] != None {
+        request, _ = http.SetRange(request, options[&quot;rangeStart&quot;], options[&quot;rangeEnd&quot;])
+    }
+
+    // Retry with exponential backoff
+    var attempt = 0
+    for attempt &lt; client[&quot;retries&quot;] {
+        attempt = attempt + 1
+
+        var requestCopy, _ = http.CloneRequest(request)
+        requestCopy, _ = http.SetHeader(requestCopy, &quot;X-Attempt&quot;, attempt)
+
+        var response, err = http.Do(requestCopy)
+
+        if err == None {
+            return response, None
+        }
+
+        if attempt &lt; client[&quot;retries&quot;] {
+            var backoff = attempt * 2
+            fmt.Printf(&quot;⏳ Attempt %d failed, retrying in %d seconds...\n&quot;, attempt, backoff)
+            time.Sleep(backoff)
+        }
+    }
+
+    return None, &quot;All retry attempts failed&quot;
+}
+
+// Usage
+var client = createAdvancedHTTPClient()
+var options = {&quot;etag&quot;: &quot;\&quot;abc123\&quot;&quot;, &quot;rangeStart&quot;: 0, &quot;rangeEnd&quot;: 1023}
+var response, err = advancedRequest(client, &quot;GET&quot;, &quot;https://api.example.com/data&quot;, &quot;&quot;, options)
+</code></pre></div></p>
+<p>These advanced HTTP features provide enterprise-level capabilities for building robust web applications and APIs in Harneet.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../cookies/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Cookies &amp; Sessions">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Cookies & Sessions
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../examples/" class="md-footer__link md-footer__link--next" aria-label="Next: Examples &amp; Patterns">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Examples & Patterns
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2025 Harneet Programming Language — Built with ❤️ by Gagan Janjua
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.collapse", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.footer", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
