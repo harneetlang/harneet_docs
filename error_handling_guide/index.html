@@ -1,0 +1,2139 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../interpreter_architecture/">
+      
+      
+        <link rel="next" href="../general/data_types/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Error Handling Guide - Harneet Language</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#harneet-error-handling-system-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Harneet Language" class="md-header__button md-logo" aria-label="Harneet Language" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Harneet Language
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Error Handling Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Harneet Language" class="md-nav__button md-logo" aria-label="Harneet Language" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Harneet Language
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language_spec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Language Specification
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interpreter_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Interpreter Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Error Handling Guide
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Error Handling Guide
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#new-go-style-error-handling-implemented" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 NEW: Go-Style Error Handling Implemented!
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Key Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Basic Syntax
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Basic Syntax">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-return-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Return Values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-checking-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Checking Pattern
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migration-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Migration Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Migration Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before-old-syntax-broken" class="md-nav__link">
+    <span class="md-ellipsis">
+      Before (Old Syntax - BROKEN)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-new-syntax-correct" class="md-nav__link">
+    <span class="md-ellipsis">
+      After (New Syntax - CORRECT)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏛️ Error Handling Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏛️ Error Handling Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pattern-1-simple-error-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern 1: Simple Error Check
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-2-early-return-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern 2: Early Return (Simulation)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-3-multiple-error-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern 3: Multiple Error Sources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-4-error-propagation-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern 4: Error Propagation Chain
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updated-function-signatures" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Updated Function Signatures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 Updated Function Signatures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#math-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Math Module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strings-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strings Module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Modules
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-error-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Testing Error Conditions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧪 Testing Error Conditions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#valid-operations-no-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Valid Operations (No Errors)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invalid-operations-with-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Invalid Operations (With Errors)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ Benefits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-update-existing-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 How to Update Existing Code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 How to Update Existing Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-identify-function-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Identify Function Calls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-update-to-multiple-assignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Update to Multiple Assignment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-handle-chained-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Handle Chained Operations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-test-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Example Test Program
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#breaking-changes-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚨 Breaking Changes Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    General
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../general/data_types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Types
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../general/variable_declaration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variable Declaration & Assignment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../general/scoping_variable_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scoping and Variable Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../general/comments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../general/import_system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Import System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../general/operators_and_expressions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operators and Expressions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../general/unicode_support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unicode Support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../general/arrays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrays
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../general/control_flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Control Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../general/block_structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Block Structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../general/keywords_identifiers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Keywords and Identifiers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../error_handling_system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Error Handling System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Functions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Functions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions/arrow_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrow Functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions/advanced_features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Standard Library
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Standard Library
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stdlib/fmt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    fmt
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stdlib/math/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    math
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stdlib/strings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    strings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stdlib/arrays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    arrays
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stdlib/datetime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    datetime
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stdlib/os/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    os
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stdlib/path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    path
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stdlib/file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    file
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stdlib/log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stdlib/errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    errors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stdlib/json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    json
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stdlib/assert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    assert
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../type_system_safety/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Type System & Safety
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comprehensive_examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comprehensive Language Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#new-go-style-error-handling-implemented" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 NEW: Go-Style Error Handling Implemented!
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Key Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Basic Syntax
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Basic Syntax">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-return-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Return Values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-checking-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Checking Pattern
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migration-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Migration Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Migration Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before-old-syntax-broken" class="md-nav__link">
+    <span class="md-ellipsis">
+      Before (Old Syntax - BROKEN)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-new-syntax-correct" class="md-nav__link">
+    <span class="md-ellipsis">
+      After (New Syntax - CORRECT)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏛️ Error Handling Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏛️ Error Handling Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pattern-1-simple-error-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern 1: Simple Error Check
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-2-early-return-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern 2: Early Return (Simulation)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-3-multiple-error-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern 3: Multiple Error Sources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-4-error-propagation-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern 4: Error Propagation Chain
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updated-function-signatures" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Updated Function Signatures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 Updated Function Signatures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#math-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Math Module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strings-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strings Module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Modules
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-error-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Testing Error Conditions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧪 Testing Error Conditions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#valid-operations-no-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Valid Operations (No Errors)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invalid-operations-with-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Invalid Operations (With Errors)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ Benefits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-update-existing-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 How to Update Existing Code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 How to Update Existing Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-identify-function-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Identify Function Calls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-update-to-multiple-assignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Update to Multiple Assignment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-handle-chained-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Handle Chained Operations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-test-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Example Test Program
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#breaking-changes-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚨 Breaking Changes Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="harneet-error-handling-system-guide">Harneet Error Handling System Guide</h1>
+<h2 id="new-go-style-error-handling-implemented">🎉 <strong>NEW: Go-Style Error Handling Implemented!</strong></h2>
+<p>Harneet now features a comprehensive <strong>Go-style error handling system</strong> that prevents silent failures and requires explicit error checking. This is a <strong>BREAKING CHANGE</strong> that makes Harneet programs more reliable and predictable.</p>
+<hr />
+<h2 id="key-features">✅ <strong>Key Features</strong></h2>
+<ol>
+<li><strong>Multiple Return Values</strong>: Functions return <code>(result, error)</code> tuples</li>
+<li><strong>Explicit Error Checking</strong>: Must check <code>if err != None</code>  </li>
+<li><strong>No Silent Failures</strong>: All errors must be handled explicitly</li>
+<li><strong>Comprehensive Coverage</strong>: All standard library functions now return errors</li>
+<li><strong>None Values</strong>: <code>None</code> represents successful operations (no error)</li>
+</ol>
+<hr />
+<h2 id="basic-syntax">📚 <strong>Basic Syntax</strong></h2>
+<h3 id="multiple-return-values">Multiple Return Values</h3>
+<pre><code class="language-harneet">// All stdlib functions now return (result, error) tuples
+var result, err = math.Max(10, 20)
+var length, lenErr = strings.Len(&quot;hello&quot;)
+var number, parseErr = strings.ToInt(&quot;42&quot;)
+</code></pre>
+<h3 id="error-checking-pattern">Error Checking Pattern</h3>
+<pre><code class="language-harneet">var result, err = someFunction()
+if err != None {
+    // Handle the error
+    fmt.Println(&quot;Error occurred:&quot;, err)
+    // Could return, exit, or continue with alternative logic
+} else {
+    // Use the result safely
+    fmt.Println(&quot;Success:&quot;, result)
+}
+</code></pre>
+<hr />
+<h2 id="migration-examples">🔄 <strong>Migration Examples</strong></h2>
+<h3 id="before-old-syntax-broken">Before (Old Syntax - BROKEN)</h3>
+<pre><code class="language-harneet">// This will now cause errors!
+var result = math.Max(10, 20)              // ❌ Wrong
+var length = strings.Len(&quot;hello&quot;)          // ❌ Wrong  
+var maxVal = math.Max(math.Abs(-5), 10)    // ❌ Wrong
+</code></pre>
+<h3 id="after-new-syntax-correct">After (New Syntax - CORRECT)</h3>
+<pre><code class="language-harneet">// Correct error handling syntax
+var result, err = math.Max(10, 20)         // ✅ Correct
+if err != None {
+    fmt.Println(&quot;Error:&quot;, err)
+} else {
+    fmt.Println(&quot;Result:&quot;, result)
+}
+
+// Chained operations with error handling
+var absResult, absErr = math.Abs(-5)
+if absErr != None {
+    fmt.Println(&quot;Error in abs:&quot;, absErr)  
+} else {
+    var maxResult, maxErr = math.Max(absResult, 10)
+    if maxErr != None {
+        fmt.Println(&quot;Error in max:&quot;, maxErr)
+    } else {
+        fmt.Println(&quot;Final result:&quot;, maxResult)
+    }
+}
+</code></pre>
+<hr />
+<h2 id="error-handling-patterns">🏛️ <strong>Error Handling Patterns</strong></h2>
+<h3 id="pattern-1-simple-error-check">Pattern 1: Simple Error Check</h3>
+<pre><code class="language-harneet">var result, err = math.Abs(-25)
+if err != None {
+    fmt.Println(&quot;Error:&quot;, err)
+} else {
+    fmt.Println(&quot;Success:&quot;, result)
+}
+</code></pre>
+<h3 id="pattern-2-early-return-simulation">Pattern 2: Early Return (Simulation)</h3>
+<pre><code class="language-harneet">var number, err = strings.ToInt(&quot;invalid&quot;)
+if err != None {
+    fmt.Println(&quot;Conversion failed:&quot;, err)
+    // In a real function, you would return here
+    fmt.Println(&quot;Would return early in a function&quot;)
+} else {
+    fmt.Println(&quot;Continuing with:&quot;, number)
+}
+</code></pre>
+<h3 id="pattern-3-multiple-error-sources">Pattern 3: Multiple Error Sources</h3>
+<pre><code class="language-harneet">var num1, err1 = strings.ToInt(&quot;25&quot;)
+var num2, err2 = strings.ToInt(&quot;30&quot;)
+
+if err1 != None {
+    fmt.Println(&quot;First conversion failed:&quot;, err1)
+} else if err2 != None {
+    fmt.Println(&quot;Second conversion failed:&quot;, err2)
+} else {
+    // Both conversions succeeded
+    var sum int = num1 + num2
+    fmt.Println(&quot;Sum:&quot;, sum)
+}
+</code></pre>
+<h3 id="pattern-4-error-propagation-chain">Pattern 4: Error Propagation Chain</h3>
+<pre><code class="language-harneet">// Convert string to number, then find absolute value, then find max
+var numStr string = &quot;-42&quot;
+var num, numErr = strings.ToInt(numStr)
+if numErr != None {
+    fmt.Println(&quot;Number conversion failed:&quot;, numErr)
+} else {
+    var abs, absErr = math.Abs(num)
+    if absErr != None {
+        fmt.Println(&quot;Absolute value failed:&quot;, absErr)
+    } else {
+        var max, maxErr = math.Max(abs, 50)
+        if maxErr != None {
+            fmt.Println(&quot;Max calculation failed:&quot;, maxErr)
+        } else {
+            fmt.Println(&quot;Final result:&quot;, max)
+        }
+    }
+}
+</code></pre>
+<hr />
+<h2 id="updated-function-signatures">📦 <strong>Updated Function Signatures</strong></h2>
+<h3 id="math-module">Math Module</h3>
+<table>
+<thead>
+<tr>
+<th>Old Signature</th>
+<th>New Signature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>math.Abs(x)</code> → <code>int</code></td>
+<td><code>math.Abs(x)</code> → <code>(int, error)</code></td>
+</tr>
+<tr>
+<td><code>math.Max(x, y)</code> → <code>int</code></td>
+<td><code>math.Max(x, y)</code> → <code>(int, error)</code></td>
+</tr>
+<tr>
+<td><code>math.Min(x, y)</code> → <code>int</code></td>
+<td><code>math.Min(x, y)</code> → <code>(int, error)</code></td>
+</tr>
+<tr>
+<td><code>math.Pow(base, exp)</code> → <code>int</code></td>
+<td><code>math.Pow(base, exp)</code> → <code>(int, error)</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="strings-module">Strings Module</h3>
+<table>
+<thead>
+<tr>
+<th>Old Signature</th>
+<th>New Signature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>strings.Len(s)</code> → <code>int</code></td>
+<td><code>strings.Len(s)</code> → <code>(int, error)</code></td>
+</tr>
+<tr>
+<td><code>strings.Upper(s)</code> → <code>string</code></td>
+<td><code>strings.Upper(s)</code> → <code>(string, error)</code></td>
+</tr>
+<tr>
+<td><code>strings.Lower(s)</code> → <code>string</code></td>
+<td><code>strings.Lower(s)</code> → <code>(string, error)</code></td>
+</tr>
+<tr>
+<td><code>strings.Contains(s, sub)</code> → <code>int</code></td>
+<td><code>strings.Contains(s, sub)</code> → <code>(int, error)</code></td>
+</tr>
+<tr>
+<td><code>strings.Replace(s, old, new)</code> → <code>string</code></td>
+<td><code>strings.Replace(s, old, new)</code> → <code>(string, error)</code></td>
+</tr>
+<tr>
+<td><code>strings.Split(s, sep)</code> → <code>string</code></td>
+<td><code>strings.Split(s, sep)</code> → <code>(string, error)</code></td>
+</tr>
+<tr>
+<td><code>strings.ToInt(s)</code> → <code>int</code></td>
+<td><code>strings.ToInt(s)</code> → <code>(int, error)</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="other-modules">Other Modules</h3>
+<p>All standard library modules (datetime, os, path, file, log) now follow the same pattern of returning <code>(result, error)</code> tuples.</p>
+<hr />
+<h2 id="testing-error-conditions">🧪 <strong>Testing Error Conditions</strong></h2>
+<h3 id="valid-operations-no-errors">Valid Operations (No Errors)</h3>
+<pre><code class="language-harneet">var result, err = math.Max(10, 20)
+// result = 20, err = None
+
+var length, lenErr = strings.Len(&quot;hello&quot;)  
+// length = 5, lenErr = None
+
+var number, parseErr = strings.ToInt(&quot;42&quot;)
+// number = 42, parseErr = None
+</code></pre>
+<h3 id="invalid-operations-with-errors">Invalid Operations (With Errors)</h3>
+<pre><code class="language-harneet">var number, err = strings.ToInt(&quot;not_a_number&quot;)
+// number = None, err = &quot;cannot convert 'not_a_number' to integer&quot;
+
+// Note: Math operations typically don't error in current implementation
+// but the infrastructure is there for future enhancements
+</code></pre>
+<hr />
+<h2 id="benefits">⚡ <strong>Benefits</strong></h2>
+<ol>
+<li><strong>🛡️ No Silent Failures</strong>: Errors can't be ignored</li>
+<li><strong>🔍 Clear Error Messages</strong>: Descriptive error information  </li>
+<li><strong>🏗️ Reliable Code</strong>: Forces proper error handling</li>
+<li><strong>📍 Error Context</strong>: Know exactly what went wrong where</li>
+<li><strong>🚀 Go-Style Patterns</strong>: Familiar to Go developers</li>
+</ol>
+<hr />
+<h2 id="how-to-update-existing-code">🔧 <strong>How to Update Existing Code</strong></h2>
+<h3 id="step-1-identify-function-calls">Step 1: Identify Function Calls</h3>
+<p>Find all calls to standard library functions:
+- <code>math.*</code> functions
+- <code>strings.*</code> functions<br />
+- <code>datetime.*</code> functions
+- <code>os.*</code> functions
+- <code>path.*</code> functions
+- <code>file.*</code> functions
+- <code>log.*</code> functions</p>
+<h3 id="step-2-update-to-multiple-assignment">Step 2: Update to Multiple Assignment</h3>
+<pre><code class="language-harneet">// Before
+var result = math.Max(a, b)
+
+// After  
+var result, err = math.Max(a, b)
+if err != None {
+    // Handle error
+} else {
+    // Use result
+}
+</code></pre>
+<h3 id="step-3-handle-chained-operations">Step 3: Handle Chained Operations</h3>
+<pre><code class="language-harneet">// Before (BROKEN)
+var result = math.Max(math.Abs(x), y)
+
+// After (CORRECT)
+var absX, absErr = math.Abs(x)
+if absErr != None {
+    // Handle abs error
+} else {
+    var result, maxErr = math.Max(absX, y)
+    if maxErr != None {
+        // Handle max error  
+    } else {
+        // Use result
+    }
+}
+</code></pre>
+<hr />
+<h2 id="example-test-program">🧪 <strong>Example Test Program</strong></h2>
+<pre><code class="language-harneet">import fmt
+import math
+import strings
+
+fmt.Println(&quot;=== Error Handling Demo ===&quot;)
+
+// Test successful operations
+var maxResult, maxErr = math.Max(15, 30)
+if maxErr != None {
+    fmt.Println(&quot;Unexpected error:&quot;, maxErr)
+} else {
+    fmt.Println(&quot;Max result:&quot;, maxResult)
+}
+
+// Test error conditions  
+var invalidNum, invalidErr = strings.ToInt(&quot;not_a_number&quot;)
+if invalidErr != None {
+    fmt.Println(&quot;Expected error:&quot;, invalidErr)
+} else {
+    fmt.Println(&quot;Unexpected success:&quot;, invalidNum)  
+}
+
+// Test chained operations
+var numStr string = &quot;25&quot;
+var num, numErr = strings.ToInt(numStr)
+if numErr != None {
+    fmt.Println(&quot;Conversion error:&quot;, numErr)
+} else {
+    var abs, absErr = math.Abs(num)
+    if absErr != None {
+        fmt.Println(&quot;Abs error:&quot;, absErr)
+    } else {
+        fmt.Println(&quot;Chain result:&quot;, abs)
+    }
+}
+
+fmt.Println(&quot;Demo complete!&quot;)
+</code></pre>
+<hr />
+<h2 id="breaking-changes-summary">🚨 <strong>Breaking Changes Summary</strong></h2>
+<ul>
+<li>❌ <strong>All old code using stdlib functions will break</strong></li>
+<li>✅ <strong>Must update to use <code>var result, err = function()</code> syntax</strong>  </li>
+<li>✅ <strong>Must add <code>if err != None</code> checks</strong></li>
+<li>✅ <strong>Benefits: Much more reliable and predictable code</strong></li>
+</ul>
+<p>This error handling system makes Harneet programs more robust by forcing developers to explicitly handle all potential error conditions, preventing unexpected crashes and silent failures.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

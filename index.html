@@ -1,0 +1,2192 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="language_spec/">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Harneet Language</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="assets/css/custom.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#harneet-programming-language-beginners-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Harneet Language" class="md-header__button md-logo" aria-label="Harneet Language" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Harneet Language
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Harneet Language" class="md-nav__button md-logo" aria-label="Harneet Language" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Harneet Language
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-harneet" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌟 What is Harneet?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Getting Started
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation-running-programs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation &amp; Running Programs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-first-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Your First Program
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔢 Working with Numbers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-storing-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Variables - Storing Information
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 Variables - Storing Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changing-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changing Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-variable-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Variable Creation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#math-with-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧮 Math with Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#making-decisions-with-if" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 Making Decisions with if
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🤔 Making Decisions with if">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparison-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparison Operators
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repeating-with-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Repeating with Loops
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Repeating with Loops">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simple Loops
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logical-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Logical Operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-example-programs" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Complete Example Programs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Complete Example Programs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-age-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 1: Age Calculator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-simple-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 2: Simple Calculator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-grade-checker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 3: Grade Checker
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-modules-advanced-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Built-in Modules (Advanced Features)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#things-harneet-doesnt-have-yet" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚫 Things Harneet Doesn't Have (Yet)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-for-success" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Tips for Success
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-beginner-mistakes" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Common Beginner Mistakes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🐛 Common Beginner Mistakes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mistake-1-missing-quotes-for-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake 1: Missing quotes for text
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-2-using-instead-of" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake 2: Using = instead of ==
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-3-trying-to-use-a-single-variable-for-functions-that-return-multiple-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake 3: Trying to use a single variable for functions that return multiple values
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Getting Help
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automatic-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏷️ Automatic Releases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#congratulations" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 Congratulations!
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="language_spec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Language Specification
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="interpreter_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Interpreter Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="error_handling_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Error Handling Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    General
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="general/data_types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Types
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="general/variable_declaration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variable Declaration & Assignment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="general/scoping_variable_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scoping and Variable Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="general/comments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="general/import_system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Import System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="general/operators_and_expressions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operators and Expressions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="general/unicode_support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unicode Support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="general/arrays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrays
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="general/control_flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Control Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="general/block_structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Block Structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="general/keywords_identifiers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Keywords and Identifiers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="error_handling_system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Error Handling System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Functions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Functions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="functions/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="functions/arrow_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrow Functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="functions/advanced_features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Standard Library
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Standard Library
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="stdlib/fmt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    fmt
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="stdlib/math/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    math
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="stdlib/strings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    strings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="stdlib/arrays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    arrays
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="stdlib/datetime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    datetime
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="stdlib/os/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    os
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="stdlib/path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    path
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="stdlib/file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    file
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="stdlib/log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="stdlib/errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    errors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="stdlib/json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    json
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="stdlib/assert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    assert
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="type_system_safety/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Type System & Safety
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="comprehensive_examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comprehensive Language Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-harneet" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌟 What is Harneet?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Getting Started
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation-running-programs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation &amp; Running Programs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-first-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Your First Program
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔢 Working with Numbers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-storing-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Variables - Storing Information
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 Variables - Storing Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changing-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changing Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-variable-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Variable Creation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#math-with-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧮 Math with Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#making-decisions-with-if" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 Making Decisions with if
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🤔 Making Decisions with if">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparison-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparison Operators
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repeating-with-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Repeating with Loops
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Repeating with Loops">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simple Loops
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logical-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Logical Operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-example-programs" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Complete Example Programs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Complete Example Programs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-age-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 1: Age Calculator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-simple-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 2: Simple Calculator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-grade-checker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 3: Grade Checker
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-modules-advanced-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Built-in Modules (Advanced Features)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#things-harneet-doesnt-have-yet" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚫 Things Harneet Doesn't Have (Yet)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-for-success" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Tips for Success
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-beginner-mistakes" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Common Beginner Mistakes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🐛 Common Beginner Mistakes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mistake-1-missing-quotes-for-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake 1: Missing quotes for text
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-2-using-instead-of" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake 2: Using = instead of ==
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-3-trying-to-use-a-single-variable-for-functions-that-return-multiple-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake 3: Trying to use a single variable for functions that return multiple values
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Getting Help
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automatic-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏷️ Automatic Releases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#congratulations" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 Congratulations!
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="harneet-programming-language-beginners-guide">Harneet Programming Language - Beginner's Guide</h1>
+<p>Welcome to Harneet! This guide will teach you everything you need to know about the Harneet programming language, designed especially for newcomers to programming. Inspired by golang and some python! </p>
+<h2 id="what-is-harneet">🌟 What is Harneet?</h2>
+<p>Harneet is a simple, easy-to-learn programming language that's perfect for beginners. It has clean syntax inspired by Go and includes basic programming concepts like variables, math, and decision-making.</p>
+<p>Think of Harneet as a friendly way to learn programming fundamentals before moving on to more complex languages.</p>
+<p>Please see the <a href="language_spec/">Language Specification</a>, for detailed language specifications.</p>
+<p>Please note that Harneet is still being actively worked on and features that you would normally see in other programming languages are still not present in Harneet.Definitely not to be used in Production!!</p>
+<h2 id="getting-started">🚀 Getting Started</h2>
+<h3 id="installation-running-programs">Installation &amp; Running Programs</h3>
+<ol>
+<li>
+<p><strong>Build Harneet</strong> (one-time setup):
+   <code>bash
+   just build
+   # This creates the 'harneet' program</code></p>
+</li>
+<li>
+<p><strong>Try the interactive mode</strong> (REPL):
+   <code>bash
+   just repl
+   # Type commands and see results immediately</code></p>
+</li>
+<li>
+<p><strong>Run a program file</strong>:
+   <code>bash
+   ./harneet examples/hello.ha
+   # Runs code from a file (uses .ha extension)</code></p>
+</li>
+</ol>
+<h2 id="your-first-program">📝 Your First Program</h2>
+<p>Let's start with the classic "Hello, World!" program:</p>
+<pre><code class="language-harneet">import fmt
+fmt.Println(&quot;Hello, World!&quot;)
+</code></pre>
+<p><strong>What this does:</strong>
+- <code>import fmt</code> loads the formatting module (needed for printing)
+- <code>fmt.Println()</code> is a command that prints text to the screen
+- The text inside quotes <code>"Hello, World!"</code> is what gets printed
+- Every statement in Harneet can be on its own line</p>
+<p><strong>Try it yourself:</strong>
+1. Save this code in a file called <code>hello.ha</code>
+2. Run it with: <code>./harneet hello.ha</code></p>
+<h2 id="working-with-numbers">🔢 Working with Numbers</h2>
+<p>Harneet can do math! Here are the basics:</p>
+<pre><code class="language-harneet">import fmt
+fmt.Println(5 + 3)    // Prints: 8
+fmt.Println(10 - 4)   // Prints: 6  
+fmt.Println(6 * 7)    // Prints: 42
+fmt.Println(15 / 3)   // Prints: 5
+fmt.Println(17 % 5)   // Prints: 2 (remainder)
+</code></pre>
+<p><strong>Math Operators:</strong>
+- <code>+</code> addition
+- <code>-</code> subtraction<br />
+- <code>*</code> multiplication
+- <code>/</code> division
+- <code>%</code> remainder (modulo)</p>
+<h2 id="variables-storing-information">📦 Variables - Storing Information</h2>
+<p>Variables are like labeled boxes where you can store information. Harneet supports two ways to create variables:</p>
+<p><strong>Method 1: Explicit Types (tell Harneet the type):</strong></p>
+<pre><code class="language-harneet">var age int = 25
+var name string = &quot;Alice&quot;
+</code></pre>
+<p><strong>Method 2: Type Inference (let Harneet figure out the type):</strong></p>
+<pre><code class="language-harneet">var age = 25        // Harneet knows this is an int
+var name = &quot;Alice&quot;  // Harneet knows this is a string
+</code></pre>
+<p>Both work exactly the same! Choose whichever feels more comfortable.</p>
+<pre><code class="language-harneet">fmt.Println(&quot;Name:&quot;, name)
+fmt.Println(&quot;Age:&quot;, age)
+</code></pre>
+<p><strong>How variables work:</strong>
+- <code>var</code> tells Harneet you're creating a variable
+- <code>age</code> is the variable name (you choose this)
+- <code>int</code> or automatic type detection means it stores whole numbers
+- <code>= 25</code> puts the value 25 into the variable</p>
+<p><strong>Variable Types:</strong>
+- <code>int</code> - whole numbers (1, 42, -5)
+- <code>string</code> - text in quotes ("hello", "Harneet")</p>
+<h3 id="changing-variables">Changing Variables</h3>
+<p>You can change what's stored in a variable:</p>
+<pre><code class="language-harneet">var score int = 100
+fmt.Println(&quot;Score:&quot;, score)  // Prints: Score: 100
+
+score = 150
+fmt.Println(&quot;New score:&quot;, score)  // Prints: New score: 150
+</code></pre>
+<h3 id="quick-variable-creation">Quick Variable Creation</h3>
+<p>There's a shortcut for creating variables:</p>
+<pre><code class="language-harneet">x := 42        // Same as: var x int = 42
+message := &quot;Hi there&quot;  // Same as: var message string = &quot;Hi there&quot;
+</code></pre>
+<h2 id="math-with-variables">🧮 Math with Variables</h2>
+<p>You can do math with variables just like with numbers:</p>
+<pre><code class="language-harneet">var a int = 10
+var b int = 5
+
+fmt.Println(&quot;a + b =&quot;, a + b)    // Prints: a + b = 15
+fmt.Println(&quot;a * b =&quot;, a * b)    // Prints: a * b = 50
+
+var total int = a + b + 20
+fmt.Println(&quot;Total:&quot;, total)     // Prints: Total: 35
+</code></pre>
+<h2 id="making-decisions-with-if">🤔 Making Decisions with <code>if</code></h2>
+<p>Sometimes your program needs to make decisions based on conditions:</p>
+<pre><code class="language-harneet">var temperature int = 75
+
+if temperature &gt; 70 {
+    fmt.Println(&quot;It's warm outside!&quot;)
+}
+</code></pre>
+<p><strong>How <code>if</code> works:</strong>
+- <code>if</code> starts the decision
+- <code>temperature &gt; 70</code> is the condition (true or false)
+- Code inside <code>{ }</code> runs only if the condition is true</p>
+<h3 id="comparison-operators">Comparison Operators</h3>
+<p>These help you compare values:</p>
+<pre><code class="language-harneet">var x int = 10
+var y int = 20
+
+if x &lt; y {
+    fmt.Println(&quot;x is smaller than y&quot;)
+}
+
+if x == 10 {
+    fmt.Println(&quot;x equals 10&quot;)
+}
+
+if y != 15 {
+    fmt.Println(&quot;y is not 15&quot;)
+}
+</code></pre>
+<p><strong>Comparison operators:</strong>
+- <code>&lt;</code> less than
+- <code>&gt;</code> greater than
+- <code>&lt;=</code> less than or equal
+- <code>&gt;=</code> greater than or equal<br />
+- <code>==</code> equals
+- <code>!=</code> not equals</p>
+<h2 id="repeating-with-loops">🔄 Repeating with Loops</h2>
+<p>Loops let you repeat code multiple times:</p>
+<pre><code class="language-harneet">for i := 0; i &lt; 5; i = i + 1 {
+    fmt.Println(&quot;Count:&quot;, i)
+}
+</code></pre>
+<p><strong>This prints:</strong></p>
+<pre><code>Count: 0
+Count: 1
+Count: 2
+Count: 3
+Count: 4
+</code></pre>
+<p><strong>How the loop works:</strong>
+- <code>i := 0</code> creates a counter starting at 0
+- <code>i &lt; 5</code> continues while i is less than 5
+- <code>i = i + 1</code> adds 1 to i after each round
+- Code in <code>{ }</code> runs each time</p>
+<h3 id="simple-loops">Simple Loops</h3>
+<p>You can also make simpler loops:</p>
+<pre><code class="language-harneet">var count int = 0
+for count &lt; 3 {
+    fmt.Println(&quot;Hello!&quot;)
+    count = count + 1
+}
+</code></pre>
+<h2 id="logical-operators">🔗 Logical Operators</h2>
+<p>You can combine conditions using logical operators:</p>
+<pre><code class="language-harneet">var age int = 20
+var hasLicense int = 1  // 1 means true, 0 means false
+
+if age &gt;= 16 and hasLicense == 1 {
+    fmt.Println(&quot;Can drive!&quot;)
+}
+
+var isWeekend int = 1
+var isHoliday int = 0
+
+if isWeekend == 1 or isHoliday == 1 {
+    fmt.Println(&quot;No work today!&quot;)
+}
+</code></pre>
+<p><strong>Logical operators:</strong>
+- <code>and</code> - both conditions must be true
+- <code>or</code> - at least one condition must be true<br />
+- <code>not</code> - flips true to false, false to true</p>
+<h2 id="complete-example-programs">📋 Complete Example Programs</h2>
+<h3 id="example-1-age-calculator">Example 1: Age Calculator</h3>
+<pre><code class="language-harneet">var birthYear int = 2000
+var currentYear int = 2024
+var age int = currentYear - birthYear
+
+fmt.Println(&quot;Birth year:&quot;, birthYear)
+fmt.Println(&quot;Current year:&quot;, currentYear)
+fmt.Println(&quot;Your age is:&quot;, age)
+
+if age &gt;= 18 {
+    fmt.Println(&quot;You are an adult!&quot;)
+}
+</code></pre>
+<h3 id="example-2-simple-calculator">Example 2: Simple Calculator</h3>
+<pre><code class="language-harneet">var num1 int = 15
+var num2 int = 4
+
+fmt.Println(&quot;Number 1:&quot;, num1)
+fmt.Println(&quot;Number 2:&quot;, num2)
+fmt.Println(&quot;Sum:&quot;, num1 + num2)
+fmt.Println(&quot;Difference:&quot;, num1 - num2)
+fmt.Println(&quot;Product:&quot;, num1 * num2)
+fmt.Println(&quot;Division:&quot;, num1 / num2)
+fmt.Println(&quot;Remainder:&quot;, num1 % num2)
+</code></pre>
+<h3 id="example-3-grade-checker">Example 3: Grade Checker</h3>
+<pre><code class="language-harneet">var score int = 85
+
+fmt.Println(&quot;Your score:&quot;, score)
+
+if score &gt;= 90 {
+    fmt.Println(&quot;Grade: A - Excellent!&quot;)
+}
+
+if score &gt;= 80 and score &lt; 90 {
+    fmt.Println(&quot;Grade: B - Good job!&quot;)
+}
+
+if score &gt;= 70 and score &lt; 80 {
+    fmt.Println(&quot;Grade: C - Not bad!&quot;)
+}
+
+if score &lt; 70 {
+    fmt.Println(&quot;Grade: F - Study more!&quot;)
+}
+</code></pre>
+<h2 id="built-in-modules-advanced-features">📚 Built-in Modules (Advanced Features)</h2>
+<p>As you get more comfortable with Harneet, you can explore its built-in modules for more powerful features:</p>
+<pre><code class="language-harneet">import fmt      // Printing and formatting
+import math     // Mathematical functions
+import strings  // Text manipulation
+import datetime // Date and time operations
+import os       // Operating system features
+import file     // File operations
+import log      // Logging messages
+import assert   // Runtime assertions for testing and debugging
+</code></pre>
+<p>These modules provide advanced functionality when you're ready to explore them!</p>
+<h2 id="things-harneet-doesnt-have-yet">🚫 Things Harneet Doesn't Have (Yet)</h2>
+<p>Harneet is designed for learning, so it doesn't have some advanced features: (we are still working on them)
+- Complex data types</p>
+<p>This focused approach makes it perfect for learning programming fundamentals!</p>
+<h2 id="tips-for-success">🔧 Tips for Success</h2>
+<ol>
+<li><strong>Start small</strong> - Begin with simple programs and add complexity gradually</li>
+<li><strong>Experiment</strong> - Try changing values and see what happens</li>
+<li><strong>Use the REPL</strong> - Test small pieces of code interactively</li>
+<li><strong>Read error messages</strong> - They tell you what went wrong</li>
+<li><strong>Practice daily</strong> - Even 10 minutes a day helps!</li>
+</ol>
+<h2 id="common-beginner-mistakes">🐛 Common Beginner Mistakes</h2>
+<h3 id="mistake-1-missing-quotes-for-text">Mistake 1: Missing quotes for text</h3>
+<pre><code class="language-harneet">// Wrong:
+fmt.Println(Hello)
+
+// Right:
+fmt.Println(&quot;Hello&quot;)
+</code></pre>
+<h3 id="mistake-2-using-instead-of">Mistake 2: Using = instead of ==</h3>
+<pre><code class="language-harneet">// Wrong (assigns value):
+if x = 5 {
+
+// Right (compares):
+if x == 5 {
+</code></pre>
+<h3 id="mistake-3-trying-to-use-a-single-variable-for-functions-that-return-multiple-values">Mistake 3: Trying to use a single variable for functions that return multiple values</h3>
+<pre><code class="language-harneet">// Wrong (shows helpful error message):
+var result = math.Abs(-42)
+
+// Right (handle both result and error):
+var result, err = math.Abs(-42)
+if err != None {
+    fmt.Println(&quot;Error:&quot;, err)
+} else {
+    fmt.Println(&quot;Result:&quot;, result)
+}
+</code></pre>
+<h2 id="next-steps">🎯 Next Steps</h2>
+<p>Once you're comfortable with Harneet, you might want to learn:
+1. <strong>Go</strong> - Harneet's syntax is similar to Go
+2. <strong>Python</strong> - Great for beginners, very popular
+3. <strong>JavaScript</strong> - For web development
+4. <strong>C</strong> - To understand how computers work</p>
+<h2 id="getting-help">🔗 Getting Help</h2>
+<ul>
+<li><strong>Run examples</strong>: <code>just test</code> runs all example programs</li>
+<li><strong>Try interactive mode</strong>: <code>just repl</code> for experimenting</li>
+<li><strong>Check the documentation</strong>: Read <code>CLAUDE.md</code> for technical details</li>
+<li><strong>Practice</strong>: The <code>examples/</code> folder has more programs to study</li>
+</ul>
+<h2 id="automatic-releases">🏷️ Automatic Releases</h2>
+<p>The project uses conventional commit messages to automatically create releases:</p>
+<ul>
+<li><code>feat:</code> → Creates a <strong>minor</strong> version bump (e.g., 1.0.0 → 1.1.0)</li>
+<li><code>fix:</code> → Creates a <strong>patch</strong> version bump (e.g., 1.0.0 → 1.0.1)  </li>
+<li><code>BREAKING CHANGE:</code> → Creates a <strong>major</strong> version bump (e.g., 1.0.0 → 2.0.0)</li>
+</ul>
+<p><strong>Example commit messages:</strong></p>
+<pre><code class="language-bash">git commit -m &quot;feat: add new string manipulation functions&quot;
+git commit -m &quot;fix: resolve parser error with semicolons&quot;
+git commit -m &quot;feat!: redesign error handling system
+
+BREAKING CHANGE: all functions now return (result, error) tuples&quot;
+</code></pre>
+<p>When you push commits with these prefixes to the main branch, GitHub Actions will automatically:
+- Determine the next version number
+- Create a git tag
+- Build release binaries for multiple platforms
+- Create a GitHub release with download links</p>
+<h2 id="congratulations">🎉 Congratulations!</h2>
+<p>You now know the basics of the Harneet programming language! Remember:
+- Programming is like learning a new language - it takes practice
+- Every expert was once a beginner
+- The most important thing is to keep experimenting and having fun!</p>
+<p>Happy coding! 🚀</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

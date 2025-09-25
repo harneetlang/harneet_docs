@@ -1,0 +1,1900 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../arrays/">
+      
+      
+        <link rel="next" href="../os/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>datetime - Harneet Language</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#datetime-module" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Harneet Language" class="md-header__button md-logo" aria-label="Harneet Language" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Harneet Language
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              datetime
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Harneet Language" class="md-nav__button md-logo" aria-label="Harneet Language" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Harneet Language
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../language_spec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Language Specification
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interpreter_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Interpreter Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../error_handling_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Error Handling Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    General
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/data_types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Types
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/variable_declaration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variable Declaration & Assignment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/scoping_variable_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scoping and Variable Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/comments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/import_system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Import System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/operators_and_expressions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operators and Expressions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/unicode_support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unicode Support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/arrays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrays
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/control_flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Control Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/block_structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Block Structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/keywords_identifiers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Keywords and Identifiers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../error_handling_system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Error Handling System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Functions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Functions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functions/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functions/arrow_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrow Functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functions/advanced_features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Standard Library
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Standard Library
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fmt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    fmt
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    math
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    strings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arrays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    arrays
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    datetime
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    datetime
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#now" class="md-nav__link">
+    <span class="md-ellipsis">
+      Now()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formattimestamp-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Format(timestamp, format)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sleepseconds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sleep(seconds)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yeartimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Year(timestamp)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monthtimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Month(timestamp)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daytimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Day(timestamp)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#converttztimestamp-fromtz-totz" class="md-nav__link">
+    <span class="md-ellipsis">
+      ConvertTZ(timestamp, fromTZ, toTZ)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nowintztimezone" class="md-nav__link">
+    <span class="md-ellipsis">
+      NowInTZ(timezone)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#localtimelocale" class="md-nav__link">
+    <span class="md-ellipsis">
+      LocalTime(locale)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getsystemtz" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetSystemTZ()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettzoffsettimezone" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTZOffset(timezone)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timers-and-tickers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timers and Tickers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Timers and Tickers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#newtimerid-delay_seconds" class="md-nav__link">
+    <span class="md-ellipsis">
+      NewTimer(id, delay_seconds)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checktimerid" class="md-nav__link">
+    <span class="md-ellipsis">
+      CheckTimer(id)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stoptimerid" class="md-nav__link">
+    <span class="md-ellipsis">
+      StopTimer(id)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newtickerid-interval_seconds" class="md-nav__link">
+    <span class="md-ellipsis">
+      NewTicker(id, interval_seconds)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stoptickerid" class="md-nav__link">
+    <span class="md-ellipsis">
+      StopTicker(id)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cron-scheduling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cron Scheduling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cron Scheduling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#isvalidcronexpression" class="md-nav__link">
+    <span class="md-ellipsis">
+      IsValidCron(expression)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nextcronexecutionexpression-timestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      NextCronExecution(expression, timestamp)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parsecronexpression" class="md-nav__link">
+    <span class="md-ellipsis">
+      ParseCron(expression)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schedulecronid-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      ScheduleCron(id, expression)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stopcronid" class="md-nav__link">
+    <span class="md-ellipsis">
+      StopCron(id)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listcronjobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      ListCronJobs()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#everyminute-hourly-daily-weekly-monthly" class="md-nav__link">
+    <span class="md-ellipsis">
+      EveryMinute(), Hourly(), Daily(), Weekly(), Monthly()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../os/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    os
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    path
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    file
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    errors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    json
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    assert
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../type_system_safety/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Type System & Safety
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../comprehensive_examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comprehensive Language Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#now" class="md-nav__link">
+    <span class="md-ellipsis">
+      Now()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formattimestamp-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Format(timestamp, format)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sleepseconds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sleep(seconds)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yeartimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Year(timestamp)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monthtimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Month(timestamp)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daytimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Day(timestamp)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#converttztimestamp-fromtz-totz" class="md-nav__link">
+    <span class="md-ellipsis">
+      ConvertTZ(timestamp, fromTZ, toTZ)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nowintztimezone" class="md-nav__link">
+    <span class="md-ellipsis">
+      NowInTZ(timezone)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#localtimelocale" class="md-nav__link">
+    <span class="md-ellipsis">
+      LocalTime(locale)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getsystemtz" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetSystemTZ()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettzoffsettimezone" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTZOffset(timezone)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timers-and-tickers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timers and Tickers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Timers and Tickers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#newtimerid-delay_seconds" class="md-nav__link">
+    <span class="md-ellipsis">
+      NewTimer(id, delay_seconds)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checktimerid" class="md-nav__link">
+    <span class="md-ellipsis">
+      CheckTimer(id)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stoptimerid" class="md-nav__link">
+    <span class="md-ellipsis">
+      StopTimer(id)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newtickerid-interval_seconds" class="md-nav__link">
+    <span class="md-ellipsis">
+      NewTicker(id, interval_seconds)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stoptickerid" class="md-nav__link">
+    <span class="md-ellipsis">
+      StopTicker(id)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cron-scheduling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cron Scheduling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cron Scheduling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#isvalidcronexpression" class="md-nav__link">
+    <span class="md-ellipsis">
+      IsValidCron(expression)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nextcronexecutionexpression-timestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      NextCronExecution(expression, timestamp)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parsecronexpression" class="md-nav__link">
+    <span class="md-ellipsis">
+      ParseCron(expression)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schedulecronid-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      ScheduleCron(id, expression)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stopcronid" class="md-nav__link">
+    <span class="md-ellipsis">
+      StopCron(id)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listcronjobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      ListCronJobs()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#everyminute-hourly-daily-weekly-monthly" class="md-nav__link">
+    <span class="md-ellipsis">
+      EveryMinute(), Hourly(), Daily(), Weekly(), Monthly()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="datetime-module"><code>datetime</code> Module</h1>
+<p>The <code>datetime</code> module provides a comprehensive set of functions for date and time operations, including timezone support, timers, and cron-like scheduling.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="now"><code>Now()</code></h3>
+<p>Returns the current Unix timestamp.</p>
+<p><strong>Returns:</strong>
+- <code>(integer, error)</code>: The current Unix timestamp.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-harneet">import fmt
+import datetime
+
+var now, _ = datetime.Now()
+fmt.Println(now)
+</code></pre>
+<h3 id="formattimestamp-format"><code>Format(timestamp, format)</code></h3>
+<p>Formats a Unix timestamp into a string based on a layout.</p>
+<p><strong>Parameters:</strong>
+- <code>timestamp</code>: An integer representing the Unix timestamp.
+- <code>format</code>: A string representing the layout. Supports "RFC3339", "Kitchen", "Stamp", or custom Go format strings.</p>
+<p><strong>Returns:</strong>
+- <code>(string, error)</code>: The formatted time string.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-harneet">import fmt
+import datetime
+
+var now, _ = datetime.Now()
+var formatted, _ = datetime.Format(now, &quot;RFC3339&quot;)
+fmt.Println(formatted)
+</code></pre>
+<h3 id="sleepseconds"><code>Sleep(seconds)</code></h3>
+<p>Pauses the execution for a given number of seconds.</p>
+<p><strong>Parameters:</strong>
+- <code>seconds</code>: An integer or float representing the number of seconds to sleep.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-harneet">import fmt
+import datetime
+
+fmt.Println(&quot;Sleeping for 2 seconds...&quot;)
+datetime.Sleep(2)
+fmt.Println(&quot;Awake!&quot;)
+</code></pre>
+<h3 id="yeartimestamp"><code>Year(timestamp)</code></h3>
+<p>Returns the year of a given Unix timestamp.</p>
+<p><strong>Parameters:</strong>
+- <code>timestamp</code>: An integer representing the Unix timestamp.</p>
+<p><strong>Returns:</strong>
+- <code>(integer, error)</code>: The year.</p>
+<h3 id="monthtimestamp"><code>Month(timestamp)</code></h3>
+<p>Returns the month of a given Unix timestamp.</p>
+<p><strong>Parameters:</strong>
+- <code>timestamp</code>: An integer representing the Unix timestamp.</p>
+<p><strong>Returns:</strong>
+- <code>(integer, error)</code>: The month (1-12).</p>
+<h3 id="daytimestamp"><code>Day(timestamp)</code></h3>
+<p>Returns the day of the month of a given Unix timestamp.</p>
+<p><strong>Parameters:</strong>
+- <code>timestamp</code>: An integer representing the Unix timestamp.</p>
+<p><strong>Returns:</strong>
+- <code>(integer, error)</code>: The day of the month (1-31).</p>
+<h3 id="converttztimestamp-fromtz-totz"><code>ConvertTZ(timestamp, fromTZ, toTZ)</code></h3>
+<p>Converts a timestamp from one timezone to another.</p>
+<p><strong>Parameters:</strong>
+- <code>timestamp</code>: An integer representing the Unix timestamp.
+- <code>fromTZ</code>: The source timezone (e.g., "UTC").
+- <code>toTZ</code>: The target timezone (e.g., "America/New_York").</p>
+<p><strong>Returns:</strong>
+- <code>(integer, error)</code>: The converted Unix timestamp.</p>
+<h3 id="nowintztimezone"><code>NowInTZ(timezone)</code></h3>
+<p>Returns the current time in a specific timezone.</p>
+<p><strong>Parameters:</strong>
+- <code>timezone</code>: The timezone (e.g., "America/New_York").</p>
+<p><strong>Returns:</strong>
+- <code>(integer, error)</code>: The current Unix timestamp in the specified timezone.</p>
+<h3 id="localtimelocale"><code>LocalTime(locale)</code></h3>
+<p>Returns the current time for a given locale.</p>
+<p><strong>Parameters:</strong>
+- <code>locale</code>: A two-letter country code (e.g., "US", "GB").</p>
+<p><strong>Returns:</strong>
+- <code>(integer, error)</code>: The current Unix timestamp in the locale's timezone.</p>
+<h3 id="getsystemtz"><code>GetSystemTZ()</code></h3>
+<p>Returns the system's timezone name.</p>
+<p><strong>Returns:</strong>
+- <code>(string, error)</code>: The system timezone.</p>
+<h3 id="gettzoffsettimezone"><code>GetTZOffset(timezone)</code></h3>
+<p>Returns the timezone offset in seconds from UTC.</p>
+<p><strong>Parameters:</strong>
+- <code>timezone</code>: The timezone name.</p>
+<p><strong>Returns:</strong>
+- <code>(integer, error)</code>: The offset in seconds.</p>
+<h3 id="timers-and-tickers">Timers and Tickers</h3>
+<h4 id="newtimerid-delay_seconds"><code>NewTimer(id, delay_seconds)</code></h4>
+<p>Creates a new timer that will fire after a delay.</p>
+<h4 id="checktimerid"><code>CheckTimer(id)</code></h4>
+<p>Checks if a timer has fired.</p>
+<h4 id="stoptimerid"><code>StopTimer(id)</code></h4>
+<p>Stops a timer.</p>
+<h4 id="newtickerid-interval_seconds"><code>NewTicker(id, interval_seconds)</code></h4>
+<p>Creates a new ticker that fires at regular intervals.</p>
+<h4 id="stoptickerid"><code>StopTicker(id)</code></h4>
+<p>Stops a ticker.</p>
+<h3 id="cron-scheduling">Cron Scheduling</h3>
+<h4 id="isvalidcronexpression"><code>IsValidCron(expression)</code></h4>
+<p>Validates a cron expression.</p>
+<h4 id="nextcronexecutionexpression-timestamp"><code>NextCronExecution(expression, timestamp)</code></h4>
+<p>Calculates the next execution time of a cron expression.</p>
+<h4 id="parsecronexpression"><code>ParseCron(expression)</code></h4>
+<p>Parses a cron expression.</p>
+<h4 id="schedulecronid-expression"><code>ScheduleCron(id, expression)</code></h4>
+<p>Schedules a cron job.</p>
+<h4 id="stopcronid"><code>StopCron(id)</code></h4>
+<p>Stops a scheduled cron job.</p>
+<h4 id="listcronjobs"><code>ListCronJobs()</code></h4>
+<p>Lists all active cron jobs.</p>
+<h4 id="everyminute-hourly-daily-weekly-monthly"><code>EveryMinute()</code>, <code>Hourly()</code>, <code>Daily()</code>, <code>Weekly()</code>, <code>Monthly()</code></h4>
+<p>Returns common cron expressions.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
