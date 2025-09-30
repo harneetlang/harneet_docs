@@ -556,6 +556,29 @@
   
   
     <li class="md-nav__item">
+      <a href="general/const/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Const Declarations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="general/keywords_identifiers/" class="md-nav__link">
         
   
@@ -786,12 +809,35 @@
   
   
     <li class="md-nav__item">
-      <a href="general/import_system/" class="md-nav__link">
+      <a href="import_system/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Import System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Module System
     
   </span>
   
@@ -1201,6 +1247,29 @@
   
   
     <li class="md-nav__item">
+      <a href="general/struct_field_assignment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    struct field assignment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="stdlib/json/" class="md-nav__link">
         
   
@@ -1234,10 +1303,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_9" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_10" >
         
           
-          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
             
   
   
@@ -1250,8 +1319,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_10">
             <span class="md-nav__icon md-icon"></span>
             HTTP
           </label>
@@ -1807,6 +1876,28 @@
   
   
     <li class="md-nav__item">
+      <a href="any_type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The any Type
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="comprehensive_examples/" class="md-nav__link">
         
   
@@ -2024,7 +2115,9 @@
 <h3 id="example-1-your-first-program">Example 1: Your First Program</h3>
 <p>Let's start with the classic "Hello, World!" program:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">First Program</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>import fmt
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>package main
+import fmt
 fmt.Println(&quot;Hello, World!&quot;)
 </code></pre></div></td></tr></table></div>
 <p><strong>What this does:</strong>
@@ -2045,7 +2138,9 @@ fmt.Println(&quot;Hello, World!&quot;)
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>var num1 int = 15
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>package main
+var num1 int = 15
 var num2 int = 4
 
 fmt.Println(&quot;Number 1:&quot;, num1)
@@ -2075,7 +2170,9 @@ fmt.Println(&quot;Remainder:&quot;, num1 % num2)
 <span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code>var score int = 85
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code>package main
+var score int = 85
 
 fmt.Println(&quot;Your score:&quot;, score)
 
@@ -2106,6 +2203,7 @@ if score &lt; 70 {
 <h2 id="common-beginner-mistakes">🐛 Common Beginner Mistakes</h2>
 <h3 id="mistake-1-missing-quotes-for-text">Mistake 1: Missing quotes for text</h3>
 <div class="highlight"><pre><span></span><code>// Wrong:
+package main
 fmt.Println(Hello)
 
 // Right:
@@ -2120,6 +2218,7 @@ if x == 5 {
 </code></pre></div>
 <h3 id="mistake-3-trying-to-use-a-single-variable-for-functions-that-return-multiple-values">Mistake 3: Trying to use a single variable for functions that return multiple values</h3>
 <div class="highlight"><pre><span></span><code>// Wrong (shows helpful error message):
+package main
 var result = math.Abs(-42)
 
 // Right (handle both result and error):

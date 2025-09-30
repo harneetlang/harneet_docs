@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../overview/">
+        <link rel="prev" href="../variable_declaration/">
       
       
-        <link rel="next" href="../requests/">
+        <link rel="next" href="../keywords_identifiers/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
     
     
       
-        <title>HTTP Client - Harneet Programming Language</title>
+        <title>Const Declarations - Harneet Programming Language</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.e53b48f4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/css/custom.css">
+      <link rel="stylesheet" href="../../assets/css/custom.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#http-client" class="md-skip">
+        <a href="#const-declarations" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Harneet Programming Language" class="md-header__button md-logo" aria-label="Harneet Programming Language" data-md-component="logo">
+    <a href="../.." title="Harneet Programming Language" class="md-header__button md-logo" aria-label="Harneet Programming Language" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              HTTP Client
+              Const Declarations
             
           </span>
         </div>
@@ -216,7 +216,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Harneet Programming Language" class="md-nav__button md-logo" aria-label="Harneet Programming Language" data-md-component="logo">
+    <a href="../.." title="Harneet Programming Language" class="md-nav__button md-logo" aria-label="Harneet Programming Language" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -234,7 +234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -256,7 +256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../command_line/" class="md-nav__link">
+      <a href="../../command_line/" class="md-nav__link">
         
   
   
@@ -275,20 +275,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -304,7 +304,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             General
@@ -318,7 +318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../general/comments/" class="md-nav__link">
+      <a href="../comments/" class="md-nav__link">
         
   
   
@@ -341,7 +341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../general/data_types/" class="md-nav__link">
+      <a href="../data_types/" class="md-nav__link">
         
   
   
@@ -364,7 +364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../general/variable_declaration/" class="md-nav__link">
+      <a href="../variable_declaration/" class="md-nav__link">
         
   
   
@@ -384,10 +384,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../general/const/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Const Declarations
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -398,6 +420,149 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Syntax
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type-inference-and-explicit-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type Inference and Explicit Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#immutability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Immutability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expression-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expression Evaluation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export-rules-go-like-convention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export Rules (Go-like Convention)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mathematical-constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mathematical Constants
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Constants
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      String Constants
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differences-from-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Differences from Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Cases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-other-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration with Other Features
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -410,7 +575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../general/keywords_identifiers/" class="md-nav__link">
+      <a href="../keywords_identifiers/" class="md-nav__link">
         
   
   
@@ -433,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../general/operators_and_expressions/" class="md-nav__link">
+      <a href="../operators_and_expressions/" class="md-nav__link">
         
   
   
@@ -456,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../general/arrays/" class="md-nav__link">
+      <a href="../arrays/" class="md-nav__link">
         
   
   
@@ -479,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../general/maps/" class="md-nav__link">
+      <a href="../maps/" class="md-nav__link">
         
   
   
@@ -502,7 +667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../general/control_flow/" class="md-nav__link">
+      <a href="../control_flow/" class="md-nav__link">
         
   
   
@@ -525,7 +690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../general/pattern_matching/" class="md-nav__link">
+      <a href="../pattern_matching/" class="md-nav__link">
         
   
   
@@ -548,7 +713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../break_continue/" class="md-nav__link">
+      <a href="../../stdlib/break_continue/" class="md-nav__link">
         
   
   
@@ -571,7 +736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../general/block_structure/" class="md-nav__link">
+      <a href="../block_structure/" class="md-nav__link">
         
   
   
@@ -594,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../general/scoping_variable_management/" class="md-nav__link">
+      <a href="../scoping_variable_management/" class="md-nav__link">
         
   
   
@@ -617,7 +782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cast/" class="md-nav__link">
+      <a href="../../stdlib/cast/" class="md-nav__link">
         
   
   
@@ -640,7 +805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../import_system/" class="md-nav__link">
+      <a href="../../import_system/" class="md-nav__link">
         
   
   
@@ -663,7 +828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../modules/" class="md-nav__link">
+      <a href="../../modules/" class="md-nav__link">
         
   
   
@@ -686,7 +851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../general/unicode_support/" class="md-nav__link">
+      <a href="../unicode_support/" class="md-nav__link">
         
   
   
@@ -716,7 +881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../error_handling_system/" class="md-nav__link">
+      <a href="../../error_handling_system/" class="md-nav__link">
         
   
   
@@ -778,7 +943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../functions/introduction/" class="md-nav__link">
+      <a href="../../functions/introduction/" class="md-nav__link">
         
   
   
@@ -801,7 +966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../functions/arrow_functions/" class="md-nav__link">
+      <a href="../../functions/arrow_functions/" class="md-nav__link">
         
   
   
@@ -824,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../functions/functional/" class="md-nav__link">
+      <a href="../../functions/functional/" class="md-nav__link">
         
   
   
@@ -847,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../functions/advanced_features/" class="md-nav__link">
+      <a href="../../functions/advanced_features/" class="md-nav__link">
         
   
   
@@ -874,20 +1039,20 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -903,7 +1068,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Standard Library
@@ -917,7 +1082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fmt/" class="md-nav__link">
+      <a href="../../stdlib/fmt/" class="md-nav__link">
         
   
   
@@ -940,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../input/" class="md-nav__link">
+      <a href="../../stdlib/input/" class="md-nav__link">
         
   
   
@@ -963,7 +1128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../strings/" class="md-nav__link">
+      <a href="../../stdlib/strings/" class="md-nav__link">
         
   
   
@@ -986,7 +1151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../math/" class="md-nav__link">
+      <a href="../../stdlib/math/" class="md-nav__link">
         
   
   
@@ -1009,7 +1174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../arrays/" class="md-nav__link">
+      <a href="../../stdlib/arrays/" class="md-nav__link">
         
   
   
@@ -1032,7 +1197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../collections/" class="md-nav__link">
+      <a href="../../stdlib/collections/" class="md-nav__link">
         
   
   
@@ -1055,7 +1220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../structs/" class="md-nav__link">
+      <a href="../../stdlib/structs/" class="md-nav__link">
         
   
   
@@ -1078,7 +1243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../general/struct_field_assignment/" class="md-nav__link">
+      <a href="../struct_field_assignment/" class="md-nav__link">
         
   
   
@@ -1101,7 +1266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../json/" class="md-nav__link">
+      <a href="../../stdlib/json/" class="md-nav__link">
         
   
   
@@ -1121,20 +1286,20 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_10" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_10" >
         
           
           <label class="md-nav__link" for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
@@ -1150,7 +1315,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_10">
             <span class="md-nav__icon md-icon"></span>
             HTTP
@@ -1164,7 +1329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
+      <a href="../../stdlib/http/overview/" class="md-nav__link">
         
   
   
@@ -1184,32 +1349,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    HTTP Client
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../stdlib/http/client/" class="md-nav__link">
         
   
   
@@ -1220,164 +1363,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#basic-http-methods" class="md-nav__link">
-    <span class="md-ellipsis">
-      Basic HTTP Methods
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Basic HTTP Methods">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#httpgeturl" class="md-nav__link">
-    <span class="md-ellipsis">
-      http.Get(url)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#httpposturl-contenttype-body" class="md-nav__link">
-    <span class="md-ellipsis">
-      http.Post(url, contentType, body)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#httpputurl-contenttype-body" class="md-nav__link">
-    <span class="md-ellipsis">
-      http.Put(url, contentType, body)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#httpdeleteurl" class="md-nav__link">
-    <span class="md-ellipsis">
-      http.Delete(url)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#httpheadurl" class="md-nav__link">
-    <span class="md-ellipsis">
-      http.Head(url)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#client-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Client Configuration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#error-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Error Handling
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-http-status-codes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common HTTP Status Codes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      Best Practices
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Best Practices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-always-check-errors" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Always Check Errors
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-use-appropriate-content-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Use Appropriate Content Types
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-handle-different-response-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Handle Different Response Types
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      Next Steps
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1390,7 +1375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../requests/" class="md-nav__link">
+      <a href="../../stdlib/http/requests/" class="md-nav__link">
         
   
   
@@ -1413,7 +1398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../responses/" class="md-nav__link">
+      <a href="../../stdlib/http/responses/" class="md-nav__link">
         
   
   
@@ -1436,7 +1421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../server/" class="md-nav__link">
+      <a href="../../stdlib/http/server/" class="md-nav__link">
         
   
   
@@ -1459,7 +1444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../routing/" class="md-nav__link">
+      <a href="../../stdlib/http/routing/" class="md-nav__link">
         
   
   
@@ -1482,7 +1467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../middleware/" class="md-nav__link">
+      <a href="../../stdlib/http/middleware/" class="md-nav__link">
         
   
   
@@ -1505,7 +1490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../auth/" class="md-nav__link">
+      <a href="../../stdlib/http/auth/" class="md-nav__link">
         
   
   
@@ -1528,7 +1513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cookies/" class="md-nav__link">
+      <a href="../../stdlib/http/cookies/" class="md-nav__link">
         
   
   
@@ -1551,7 +1536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/" class="md-nav__link">
+      <a href="../../stdlib/http/advanced/" class="md-nav__link">
         
   
   
@@ -1574,7 +1559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/" class="md-nav__link">
+      <a href="../../stdlib/http/examples/" class="md-nav__link">
         
   
   
@@ -1605,7 +1590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../assert/" class="md-nav__link">
+      <a href="../../stdlib/assert/" class="md-nav__link">
         
   
   
@@ -1628,7 +1613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../errors/" class="md-nav__link">
+      <a href="../../stdlib/errors/" class="md-nav__link">
         
   
   
@@ -1651,7 +1636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../log/" class="md-nav__link">
+      <a href="../../stdlib/log/" class="md-nav__link">
         
   
   
@@ -1674,7 +1659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../file/" class="md-nav__link">
+      <a href="../../stdlib/file/" class="md-nav__link">
         
   
   
@@ -1697,7 +1682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../path/" class="md-nav__link">
+      <a href="../../stdlib/path/" class="md-nav__link">
         
   
   
@@ -1720,7 +1705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../os/" class="md-nav__link">
+      <a href="../../stdlib/os/" class="md-nav__link">
         
   
   
@@ -1743,7 +1728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../datetime/" class="md-nav__link">
+      <a href="../../stdlib/datetime/" class="md-nav__link">
         
   
   
@@ -1766,7 +1751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../flags/" class="md-nav__link">
+      <a href="../../stdlib/flags/" class="md-nav__link">
         
   
   
@@ -1789,7 +1774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../exec/" class="md-nav__link">
+      <a href="../../stdlib/exec/" class="md-nav__link">
         
   
   
@@ -1812,7 +1797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../regex/" class="md-nav__link">
+      <a href="../../stdlib/regex/" class="md-nav__link">
         
   
   
@@ -1835,7 +1820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../box/" class="md-nav__link">
+      <a href="../../stdlib/box/" class="md-nav__link">
         
   
   
@@ -1865,7 +1850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../type_system_safety/" class="md-nav__link">
+      <a href="../../type_system_safety/" class="md-nav__link">
         
   
   
@@ -1887,7 +1872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../any_type/" class="md-nav__link">
+      <a href="../../any_type/" class="md-nav__link">
         
   
   
@@ -1909,7 +1894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../comprehensive_examples/" class="md-nav__link">
+      <a href="../../comprehensive_examples/" class="md-nav__link">
         
   
   
@@ -1951,55 +1936,82 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basic-http-methods" class="md-nav__link">
+  <a href="#basic-syntax" class="md-nav__link">
     <span class="md-ellipsis">
-      Basic HTTP Methods
+      Basic Syntax
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Basic HTTP Methods">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type-inference-and-explicit-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type Inference and Explicit Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#immutability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Immutability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expression-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expression Evaluation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export-rules-go-like-convention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export Rules (Go-like Convention)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage Examples">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#httpgeturl" class="md-nav__link">
+  <a href="#mathematical-constants" class="md-nav__link">
     <span class="md-ellipsis">
-      http.Get(url)
+      Mathematical Constants
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#httpposturl-contenttype-body" class="md-nav__link">
+  <a href="#configuration-constants" class="md-nav__link">
     <span class="md-ellipsis">
-      http.Post(url, contentType, body)
+      Configuration Constants
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#httpputurl-contenttype-body" class="md-nav__link">
+  <a href="#string-constants" class="md-nav__link">
     <span class="md-ellipsis">
-      http.Put(url, contentType, body)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#httpdeleteurl" class="md-nav__link">
-    <span class="md-ellipsis">
-      http.Delete(url)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#httpheadurl" class="md-nav__link">
-    <span class="md-ellipsis">
-      http.Head(url)
+      String Constants
     </span>
   </a>
   
@@ -2011,27 +2023,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#client-configuration" class="md-nav__link">
+  <a href="#differences-from-variables" class="md-nav__link">
     <span class="md-ellipsis">
-      Client Configuration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#error-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Error Handling
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-http-status-codes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common HTTP Status Codes
+      Differences from Variables
     </span>
   </a>
   
@@ -2044,45 +2038,21 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Best Practices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-always-check-errors" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-cases" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Always Check Errors
+      Error Cases
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-use-appropriate-content-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Use Appropriate Content Types
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-handle-different-response-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Handle Different Response Types
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
+  <a href="#integration-with-other-features" class="md-nav__link">
     <span class="md-ellipsis">
-      Next Steps
+      Integration with Other Features
     </span>
   </a>
   
@@ -2104,377 +2074,152 @@
 
 
 
-<h1 id="http-client">HTTP Client</h1>
-<p>The HTTP client provides simple, high-level functions for making HTTP requests. These functions handle the most common HTTP operations with minimal setup required.</p>
-<h2 id="basic-http-methods">Basic HTTP Methods</h2>
-<h3 id="httpgeturl">http.Get(url)</h3>
-<p>Performs an HTTP GET request to the specified URL.</p>
-<p><strong>Syntax:</strong>
-<div class="highlight"><pre><span></span><code>http.Get(url) (response, error)
-</code></pre></div></p>
-<p><strong>Parameters:</strong>
-- <code>url</code> (string) - The target URL</p>
-<p><strong>Returns:</strong>
-- <code>response</code> (map) - Response object with status, headers, and body
-- <code>error</code> - None on success, error message on failure</p>
-<p><strong>Examples:</strong></p>
-<p><em>Basic GET Request:</em>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">A basic GET request</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>import http
-import fmt
+<h1 id="const-declarations">Const Declarations</h1>
+<p>Harneet supports Go-like const declarations for creating immutable values. Constants are evaluated at compile time and cannot be reassigned after declaration.</p>
+<h2 id="basic-syntax">Basic Syntax</h2>
+<div class="highlight"><pre><span></span><code>const PI = 3.14159
+const MaxRetries = 5
+const AppName = &quot;Harneet Lang&quot;
+const IsDebug = true
+</code></pre></div>
+<h2 id="type-inference-and-explicit-types">Type Inference and Explicit Types</h2>
+<p>Constants support both type inference and explicit type annotations:</p>
+<div class="highlight"><pre><span></span><code>// Type inference (recommended)
+const InferredInt = 42
+const InferredFloat = 3.14
+const InferredString = &quot;hello&quot;
+const InferredBool = true
 
-// Simple GET request
-var result = http.Get(&quot;https://api.github.com/users/octocat&quot;)
-var response = result[0]
-var err = result[1]
+// Explicit type annotations
+const ExplicitInt int = 42
+const ExplicitFloat float64 = 3.14
+const ExplicitString string = &quot;hello&quot;
+const ExplicitBool bool = true
+</code></pre></div>
+<h2 id="immutability">Immutability</h2>
+<p>Constants are immutable and cannot be reassigned:</p>
+<div class="highlight"><pre><span></span><code>const ReadOnlyValue = 42
 
-if err != None {
-    fmt.Printf(&quot;Error: %s\n&quot;, err)
-} else {
-    fmt.Printf(&quot;Status: %d\n&quot;, response[&quot;status&quot;])
-    fmt.Printf(&quot;Status Text: %s\n&quot;, response[&quot;statusText&quot;])
-    fmt.Printf(&quot;Content-Type: %s\n&quot;, response[&quot;headers&quot;][&quot;Content-Type&quot;])
-    fmt.Printf(&quot;Body: %s\n&quot;, response[&quot;body&quot;])
-}
-</code></pre></div></td></tr></table></div></p>
-<p><em>API Data Fetching:</em>
-<div class="highlight"><pre><span></span><code>import http
-import json
-import fmt
-
-// Fetch user data from API
-var result = http.Get(&quot;https://jsonplaceholder.typicode.com/users/1&quot;)
-var response = result[0]
-var err = result[1]
-
-if err != None {
-    fmt.Printf(&quot;Network Error: %s\n&quot;, err)
-} else if response[&quot;status&quot;] != 200 {
-    fmt.Printf(&quot;HTTP Error: %d - %s\n&quot;, response[&quot;status&quot;], response[&quot;statusText&quot;])
-} else {
-    // Parse JSON response
-    var userData, parseErr = json.Unmarshal(response[&quot;body&quot;])
-    if parseErr != None {
-        fmt.Printf(&quot;JSON Parse Error: %s\n&quot;, parseErr)
-    } else {
-        fmt.Printf(&quot;User Name: %s\n&quot;, userData[&quot;name&quot;])
-        fmt.Printf(&quot;User Email: %s\n&quot;, userData[&quot;email&quot;])
-    }
-}
-</code></pre></div></p>
-<p><em>Health Check Example:</em>
-<div class="highlight"><pre><span></span><code>import http
-import fmt
-
-function checkHealth(url string) {
-    var result = http.Get(url + &quot;/health&quot;)
-    var response = result[0]
-    var err = result[1]
-
-    if err != None {
-        fmt.Printf(&quot;❌ %s is DOWN - %s\n&quot;, url, err)
-    } else if response[&quot;status&quot;] == 200 {
-        fmt.Printf(&quot;✅ %s is UP - Status: %d\n&quot;, url, response[&quot;status&quot;])
-    } else {
-        fmt.Printf(&quot;⚠️  %s has issues - Status: %d\n&quot;, url, response[&quot;status&quot;])
-    }
-}
-
-// Check multiple services
-checkHealth(&quot;https://api.service1.com&quot;)
-checkHealth(&quot;https://api.service2.com&quot;)
-</code></pre></div></p>
-<h3 id="httpposturl-contenttype-body">http.Post(url, contentType, body)</h3>
-<p>Performs an HTTP POST request with the specified body and content type.</p>
-<p><strong>Syntax:</strong>
-<div class="highlight"><pre><span></span><code>http.Post(url, contentType, body) (response, error)
-</code></pre></div></p>
-<p><strong>Parameters:</strong>
-- <code>url</code> (string) - The target URL
-- <code>contentType</code> (string) - Content-Type header value (e.g., "application/json")
-- <code>body</code> (string) - Request body content</p>
-<p><strong>Examples:</strong></p>
-<p><em>JSON POST Request:</em>
-<div class="highlight"><pre><span></span><code>import http
-import json
-import fmt
-
-// Create user via API
-var userData = {&quot;name&quot;: &quot;Alice&quot;, &quot;email&quot;: &quot;alice@example.com&quot;, &quot;role&quot;: &quot;admin&quot;}
-var jsonResult, jsonErr = json.Marshal(userData)
-
-if jsonErr != None {
-    fmt.Printf(&quot;JSON Error: %s\n&quot;, jsonErr)
-} else {
-    var result = http.Post(&quot;https://jsonplaceholder.typicode.com/users&quot;, &quot;application/json&quot;, jsonResult)
-    var response = result[0]
-    var err = result[1]
-
-    if err != None {
-        fmt.Printf(&quot;Network Error: %s\n&quot;, err)
-    } else if response[&quot;status&quot;] == 201 {
-        fmt.Printf(&quot;✅ User created successfully!\n&quot;)
-        fmt.Printf(&quot;Response: %s\n&quot;, response[&quot;body&quot;])
-    } else {
-        fmt.Printf(&quot;❌ Failed to create user - Status: %d\n&quot;, response[&quot;status&quot;])
-    }
-}
-</code></pre></div></p>
-<p><em>Form Data POST:</em>
-<div class="highlight"><pre><span></span><code>import http
-import fmt
-
-// Submit form data
-var formData = &quot;name=John+Doe&amp;email=john@example.com&amp;message=Hello+World&quot;
-var result = http.Post(&quot;https://httpbin.org/post&quot;, &quot;application/x-www-form-urlencoded&quot;, formData)
-var response = result[0]
-var err = result[1]
-
-if err != None {
-    fmt.Printf(&quot;Error: %s\n&quot;, err)
-} else {
-    fmt.Printf(&quot;Form submitted - Status: %d\n&quot;, response[&quot;status&quot;])
-    fmt.Printf(&quot;Server Response: %s\n&quot;, response[&quot;body&quot;])
-}
-</code></pre></div></p>
-<p><em>API Authentication Example:</em>
-<div class="highlight"><pre><span></span><code>import http
-import json
-import fmt
-
-// Login request
-function login(username string, password string) {
-    var credentials = {&quot;username&quot;: username, &quot;password&quot;: password}
-    var jsonData, _ = json.Marshal(credentials)
-
-    var result = http.Post(&quot;https://api.example.com/auth/login&quot;, &quot;application/json&quot;, jsonData)
-    var response = result[0]
-    var err = result[1]
-
-    if err != None {
-        return None, err
-    } else if response[&quot;status&quot;] == 200 {
-        var authData, _ = json.Unmarshal(response[&quot;body&quot;])
-        return authData[&quot;token&quot;], None
-    } else {
-        return None, &quot;Login failed: &quot; + response[&quot;statusText&quot;]
-    }
-}
-
-// Usage
-var token, loginErr = login(&quot;alice&quot;, &quot;password123&quot;)
-if loginErr != None {
-    fmt.Printf(&quot;Login Error: %s\n&quot;, loginErr)
-} else {
-    fmt.Printf(&quot;Login successful! Token: %s\n&quot;, token)
-}
-</code></pre></div></p>
-<h3 id="httpputurl-contenttype-body">http.Put(url, contentType, body)</h3>
-<p>Performs an HTTP PUT request for updating resources.</p>
-<p><strong>Syntax:</strong>
-<div class="highlight"><pre><span></span><code>http.Put(url, contentType, body) (response, error)
-</code></pre></div></p>
-<p><strong>Examples:</strong></p>
-<p><em>Update Resource:</em>
-<div class="highlight"><pre><span></span><code>import http
-import json
-import fmt
-
-// Update user profile
-function updateUser(userId string, updates map) {
-    var jsonData, jsonErr = json.Marshal(updates)
-    if jsonErr != None {
-        return jsonErr
-    }
-
-    var url = &quot;https://jsonplaceholder.typicode.com/users/&quot; + userId
-    var result = http.Put(url, &quot;application/json&quot;, jsonData)
-    var response = result[0]
-    var err = result[1]
-
-    if err != None {
-        return err
-    } else if response[&quot;status&quot;] == 200 {
-        fmt.Printf(&quot;✅ User %s updated successfully\n&quot;, userId)
-        return None
-    } else {
-        return &quot;Update failed with status: &quot; + response[&quot;statusText&quot;]
-    }
-}
-
-// Usage
-var userUpdates = {&quot;name&quot;: &quot;Alice Johnson&quot;, &quot;email&quot;: &quot;alice.johnson@example.com&quot;}
-var updateErr = updateUser(&quot;1&quot;, userUpdates)
-if updateErr != None {
-    fmt.Printf(&quot;Update Error: %s\n&quot;, updateErr)
-}
-</code></pre></div></p>
-<h3 id="httpdeleteurl">http.Delete(url)</h3>
-<p>Performs an HTTP DELETE request for removing resources.</p>
-<p><strong>Syntax:</strong>
-<div class="highlight"><pre><span></span><code>http.Delete(url) (response, error)
-</code></pre></div></p>
-<p><strong>Examples:</strong></p>
-<p><em>Delete Resource:</em>
-<div class="highlight"><pre><span></span><code>import http
-import fmt
-
-// Delete user account
-function deleteUser(userId string) {
-    var url = &quot;https://jsonplaceholder.typicode.com/users/&quot; + userId
-    var result = http.Delete(url)
-    var response = result[0]
-    var err = result[1]
-
-    if err != None {
-        return &quot;Network error: &quot; + err
-    } else if response[&quot;status&quot;] == 200 or response[&quot;status&quot;] == 204 {
-        fmt.Printf(&quot;✅ User %s deleted successfully\n&quot;, userId)
-        return None
-    } else if response[&quot;status&quot;] == 404 {
-        return &quot;User not found&quot;
-    } else {
-        return &quot;Delete failed with status: &quot; + response[&quot;statusText&quot;]
-    }
-}
-
-// Usage
-var deleteErr = deleteUser(&quot;123&quot;)
-if deleteErr != None {
-    fmt.Printf(&quot;Delete Error: %s\n&quot;, deleteErr)
-}
-</code></pre></div></p>
-<h3 id="httpheadurl">http.Head(url)</h3>
-<p>Performs an HTTP HEAD request to get headers without the response body.</p>
-<p><strong>Syntax:</strong>
-<div class="highlight"><pre><span></span><code>http.Head(url) (response, error)
-</code></pre></div></p>
-<p><strong>Examples:</strong></p>
-<p><em>Check Resource Metadata:</em>
-<div class="highlight"><pre><span></span><code>import http
-import fmt
-
-// Check if resource exists and get metadata
-function checkResource(url string) {
-    var result = http.Head(url)
-    var response = result[0]
-    var err = result[1]
-
-    if err != None {
-        fmt.Printf(&quot;❌ Cannot reach %s: %s\n&quot;, url, err)
-    } else if response[&quot;status&quot;] == 200 {
-        var headers = response[&quot;headers&quot;]
-        fmt.Printf(&quot;✅ Resource exists at %s\n&quot;, url)
-        fmt.Printf(&quot;   Content-Type: %s\n&quot;, headers[&quot;Content-Type&quot;])
-        fmt.Printf(&quot;   Content-Length: %s\n&quot;, headers[&quot;Content-Length&quot;])
-        fmt.Printf(&quot;   Last-Modified: %s\n&quot;, headers[&quot;Last-Modified&quot;])
-    } else if response[&quot;status&quot;] == 404 {
-        fmt.Printf(&quot;❌ Resource not found: %s\n&quot;, url)
-    } else {
-        fmt.Printf(&quot;⚠️  Resource status: %d - %s\n&quot;, response[&quot;status&quot;], response[&quot;statusText&quot;])
-    }
-}
-
-// Usage
-checkResource(&quot;https://httpbin.org/json&quot;)
-checkResource(&quot;https://httpbin.org/image/png&quot;)
-</code></pre></div></p>
-<h2 id="client-configuration">Client Configuration</h2>
-<p>The HTTP client comes with sensible defaults:</p>
-<ul>
-<li><strong>Timeout</strong>: 30 seconds</li>
-<li><strong>Connection Pooling</strong>: Automatic</li>
-<li><strong>Keep-Alive</strong>: Enabled</li>
-<li><strong>Redirects</strong>: Automatic following</li>
-<li><strong>Compression</strong>: Automatic gzip handling</li>
-</ul>
-<h2 id="error-handling">Error Handling</h2>
-<p>All HTTP client functions follow the same error handling pattern:</p>
-<div class="highlight"><pre><span></span><code>var result = http.Get(&quot;https://example.com&quot;)
-var response = result[0]
-var err = result[1]
-
-if err != None {
-    // Network errors: timeouts, DNS failures, connection refused, etc.
-    fmt.Printf(&quot;Network Error: %s\n&quot;, err)
-} else {
-    // HTTP errors: check status codes
-    if response[&quot;status&quot;] &gt;= 400 {
-        fmt.Printf(&quot;HTTP Error %d: %s\n&quot;, response[&quot;status&quot;], response[&quot;statusText&quot;])
-    } else {
-        // Success: process response
-        fmt.Printf(&quot;Success: %s\n&quot;, response[&quot;body&quot;])
-    }
+function main() {
+    // This will cause a compile-time error
+    ReadOnlyValue = 100  // Error: cannot assign to const variable &#39;ReadOnlyValue&#39;
 }
 </code></pre></div>
-<h2 id="common-http-status-codes">Common HTTP Status Codes</h2>
-<ul>
-<li><strong>200 OK</strong> - Request successful</li>
-<li><strong>201 Created</strong> - Resource created successfully</li>
-<li><strong>204 No Content</strong> - Success with no response body</li>
-<li><strong>400 Bad Request</strong> - Invalid request</li>
-<li><strong>401 Unauthorized</strong> - Authentication required</li>
-<li><strong>403 Forbidden</strong> - Access denied</li>
-<li><strong>404 Not Found</strong> - Resource not found</li>
-<li><strong>500 Internal Server Error</strong> - Server error</li>
-</ul>
+<h2 id="expression-evaluation">Expression Evaluation</h2>
+<p>Constants can be initialized with expressions:</p>
+<div class="highlight"><pre><span></span><code>const Sum = 10 + 20 + 30
+const Product = 5 * 6
+const Concatenated = &quot;Hello&quot; + &quot; &quot; + &quot;World&quot;
+const LogicalResult = true and false
+</code></pre></div>
+<h2 id="export-rules-go-like-convention">Export Rules (Go-like Convention)</h2>
+<p>Constants follow Go-like export conventions based on naming:</p>
+<div class="highlight"><pre><span></span><code>// Exported (accessible from other packages)
+const ExportedConstant = &quot;This can be accessed from other packages&quot;
+const PI = 3.14159
+const MaxConnections = 100
+
+// Package-private (not exported)
+const privateConstant = &quot;This is package-private&quot;
+const debugMode = true
+</code></pre></div>
+<p>Constants with title-case names (starting with uppercase letter) are exported and can be accessed from other packages.</p>
+<h2 id="usage-examples">Usage Examples</h2>
+<h3 id="mathematical-constants">Mathematical Constants</h3>
+<div class="highlight"><pre><span></span><code>const PI = 3.14159265359
+const E = 2.71828182846
+const GoldenRatio = 1.61803398875
+
+function calculateCircleArea(radius float64) float64 {
+    return PI * radius * radius
+}
+</code></pre></div>
+<h3 id="configuration-constants">Configuration Constants</h3>
+<div class="highlight"><pre><span></span><code>const MaxConnections = 100
+const DefaultTimeout = 30
+const ServerName = &quot;Harneet Server&quot;
+const EnableLogging = true
+
+function getServerConfig() {
+    fmt.Printf(&quot;Server: %s\n&quot;, ServerName)
+    fmt.Printf(&quot;Max Connections: %d\n&quot;, MaxConnections)
+    fmt.Printf(&quot;Timeout: %d seconds\n&quot;, DefaultTimeout)
+    fmt.Printf(&quot;Logging: %t\n&quot;, EnableLogging)
+}
+</code></pre></div>
+<h3 id="string-constants">String Constants</h3>
+<div class="highlight"><pre><span></span><code>const WelcomeMessage = &quot;Welcome to Harneet!&quot;
+const ErrorPrefix = &quot;[ERROR]&quot;
+const SuccessPrefix = &quot;[SUCCESS]&quot;
+
+function logSuccess(message string) {
+    fmt.Printf(&quot;%s %s\n&quot;, SuccessPrefix, message)
+}
+</code></pre></div>
+<h2 id="differences-from-variables">Differences from Variables</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Variables (<code>var</code>)</th>
+<th>Constants (<code>const</code>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mutability</td>
+<td>Mutable</td>
+<td>Immutable</td>
+</tr>
+<tr>
+<td>Zero Values</td>
+<td>Supported</td>
+<td>Not supported (must have value)</td>
+</tr>
+<tr>
+<td>Reassignment</td>
+<td>Allowed</td>
+<td>Compile-time error</td>
+</tr>
+<tr>
+<td>Scope</td>
+<td>Block/function scope</td>
+<td>Block/function scope</td>
+</tr>
+<tr>
+<td>Export Rules</td>
+<td>Same (title-case)</td>
+<td>Same (title-case)</td>
+</tr>
+</tbody>
+</table>
 <h2 id="best-practices">Best Practices</h2>
-<h3 id="1-always-check-errors">1. Always Check Errors</h3>
-<div class="highlight"><pre><span></span><code>var result = http.Get(url)
-var response = result[0]
-var err = result[1]
+<ol>
+<li><strong>Use descriptive names</strong>: <code>MaxRetries</code> instead of <code>MAX_RETRIES</code></li>
+<li><strong>Group related constants</strong>: Keep configuration constants together</li>
+<li><strong>Use type inference</strong>: Let the compiler infer types when obvious</li>
+<li><strong>Follow export conventions</strong>: Use title-case for exported constants</li>
+<li><strong>Prefer constants for fixed values</strong>: Use constants for values that never change</li>
+</ol>
+<h2 id="error-cases">Error Cases</h2>
+<div class="highlight"><pre><span></span><code>// Error: const declaration must have a value
+const MissingValue  // ❌ Error
 
-if err != None {
-    // Handle network errors first
-    return err
-}
+// Error: cannot assign to const variable
+const Value = 42
+Value = 100  // ❌ Error
 
-if response[&quot;status&quot;] &gt;= 400 {
-    // Then handle HTTP errors
-    return &quot;HTTP Error: &quot; + response[&quot;statusText&quot;]
-}
-
-// Process successful response
+// Error: type mismatch
+const TypeMismatch int = &quot;string&quot;  // ❌ Error
 </code></pre></div>
-<h3 id="2-use-appropriate-content-types">2. Use Appropriate Content Types</h3>
-<div class="highlight"><pre><span></span><code>// JSON data
-http.Post(url, &quot;application/json&quot;, jsonData)
-
-// Form data
-http.Post(url, &quot;application/x-www-form-urlencoded&quot;, formData)
-
-// Plain text
-http.Post(url, &quot;text/plain&quot;, textData)
-</code></pre></div>
-<h3 id="3-handle-different-response-types">3. Handle Different Response Types</h3>
-<div class="highlight"><pre><span></span><code>var contentType = response[&quot;headers&quot;][&quot;Content-Type&quot;]
-if contentType == &quot;application/json&quot; {
-    var data, _ = json.Unmarshal(response[&quot;body&quot;])
-    // Process JSON data
-} else {
-    // Process as plain text
-    fmt.Println(response[&quot;body&quot;])
-}
-</code></pre></div>
-<h2 id="next-steps">Next Steps</h2>
+<h2 id="integration-with-other-features">Integration with Other Features</h2>
+<p>Constants work seamlessly with other Harneet features:</p>
 <ul>
-<li><strong><a href="../requests/">Request Building</a></strong> - Learn about custom requests and advanced header management</li>
-<li><strong><a href="../responses/">Response Handling</a></strong> - Deep dive into response processing</li>
-<li><strong><a href="../examples/">Examples &amp; Patterns</a></strong> - Real-world usage patterns and advanced techniques</li>
+<li><strong>Functions</strong>: Can be used as default parameter values</li>
+<li><strong>Control Flow</strong>: Can be used in if conditions and loop bounds</li>
+<li><strong>Expressions</strong>: Can be used in any expression context</li>
+<li><strong>Type System</strong>: Full type checking and inference support</li>
+<li><strong>Modules</strong>: Export/import following Go-like conventions</li>
 </ul>
 
 
@@ -2513,7 +2258,7 @@ if contentType == &quot;application/json&quot; {
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../overview/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview">
+          <a href="../variable_declaration/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Variable Declaration &amp; Assignment">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2523,20 +2268,20 @@ if contentType == &quot;application/json&quot; {
                 Previous
               </span>
               <div class="md-ellipsis">
-                Overview
+                Variable Declaration & Assignment
               </div>
             </div>
           </a>
         
         
           
-          <a href="../requests/" class="md-footer__link md-footer__link--next" aria-label="Next: Request Building">
+          <a href="../keywords_identifiers/" class="md-footer__link md-footer__link--next" aria-label="Next: Keywords and Identifiers">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Request Building
+                Keywords and Identifiers
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2573,10 +2318,10 @@ if contentType == &quot;application/json&quot; {
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.collapse", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.footer", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.collapse", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.footer", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>

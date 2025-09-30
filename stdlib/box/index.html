@@ -387,6 +387,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../general/const/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Const Declarations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../general/keywords_identifiers/" class="md-nav__link">
         
   
@@ -617,12 +640,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general/import_system/" class="md-nav__link">
+      <a href="../../import_system/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Import System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Module System
     
   </span>
   
@@ -1032,6 +1078,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../general/struct_field_assignment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    struct field assignment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../json/" class="md-nav__link">
         
   
@@ -1065,10 +1134,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_9" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_10" >
         
           
-          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
             
   
   
@@ -1081,8 +1150,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_10">
             <span class="md-nav__icon md-icon"></span>
             HTTP
           </label>
@@ -1758,6 +1827,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../../any_type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The any Type
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../comprehensive_examples/" class="md-nav__link">
         
   
@@ -1929,7 +2020,8 @@
 </ul>
 <h2 id="examples">Examples</h2>
 <h3 id="basic-usage">Basic usage</h3>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import box
 
 // Create a box holding an integer
@@ -1952,7 +2044,8 @@ if err2 == None {
 }
 </code></pre></div>
 <h3 id="pass-by-reference-style-mutation">Pass-by-reference style mutation</h3>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import box
 
 function Increment(b) {
@@ -1976,7 +2069,8 @@ if e == None {
 }
 </code></pre></div>
 <h3 id="swap-using-boxes-shared-mutable-state">Swap using boxes (shared mutable state)</h3>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import box
 
 function Swap(a, b) {
@@ -2001,7 +2095,8 @@ var yv, _ = box.Get(y)
 fmt.Println(&quot;x:&quot;, xv, &quot;y:&quot;, yv)  // x: 2 y: 1
 </code></pre></div>
 <h3 id="large-data-in-a-box">Large data in a box</h3>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import box
 import file
 import strings

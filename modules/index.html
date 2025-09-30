@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../general/unicode_support/">
+        <link rel="prev" href="../import_system/">
       
       
-        <link rel="next" href="../functions/introduction/">
+        <link rel="next" href="../general/unicode_support/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Error Handling System - Harneet Programming Language</title>
+        <title>Module System - Harneet Programming Language</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#error-handling-system" class="md-skip">
+        <a href="#module-system" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Error Handling System
+              Module System
             
           </span>
         </div>
@@ -275,20 +275,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -304,7 +304,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             General
@@ -660,10 +660,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../modules/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Module System
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -674,6 +696,536 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gomod-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      go.mod File
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      Import Syntax
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Import Syntax">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#external-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Modules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local Packages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-management-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module Management Tool
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module Management Tool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initialize-a-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initialize a Project
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clean-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clean Cache
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module Resolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module Resolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#external-module-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Module Resolution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#semantic-versioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Semantic Versioning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version Constraints
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-downloading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module Downloading
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module Downloading">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#go-module-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      Go Module Cache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-clone-fallback" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git Clone Fallback
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-hosting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Hosting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-caching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module Caching
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module Caching">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cache-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cache Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Package Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#package-declaration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package Declaration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exports
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-management-with-viper" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Management with Viper
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cli-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLI Tool
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module Organization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Import Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependency-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependency Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module Not Found
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-conflicts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version Conflicts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download Failures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module-replacement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module Replacement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indirect-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indirect Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build Constraints
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migration-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migration Guide
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Migration Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-local-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Local Packages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-other-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Other Languages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debug Mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verbose-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verbose Logging
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -713,32 +1265,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Error Handling System
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../error_handling_system/" class="md-nav__link">
         
   
   
@@ -749,221 +1279,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#core-principles" class="md-nav__link">
-    <span class="md-ellipsis">
-      Core Principles
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#syntax" class="md-nav__link">
-    <span class="md-ellipsis">
-      Syntax
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Syntax">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#multiple-return-values" class="md-nav__link">
-    <span class="md-ellipsis">
-      Multiple Return Values
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#error-checking-pattern" class="md-nav__link">
-    <span class="md-ellipsis">
-      Error Checking Pattern
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#built-in-error-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      Built-in Error Types
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#standard-library-error-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Standard Library Error Handling
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Standard Library Error Handling">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#error-categories" class="md-nav__link">
-    <span class="md-ellipsis">
-      Error Categories
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#runtime-assertions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Runtime Assertions
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stack-trace-system" class="md-nav__link">
-    <span class="md-ellipsis">
-      Stack Trace System
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Stack Trace System">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
-    <span class="md-ellipsis">
-      Features
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stack-trace-format" class="md-nav__link">
-    <span class="md-ellipsis">
-      Stack Trace Format
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stack-trace-components" class="md-nav__link">
-    <span class="md-ellipsis">
-      Stack Trace Components
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#error-types-with-stack-traces" class="md-nav__link">
-    <span class="md-ellipsis">
-      Error Types with Stack Traces
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Error Types with Stack Traces">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#arithmetic-errors" class="md-nav__link">
-    <span class="md-ellipsis">
-      Arithmetic Errors
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#identifier-errors" class="md-nav__link">
-    <span class="md-ellipsis">
-      Identifier Errors
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-call-errors" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function Call Errors
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#type-conversion-errors" class="md-nav__link">
-    <span class="md-ellipsis">
-      Type Conversion Errors
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parser-errors" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parser Errors
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#benefits" class="md-nav__link">
-    <span class="md-ellipsis">
-      Benefits
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2008,46 +2323,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#core-principles" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Core Principles
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#syntax" class="md-nav__link">
+  <a href="#project-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax
+      Project Structure
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Syntax">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gomod-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      go.mod File
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      Import Syntax
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Import Syntax">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#multiple-return-values" class="md-nav__link">
+  <a href="#external-modules" class="md-nav__link">
     <span class="md-ellipsis">
-      Multiple Return Values
+      External Modules
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#error-checking-pattern" class="md-nav__link">
+  <a href="#local-packages" class="md-nav__link">
     <span class="md-ellipsis">
-      Error Checking Pattern
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#built-in-error-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      Built-in Error Types
+      Local Packages
     </span>
   </a>
   
@@ -2059,19 +2383,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#standard-library-error-handling" class="md-nav__link">
+  <a href="#module-management-tool" class="md-nav__link">
     <span class="md-ellipsis">
-      Standard Library Error Handling
+      Module Management Tool
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Standard Library Error Handling">
+    <nav class="md-nav" aria-label="Module Management Tool">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#error-categories" class="md-nav__link">
+  <a href="#initialize-a-project" class="md-nav__link">
     <span class="md-ellipsis">
-      Error Categories
+      Initialize a Project
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clean-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clean Cache
     </span>
   </a>
   
@@ -2083,101 +2443,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#runtime-assertions" class="md-nav__link">
+  <a href="#module-resolution" class="md-nav__link">
     <span class="md-ellipsis">
-      Runtime Assertions
+      Module Resolution
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stack-trace-system" class="md-nav__link">
-    <span class="md-ellipsis">
-      Stack Trace System
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Stack Trace System">
+    <nav class="md-nav" aria-label="Module Resolution">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
+  <a href="#external-module-resolution" class="md-nav__link">
     <span class="md-ellipsis">
-      Features
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stack-trace-format" class="md-nav__link">
-    <span class="md-ellipsis">
-      Stack Trace Format
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stack-trace-components" class="md-nav__link">
-    <span class="md-ellipsis">
-      Stack Trace Components
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#error-types-with-stack-traces" class="md-nav__link">
-    <span class="md-ellipsis">
-      Error Types with Stack Traces
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Error Types with Stack Traces">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#arithmetic-errors" class="md-nav__link">
-    <span class="md-ellipsis">
-      Arithmetic Errors
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#identifier-errors" class="md-nav__link">
-    <span class="md-ellipsis">
-      Identifier Errors
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-call-errors" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function Call Errors
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#type-conversion-errors" class="md-nav__link">
-    <span class="md-ellipsis">
-      Type Conversion Errors
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parser-errors" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parser Errors
+      External Module Resolution
     </span>
   </a>
   
@@ -2187,11 +2465,363 @@
     </nav>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#version-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version Management">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#benefits" class="md-nav__link">
+  <a href="#semantic-versioning" class="md-nav__link">
     <span class="md-ellipsis">
-      Benefits
+      Semantic Versioning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version Constraints
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-downloading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module Downloading
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module Downloading">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#go-module-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      Go Module Cache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-clone-fallback" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git Clone Fallback
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-hosting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Hosting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-caching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module Caching
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module Caching">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cache-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cache Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Package Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#package-declaration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package Declaration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exports
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-management-with-viper" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Management with Viper
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cli-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLI Tool
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module Organization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Import Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependency-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependency Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module Not Found
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-conflicts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version Conflicts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download Failures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module-replacement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module Replacement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indirect-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indirect Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build Constraints
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migration-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migration Guide
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Migration Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-local-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Local Packages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-other-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Other Languages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debug Mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verbose-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verbose Logging
     </span>
   </a>
   
@@ -2218,145 +2848,318 @@
 
 
 
-<h1 id="error-handling-system">Error Handling System</h1>
-<p>Harneet implements a comprehensive Go-style error handling system that emphasizes explicit error checking and prevents silent failures.</p>
-<h2 id="core-principles">Core Principles</h2>
+<h1 id="module-system">Module System</h1>
+<p>Harneet supports a comprehensive module system with Go.mod integration for external dependencies and version management.</p>
+<h2 id="overview">Overview</h2>
+<p>The module system provides:</p>
+<ul>
+<li><strong>go.mod integration</strong> - Standard Go module files for dependency management</li>
+<li><strong>External module resolution</strong> - Automatic downloading and caching of dependencies</li>
+<li><strong>Version management</strong> - Semantic versioning support</li>
+<li><strong>Import path mapping</strong> - Clean import syntax for external modules</li>
+<li><strong>Module caching</strong> - Efficient local caching in <code>imports/</code> directory</li>
+</ul>
+<h2 id="project-structure">Project Structure</h2>
+<div class="highlight"><pre><span></span><code>myproject/
+├── go.mod              # Module definition and dependencies
+├── main.ha             # Main application file
+├── imports/            # Downloaded external modules (auto-generated)
+│   ├── github.com/example/utils@v1.0.0/
+│   └── github.com/example/math@v1.2.0/
+└── local/              # Local packages
+    └── mypackage/
+</code></pre></div>
+<h2 id="gomod-file">go.mod File</h2>
+<p>Create a <code>go.mod</code> file in your project root:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">module</span><span class="w"> </span><span class="nx">example</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">myproject</span>
+
+<span class="k">go</span><span class="w"> </span><span class="mf">1.21</span>
+
+<span class="nx">require</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="nx">github</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">example</span><span class="o">/</span><span class="nx">utils</span><span class="w"> </span><span class="nx">v1</span><span class="mf">.0.0</span>
+<span class="w">    </span><span class="nx">github</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">example</span><span class="o">/</span><span class="nx">math</span><span class="w"> </span><span class="nx">v1</span><span class="mf">.2.0</span>
+<span class="p">)</span>
+</code></pre></div>
+<h2 id="import-syntax">Import Syntax</h2>
+<h3 id="external-modules">External Modules</h3>
+<div class="highlight"><pre><span></span><code>import &quot;github.com/example/utils&quot; as utils
+import &quot;github.com/example/math&quot; as math
+
+function main() {
+    var result = utils.FormatString(&quot;Hello, %s!&quot;, &quot;World&quot;)
+    var sum = math.Add(10, 20)
+}
+</code></pre></div>
+<h3 id="local-packages">Local Packages</h3>
+<div class="highlight"><pre><span></span><code>import &quot;./local/mypackage&quot; as pkg
+import &quot;../shared/common&quot; as common
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">HMOD Tool</p>
+<p>HMOD tool is not needed. We are stil working on bringing go packages to Harneet. Kindly stay tuned. As of today , you dont need HMOD tool</p>
+</div>
+<h2 id="module-management-tool">Module Management Tool</h2>
+<p>Use the <code>hmod</code> tool to manage dependencies:</p>
+<h3 id="initialize-a-project">Initialize a Project</h3>
+<div class="highlight"><pre><span></span><code>hmod<span class="w"> </span>init<span class="w"> </span>--module<span class="w"> </span>example.com/myproject
+</code></pre></div>
+<h3 id="add-dependencies">Add Dependencies</h3>
+<div class="highlight"><pre><span></span><code>hmod<span class="w"> </span>require<span class="w"> </span>--module<span class="w"> </span>github.com/example/utils<span class="w"> </span>--version<span class="w"> </span>v1.0.0
+</code></pre></div>
+<h3 id="download-dependencies">Download Dependencies</h3>
+<div class="highlight"><pre><span></span><code>hmod<span class="w"> </span>download
+</code></pre></div>
+<h3 id="list-dependencies">List Dependencies</h3>
+<div class="highlight"><pre><span></span><code>hmod<span class="w"> </span>list
+</code></pre></div>
+<h3 id="clean-cache">Clean Cache</h3>
+<div class="highlight"><pre><span></span><code>hmod<span class="w"> </span>clean
+</code></pre></div>
+<h2 id="module-resolution">Module Resolution</h2>
+<p>The module system resolves imports in the following order:</p>
 <ol>
-<li><strong>No Silent Failures</strong>: All functions that can fail return an error value.</li>
-<li><strong>Explicit Error Checking</strong>: Errors must be explicitly checked using the <code>if err != None</code> pattern.</li>
-<li><strong>Multiple Return Values</strong>: Functions return <code>(result, error)</code> tuples.</li>
-<li><strong>Error Propagation</strong>: Errors bubble up through the call stack unless handled.</li>
+<li><strong>Standard Library</strong> - Built-in modules (fmt, json, os, etc.)</li>
+<li><strong>External Modules</strong> - Modules listed in go.mod</li>
+<li><strong>Local Packages</strong> - Relative path imports (./package, ../package)</li>
 </ol>
-<h2 id="syntax">Syntax</h2>
-<h3 id="multiple-return-values">Multiple Return Values</h3>
-<div class="highlight"><pre><span></span><code>package main
-var result, err = strings.ToInt(&quot;123&quot;)
-var content, err = file.Read(&quot;config.txt&quot;)
-var x, y, err = someFunction()
+<h3 id="external-module-resolution">External Module Resolution</h3>
+<p>For import <code>github.com/example/utils/strings</code>:</p>
+<ol>
+<li>Parse go.mod to find matching module <code>github.com/example/utils v1.0.0</code></li>
+<li>Check if module exists in <code>imports/github.com/example/utils@v1.0.0/</code></li>
+<li>If not found, download module automatically</li>
+<li>Resolve subpath: <code>imports/github.com/example/utils@v1.0.0/strings/</code></li>
+</ol>
+<h2 id="version-management">Version Management</h2>
+<h3 id="semantic-versioning">Semantic Versioning</h3>
+<p>Harneet follows semantic versioning (semver):</p>
+<div class="highlight"><pre><span></span><code><span class="nx">require</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="nx">github</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">example</span><span class="o">/</span><span class="nx">utils</span><span class="w"> </span><span class="nx">v1</span><span class="mf">.0.0</span><span class="w">    </span><span class="c1">// Exact version</span>
+<span class="w">    </span><span class="nx">github</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">example</span><span class="o">/</span><span class="nx">math</span><span class="w"> </span><span class="nx">v1</span><span class="mf">.2.0</span><span class="w">     </span><span class="c1">// Exact version</span>
+<span class="p">)</span>
 </code></pre></div>
-<h3 id="error-checking-pattern">Error Checking Pattern</h3>
-<div class="highlight"><pre><span></span><code>package main
-var value, err = riskyFunction()
-if err != None {
-    fmt.Println(&quot;Error occurred:&quot;, err)
-    return err // Propagate error up
-}
-// Safe to use value here
-fmt.Println(&quot;Success:&quot;, value)
+<h3 id="version-constraints">Version Constraints</h3>
+<p>Currently supported:
+- <strong>Exact versions</strong>: <code>v1.0.0</code>
+- <strong>Pre-release</strong>: <code>v1.0.0-alpha.1</code>
+- <strong>Build metadata</strong>: <code>v1.0.0+build.1</code></p>
+<h2 id="module-downloading">Module Downloading</h2>
+<p>The module manager supports multiple download methods:</p>
+<h3 id="go-module-cache">Go Module Cache</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Uses go mod download when available</span>
+go<span class="w"> </span>mod<span class="w"> </span>download<span class="w"> </span>github.com/example/utils@v1.0.0
 </code></pre></div>
-<h3 id="built-in-error-types">Built-in Error Types</h3>
+<h3 id="git-clone-fallback">Git Clone Fallback</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Falls back to git clone for repositories</span>
+git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="w"> </span><span class="m">1</span><span class="w"> </span>--branch<span class="w"> </span>v1.0.0<span class="w"> </span>https://github.com/example/utils.git
+</code></pre></div>
+<h3 id="supported-hosting">Supported Hosting</h3>
 <ul>
-<li><strong>None</strong>: Represents no error (similar to Go's nil).</li>
-<li><strong>Error Values</strong>: First-class error objects with descriptive messages.</li>
+<li><strong>GitHub</strong>: <code>github.com/user/repo</code></li>
+<li><strong>GitLab</strong>: <code>gitlab.com/user/repo</code></li>
+<li><strong>Bitbucket</strong>: <code>bitbucket.org/user/repo</code></li>
+<li><strong>Custom</strong>: Any git-accessible repository</li>
 </ul>
-<h2 id="standard-library-error-handling">Standard Library Error Handling</h2>
-<p>All standard library functions return errors:</p>
-<div class="highlight"><pre><span></span><code>// String conversion with error handling
+<h2 id="module-caching">Module Caching</h2>
+<p>Downloaded modules are cached in the <code>imports/</code> directory:</p>
+<div class="highlight"><pre><span></span><code>imports/
+├── github.com/example/utils@v1.0.0/
+│   ├── strings/
+│   │   └── strings.ha
+│   └── format/
+│       └── format.ha
+└── github.com/example/math@v1.2.0/
+    ├── basic/
+    │   └── math.ha
+    └── advanced/
+        └── calc.ha
+</code></pre></div>
+<h3 id="cache-management">Cache Management</h3>
+<ul>
+<li><strong>Automatic</strong>: Modules downloaded on first import</li>
+<li><strong>Manual</strong>: Use <code>harneet-mod download</code> to pre-download</li>
+<li><strong>Cleanup</strong>: Use <code>harneet-mod clean</code> to remove cache</li>
+</ul>
+<h2 id="package-structure">Package Structure</h2>
+<p>External modules should follow Harneet package conventions:</p>
+<h3 id="package-declaration">Package Declaration</h3>
+<div class="highlight"><pre><span></span><code>// strings/strings.ha
+package strings
+
+// Exported function (uppercase)
+function FormatString(template string, args ...interface{}) string {
+    // Implementation
+}
+
+// Private function (lowercase)
+function helper(s string) string {
+    // Implementation
+}
+</code></pre></div>
+<h3 id="exports">Exports</h3>
+<p>Only uppercase identifiers are exported:</p>
+<div class="highlight"><pre><span></span><code>// Exported
+var DefaultTimeout int = 30
+function ProcessData() {}
+type User struct {}
+
+// Not exported
+var internalConfig = {}
+function parseInternal() {}
+type privateType struct {}
+</code></pre></div>
+<h2 id="integration-examples">Integration Examples</h2>
+<h3 id="configuration-management-with-viper">Configuration Management with Viper</h3>
+<div class="highlight"><pre><span></span><code>// go.mod
+module example.com/sample-project
+
+require (
+    github.com/spf13/viper v1.17.0
+    github.com/fatih/color v1.15.0
+)
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// main.ha
 package main
-var num, err = strings.ToInt(&quot;invalid&quot;)
-if err != None {
-    fmt.Println(&quot;Conversion failed:&quot;, err)
-    // Handle error appropriately
+
+import fmt
+import &quot;github.com/spf13/viper&quot; as viper
+import &quot;github.com/fatih/color&quot; as color
+
+function init() {
+    viper.SetConfigName(&quot;config&quot;)
+    viper.SetConfigType(&quot;toml&quot;)
+    viper.AddConfigPath(&quot;.&quot;)
 }
 
-// Math operations with error checking
-var result, err = math.Pow(2, 64) // May overflow
-if err != None {
-    fmt.Println(&quot;Math error:&quot;, err)
-}
-</code></pre></div>
-<h3 id="error-categories">Error Categories</h3>
-<ul>
-<li><strong>TypeError</strong>: Type conversion or mismatch errors</li>
-<li><strong>ValueError</strong>: Invalid values (division by zero, invalid conversions)</li>
-<li><strong>RangeError</strong>: Values outside acceptable ranges</li>
-<li><strong>ArithmeticError</strong>: Mathematical operation errors</li>
-</ul>
-<h2 id="runtime-assertions">Runtime Assertions</h2>
-<p>The <code>assert</code> module provides runtime assertions for testing and debugging.</p>
-<div class="highlight"><pre><span></span><code>package main
-import assert
+function main() {
+    var green = color.New(color.FgGreen).SprintFunc()
 
-// Development-time checks that panic on failure
-assert.Assert(x &gt; 0, &quot;x must be positive&quot;)
-assert.AssertEq(actual, expected, &quot;values should match&quot;)
-assert.AssertNe(result, None, &quot;result should not be None&quot;)
-</code></pre></div>
-<h2 id="stack-trace-system">Stack Trace System</h2>
-<p>Harneet provides comprehensive stack trace information for all runtime errors, making debugging fast and efficient.</p>
-<h3 id="features">Features</h3>
-<ul>
-<li><strong>Precise Location</strong>: Exact file name, line number, and column position</li>
-<li><strong>Call Hierarchy</strong>: Complete function call stack showing execution path</li>
-<li><strong>Error Context</strong>: Clear error messages with full debugging information</li>
-<li><strong>Multi-level Traces</strong>: Nested function calls show complete call chain</li>
-</ul>
-<h3 id="stack-trace-format">Stack Trace Format</h3>
-<p>When an error occurs, Harneet displays detailed debugging information:</p>
-<div class="highlight"><pre><span></span><code>ERROR: division by zero
-Stack trace:
-  at &lt;program&gt; (examples/myfile.ha:5:22)
-  at math.Max (examples/myfile.ha:5:33)
-</code></pre></div>
-<h3 id="stack-trace-components">Stack Trace Components</h3>
-<p>Each stack frame includes:
-- <strong>Function Name</strong>: <code>&lt;program&gt;</code> for top-level code, <code>module.function</code> for library calls
-- <strong>File Location</strong>: Complete file path relative to execution directory<br />
-- <strong>Position</strong>: Exact <code>line:column</code> where error occurred or call was made</p>
-<h3 id="error-types-with-stack-traces">Error Types with Stack Traces</h3>
-<h4 id="arithmetic-errors">Arithmetic Errors</h4>
-<div class="highlight"><pre><span></span><code>package main
-var result = 10 / 0  // Division by zero
-// Output:
-// ERROR: division by zero
-// Stack trace:
-//   at &lt;program&gt; (myfile.ha:1:15)
-</code></pre></div>
-<h4 id="identifier-errors">Identifier Errors</h4>
-<div class="highlight"><pre><span></span><code>package main
-var x = undefinedVariable  // Variable not found
-// Output:
-// ERROR: identifier not found: undefinedVariable
-// Stack trace:
-//   at &lt;program&gt; (myfile.ha:1:8)
-</code></pre></div>
-<h4 id="function-call-errors">Function Call Errors</h4>
-<div class="highlight"><pre><span></span><code>package main
-import math
-var result = math.Max(42, 10 / 0)  // Error in nested call
-// Output:
-// ERROR: division by zero
-// Stack trace:
-//   at &lt;program&gt; (myfile.ha:2:22)
-//   at math.Max (myfile.ha:2:33)
-</code></pre></div>
-<h4 id="type-conversion-errors">Type Conversion Errors</h4>
-<div class="highlight"><pre><span></span><code>package main
-import strings
-var num, err = strings.ToInt(&quot;not_a_number&quot;)
-if err != None {
-    // Error is handled gracefully with descriptive message
-    fmt.Println(&quot;Error:&quot;, err)
+    var err = viper.ReadInConfig()
+    if err != nil {
+        fmt.Printf(&quot;Error reading config: %v\n&quot;, err)
+        return
+    }
+
+    var appName = viper.GetString(&quot;app.name&quot;)
+    var port = viper.GetInt(&quot;app.port&quot;)
+
+    fmt.Printf(&quot;%s App: %s running on port %d\n&quot;, green(&quot;✅&quot;), appName, port)
 }
 </code></pre></div>
-<h4 id="parser-errors">Parser Errors</h4>
-<div class="highlight"><pre><span></span><code>package main
-var x = 42 +   // Incomplete expression (syntax error)
-// Output:
-// Woops! Sincere apologies, but we ran into some errors while running the program!
-// Stack trace:
-//  parser errors:
-//    no prefix parse function for DIVIDE found
-//    no prefix parse function for ERROR_TYPE found
-//    no prefix parse function for ILLEGAL found
+<h3 id="cli-tool">CLI Tool</h3>
+<div class="highlight"><pre><span></span><code>// go.mod
+module example.com/cli-tool
+
+require (
+    github.com/urfave/cli/v2 v2.25.0
+    github.com/fatih/color v1.15.0
+)
 </code></pre></div>
-<h3 id="benefits">Benefits</h3>
-<ul>
-<li><strong>Immediate Location</strong>: Know exactly where errors occur</li>
-<li><strong>Call Context</strong>: Understand how execution reached the error</li>
-<li><strong>File Information</strong>: No guessing which file contains the problem</li>
-<li><strong>Debugging Speed</strong>: Quick navigation to problem areas</li>
-</ul>
+<div class="highlight"><pre><span></span><code>// main.ha
+package main
+
+import &quot;github.com/urfave/cli/v2&quot; as cli
+import &quot;github.com/fatih/color&quot; as color
+
+function main() {
+    var app = cli.NewApp()
+    app.Name = &quot;mytool&quot;
+
+    color.Green(&quot;CLI tool ready!&quot;)
+}
+</code></pre></div>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="module-organization">Module Organization</h3>
+<ol>
+<li><strong>Single Purpose</strong>: Each module should have a clear, single purpose</li>
+<li><strong>Clear Exports</strong>: Export only necessary functions and types</li>
+<li><strong>Documentation</strong>: Document exported functions and types</li>
+<li><strong>Versioning</strong>: Use semantic versioning for releases</li>
+</ol>
+<h3 id="import-management">Import Management</h3>
+<ol>
+<li><strong>Group Imports</strong>: Group standard library, external, and local imports</li>
+<li><strong>Meaningful Aliases</strong>: Use clear, descriptive import aliases</li>
+<li><strong>Avoid Conflicts</strong>: Prevent naming conflicts with aliases</li>
+</ol>
+<div class="highlight"><pre><span></span><code>// Good import grouping
+import fmt
+import json
+
+import &quot;github.com/example/utils&quot; as utils
+import &quot;github.com/example/math&quot; as math
+
+import &quot;./local/database&quot; as db
+import &quot;../shared/config&quot; as config
+</code></pre></div>
+<h3 id="dependency-management">Dependency Management</h3>
+<ol>
+<li><strong>Pin Versions</strong>: Use exact versions in production</li>
+<li><strong>Regular Updates</strong>: Keep dependencies updated</li>
+<li><strong>Security</strong>: Review dependencies for security issues</li>
+<li><strong>Minimal Dependencies</strong>: Only add necessary dependencies</li>
+</ol>
+<h2 id="error-handling">Error Handling</h2>
+<h3 id="module-not-found">Module Not Found</h3>
+<div class="highlight"><pre><span></span><code>ERROR: module or package &#39;github.com/example/missing&#39; not found
+</code></pre></div>
+<p><strong>Solution</strong>: Add module to go.mod and run <code>harneet-mod download</code></p>
+<h3 id="version-conflicts">Version Conflicts</h3>
+<div class="highlight"><pre><span></span><code>ERROR: version conflict for github.com/example/utils
+</code></pre></div>
+<p><strong>Solution</strong>: Update go.mod with compatible versions</p>
+<h3 id="download-failures">Download Failures</h3>
+<div class="highlight"><pre><span></span><code>ERROR: failed to download module github.com/example/utils: git clone failed
+</code></pre></div>
+<p><strong>Solution</strong>: Check network connectivity and repository access</p>
+<h2 id="advanced-features">Advanced Features</h2>
+<h3 id="module-replacement">Module Replacement</h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// go.mod</span>
+<span class="nx">replace</span><span class="w"> </span><span class="nx">github</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">example</span><span class="o">/</span><span class="nx">utils</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="nx">local</span><span class="o">/</span><span class="nx">utils</span>
+</code></pre></div>
+<h3 id="indirect-dependencies">Indirect Dependencies</h3>
+<div class="highlight"><pre><span></span><code><span class="nx">require</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="nx">github</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">example</span><span class="o">/</span><span class="nx">utils</span><span class="w"> </span><span class="nx">v1</span><span class="mf">.0.0</span>
+<span class="w">    </span><span class="nx">github</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">example</span><span class="o">/</span><span class="nx">math</span><span class="w"> </span><span class="nx">v1</span><span class="mf">.2.0</span><span class="w"> </span><span class="c1">// indirect</span>
+<span class="p">)</span>
+</code></pre></div>
+<h3 id="build-constraints">Build Constraints</h3>
+<div class="highlight"><pre><span></span><code>// +build linux darwin
+
+package platform
+
+// Platform-specific code
+</code></pre></div>
+<h2 id="migration-guide">Migration Guide</h2>
+<h3 id="from-local-packages">From Local Packages</h3>
+<ol>
+<li>Create go.mod file</li>
+<li>Move packages to external repositories</li>
+<li>Update import paths</li>
+<li>Use harneet-mod to manage dependencies</li>
+</ol>
+<h3 id="from-other-languages">From Other Languages</h3>
+<ol>
+<li>Identify equivalent Harneet packages</li>
+<li>Create go.mod with dependencies</li>
+<li>Adapt import syntax</li>
+<li>Update function calls to match Harneet conventions</li>
+</ol>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues">Common Issues</h3>
+<ol>
+<li><strong>Import cycles</strong>: Reorganize package dependencies</li>
+<li><strong>Version conflicts</strong>: Update to compatible versions</li>
+<li><strong>Missing modules</strong>: Add to go.mod and download</li>
+<li><strong>Permission errors</strong>: Check file system permissions</li>
+</ol>
+<h3 id="debug-mode">Debug Mode</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">HARNEET_DEBUG</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>./harneet<span class="w"> </span>main.ha
+</code></pre></div>
+<h3 id="verbose-logging">Verbose Logging</h3>
+<div class="highlight"><pre><span></span><code>hmod<span class="w"> </span>download<span class="w"> </span>--verbose
+</code></pre></div>
+<p>This module system brings enterprise-level dependency management to Harneet while maintaining simplicity and Go-like familiarity.</p>
 
 
 
@@ -2394,7 +3197,7 @@ var x = 42 +   // Incomplete expression (syntax error)
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../general/unicode_support/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Unicode Support">
+          <a href="../import_system/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Import System">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2404,20 +3207,20 @@ var x = 42 +   // Incomplete expression (syntax error)
                 Previous
               </span>
               <div class="md-ellipsis">
-                Unicode Support
+                Import System
               </div>
             </div>
           </a>
         
         
           
-          <a href="../functions/introduction/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction">
+          <a href="../general/unicode_support/" class="md-footer__link md-footer__link--next" aria-label="Next: Unicode Support">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Introduction
+                Unicode Support
               </div>
             </div>
             <div class="md-footer__button md-icon">

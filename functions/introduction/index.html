@@ -387,6 +387,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../general/const/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Const Declarations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../general/keywords_identifiers/" class="md-nav__link">
         
   
@@ -617,12 +640,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general/import_system/" class="md-nav__link">
+      <a href="../../import_system/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Import System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Module System
     
   </span>
   
@@ -1329,6 +1375,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../general/struct_field_assignment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    struct field assignment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../stdlib/json/" class="md-nav__link">
         
   
@@ -1362,10 +1431,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_9" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_10" >
         
           
-          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
             
   
   
@@ -1378,8 +1447,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_10">
             <span class="md-nav__icon md-icon"></span>
             HTTP
           </label>
@@ -1935,6 +2004,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../../any_type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The any Type
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../comprehensive_examples/" class="md-nav__link">
         
   
@@ -2251,7 +2342,8 @@
 <p>Functions are reusable blocks of code that perform a specific task. They are a fundamental building block of Harneet programs and support advanced features like returning other functions, closures, and higher-order programming.</p>
 <h2 id="declaration-syntax">Declaration Syntax</h2>
 <p>The basic syntax for declaring a function is as follows:</p>
-<div class="highlight"><pre><span></span><code>function functionName(param1 type1, param2 type2) returnType {
+<div class="highlight"><pre><span></span><code>package main
+function functionName(param1 type1, param2 type2) returnType {
     // function body
     return value
 }
@@ -2266,7 +2358,8 @@
 </ul>
 <h2 id="basic-examples">Basic Examples</h2>
 <h3 id="function-with-a-single-return-value">Function with a single return value</h3>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 
 function square(x int) int {
     return x * x
@@ -2276,7 +2369,8 @@ var result = square(5)
 fmt.Println(result) // Output: 25
 </code></pre></div>
 <h3 id="function-with-no-parameters">Function with no parameters</h3>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 
 function getAnswer() int {
     return 42
@@ -2286,7 +2380,8 @@ var answer = getAnswer()
 fmt.Println(answer) // Output: 42
 </code></pre></div>
 <h3 id="function-with-no-return-value">Function with no return value</h3>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 
 function printMessage() {
     fmt.Println(&quot;Hello, Harneet!&quot;)
@@ -2297,7 +2392,8 @@ printMessage() // Output: Hello, Harneet!
 <h2 id="returning-functions">Returning Functions</h2>
 <p>Harneet supports returning functions from other functions, enabling powerful functional programming patterns like closures and higher-order functions.</p>
 <h3 id="basic-function-return">Basic Function Return</h3>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 
 function getGreeter() function(string) string {
     function greet(name string) string {
@@ -2312,7 +2408,8 @@ fmt.Println(message) // Output: Hello, World!
 </code></pre></div>
 <h3 id="closures-with-variable-capture">Closures with Variable Capture</h3>
 <p>Functions can capture variables from their enclosing scope, creating closures:</p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 
 function createAdder(x int) function(int) int {
     function inner(y int) int {
@@ -2327,7 +2424,8 @@ fmt.Println(result) // Output: 8
 </code></pre></div>
 <h3 id="returning-arrow-functions">Returning Arrow Functions</h3>
 <p>You can also return arrow functions for more concise syntax:</p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 
 function createMultiplier(factor int) function(int) int {
     return x =&gt; x * factor
@@ -2341,7 +2439,8 @@ fmt.Printf(&quot;Triple 4: %d\n&quot;, triple(4))  // Output: Triple 4: 12
 </code></pre></div>
 <h3 id="higher-order-functions">Higher-Order Functions</h3>
 <p>Functions can return functions that themselves return functions, enabling complex functional patterns:</p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 
 function createCalculator() function(string) function(int, int) int {
     function getOperation(op string) function(int, int) int {
@@ -2365,7 +2464,8 @@ fmt.Printf(&quot;10 - 5 = %d\n&quot;, subFunc(10, 5))  // Output: 10 - 5 = 5
 </code></pre></div>
 <h3 id="conditional-function-returns">Conditional Function Returns</h3>
 <p>Functions can return different functions based on runtime conditions:</p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 
 function createMathOperation(operation string) function(int, int) int {
     if operation == &quot;add&quot; {
@@ -2391,7 +2491,8 @@ fmt.Printf(&quot;Multiply: %d\n&quot;, multiplyOp(4, 5)) // Output: Multiply: 20
 <p>Harneet provides comprehensive support for function type annotations, enabling strong type safety for higher-order functions and functional programming patterns.</p>
 <h3 id="function-parameters-with-function-types">Function Parameters with Function Types</h3>
 <p>You can specify function types as parameters, enabling type-safe higher-order functions:</p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 
 // Function that takes another function as a parameter
 function apply(f function(int) int, value int) int {
@@ -2421,7 +2522,8 @@ fmt.Printf(&quot;compose(double, addTen, 5) = %d\n&quot;, result2)
 </code></pre></div>
 <h3 id="function-variables-with-type-annotations">Function Variables with Type Annotations</h3>
 <p>Variables can be declared with specific function types:</p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 
 // Declare a function variable with a specific signature
 var handler function(int) int
@@ -2440,7 +2542,8 @@ fmt.Printf(&quot;handler(7) = %d\n&quot;, result) // Output: 8
 </code></pre></div>
 <h3 id="multiple-parameter-function-types">Multiple Parameter Function Types</h3>
 <p>Function types can specify multiple parameters and different return types:</p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 
 // Function expecting a binary operation
 function calculate(op function(int, int) int, a int, b int) int {
@@ -2470,7 +2573,8 @@ fmt.Printf(&quot;transform(toUpper, \&quot;hello\&quot;) = %s\n&quot;, upper) //
 </code></pre></div>
 <h3 id="arrow-functions-with-type-annotations">Arrow Functions with Type Annotations</h3>
 <p>Arrow functions work seamlessly with function type annotations:</p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 
 // Function expecting a function parameter
 function processNumbers(processor function(int) int, numbers []int) []int {
@@ -2490,7 +2594,8 @@ fmt.Printf(&quot;Squared: %v\n&quot;, squared) // Output: [1, 4, 9, 16]
 </code></pre></div>
 <h3 id="type-safety-and-error-detection">Type Safety and Error Detection</h3>
 <p>Harneet's function type system provides comprehensive compile-time validation:</p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 
 function apply(f function(int) int, value int) int {
     return f(value)
@@ -2514,7 +2619,8 @@ var result1 = apply(double, 5)
 </code></pre></div>
 <h3 id="advanced-function-type-patterns">Advanced Function Type Patterns</h3>
 <h4 id="factory-functions-with-type-safety">Factory Functions with Type Safety</h4>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 
 // Factory function returning typed function
 function createValidator(minLength int) function(string) bool {
@@ -2531,7 +2637,8 @@ var isValid = passwordValidator(&quot;mypassword&quot;)
 fmt.Printf(&quot;Password valid: %t\n&quot;, isValid)
 </code></pre></div>
 <h4 id="callback-pattern-with-type-validation">Callback Pattern with Type Validation</h4>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 
 // Function with callback parameter
 function processData(data int, callback function(int) int, errorHandler function(string)) int {

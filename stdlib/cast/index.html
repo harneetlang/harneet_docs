@@ -12,7 +12,7 @@
         <link rel="prev" href="../../general/scoping_variable_management/">
       
       
-        <link rel="next" href="../../general/import_system/">
+        <link rel="next" href="../../import_system/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -370,6 +370,29 @@
   
   <span class="md-ellipsis">
     Variable Declaration & Assignment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/const/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Const Declarations
     
   </span>
   
@@ -839,12 +862,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general/import_system/" class="md-nav__link">
+      <a href="../../import_system/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Import System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Module System
     
   </span>
   
@@ -1254,6 +1300,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../general/struct_field_assignment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    struct field assignment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../json/" class="md-nav__link">
         
   
@@ -1287,10 +1356,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_9" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_10" >
         
           
-          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
             
   
   
@@ -1303,8 +1372,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_10">
             <span class="md-nav__icon md-icon"></span>
             HTTP
           </label>
@@ -1860,6 +1929,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../../any_type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The any Type
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../comprehensive_examples/" class="md-nav__link">
         
   
@@ -2107,7 +2198,8 @@
 <p><strong>Returns:</strong>
 - <code>(string, error)</code>: String representation of the value</p>
 <p><strong>Examples:</strong>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import cast
 
 var str1, err1 = cast.ToString(42)        // &quot;42&quot;
@@ -2134,7 +2226,8 @@ fmt.Printf(&quot;Boolean: %s\n&quot;, str3)
 - <strong>Integer</strong>: Returns as-is
 - <strong>None</strong>: Returns error</p>
 <p><strong>Examples:</strong>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import cast
 
 var int1, err1 = cast.ToInt(&quot;123&quot;)     // 123
@@ -2162,7 +2255,8 @@ if err5 != None {
 - <strong>Float</strong>: Returns as-is
 - <strong>None</strong>: Returns error</p>
 <p><strong>Examples:</strong>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import cast
 
 var float1, err1 = cast.ToFloat(&quot;3.14159&quot;)  // 3.14159
@@ -2189,7 +2283,8 @@ fmt.Printf(&quot;Answer: %s\n&quot;, float2)
 - <strong>Arrays/Maps</strong>: empty → <code>false</code>, non-empty → <code>true</code>
 - <strong>Boolean</strong>: Returns as-is</p>
 <p><strong>Examples:</strong>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import cast
 
 var bool1, err1 = cast.ToBool(&quot;true&quot;)     // true
@@ -2215,7 +2310,8 @@ fmt.Printf(&quot;Array to bool: %s\n&quot;, bool6)
 - <strong>Array</strong>: Returns as-is
 - <strong>Other types</strong>: Returns error</p>
 <p><strong>Examples:</strong>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import cast
 
 var arr1, err1 = cast.ToArray(&quot;hello&quot;)          // [&quot;h&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot;]
@@ -2238,7 +2334,8 @@ fmt.Printf(&quot;Map to array: %s\n&quot;, arr2)
 - <strong>Other types</strong>: Returns error</p>
 <p><strong>Hashable Keys:</strong> Strings, integers, and booleans</p>
 <p><strong>Examples:</strong>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import cast
 
 var map1, err1 = cast.ToMap([[&quot;a&quot;, 1], [&quot;b&quot;, 2], [&quot;c&quot;, 3]])  // {&quot;a&quot;: 1, &quot;b&quot;: 2, &quot;c&quot;: 3}
@@ -2261,7 +2358,8 @@ fmt.Printf(&quot;Array to map: %s\n&quot;, map1)
 <p><strong>Returns:</strong>
 - <code>(bool, error)</code>: <code>true</code> if casting is possible, <code>false</code> otherwise</p>
 <p><strong>Examples:</strong>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import cast
 
 var canCast1, err1 = cast.CanCast(&quot;42&quot;, &quot;int&quot;)        // true
@@ -2360,7 +2458,8 @@ fmt.Printf(&quot;Can cast &#39;hello&#39; to int: %s\n&quot;, canCast2)
 </table>
 <h2 id="error-handling">Error Handling</h2>
 <p>The cast module provides detailed error messages for failed conversions:</p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import cast
 
 // Invalid string to integer
@@ -2386,7 +2485,8 @@ if boolErr != None {
 </code></pre></div>
 <h2 id="common-use-cases">Common Use Cases</h2>
 <h3 id="data-validation-and-conversion">Data Validation and Conversion</h3>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import cast
 
 function processUserInput(input string, expectedType string) {
@@ -2413,7 +2513,8 @@ processUserInput(&quot;42&quot;, &quot;int&quot;)      // Processing integer: 42
 processUserInput(&quot;hello&quot;, &quot;int&quot;)   // Invalid input: cannot convert &#39;hello&#39; to int
 </code></pre></div>
 <h3 id="configuration-processing">Configuration Processing</h3>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import cast
 
 function parseConfig(configMap map) {
@@ -2433,7 +2534,8 @@ var config = {&quot;port&quot;: &quot;8080&quot;, &quot;enabled&quot;: &quot;tru
 parseConfig(config)  // Server config - Port: 8080, Enabled: true
 </code></pre></div>
 <h3 id="data-structure-transformation">Data Structure Transformation</h3>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import cast
 
 // Convert CSV-like data to structured format
@@ -2461,7 +2563,8 @@ fmt.Printf(&quot;Structured data: %s\n&quot;, records)
 </code></pre></div>
 <h2 id="integration-with-other-modules">Integration with Other Modules</h2>
 <h3 id="json-and-cast-integration">JSON and Cast Integration</h3>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import json
 import cast
 
@@ -2483,7 +2586,8 @@ fmt.Printf(&quot;Processed: %s\n&quot;, processedData)
 // Output: Processed: {&quot;id&quot;: 123, &quot;active&quot;: true, &quot;score&quot;: 95.5}
 </code></pre></div>
 <h3 id="os-and-cast-integration">OS and Cast Integration</h3>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import os
 import cast
 
@@ -2560,7 +2664,7 @@ if portErr == None &amp;&amp; debugErr == None {
         
         
           
-          <a href="../../general/import_system/" class="md-footer__link md-footer__link--next" aria-label="Next: Import System">
+          <a href="../../import_system/" class="md-footer__link md-footer__link--next" aria-label="Next: Import System">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next

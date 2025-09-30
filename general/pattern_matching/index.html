@@ -387,6 +387,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../const/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Const Declarations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../keywords_identifiers/" class="md-nav__link">
         
   
@@ -872,12 +895,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../import_system/" class="md-nav__link">
+      <a href="../../import_system/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Import System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Module System
     
   </span>
   
@@ -1287,6 +1333,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../struct_field_assignment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    struct field assignment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../stdlib/json/" class="md-nav__link">
         
   
@@ -1320,10 +1389,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_9" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_10" >
         
           
-          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
             
   
   
@@ -1336,8 +1405,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_10">
             <span class="md-nav__icon md-icon"></span>
             HTTP
           </label>
@@ -1893,6 +1962,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../../any_type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The any Type
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../comprehensive_examples/" class="md-nav__link">
         
   
@@ -2167,7 +2258,8 @@
 <p>Pattern matching is a powerful control flow construct in Harneet that allows you to match values against patterns and execute code based on the match. It provides a more expressive and safer alternative to traditional switch statements.</p>
 <h2 id="basic-syntax">Basic Syntax</h2>
 <p>The basic syntax for pattern matching uses the <code>match</code> keyword:</p>
-<div class="highlight"><pre><span></span><code>match value {
+<div class="highlight"><pre><span></span><code>package main
+match value {
     pattern1 =&gt; expression1,
     pattern2 =&gt; expression2,
     _ =&gt; default_expression
@@ -2176,7 +2268,8 @@
 <h2 id="pattern-types">Pattern Types</h2>
 <h3 id="literal-patterns">Literal Patterns</h3>
 <p>Match against specific literal values:</p>
-<div class="highlight"><pre><span></span><code>var status = match code {
+<div class="highlight"><pre><span></span><code>package main
+var status = match code {
     200 =&gt; &quot;OK&quot;,
     404 =&gt; &quot;Not Found&quot;, 
     500 =&gt; &quot;Server Error&quot;,
@@ -2185,7 +2278,8 @@
 </code></pre></div>
 <h3 id="wildcard-pattern">Wildcard Pattern</h3>
 <p>The underscore <code>_</code> matches any value and acts as a catch-all:</p>
-<div class="highlight"><pre><span></span><code>var result = match value {
+<div class="highlight"><pre><span></span><code>package main
+var result = match value {
     1 =&gt; &quot;one&quot;,
     2 =&gt; &quot;two&quot;,
     _ =&gt; &quot;other&quot;  // Matches anything else
@@ -2193,7 +2287,8 @@
 </code></pre></div>
 <h3 id="variable-binding">Variable Binding</h3>
 <p>Bind the matched value to a variable:</p>
-<div class="highlight"><pre><span></span><code>var message = match number {
+<div class="highlight"><pre><span></span><code>package main
+var message = match number {
     0 =&gt; &quot;zero&quot;,
     1 =&gt; &quot;one&quot;,
     n =&gt; &quot;some number&quot;  // &#39;n&#39; contains the matched value
@@ -2201,7 +2296,8 @@
 </code></pre></div>
 <h3 id="array-destructuring">Array Destructuring</h3>
 <p>Match and destructure arrays:</p>
-<div class="highlight"><pre><span></span><code>var description = match coordinates {
+<div class="highlight"><pre><span></span><code>package main
+var description = match coordinates {
     [] =&gt; &quot;empty&quot;,
     [x] =&gt; &quot;single point&quot;,
     [x, y] =&gt; &quot;2D point&quot;, 
@@ -2210,7 +2306,8 @@
 }
 </code></pre></div>
 <p>You can also use specific values in array patterns:</p>
-<div class="highlight"><pre><span></span><code>var result = match point {
+<div class="highlight"><pre><span></span><code>package main
+var result = match point {
     [0, 0] =&gt; &quot;origin&quot;,
     [x, 0] =&gt; &quot;on x-axis&quot;,
     [0, y] =&gt; &quot;on y-axis&quot;, 
@@ -2219,7 +2316,8 @@
 </code></pre></div>
 <h3 id="blank-identifiers-in-patterns">Blank Identifiers in Patterns</h3>
 <p>Use <code>_</code> to ignore specific values in destructuring:</p>
-<div class="highlight"><pre><span></span><code>var info = match data {
+<div class="highlight"><pre><span></span><code>package main
+var info = match data {
     [_, _, important] =&gt; &quot;third element is important&quot;,
     [first, _] =&gt; &quot;only care about first element&quot;,
     _ =&gt; &quot;other&quot;
@@ -2227,7 +2325,8 @@
 </code></pre></div>
 <h2 id="guard-clauses">Guard Clauses</h2>
 <p>Add conditional logic to patterns using <code>if</code> guards:</p>
-<div class="highlight"><pre><span></span><code>var category = match age {
+<div class="highlight"><pre><span></span><code>package main
+var category = match age {
     a if a &lt; 13 =&gt; &quot;child&quot;,
     a if a &gt;= 13 and a &lt; 20 =&gt; &quot;teenager&quot;,
     a if a &gt;= 20 and a &lt; 65 =&gt; &quot;adult&quot;,
@@ -2236,7 +2335,8 @@
 }
 </code></pre></div>
 <p>Guards can use any boolean expression:</p>
-<div class="highlight"><pre><span></span><code>var grade = match score {
+<div class="highlight"><pre><span></span><code>package main
+var grade = match score {
     s if s &gt;= 90 =&gt; &quot;A&quot;,
     s if s &gt;= 80 =&gt; &quot;B&quot;,
     s if s &gt;= 70 =&gt; &quot;C&quot;, 
@@ -2246,7 +2346,8 @@
 </code></pre></div>
 <h2 id="array-pattern-examples">Array Pattern Examples</h2>
 <h3 id="basic-array-matching">Basic Array Matching</h3>
-<div class="highlight"><pre><span></span><code>var arrays = [[], [1], [1, 2], [1, 2, 3]]
+<div class="highlight"><pre><span></span><code>package main
+var arrays = [[], [1], [1, 2], [1, 2, 3]]
 
 for arr in arrays {
     var description = match arr {
@@ -2260,7 +2361,8 @@ for arr in arrays {
 }
 </code></pre></div>
 <h3 id="array-destructuring-with-guards">Array Destructuring with Guards</h3>
-<div class="highlight"><pre><span></span><code>var points = [[0, 0], [5, 0], [0, 3], [4, 3]]
+<div class="highlight"><pre><span></span><code>package main
+var points = [[0, 0], [5, 0], [0, 3], [4, 3]]
 
 for point in points {
     var quadrant = match point {
@@ -2280,7 +2382,8 @@ for point in points {
 </code></pre></div>
 <h2 id="real-world-examples">Real-World Examples</h2>
 <h3 id="http-status-code-processing">HTTP Status Code Processing</h3>
-<div class="highlight"><pre><span></span><code>var statusCodes = [200, 404, 500, 301, 401]
+<div class="highlight"><pre><span></span><code>package main
+var statusCodes = [200, 404, 500, 301, 401]
 
 for code in statusCodes {
     var status = match code {
@@ -2301,7 +2404,8 @@ for code in statusCodes {
 }
 </code></pre></div>
 <h3 id="role-based-access-control">Role-Based Access Control</h3>
-<div class="highlight"><pre><span></span><code>var roles = [&quot;admin&quot;, &quot;user&quot;, &quot;guest&quot;, &quot;moderator&quot;]
+<div class="highlight"><pre><span></span><code>package main
+var roles = [&quot;admin&quot;, &quot;user&quot;, &quot;guest&quot;, &quot;moderator&quot;]
 
 for role in roles {
     var access = match role {
@@ -2326,6 +2430,7 @@ for role in roles {
 <h2 id="best-practices">Best Practices</h2>
 <h3 id="1-always-include-a-wildcard">1. Always Include a Wildcard</h3>
 <div class="highlight"><pre><span></span><code>// Good - handles all cases
+package main
 var result = match value {
     &quot;expected&quot; =&gt; &quot;handled&quot;,
     _ =&gt; &quot;fallback&quot;
@@ -2339,6 +2444,7 @@ var result = match value {
 </code></pre></div>
 <h3 id="2-use-guards-for-complex-conditions">2. Use Guards for Complex Conditions</h3>
 <div class="highlight"><pre><span></span><code>// Good - clear and expressive
+package main
 var category = match age {
     a if a &lt; 18 =&gt; &quot;minor&quot;,
     a if a &gt;= 65 =&gt; &quot;senior&quot;, 
@@ -2356,6 +2462,7 @@ if age &lt; 18 {
 </code></pre></div>
 <h3 id="3-use-destructuring-for-data-extraction">3. Use Destructuring for Data Extraction</h3>
 <div class="highlight"><pre><span></span><code>// Good - extract values directly
+package main
 var info = match coordinates {
     [x, y] =&gt; fmt.Sprintf(&quot;Point at (%d, %d)&quot;, x, y),
     _ =&gt; &quot;Invalid coordinates&quot;

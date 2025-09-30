@@ -387,6 +387,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../general/const/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Const Declarations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../general/keywords_identifiers/" class="md-nav__link">
         
   
@@ -617,12 +640,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general/import_system/" class="md-nav__link">
+      <a href="../../import_system/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Import System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Module System
     
   </span>
   
@@ -1254,6 +1300,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../general/struct_field_assignment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    struct field assignment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../json/" class="md-nav__link">
         
   
@@ -1287,10 +1356,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_9" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_10" >
         
           
-          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
             
   
   
@@ -1303,8 +1372,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_10">
             <span class="md-nav__icon md-icon"></span>
             HTTP
           </label>
@@ -1860,6 +1929,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../../any_type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The any Type
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../comprehensive_examples/" class="md-nav__link">
         
   
@@ -2108,7 +2199,8 @@
 <li><code>Stack</code>: A new empty stack.</li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import collections
 
 let s = collections.new_stack()
@@ -2130,7 +2222,8 @@ s.push(&quot;hello&quot;)
 <li><code>any</code>: The top item, or <code>None</code> if the stack is empty.</li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>let item = s.pop()
+<div class="highlight"><pre><span></span><code>package main
+let item = s.pop()
 fmt.Println(&quot;Popped:&quot;, item)
 </code></pre></div>
 <h3 id="peek"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>peek()</code></h3>
@@ -2140,7 +2233,8 @@ fmt.Println(&quot;Popped:&quot;, item)
 <li><code>any</code>: The top item, or <code>None</code> if the stack is empty.</li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>let top = s.peek()
+<div class="highlight"><pre><span></span><code>package main
+let top = s.peek()
 fmt.Println(&quot;Top item:&quot;, top)
 </code></pre></div>
 <h3 id="is_empty"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>is_empty()</code></h3>
@@ -2150,7 +2244,8 @@ fmt.Println(&quot;Top item:&quot;, top)
 <li><code>bool</code>: <code>true</code> if the stack is empty, <code>false</code> otherwise.</li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>if s.is_empty() {
+<div class="highlight"><pre><span></span><code>package main
+if s.is_empty() {
     fmt.Println(&quot;Stack is empty&quot;)
 }
 </code></pre></div>
@@ -2161,7 +2256,8 @@ fmt.Println(&quot;Top item:&quot;, top)
 <li><code>int</code>: The number of items in the stack.</li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>fmt.Println(&quot;Stack size:&quot;, s.size())
+<div class="highlight"><pre><span></span><code>package main
+fmt.Println(&quot;Stack size:&quot;, s.size())
 </code></pre></div>
 <h3 id="inspect"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>inspect()</code></h3>
 <p>Returns a string representation of the stack.</p>
@@ -2170,7 +2266,8 @@ fmt.Println(&quot;Top item:&quot;, top)
 <li><code>string</code>: A string representation of the stack.</li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>fmt.Println(&quot;Stack:&quot;, s.inspect())
+<div class="highlight"><pre><span></span><code>package main
+fmt.Println(&quot;Stack:&quot;, s.inspect())
 </code></pre></div>
 <h2 id="queue">Queue</h2>
 <p>A First-In-First-Out (FIFO) data structure.</p>
@@ -2200,7 +2297,8 @@ q.enqueue(&quot;second&quot;)
 <li><code>any</code>: The first item, or <code>None</code> if the queue is empty.</li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>let item = q.dequeue()
+<div class="highlight"><pre><span></span><code>package main
+let item = q.dequeue()
 fmt.Println(&quot;Dequeued:&quot;, item)
 </code></pre></div>
 <h3 id="peek_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>peek()</code></h3>
@@ -2210,7 +2308,8 @@ fmt.Println(&quot;Dequeued:&quot;, item)
 <li><code>any</code>: The first item, or <code>None</code> if the queue is empty.</li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>let first = q.peek()
+<div class="highlight"><pre><span></span><code>package main
+let first = q.peek()
 fmt.Println(&quot;First item:&quot;, first)
 </code></pre></div>
 <h3 id="is_empty_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>is_empty()</code></h3>
@@ -2220,7 +2319,8 @@ fmt.Println(&quot;First item:&quot;, first)
 <li><code>bool</code>: <code>true</code> if the queue is empty, <code>false</code> otherwise.</li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>if q.is_empty() {
+<div class="highlight"><pre><span></span><code>package main
+if q.is_empty() {
     fmt.Println(&quot;Queue is empty&quot;)
 }
 </code></pre></div>
@@ -2231,7 +2331,8 @@ fmt.Println(&quot;First item:&quot;, first)
 <li><code>int</code>: The number of items in the queue.</li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>fmt.Println(&quot;Queue size:&quot;, q.size())
+<div class="highlight"><pre><span></span><code>package main
+fmt.Println(&quot;Queue size:&quot;, q.size())
 </code></pre></div>
 <h3 id="inspect_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>inspect()</code></h3>
 <p>Returns a string representation of the queue.</p>
@@ -2240,10 +2341,12 @@ fmt.Println(&quot;First item:&quot;, first)
 <li><code>string</code>: A string representation of the queue.</li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>fmt.Println(&quot;Queue:&quot;, q.inspect())
+<div class="highlight"><pre><span></span><code>package main
+fmt.Println(&quot;Queue:&quot;, q.inspect())
 </code></pre></div>
 <h2 id="complete-example">Complete Example</h2>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import collections
 
 // Stack example
@@ -2274,7 +2377,8 @@ fmt.Println(&quot;Queue:&quot;, queue.inspect())  // [&quot;second&quot;, &quot;
 </code></pre></div>
 <h3 id="draining-a-queue-while-style-loop-using-for">Draining a queue (while-style loop using <code>for</code>)</h3>
 <p>Harneet does not have a separate <code>while</code> keyword. Use a condition-only <code>for</code> loop to achieve the same effect (just like Go):</p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import collections
 
 let q = collections.new_queue()

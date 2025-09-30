@@ -387,6 +387,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../general/const/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Const Declarations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../general/keywords_identifiers/" class="md-nav__link">
         
   
@@ -617,12 +640,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general/import_system/" class="md-nav__link">
+      <a href="../../import_system/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Import System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Module System
     
   </span>
   
@@ -1032,6 +1078,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../general/struct_field_assignment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    struct field assignment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../json/" class="md-nav__link">
         
   
@@ -1065,10 +1134,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_9" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_10" >
         
           
-          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
             
   
   
@@ -1081,8 +1150,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_10">
             <span class="md-nav__icon md-icon"></span>
             HTTP
           </label>
@@ -1624,8 +1693,35 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#splitlistpathlist" class="md-nav__link">
+    <span class="md-ellipsis">
+       SplitList(pathList)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volumenamepath" class="md-nav__link">
+    <span class="md-ellipsis">
+       VolumeName(path)
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      See Also
+    </span>
+  </a>
   
 </li>
       
@@ -1812,6 +1908,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../../any_type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The any Type
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../comprehensive_examples/" class="md-nav__link">
         
   
@@ -1980,8 +2098,35 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#splitlistpathlist" class="md-nav__link">
+    <span class="md-ellipsis">
+       SplitList(pathList)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volumenamepath" class="md-nav__link">
+    <span class="md-ellipsis">
+       VolumeName(path)
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      See Also
+    </span>
+  </a>
   
 </li>
       
@@ -2188,6 +2333,68 @@ import path
 var matches, _ = path.Glob(&quot;/tmp/*.log&quot;)
 fmt.Println(matches)
 </code></pre></div></p>
+<hr />
+<h3 id="splitlistpathlist"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>SplitList(pathList)</code></h3>
+<p>Splits a list of paths joined by the OS-specific ListSeparator (<code>:</code> on Unix, <code>;</code> on Windows).</p>
+<p><strong>Parameters:</strong>
+- <code>pathList</code> (string): Path list string (e.g., from PATH environment variable)</p>
+<p><strong>Returns:</strong>
+- <code>(array, error)</code>: Array of individual path strings.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code>import fmt
+import path
+import os
+
+// Process PATH environment variable
+var pathEnv, _ = os.Getenv(&quot;PATH&quot;)
+var paths, _ = path.SplitList(pathEnv)
+
+fmt.Printf(&quot;Found %d paths in PATH:\n&quot;, len(paths))
+for p in paths {
+    fmt.Printf(&quot;  - %s\n&quot;, p)
+}
+
+// Manual path list
+var manualList = &quot;/usr/bin:/usr/local/bin:/bin&quot;
+var manualPaths, _ = path.SplitList(manualList)
+fmt.Println(manualPaths)  // [/usr/bin, /usr/local/bin, /bin]
+</code></pre></div></p>
+<hr />
+<h3 id="volumenamepath"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>VolumeName(path)</code></h3>
+<p>Returns the leading volume name. On Windows, returns the drive letter (e.g., "C:"). On Unix systems, returns an empty string.</p>
+<p><strong>Parameters:</strong>
+- <code>path</code> (string): File path</p>
+<p><strong>Returns:</strong>
+- <code>(string, error)</code>: Volume name or empty string.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code>import fmt
+import path
+
+// Windows paths
+var vol1, _ = path.VolumeName(&quot;C:\\Windows\\System32&quot;)
+fmt.Println(vol1)  // Windows: &quot;C:&quot;, Unix: &quot;&quot;
+
+var vol2, _ = path.VolumeName(&quot;D:\\Data\\files&quot;)
+fmt.Println(vol2)  // Windows: &quot;D:&quot;, Unix: &quot;&quot;
+
+// Unix paths (no volume)
+var vol3, _ = path.VolumeName(&quot;/usr/local/bin&quot;)
+fmt.Println(vol3)  // Always: &quot;&quot;
+
+// Use for cross-platform path handling
+var fullPath = &quot;C:\\projects\\myapp\\file.txt&quot;
+var volume, _ = path.VolumeName(fullPath)
+if volume != &quot;&quot; {
+    fmt.Printf(&quot;Windows path with volume: %s\n&quot;, volume)
+} else {
+    fmt.Println(&quot;Unix-style path (no volume)&quot;)
+}
+</code></pre></div></p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="../os/">OS Module</a> - Operating system interactions</li>
+<li><a href="../strings/">String Module</a> - String manipulation functions</li>
+</ul>
 
 
 

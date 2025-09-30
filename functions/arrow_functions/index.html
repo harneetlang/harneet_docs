@@ -387,6 +387,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../general/const/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Const Declarations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../general/keywords_identifiers/" class="md-nav__link">
         
   
@@ -617,12 +640,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general/import_system/" class="md-nav__link">
+      <a href="../../import_system/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Import System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Module System
     
   </span>
   
@@ -1125,6 +1171,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../general/struct_field_assignment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    struct field assignment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../stdlib/json/" class="md-nav__link">
         
   
@@ -1158,10 +1227,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_9" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_10" >
         
           
-          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
             
   
   
@@ -1174,8 +1243,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_10">
             <span class="md-nav__icon md-icon"></span>
             HTTP
           </label>
@@ -1731,6 +1800,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../../any_type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The any Type
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../comprehensive_examples/" class="md-nav__link">
         
   
@@ -1844,11 +1935,13 @@
 <h2 id="syntax">Syntax</h2>
 <h3 id="single-parameter">Single parameter</h3>
 <p>If there is only one parameter, the parentheses are optional.</p>
-<div class="highlight"><pre><span></span><code>var double = x =&gt; x * 2
+<div class="highlight"><pre><span></span><code>package main
+var double = x =&gt; x * 2
 </code></pre></div>
 <h3 id="multiple-parameters">Multiple parameters</h3>
 <p>If there are multiple parameters, the parentheses are required.</p>
-<div class="highlight"><pre><span></span><code>var add = (a, b) =&gt; a + b
+<div class="highlight"><pre><span></span><code>package main
+var add = (a, b) =&gt; a + b
 </code></pre></div>
 <div class="admonition danger">
 <p class="admonition-title">Avoid using return</p>
@@ -1859,13 +1952,15 @@ If you still want to use return, you are encouraged to use <code>block body</cod
 </div>
 <h3 id="block-body">Block body</h3>
 <p>For a multi-line function body, you can use a block body with an explicit <code>return</code> statement.</p>
-<div class="highlight"><pre><span></span><code>var complex = (x, y) =&gt; {
+<div class="highlight"><pre><span></span><code>package main
+var complex = (x, y) =&gt; {
     var result = x + y
     return result * 2
 }
 </code></pre></div>
 <h2 id="examples">Examples</h2>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 
 var double = x =&gt; x * 2
 fmt.Println(double(5)) // Output: 10

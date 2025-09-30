@@ -387,6 +387,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../general/const/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Const Declarations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../general/keywords_identifiers/" class="md-nav__link">
         
   
@@ -617,12 +640,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general/import_system/" class="md-nav__link">
+      <a href="../../import_system/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Import System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Module System
     
   </span>
   
@@ -1128,6 +1174,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../general/struct_field_assignment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    struct field assignment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../stdlib/json/" class="md-nav__link">
         
   
@@ -1161,10 +1230,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_9" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_10" >
         
           
-          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
             
   
   
@@ -1177,8 +1246,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_10">
             <span class="md-nav__icon md-icon"></span>
             HTTP
           </label>
@@ -1734,6 +1803,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../../any_type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The any Type
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../comprehensive_examples/" class="md-nav__link">
         
   
@@ -1855,7 +1946,8 @@
 <p>This guide shows composition, piping, map/filter/reduce, and a simple chaining pipeline you can copy into your projects.</p>
 <h2 id="composition">Composition</h2>
 <p>Use typed helpers for predictable, type-checked composition.</p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 
 // composeInt(f, g): returns x -&gt; f(g(x)) where f,g: int-&gt;int
 function composeInt(f function(int) int, g function(int) int) function(int) int {
@@ -1880,6 +1972,7 @@ fmt.Printf(&quot;composeStrInt(toString, composeInt(inc, double))(5) = %s\n&quot
 <h2 id="piping">Piping</h2>
 <p>Left-to-right application with a typed helper. This example uses <code>int -&gt; int</code> functions.</p>
 <div class="highlight"><pre><span></span><code>// pipeInt(x, f1, f2, ...) applies int-&gt;int functions in order
+package main
 function pipeInt(x int, fns array) int {
     var result = x
     for fn in fns { result = fn(result) }
@@ -1893,7 +1986,8 @@ fmt.Printf(&quot;pipeInt(3, [double, inc]) = %d\n&quot;, pipeInt(3, [double, inc
 </code></pre></div>
 <h2 id="map-filter-reduce-typed-helpers">Map / Filter / Reduce (typed helpers)</h2>
 <p>Use typed helpers for int arrays. These examples rely on the standard <code>arrays</code> module for safe appends.</p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import arrays
 
 function mapInt(arr array, f function(int) int) array {
@@ -1937,7 +2031,8 @@ fmt.Printf(&quot;sum: %d\n&quot;, total)
 </code></pre></div>
 <h2 id="chaining-pipeline">Chaining Pipeline</h2>
 <p>A deterministic pipeline (map -&gt; filter -&gt; reduce) without anonymous inline lambdas (works well with current parser).</p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import arrays
 
 function composeInt(f function(int) int, g function(int) int) function(int) int {

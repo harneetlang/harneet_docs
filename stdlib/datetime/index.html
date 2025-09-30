@@ -387,6 +387,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../general/const/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Const Declarations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../general/keywords_identifiers/" class="md-nav__link">
         
   
@@ -617,12 +640,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general/import_system/" class="md-nav__link">
+      <a href="../../import_system/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Import System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Module System
     
   </span>
   
@@ -1032,6 +1078,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../general/struct_field_assignment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    struct field assignment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../json/" class="md-nav__link">
         
   
@@ -1065,10 +1134,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_9" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_10" >
         
           
-          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
             
   
   
@@ -1081,8 +1150,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_10">
             <span class="md-nav__icon md-icon"></span>
             HTTP
           </label>
@@ -1932,6 +2001,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../../any_type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The any Type
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../comprehensive_examples/" class="md-nav__link">
         
   
@@ -2251,7 +2342,8 @@
 <li><code>(integer, error)</code>: The current Unix timestamp.</li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import datetime
 
 var now, _ = datetime.Now()
@@ -2270,7 +2362,8 @@ fmt.Println(now)
 <li><code>(string, error)</code>: The formatted time string.</li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import datetime
 
 var now, _ = datetime.Now()
@@ -2285,7 +2378,8 @@ fmt.Println(formatted)
 <li><code>seconds</code>: An integer or float representing the number of seconds to sleep.</li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import datetime
 
 fmt.Println(&quot;Sleeping for 2 seconds...&quot;)
@@ -2295,7 +2389,8 @@ fmt.Println(&quot;Awake!&quot;)
 <hr />
 <h3 id="year"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>year()</code></h3>
 <p>Returns the year of the <code>datetime</code> object.</p>
-<div class="highlight"><pre><span></span><code>import datetime
+<div class="highlight"><pre><span></span><code>package main
+import datetime
 import fmt
 
 // Get the current date and time
@@ -2317,7 +2412,8 @@ fmt.Println(&quot;Current Year:&quot;, year) // Example: Current Year: 2025
 <li><code>(integer, error)</code>: The month (1-12).</li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import datetime
 
 var now, _ = datetime.Now()
@@ -2336,7 +2432,8 @@ fmt.Println(&quot;Month:&quot;, month)
 <li><code>(integer, error)</code>: The day of the month (1-31).</li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import datetime
 
 var now, _ = datetime.Now()
@@ -2357,7 +2454,8 @@ fmt.Println(&quot;Day:&quot;, day)
 <li><code>(integer, error)</code>: The converted Unix timestamp.</li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import datetime
 
 var nowUTC, _ = datetime.Now()
@@ -2380,7 +2478,8 @@ if err != None {
 <li><code>(integer, error)</code>: The current Unix timestamp in the specified timezone.</li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import datetime
 
 var tokyoNow, err = datetime.NowInTZ(&quot;Asia/Tokyo&quot;)
@@ -2402,7 +2501,8 @@ if err != None {
 <li><code>(integer, error)</code>: The current Unix timestamp in the locale's timezone.</li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import datetime
 
 var usNow, err = datetime.LocalTime(&quot;US&quot;)
@@ -2420,7 +2520,8 @@ if err != None {
 <li><code>(string, error)</code>: The system timezone.</li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import datetime
 
 var tz, _ = datetime.GetSystemTZ()
@@ -2438,7 +2539,8 @@ fmt.Println(&quot;System TZ:&quot;, tz)
 <li><code>(integer, error)</code>: The offset in seconds.</li>
 </ul>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import datetime
 
 var offset, _ = datetime.GetTZOffset(&quot;America/New_York&quot;)
@@ -2449,7 +2551,8 @@ fmt.Println(&quot;NY offset (seconds):&quot;, offset)
 <h4 id="newtimerid-delay_seconds"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>NewTimer(id, delay_seconds)</code></h4>
 <p>Creates a new timer that will fire after a delay.</p>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import datetime
 
 var _ = datetime.NewTimer(&quot;job1&quot;, 2)
@@ -2459,7 +2562,8 @@ fmt.Println(&quot;Timer scheduled for 2s&quot;)
 <h4 id="checktimerid"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>CheckTimer(id)</code></h4>
 <p>Checks if a timer has fired.</p>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import datetime
 
 var fired, _ = datetime.CheckTimer(&quot;job1&quot;)
@@ -2469,7 +2573,8 @@ fmt.Println(&quot;Timer fired:&quot;, fired)
 <h4 id="stoptimerid"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>StopTimer(id)</code></h4>
 <p>Stops a timer.</p>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import datetime
 
 var _ = datetime.StopTimer(&quot;job1&quot;)
@@ -2479,7 +2584,8 @@ fmt.Println(&quot;Timer stopped&quot;)
 <h4 id="newtickerid-interval_seconds"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>NewTicker(id, interval_seconds)</code></h4>
 <p>Creates a new ticker that fires at regular intervals.</p>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import datetime
 
 var _ = datetime.NewTicker(&quot;tick1&quot;, 5)
@@ -2489,7 +2595,8 @@ fmt.Println(&quot;Ticker &#39;tick1&#39; every 5s started&quot;)
 <h4 id="stoptickerid"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>StopTicker(id)</code></h4>
 <p>Stops a ticker.</p>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import datetime
 
 var _ = datetime.StopTicker(&quot;tick1&quot;)
@@ -2500,7 +2607,8 @@ fmt.Println(&quot;Ticker &#39;tick1&#39; stopped&quot;)
 <h4 id="isvalidcronexpression"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>IsValidCron(expression)</code></h4>
 <p>Validates a cron expression.</p>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import datetime
 
 var ok, _ = datetime.IsValidCron(&quot;0 0 * * *&quot;)
@@ -2510,7 +2618,8 @@ fmt.Println(&quot;Daily cron valid:&quot;, ok)
 <h4 id="nextcronexecutionexpression-timestamp"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>NextCronExecution(expression, timestamp)</code></h4>
 <p>Calculates the next execution time of a cron expression.</p>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import datetime
 
 var now, _ = datetime.Now()
@@ -2525,7 +2634,8 @@ if err != None {
 <h4 id="parsecronexpression"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>ParseCron(expression)</code></h4>
 <p>Parses a cron expression.</p>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import datetime
 
 var cron, err = datetime.ParseCron(&quot;*/15 * * * *&quot;)
@@ -2539,7 +2649,8 @@ if err != None {
 <h4 id="schedulecronid-expression"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>ScheduleCron(id, expression)</code></h4>
 <p>Schedules a cron job.</p>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import datetime
 
 var _ = datetime.ScheduleCron(&quot;jobA&quot;, &quot;0 * * * *&quot;)
@@ -2549,7 +2660,8 @@ fmt.Println(&quot;Scheduled hourly job &#39;jobA&#39;&quot;)
 <h4 id="stopcronid"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>StopCron(id)</code></h4>
 <p>Stops a scheduled cron job.</p>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import datetime
 
 var _ = datetime.StopCron(&quot;jobA&quot;)
@@ -2559,7 +2671,8 @@ fmt.Println(&quot;Stopped job &#39;jobA&#39;&quot;)
 <h4 id="listcronjobs"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>ListCronJobs()</code></h4>
 <p>Lists all active cron jobs.</p>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import datetime
 
 var jobs, _ = datetime.ListCronJobs()
@@ -2568,7 +2681,8 @@ fmt.Println(&quot;Active cron jobs:&quot;, jobs)
 <h4 id="everyminute-hourly-daily-weekly-monthly"><code>EveryMinute()</code>, <code>Hourly()</code>, <code>Daily()</code>, <code>Weekly()</code>, <code>Monthly()</code></h4>
 <p>Returns common cron expressions.</p>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import datetime
 
 var everyMinute, _ = datetime.EveryMinute()

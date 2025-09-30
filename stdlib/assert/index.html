@@ -387,6 +387,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../general/const/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Const Declarations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../general/keywords_identifiers/" class="md-nav__link">
         
   
@@ -617,12 +640,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general/import_system/" class="md-nav__link">
+      <a href="../../import_system/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Import System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Module System
     
   </span>
   
@@ -1032,6 +1078,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../general/struct_field_assignment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    struct field assignment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../json/" class="md-nav__link">
         
   
@@ -1065,10 +1134,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_9" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_10" >
         
           
-          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
             
   
   
@@ -1081,8 +1150,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_10">
             <span class="md-nav__icon md-icon"></span>
             HTTP
           </label>
@@ -1785,6 +1854,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../../any_type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The any Type
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../comprehensive_examples/" class="md-nav__link">
         
   
@@ -1959,7 +2050,8 @@ terminate with a runtime error (fail-fast).</p>
 - <code>condition</code>: The condition to check.
 - <code>message</code> (optional): A message to display if the assertion fails.</p>
 <p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import assert
+<div class="highlight"><pre><span></span><code>package main
+import assert
 
 assert.Assert(1 == 1, &quot;1 should be equal to 1&quot;)
 // ok
@@ -1976,7 +2068,8 @@ assert.Assert(1 == 2, &quot;1 should not be equal to 2&quot;)
 - <code>expected</code>: The expected value.
 - <code>message</code> (optional): A message to display if the assertion fails.</p>
 <p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import assert
+<div class="highlight"><pre><span></span><code>package main
+import assert
 
 assert.AssertEq(42, 42, &quot;42 should be equal to 42&quot;)
 // ok
@@ -1993,7 +2086,8 @@ assert.AssertEq(42, 43, &quot;42 should not be equal to 43&quot;)
 - <code>expected</code>: The expected value.
 - <code>message</code> (optional): A message to display if the assertion fails.</p>
 <p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import assert
+<div class="highlight"><pre><span></span><code>package main
+import assert
 
 assert.AssertNe(42, 43, &quot;42 should not be equal to 43&quot;)
 // ok
@@ -2009,7 +2103,8 @@ with a runtime error.</p>
 - <code>value</code>: The value to check against <code>None</code>.
 - <code>message</code> (optional): A message to display if the assertion fails.</p>
 <p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import assert
+<div class="highlight"><pre><span></span><code>package main
+import assert
 
 assert.AssertIsNotNone(&quot;hello&quot;)
 // ok
@@ -2025,7 +2120,8 @@ assert.AssertIsNotNone(&quot;hello&quot;)
 - <code>value</code>: String or array to check.
 - <code>message</code> (optional): A message to display if the assertion fails.</p>
 <p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import assert
+<div class="highlight"><pre><span></span><code>package main
+import assert
 
 assert.AssertLengthIsNotZero(&quot;abc&quot;)
 assert.AssertLengthIsNotZero([1, 2])
@@ -2039,7 +2135,8 @@ fast if not strictly greater.</p>
 - <code>min</code> (integer): Minimum length threshold (exclusive).
 - <code>message</code> (optional): A message to display if the assertion fails.</p>
 <p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import assert
+<div class="highlight"><pre><span></span><code>package main
+import assert
 
 assert.AssertLengthIsGreaterThan(&quot;abcd&quot;, 3)
 assert.AssertLengthIsGreaterThan([1, 2, 3], 2)
@@ -2053,7 +2150,8 @@ fast if not strictly less.</p>
 - <code>max</code> (integer): Maximum length threshold (exclusive).
 - <code>message</code> (optional): A message to display if the assertion fails.</p>
 <p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import assert
+<div class="highlight"><pre><span></span><code>package main
+import assert
 
 assert.AssertLengthIsLessThan(&quot;ab&quot;, 3)
 assert.AssertLengthIsLessThan([1], 2)
@@ -2065,7 +2163,8 @@ assert.AssertLengthIsLessThan([1], 2)
 - <code>value</code>: Value to check.
 - <code>message</code> (optional): A message to display if the assertion fails.</p>
 <p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import assert
+<div class="highlight"><pre><span></span><code>package main
+import assert
 
 assert.AssertIsAnInt(42)
 // assert.AssertIsAnInt(&quot;not-int&quot;)  // terminates with a runtime error
@@ -2077,7 +2176,8 @@ assert.AssertIsAnInt(42)
 - <code>value</code>: Value to check.
 - <code>message</code> (optional): A message to display if the assertion fails.</p>
 <p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import assert
+<div class="highlight"><pre><span></span><code>package main
+import assert
 
 assert.AssertIsAString(&quot;hello&quot;)
 // assert.AssertIsAString(123)  // terminates with a runtime error
@@ -2089,7 +2189,8 @@ assert.AssertIsAString(&quot;hello&quot;)
 - <code>value</code>: Value to check.
 - <code>message</code> (optional): A message to display if the assertion fails.</p>
 <p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import assert
+<div class="highlight"><pre><span></span><code>package main
+import assert
 
 assert.AssertIsBool(true)
 // assert.AssertIsBool(&quot;nope&quot;)  // terminates with a runtime error

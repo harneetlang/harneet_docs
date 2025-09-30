@@ -12,7 +12,7 @@
         <link rel="prev" href="../data_types/">
       
       
-        <link rel="next" href="../keywords_identifiers/">
+        <link rel="next" href="../const/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -525,6 +525,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../const/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Const Declarations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../keywords_identifiers/" class="md-nav__link">
         
   
@@ -755,12 +778,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../import_system/" class="md-nav__link">
+      <a href="../../import_system/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Import System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Module System
     
   </span>
   
@@ -1170,6 +1216,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../struct_field_assignment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    struct field assignment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../stdlib/json/" class="md-nav__link">
         
   
@@ -1203,10 +1272,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_9" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_10" >
         
           
-          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
             
   
   
@@ -1219,8 +1288,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_10">
             <span class="md-nav__icon md-icon"></span>
             HTTP
           </label>
@@ -1776,6 +1845,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../../any_type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The any Type
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../comprehensive_examples/" class="md-nav__link">
         
   
@@ -1933,12 +2024,14 @@
 <p>Variables are used to store data in Harneet. Harneet provides flexible ways to declare and assign values to variables.</p>
 <h2 id="explicit-type-declaration">Explicit Type Declaration</h2>
 <p>You can explicitly declare the type of a variable when you declare it.</p>
-<div class="highlight"><pre><span></span><code>var x int = 42
+<div class="highlight"><pre><span></span><code>package main
+var x int = 42
 var name string = &quot;Hello&quot;
 </code></pre></div>
 <h2 id="type-inference">Type Inference</h2>
 <p>Harneet can infer the type of a variable based on the value assigned to it.</p>
-<div class="highlight"><pre><span></span><code>var x = 42        // x is inferred as int
+<div class="highlight"><pre><span></span><code>package main
+var x = 42        // x is inferred as int
 var name = &quot;Hello&quot;  // name is inferred as string
 </code></pre></div>
 <h2 id="short-declaration">Short Declaration</h2>
@@ -1948,7 +2041,8 @@ message := &quot;Hi there&quot;
 </code></pre></div>
 <h2 id="assignment">Assignment</h2>
 <p>You can assign a new value to an existing variable using the <code>=</code> operator.</p>
-<div class="highlight"><pre><span></span><code>var count = 10
+<div class="highlight"><pre><span></span><code>package main
+var count = 10
 count = 20 // Assign a new value
 </code></pre></div>
 <h2 id="zero-value-initialization">Zero Value Initialization</h2>
@@ -1959,7 +2053,8 @@ count = 20 // Assign a new value
 <li><strong>String Type</strong>: <code>""</code> (empty string)</li>
 <li><strong>Boolean Type</strong>: <code>false</code></li>
 </ul>
-<div class="highlight"><pre><span></span><code>var intVal int       // intVal is 0
+<div class="highlight"><pre><span></span><code>package main
+var intVal int       // intVal is 0
 var floatVal float64 // floatVal is 0.0
 var strVal string    // strVal is &quot;&quot;
 var boolVal bool     // boolVal is false
@@ -1967,7 +2062,8 @@ var boolVal bool     // boolVal is false
 <h2 id="multiple-assignment">Multiple Assignment</h2>
 <p>Harneet supports assigning multiple values to multiple variables in a single statement. This is particularly useful for functions that return multiple values.</p>
 <h3 id="function-returns">Function Returns</h3>
-<div class="highlight"><pre><span></span><code>import math
+<div class="highlight"><pre><span></span><code>package main
+import math
 
 function getAbs(num int) (int, string) {
     if num &lt; 0 {
@@ -1984,7 +2080,8 @@ if err != &quot;&quot; {
 }
 </code></pre></div>
 <h3 id="multiple-expressions">Multiple Expressions</h3>
-<div class="highlight"><pre><span></span><code>var name string, age int, score float64 = &quot;Alice&quot;, 25, 98.5
+<div class="highlight"><pre><span></span><code>package main
+var name string, age int, score float64 = &quot;Alice&quot;, 25, 98.5
 var x, y, z int = 10, 20, 30
 </code></pre></div>
 <h3 id="short-multiple-assignment">Short Multiple Assignment</h3>
@@ -1992,7 +2089,8 @@ var x, y, z int = 10, 20, 30
 </code></pre></div>
 <h2 id="blank-identifier">Blank Identifier</h2>
 <p>The blank identifier <code>_</code> can be used to discard unwanted values in multiple assignment operations.</p>
-<div class="highlight"><pre><span></span><code>import math
+<div class="highlight"><pre><span></span><code>package main
+import math
 
 var value, _ = math.Max(10, 5) // Discard the error return value
 </code></pre></div>
@@ -2053,13 +2151,13 @@ var value, _ = math.Max(10, 5) // Discard the error return value
         
         
           
-          <a href="../keywords_identifiers/" class="md-footer__link md-footer__link--next" aria-label="Next: Keywords and Identifiers">
+          <a href="../const/" class="md-footer__link md-footer__link--next" aria-label="Next: Const Declarations">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Keywords and Identifiers
+                Const Declarations
               </div>
             </div>
             <div class="md-footer__button md-icon">

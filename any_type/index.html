@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../type_system_safety/">
       
       
-        <link rel="next" href="../general/comments/">
+        <link rel="next" href="../comprehensive_examples/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Command Line - Harneet Programming Language</title>
+        <title>The any Type - Harneet Programming Language</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#command-line-interface-cli" class="md-skip">
+        <a href="#the-any-type" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Command Line
+              The any Type
             
           </span>
         </div>
@@ -253,32 +253,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Command Line
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../command_line/" class="md-nav__link">
         
   
   
@@ -289,77 +267,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#flags" class="md-nav__link">
-    <span class="md-ellipsis">
-      Flags
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Flags">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#-debug-or-d" class="md-nav__link">
-    <span class="md-ellipsis">
-      --debug (or -d)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-repl-or-r" class="md-nav__link">
-    <span class="md-ellipsis">
-      --repl (or -r)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-scan" class="md-nav__link">
-    <span class="md-ellipsis">
-      --scan
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Examples
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1797,10 +1704,32 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../any_type/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    The any Type
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1811,6 +1740,320 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Start
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Principles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Principles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strict-assignability-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strict Assignability Rules
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable-declaration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variable Declaration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explicit-narrowing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explicit Narrowing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Explicit Narrowing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-cast-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available Cast Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#narrowing-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Narrowing Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-any" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ When to Use any
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-avoid-any" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ When to Avoid any
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Design Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pattern-1-early-narrowing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern 1: Early Narrowing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-2-type-guards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern 2: Type Guards
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-3-api-response-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern 3: API Response Processing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type-safety-guarantees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type Safety Guarantees
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Type Safety Guarantees">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compile-time-enforcement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compile-Time Enforcement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runtime-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Runtime Validation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-implicit-conversions" class="md-nav__link">
+    <span class="md-ellipsis">
+      No Implicit Conversions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-World Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-World Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-configuration-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 1: Configuration System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-dynamic-command-handler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 2: Dynamic Command Handler
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-json-api-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 3: JSON API Client
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison-with-other-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparison with Other Languages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      See Also
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1864,37 +2107,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#flags" class="md-nav__link">
+  <a href="#quick-start" class="md-nav__link">
     <span class="md-ellipsis">
-      Flags
+      Quick Start
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Flags">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Principles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Principles">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#-debug-or-d" class="md-nav__link">
+  <a href="#strict-assignability-rules" class="md-nav__link">
     <span class="md-ellipsis">
-      --debug (or -d)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-repl-or-r" class="md-nav__link">
-    <span class="md-ellipsis">
-      --repl (or -r)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-scan" class="md-nav__link">
-    <span class="md-ellipsis">
-      --scan
+      Strict Assignability Rules
     </span>
   </a>
   
@@ -1906,9 +2140,261 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
+  <a href="#basic-usage" class="md-nav__link">
     <span class="md-ellipsis">
-      Examples
+      Basic Usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable-declaration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variable Declaration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explicit-narrowing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explicit Narrowing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Explicit Narrowing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-cast-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available Cast Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#narrowing-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Narrowing Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-any" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ When to Use any
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-avoid-any" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ When to Avoid any
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Design Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pattern-1-early-narrowing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern 1: Early Narrowing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-2-type-guards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern 2: Type Guards
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-3-api-response-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern 3: API Response Processing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type-safety-guarantees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type Safety Guarantees
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Type Safety Guarantees">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compile-time-enforcement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compile-Time Enforcement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runtime-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Runtime Validation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-implicit-conversions" class="md-nav__link">
+    <span class="md-ellipsis">
+      No Implicit Conversions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-World Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-World Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-configuration-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 1: Configuration System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-dynamic-command-handler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 2: Dynamic Command Handler
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-json-api-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 3: JSON API Client
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison-with-other-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparison with Other Languages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      See Also
     </span>
   </a>
   
@@ -1930,54 +2416,515 @@
 
 
 
-<h1 id="command-line-interface-cli">Command Line Interface (CLI)</h1>
-<p>The Harneet interpreter provides a command-line interface (CLI) for running files, starting an interactive session (REPL), and performing other utility tasks. This section details the available flags and their usage.</p>
-<h2 id="flags">Flags</h2>
-<h3 id="-debug-or-d"><code>--debug</code> (or <code>-d</code>)</h3>
+<h1 id="the-any-type">The <code>any</code> Type</h1>
+<p>Harneet supports the <code>any</code> type as a <strong>top type</strong> (supertype of all types) with strict, one-way assignability rules. This design preserves Harneet's strong typing while enabling flexibility at dynamic boundaries like JSON, OS, regex, and external APIs.</p>
+<h2 id="quick-start">Quick Start</h2>
+<div class="highlight"><pre><span></span><code>import fmt
+import cast
+
+// ✅ Upcast to any - ALLOWED
+var x any = 42
+var y any = &quot;hello&quot;
+
+fmt.Println(x)  // Prints: 42
+
+// ✅ Explicit narrowing - REQUIRED
+var num, err = cast.ToInt(x)
+if err == None {
+    fmt.Printf(&quot;Number: %d\n&quot;, num)
+}
+</code></pre></div>
+<h2 id="core-principles">Core Principles</h2>
+<h3 id="strict-assignability-rules">Strict Assignability Rules</h3>
+<p>The <code>any</code> type follows these fundamental rules:</p>
+<table>
+<thead>
+<tr>
+<th>Direction</th>
+<th>Allowed?</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>T → any</strong></td>
+<td>✅ <strong>YES</strong></td>
+<td>Any concrete type can be assigned to <code>any</code> (upcast)</td>
+</tr>
+<tr>
+<td><strong>any → T</strong></td>
+<td>❌ <strong>NO</strong></td>
+<td>Cannot assign <code>any</code> to concrete type without explicit cast (downcast)</td>
+</tr>
+</tbody>
+</table>
+<p>This one-way assignability prevents type safety violations while allowing flexibility where needed.</p>
+<h2 id="basic-usage">Basic Usage</h2>
+<h3 id="variable-declaration">Variable Declaration</h3>
+<div class="highlight"><pre><span></span><code>// Declare any variables - accepts all types
+var dynamic any = 100
+var flexible any = &quot;can be anything&quot;
+
+// Any type accepts all values
+dynamic = &quot;now a string&quot;
+dynamic = true
+dynamic = [1, 2, 3]
+dynamic = {&quot;name&quot;: &quot;Alice&quot;}
+</code></pre></div>
+<h3 id="function-parameters">Function Parameters</h3>
+<div class="highlight"><pre><span></span><code>import fmt
+
+// Function accepting any type
+function printValue(val any) {
+    fmt.Printf(&quot;Value: %v\n&quot;, val)
+}
+
+// Works with all types
+printValue(42)
+printValue(&quot;hello&quot;)
+printValue(true)
+printValue([1, 2, 3])
+printValue({&quot;key&quot;: &quot;value&quot;})
+</code></pre></div>
+<h3 id="function-returns">Function Returns</h3>
+<div class="highlight"><pre><span></span><code>import cast
+
+// Function returning any
+function getDynamic(flag bool) any {
+    if flag {
+        return 42
+    } else {
+        return &quot;forty-two&quot;
+    }
+}
+
+// Must narrow with explicit cast
+var result = getDynamic(true)
+var num, err = cast.ToInt(result)
+if err == None {
+    fmt.Printf(&quot;Number: %d\n&quot;, num)
+}
+</code></pre></div>
+<h2 id="explicit-narrowing">Explicit Narrowing</h2>
+<p>The <code>cast</code> module provides type-safe narrowing from <code>any</code> to concrete types.</p>
+<h3 id="available-cast-functions">Available Cast Functions</h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Purpose</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cast.ToInt(any)</code></td>
+<td>Convert to integer</td>
+<td><code>var n, err = cast.ToInt(x)</code></td>
+</tr>
+<tr>
+<td><code>cast.ToString(any)</code></td>
+<td>Convert to string</td>
+<td><code>var s, err = cast.ToString(x)</code></td>
+</tr>
+<tr>
+<td><code>cast.ToBool(any)</code></td>
+<td>Convert to boolean</td>
+<td><code>var b, err = cast.ToBool(x)</code></td>
+</tr>
+<tr>
+<td><code>cast.ToFloat(any)</code></td>
+<td>Convert to float</td>
+<td><code>var f, err = cast.ToFloat(x)</code></td>
+</tr>
+<tr>
+<td><code>cast.ToArray(any)</code></td>
+<td>Convert to array</td>
+<td><code>var a, err = cast.ToArray(x)</code></td>
+</tr>
+<tr>
+<td><code>cast.ToMap(any)</code></td>
+<td>Convert to map</td>
+<td><code>var m, err = cast.ToMap(x)</code></td>
+</tr>
+<tr>
+<td><code>cast.CanCast(any, type)</code></td>
+<td>Check if possible</td>
+<td><code>var ok, _ = cast.CanCast(x, "int")</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="narrowing-examples">Narrowing Examples</h3>
+<div class="highlight"><pre><span></span><code>import cast
+
+var mystery any = &quot;12345&quot;
+
+// Method 1: Direct conversion
+var num, err = cast.ToInt(mystery)
+if err == None {
+    fmt.Printf(&quot;Converted: %d\n&quot;, num)
+}
+
+// Method 2: Preflight check
+var canConvert, _ = cast.CanCast(mystery, &quot;int&quot;)
+if canConvert {
+    var num, _ = cast.ToInt(mystery)
+    fmt.Printf(&quot;Safe to use: %d\n&quot;, num)
+}
+</code></pre></div>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="when-to-use-any">✅ When to Use <code>any</code></h3>
+<p>Use <code>any</code> at dynamic boundaries:</p>
+<p><strong>1. JSON Parsing</strong>
+<div class="highlight"><pre><span></span><code>import json
+import cast
+
+var jsonStr = &quot;{\&quot;name\&quot;: \&quot;Alice\&quot;, \&quot;age\&quot;: 25}&quot;
+var data, _ = json.Unmarshal(jsonStr)
+
+// Narrow immediately
+var obj, _ = cast.ToMap(data)
+var name, _ = cast.ToString(obj[&quot;name&quot;])
+var age, _ = cast.ToInt(obj[&quot;age&quot;])
+</code></pre></div></p>
+<p><strong>2. External APIs</strong>
+<div class="highlight"><pre><span></span><code>function processAPIResponse(response any) {
+    var data, err = cast.ToMap(response)
+    if err != None {
+        fmt.Println(&quot;Invalid response format&quot;)
+        return
+    }
+    // Process typed data...
+}
+</code></pre></div></p>
+<p><strong>3. Configuration Management</strong>
+<div class="highlight"><pre><span></span><code>var config = {
+    &quot;port&quot;: 8080,
+    &quot;host&quot;: &quot;localhost&quot;,
+    &quot;debug&quot;: true,
+    &quot;timeout&quot;: 30.5
+}
+
+function getConfigValue(key string) any {
+    return config[key]
+}
+
+// Narrow when retrieving
+var port, _ = cast.ToInt(getConfigValue(&quot;port&quot;))
+</code></pre></div></p>
+<p><strong>4. Generic Utilities</strong>
+<div class="highlight"><pre><span></span><code>function logValue(key string, value any) {
+    fmt.Printf(&quot;%s: %v\n&quot;, key, value)
+}
+
+logValue(&quot;count&quot;, 42)
+logValue(&quot;name&quot;, &quot;Alice&quot;)
+logValue(&quot;active&quot;, true)
+</code></pre></div></p>
+<h3 id="when-to-avoid-any">❌ When to Avoid <code>any</code></h3>
+<p><strong>Don't use <code>any</code> for:</strong></p>
+<ol>
+<li>
+<p><strong>Internal Business Logic</strong>
+   <div class="highlight"><pre><span></span><code>// ❌ Bad - loses type safety
+function calculateTotal(items any) any { ... }
+
+// ✅ Good - maintains type safety
+function calculateTotal(items []Item) float64 { ... }
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Public APIs</strong>
+   <div class="highlight"><pre><span></span><code>// ❌ Bad - unclear contract
+function createUser(data any) any { ... }
+
+// ✅ Good - clear contract
+function createUser(name string, age int) User { ... }
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Data Structures</strong>
+   <div class="highlight"><pre><span></span><code>// ❌ Bad - no type safety
+var users []any
+
+// ✅ Good - typed collection
+var users []User
+</code></pre></div></p>
+</li>
+</ol>
+<h2 id="design-patterns">Design Patterns</h2>
+<h3 id="pattern-1-early-narrowing">Pattern 1: Early Narrowing</h3>
+<p><strong>Narrow at the boundary, keep core typed:</strong></p>
+<div class="highlight"><pre><span></span><code>import cast
+
+function processConfig(config any) {
+    // Narrow immediately at boundary
+    var configMap, err = cast.ToMap(config)
+    if err != None {
+        fmt.Println(&quot;Error: config must be a map&quot;)
+        return
+    }
+
+    // Extract and narrow individual fields
+    var port, _ = cast.ToInt(configMap[&quot;port&quot;])
+    var host, _ = cast.ToString(configMap[&quot;host&quot;])
+    var debug, _ = cast.ToBool(configMap[&quot;debug&quot;])
+
+    // Core logic uses concrete types
+    startServer(host, port, debug)
+}
+</code></pre></div>
+<h3 id="pattern-2-type-guards">Pattern 2: Type Guards</h3>
+<p><strong>Try each type in order:</strong></p>
+<div class="highlight"><pre><span></span><code>import cast
+
+function handleDynamic(val any) {
+    // Try integer first
+    var asInt, intErr = cast.ToInt(val)
+    if intErr == None {
+        fmt.Printf(&quot;Handling integer: %d\n&quot;, asInt)
+        return
+    }
+
+    // Try string next
+    var asString, strErr = cast.ToString(val)
+    if strErr == None {
+        fmt.Printf(&quot;Handling string: %s\n&quot;, asString)
+        return
+    }
+
+    // Try boolean
+    var asBool, boolErr = cast.ToBool(val)
+    if boolErr == None {
+        fmt.Printf(&quot;Handling boolean: %v\n&quot;, asBool)
+        return
+    }
+
+    fmt.Println(&quot;Unsupported type&quot;)
+}
+</code></pre></div>
+<h3 id="pattern-3-api-response-processing">Pattern 3: API Response Processing</h3>
+<p><strong>Process dynamic JSON data:</strong></p>
+<div class="highlight"><pre><span></span><code>import json
+import cast
+
+function fetchUserData(apiResponse string) {
+    // Parse JSON (returns any)
+    var data, err = json.Unmarshal(apiResponse)
+    if err != None {
+        return
+    }
+
+    // Narrow to map
+    var userMap, mapErr = cast.ToMap(data)
+    if mapErr != None {
+        return
+    }
+
+    // Extract and narrow fields
+    var id, _ = cast.ToInt(userMap[&quot;id&quot;])
+    var name, _ = cast.ToString(userMap[&quot;name&quot;])
+    var email, _ = cast.ToString(userMap[&quot;email&quot;])
+    var active, _ = cast.ToBool(userMap[&quot;active&quot;])
+
+    // Use typed data in core logic
+    processUser(id, name, email, active)
+}
+</code></pre></div>
+<h2 id="type-safety-guarantees">Type Safety Guarantees</h2>
+<h3 id="compile-time-enforcement">Compile-Time Enforcement</h3>
+<div class="highlight"><pre><span></span><code>var x any = 42
+var y int = x  // ❌ COMPILE ERROR: cannot assign any to int
+
+// Must use explicit cast
+var y, err = cast.ToInt(x)  // ✅ OK
+</code></pre></div>
+<h3 id="runtime-validation">Runtime Validation</h3>
+<div class="highlight"><pre><span></span><code>var x any = &quot;not a number&quot;
+var y, err = cast.ToInt(x)  // ✅ Returns error, doesn&#39;t panic
+
+if err != None {
+    fmt.Println(err)
+    // Output: cast.ToInt: cannot convert string &quot;not a number&quot; to integer
+}
+</code></pre></div>
+<h3 id="no-implicit-conversions">No Implicit Conversions</h3>
+<div class="highlight"><pre><span></span><code>var config any = {&quot;port&quot;: &quot;8080&quot;}
+var configMap, _ = cast.ToMap(config)
+
+// ❌ This would fail - port is string, not int
+var port, err = cast.ToInt(configMap[&quot;port&quot;])
+
+// ✅ This works - convert string to int
+var portStr, _ = cast.ToString(configMap[&quot;port&quot;])
+var port, err = cast.ToInt(portStr)
+</code></pre></div>
+<h2 id="real-world-examples">Real-World Examples</h2>
+<h3 id="example-1-configuration-system">Example 1: Configuration System</h3>
+<div class="highlight"><pre><span></span><code>import cast
+import os
+
+function loadConfig() {
+    var config = {
+        &quot;port&quot;: 8080,
+        &quot;host&quot;: &quot;0.0.0.0&quot;,
+        &quot;debug&quot;: false,
+        &quot;timeout&quot;: 30.5
+    }
+
+    // Override from environment
+    var portEnv, _ = os.Getenv(&quot;PORT&quot;)
+    if portEnv != &quot;&quot; {
+        var port, err = cast.ToInt(portEnv)
+        if err == None {
+            config[&quot;port&quot;] = port
+        }
+    }
+
+    return config
+}
+
+function startApp() {
+    var cfg = loadConfig()
+
+    // Narrow configuration values
+    var port, _ = cast.ToInt(cfg[&quot;port&quot;])
+    var host, _ = cast.ToString(cfg[&quot;host&quot;])
+    var debug, _ = cast.ToBool(cfg[&quot;debug&quot;])
+
+    fmt.Printf(&quot;Starting server on %s:%d (debug: %v)\n&quot;, host, port, debug)
+}
+</code></pre></div>
+<h3 id="example-2-dynamic-command-handler">Example 2: Dynamic Command Handler</h3>
+<div class="highlight"><pre><span></span><code>import cast
+
+function executeCommand(cmd string, args any) {
+    if cmd == &quot;add&quot; {
+        var nums, err = cast.ToArray(args)
+        if err != None {
+            fmt.Println(&quot;add command requires array of numbers&quot;)
+            return
+        }
+
+        var sum = 0
+        for num in nums {
+            var n, _ = cast.ToInt(num)
+            sum = sum + n
+        }
+        fmt.Printf(&quot;Sum: %d\n&quot;, sum)
+
+    } else if cmd == &quot;greet&quot; {
+        var name, err = cast.ToString(args)
+        if err != None {
+            fmt.Println(&quot;greet command requires string name&quot;)
+            return
+        }
+        fmt.Printf(&quot;Hello, %s!\n&quot;, name)
+
+    } else if cmd == &quot;info&quot; {
+        var data, err = cast.ToMap(args)
+        if err != None {
+            fmt.Println(&quot;info command requires map&quot;)
+            return
+        }
+
+        for key, value in data {
+            fmt.Printf(&quot;%s: %v\n&quot;, key, value)
+        }
+    }
+}
+
+// Usage
+executeCommand(&quot;add&quot;, [1, 2, 3, 4, 5])
+executeCommand(&quot;greet&quot;, &quot;Alice&quot;)
+executeCommand(&quot;info&quot;, {&quot;version&quot;: &quot;1.0&quot;, &quot;author&quot;: &quot;Harneet&quot;})
+</code></pre></div>
+<h3 id="example-3-json-api-client">Example 3: JSON API Client</h3>
+<div class="highlight"><pre><span></span><code>import json
+import cast
+import http
+
+function fetchUser(userId int) {
+    var url = fmt.Sprintf(&quot;https://api.example.com/users/%d&quot;, userId)
+    var response, _ = http.Get(url)
+
+    // Parse JSON response
+    var data, err = json.Unmarshal(response.Body)
+    if err != None {
+        fmt.Println(&quot;Failed to parse response&quot;)
+        return
+    }
+
+    // Narrow to map
+    var userMap, _ = cast.ToMap(data)
+
+    // Extract user fields
+    var id, _ = cast.ToInt(userMap[&quot;id&quot;])
+    var name, _ = cast.ToString(userMap[&quot;name&quot;])
+    var email, _ = cast.ToString(userMap[&quot;email&quot;])
+    var age, _ = cast.ToInt(userMap[&quot;age&quot;])
+
+    // Use typed data
+    fmt.Printf(&quot;User %d: %s &lt;%s&gt; (age: %d)\n&quot;, id, name, email, age)
+}
+</code></pre></div>
+<h2 id="comparison-with-other-languages">Comparison with Other Languages</h2>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>Type</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Harneet <code>any</code></strong></td>
+<td>Top type</td>
+<td>Strict: requires explicit cast for downcast</td>
+</tr>
+<tr>
+<td><strong>TypeScript <code>any</code></strong></td>
+<td>Top type</td>
+<td>Permissive: allows implicit conversions</td>
+</tr>
+<tr>
+<td><strong>Go <code>interface{}</code></strong></td>
+<td>Empty interface</td>
+<td>Requires type assertion</td>
+</tr>
+<tr>
+<td><strong>Python <code>Any</code></strong></td>
+<td>Type hint</td>
+<td>Runtime only, no compile-time enforcement</td>
+</tr>
+<tr>
+<td><strong>Java <code>Object</code></strong></td>
+<td>Root class</td>
+<td>Requires explicit cast</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Harneet's approach:</strong>
+- ✅ Stricter than TypeScript (better safety)
+- ✅ Cleaner syntax than Go (no type assertions)
+- ✅ Compile-time enforcement unlike Python
+- ✅ Integrated cast module (easier than Java)</p>
+<h2 id="summary">Summary</h2>
+<p>The <code>any</code> type in Harneet provides:</p>
+<p>✅ <strong>Flexibility</strong> - Handle dynamic data at boundaries<br />
+✅ <strong>Type Safety</strong> - Explicit conversions required<br />
+✅ <strong>Clarity</strong> - Clear upcast/downcast rules<br />
+✅ <strong>Integration</strong> - Works seamlessly with cast module<br />
+✅ <strong>Best Practices</strong> - Documented patterns<br />
+✅ <strong>No Surprises</strong> - Predictable behavior  </p>
+<p><strong>Remember:</strong> Use <code>any</code> at boundaries (JSON, OS, APIs), but keep core logic typed!</p>
+<h2 id="see-also">See Also</h2>
 <ul>
-<li><strong>Type</strong>: Boolean</li>
-<li><strong>Usage</strong>: <code>harneet --debug [filename.ha]</code> or <code>harneet -d --repl</code></li>
-<li><strong>Description</strong>: Enables debug logging, which provides detailed information about the interpreter's internal operations. When this flag is active, a timestamped log file is created in the <code>logs/</code> directory, capturing each step of the execution process, from lexical analysis to evaluation. This is an invaluable tool for understanding how the interpreter processes your code and for debugging the interpreter itself.</li>
-</ul>
-<h3 id="-repl-or-r"><code>--repl</code> (or <code>-r</code>)</h3>
-<ul>
-<li><strong>Type</strong>: Boolean</li>
-<li><strong>Usage</strong>: <code>harneet --repl</code> or <code>harneet -r</code></li>
-<li><strong>Description</strong>: Starts the Read-Eval-Print Loop (REPL), an interactive mode where you can enter and execute Harneet code line by line. The REPL is perfect for experimenting with the language, testing small code snippets, and getting immediate feedback. To exit the REPL, type <code>exit</code> and press Enter.</li>
-</ul>
-<h3 id="-scan"><code>--scan</code></h3>
-<ul>
-<li><strong>Type</strong>: String (directory path)</li>
-<li><strong>Usage</strong>: <code>harneet --scan &lt;directory_path&gt;</code></li>
-<li><strong>Description</strong>: Scans the specified directory recursively and lists and executes all files with the <code>.ha</code> extension. This is a utility feature that helps you quickly find all Harneet source files within a project.</li>
-</ul>
-<h2 id="examples">Examples</h2>
-<ul>
-<li>
-<p><strong>Run a file</strong>:
-    <div class="highlight"><pre><span></span><code>harneet<span class="w"> </span>program.ha
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Run a file with debug logging</strong>:
-    <div class="highlight"><pre><span></span><code>harneet<span class="w"> </span>--debug<span class="w"> </span>program.ha
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Start the REPL</strong>:
-    <div class="highlight"><pre><span></span><code>harneet<span class="w"> </span>--repl
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Start the REPL with debug logging</strong>:
-    <div class="highlight"><pre><span></span><code>harneet<span class="w"> </span>--repl<span class="w"> </span>--debug
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Scan a directory for <code>.ha</code> files and execute the files</strong>:
-    <div class="highlight"><pre><span></span><code>harneet<span class="w"> </span>--scan<span class="w"> </span>./my_project
-</code></pre></div></p>
-</li>
+<li><a href="../type_system_safety/">Type System &amp; Safety</a> - Overview of Harneet's type system</li>
+<li><a href="../stdlib/cast/">Cast Module</a> - Type conversion functions</li>
+<li><a href="../stdlib/json/">JSON Module</a> - JSON parsing and serialization</li>
+<li><a href="../error_handling_system/">Error Handling</a> - Error handling patterns</li>
 </ul>
 
 
@@ -2016,7 +2963,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
+          <a href="../type_system_safety/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Type System &amp; Safety">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2026,20 +2973,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Home
+                Type System & Safety
               </div>
             </div>
           </a>
         
         
           
-          <a href="../general/comments/" class="md-footer__link md-footer__link--next" aria-label="Next: Comments">
+          <a href="../comprehensive_examples/" class="md-footer__link md-footer__link--next" aria-label="Next: Comprehensive Language Examples">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Comments
+                Comprehensive Language Examples
               </div>
             </div>
             <div class="md-footer__button md-icon">

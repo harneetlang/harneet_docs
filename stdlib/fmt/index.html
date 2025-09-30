@@ -387,6 +387,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../general/const/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Const Declarations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../general/keywords_identifiers/" class="md-nav__link">
         
   
@@ -617,12 +640,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general/import_system/" class="md-nav__link">
+      <a href="../../import_system/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Import System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Module System
     
   </span>
   
@@ -1215,6 +1261,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../general/struct_field_assignment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    struct field assignment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../json/" class="md-nav__link">
         
   
@@ -1248,10 +1317,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_9" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_10" >
         
           
-          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
             
   
   
@@ -1264,8 +1333,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_10">
             <span class="md-nav__icon md-icon"></span>
             HTTP
           </label>
@@ -1821,6 +1890,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../../any_type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The any Type
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../comprehensive_examples/" class="md-nav__link">
         
   
@@ -2029,7 +2120,8 @@
 <p><strong>Returns:</strong>
 - <code>(None, error)</code>: This function does not return a value, but it follows the standard error handling pattern.</p>
 <p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 
 fmt.Println(&quot;Hello, World!&quot;)
 var x = 42
@@ -2043,7 +2135,8 @@ fmt.Println(&quot;The value of x is:&quot;, x)
 <p><strong>Returns:</strong>
 - <code>(None, error)</code>: This function does not return a value, but it follows the standard error handling pattern.</p>
 <p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 
 fmt.Print(&quot;Hello, &quot;)
 fmt.Print(&quot;World!&quot;)
@@ -2063,7 +2156,8 @@ fmt.Print(&quot;World!&quot;)
 - <code>%d</code>: A decimal integer.
 - <code>%f</code>: A floating-point number.</p>
 <p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 
 var name = &quot;Alice&quot;
 var age = 30
@@ -2078,7 +2172,8 @@ fmt.Printf(&quot;Name: %s, Age: %d&quot;, name, age)
 <p><strong>Returns:</strong>
 - <code>(error, None)</code>: A new error object.</p>
 <p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 import errors
 
 function divide(a, b) {
@@ -2101,7 +2196,8 @@ if err != None {
 <p><strong>Returns:</strong>
 - <code>(string, error)</code></p>
 <p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 
 var s, err = fmt.Sprint(&quot;alpha&quot;, 123, true)
 if err == None {
@@ -2116,7 +2212,8 @@ if err == None {
 <p><strong>Returns:</strong>
 - <code>(string, error)</code></p>
 <p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 
 var line, err = fmt.Sprintln(&quot;line&quot;, 456)
 if err == None {
@@ -2133,7 +2230,8 @@ if err == None {
 <p><strong>Returns:</strong>
 - <code>(string, error)</code></p>
 <p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 
 var s, err = fmt.Sprintf(&quot;name=%s id=%d ok=%t&quot;, &quot;bob&quot;, 7, true)
 if err == None {
@@ -2146,7 +2244,8 @@ if err == None {
 <p><strong>Returns:</strong>
 - <code>(any, error)</code></p>
 <p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 
 var out, outErr = fmt.Stdout()
 if outErr == None {
@@ -2167,7 +2266,8 @@ if errOutErr == None {
 <p><strong>Returns:</strong>
 - <code>(None, error)</code></p>
 <p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 
 var out, _ = fmt.Stdout()
 var _, err = fmt.Fprint(out, &quot;Fprint &quot;, 123, &quot; ok&quot;)
@@ -2181,7 +2281,8 @@ var _, err = fmt.Fprint(out, &quot;Fprint &quot;, 123, &quot; ok&quot;)
 <p><strong>Returns:</strong>
 - <code>(None, error)</code></p>
 <p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 
 var out, _ = fmt.Stdout()
 var _, err = fmt.Fprintln(out, &quot;Fprintln line&quot;)
@@ -2196,7 +2297,8 @@ var _, err = fmt.Fprintln(out, &quot;Fprintln line&quot;)
 <p><strong>Returns:</strong>
 - <code>(None, error)</code></p>
 <p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import fmt
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 
 var out, _ = fmt.Stdout()
 var _, err = fmt.Fprintf(out, &quot;id=%d ok=%t\n&quot;, 42, true)

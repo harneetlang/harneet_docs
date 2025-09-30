@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../type_system_safety/">
+        <link rel="prev" href="../any_type/">
       
       
       
@@ -385,6 +385,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../general/const/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Const Declarations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../general/keywords_identifiers/" class="md-nav__link">
         
   
@@ -615,12 +638,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../general/import_system/" class="md-nav__link">
+      <a href="../import_system/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Import System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Module System
     
   </span>
   
@@ -1030,6 +1076,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../general/struct_field_assignment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    struct field assignment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../stdlib/json/" class="md-nav__link">
         
   
@@ -1063,10 +1132,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_9" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_10" >
         
           
-          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
             
   
   
@@ -1079,8 +1148,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_10">
             <span class="md-nav__icon md-icon"></span>
             HTTP
           </label>
@@ -1620,6 +1689,28 @@
   
   <span class="md-ellipsis">
     Type System & Safety
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../any_type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The any Type
     
   </span>
   
@@ -2209,7 +2300,9 @@
 <span class="normal">13</span>
 <span class="normal">14</span>
 <span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>import fmt, arrays
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>package main
+import fmt, arrays
 
 var nums = [1, 2, 3, 4, 5]
 var names = [&quot;Alice&quot;, &quot;Bob&quot;, &quot;Charlie&quot;]
@@ -2230,15 +2323,17 @@ fmt.Println(&quot;Sorted:&quot;, sortedNums)
 <p>This section provides examples of using the <code>exec</code> module to launch
 applications and run commands on macOS.</p>
 <h3 id="open-terminalapp">Open Terminal.app</h3>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Open Terminal.app</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>import exec
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Open Terminal.app</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>package main
+import exec
 import fmt
 
 var code, err = exec.RunCode(&quot;open&quot;, &quot;-a&quot;, &quot;Terminal&quot;)
@@ -2249,15 +2344,17 @@ if err != None {
 }
 </code></pre></div></td></tr></table></div>
 <h3 id="open-terminal-at-current-directory">Open Terminal at current directory</h3>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Open Terminal at current directory</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>import exec
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Open Terminal at current directory</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>package main
+import exec
 import fmt
 
 var code, err = exec.RunCode(&quot;open&quot;, &quot;-a&quot;, &quot;Terminal&quot;, &quot;.&quot;)
@@ -2274,7 +2371,9 @@ if err != None {
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>import exec
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>package main
+import exec
 import fmt
 
 var code, err = exec.RunCode(&quot;open&quot;, &quot;-a&quot;, &quot;iTerm&quot;)
@@ -2293,7 +2392,9 @@ if err != None {
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>import exec
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>package main
+import exec
 import fmt
 
 var script = &quot;osascript -e &#39;tell application \&quot;Terminal\&quot; to do script \&quot;echo hello from Harneet; ls -la; exit\&quot;&#39;&quot;
@@ -2306,15 +2407,17 @@ if err != None {
 }
 </code></pre></div></td></tr></table></div>
 <h3 id="shellstdout-run-commands-within-current-process">ShellStdout: run commands within current process</h3>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">ShellStdout example</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>import exec
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">ShellStdout example</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>package main
+import exec
 import fmt
 
 var out, err = exec.ShellStdout(&quot;echo shell-in-process; uname -a&quot;)
@@ -2336,7 +2439,9 @@ if err != None {
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>import exec
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>package main
+import exec
 import fmt
 
 var args = [&quot;-c&quot;, &quot;pwd; echo $MYVAR; ls -1 | head -5&quot;]
@@ -2367,7 +2472,9 @@ if err != None {
 <span class="normal">15</span>
 <span class="normal">16</span>
 <span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code>import json, fmt
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code>package main
+import json, fmt
 
 var data = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;]
 var jsonString, err = json.Marshal(data)
@@ -2402,7 +2509,9 @@ fmt.Println(&quot;Parsed back:&quot;, parsed)
 <span class="normal">13</span>
 <span class="normal">14</span>
 <span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>import file, fmt
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>package main
+import file, fmt
 
 var content = &quot;Hello, World!\nThis is Harneet!&quot;
 var writeErr = file.Write(&quot;example.txt&quot;, content)
@@ -2443,7 +2552,9 @@ fmt.Println(&quot;File content:&quot;, readContent)
 <span class="normal">21</span>
 <span class="normal">22</span>
 <span class="normal">23</span>
-<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code>import fmt
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code>package main
+import fmt
 
 // Regular function with multiple returns
 function processData(data string) (string, string, bool) {
@@ -2511,7 +2622,9 @@ fmt.Println(&quot;Greeting:&quot;, greet(&quot;Alice&quot;))
 <span class="normal">38</span>
 <span class="normal">39</span>
 <span class="normal">40</span>
-<span class="normal">41</span></pre></div></td><td class="code"><div><pre><span></span><code>import fmt
+<span class="normal">41</span>
+<span class="normal">42</span></pre></div></td><td class="code"><div><pre><span></span><code>package main
+import fmt
 import file
 import os
 
@@ -2574,7 +2687,9 @@ os.Remove(fileName)
 <span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code>import fmt
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code>package main
+import fmt
 import datetime
 
 // Get the current time in UTC
@@ -2619,7 +2734,9 @@ fmt.Println(&quot;System timezone:&quot;, systemTZ)
 <span class="normal">22</span>
 <span class="normal">23</span>
 <span class="normal">24</span>
-<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code>import fmt
+<span class="normal">25</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code>package main
+import fmt
 import datetime
 import time
 
@@ -2653,7 +2770,9 @@ if stopErr != None {
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>import log
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>package main
+import log
 
 log.Debug(&quot;This is a debug message.&quot;)
 log.Info(&quot;This is an info message.&quot;)
@@ -2672,7 +2791,9 @@ log.Error(&quot;This is an error message.&quot;)
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>import log
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>package main
+import log
 
 // Set the log level to WARN
 log.SetLevel(&quot;WARN&quot;)
@@ -2705,7 +2826,9 @@ log.SetLevel(&quot;DEBUG&quot;)
 <span class="normal">17</span>
 <span class="normal">18</span>
 <span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code>import log
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code>package main
+import log
 import file
 import os
 
@@ -2751,7 +2874,9 @@ os.Remove(logFile)
 <span class="normal">20</span>
 <span class="normal">21</span>
 <span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code>import fmt
+<span class="normal">23</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code>package main
+import fmt
 import os
 
 // List all connected devices
@@ -2812,7 +2937,7 @@ if devices != None &amp;&amp; arrays.length(devices) &gt; 0 {
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../type_system_safety/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Type System &amp; Safety">
+          <a href="../any_type/" class="md-footer__link md-footer__link--prev" aria-label="Previous: The any Type">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2822,7 +2947,7 @@ if devices != None &amp;&amp; arrays.length(devices) &gt; 0 {
                 Previous
               </span>
               <div class="md-ellipsis">
-                Type System & Safety
+                The any Type
               </div>
             </div>
           </a>

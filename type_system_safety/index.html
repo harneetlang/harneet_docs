@@ -12,7 +12,7 @@
         <link rel="prev" href="../stdlib/box/">
       
       
-        <link rel="next" href="../comprehensive_examples/">
+        <link rel="next" href="../any_type/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -387,6 +387,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../general/const/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Const Declarations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../general/keywords_identifiers/" class="md-nav__link">
         
   
@@ -617,12 +640,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../general/import_system/" class="md-nav__link">
+      <a href="../import_system/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Import System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Module System
     
   </span>
   
@@ -1032,6 +1078,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../general/struct_field_assignment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    struct field assignment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../stdlib/json/" class="md-nav__link">
         
   
@@ -1065,10 +1134,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_9" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_10" >
         
           
-          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
             
   
   
@@ -1081,8 +1150,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_10">
             <span class="md-nav__icon md-icon"></span>
             HTTP
           </label>
@@ -1684,6 +1753,66 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#the-any-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      The any Type
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The any Type">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strict-assignability-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strict Assignability Rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-any" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use any
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicit-narrowing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explicit Narrowing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-safety-guarantees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type Safety Guarantees
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#zero-values-system" class="md-nav__link">
     <span class="md-ellipsis">
       Zero Values System
@@ -1705,6 +1834,28 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../any_type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The any Type
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1772,6 +1923,66 @@
       Development Features
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-any-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      The any Type
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The any Type">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strict-assignability-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strict Assignability Rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-any" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use any
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicit-narrowing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explicit Narrowing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-safety-guarantees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type Safety Guarantees
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1911,6 +2122,148 @@ var defaultBool bool     // defaultBool is false
 <li><strong>Import Analysis</strong>: The system detects unused and duplicate imports, promoting cleaner code.</li>
 <li><strong>Error Suggestions</strong>: Helpful error messages often include suggestions for fixing type-related problems.</li>
 </ul>
+<h2 id="the-any-type">The <code>any</code> Type</h2>
+<p>Harneet supports the <code>any</code> type as a <strong>top type</strong> (supertype of all types) with strict, one-way assignability rules. This design preserves Harneet's strong typing while enabling flexibility at dynamic boundaries like JSON, OS, regex, and external APIs.</p>
+<h3 id="strict-assignability-rules">Strict Assignability Rules</h3>
+<p>The <code>any</code> type follows these strict rules:</p>
+<ul>
+<li><strong>T → any (Upcast)</strong>: ✅ <strong>ALLOWED</strong> - Any concrete type can be assigned to <code>any</code></li>
+<li><strong>any → T (Downcast)</strong>: ❌ <strong>FORBIDDEN</strong> - Requires explicit cast using the <code>cast</code> module</li>
+</ul>
+<p>This one-way assignability prevents type safety violations while allowing flexibility where needed.</p>
+<div class="highlight"><pre><span></span><code>// ✅ Upcast to any - ALLOWED
+var anyInt any = 42
+var anyString any = &quot;hello&quot;
+var anyMap any = {&quot;key&quot;: &quot;value&quot;}
+
+// ❌ Downcast without cast - FORBIDDEN
+var x any = 42
+var num int = x  // COMPILE ERROR: cannot assign any to int
+
+// ✅ Explicit cast - REQUIRED for downcast
+var num, err = cast.ToInt(x)  // OK
+if err == None {
+    fmt.Printf(&quot;Number: %d\n&quot;, num)
+}
+</code></pre></div>
+<h3 id="when-to-use-any">When to Use <code>any</code></h3>
+<p><strong>✅ Good Use Cases:</strong></p>
+<ol>
+<li>
+<p><strong>JSON Parsing</strong> - Dynamic JSON data
+    <div class="highlight"><pre><span></span><code>var data, _ = json.Unmarshal(jsonString)
+var userMap, _ = cast.ToMap(data)
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>External APIs</strong> - Heterogeneous system data
+    <div class="highlight"><pre><span></span><code>function processAPIResponse(response any) {
+    var data, _ = cast.ToMap(response)
+    // Process typed data...
+}
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Configuration</strong> - Dynamic config values
+    <div class="highlight"><pre><span></span><code>var config = {
+    &quot;port&quot;: 8080,
+    &quot;host&quot;: &quot;localhost&quot;,
+    &quot;debug&quot;: true
+}
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Generic Utilities</strong> - Flexible helper functions
+    <div class="highlight"><pre><span></span><code>function logValue(key string, value any) {
+    fmt.Printf(&quot;%s: %v\n&quot;, key, value)
+}
+</code></pre></div></p>
+</li>
+</ol>
+<p><strong>❌ Avoid Using <code>any</code>:</strong></p>
+<ol>
+<li>Internal business logic - Use precise types</li>
+<li>Public APIs - Prefer concrete types for clarity</li>
+<li>Data structures - Use typed collections</li>
+</ol>
+<h3 id="explicit-narrowing">Explicit Narrowing</h3>
+<p>The <code>cast</code> module provides type-safe narrowing from <code>any</code> to concrete types:</p>
+<div class="highlight"><pre><span></span><code>import cast
+
+var mystery any = &quot;12345&quot;
+
+// Method 1: Direct conversion
+var num, err = cast.ToInt(mystery)
+if err == None {
+    fmt.Printf(&quot;Converted: %d\n&quot;, num)
+}
+
+// Method 2: Preflight check
+var canConvert, _ = cast.CanCast(mystery, &quot;int&quot;)
+if canConvert {
+    var num, _ = cast.ToInt(mystery)
+    // Safe to use num
+}
+</code></pre></div>
+<p><strong>Available Cast Functions:</strong>
+- <code>cast.ToInt(any)</code> - Convert to integer
+- <code>cast.ToString(any)</code> - Convert to string
+- <code>cast.ToBool(any)</code> - Convert to boolean
+- <code>cast.ToFloat(any)</code> - Convert to float
+- <code>cast.ToArray(any)</code> - Convert to array
+- <code>cast.ToMap(any)</code> - Convert to map
+- <code>cast.CanCast(any, type)</code> - Check if conversion is possible</p>
+<h3 id="best-practices">Best Practices</h3>
+<p><strong>Early Narrowing Pattern (Recommended):</strong></p>
+<div class="highlight"><pre><span></span><code>import cast
+
+// Good: Narrow at boundary, keep core typed
+function processConfig(config any) {
+    // Narrow immediately
+    var configMap, err = cast.ToMap(config)
+    if err != None {
+        fmt.Println(&quot;Error: config must be a map&quot;)
+        return
+    }
+
+    // Now work with typed data
+    var port, _ = cast.ToInt(configMap[&quot;port&quot;])
+    var host, _ = cast.ToString(configMap[&quot;host&quot;])
+
+    // Core logic uses concrete types
+    startServer(host, port)
+}
+</code></pre></div>
+<p><strong>Type Guard Pattern:</strong></p>
+<div class="highlight"><pre><span></span><code>function handleDynamic(val any) {
+    // Try each type in order
+    var asInt, intErr = cast.ToInt(val)
+    if intErr == None {
+        handleInteger(asInt)
+        return
+    }
+
+    var asString, strErr = cast.ToString(val)
+    if strErr == None {
+        handleString(asString)
+        return
+    }
+
+    fmt.Println(&quot;Unsupported type&quot;)
+}
+</code></pre></div>
+<h3 id="type-safety-guarantees">Type Safety Guarantees</h3>
+<p>The <code>any</code> type maintains Harneet's strong type safety through:</p>
+<ol>
+<li><strong>Compile-Time Enforcement</strong> - Cannot assign <code>any</code> to concrete types without explicit cast</li>
+<li><strong>Runtime Validation</strong> - Cast functions validate conversions and return errors</li>
+<li><strong>No Implicit Conversions</strong> - All narrowing must be explicit</li>
+<li><strong>Clear Error Messages</strong> - Detailed feedback when conversions fail</li>
+</ol>
+<div class="highlight"><pre><span></span><code>var x any = &quot;not a number&quot;
+var y, err = cast.ToInt(x)
+// err contains: &quot;cannot convert string \&quot;not a number\&quot; to integer&quot;
+</code></pre></div>
 <h2 id="zero-values-system">Zero Values System</h2>
 <p>Harneet automatically initializes all declared variables to their "zero value" if no explicit value is provided. This ensures that variables always have a defined state.</p>
 <div class="highlight"><pre><span></span><code>// All integer types initialize to 0
@@ -2015,13 +2368,13 @@ var _, important, _ = &quot;ignore&quot;, &quot;keep&quot;, &quot;ignore&quot;
         
         
           
-          <a href="../comprehensive_examples/" class="md-footer__link md-footer__link--next" aria-label="Next: Comprehensive Language Examples">
+          <a href="../any_type/" class="md-footer__link md-footer__link--next" aria-label="Next: The any Type">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Comprehensive Language Examples
+                The any Type
               </div>
             </div>
             <div class="md-footer__button md-icon">
