@@ -90,8 +90,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="Harneet Programming Language" class="md-header__button md-logo" aria-label="Harneet Programming Language" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/images/harneet.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -216,8 +215,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Harneet Programming Language" class="md-nav__button md-logo" aria-label="Harneet Programming Language" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/images/harneet.png" alt="logo">
 
     </a>
     Harneet Programming Language
@@ -523,6 +521,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../general/concurrency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Concurrency (do / await / sleep)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../general/pattern_matching/" class="md-nav__link">
         
   
@@ -638,7 +659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../import_system/" class="md-nav__link">
+      <a href="../general/import_system/" class="md-nav__link">
         
   
   
@@ -1053,6 +1074,52 @@
   
   
     <li class="md-nav__item">
+      <a href="../stdlib/config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    config
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stdlib/db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    db
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../stdlib/structs/" class="md-nav__link">
         
   
@@ -1132,10 +1199,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_10" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_12" >
         
           
-          <label class="md-nav__link" for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6_12" id="__nav_6_12_label" tabindex="0">
             
   
   
@@ -1148,8 +1215,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_10">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_12">
             <span class="md-nav__icon md-icon"></span>
             HTTP
           </label>
@@ -1646,8 +1713,15 @@
 
               
             
-              
-                
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
   
   
   
@@ -1667,11 +1741,25 @@
     </li>
   
 
-              
-            
-          </ul>
-        </nav>
+    
       
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stdlib/reflect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    reflect
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1782,6 +1870,66 @@
       Array Operations
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concurrency-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concurrency Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Concurrency Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parallel-map-pmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parallel Map (pmap)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concurrency-limit-batching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concurrency Limit (Batching)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-staged-concurrency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline (Staged Concurrency)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retry-with-exponential-backoff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retry with Exponential Backoff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#staggered-completion-and-ordering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Staggered Completion and Ordering
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2044,6 +2192,66 @@
       Array Operations
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concurrency-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concurrency Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Concurrency Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parallel-map-pmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parallel Map (pmap)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concurrency-limit-batching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concurrency Limit (Batching)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-staged-concurrency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline (Staged Concurrency)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retry-with-exponential-backoff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retry with Exponential Backoff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#staggered-completion-and-ordering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Staggered Completion and Ordering
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2318,6 +2526,277 @@ fmt.Println(&quot;Length:&quot;, length)
 fmt.Println(&quot;Contains Alice:&quot;, contains)
 fmt.Println(&quot;New array:&quot;, newArray)
 fmt.Println(&quot;Sorted:&quot;, sortedNums)
+</code></pre></div></td></tr></table></div>
+<h2 id="concurrency-patterns">Concurrency Patterns</h2>
+<p>This section provides comprehensive examples using <code>do</code>, <code>await(task)</code>, and <code>sleep(ms)</code> for practical concurrency.</p>
+<h3 id="parallel-map-pmap">Parallel Map (pmap)</h3>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Parallel map with do/await</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code>package main
+import fmt
+import arrays
+
+function square(n int) int {
+    sleep(20) // simulate work
+    return n * n
+}
+
+var values = [1, 2, 3, 4, 5]
+
+// Spawn tasks
+var tasks = []
+for v in values {
+    var newTasks, _ = arrays.push(tasks, do square(v))
+    tasks = newTasks
+}
+
+// Gather results
+var results = []
+for t in tasks {
+    var newResults, _ = arrays.push(results, await(t))
+    results = newResults
+}
+
+fmt.Println(&quot;pmap squares:&quot;, results) // [1, 4, 9, 16, 25]
+</code></pre></div></td></tr></table></div>
+<h3 id="concurrency-limit-batching">Concurrency Limit (Batching)</h3>
+<p>Run tasks in batches to limit concurrency when you don’t need fine-grained completion order.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Batch-limited parallel map</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span></pre></div></td><td class="code"><div><pre><span></span><code>package main
+import fmt
+import arrays
+
+function pmapLimited(values array, f function(any) any, limit int) array {
+    var out = []
+    var i = 0
+    while i &lt; len(values) {
+        // Make a batch up to &#39;limit&#39;
+        var batch = []
+        var j = 0
+        while j &lt; limit &amp;&amp; (i+j) &lt; len(values) {
+            var v = values[i+j]
+            var batch2, _ = arrays.push(batch, do f(v))
+            batch = batch2
+            j = j + 1
+        }
+
+        // Drain the batch
+        for t in batch {
+            var out2, _ = arrays.push(out, await(t))
+            out = out2
+        }
+
+        i = i + j
+    }
+    return out
+}
+
+function slowInc(x int) int { sleep(30); return x + 1 }
+
+var data = [1,2,3,4,5,6,7,8]
+var res = pmapLimited(data, slowInc, 3)
+fmt.Println(&quot;limited concurrency result:&quot;, res)
+</code></pre></div></td></tr></table></div>
+<h3 id="pipeline-staged-concurrency">Pipeline (Staged Concurrency)</h3>
+<p>Process values through multiple stages, synchronizing between stages.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Staged pipeline with barriers</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code>package main
+import fmt
+import arrays
+
+function stage1(x int) int { sleep(20); return x * 2 }
+function stage2(x int) int { sleep(20); return x + 10 }
+
+var input = [1,2,3,4]
+
+// Stage 1
+var t1 = []
+for v in input { var t1b, _ = arrays.push(t1, do stage1(v)); t1 = t1b }
+var r1 = []
+for t in t1 { var r1b, _ = arrays.push(r1, await(t)); r1 = r1b }
+
+// Stage 2
+var t2 = []
+for v in r1 { var t2b, _ = arrays.push(t2, do stage2(v)); t2 = t2b }
+var r2 = []
+for t in t2 { var r2b, _ = arrays.push(r2, await(t)); r2 = r2b }
+
+fmt.Println(&quot;pipeline output:&quot;, r2) // For [1,2,3,4]: [(1*2)+10,...] =&gt; [12,14,16,18]
+</code></pre></div></td></tr></table></div>
+<h3 id="retry-with-exponential-backoff">Retry with Exponential Backoff</h3>
+<p>Implement robust retries using <code>sleep()</code>; errors flow through regular return values.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Retry with exponential backoff</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code>package main
+import fmt
+import errors
+
+// Simulated flaky function
+function maybeFetch(id int) (string, error) {
+    if id % 2 == 1 { return (&quot;&quot;, errors.New(&quot;transient error&quot;)) }
+    sleep(20)
+    return (fmt.Sprintf(&quot;item-%d&quot;, id), None)
+}
+
+function fetchWithRetry(id, maxRetries int) (string, error) {
+    var backoff = 50
+    var attempt = 0
+    while attempt &lt;= maxRetries {
+        var task = do maybeFetch(id)
+        var val, err = await(task)
+        if err == None { return (val, None) }
+        if attempt == maxRetries { return (&quot;&quot;, err) }
+        sleep(backoff)
+        backoff = backoff * 2
+        attempt = attempt + 1
+    }
+    return (&quot;&quot;, errors.New(&quot;unreachable&quot;))
+}
+
+var v, err = fetchWithRetry(3, 3)
+if err != None { fmt.Println(&quot;failed:&quot;, err) }
+else { fmt.Println(&quot;ok:&quot;, v) }
+</code></pre></div></td></tr></table></div>
+<h3 id="staggered-completion-and-ordering">Staggered Completion and Ordering</h3>
+<p>Await order controls when you observe task results.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Staggered completion</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code>package main
+import fmt
+
+function work(name string, ms int) string { sleep(ms); return name }
+
+var tA = do work(&quot;A&quot;, 200)
+var tB = do work(&quot;B&quot;, 20)
+
+// Awaiting A first blocks longer
+var a = await(tA)
+var b = await(tB)
+fmt.Printf(&quot;ordered await: %s %s\n&quot;, a, b)
+
+// Alternatively, await B first to proceed sooner
+var tA2 = do work(&quot;A&quot;, 200)
+var tB2 = do work(&quot;B&quot;, 20)
+var b2 = await(tB2)
+var a2 = await(tA2)
+fmt.Printf(&quot;reordered await: %s %s\n&quot;, a2, b2)
 </code></pre></div></td></tr></table></div>
 <h2 id="exec-examples">Exec Examples</h2>
 <p>This section provides examples of using the <code>exec</code> module to launch

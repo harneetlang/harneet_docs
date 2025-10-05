@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../../stdlib/cast/">
+      
+      
+        <link rel="next" href="../../modules/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -16,7 +20,7 @@
     
     
       
-        <title>Imports - Harneet Programming Language</title>
+        <title>Import System - Harneet Programming Language</title>
       
     
     
@@ -70,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#imports" class="md-skip">
+        <a href="#import-system" class="md-skip">
           Skip to content
         </a>
       
@@ -88,8 +92,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Harneet Programming Language" class="md-header__button md-logo" aria-label="Harneet Programming Language" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../assets/images/harneet.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -106,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Imports
+              Import System
             
           </span>
         </div>
@@ -214,8 +217,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Harneet Programming Language" class="md-nav__button md-logo" aria-label="Harneet Programming Language" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../assets/images/harneet.png" alt="logo">
 
     </a>
     Harneet Programming Language
@@ -271,20 +273,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -300,7 +302,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             General
@@ -521,6 +523,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../concurrency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Concurrency (do / await / sleep)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../pattern_matching/" class="md-nav__link">
         
   
@@ -633,10 +658,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../import_system/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Import System
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -647,6 +694,404 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#standard-library-imports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard Library Imports
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Standard Library Imports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-import-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Import Syntax
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comma-separated-imports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comma-Separated Imports
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import-aliases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Import Aliases
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local-package-imports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local Package Imports
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Local Package Imports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relative-imports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relative Imports
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-declaration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package Declaration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-qualified-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module-Qualified Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module-Qualified Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-annotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type Annotations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#struct-literals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Struct Literals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typed-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typed Arrays
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export Rules
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Export Rules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exported-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exported Names
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#struct-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Struct Fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-file-main-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-File Main Packages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multi-File Main Packages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#directory-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directory Execution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Structure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete Example
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Complete Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#library-package-myliblibha" class="md-nav__link">
+    <span class="md-ellipsis">
+      Library Package (mylib/lib.ha)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#main-application-appmainha" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main Application (app/main.ha)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Import Resolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Import Resolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard Library
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relative-imports_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relative Imports
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package Discovery
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type Compatibility
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Type Compatibility">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#struct-type-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Struct Type Matching
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-package-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Package Organization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-export-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Export Conventions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-import-aliases" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Import Aliases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-type-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Type Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-standard-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration with Standard Library
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1051,6 +1496,52 @@
   
   
     <li class="md-nav__item">
+      <a href="../../stdlib/config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    config
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    db
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../stdlib/structs/" class="md-nav__link">
         
   
@@ -1130,10 +1621,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_10" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_12" >
         
           
-          <label class="md-nav__link" for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6_12" id="__nav_6_12_label" tabindex="0">
             
   
   
@@ -1146,8 +1637,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_10">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_12">
             <span class="md-nav__icon md-icon"></span>
             HTTP
           </label>
@@ -1644,8 +2135,15 @@
 
               
             
-              
-                
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
   
   
   
@@ -1665,11 +2163,25 @@
     </li>
   
 
-              
-            
-          </ul>
-        </nav>
+    
       
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/reflect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    reflect
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1767,27 +2279,378 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#single-import" class="md-nav__link">
+  <a href="#standard-library-imports" class="md-nav__link">
     <span class="md-ellipsis">
-      Single Import
+      Standard Library Imports
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Standard Library Imports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-import-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Import Syntax
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#multiple-imports" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#comma-separated-imports" class="md-nav__link">
     <span class="md-ellipsis">
-      Multiple Imports
+      Comma-Separated Imports
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#import-aliases" class="md-nav__link">
     <span class="md-ellipsis">
       Import Aliases
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local-package-imports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local Package Imports
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Local Package Imports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relative-imports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relative Imports
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-declaration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package Declaration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-qualified-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module-Qualified Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module-Qualified Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-annotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type Annotations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#struct-literals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Struct Literals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typed-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typed Arrays
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export Rules
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Export Rules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exported-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exported Names
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#struct-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Struct Fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-file-main-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-File Main Packages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multi-File Main Packages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#directory-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directory Execution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Structure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete Example
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Complete Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#library-package-myliblibha" class="md-nav__link">
+    <span class="md-ellipsis">
+      Library Package (mylib/lib.ha)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#main-application-appmainha" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main Application (app/main.ha)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Import Resolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Import Resolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard Library
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relative-imports_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relative Imports
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package Discovery
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type Compatibility
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Type Compatibility">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#struct-type-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Struct Type Matching
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-package-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Package Organization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-export-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Export Conventions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-import-aliases" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Import Aliases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-type-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Type Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-standard-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration with Standard Library
     </span>
   </a>
   
@@ -1809,33 +2672,323 @@
 
 
 
-<h1 id="imports">Imports</h1>
-<p>The <code>import</code> statement is used to bring modules into the current scope, allowing you to use their functions.</p>
-<h2 id="single-import">Single Import</h2>
-<p>You can import a single module on one line.</p>
-<div class="highlight"><pre><span></span><code>package main
-import fmt
+<h1 id="import-system">Import System</h1>
+<p>Harneet provides a comprehensive import system that supports both standard library modules and local Harneet packages, with Go-like syntax and modern features including relative imports and module-qualified types.</p>
+<h2 id="standard-library-imports">Standard Library Imports</h2>
+<h3 id="basic-import-syntax">Basic Import Syntax</h3>
+<div class="highlight"><pre><span></span><code>import fmt
+import strings
+import json
 </code></pre></div>
-<h2 id="multiple-imports">Multiple Imports</h2>
-<p>You can import multiple modules on a single line, separated by commas.</p>
-<div class="highlight"><pre><span></span><code>package main
-import fmt, math, strings
+<h3 id="comma-separated-imports">Comma-Separated Imports</h3>
+<div class="highlight"><pre><span></span><code>import fmt, strings, json
+import math, datetime, os
 </code></pre></div>
-<h2 id="import-aliases">Import Aliases</h2>
-<p>You can create an alias for an imported module using the <code>as</code> keyword. This is useful to avoid name collisions or to use a shorter name.</p>
-<div class="highlight"><pre><span></span><code>package main
-import fmt as f
+<h3 id="import-aliases">Import Aliases</h3>
+<div class="highlight"><pre><span></span><code>import fmt as f
+import strings as str
+import &quot;../mylib&quot; as mylib
+</code></pre></div>
+<h2 id="local-package-imports">Local Package Imports</h2>
+<h3 id="relative-imports">Relative Imports</h3>
+<p>Harneet supports relative imports using <code>../</code> and <code>./</code> syntax, similar to modern module systems:</p>
+<div class="highlight"><pre><span></span><code>// Import from parent directory
+import &quot;../mylib&quot; as mylib
 
-f.Println(&quot;Hello, World!&quot;)
+// Import from current directory
+import &quot;./utils&quot; as utils
+
+// Import from subdirectory
+import &quot;./helpers/validation&quot; as validate
 </code></pre></div>
-<div class="admonition danger">
-<p class="admonition-title">Duplicate Imports</p>
-<p>The interpreter will automatically detect and report errors for duplicate imports.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Unused Imports</p>
-<p>For unused imports, the interpreter will issue a warning. This helps to keep the code clean and avoid unnecessary imports.</p>
-</div>
+<h3 id="package-structure">Package Structure</h3>
+<p>Local packages must follow Go-like conventions:</p>
+<div class="highlight"><pre><span></span><code>project/
+├── main.ha              # package main
+├── mylib/
+│   └── lib.ha          # package mylib
+└── utils/
+    └── helpers.ha      # package utils
+</code></pre></div>
+<h3 id="package-declaration">Package Declaration</h3>
+<p>Each Harneet file must start with a package declaration:</p>
+<div class="highlight"><pre><span></span><code>// mylib/lib.ha
+package mylib
+
+// Exported struct type (starts with uppercase)
+type User struct {
+    name string
+    age int
+}
+
+// Exported variable
+var DefaultAge int = 21
+
+// Exported function
+function MakeDefaultUser(name string) User {
+    return User{name: name, age: DefaultAge}
+}
+</code></pre></div>
+<h2 id="module-qualified-types">Module-Qualified Types</h2>
+<h3 id="type-annotations">Type Annotations</h3>
+<p>Use imported types in variable declarations, function parameters, and return types:</p>
+<div class="highlight"><pre><span></span><code>package main
+import &quot;../mylib&quot; as mylib
+
+function main() {
+    // Module-qualified type in variable annotation
+    var user mylib.User = mylib.MakeDefaultUser(&quot;Alice&quot;)
+
+    // Module-qualified type in function parameter
+    function processUser(u mylib.User) {
+        fmt.Printf(&quot;Processing user: %s\n&quot;, u.name)
+    }
+
+    processUser(user)
+}
+</code></pre></div>
+<h3 id="struct-literals">Struct Literals</h3>
+<p>Create instances using module-qualified struct literals:</p>
+<div class="highlight"><pre><span></span><code>// Direct struct literal with module qualification
+var user mylib.User = mylib.User{name: &quot;Bob&quot;, age: 33}
+
+// Struct literal in typed array
+var users = mylib.User[2]{
+    mylib.User{name: &quot;Carol&quot;, age: 25},
+    mylib.User{name: &quot;Dave&quot;, age: 30},
+}
+</code></pre></div>
+<h3 id="typed-arrays">Typed Arrays</h3>
+<p>Use module-qualified types in typed array declarations:</p>
+<div class="highlight"><pre><span></span><code>// Typed array with module-qualified element type
+var userArray = mylib.User[3]{
+    mylib.User{name: &quot;Alice&quot;, age: 25},
+    mylib.User{name: &quot;Bob&quot;, age: 30},
+    mylib.User{name: &quot;Charlie&quot;, age: 35},
+}
+
+// Access array length
+var count = len(userArray)  // Returns: 3
+</code></pre></div>
+<h2 id="export-rules">Export Rules</h2>
+<p>Harneet follows Go-like export rules:</p>
+<h3 id="exported-names">Exported Names</h3>
+<ul>
+<li><strong>Uppercase first letter</strong>: Exported (public)</li>
+<li><strong>Lowercase first letter</strong>: Unexported (private)</li>
+</ul>
+<div class="highlight"><pre><span></span><code>package mylib
+
+// Exported (public) - can be imported
+type User struct { ... }        // ✅ Exported
+var DefaultAge int = 21         // ✅ Exported  
+function MakeUser() User { ... } // ✅ Exported
+
+// Unexported (private) - cannot be imported
+type userInternal struct { ... }     // ❌ Private
+var internalConfig string = &quot;...&quot;    // ❌ Private
+function validateUser() bool { ... } // ❌ Private
+</code></pre></div>
+<h3 id="struct-fields">Struct Fields</h3>
+<div class="highlight"><pre><span></span><code>type User struct {
+    Name string    // ✅ Exported field
+    Age int        // ✅ Exported field
+    id string      // ❌ Private field
+}
+</code></pre></div>
+<h2 id="multi-file-main-packages">Multi-File Main Packages</h2>
+<h3 id="directory-execution">Directory Execution</h3>
+<p>Execute all <code>.ha</code> files in a directory as a single <code>package main</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Execute all .ha files in the app directory</span>
+harneet<span class="w"> </span>./examples/packages/app
+</code></pre></div>
+<h3 id="file-structure">File Structure</h3>
+<div class="highlight"><pre><span></span><code>app/
+├── main.ha      # package main
+├── helpers.ha   # package main  
+└── config.ha    # package main
+</code></pre></div>
+<p>All files are combined into a single program execution context.</p>
+<h2 id="complete-example">Complete Example</h2>
+<h3 id="project-structure">Project Structure</h3>
+<div class="highlight"><pre><span></span><code>examples/packages/
+├── app/
+│   └── main.ha
+└── mylib/
+    └── lib.ha
+</code></pre></div>
+<h3 id="library-package-myliblibha">Library Package (<code>mylib/lib.ha</code>)</h3>
+<div class="highlight"><pre><span></span><code>package mylib
+
+// Exported struct type
+type User struct {
+    name string
+    age int
+}
+
+// Exported variables
+var DefaultAge int = 21
+var Version string = &quot;v1.0.0&quot;
+
+// Exported constructor function
+function MakeDefaultUser(name string) User {
+    return User{name: name, age: DefaultAge}
+}
+
+// Exported utility function
+function Greet(name string) string {
+    return &quot;Hello &quot; + name
+}
+</code></pre></div>
+<h3 id="main-application-appmainha">Main Application (<code>app/main.ha</code>)</h3>
+<div class="highlight"><pre><span></span><code>package main
+
+import fmt
+import &quot;../mylib&quot; as mylib
+
+function main() {
+    fmt.Println(&quot;Testing module-qualified types and relative imports&quot;)
+
+    // Use module-qualified type in variable annotation
+    var u mylib.User = mylib.MakeDefaultUser(&quot;Alice&quot;)
+    fmt.Println(&quot;DefaultAge:&quot;)
+    fmt.Println(mylib.DefaultAge)
+    fmt.Println(&quot;Version:&quot;)
+    fmt.Println(mylib.Version)
+
+    // Struct literal with module-qualified type
+    var v mylib.User = mylib.User{name: &quot;Bob&quot;, age: 33}
+
+    // Typed array literal with module-qualified struct element type
+    var arr = mylib.User[2]{
+        mylib.User{name: &quot;Carol&quot;, age: 10},
+        mylib.User{name: &quot;Dave&quot;, age: 20},
+    }
+
+    // Call exported function
+    var message = mylib.Greet(&quot;Gagan&quot;)
+    fmt.Println(message)
+
+    fmt.Println(&quot;User u:&quot;)
+    fmt.Println(u)
+    fmt.Println(&quot;User v:&quot;)
+    fmt.Println(v)
+    fmt.Println(&quot;arr length:&quot;)
+    fmt.Println(len(arr))
+}
+
+main()
+</code></pre></div>
+<h3 id="execution">Execution</h3>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>harneet<span class="w"> </span>examples/packages/app
+Testing<span class="w"> </span>module-qualified<span class="w"> </span>types<span class="w"> </span>and<span class="w"> </span>relative<span class="w"> </span>imports
+DefaultAge:
+<span class="m">21</span>
+Version:
+v1.0.0
+Hello<span class="w"> </span>Gagan
+User<span class="w"> </span>u:
+User<span class="o">{</span>age:<span class="w"> </span><span class="m">21</span>,<span class="w"> </span>name:<span class="w"> </span>Alice<span class="o">}</span>
+User<span class="w"> </span>v:
+User<span class="o">{</span>name:<span class="w"> </span>Bob,<span class="w"> </span>age:<span class="w"> </span><span class="m">33</span><span class="o">}</span>
+arr<span class="w"> </span>length:
+<span class="m">2</span>
+</code></pre></div>
+<h2 id="import-resolution">Import Resolution</h2>
+<h3 id="standard-library">Standard Library</h3>
+<ul>
+<li>Resolved from built-in stdlib modules</li>
+<li>Examples: <code>fmt</code>, <code>strings</code>, <code>json</code>, <code>math</code>, <code>os</code></li>
+</ul>
+<h3 id="relative-imports_1">Relative Imports</h3>
+<ul>
+<li><code>../package</code> - Import from parent directory</li>
+<li><code>./package</code> - Import from current directory  </li>
+<li><code>./sub/package</code> - Import from subdirectory</li>
+</ul>
+<h3 id="package-discovery">Package Discovery</h3>
+<ol>
+<li>Look for directory with matching name</li>
+<li>Find <code>.ha</code> files with matching package declaration</li>
+<li>Load and evaluate package in isolated environment</li>
+<li>Make exported symbols available to importing module</li>
+</ol>
+<h2 id="type-compatibility">Type Compatibility</h2>
+<h3 id="struct-type-matching">Struct Type Matching</h3>
+<p>Module-qualified types are compatible with their base types:</p>
+<div class="highlight"><pre><span></span><code>// These are compatible:
+var expected mylib.User = ...
+var actual User = ...  // Base type from same module
+
+// Type checker allows assignment between:
+// - mylib.User ↔ User (when from same module)
+// - mylib.User ↔ STRUCT (runtime struct objects)
+</code></pre></div>
+<h3 id="error-handling">Error Handling</h3>
+<p>Clear error messages for import and type issues:</p>
+<div class="highlight"><pre><span></span><code>Error: Cannot execute non-main package &#39;mylib&#39;. Only &#39;package main&#39; is executable.
+Error: Missing package declaration. The first non-comment line must be &#39;package &lt;name&gt;&#39;.
+Error: variable &#39;u&#39; type mismatch: cannot assign STRUCT to mylib.User
+</code></pre></div>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="1-package-organization">1. Package Organization</h3>
+<div class="highlight"><pre><span></span><code>// Good: Clear package structure
+project/
+├── main.ha           # Main application
+├── models/
+│   └── user.ha      # User-related types
+├── services/
+│   └── api.ha       # API services
+└── utils/
+    └── helpers.ha   # Utility functions
+</code></pre></div>
+<h3 id="2-export-conventions">2. Export Conventions</h3>
+<div class="highlight"><pre><span></span><code>// Good: Clear export intentions
+type User struct { ... }        // Exported type
+var DefaultConfig = { ... }     // Exported variable
+function NewUser() User { ... } // Exported constructor
+
+type userImpl struct { ... }    // Private implementation
+var cache = { ... }             // Private cache
+function validate() bool { ... } // Private helper
+</code></pre></div>
+<h3 id="3-import-aliases">3. Import Aliases</h3>
+<div class="highlight"><pre><span></span><code>// Good: Clear, meaningful aliases
+import &quot;../models/user&quot; as userModel
+import &quot;../services/api&quot; as apiService
+import &quot;../utils/validation&quot; as validate
+
+// Avoid: Unclear or conflicting aliases
+import &quot;../models/user&quot; as u  // Too short
+import &quot;../services/api&quot; as user  // Confusing
+</code></pre></div>
+<h3 id="4-type-usage">4. Type Usage</h3>
+<div class="highlight"><pre><span></span><code>// Good: Explicit type annotations for clarity
+var user userModel.User = userModel.NewUser(&quot;Alice&quot;)
+var users []userModel.User = userModel.LoadUsers()
+
+// Good: Module-qualified constructors
+var config apiService.Config = apiService.DefaultConfig()
+</code></pre></div>
+<h2 id="integration-with-standard-library">Integration with Standard Library</h2>
+<p>The import system works seamlessly with all standard library modules:</p>
+<div class="highlight"><pre><span></span><code>import fmt, json, cast
+import &quot;../models&quot; as models
+
+function processData(jsonStr string) models.User {
+    var data, err = json.Unmarshal(jsonStr)
+    if err != None {
+        fmt.Printf(&quot;JSON error: %s\n&quot;, err)
+        return models.User{}
+    }
+
+    var name, _ = cast.ToString(data[&quot;name&quot;])
+    var age, _ = cast.ToInt(data[&quot;age&quot;])
+
+    return models.User{name: name, age: age}
+}
+</code></pre></div>
+<p>This import system provides the flexibility of modern module systems while maintaining the simplicity and type safety that makes Harneet productive for both small scripts and larger applications.</p>
 
 
 
@@ -1868,6 +3021,44 @@ f.Println(&quot;Hello, World!&quot;)
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../stdlib/cast/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Cast">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Cast
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../modules/" class="md-footer__link md-footer__link--next" aria-label="Next: Module System">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Module System
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">

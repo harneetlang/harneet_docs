@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../../general/scoping_variable_management/">
+        <link rel="prev" href="../control_flow/">
       
       
-        <link rel="next" href="../../general/import_system/">
+        <link rel="next" href="../pattern_matching/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Cast - Harneet Programming Language</title>
+        <title>Concurrency (do / await / sleep) - Harneet Programming Language</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cast-module" class="md-skip">
+        <a href="#concurrency-do-await-sleep" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cast
+              Concurrency (do / await / sleep)
             
           </span>
         </div>
@@ -316,7 +316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general/comments/" class="md-nav__link">
+      <a href="../comments/" class="md-nav__link">
         
   
   
@@ -339,7 +339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general/data_types/" class="md-nav__link">
+      <a href="../data_types/" class="md-nav__link">
         
   
   
@@ -362,7 +362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general/variable_declaration/" class="md-nav__link">
+      <a href="../variable_declaration/" class="md-nav__link">
         
   
   
@@ -385,7 +385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general/const/" class="md-nav__link">
+      <a href="../const/" class="md-nav__link">
         
   
   
@@ -408,7 +408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general/keywords_identifiers/" class="md-nav__link">
+      <a href="../keywords_identifiers/" class="md-nav__link">
         
   
   
@@ -431,7 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general/operators_and_expressions/" class="md-nav__link">
+      <a href="../operators_and_expressions/" class="md-nav__link">
         
   
   
@@ -454,7 +454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general/arrays/" class="md-nav__link">
+      <a href="../arrays/" class="md-nav__link">
         
   
   
@@ -477,7 +477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general/maps/" class="md-nav__link">
+      <a href="../maps/" class="md-nav__link">
         
   
   
@@ -500,127 +500,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general/control_flow/" class="md-nav__link">
+      <a href="../control_flow/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Control Flow
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../general/concurrency/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Concurrency (do / await / sleep)
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../general/pattern_matching/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Pattern Matching
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../break_continue/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Break & Continue
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../general/block_structure/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Block Structure
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../general/scoping_variable_management/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Scoping and Variable Management
     
   </span>
   
@@ -652,7 +537,7 @@
   
   
   <span class="md-ellipsis">
-    Cast
+    Concurrency (do / await / sleep)
     
   </span>
   
@@ -665,7 +550,7 @@
   
   
   <span class="md-ellipsis">
-    Cast
+    Concurrency (do / await / sleep)
     
   </span>
   
@@ -688,73 +573,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#functions" class="md-nav__link">
+  <a href="#quick-start" class="md-nav__link">
     <span class="md-ellipsis">
-      Functions
+      Quick start
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Functions">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      API reference
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Patterns">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tostringvalue" class="md-nav__link">
+  <a href="#1-fan-out-fan-in" class="md-nav__link">
     <span class="md-ellipsis">
-       ToString(value)
+      1) Fan-out / fan-in
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#tointvalue" class="md-nav__link">
+  <a href="#2-parallel-map-helper" class="md-nav__link">
     <span class="md-ellipsis">
-       ToInt(value)
+      2) Parallel map helper
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#tofloatvalue" class="md-nav__link">
+  <a href="#3-handling-errors-with-tuples" class="md-nav__link">
     <span class="md-ellipsis">
-       ToFloat(value)
+      3) Handling errors with tuples
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#toboolvalue" class="md-nav__link">
+  <a href="#4-staggered-completion" class="md-nav__link">
     <span class="md-ellipsis">
-       ToBool(value)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#toarrayvalue" class="md-nav__link">
-    <span class="md-ellipsis">
-       ToArray(value)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tomapvalue" class="md-nav__link">
-    <span class="md-ellipsis">
-       ToMap(value)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cancastvalue-targettype" class="md-nav__link">
-    <span class="md-ellipsis">
-       CanCast(value, targetType)
+      4) Staggered completion
     </span>
   </a>
   
@@ -766,55 +642,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#type-conversion-matrix" class="md-nav__link">
+  <a href="#scheduler-api" class="md-nav__link">
     <span class="md-ellipsis">
-      Type Conversion Matrix
+      Scheduler API
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#error-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Error Handling
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-use-cases" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common Use Cases
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Common Use Cases">
+    <nav class="md-nav" aria-label="Scheduler API">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#data-validation-and-conversion" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Validation and Conversion
+      Overview
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#configuration-processing" class="md-nav__link">
+  <a href="#examples" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuration Processing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-structure-transformation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Structure Transformation
+      Examples
     </span>
   </a>
   
@@ -826,42 +675,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#integration-with-other-modules" class="md-nav__link">
+  <a href="#design-notes" class="md-nav__link">
     <span class="md-ellipsis">
-      Integration with Other Modules
+      Design notes
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Integration with Other Modules">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#json-and-cast-integration" class="md-nav__link">
-    <span class="md-ellipsis">
-      JSON and Cast Integration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#os-and-cast-integration" class="md-nav__link">
-    <span class="md-ellipsis">
-      OS and Cast Integration
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#see-also" class="md-nav__link">
     <span class="md-ellipsis">
-      See Also
+      See also
     </span>
   </a>
   
@@ -883,7 +708,122 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general/import_system/" class="md-nav__link">
+      <a href="../pattern_matching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pattern Matching
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/break_continue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Break & Continue
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../block_structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Block Structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scoping_variable_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scoping and Variable Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/cast/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cast
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../import_system/" class="md-nav__link">
         
   
   
@@ -929,7 +869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general/unicode_support/" class="md-nav__link">
+      <a href="../unicode_support/" class="md-nav__link">
         
   
   
@@ -1160,7 +1100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fmt/" class="md-nav__link">
+      <a href="../../stdlib/fmt/" class="md-nav__link">
         
   
   
@@ -1183,7 +1123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../input/" class="md-nav__link">
+      <a href="../../stdlib/input/" class="md-nav__link">
         
   
   
@@ -1206,7 +1146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../strings/" class="md-nav__link">
+      <a href="../../stdlib/strings/" class="md-nav__link">
         
   
   
@@ -1229,7 +1169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../math/" class="md-nav__link">
+      <a href="../../stdlib/math/" class="md-nav__link">
         
   
   
@@ -1252,7 +1192,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../arrays/" class="md-nav__link">
+      <a href="../../stdlib/arrays/" class="md-nav__link">
         
   
   
@@ -1275,7 +1215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../collections/" class="md-nav__link">
+      <a href="../../stdlib/collections/" class="md-nav__link">
         
   
   
@@ -1298,7 +1238,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/" class="md-nav__link">
+      <a href="../../stdlib/config/" class="md-nav__link">
         
   
   
@@ -1321,7 +1261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/" class="md-nav__link">
+      <a href="../../stdlib/db/" class="md-nav__link">
         
   
   
@@ -1344,7 +1284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../structs/" class="md-nav__link">
+      <a href="../../stdlib/structs/" class="md-nav__link">
         
   
   
@@ -1367,7 +1307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general/struct_field_assignment/" class="md-nav__link">
+      <a href="../struct_field_assignment/" class="md-nav__link">
         
   
   
@@ -1390,7 +1330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../json/" class="md-nav__link">
+      <a href="../../stdlib/json/" class="md-nav__link">
         
   
   
@@ -1453,7 +1393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../http/overview/" class="md-nav__link">
+      <a href="../../stdlib/http/overview/" class="md-nav__link">
         
   
   
@@ -1476,7 +1416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../http/client/" class="md-nav__link">
+      <a href="../../stdlib/http/client/" class="md-nav__link">
         
   
   
@@ -1499,7 +1439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../http/requests/" class="md-nav__link">
+      <a href="../../stdlib/http/requests/" class="md-nav__link">
         
   
   
@@ -1522,7 +1462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../http/responses/" class="md-nav__link">
+      <a href="../../stdlib/http/responses/" class="md-nav__link">
         
   
   
@@ -1545,7 +1485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../http/server/" class="md-nav__link">
+      <a href="../../stdlib/http/server/" class="md-nav__link">
         
   
   
@@ -1568,7 +1508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../http/routing/" class="md-nav__link">
+      <a href="../../stdlib/http/routing/" class="md-nav__link">
         
   
   
@@ -1591,7 +1531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../http/middleware/" class="md-nav__link">
+      <a href="../../stdlib/http/middleware/" class="md-nav__link">
         
   
   
@@ -1614,7 +1554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../http/auth/" class="md-nav__link">
+      <a href="../../stdlib/http/auth/" class="md-nav__link">
         
   
   
@@ -1637,7 +1577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../http/cookies/" class="md-nav__link">
+      <a href="../../stdlib/http/cookies/" class="md-nav__link">
         
   
   
@@ -1660,7 +1600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../http/advanced/" class="md-nav__link">
+      <a href="../../stdlib/http/advanced/" class="md-nav__link">
         
   
   
@@ -1683,7 +1623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../http/examples/" class="md-nav__link">
+      <a href="../../stdlib/http/examples/" class="md-nav__link">
         
   
   
@@ -1714,7 +1654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../assert/" class="md-nav__link">
+      <a href="../../stdlib/assert/" class="md-nav__link">
         
   
   
@@ -1737,7 +1677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../errors/" class="md-nav__link">
+      <a href="../../stdlib/errors/" class="md-nav__link">
         
   
   
@@ -1760,7 +1700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../log/" class="md-nav__link">
+      <a href="../../stdlib/log/" class="md-nav__link">
         
   
   
@@ -1783,7 +1723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../file/" class="md-nav__link">
+      <a href="../../stdlib/file/" class="md-nav__link">
         
   
   
@@ -1806,7 +1746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../path/" class="md-nav__link">
+      <a href="../../stdlib/path/" class="md-nav__link">
         
   
   
@@ -1829,7 +1769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../os/" class="md-nav__link">
+      <a href="../../stdlib/os/" class="md-nav__link">
         
   
   
@@ -1852,7 +1792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datetime/" class="md-nav__link">
+      <a href="../../stdlib/datetime/" class="md-nav__link">
         
   
   
@@ -1875,7 +1815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../flags/" class="md-nav__link">
+      <a href="../../stdlib/flags/" class="md-nav__link">
         
   
   
@@ -1898,7 +1838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../exec/" class="md-nav__link">
+      <a href="../../stdlib/exec/" class="md-nav__link">
         
   
   
@@ -1921,7 +1861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../regex/" class="md-nav__link">
+      <a href="../../stdlib/regex/" class="md-nav__link">
         
   
   
@@ -1951,7 +1891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../box/" class="md-nav__link">
+      <a href="../../stdlib/box/" class="md-nav__link">
         
   
   
@@ -1973,7 +1913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reflect/" class="md-nav__link">
+      <a href="../../stdlib/reflect/" class="md-nav__link">
         
   
   
@@ -2081,73 +2021,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#functions" class="md-nav__link">
+  <a href="#quick-start" class="md-nav__link">
     <span class="md-ellipsis">
-      Functions
+      Quick start
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Functions">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      API reference
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Patterns">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tostringvalue" class="md-nav__link">
+  <a href="#1-fan-out-fan-in" class="md-nav__link">
     <span class="md-ellipsis">
-       ToString(value)
+      1) Fan-out / fan-in
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#tointvalue" class="md-nav__link">
+  <a href="#2-parallel-map-helper" class="md-nav__link">
     <span class="md-ellipsis">
-       ToInt(value)
+      2) Parallel map helper
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#tofloatvalue" class="md-nav__link">
+  <a href="#3-handling-errors-with-tuples" class="md-nav__link">
     <span class="md-ellipsis">
-       ToFloat(value)
+      3) Handling errors with tuples
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#toboolvalue" class="md-nav__link">
+  <a href="#4-staggered-completion" class="md-nav__link">
     <span class="md-ellipsis">
-       ToBool(value)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#toarrayvalue" class="md-nav__link">
-    <span class="md-ellipsis">
-       ToArray(value)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tomapvalue" class="md-nav__link">
-    <span class="md-ellipsis">
-       ToMap(value)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cancastvalue-targettype" class="md-nav__link">
-    <span class="md-ellipsis">
-       CanCast(value, targetType)
+      4) Staggered completion
     </span>
   </a>
   
@@ -2159,55 +2090,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#type-conversion-matrix" class="md-nav__link">
+  <a href="#scheduler-api" class="md-nav__link">
     <span class="md-ellipsis">
-      Type Conversion Matrix
+      Scheduler API
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#error-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Error Handling
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-use-cases" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common Use Cases
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Common Use Cases">
+    <nav class="md-nav" aria-label="Scheduler API">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#data-validation-and-conversion" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Validation and Conversion
+      Overview
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#configuration-processing" class="md-nav__link">
+  <a href="#examples" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuration Processing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-structure-transformation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Structure Transformation
+      Examples
     </span>
   </a>
   
@@ -2219,42 +2123,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#integration-with-other-modules" class="md-nav__link">
+  <a href="#design-notes" class="md-nav__link">
     <span class="md-ellipsis">
-      Integration with Other Modules
+      Design notes
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Integration with Other Modules">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#json-and-cast-integration" class="md-nav__link">
-    <span class="md-ellipsis">
-      JSON and Cast Integration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#os-and-cast-integration" class="md-nav__link">
-    <span class="md-ellipsis">
-      OS and Cast Integration
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#see-also" class="md-nav__link">
     <span class="md-ellipsis">
-      See Also
+      See also
     </span>
   </a>
   
@@ -2276,427 +2156,192 @@
 
 
 
-<h1 id="cast-module"><code>cast</code> Module</h1>
-<p>The <code>cast</code> module provides comprehensive type conversion functions with robust error handling, making it easy to convert between different data types safely and predictably.</p>
-<h2 id="functions">Functions</h2>
-<h3 id="tostringvalue"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>ToString(value)</code></h3>
-<p>Converts any value to its string representation.</p>
-<p><strong>Parameters:</strong>
-- <code>value</code>: The value to convert to string (any type)</p>
-<p><strong>Returns:</strong>
-- <code>(string, error)</code>: String representation of the value</p>
-<p><strong>Examples:</strong>
-<div class="highlight"><pre><span></span><code>package main
-import fmt
-import cast
-
-var str1, err1 = cast.ToString(42)        // &quot;42&quot;
-var str2, err2 = cast.ToString(3.14)      // &quot;3.14&quot;
-var str3, err3 = cast.ToString(true)      // &quot;true&quot;
-var str4, err4 = cast.ToString(None)      // &quot;None&quot;
-var str5, err5 = cast.ToString({&quot;a&quot;: 1})  // &quot;{a: 1}&quot;
-
-fmt.Printf(&quot;Number: %s\n&quot;, str1)
-fmt.Printf(&quot;Float: %s\n&quot;, str2)
-fmt.Printf(&quot;Boolean: %s\n&quot;, str3)
-</code></pre></div></p>
-<hr />
-<h3 id="tointvalue"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>ToInt(value)</code></h3>
-<p>Converts a value to an integer with validation.</p>
-<p><strong>Parameters:</strong>
-- <code>value</code>: The value to convert (string, float, boolean, or integer)</p>
-<p><strong>Returns:</strong>
-- <code>(int, error)</code>: Integer representation of the value</p>
-<p><strong>Conversion Rules:</strong>
-- <strong>String</strong>: Must be a valid integer format
-- <strong>Float</strong>: Truncates decimal part
-- <strong>Boolean</strong>: <code>true</code> → 1, <code>false</code> → 0
-- <strong>Integer</strong>: Returns as-is
-- <strong>None</strong>: Returns error</p>
-<p><strong>Examples:</strong>
-<div class="highlight"><pre><span></span><code>package main
-import fmt
-import cast
-
-var int1, err1 = cast.ToInt(&quot;123&quot;)     // 123
-var int2, err2 = cast.ToInt(3.14)      // 3
-var int3, err3 = cast.ToInt(true)      // 1
-var int4, err4 = cast.ToInt(false)     // 0
-
-// Error handling
-var invalid, err5 = cast.ToInt(&quot;hello&quot;)
-if err5 != None {
-    fmt.Printf(&quot;Conversion failed: %s\n&quot;, err5)
-}
-</code></pre></div></p>
-<hr />
-<h3 id="tofloatvalue"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>ToFloat(value)</code></h3>
-<p>Converts a value to a floating-point number.</p>
-<p><strong>Parameters:</strong>
-- <code>value</code>: The value to convert (string, integer, boolean, or float)</p>
-<p><strong>Returns:</strong>
-- <code>(float, error)</code>: Float representation of the value</p>
-<p><strong>Conversion Rules:</strong>
-- <strong>String</strong>: Must be a valid float format
-- <strong>Integer</strong>: Converts to equivalent float
-- <strong>Boolean</strong>: <code>true</code> → 1.0, <code>false</code> → 0.0
-- <strong>Float</strong>: Returns as-is
-- <strong>None</strong>: Returns error</p>
-<p><strong>Examples:</strong>
-<div class="highlight"><pre><span></span><code>package main
-import fmt
-import cast
-
-var float1, err1 = cast.ToFloat(&quot;3.14159&quot;)  // 3.14159
-var float2, err2 = cast.ToFloat(42)         // 42.0
-var float3, err3 = cast.ToFloat(true)       // 1.0
-
-fmt.Printf(&quot;Pi: %s\n&quot;, float1)
-fmt.Printf(&quot;Answer: %s\n&quot;, float2)
-</code></pre></div></p>
-<hr />
-<h3 id="toboolvalue"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>ToBool(value)</code></h3>
-<p>Converts a value to a boolean with flexible conversion rules.</p>
-<p><strong>Parameters:</strong>
-- <code>value</code>: The value to convert (any type)</p>
-<p><strong>Returns:</strong>
-- <code>(bool, error)</code>: Boolean representation of the value</p>
-<p><strong>Conversion Rules:</strong>
-- <strong>String</strong>: 
-  - <code>"true"</code>, <code>"1"</code>, <code>"yes"</code>, <code>"on"</code> → <code>true</code>
-  - <code>"false"</code>, <code>"0"</code>, <code>"no"</code>, <code>"off"</code>, <code>""</code> → <code>false</code>
-  - Case-insensitive
-- <strong>Numbers</strong>: <code>0</code> → <code>false</code>, any other number → <code>true</code>
-- <strong>None</strong>: → <code>false</code>
-- <strong>Arrays/Maps</strong>: empty → <code>false</code>, non-empty → <code>true</code>
-- <strong>Boolean</strong>: Returns as-is</p>
-<p><strong>Examples:</strong>
-<div class="highlight"><pre><span></span><code>package main
-import fmt
-import cast
-
-var bool1, err1 = cast.ToBool(&quot;true&quot;)     // true
-var bool2, err2 = cast.ToBool(&quot;yes&quot;)      // true
-var bool3, err3 = cast.ToBool(&quot;1&quot;)        // true
-var bool4, err4 = cast.ToBool(0)          // false
-var bool5, err5 = cast.ToBool([])         // false (empty array)
-var bool6, err6 = cast.ToBool([1, 2])     // true (non-empty array)
-
-fmt.Printf(&quot;String to bool: %s\n&quot;, bool1)
-fmt.Printf(&quot;Array to bool: %s\n&quot;, bool6)
-</code></pre></div></p>
-<hr />
-<h3 id="toarrayvalue"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>ToArray(value)</code></h3>
-<p>Converts a value to an array.</p>
-<p><strong>Parameters:</strong>
-- <code>value</code>: The value to convert (string, map, or array)</p>
-<p><strong>Returns:</strong>
-- <code>(array, error)</code>: Array representation of the value</p>
-<p><strong>Conversion Rules:</strong>
-- <strong>String</strong>: Converts to array of characters
-- <strong>Map</strong>: Converts to array of <code>[key, value]</code> pairs
-- <strong>Array</strong>: Returns as-is
-- <strong>Other types</strong>: Returns error</p>
-<p><strong>Examples:</strong>
-<div class="highlight"><pre><span></span><code>package main
-import fmt
-import cast
-
-var arr1, err1 = cast.ToArray(&quot;hello&quot;)          // [&quot;h&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot;]
-var arr2, err2 = cast.ToArray({&quot;a&quot;: 1, &quot;b&quot;: 2}) // [[&quot;a&quot;, 1], [&quot;b&quot;, 2]]
-var arr3, err3 = cast.ToArray([1, 2, 3])        // [1, 2, 3]
-
-fmt.Printf(&quot;String to array: %s\n&quot;, arr1)
-fmt.Printf(&quot;Map to array: %s\n&quot;, arr2)
-</code></pre></div></p>
-<hr />
-<h3 id="tomapvalue"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>ToMap(value)</code></h3>
-<p>Converts a value to a map.</p>
-<p><strong>Parameters:</strong>
-- <code>value</code>: The value to convert (array of pairs or map)</p>
-<p><strong>Returns:</strong>
-- <code>(map, error)</code>: Map representation of the value</p>
-<p><strong>Conversion Rules:</strong>
-- <strong>Array</strong>: Must be array of <code>[key, value]</code> pairs with hashable keys
-- <strong>Map</strong>: Returns as-is
-- <strong>Other types</strong>: Returns error</p>
-<p><strong>Hashable Keys:</strong> Strings, integers, and booleans</p>
-<p><strong>Examples:</strong>
-<div class="highlight"><pre><span></span><code>package main
-import fmt
-import cast
-
-var map1, err1 = cast.ToMap([[&quot;a&quot;, 1], [&quot;b&quot;, 2], [&quot;c&quot;, 3]])  // {&quot;a&quot;: 1, &quot;b&quot;: 2, &quot;c&quot;: 3}
-var map2, err2 = cast.ToMap({&quot;x&quot;: 10, &quot;y&quot;: 20})             // {&quot;x&quot;: 10, &quot;y&quot;: 20}
-
-// Error case - invalid structure
-var invalid, err3 = cast.ToMap([1, 2, 3])  // Error: not pairs
-if err3 != None {
-    fmt.Printf(&quot;Conversion failed: %s\n&quot;, err3)
-}
-
-fmt.Printf(&quot;Array to map: %s\n&quot;, map1)
-</code></pre></div></p>
-<hr />
-<h3 id="cancastvalue-targettype"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>CanCast(value, targetType)</code></h3>
-<p>Checks if a value can be cast to a specific type without performing the conversion.</p>
-<p><strong>Parameters:</strong>
-- <code>value</code>: The value to check
-- <code>targetType</code>: Target type as string (<code>"string"</code>, <code>"int"</code>, <code>"float"</code>, <code>"bool"</code>, <code>"array"</code>, <code>"map"</code>)</p>
-<p><strong>Returns:</strong>
-- <code>(bool, error)</code>: <code>true</code> if casting is possible, <code>false</code> otherwise</p>
-<p><strong>Examples:</strong>
-<div class="highlight"><pre><span></span><code>package main
-import fmt
-import cast
-
-var canCast1, err1 = cast.CanCast(&quot;42&quot;, &quot;int&quot;)        // true
-var canCast2, err2 = cast.CanCast(&quot;hello&quot;, &quot;int&quot;)     // false
-var canCast3, err3 = cast.CanCast([1, 2], &quot;array&quot;)    // true
-var canCast4, err4 = cast.CanCast(&quot;anything&quot;, &quot;string&quot;) // true (everything can be string)
-
-// Use before casting to avoid errors
-if canCast1 {
-    var num, _ = cast.ToInt(&quot;42&quot;)
-    fmt.Printf(&quot;Converted: %s\n&quot;, num)
-}
-
-fmt.Printf(&quot;Can cast &#39;42&#39; to int: %s\n&quot;, canCast1)
-fmt.Printf(&quot;Can cast &#39;hello&#39; to int: %s\n&quot;, canCast2)
-</code></pre></div></p>
-<hr />
-<h2 id="type-conversion-matrix">Type Conversion Matrix</h2>
-<table>
-<thead>
-<tr>
-<th>From Type</th>
-<th>To String</th>
-<th>To Int</th>
-<th>To Float</th>
-<th>To Bool</th>
-<th>To Array</th>
-<th>To Map</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>String</strong></td>
-<td>✅ Always</td>
-<td>✅ If valid</td>
-<td>✅ If valid</td>
-<td>✅ Flexible rules</td>
-<td>✅ To chars</td>
-<td>❌ No</td>
-</tr>
-<tr>
-<td><strong>Integer</strong></td>
-<td>✅ Always</td>
-<td>✅ Always</td>
-<td>✅ Always</td>
-<td>✅ 0→false, other→true</td>
-<td>❌ No</td>
-<td>❌ No</td>
-</tr>
-<tr>
-<td><strong>Float</strong></td>
-<td>✅ Always</td>
-<td>✅ Truncate</td>
-<td>✅ Always</td>
-<td>✅ 0.0→false, other→true</td>
-<td>❌ No</td>
-<td>❌ No</td>
-</tr>
-<tr>
-<td><strong>Boolean</strong></td>
-<td>✅ Always</td>
-<td>✅ 1/0</td>
-<td>✅ 1.0/0.0</td>
-<td>✅ Always</td>
-<td>❌ No</td>
-<td>❌ No</td>
-</tr>
-<tr>
-<td><strong>Array</strong></td>
-<td>✅ Always</td>
-<td>❌ No</td>
-<td>❌ No</td>
-<td>✅ Empty→false</td>
-<td>✅ Always</td>
-<td>✅ If pairs</td>
-</tr>
-<tr>
-<td><strong>Map</strong></td>
-<td>✅ Always</td>
-<td>❌ No</td>
-<td>❌ No</td>
-<td>✅ Empty→false</td>
-<td>✅ To pairs</td>
-<td>✅ Always</td>
-</tr>
-<tr>
-<td><strong>None</strong></td>
-<td>✅ "None"</td>
-<td>❌ Error</td>
-<td>❌ Error</td>
-<td>✅ false</td>
-<td>❌ Error</td>
-<td>❌ Error</td>
-</tr>
-</tbody>
-</table>
-<h2 id="error-handling">Error Handling</h2>
-<p>The cast module provides detailed error messages for failed conversions:</p>
-<div class="highlight"><pre><span></span><code>package main
-import fmt
-import cast
-
-// Invalid string to integer
-var result, err = cast.ToInt(&quot;not_a_number&quot;)
-if err != None {
-    fmt.Printf(&quot;Error: %s\n&quot;, err)
-    // Output: Error: cast.ToInt: cannot convert string &quot;not_a_number&quot; to integer: strconv.ParseInt: parsing &quot;not_a_number&quot;: invalid syntax
-}
-
-// Invalid array to map (not pairs)
-var mapResult, mapErr = cast.ToMap([1, 2, 3])
-if mapErr != None {
-    fmt.Printf(&quot;Error: %s\n&quot;, mapErr)
-    // Output: Error: cast.ToMap: array element 0 is not an array (expected [key, value] pairs)
-}
-
-// Unsupported conversion
-var boolResult, boolErr = cast.ToBool(&quot;maybe&quot;)
-if boolErr != None {
-    fmt.Printf(&quot;Error: %s\n&quot;, boolErr)
-    // Output: Error: cast.ToBool: cannot convert string &quot;maybe&quot; to boolean (valid values: true/false, 1/0, yes/no, on/off)
-}
-</code></pre></div>
-<h2 id="common-use-cases">Common Use Cases</h2>
-<h3 id="data-validation-and-conversion">Data Validation and Conversion</h3>
-<div class="highlight"><pre><span></span><code>package main
-import fmt
-import cast
-
-function processUserInput(input string, expectedType string) {
-    var canConvert, _ = cast.CanCast(input, expectedType)
-    if !canConvert {
-        fmt.Printf(&quot;Invalid input: cannot convert &#39;%s&#39; to %s\n&quot;, input, expectedType)
-        return
-    }
-
-    if expectedType == &quot;int&quot; {
-        var value, err = cast.ToInt(input)
-        if err == None {
-            fmt.Printf(&quot;Processing integer: %s\n&quot;, value)
-        }
-    } else if expectedType == &quot;float&quot; {
-        var value, err = cast.ToFloat(input)
-        if err == None {
-            fmt.Printf(&quot;Processing float: %s\n&quot;, value)
-        }
-    }
-}
-
-processUserInput(&quot;42&quot;, &quot;int&quot;)      // Processing integer: 42
-processUserInput(&quot;hello&quot;, &quot;int&quot;)   // Invalid input: cannot convert &#39;hello&#39; to int
-</code></pre></div>
-<h3 id="configuration-processing">Configuration Processing</h3>
-<div class="highlight"><pre><span></span><code>package main
-import fmt
-import cast
-
-function parseConfig(configMap map) {
-    // Convert string values to appropriate types
-    var portStr = configMap[&quot;port&quot;]
-    var port, portErr = cast.ToInt(portStr)
-
-    var enabledStr = configMap[&quot;enabled&quot;]
-    var enabled, enabledErr = cast.ToBool(enabledStr)
-
-    if portErr == None &amp;&amp; enabledErr == None {
-        fmt.Printf(&quot;Server config - Port: %s, Enabled: %s\n&quot;, port, enabled)
-    }
-}
-
-var config = {&quot;port&quot;: &quot;8080&quot;, &quot;enabled&quot;: &quot;true&quot;}
-parseConfig(config)  // Server config - Port: 8080, Enabled: true
-</code></pre></div>
-<h3 id="data-structure-transformation">Data Structure Transformation</h3>
-<div class="highlight"><pre><span></span><code>package main
-import fmt
-import cast
-
-// Convert CSV-like data to structured format
-var csvData = [[&quot;name&quot;, &quot;age&quot;], [&quot;Alice&quot;, &quot;25&quot;], [&quot;Bob&quot;, &quot;30&quot;]]
-var headers = csvData[0]
-var rows = csvData[1:]
-
-var records = []
-for row in rows {
-    var record = {}
-    for i, value in row {
-        var header = headers[i]
-        if header == &quot;age&quot; {
-            var ageInt, _ = cast.ToInt(value)
-            record[header] = ageInt
-        } else {
-            record[header] = value
-        }
-    }
-    records = append(records, record)
-}
-
-fmt.Printf(&quot;Structured data: %s\n&quot;, records)
-// Output: Structured data: [{&quot;name&quot;: &quot;Alice&quot;, &quot;age&quot;: 25}, {&quot;name&quot;: &quot;Bob&quot;, &quot;age&quot;: 30}]
-</code></pre></div>
-<h2 id="integration-with-other-modules">Integration with Other Modules</h2>
-<h3 id="json-and-cast-integration">JSON and Cast Integration</h3>
-<div class="highlight"><pre><span></span><code>package main
-import fmt
-import json
-import cast
-
-// Parse JSON and convert specific fields
-var jsonStr = &quot;{\&quot;id\&quot;: \&quot;123\&quot;, \&quot;active\&quot;: \&quot;true\&quot;, \&quot;score\&quot;: \&quot;95.5\&quot;}&quot;
-var data, _ = json.Unmarshal(jsonStr)
-
-var id, _ = cast.ToInt(data[&quot;id&quot;])
-var active, _ = cast.ToBool(data[&quot;active&quot;])
-var score, _ = cast.ToFloat(data[&quot;score&quot;])
-
-var processedData = {
-    &quot;id&quot;: id,
-    &quot;active&quot;: active,
-    &quot;score&quot;: score
-}
-
-fmt.Printf(&quot;Processed: %s\n&quot;, processedData)
-// Output: Processed: {&quot;id&quot;: 123, &quot;active&quot;: true, &quot;score&quot;: 95.5}
-</code></pre></div>
-<h3 id="os-and-cast-integration">OS and Cast Integration</h3>
-<div class="highlight"><pre><span></span><code>package main
-import fmt
-import os
-import cast
-
-// Convert environment variables to appropriate types
-var portEnv, _ = os.Getenv(&quot;PORT&quot;)
-var debugEnv, _ = os.Getenv(&quot;DEBUG&quot;)
-
-var port, portErr = cast.ToInt(portEnv)
-var debug, debugErr = cast.ToBool(debugEnv)
-
-if portErr == None &amp;&amp; debugErr == None {
-    fmt.Printf(&quot;Config - Port: %s, Debug: %s\n&quot;, port, debug)
-}
-</code></pre></div>
-<h2 id="see-also">See Also</h2>
+<h1 id="concurrency-do-await-sleep">Concurrency: do, await, sleep</h1>
+<p>Harneet provides a simple, readable concurrency model inspired by Go’s goroutines and modern async/await syntax:</p>
 <ul>
-<li><a href="../json/">JSON</a> - JSON serialization and parsing</li>
-<li><a href="../strings/">Strings</a> - String manipulation functions</li>
-<li><a href="../../general/arrays/">Arrays</a> - Array operations</li>
-<li><a href="../../general/maps/">Maps</a> - Map data structures</li>
-<li><a href="../../error_handling_system/">Error Handling</a> - Error handling patterns</li>
+<li><strong>do</strong> spawns work concurrently and returns immediately with a Task handle.</li>
+<li><strong>await(task)</strong> blocks until the Task completes and returns the function’s result.</li>
+<li><strong>sleep(ms)</strong> suspends the current task for the given milliseconds.</li>
+</ul>
+<p>Under the hood, a <code>do</code> expression runs your call in a lightweight task and returns a <code>Task</code> object you can <code>await</code> later.</p>
+<hr />
+<h2 id="quick-start">Quick start</h2>
+<div class="highlight"><pre><span></span><code>package main
+import fmt
+
+function work(name string, ms int) string {
+    fmt.Printf(&quot;start %s\n&quot;, name)
+    sleep(ms)
+    fmt.Printf(&quot;done  %s\n&quot;, name)
+    return name
+}
+
+fmt.Println(&quot;\n=== Concurrency Demo: do / await / sleep ===&quot;)
+
+var t1 = do work(&quot;A&quot;, 150)
+var t2 = do work(&quot;B&quot;, 60)
+
+var r2 = await(t2)   // B likely finishes first
+var r1 = await(t1)
+
+fmt.Printf(&quot;Results: %s %s\n&quot;, r1, r2)
+fmt.Println(&quot;✅ Concurrency example complete!\n&quot;)
+</code></pre></div>
+<p>What happens:
+- <code>do work(...)</code> starts immediately and returns a <code>Task</code> handle without waiting.
+- <code>await(task)</code> waits for completion and yields the underlying return value.
+- <code>sleep(ms)</code> pauses the running task only.</p>
+<hr />
+<h2 id="api-reference">API reference</h2>
+<ul>
+<li><strong>do <call> → Task</strong></li>
+<li>Starts the call concurrently and returns a <code>Task</code> handle.</li>
+<li>
+<p>Example: <code>var t = do fetch(url)</code></p>
+</li>
+<li>
+<p><strong>await(task: Task) → any</strong></p>
+</li>
+<li>Waits for the task to finish and returns the call’s result (or <code>None</code>).</li>
+<li>
+<p>Example: <code>var data = await(t)</code></p>
+</li>
+<li>
+<p><strong>sleep(ms: int) → None</strong></p>
+</li>
+<li>Suspends the current task for <code>ms</code> milliseconds (must be non-negative).</li>
+<li>Example: <code>sleep(100)</code></li>
+</ul>
+<p>Notes:
+- Errors are returned by your function in the normal way (e.g., tuples <code>(value, error)</code>), and <code>await()</code> simply yields that same return value. There is no separate “rejection” channel.
+- Task inspection prints whether a task is pending or done with its result.</p>
+<hr />
+<h2 id="patterns">Patterns</h2>
+<h3 id="1-fan-out-fan-in">1) Fan-out / fan-in</h3>
+<p>Spawn many tasks, then gather results:</p>
+<div class="highlight"><pre><span></span><code>import fmt
+
+function square(n int) int {
+    sleep(30) // simulate work
+    return n * n
+}
+
+var nums = [1, 2, 3, 4, 5]
+var tasks = []
+for n in nums { tasks = append(tasks, do square(n)) }
+
+var results = []
+for t in tasks { results = append(results, await(t)) }
+
+fmt.Printf(&quot;squares: %v\n&quot;, results)  // [1, 4, 9, 16, 25]
+</code></pre></div>
+<h3 id="2-parallel-map-helper">2) Parallel map helper</h3>
+<div class="highlight"><pre><span></span><code>function pmap(values array, f function(any) any) array {
+    var tasks = []
+    for v in values { tasks = append(tasks, do f(v)) }
+
+    var out = []
+    for t in tasks { out = append(out, await(t)) }
+    return out
+}
+
+function inc(x int) int { return x + 1 }
+
+var res = pmap([1,2,3,4], inc)
+// res = [2,3,4,5]
+</code></pre></div>
+<h3 id="3-handling-errors-with-tuples">3) Handling errors with tuples</h3>
+<p>If your function returns <code>(value, error)</code>, just await and handle the tuple:</p>
+<div class="highlight"><pre><span></span><code>import fmt
+
+function fetch(id int) (string, error) {
+    if id &lt; 0 { return (&quot;&quot;, errors.New(&quot;bad id&quot;)) }
+    sleep(20)
+    return (fmt.Sprintf(&quot;item-%d&quot;, id), None)
+}
+
+var t = do fetch(42)
+var item, err = await(t)
+if err != None { fmt.Printf(&quot;error: %v\n&quot;, err) }
+else { fmt.Printf(&quot;ok: %s\n&quot;, item) }
+</code></pre></div>
+<h3 id="4-staggered-completion">4) Staggered completion</h3>
+<p>Tasks can complete in any order; await determines when you observe results:</p>
+<div class="highlight"><pre><span></span><code>var t1 = do work(&quot;A&quot;, 200)
+var t2 = do work(&quot;B&quot;, 20)
+
+// If you await t1 first, you’ll block until A is done
+var r1 = await(t1)
+var r2 = await(t2)
+</code></pre></div>
+<hr />
+<h2 id="scheduler-api">Scheduler API</h2>
+<p>Harneet includes a small, developer-friendly scheduler API for orchestrating tasks and handling timeouts and cancellation. It is designed to be type-safe and never swallow errors.</p>
+<h3 id="overview">Overview</h3>
+<ul>
+<li><strong>TaskGroup</strong>: group and operate on multiple tasks together</li>
+<li>Methods: <code>add(task)</code>, <code>addAll(array)</code>, <code>awaitAll() -&gt; array</code>, <code>awaitAny() -&gt; (index int, result any)</code>, <code>len() -&gt; int</code>, <code>clear()</code>, <code>tasks() -&gt; array</code></li>
+<li><strong>Timeouts</strong>: <code>awaitWithTimeout(task, ms) -&gt; (result any, error)</code></li>
+<li><strong>Cancellation</strong>: cooperative token primitives</li>
+<li><code>newCancelToken() -&gt; CancelToken</code></li>
+<li><code>cancel(token)</code></li>
+<li><code>isCancelled(token) -&gt; bool</code></li>
+<li><code>sleepUntil(ms, token) -&gt; (None, error)</code></li>
+</ul>
+<h3 id="examples">Examples</h3>
+<div class="highlight"><pre><span></span><code>import fmt
+
+function work(name string, ms int) string {
+    sleep(ms)
+    return name
+}
+
+// 1) Grouping tasks
+var g = newGroup()
+var t1 = do work(&quot;A&quot;, 120)
+var t2 = do work(&quot;B&quot;, 40)
+g.add(t1).add(t2)
+
+var idx, first = g.awaitAny()     // returns (index, result)
+fmt.Printf(&quot;first: %d %v\n&quot;, idx, first)
+
+var all = g.awaitAll()            // returns [result1, result2]
+fmt.Println(all)
+
+// 2) Timeout awaiting a task
+var slow = do work(&quot;SLOW&quot;, 200)
+var value, err = awaitWithTimeout(slow, 75)
+if err != None { fmt.Printf(&quot;timeout: %v\n&quot;, err) }
+else { fmt.Printf(&quot;value: %v\n&quot;, value) }
+
+// 3) Cancellation
+function cancellable(name string, ms int, token any) (string, error) {
+    var _, e = sleepUntil(ms, token)
+    if e != None { return (&quot;&quot;, e) }
+    return (name, None)
+}
+
+var tok = newCancelToken()
+var tc = do cancellable(&quot;X&quot;, 200, tok)
+cancel(tok)
+var res, cerr = await(tc)
+if cerr != None { fmt.Printf(&quot;cancelled: %v\n&quot;, cerr) }
+</code></pre></div>
+<hr />
+<h2 id="design-notes">Design notes</h2>
+<ul>
+<li>Concurrency is implemented via lightweight tasks; <code>do</code> is analogous to spawning a goroutine.</li>
+<li><code>await()</code> acts like a join on a single task and returns the task’s result.</li>
+<li><code>sleep()</code> blocks only the current task, not the whole program.</li>
+<li>Built-in timeouts and cancellation are available:</li>
+<li><code>awaitWithTimeout(task, ms)</code> produces <code>(result, error)</code> and never swallows errors.</li>
+<li><code>newCancelToken()</code> + <code>cancel()</code> enable cooperative cancellation; pair with <code>sleepUntil(ms, token)</code>.</li>
+</ul>
+<hr />
+<h2 id="see-also">See also</h2>
+<ul>
+<li>Example file: <code>examples/concurrency/do_await_sleep_test.ha</code></li>
+<li>Control flow: <code>site/docs/general/control_flow.md</code></li>
 </ul>
 
 
@@ -2735,7 +2380,7 @@ if portErr == None &amp;&amp; debugErr == None {
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../general/scoping_variable_management/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Scoping and Variable Management">
+          <a href="../control_flow/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Control Flow">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2745,20 +2390,20 @@ if portErr == None &amp;&amp; debugErr == None {
                 Previous
               </span>
               <div class="md-ellipsis">
-                Scoping and Variable Management
+                Control Flow
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../general/import_system/" class="md-footer__link md-footer__link--next" aria-label="Next: Import System">
+          <a href="../pattern_matching/" class="md-footer__link md-footer__link--next" aria-label="Next: Pattern Matching">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Import System
+                Pattern Matching
               </div>
             </div>
             <div class="md-footer__button md-icon">

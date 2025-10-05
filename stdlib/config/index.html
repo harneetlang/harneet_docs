@@ -1,0 +1,3400 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../collections/">
+      
+      
+        <link rel="next" href="../db/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>config - Harneet Programming Language</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#config-module" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Harneet Programming Language" class="md-header__button md-logo" aria-label="Harneet Programming Language" data-md-component="logo">
+      
+  <img src="../../assets/images/harneet.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Harneet Programming Language
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              config
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light Mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Harneet Programming Language" class="md-nav__button md-logo" aria-label="Harneet Programming Language" data-md-component="logo">
+      
+  <img src="../../assets/images/harneet.png" alt="logo">
+
+    </a>
+    Harneet Programming Language
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../command_line/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Command Line
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    General
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/comments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/data_types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Types
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/variable_declaration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variable Declaration & Assignment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/const/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Const Declarations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/keywords_identifiers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Keywords and Identifiers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/operators_and_expressions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operators and Expressions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/arrays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrays
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/maps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Maps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/control_flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Control Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/concurrency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Concurrency (do / await / sleep)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/pattern_matching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pattern Matching
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../break_continue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Break & Continue
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/block_structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Block Structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/scoping_variable_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scoping and Variable Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cast/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cast
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/import_system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Import System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Module System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/unicode_support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unicode Support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../error_handling_system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Error Handling System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Functions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Functions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functions/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functions/arrow_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrow Functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functions/functional/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Functional features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functions/advanced_features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Standard Library
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Standard Library
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fmt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    fmt
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    input
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    strings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    math
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arrays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    arrays
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../collections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    collections
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    config
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    config
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import" class="md-nav__link">
+    <span class="md-ellipsis">
+      Import
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Reading
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File Reading">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#readfilefilepath-string-map-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReadFile(filepath string) (map, error)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#format-specific-parsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Format-Specific Parsing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Format-Specific Parsing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parseyamlcontent-string-map-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      ParseYAML(content string) (map, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parsetomlcontent-string-map-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      ParseTOML(content string) (map, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parsexmlcontent-string-map-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      ParseXML(content string) (map, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parsecsvcontent-string-array-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      ParseCSV(content string) (array, error)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#value-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Value Extraction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Value Extraction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#two-access-styles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Two Access Styles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Two Access Styles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-direct-dot-access-recommended-for-simple-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Direct Dot Access (Recommended for Simple Cases)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-type-safe-getters-recommended-for-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Type-Safe Getters (Recommended for Validation)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getconfig-map-path-string-any-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get(config map, path string) (any, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getstringconfig-map-path-string-string-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetString(config map, path string) (string, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getintconfig-map-path-string-int-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetInt(config map, path string) (int, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getfloatconfig-map-path-string-float64-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetFloat(config map, path string) (float64, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getboolconfig-map-path-string-bool-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetBool(config map, path string) (bool, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getarrayconfig-map-path-string-array-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetArray(config map, path string) (array, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getmapconfig-map-path-string-map-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetMap(config map, path string) (map, error)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default Values
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Default Values">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getstringorconfig-map-path-string-default-string-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetStringOr(config map, path string, default string) string
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getintorconfig-map-path-string-default-int-int" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetIntOr(config map, path string, default int) int
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getfloatorconfig-map-path-string-default-float64-float64" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetFloatOr(config map, path string, default float64) float64
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getboolorconfig-map-path-string-default-bool-bool" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetBoolOr(config map, path string, default bool) bool
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#readfilewithenvfilepath-string-prefix-string-map-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReadFileWithEnv(filepath string, prefix string) (map, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mergeconfigsconfigs-map-map-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      MergeConfigs(configs ...map) (map, error)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-World Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-World Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-docker-compose-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 1: Docker Compose Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-application-configuration-yaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 2: Application Configuration (YAML)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-editor-configuration-toml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 3: Editor Configuration (TOML)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-4-environment-variable-overlay" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 4: Environment Variable Overlay
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-5-multi-environment-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 5: Multi-Environment Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-use-direct-dot-access-for-simple-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Use Direct Dot Access for Simple Cases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-use-type-safe-getters-for-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Use Type-Safe Getters for Validation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-always-provide-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Always Provide Defaults
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-handle-missing-keys-gracefully" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Handle Missing Keys Gracefully
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-use-environment-overlays-for-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Use Environment Overlays for Deployment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type Inference
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    db
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    structs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/struct_field_assignment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    struct field assignment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    json
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_12" id="__nav_6_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    HTTP
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_12">
+            <span class="md-nav__icon md-icon"></span>
+            HTTP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/client/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTTP Client
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/requests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Request Building
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/responses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Response Handling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTTP Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/routing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Routing & Mux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/middleware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Middleware
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/auth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Authentication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/cookies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cookies & Sessions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examples & Patterns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    assert
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    errors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    file
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    path
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../os/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    os
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datetime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    datetime
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    flags
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    exec
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../regex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    regex
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../box/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    box
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reflect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    reflect
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../type_system_safety/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Type System & Safety
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../any_type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The any Type
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../comprehensive_examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comprehensive Language Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import" class="md-nav__link">
+    <span class="md-ellipsis">
+      Import
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Reading
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File Reading">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#readfilefilepath-string-map-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReadFile(filepath string) (map, error)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#format-specific-parsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Format-Specific Parsing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Format-Specific Parsing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parseyamlcontent-string-map-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      ParseYAML(content string) (map, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parsetomlcontent-string-map-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      ParseTOML(content string) (map, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parsexmlcontent-string-map-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      ParseXML(content string) (map, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parsecsvcontent-string-array-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      ParseCSV(content string) (array, error)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#value-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Value Extraction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Value Extraction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#two-access-styles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Two Access Styles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Two Access Styles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-direct-dot-access-recommended-for-simple-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Direct Dot Access (Recommended for Simple Cases)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-type-safe-getters-recommended-for-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Type-Safe Getters (Recommended for Validation)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getconfig-map-path-string-any-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get(config map, path string) (any, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getstringconfig-map-path-string-string-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetString(config map, path string) (string, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getintconfig-map-path-string-int-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetInt(config map, path string) (int, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getfloatconfig-map-path-string-float64-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetFloat(config map, path string) (float64, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getboolconfig-map-path-string-bool-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetBool(config map, path string) (bool, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getarrayconfig-map-path-string-array-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetArray(config map, path string) (array, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getmapconfig-map-path-string-map-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetMap(config map, path string) (map, error)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default Values
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Default Values">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getstringorconfig-map-path-string-default-string-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetStringOr(config map, path string, default string) string
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getintorconfig-map-path-string-default-int-int" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetIntOr(config map, path string, default int) int
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getfloatorconfig-map-path-string-default-float64-float64" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetFloatOr(config map, path string, default float64) float64
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getboolorconfig-map-path-string-default-bool-bool" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetBoolOr(config map, path string, default bool) bool
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#readfilewithenvfilepath-string-prefix-string-map-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReadFileWithEnv(filepath string, prefix string) (map, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mergeconfigsconfigs-map-map-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      MergeConfigs(configs ...map) (map, error)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-World Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-World Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-docker-compose-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 1: Docker Compose Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-application-configuration-yaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 2: Application Configuration (YAML)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-editor-configuration-toml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 3: Editor Configuration (TOML)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-4-environment-variable-overlay" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 4: Environment Variable Overlay
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-5-multi-environment-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 5: Multi-Environment Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-use-direct-dot-access-for-simple-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Use Direct Dot Access for Simple Cases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-use-type-safe-getters-for-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Use Type-Safe Getters for Validation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-always-provide-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Always Provide Defaults
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-handle-missing-keys-gracefully" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Handle Missing Keys Gracefully
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-use-environment-overlays-for-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Use Environment Overlays for Deployment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type Inference
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="config-module">Config Module</h1>
+<p>The <code>config</code> module provides comprehensive configuration file parsing and management, similar to Viper in Go. It supports multiple formats (YAML, TOML, XML, CSV) with full type safety, nested structure access, and environment variable overlay.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>✅ <strong>Multiple Formats</strong>: YAML, TOML, XML, and CSV support</li>
+<li>✅ <strong>Auto-Detection</strong>: Automatic format detection from file extension</li>
+<li>✅ <strong>Type-Safe Access</strong>: Dedicated getters with type validation</li>
+<li>✅ <strong>Dot Notation</strong>: Navigate nested structures with simple paths</li>
+<li>✅ <strong>Direct Property Access</strong>: Use <code>cfg.key</code> for clean code</li>
+<li>✅ <strong>Default Values</strong>: Built-in support for fallback values</li>
+<li>✅ <strong>Environment Variables</strong>: Overlay environment variables on config</li>
+<li>✅ <strong>Config Merging</strong>: Combine multiple configuration sources</li>
+<li>✅ <strong>Complex Structures</strong>: Handle deeply nested maps and arrays</li>
+</ul>
+<h2 id="import">Import</h2>
+<div class="highlight"><pre><span></span><code>import config
+</code></pre></div>
+<h2 id="file-reading">File Reading</h2>
+<h3 id="readfilefilepath-string-map-error">ReadFile(filepath string) (map, error)</h3>
+<p>Reads and parses a configuration file, automatically detecting the format from the file extension.</p>
+<p><strong>Supported Extensions:</strong>
+- <code>.yaml</code> / <code>.yml</code> - YAML format
+- <code>.toml</code> - TOML format
+- <code>.xml</code> - XML format
+- <code>.csv</code> - CSV format (returns array of maps)</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code>import config
+import fmt
+
+// Read YAML configuration
+var cfg, err = config.ReadFile(&quot;config.yaml&quot;)
+if err != None {
+    fmt.Printf(&quot;Error: %v\n&quot;, err)
+    return
+}
+
+// Access values
+var host = cfg.server.host
+var port = cfg.server.port
+fmt.Printf(&quot;Server: %s:%d\n&quot;, host, port)
+</code></pre></div>
+<h2 id="format-specific-parsing">Format-Specific Parsing</h2>
+<h3 id="parseyamlcontent-string-map-error">ParseYAML(content string) (map, error)</h3>
+<p>Parses YAML content from a string.</p>
+<div class="highlight"><pre><span></span><code>var yamlStr = &quot;name: MyApp\nversion: 1.0.0\nenabled: true&quot;
+var cfg, err = config.ParseYAML(yamlStr)
+if err == None {
+    var name = cfg.name  // &quot;MyApp&quot;
+    fmt.Printf(&quot;App: %s\n&quot;, name)
+}
+</code></pre></div>
+<h3 id="parsetomlcontent-string-map-error">ParseTOML(content string) (map, error)</h3>
+<p>Parses TOML content from a string.</p>
+<div class="highlight"><pre><span></span><code>var tomlStr = &quot;[server]\nhost = \&quot;localhost\&quot;\nport = 8080&quot;
+var cfg, err = config.ParseTOML(tomlStr)
+if err == None {
+    var host = cfg.server.host  // &quot;localhost&quot;
+}
+</code></pre></div>
+<h3 id="parsexmlcontent-string-map-error">ParseXML(content string) (map, error)</h3>
+<p>Parses XML content from a string.</p>
+<div class="highlight"><pre><span></span><code>var xmlStr = &quot;&lt;config&gt;&lt;server&gt;&lt;host&gt;localhost&lt;/host&gt;&lt;/server&gt;&lt;/config&gt;&quot;
+var cfg, err = config.ParseXML(xmlStr)
+</code></pre></div>
+<h3 id="parsecsvcontent-string-array-error">ParseCSV(content string) (array, error)</h3>
+<p>Parses CSV content with automatic header detection and type inference.</p>
+<div class="highlight"><pre><span></span><code>var csvData = &quot;name,age,active\nAlice,30,true\nBob,25,false&quot;
+var rows, err = config.ParseCSV(csvData)
+if err == None {
+    for row in rows {
+        var name = row.name
+        var age = row.age
+        fmt.Printf(&quot;%s is %d years old\n&quot;, name, age)
+    }
+}
+</code></pre></div>
+<h2 id="value-extraction">Value Extraction</h2>
+<h3 id="two-access-styles">Two Access Styles</h3>
+<p>The config module supports two ways to access values:</p>
+<h4 id="1-direct-dot-access-recommended-for-simple-cases">1. Direct Dot Access (Recommended for Simple Cases)</h4>
+<div class="highlight"><pre><span></span><code>var cfg, _ = config.ReadFile(&quot;config.yaml&quot;)
+
+// Direct property access
+var version = cfg.version
+var host = cfg.server.host
+var port = cfg.server.port
+
+// Deep nesting (4+ levels)
+var dbPassword = cfg.services.database.environment.POSTGRES_PASSWORD
+</code></pre></div>
+<p><strong>Advantages:</strong>
+- Clean, readable code
+- Natural JavaScript/Python-like syntax
+- Returns <code>None</code> for missing keys</p>
+<h4 id="2-type-safe-getters-recommended-for-validation">2. Type-Safe Getters (Recommended for Validation)</h4>
+<div class="highlight"><pre><span></span><code>// Type-safe extraction with error handling
+var host, err = config.GetString(cfg, &quot;server.host&quot;)
+var port, err = config.GetInt(cfg, &quot;server.port&quot;)
+var ssl, err = config.GetBool(cfg, &quot;server.ssl&quot;)
+</code></pre></div>
+<p><strong>Advantages:</strong>
+- Explicit type validation
+- Error tuples for missing keys
+- Type conversion included</p>
+<h3 id="getconfig-map-path-string-any-error">Get(config map, path string) (any, error)</h3>
+<p>Retrieves a value from config using dot-notation path.</p>
+<div class="highlight"><pre><span></span><code>var value, err = config.Get(cfg, &quot;database.connection.host&quot;)
+if err == None {
+    fmt.Printf(&quot;Value: %v\n&quot;, value)
+}
+</code></pre></div>
+<h3 id="getstringconfig-map-path-string-string-error">GetString(config map, path string) (string, error)</h3>
+<p>Retrieves a string value with type validation.</p>
+<div class="highlight"><pre><span></span><code>var hostname, err = config.GetString(cfg, &quot;server.hostname&quot;)
+if err != None {
+    fmt.Printf(&quot;Error: %v\n&quot;, err)
+}
+</code></pre></div>
+<h3 id="getintconfig-map-path-string-int-error">GetInt(config map, path string) (int, error)</h3>
+<p>Retrieves an integer value with type validation.</p>
+<div class="highlight"><pre><span></span><code>var port, err = config.GetInt(cfg, &quot;server.port&quot;)
+if err != None {
+    fmt.Println(&quot;Port not found or invalid&quot;)
+}
+</code></pre></div>
+<h3 id="getfloatconfig-map-path-string-float64-error">GetFloat(config map, path string) (float64, error)</h3>
+<p>Retrieves a float value with type validation.</p>
+<div class="highlight"><pre><span></span><code>var timeout, err = config.GetFloat(cfg, &quot;api.timeout&quot;)
+</code></pre></div>
+<h3 id="getboolconfig-map-path-string-bool-error">GetBool(config map, path string) (bool, error)</h3>
+<p>Retrieves a boolean value with type validation.</p>
+<div class="highlight"><pre><span></span><code>var debug, err = config.GetBool(cfg, &quot;features.debug&quot;)
+</code></pre></div>
+<h3 id="getarrayconfig-map-path-string-array-error">GetArray(config map, path string) (array, error)</h3>
+<p>Retrieves an array value.</p>
+<div class="highlight"><pre><span></span><code>var servers, err = config.GetArray(cfg, &quot;api.endpoints&quot;)
+if err == None {
+    for server in servers {
+        fmt.Printf(&quot;Endpoint: %v\n&quot;, server)
+    }
+}
+</code></pre></div>
+<h3 id="getmapconfig-map-path-string-map-error">GetMap(config map, path string) (map, error)</h3>
+<p>Retrieves a nested map.</p>
+<div class="highlight"><pre><span></span><code>var database, err = config.GetMap(cfg, &quot;database&quot;)
+if err == None {
+    var host = database.host
+    var port = database.port
+}
+</code></pre></div>
+<h2 id="default-values">Default Values</h2>
+<h3 id="getstringorconfig-map-path-string-default-string-string">GetStringOr(config map, path string, default string) string</h3>
+<p>Returns the string value or a default if not found.</p>
+<div class="highlight"><pre><span></span><code>var env = config.GetStringOr(cfg, &quot;environment&quot;, &quot;development&quot;)
+var host = config.GetStringOr(cfg, &quot;server.host&quot;, &quot;localhost&quot;)
+</code></pre></div>
+<h3 id="getintorconfig-map-path-string-default-int-int">GetIntOr(config map, path string, default int) int</h3>
+<div class="highlight"><pre><span></span><code>var port = config.GetIntOr(cfg, &quot;server.port&quot;, 8080)
+var timeout = config.GetIntOr(cfg, &quot;timeout&quot;, 30)
+</code></pre></div>
+<h3 id="getfloatorconfig-map-path-string-default-float64-float64">GetFloatOr(config map, path string, default float64) float64</h3>
+<div class="highlight"><pre><span></span><code>var ratio = config.GetFloatOr(cfg, &quot;performance.ratio&quot;, 0.75)
+</code></pre></div>
+<h3 id="getboolorconfig-map-path-string-default-bool-bool">GetBoolOr(config map, path string, default bool) bool</h3>
+<div class="highlight"><pre><span></span><code>var debug = config.GetBoolOr(cfg, &quot;debug&quot;, false)
+var enabled = config.GetBoolOr(cfg, &quot;features.logging&quot;, true)
+</code></pre></div>
+<h2 id="advanced-features">Advanced Features</h2>
+<h3 id="readfilewithenvfilepath-string-prefix-string-map-error">ReadFileWithEnv(filepath string, prefix string) (map, error)</h3>
+<p>Reads a config file and overlays environment variables.</p>
+<div class="highlight"><pre><span></span><code>// Reads config.yaml and overlays environment variables
+// with prefix APP (e.g., APP_SERVER_HOST, APP_SERVER_PORT)
+var cfg, err = config.ReadFileWithEnv(&quot;config.yaml&quot;, &quot;APP&quot;)
+
+// Environment variable APP_SERVER_HOST overrides cfg.server.host
+var host = cfg.server.host
+</code></pre></div>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Set environment variables</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">APP_SERVER_HOST</span><span class="o">=</span>production.example.com
+<span class="nb">export</span><span class="w"> </span><span class="nv">APP_SERVER_PORT</span><span class="o">=</span><span class="m">9000</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// These will use environment values if set
+var cfg, _ = config.ReadFileWithEnv(&quot;config.yaml&quot;, &quot;APP&quot;)
+var host = cfg.server.host  // &quot;production.example.com&quot; from env
+var port = cfg.server.port  // 9000 from env
+</code></pre></div>
+<h3 id="mergeconfigsconfigs-map-map-error">MergeConfigs(configs ...map) (map, error)</h3>
+<p>Merges multiple configuration maps. Later configs override earlier ones.</p>
+<div class="highlight"><pre><span></span><code>// Base configuration
+var baseConfig = {&quot;timeout&quot;: 30, &quot;retries&quot;: 3}
+
+// Environment-specific overrides
+var prodConfig = {&quot;timeout&quot;: 60, &quot;retries&quot;: 5, &quot;cache&quot;: true}
+
+// Merge configurations
+var finalConfig, _ = config.MergeConfigs(baseConfig, prodConfig)
+
+// finalConfig: {timeout: 60, retries: 5, cache: true}
+</code></pre></div>
+<h2 id="real-world-examples">Real-World Examples</h2>
+<h3 id="example-1-docker-compose-configuration">Example 1: Docker Compose Configuration</h3>
+<p><strong>docker-compose.yaml:</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3.8&#39;</span>
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">web</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx:latest</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;80:80&quot;</span>
+<span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app-network</span>
+<span class="w">  </span><span class="nt">database</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres:latest</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">POSTGRES_DB</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mydb</span>
+<span class="w">      </span><span class="nt">POSTGRES_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user</span>
+<span class="w">      </span><span class="nt">POSTGRES_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db-data:/var/lib/postgresql/data</span>
+</code></pre></div></p>
+<p><strong>Parsing with Harneet:</strong>
+<div class="highlight"><pre><span></span><code>import config
+import fmt
+
+function main() {
+    var cfg, err = config.ReadFile(&quot;docker-compose.yaml&quot;)
+    if err != None {
+        fmt.Printf(&quot;Error: %v\n&quot;, err)
+        return
+    }
+
+    // Direct dot access (clean and readable)
+    var version = cfg.version
+    var webImage = cfg.services.web.image
+    var dbPassword = cfg.services.database.environment.POSTGRES_PASSWORD
+
+    fmt.Printf(&quot;Docker Compose Version: %s\n&quot;, version)
+    fmt.Printf(&quot;Web Image: %s\n&quot;, webImage)
+    fmt.Printf(&quot;Database Password: %s\n&quot;, dbPassword)
+
+    // Type-safe getters (with validation)
+    var webPorts, _ = config.GetArray(cfg, &quot;services.web.ports&quot;)
+    var dbVolumes, _ = config.GetArray(cfg, &quot;services.database.volumes&quot;)
+
+    fmt.Printf(&quot;Web Ports: %v\n&quot;, webPorts)
+    fmt.Printf(&quot;Database Volumes: %v\n&quot;, dbVolumes)
+}
+</code></pre></div></p>
+<h3 id="example-2-application-configuration-yaml">Example 2: Application Configuration (YAML)</h3>
+<p><strong>config.yaml:</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">server</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">localhost</span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span>
+<span class="w">  </span><span class="nt">ssl</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+
+<span class="nt">database</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db.example.com</span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5432</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myapp</span>
+<span class="w">  </span><span class="nt">pool_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+
+<span class="nt">features</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">logging</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">cache_enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+
+<span class="nt">api</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">  </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">  </span><span class="nt">endpoints</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://api1.example.com</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://api2.example.com</span>
+</code></pre></div></p>
+<p><strong>Using the config:</strong>
+<div class="highlight"><pre><span></span><code>import config
+import fmt
+
+function main() {
+    var cfg, _ = config.ReadFile(&quot;config.yaml&quot;)
+
+    // Extract server configuration
+    var host = cfg.server.host
+    var port = cfg.server.port
+    var ssl = cfg.server.ssl
+
+    fmt.Printf(&quot;Starting server on %s:%d (SSL: %v)\n&quot;, host, port, ssl)
+
+    // Database configuration with defaults
+    var dbHost = config.GetStringOr(cfg, &quot;database.host&quot;, &quot;localhost&quot;)
+    var dbPort = config.GetIntOr(cfg, &quot;database.port&quot;, 5432)
+    var poolSize = config.GetIntOr(cfg, &quot;database.pool_size&quot;, 5)
+
+    fmt.Printf(&quot;Database: %s:%d (pool: %d)\n&quot;, dbHost, dbPort, poolSize)
+
+    // Feature flags
+    var debug = config.GetBoolOr(cfg, &quot;features.debug&quot;, false)
+    var logging = config.GetBoolOr(cfg, &quot;features.logging&quot;, true)
+
+    if debug {
+        fmt.Println(&quot;Debug mode enabled&quot;)
+    }
+    if logging {
+        fmt.Println(&quot;Logging enabled&quot;)
+    }
+
+    // API endpoints
+    var endpoints, _ = config.GetArray(cfg, &quot;api.endpoints&quot;)
+    fmt.Println(&quot;API Endpoints:&quot;)
+    for endpoint in endpoints {
+        fmt.Printf(&quot;  - %v\n&quot;, endpoint)
+    }
+}
+</code></pre></div></p>
+<h3 id="example-3-editor-configuration-toml">Example 3: Editor Configuration (TOML)</h3>
+<p><strong>config.toml:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">theme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;dark&quot;</span>
+
+<span class="k">[editor]</span>
+<span class="n">line-number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;relative&quot;</span>
+<span class="n">rainbow-brackets</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<span class="n">max-panel-width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">120</span>
+
+<span class="k">[editor.cursor-shape]</span>
+<span class="n">insert</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;block&quot;</span>
+<span class="n">normal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;block&quot;</span>
+
+<span class="k">[editor.lsp]</span>
+<span class="n">display-inlay-hints</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+<span class="n">display-messages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+
+<span class="k">[keys.normal]</span>
+<span class="n">tab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;rotate_view&quot;</span>
+<span class="n">C-p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;file_picker&quot;</span>
+</code></pre></div></p>
+<p><strong>Reading the configuration:</strong>
+<div class="highlight"><pre><span></span><code>import config
+import fmt
+
+function main() {
+    var cfg, _ = config.ReadFile(&quot;config.toml&quot;)
+
+    // Simple values
+    var theme = cfg.theme
+    fmt.Printf(&quot;Theme: %s\n&quot;, theme)
+
+    // Nested configuration (use getters for hyphenated keys)
+    var lineNumber, _ = config.GetString(cfg, &quot;editor.line-number&quot;)
+    var rainbowBrackets, _ = config.GetBool(cfg, &quot;editor.rainbow-brackets&quot;)
+    var maxWidth, _ = config.GetInt(cfg, &quot;editor.max-panel-width&quot;)
+
+    fmt.Printf(&quot;Line Numbers: %s\n&quot;, lineNumber)
+    fmt.Printf(&quot;Rainbow Brackets: %v\n&quot;, rainbowBrackets)
+    fmt.Printf(&quot;Max Width: %d\n&quot;, maxWidth)
+
+    // Deep nesting
+    var insertCursor, _ = config.GetString(cfg, &quot;editor.cursor-shape.insert&quot;)
+    var normalCursor, _ = config.GetString(cfg, &quot;editor.cursor-shape.normal&quot;)
+
+    fmt.Printf(&quot;Cursor Shapes - Insert: %s, Normal: %s\n&quot;, insertCursor, normalCursor)
+
+    // Key bindings
+    var tabAction, _ = config.GetString(cfg, &quot;keys.normal.tab&quot;)
+    var ctrlP, _ = config.GetString(cfg, &quot;keys.normal.C-p&quot;)
+
+    fmt.Printf(&quot;Tab: %s, Ctrl-P: %s\n&quot;, tabAction, ctrlP)
+}
+</code></pre></div></p>
+<h3 id="example-4-environment-variable-overlay">Example 4: Environment Variable Overlay</h3>
+<p><strong>config.yaml:</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">server</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">localhost</span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span>
+<span class="nt">database</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">localhost</span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5432</span>
+</code></pre></div></p>
+<p><strong>Using environment overlay:</strong>
+<div class="highlight"><pre><span></span><code>import config
+import fmt
+
+function main() {
+    // Read config with APP_ prefix for environment variables
+    // Environment: APP_SERVER_HOST=production.com, APP_SERVER_PORT=443
+    var cfg, _ = config.ReadFileWithEnv(&quot;config.yaml&quot;, &quot;APP&quot;)
+
+    // These will use environment values if set
+    var serverHost = cfg.server.host  // &quot;production.com&quot; from APP_SERVER_HOST
+    var serverPort = cfg.server.port  // 443 from APP_SERVER_PORT
+
+    fmt.Printf(&quot;Server: %s:%d\n&quot;, serverHost, serverPort)
+}
+</code></pre></div></p>
+<h3 id="example-5-multi-environment-configuration">Example 5: Multi-Environment Configuration</h3>
+<div class="highlight"><pre><span></span><code>import config
+import os
+import fmt
+
+function main() {
+    // Load base configuration
+    var baseConfig, _ = config.ReadFile(&quot;config.base.yaml&quot;)
+
+    // Load environment-specific configuration
+    var env, _ = os.Getenv(&quot;ENVIRONMENT&quot;)
+    if env == &quot;&quot; {
+        env = &quot;development&quot;
+    }
+
+    var envConfigPath = &quot;config.&quot; + env + &quot;.yaml&quot;
+    var envConfig, err = config.ReadFile(envConfigPath)
+
+    var finalConfig = baseConfig
+    if err == None {
+        // Merge environment-specific overrides
+        finalConfig, _ = config.MergeConfigs(baseConfig, envConfig)
+    }
+
+    // Overlay environment variables
+    finalConfig, _ = config.ReadFileWithEnv(&quot;config.base.yaml&quot;, &quot;APP&quot;)
+
+    // Use the final merged configuration
+    var host = finalConfig.server.host
+    var port = finalConfig.server.port
+
+    fmt.Printf(&quot;Running on %s:%d (env: %s)\n&quot;, host, port, env)
+}
+</code></pre></div>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="1-use-direct-dot-access-for-simple-cases">1. Use Direct Dot Access for Simple Cases</h3>
+<div class="highlight"><pre><span></span><code>// Clean and readable
+var host = cfg.server.host
+var port = cfg.server.port
+var ssl = cfg.server.ssl
+</code></pre></div>
+<h3 id="2-use-type-safe-getters-for-validation">2. Use Type-Safe Getters for Validation</h3>
+<div class="highlight"><pre><span></span><code>// When you need explicit error handling
+var timeout, err = config.GetInt(cfg, &quot;api.timeout&quot;)
+if err != None {
+    fmt.Println(&quot;Timeout not configured, using default&quot;)
+    timeout = 30
+}
+</code></pre></div>
+<h3 id="3-always-provide-defaults">3. Always Provide Defaults</h3>
+<div class="highlight"><pre><span></span><code>// Use GetXOr functions for resilient code
+var host = config.GetStringOr(cfg, &quot;server.host&quot;, &quot;localhost&quot;)
+var port = config.GetIntOr(cfg, &quot;server.port&quot;, 8080)
+var debug = config.GetBoolOr(cfg, &quot;debug&quot;, false)
+</code></pre></div>
+<h3 id="4-handle-missing-keys-gracefully">4. Handle Missing Keys Gracefully</h3>
+<div class="highlight"><pre><span></span><code>var optionalFeature = cfg.features.experimental
+if optionalFeature == None {
+    fmt.Println(&quot;Experimental features not configured&quot;)
+} else {
+    // Use the feature
+}
+</code></pre></div>
+<h3 id="5-use-environment-overlays-for-deployment">5. Use Environment Overlays for Deployment</h3>
+<div class="highlight"><pre><span></span><code>// Development: use config file values
+// Production: override with environment variables
+var cfg, _ = config.ReadFileWithEnv(&quot;config.yaml&quot;, &quot;APP&quot;)
+</code></pre></div>
+<h2 id="error-handling">Error Handling</h2>
+<p>The config module follows Harneet's error handling patterns:</p>
+<div class="highlight"><pre><span></span><code>// Pattern 1: Check error tuple
+var cfg, err = config.ReadFile(&quot;config.yaml&quot;)
+if err != None {
+    fmt.Printf(&quot;Failed to read config: %v\n&quot;, err)
+    return
+}
+
+// Pattern 2: Use defaults
+var host = config.GetStringOr(cfg, &quot;server.host&quot;, &quot;localhost&quot;)
+
+// Pattern 3: Check for None
+var optional = cfg.optional.feature
+if optional == None {
+    fmt.Println(&quot;Optional feature not configured&quot;)
+}
+</code></pre></div>
+<h2 id="type-inference">Type Inference</h2>
+<p>The config module automatically infers types from values:</p>
+<ul>
+<li><strong>Boolean</strong>: <code>true</code>, <code>false</code></li>
+<li><strong>Integer</strong>: <code>42</code>, <code>8080</code>, <code>-100</code></li>
+<li><strong>Float</strong>: <code>3.14</code>, <code>0.5</code></li>
+<li><strong>String</strong>: Everything else</li>
+</ul>
+<div class="highlight"><pre><span></span><code>// CSV parsing with automatic type inference
+var csvData = &quot;name,age,active\nAlice,30,true\nBob,25,false&quot;
+var rows, _ = config.ParseCSV(csvData)
+
+var firstRow = rows[0]
+var age = firstRow.age      // Automatically inferred as integer (30)
+var active = firstRow.active // Automatically inferred as boolean (true)
+</code></pre></div>
+<h2 id="summary">Summary</h2>
+<p>The <code>config</code> module provides a comprehensive, Viper-like configuration management system for Harneet:</p>
+<ul>
+<li>✅ <strong>Multiple formats</strong>: YAML, TOML, XML, CSV</li>
+<li>✅ <strong>Two access styles</strong>: Direct dot access and type-safe getters</li>
+<li>✅ <strong>Deep nesting</strong>: 5+ levels of nested structures</li>
+<li>✅ <strong>Type safety</strong>: Automatic type conversion and validation</li>
+<li>✅ <strong>Defaults</strong>: Built-in fallback support</li>
+<li>✅ <strong>Environment overlays</strong>: Seamless environment variable integration</li>
+<li>✅ <strong>Config merging</strong>: Combine multiple sources</li>
+<li>✅ <strong>Production-ready</strong>: Handles complex real-world configurations</li>
+</ul>
+<p>Perfect for building applications with flexible, maintainable configuration management!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../collections/" class="md-footer__link md-footer__link--prev" aria-label="Previous: collections">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                collections
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../db/" class="md-footer__link md-footer__link--next" aria-label="Next: db">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                db
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2025 Harneet Programming Language — Built with ❤️ by Gagan Janjua
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.collapse", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.footer", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3877 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../config/">
+      
+      
+        <link rel="next" href="../structs/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>db - Harneet Programming Language</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#database-module" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Harneet Programming Language" class="md-header__button md-logo" aria-label="Harneet Programming Language" data-md-component="logo">
+      
+  <img src="../../assets/images/harneet.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Harneet Programming Language
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              db
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light Mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Harneet Programming Language" class="md-nav__button md-logo" aria-label="Harneet Programming Language" data-md-component="logo">
+      
+  <img src="../../assets/images/harneet.png" alt="logo">
+
+    </a>
+    Harneet Programming Language
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../command_line/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Command Line
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    General
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/comments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/data_types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Types
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/variable_declaration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variable Declaration & Assignment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/const/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Const Declarations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/keywords_identifiers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Keywords and Identifiers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/operators_and_expressions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operators and Expressions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/arrays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrays
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/maps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Maps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/control_flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Control Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/concurrency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Concurrency (do / await / sleep)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/pattern_matching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pattern Matching
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../break_continue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Break & Continue
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/block_structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Block Structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/scoping_variable_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scoping and Variable Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cast/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cast
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/import_system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Import System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Module System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/unicode_support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unicode Support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../error_handling_system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Error Handling System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Functions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Functions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functions/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functions/arrow_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrow Functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functions/functional/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Functional features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functions/advanced_features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Standard Library
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Standard Library
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fmt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    fmt
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    input
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    strings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    math
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arrays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    arrays
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../collections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    collections
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    config
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    db
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    db
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import" class="md-nav__link">
+    <span class="md-ellipsis">
+      Import
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connection-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connection Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connection Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opendriver-string-dsn-string-connection-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open(driver string, dsn string) (connection, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#closeconn-connection-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Close(conn connection) error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pingconn-connection-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ping(conn connection) error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-pool-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connection Pool Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connection Pool Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setmaxopenconnsconn-connection-n-int-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetMaxOpenConns(conn connection, n int) None
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setmaxidleconnsconn-connection-n-int-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetMaxIdleConns(conn connection, n int) None
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setconnmaxlifetimeconn-connection-seconds-int-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetConnMaxLifetime(conn connection, seconds int) None
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-execution-sqlc-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query Execution (SQLC-style)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Query Execution (SQLC-style)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#queryconn-connection-sql-string-args-arraymap-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query(conn connection, sql string, ...args) (array[map], error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queryrowconn-connection-sql-string-args-map-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      QueryRow(conn connection, sql string, ...args) (map, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execconn-connection-sql-string-args-result-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exec(conn connection, sql string, ...args) (result, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lastinsertidresult-int-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      LastInsertId(result) (int, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rowsaffectedresult-int-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      RowsAffected(result) (int, error)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transaction-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transaction Support
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transaction Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beginconn-connection-transaction-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Begin(conn connection) (transaction, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#committx-transaction-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commit(tx transaction) error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rollbacktx-transaction-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rollback(tx transaction) error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#txquerytx-transaction-sql-string-args-arraymap-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      TxQuery(tx transaction, sql string, ...args) (array[map], error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#txexectx-transaction-sql-string-args-result-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      TxExec(tx transaction, sql string, ...args) (result, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transaction-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transaction Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orm-features-gorm-inspired" class="md-nav__link">
+    <span class="md-ellipsis">
+      ORM Features (GORM-inspired)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ORM Features (GORM-inspired)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#createconn-connection-table-string-data-map-int-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create(conn connection, table string, data map) (int, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#findconn-connection-table-string-conditions-map-arraymap-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find(conn connection, table string, conditions map) (array[map], error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#findoneconn-connection-table-string-conditions-map-map-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      FindOne(conn connection, table string, conditions map) (map, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updateconn-connection-table-string-conditions-map-data-map-int-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update(conn connection, table string, conditions map, data map) (int, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleteconn-connection-table-string-conditions-map-int-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete(conn connection, table string, conditions map) (int, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#countconn-connection-table-string-conditions-map-int-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Count(conn connection, table string, conditions map) (int, error)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-migrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Migrations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Database Migrations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#migration-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migration Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Migration Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#migrateupconn-connection-version-int-name-string-upsql-string-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      MigrateUp(conn connection, version int, name string, upSQL string) error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migratedownconn-connection-version-int-downsql-string-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      MigrateDown(conn connection, version int, downSQL string) error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getmigrationversionconn-connection-int-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetMigrationVersion(conn connection) (int, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getmigrationhistoryconn-connection-arraymap-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetMigrationHistory(conn connection) (array[map], error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migratetoversionconn-connection-targetversion-int-migrations-array-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      MigrateToVersion(conn connection, targetVersion int, migrations array) error
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migration-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migration Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-based-migrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      File-Based Migrations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File-Based Migrations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-1-json-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 1: JSON File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-2-individual-sql-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 2: Individual SQL Files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migration-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migration Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-other-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration with Other Modules
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration with Other Modules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSON Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Map Integration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-always-close-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Always Close Connections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-use-connection-pooling-for-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Use Connection Pooling for Production
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-use-transactions-for-multiple-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Use Transactions for Multiple Operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-use-parameterized-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Use Parameterized Queries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-handle-errors-appropriately" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Handle Errors Appropriately
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    structs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/struct_field_assignment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    struct field assignment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    json
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_12" id="__nav_6_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    HTTP
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_12">
+            <span class="md-nav__icon md-icon"></span>
+            HTTP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/client/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTTP Client
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/requests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Request Building
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/responses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Response Handling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTTP Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/routing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Routing & Mux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/middleware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Middleware
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/auth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Authentication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/cookies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cookies & Sessions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examples & Patterns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    assert
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    errors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    file
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    path
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../os/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    os
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datetime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    datetime
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    flags
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    exec
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../regex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    regex
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../box/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    box
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reflect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    reflect
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../type_system_safety/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Type System & Safety
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../any_type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The any Type
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../comprehensive_examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comprehensive Language Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import" class="md-nav__link">
+    <span class="md-ellipsis">
+      Import
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connection-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connection Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connection Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opendriver-string-dsn-string-connection-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open(driver string, dsn string) (connection, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#closeconn-connection-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Close(conn connection) error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pingconn-connection-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ping(conn connection) error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-pool-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connection Pool Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connection Pool Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setmaxopenconnsconn-connection-n-int-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetMaxOpenConns(conn connection, n int) None
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setmaxidleconnsconn-connection-n-int-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetMaxIdleConns(conn connection, n int) None
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setconnmaxlifetimeconn-connection-seconds-int-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetConnMaxLifetime(conn connection, seconds int) None
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-execution-sqlc-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query Execution (SQLC-style)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Query Execution (SQLC-style)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#queryconn-connection-sql-string-args-arraymap-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query(conn connection, sql string, ...args) (array[map], error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queryrowconn-connection-sql-string-args-map-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      QueryRow(conn connection, sql string, ...args) (map, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execconn-connection-sql-string-args-result-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exec(conn connection, sql string, ...args) (result, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lastinsertidresult-int-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      LastInsertId(result) (int, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rowsaffectedresult-int-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      RowsAffected(result) (int, error)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transaction-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transaction Support
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transaction Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beginconn-connection-transaction-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Begin(conn connection) (transaction, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#committx-transaction-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commit(tx transaction) error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rollbacktx-transaction-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rollback(tx transaction) error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#txquerytx-transaction-sql-string-args-arraymap-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      TxQuery(tx transaction, sql string, ...args) (array[map], error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#txexectx-transaction-sql-string-args-result-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      TxExec(tx transaction, sql string, ...args) (result, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transaction-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transaction Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orm-features-gorm-inspired" class="md-nav__link">
+    <span class="md-ellipsis">
+      ORM Features (GORM-inspired)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ORM Features (GORM-inspired)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#createconn-connection-table-string-data-map-int-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create(conn connection, table string, data map) (int, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#findconn-connection-table-string-conditions-map-arraymap-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find(conn connection, table string, conditions map) (array[map], error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#findoneconn-connection-table-string-conditions-map-map-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      FindOne(conn connection, table string, conditions map) (map, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updateconn-connection-table-string-conditions-map-data-map-int-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update(conn connection, table string, conditions map, data map) (int, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleteconn-connection-table-string-conditions-map-int-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete(conn connection, table string, conditions map) (int, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#countconn-connection-table-string-conditions-map-int-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Count(conn connection, table string, conditions map) (int, error)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-migrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Migrations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Database Migrations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#migration-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migration Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Migration Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#migrateupconn-connection-version-int-name-string-upsql-string-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      MigrateUp(conn connection, version int, name string, upSQL string) error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migratedownconn-connection-version-int-downsql-string-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      MigrateDown(conn connection, version int, downSQL string) error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getmigrationversionconn-connection-int-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetMigrationVersion(conn connection) (int, error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getmigrationhistoryconn-connection-arraymap-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetMigrationHistory(conn connection) (array[map], error)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migratetoversionconn-connection-targetversion-int-migrations-array-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      MigrateToVersion(conn connection, targetVersion int, migrations array) error
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migration-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migration Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-based-migrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      File-Based Migrations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File-Based Migrations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-1-json-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 1: JSON File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-2-individual-sql-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 2: Individual SQL Files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migration-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migration Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-other-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration with Other Modules
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration with Other Modules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSON Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Map Integration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-always-close-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Always Close Connections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-use-connection-pooling-for-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Use Connection Pooling for Production
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-use-transactions-for-multiple-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Use Transactions for Multiple Operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-use-parameterized-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Use Parameterized Queries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-handle-errors-appropriately" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Handle Errors Appropriately
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="database-module">Database Module</h1>
+<p>The <code>db</code> module provides comprehensive SQL database connectivity with connection pooling, transaction support, and GORM-inspired ORM features. It supports SQLite3, PostgreSQL, and MySQL databases with SQLC-like query workflows.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>✅ <strong>Multiple Database Support</strong>: SQLite3, PostgreSQL, MySQL</li>
+<li>✅ <strong>Connection Pooling</strong>: Configurable pool size and connection lifetime</li>
+<li>✅ <strong>SQLC-style Queries</strong>: Type-safe query execution with parameter binding</li>
+<li>✅ <strong>Transaction Support</strong>: Manual and automatic transaction management</li>
+<li>✅ <strong>GORM-inspired ORM</strong>: Simple CRUD operations with map-based data</li>
+<li>✅ <strong>Map Integration</strong>: Results returned as Harneet maps</li>
+<li>✅ <strong>JSON Ready</strong>: Seamless JSON serialization of query results</li>
+</ul>
+<h2 id="import">Import</h2>
+<div class="highlight"><pre><span></span><code>import db
+</code></pre></div>
+<h2 id="connection-management">Connection Management</h2>
+<h3 id="opendriver-string-dsn-string-connection-error">Open(driver string, dsn string) (connection, error)</h3>
+<p>Opens a database connection with the specified driver and data source name.</p>
+<p><strong>Supported Drivers:</strong>
+- <code>sqlite3</code> - SQLite file-based database
+- <code>postgres</code> - PostgreSQL database
+- <code>mysql</code> - MySQL database</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code>import db
+import fmt
+
+// SQLite3
+var conn, err = db.Open(&quot;sqlite3&quot;, &quot;myapp.db&quot;)
+
+// PostgreSQL
+var conn, err = db.Open(&quot;postgres&quot;, &quot;host=localhost user=postgres password=secret dbname=mydb sslmode=disable&quot;)
+
+// MySQL
+var conn, err = db.Open(&quot;mysql&quot;, &quot;user:password@tcp(localhost:3306)/dbname&quot;)
+
+if err != None {
+    fmt.Printf(&quot;Connection failed: %v\n&quot;, err)
+    return
+}
+</code></pre></div>
+<h3 id="closeconn-connection-error">Close(conn connection) error</h3>
+<p>Closes the database connection and releases resources.</p>
+<div class="highlight"><pre><span></span><code>var err = db.Close(conn)
+if err != None {
+    fmt.Printf(&quot;Close error: %v\n&quot;, err)
+}
+</code></pre></div>
+<h3 id="pingconn-connection-error">Ping(conn connection) error</h3>
+<p>Verifies the database connection is alive.</p>
+<div class="highlight"><pre><span></span><code>var err = db.Ping(conn)
+if err != None {
+    fmt.Println(&quot;Database connection lost&quot;)
+}
+</code></pre></div>
+<h3 id="connection-pool-configuration">Connection Pool Configuration</h3>
+<h4 id="setmaxopenconnsconn-connection-n-int-none">SetMaxOpenConns(conn connection, n int) None</h4>
+<p>Sets the maximum number of open connections to the database.</p>
+<div class="highlight"><pre><span></span><code>db.SetMaxOpenConns(conn, 25)  // Max 25 connections
+</code></pre></div>
+<h4 id="setmaxidleconnsconn-connection-n-int-none">SetMaxIdleConns(conn connection, n int) None</h4>
+<p>Sets the maximum number of idle connections in the pool.</p>
+<div class="highlight"><pre><span></span><code>db.SetMaxIdleConns(conn, 5)  // Keep 5 idle connections
+</code></pre></div>
+<h4 id="setconnmaxlifetimeconn-connection-seconds-int-none">SetConnMaxLifetime(conn connection, seconds int) None</h4>
+<p>Sets the maximum lifetime of a connection in seconds.</p>
+<div class="highlight"><pre><span></span><code>db.SetConnMaxLifetime(conn, 300)  // 5 minutes max lifetime
+</code></pre></div>
+<h2 id="query-execution-sqlc-style">Query Execution (SQLC-style)</h2>
+<h3 id="queryconn-connection-sql-string-args-arraymap-error">Query(conn connection, sql string, ...args) (array[map], error)</h3>
+<p>Executes a SQL query that returns multiple rows. Results are returned as an array of maps where each map represents a row.</p>
+<div class="highlight"><pre><span></span><code>// Query with no parameters
+var users, err = db.Query(conn, &quot;SELECT * FROM users&quot;)
+
+// Query with parameters (uses ? placeholders)
+var adults, err = db.Query(conn, &quot;SELECT * FROM users WHERE age &gt;= ?&quot;, 18)
+
+// Multiple parameters
+var results, err = db.Query(conn, 
+    &quot;SELECT * FROM users WHERE age &gt;= ? AND city = ?&quot;, 
+    18, &quot;New York&quot;)
+
+if err == None {
+    for row in results {
+        fmt.Printf(&quot;ID: %d, Name: %s, Age: %d\n&quot;, 
+            row[&quot;id&quot;], row[&quot;name&quot;], row[&quot;age&quot;])
+    }
+}
+</code></pre></div>
+<h3 id="queryrowconn-connection-sql-string-args-map-error">QueryRow(conn connection, sql string, ...args) (map, error)</h3>
+<p>Executes a SQL query that returns a single row.</p>
+<div class="highlight"><pre><span></span><code>var user, err = db.QueryRow(conn, &quot;SELECT * FROM users WHERE id = ?&quot;, 1)
+if err != None {
+    fmt.Println(&quot;User not found&quot;)
+    return
+}
+
+fmt.Printf(&quot;User: %s, Email: %s\n&quot;, user[&quot;name&quot;], user[&quot;email&quot;])
+</code></pre></div>
+<h3 id="execconn-connection-sql-string-args-result-error">Exec(conn connection, sql string, ...args) (result, error)</h3>
+<p>Executes a SQL statement (INSERT, UPDATE, DELETE) that doesn't return rows.</p>
+<div class="highlight"><pre><span></span><code>// INSERT
+var result, err = db.Exec(conn, 
+    &quot;INSERT INTO users (name, email, age) VALUES (?, ?, ?)&quot;,
+    &quot;Alice&quot;, &quot;alice@example.com&quot;, 30)
+
+// UPDATE
+var result, err = db.Exec(conn,
+    &quot;UPDATE users SET age = ? WHERE id = ?&quot;,
+    31, 1)
+
+// DELETE
+var result, err = db.Exec(conn,
+    &quot;DELETE FROM users WHERE age &lt; ?&quot;,
+    18)
+</code></pre></div>
+<h3 id="lastinsertidresult-int-error">LastInsertId(result) (int, error)</h3>
+<p>Returns the last inserted ID from an INSERT operation.</p>
+<div class="highlight"><pre><span></span><code>var result, err = db.Exec(conn, &quot;INSERT INTO users (name) VALUES (?)&quot;, &quot;Bob&quot;)
+if err == None {
+    var id, _ = db.LastInsertId(result)
+    fmt.Printf(&quot;New user ID: %d\n&quot;, id)
+}
+</code></pre></div>
+<h3 id="rowsaffectedresult-int-error">RowsAffected(result) (int, error)</h3>
+<p>Returns the number of rows affected by an UPDATE or DELETE operation.</p>
+<div class="highlight"><pre><span></span><code>var result, err = db.Exec(conn, &quot;UPDATE users SET active = 1&quot;)
+if err == None {
+    var count, _ = db.RowsAffected(result)
+    fmt.Printf(&quot;Updated %d users\n&quot;, count)
+}
+</code></pre></div>
+<h2 id="transaction-support">Transaction Support</h2>
+<h3 id="beginconn-connection-transaction-error">Begin(conn connection) (transaction, error)</h3>
+<p>Starts a new database transaction.</p>
+<div class="highlight"><pre><span></span><code>var tx, err = db.Begin(conn)
+if err != None {
+    fmt.Println(&quot;Failed to start transaction&quot;)
+    return
+}
+</code></pre></div>
+<h3 id="committx-transaction-error">Commit(tx transaction) error</h3>
+<p>Commits the current transaction.</p>
+<div class="highlight"><pre><span></span><code>var err = db.Commit(tx)
+if err != None {
+    fmt.Println(&quot;Commit failed&quot;)
+}
+</code></pre></div>
+<h3 id="rollbacktx-transaction-error">Rollback(tx transaction) error</h3>
+<p>Rolls back the current transaction.</p>
+<div class="highlight"><pre><span></span><code>var err = db.Rollback(tx)
+if err != None {
+    fmt.Println(&quot;Rollback failed&quot;)
+}
+</code></pre></div>
+<h3 id="txquerytx-transaction-sql-string-args-arraymap-error">TxQuery(tx transaction, sql string, ...args) (array[map], error)</h3>
+<p>Executes a query within a transaction.</p>
+<div class="highlight"><pre><span></span><code>var tx, _ = db.Begin(conn)
+var users, err = db.TxQuery(tx, &quot;SELECT * FROM users WHERE age &gt; ?&quot;, 18)
+</code></pre></div>
+<h3 id="txexectx-transaction-sql-string-args-result-error">TxExec(tx transaction, sql string, ...args) (result, error)</h3>
+<p>Executes a statement within a transaction.</p>
+<div class="highlight"><pre><span></span><code>var tx, _ = db.Begin(conn)
+var result, err = db.TxExec(tx, &quot;INSERT INTO users (name) VALUES (?)&quot;, &quot;Charlie&quot;)
+</code></pre></div>
+<h3 id="transaction-example">Transaction Example</h3>
+<div class="highlight"><pre><span></span><code>import db
+import fmt
+
+function transferMoney(conn, fromId int, toId int, amount int) error {
+    // Start transaction
+    var tx, err = db.Begin(conn)
+    if err != None {
+        return err
+    }
+
+    // Deduct from sender
+    var result1, err1 = db.TxExec(tx, 
+        &quot;UPDATE accounts SET balance = balance - ? WHERE user_id = ?&quot;,
+        amount, fromId)
+
+    // Add to receiver
+    var result2, err2 = db.TxExec(tx,
+        &quot;UPDATE accounts SET balance = balance + ? WHERE user_id = ?&quot;,
+        amount, toId)
+
+    // Check if both succeeded
+    if err1 != None or err2 != None {
+        db.Rollback(tx)
+        fmt.Println(&quot;Transaction rolled back&quot;)
+        return err1
+    }
+
+    // Commit transaction
+    var commitErr = db.Commit(tx)
+    if commitErr != None {
+        db.Rollback(tx)
+        return commitErr
+    }
+
+    fmt.Println(&quot;Transfer successful&quot;)
+    return None
+}
+</code></pre></div>
+<h2 id="orm-features-gorm-inspired">ORM Features (GORM-inspired)</h2>
+<h3 id="createconn-connection-table-string-data-map-int-error">Create(conn connection, table string, data map) (int, error)</h3>
+<p>Inserts a new record into the database. Returns the inserted ID.</p>
+<div class="highlight"><pre><span></span><code>var userData = {
+    &quot;name&quot;: &quot;Alice&quot;,
+    &quot;email&quot;: &quot;alice@example.com&quot;,
+    &quot;age&quot;: 30
+}
+
+var id, err = db.Create(conn, &quot;users&quot;, userData)
+if err == None {
+    fmt.Printf(&quot;Created user with ID: %d\n&quot;, id)
+}
+</code></pre></div>
+<h3 id="findconn-connection-table-string-conditions-map-arraymap-error">Find(conn connection, table string, conditions map) (array[map], error)</h3>
+<p>Retrieves records from the database matching the conditions.</p>
+<div class="highlight"><pre><span></span><code>// Find all users aged 30
+var users, err = db.Find(conn, &quot;users&quot;, {&quot;age&quot;: 30})
+
+// Find users in a specific city
+var users, err = db.Find(conn, &quot;users&quot;, {&quot;city&quot;: &quot;New York&quot;})
+
+// Find with multiple conditions (AND)
+var users, err = db.Find(conn, &quot;users&quot;, {&quot;age&quot;: 30, &quot;city&quot;: &quot;New York&quot;})
+
+if err == None {
+    for user in users {
+        fmt.Printf(&quot;User: %s\n&quot;, user[&quot;name&quot;])
+    }
+}
+</code></pre></div>
+<h3 id="findoneconn-connection-table-string-conditions-map-map-error">FindOne(conn connection, table string, conditions map) (map, error)</h3>
+<p>Retrieves a single record from the database.</p>
+<div class="highlight"><pre><span></span><code>var user, err = db.FindOne(conn, &quot;users&quot;, {&quot;id&quot;: 1})
+if err != None {
+    fmt.Println(&quot;User not found&quot;)
+    return
+}
+
+fmt.Printf(&quot;Found: %s\n&quot;, user[&quot;name&quot;])
+</code></pre></div>
+<h3 id="updateconn-connection-table-string-conditions-map-data-map-int-error">Update(conn connection, table string, conditions map, data map) (int, error)</h3>
+<p>Updates records in the database. Returns the number of rows affected.</p>
+<div class="highlight"><pre><span></span><code>// Update specific user
+var count, err = db.Update(conn, &quot;users&quot;, 
+    {&quot;id&quot;: 1},
+    {&quot;age&quot;: 31, &quot;city&quot;: &quot;Boston&quot;})
+
+// Update multiple users
+var count, err = db.Update(conn, &quot;users&quot;,
+    {&quot;city&quot;: &quot;New York&quot;},
+    {&quot;timezone&quot;: &quot;EST&quot;})
+
+if err == None {
+    fmt.Printf(&quot;Updated %d records\n&quot;, count)
+}
+</code></pre></div>
+<h3 id="deleteconn-connection-table-string-conditions-map-int-error">Delete(conn connection, table string, conditions map) (int, error)</h3>
+<p>Deletes records from the database. Returns the number of rows deleted.</p>
+<p><strong>Safety:</strong> Conditions map is required to prevent accidental deletion of all records.</p>
+<div class="highlight"><pre><span></span><code>// Delete specific user
+var count, err = db.Delete(conn, &quot;users&quot;, {&quot;id&quot;: 1})
+
+// Delete multiple users
+var count, err = db.Delete(conn, &quot;users&quot;, {&quot;age&quot;: 0})
+
+if err == None {
+    fmt.Printf(&quot;Deleted %d records\n&quot;, count)
+}
+</code></pre></div>
+<h3 id="countconn-connection-table-string-conditions-map-int-error">Count(conn connection, table string, conditions map) (int, error)</h3>
+<p>Counts records in the database matching the conditions.</p>
+<div class="highlight"><pre><span></span><code>// Count all users
+var total, err = db.Count(conn, &quot;users&quot;, {})
+
+// Count users with conditions
+var adults, err = db.Count(conn, &quot;users&quot;, {&quot;age&quot;: 18})
+
+if err == None {
+    fmt.Printf(&quot;Found %d users\n&quot;, total)
+}
+</code></pre></div>
+<h2 id="database-migrations">Database Migrations</h2>
+<p>The database module includes comprehensive migration support with both <strong>up</strong> (apply) and <strong>down</strong> (rollback) capabilities, similar to Rails migrations or Flyway.</p>
+<h3 id="migration-functions">Migration Functions</h3>
+<h4 id="migrateupconn-connection-version-int-name-string-upsql-string-error">MigrateUp(conn connection, version int, name string, upSQL string) error</h4>
+<p>Applies a migration to the database. Migrations are tracked in a <code>schema_migrations</code> table.</p>
+<div class="highlight"><pre><span></span><code>var err = db.MigrateUp(conn, 1, &quot;create_users_table&quot;,
+    &quot;CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT, email TEXT)&quot;)
+</code></pre></div>
+<h4 id="migratedownconn-connection-version-int-downsql-string-error">MigrateDown(conn connection, version int, downSQL string) error</h4>
+<p>Rolls back a migration. Only applies if the migration was previously applied.</p>
+<div class="highlight"><pre><span></span><code>var err = db.MigrateDown(conn, 1, &quot;DROP TABLE users&quot;)
+</code></pre></div>
+<h4 id="getmigrationversionconn-connection-int-error">GetMigrationVersion(conn connection) (int, error)</h4>
+<p>Returns the current migration version number.</p>
+<div class="highlight"><pre><span></span><code>var version, err = db.GetMigrationVersion(conn)
+fmt.Printf(&quot;Current version: %d\n&quot;, version)
+</code></pre></div>
+<h4 id="getmigrationhistoryconn-connection-arraymap-error">GetMigrationHistory(conn connection) (array[map], error)</h4>
+<p>Returns all applied migrations with version, name, and timestamp.</p>
+<div class="highlight"><pre><span></span><code>var history, err = db.GetMigrationHistory(conn)
+for migration in history {
+    fmt.Printf(&quot;v%d: %s (applied at: %d)\n&quot;, 
+        migration[&quot;version&quot;], 
+        migration[&quot;name&quot;],
+        migration[&quot;applied_at&quot;])
+}
+</code></pre></div>
+<h4 id="migratetoversionconn-connection-targetversion-int-migrations-array-error">MigrateToVersion(conn connection, targetVersion int, migrations array) error</h4>
+<p>Migrates to a specific version (up or down automatically). Migrations array should contain migration maps.</p>
+<div class="highlight"><pre><span></span><code>var migrations = [
+    {
+        &quot;version&quot;: 1,
+        &quot;name&quot;: &quot;create_users&quot;,
+        &quot;up&quot;: &quot;CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT)&quot;,
+        &quot;down&quot;: &quot;DROP TABLE users&quot;
+    },
+    {
+        &quot;version&quot;: 2,
+        &quot;name&quot;: &quot;add_users_email&quot;,
+        &quot;up&quot;: &quot;ALTER TABLE users ADD COLUMN email TEXT&quot;,
+        &quot;down&quot;: &quot;ALTER TABLE users DROP COLUMN email&quot;
+    }
+]
+
+// Migrate to version 2
+var err = db.MigrateToVersion(conn, 2, migrations)
+
+// Rollback to version 1
+var err = db.MigrateToVersion(conn, 1, migrations)
+</code></pre></div>
+<h3 id="migration-example">Migration Example</h3>
+<div class="highlight"><pre><span></span><code>import db
+import fmt
+
+function main() {
+    var conn, _ = db.Open(&quot;sqlite3&quot;, &quot;myapp.db&quot;)
+
+    // Define migrations
+    var migrations = [
+        {
+            &quot;version&quot;: 1,
+            &quot;name&quot;: &quot;create_users_table&quot;,
+            &quot;up&quot;: &quot;CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT NOT NULL, email TEXT UNIQUE)&quot;,
+            &quot;down&quot;: &quot;DROP TABLE users&quot;
+        },
+        {
+            &quot;version&quot;: 2,
+            &quot;name&quot;: &quot;add_users_age&quot;,
+            &quot;up&quot;: &quot;ALTER TABLE users ADD COLUMN age INTEGER&quot;,
+            &quot;down&quot;: &quot;ALTER TABLE users DROP COLUMN age&quot;
+        },
+        {
+            &quot;version&quot;: 3,
+            &quot;name&quot;: &quot;create_posts_table&quot;,
+            &quot;up&quot;: &quot;CREATE TABLE posts (id INTEGER PRIMARY KEY, user_id INTEGER, title TEXT, content TEXT, FOREIGN KEY(user_id) REFERENCES users(id))&quot;,
+            &quot;down&quot;: &quot;DROP TABLE posts&quot;
+        }
+    ]
+
+    // Check current version
+    var currentVersion, _ = db.GetMigrationVersion(conn)
+    fmt.Printf(&quot;Current version: %d\n&quot;, currentVersion)
+
+    // Migrate to latest version
+    var err = db.MigrateToVersion(conn, 3, migrations)
+    if err != None {
+        fmt.Printf(&quot;Migration error: %v\n&quot;, err)
+        return
+    }
+
+    fmt.Println(&quot;Migrated to version 3&quot;)
+
+    // Rollback to version 1
+    var downErr = db.MigrateToVersion(conn, 1, migrations)
+    if downErr != None {
+        fmt.Printf(&quot;Rollback error: %v\n&quot;, downErr)
+        return
+    }
+
+    fmt.Println(&quot;Rolled back to version 1&quot;)
+
+    // View migration history
+    var history, _ = db.GetMigrationHistory(conn)
+    fmt.Println(&quot;Applied migrations:&quot;)
+    for mig in history {
+        fmt.Printf(&quot;  v%d: %s\n&quot;, mig[&quot;version&quot;], mig[&quot;name&quot;])
+    }
+
+    db.Close(conn)
+}
+</code></pre></div>
+<h3 id="file-based-migrations">File-Based Migrations</h3>
+<p>Migrations can be stored in external files for better organization and version control.</p>
+<h4 id="method-1-json-file">Method 1: JSON File</h4>
+<p>Store all migrations in a single JSON file:</p>
+<p><strong>migrations.json:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;create_users_table&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;up&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT NOT NULL)&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;down&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DROP TABLE users&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;add_users_email&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;up&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ALTER TABLE users ADD COLUMN email TEXT&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;down&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ALTER TABLE users DROP COLUMN email&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div></p>
+<p><strong>Load and apply:</strong>
+<div class="highlight"><pre><span></span><code>import db
+import json
+import file
+
+function loadMigrations(filepath string) array {
+    var content, err = file.ReadFile(filepath)
+    if err != None {
+        return []
+    }
+
+    var migrations, parseErr = json.Unmarshal(content)
+    if parseErr != None {
+        return []
+    }
+
+    return migrations
+}
+
+function main() {
+    var conn, _ = db.Open(&quot;sqlite3&quot;, &quot;myapp.db&quot;)
+
+    // Load migrations from JSON file
+    var migrations = loadMigrations(&quot;migrations.json&quot;)
+
+    // Get current version
+    var currentVersion, _ = db.GetMigrationVersion(conn)
+
+    // Apply pending migrations
+    for migration in migrations {
+        if migration[&quot;version&quot;] &gt; currentVersion {
+            db.MigrateUp(conn, migration[&quot;version&quot;], 
+                         migration[&quot;name&quot;], migration[&quot;up&quot;])
+        }
+    }
+
+    db.Close(conn)
+}
+</code></pre></div></p>
+<h4 id="method-2-individual-sql-files">Method 2: Individual SQL Files</h4>
+<p>Store each migration in a separate SQL file:</p>
+<p><strong>migrations/001_create_users.sql:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Migration: Create users table</span>
+<span class="c1">-- Version: 1</span>
+<span class="c1">-- Name: create_users_table</span>
+
+<span class="c1">-- UP</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="n">AUTOINCREMENT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">    </span><span class="n">email</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">UNIQUE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span>
+<span class="p">);</span>
+
+<span class="c1">-- DOWN</span>
+<span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="p">;</span>
+</code></pre></div></p>
+<p><strong>migrations/002_add_age.sql:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Migration: Add age column</span>
+<span class="c1">-- Version: 2</span>
+<span class="c1">-- Name: add_users_age</span>
+
+<span class="c1">-- UP</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">;</span>
+
+<span class="c1">-- DOWN</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+</code></pre></div></p>
+<p><strong>Load and apply:</strong>
+<div class="highlight"><pre><span></span><code>import db
+import file
+import path
+import strings
+
+function parseSQLFile(filepath string) map {
+    var content, _ = file.Read(filepath)
+    var lines = strings.Split(content, &quot;\n&quot;)
+
+    var version = 0
+    var name = &quot;&quot;
+    var upSQL = &quot;&quot;
+    var downSQL = &quot;&quot;
+    var inUpSection = false
+    var inDownSection = false
+
+    for line in lines {
+        var trimmed = strings.TrimSpace(line)
+
+        if strings.HasPrefix(trimmed, &quot;-- Version:&quot;) {
+            var parts = strings.Split(trimmed, &quot;:&quot;)
+            if len(parts) == 2 {
+                version = cast.ToInt(strings.TrimSpace(parts[1]))
+            }
+        } else if strings.HasPrefix(trimmed, &quot;-- Name:&quot;) {
+            var parts = strings.Split(trimmed, &quot;:&quot;)
+            if len(parts) == 2 {
+                name = strings.TrimSpace(parts[1])
+            }
+        } else if trimmed == &quot;-- UP&quot; {
+            inUpSection = true
+            inDownSection = false
+        } else if trimmed == &quot;-- DOWN&quot; {
+            inUpSection = false
+            inDownSection = true
+        } else if trimmed != &quot;&quot; &amp;&amp; !strings.HasPrefix(trimmed, &quot;--&quot;) {
+            if inUpSection {
+                upSQL = upSQL + &quot; &quot; + trimmed
+            } else if inDownSection {
+                downSQL = downSQL + &quot; &quot; + trimmed
+            }
+        }
+    }
+
+    return {
+        &quot;version&quot;: version,
+        &quot;name&quot;: name,
+        &quot;up&quot;: strings.TrimSpace(upSQL),
+        &quot;down&quot;: strings.TrimSpace(downSQL)
+    }
+}
+
+function loadMigrationsFromDir(dirpath string) array {
+    var files, _ = path.Glob(dirpath + &quot;/*.sql&quot;)
+    var migrations = []
+
+    for filepath in files {
+        var migration = parseSQLFile(filepath)
+        if migration[&quot;version&quot;] != 0 {
+            migrations = arrays.Append(migrations, migration)
+        }
+    }
+
+    return migrations
+}
+
+function main() {
+    var conn, _ = db.Open(&quot;sqlite3&quot;, &quot;myapp.db&quot;)
+
+    // Load all SQL migration files
+    var migrations = loadMigrationsFromDir(&quot;migrations&quot;)
+
+    // Get current version
+    var currentVersion, _ = db.GetMigrationVersion(conn)
+
+    // Apply pending migrations
+    for migration in migrations {
+        if migration[&quot;version&quot;] &gt; currentVersion {
+            db.MigrateUp(conn, migration[&quot;version&quot;],
+                         migration[&quot;name&quot;], migration[&quot;up&quot;])
+        }
+    }
+
+    db.Close(conn)
+}
+</code></pre></div></p>
+<h3 id="migration-best-practices">Migration Best Practices</h3>
+<p><strong>1. Always Define Both Up and Down</strong>
+<div class="highlight"><pre><span></span><code>var migration = {
+    &quot;version&quot;: 1,
+    &quot;name&quot;: &quot;add_column&quot;,
+    &quot;up&quot;: &quot;ALTER TABLE users ADD COLUMN phone TEXT&quot;,
+    &quot;down&quot;: &quot;ALTER TABLE users DROP COLUMN phone&quot;  // Always reversible
+}
+</code></pre></div></p>
+<p><strong>2. Use Sequential Versioning</strong>
+<div class="highlight"><pre><span></span><code>// Good - sequential versions
+var migrations = [
+    {&quot;version&quot;: 1, ...},
+    {&quot;version&quot;: 2, ...},
+    {&quot;version&quot;: 3, ...}
+]
+</code></pre></div></p>
+<p><strong>3. Test Migrations in Development</strong>
+<div class="highlight"><pre><span></span><code>// Apply migration
+db.MigrateUp(conn, 1, &quot;create_table&quot;, createSQL)
+
+// Test that it works
+var users, _ = db.Query(conn, &quot;SELECT * FROM users&quot;)
+
+// Test rollback
+db.MigrateDown(conn, 1, dropSQL)
+</code></pre></div></p>
+<p><strong>4. Keep Migrations Small and Focused</strong>
+<div class="highlight"><pre><span></span><code>// Good - one change per migration
+{&quot;version&quot;: 1, &quot;name&quot;: &quot;create_users_table&quot;, ...}
+{&quot;version&quot;: 2, &quot;name&quot;: &quot;add_users_email&quot;, ...}
+{&quot;version&quot;: 3, &quot;name&quot;: &quot;create_posts_table&quot;, ...}
+</code></pre></div></p>
+<p><strong>5. Version History is Automatic</strong></p>
+<p>The module automatically tracks:
+- Which migrations have been applied
+- When they were applied
+- Current database version</p>
+<h2 id="complete-example">Complete Example</h2>
+<div class="highlight"><pre><span></span><code>import db
+import fmt
+
+function main() {
+    // Open database
+    var conn, err = db.Open(&quot;sqlite3&quot;, &quot;myapp.db&quot;)
+    if err != None {
+        fmt.Printf(&quot;Error: %v\n&quot;, err)
+        return
+    }
+
+    // Configure connection pool
+    db.SetMaxOpenConns(conn, 25)
+    db.SetMaxIdleConns(conn, 5)
+    db.SetConnMaxLifetime(conn, 300)
+
+    // Create table
+    var _, createErr = db.Exec(conn, `
+        CREATE TABLE IF NOT EXISTS users (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL,
+            email TEXT UNIQUE NOT NULL,
+            age INTEGER
+        )
+    `)
+    if createErr != None {
+        fmt.Printf(&quot;Create table error: %v\n&quot;, createErr)
+        db.Close(conn)
+        return
+    }
+
+    // Insert data (ORM style)
+    var id, insertErr = db.Create(conn, &quot;users&quot;, {
+        &quot;name&quot;: &quot;Alice&quot;,
+        &quot;email&quot;: &quot;alice@example.com&quot;,
+        &quot;age&quot;: 30
+    })
+    fmt.Printf(&quot;Inserted user ID: %d\n&quot;, id)
+
+    // Query data (SQL style)
+    var users, queryErr = db.Query(conn, &quot;SELECT * FROM users WHERE age &gt;= ?&quot;, 18)
+    if queryErr == None {
+        fmt.Println(&quot;Users:&quot;)
+        for user in users {
+            fmt.Printf(&quot;  - %s (%d)\n&quot;, user[&quot;name&quot;], user[&quot;age&quot;])
+        }
+    }
+
+    // Update data (ORM style)
+    var updateCount, updateErr = db.Update(conn, &quot;users&quot;,
+        {&quot;email&quot;: &quot;alice@example.com&quot;},
+        {&quot;age&quot;: 31})
+    fmt.Printf(&quot;Updated %d users\n&quot;, updateCount)
+
+    // Count records
+    var total, countErr = db.Count(conn, &quot;users&quot;, {})
+    fmt.Printf(&quot;Total users: %d\n&quot;, total)
+
+    // Close connection
+    db.Close(conn)
+}
+</code></pre></div>
+<h2 id="integration-with-other-modules">Integration with Other Modules</h2>
+<h3 id="json-integration">JSON Integration</h3>
+<div class="highlight"><pre><span></span><code>import db
+import json
+
+var users, _ = db.Query(conn, &quot;SELECT * FROM users&quot;)
+var jsonStr, _ = json.Marshal(users)
+fmt.Println(jsonStr)
+// Output: [{&quot;id&quot;:1,&quot;name&quot;:&quot;Alice&quot;,&quot;age&quot;:30},{&quot;id&quot;:2,&quot;name&quot;:&quot;Bob&quot;,&quot;age&quot;:25}]
+</code></pre></div>
+<h3 id="map-integration">Map Integration</h3>
+<div class="highlight"><pre><span></span><code>var user, _ = db.FindOne(conn, &quot;users&quot;, {&quot;id&quot;: 1})
+
+// Direct map access
+var name = user[&quot;name&quot;]
+var age = user[&quot;age&quot;]
+
+// Dot notation access
+var email = user.email
+</code></pre></div>
+<h2 id="error-handling">Error Handling</h2>
+<p>The database module follows Harneet's error tuple pattern:</p>
+<div class="highlight"><pre><span></span><code>var conn, err = db.Open(&quot;sqlite3&quot;, &quot;test.db&quot;)
+if err != None {
+    fmt.Printf(&quot;Connection error: %v\n&quot;, err)
+    return
+}
+
+var users, queryErr = db.Query(conn, &quot;SELECT * FROM users&quot;)
+if queryErr != None {
+    fmt.Printf(&quot;Query error: %v\n&quot;, queryErr)
+    return
+}
+
+// Safe to use users
+for user in users {
+    fmt.Println(user[&quot;name&quot;])
+}
+</code></pre></div>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="1-always-close-connections">1. Always Close Connections</h3>
+<div class="highlight"><pre><span></span><code>var conn, _ = db.Open(&quot;sqlite3&quot;, &quot;app.db&quot;)
+// ... use connection
+db.Close(conn)
+</code></pre></div>
+<h3 id="2-use-connection-pooling-for-production">2. Use Connection Pooling for Production</h3>
+<div class="highlight"><pre><span></span><code>var conn, _ = db.Open(&quot;postgres&quot;, dsn)
+db.SetMaxOpenConns(conn, 25)
+db.SetMaxIdleConns(conn, 5)
+db.SetConnMaxLifetime(conn, 300)
+</code></pre></div>
+<h3 id="3-use-transactions-for-multiple-operations">3. Use Transactions for Multiple Operations</h3>
+<div class="highlight"><pre><span></span><code>var tx, _ = db.Begin(conn)
+// Execute multiple related operations
+var _, err1 = db.TxExec(tx, &quot;INSERT ...&quot;)
+var _, err2 = db.TxExec(tx, &quot;UPDATE ...&quot;)
+
+if err1 != None or err2 != None {
+    db.Rollback(tx)
+} else {
+    db.Commit(tx)
+}
+</code></pre></div>
+<h3 id="4-use-parameterized-queries">4. Use Parameterized Queries</h3>
+<div class="highlight"><pre><span></span><code>// ✅ Good - prevents SQL injection
+var users, _ = db.Query(conn, &quot;SELECT * FROM users WHERE id = ?&quot;, userId)
+
+// ❌ Bad - vulnerable to SQL injection
+var sql = &quot;SELECT * FROM users WHERE id = &quot; + userId
+var users, _ = db.Query(conn, sql)
+</code></pre></div>
+<h3 id="5-handle-errors-appropriately">5. Handle Errors Appropriately</h3>
+<div class="highlight"><pre><span></span><code>var user, err = db.FindOne(conn, &quot;users&quot;, {&quot;id&quot;: 1})
+if err != None {
+    // Log error, return default, or propagate
+    fmt.Printf(&quot;Database error: %v\n&quot;, err)
+    return
+}
+</code></pre></div>
+<h2 id="summary">Summary</h2>
+<p>The <code>db</code> module provides enterprise-grade database functionality:</p>
+<ul>
+<li>✅ <strong>Multiple drivers</strong>: SQLite3, PostgreSQL, MySQL</li>
+<li>✅ <strong>Connection pooling</strong>: Production-ready connection management</li>
+<li>✅ <strong>SQLC-style queries</strong>: Type-safe parameter binding</li>
+<li>✅ <strong>Transaction support</strong>: ACID compliance with manual control</li>
+<li>✅ <strong>GORM-inspired ORM</strong>: Simple CRUD operations</li>
+<li>✅ <strong>Map-based results</strong>: Seamless Harneet integration</li>
+<li>✅ <strong>JSON ready</strong>: Direct serialization support</li>
+</ul>
+<p>Perfect for building web applications, APIs, and data-driven tools!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../config/" class="md-footer__link md-footer__link--prev" aria-label="Previous: config">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                config
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../structs/" class="md-footer__link md-footer__link--next" aria-label="Next: structs">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                structs
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2025 Harneet Programming Language — Built with ❤️ by Gagan Janjua
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.collapse", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.footer", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
