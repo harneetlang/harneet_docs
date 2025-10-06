@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../errors/">
+        <link rel="prev" href="../regex/">
       
       
-        <link rel="next" href="../file/">
+        <link rel="next" href="../uuid/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>log - Harneet Programming Language</title>
+        <title>sync - Harneet Programming Language</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#log-module" class="md-skip">
+        <a href="#sync-module" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              log
+              sync
             
           </span>
         </div>
@@ -1677,32 +1677,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    log
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../log/" class="md-nav__link">
         
   
   
@@ -1713,113 +1691,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Functions
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Functions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#infovalues" class="md-nav__link">
-    <span class="md-ellipsis">
-       Info(values...)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#warnvalues" class="md-nav__link">
-    <span class="md-ellipsis">
-       Warn(values...)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#errorvalues" class="md-nav__link">
-    <span class="md-ellipsis">
-       Error(values...)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#debugvalues" class="md-nav__link">
-    <span class="md-ellipsis">
-       Debug(values...)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#setlevellevel" class="md-nav__link">
-    <span class="md-ellipsis">
-       SetLevel(level)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#setoutputpath" class="md-nav__link">
-    <span class="md-ellipsis">
-       SetOutput(path)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configurerotationformat-path-maxsizemb-maxbackups-maxagedays-compress" class="md-nav__link">
-    <span class="md-ellipsis">
-       ConfigureRotation(format, path, maxSizeMB, maxBackups, maxAgeDays, compress)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#withkey-value" class="md-nav__link">
-    <span class="md-ellipsis">
-       With(key, value)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1990,10 +1861,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../sync/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    sync
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2004,6 +1897,263 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#factory-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Factory Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Factory Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#newmutex" class="md-nav__link">
+    <span class="md-ellipsis">
+       NewMutex()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newrwmutex" class="md-nav__link">
+    <span class="md-ellipsis">
+       NewRWMutex()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mutex-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mutex Operations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mutex Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mutexlock" class="md-nav__link">
+    <span class="md-ellipsis">
+       mutex.Lock()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mutexunlock" class="md-nav__link">
+    <span class="md-ellipsis">
+       mutex.Unlock()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mutextrylock" class="md-nav__link">
+    <span class="md-ellipsis">
+       mutex.TryLock()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rwmutex-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      RWMutex Operations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RWMutex Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rwmutexrlock" class="md-nav__link">
+    <span class="md-ellipsis">
+       rwmutex.RLock()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rwmutexrunlock" class="md-nav__link">
+    <span class="md-ellipsis">
+       rwmutex.RUnlock()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rwmutexlock" class="md-nav__link">
+    <span class="md-ellipsis">
+       rwmutex.Lock()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rwmutexunlock" class="md-nav__link">
+    <span class="md-ellipsis">
+       rwmutex.Unlock()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rwmutextryrlock" class="md-nav__link">
+    <span class="md-ellipsis">
+       rwmutex.TryRLock()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rwmutextrylock" class="md-nav__link">
+    <span class="md-ellipsis">
+       rwmutex.TryLock()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-concurrency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration with Concurrency
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#avoiding-deadlocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avoiding Deadlocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Considerations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#producer-consumer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Producer-Consumer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shared-counter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shared Counter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2176,82 +2326,232 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#functions" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Functions
+      Overview
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Functions">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#factory-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Factory Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Factory Functions">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#infovalues" class="md-nav__link">
+  <a href="#newmutex" class="md-nav__link">
     <span class="md-ellipsis">
-       Info(values...)
+       NewMutex()
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#warnvalues" class="md-nav__link">
+  <a href="#newrwmutex" class="md-nav__link">
     <span class="md-ellipsis">
-       Warn(values...)
+       NewRWMutex()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mutex-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mutex Operations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mutex Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mutexlock" class="md-nav__link">
+    <span class="md-ellipsis">
+       mutex.Lock()
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#errorvalues" class="md-nav__link">
+  <a href="#mutexunlock" class="md-nav__link">
     <span class="md-ellipsis">
-       Error(values...)
+       mutex.Unlock()
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#debugvalues" class="md-nav__link">
+  <a href="#mutextrylock" class="md-nav__link">
     <span class="md-ellipsis">
-       Debug(values...)
+       mutex.TryLock()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rwmutex-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      RWMutex Operations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RWMutex Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rwmutexrlock" class="md-nav__link">
+    <span class="md-ellipsis">
+       rwmutex.RLock()
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#setlevellevel" class="md-nav__link">
+  <a href="#rwmutexrunlock" class="md-nav__link">
     <span class="md-ellipsis">
-       SetLevel(level)
+       rwmutex.RUnlock()
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#setoutputpath" class="md-nav__link">
+  <a href="#rwmutexlock" class="md-nav__link">
     <span class="md-ellipsis">
-       SetOutput(path)
+       rwmutex.Lock()
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#configurerotationformat-path-maxsizemb-maxbackups-maxagedays-compress" class="md-nav__link">
+  <a href="#rwmutexunlock" class="md-nav__link">
     <span class="md-ellipsis">
-       ConfigureRotation(format, path, maxSizeMB, maxBackups, maxAgeDays, compress)
+       rwmutex.Unlock()
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#withkey-value" class="md-nav__link">
+  <a href="#rwmutextryrlock" class="md-nav__link">
     <span class="md-ellipsis">
-       With(key, value)
+       rwmutex.TryRLock()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rwmutextrylock" class="md-nav__link">
+    <span class="md-ellipsis">
+       rwmutex.TryLock()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-concurrency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration with Concurrency
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#avoiding-deadlocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avoiding Deadlocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Considerations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#producer-consumer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Producer-Consumer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shared-counter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shared Counter
     </span>
   </a>
   
@@ -2278,114 +2578,342 @@
 
 
 
-<h1 id="log-module"><code>log</code> Module</h1>
-<p>The <code>log</code> module provides structured logging powered by Go's <code>slog</code>. It supports levels, structured fields, persistent context, and file rotation in text or JSON format.</p>
-<h2 id="functions">Functions</h2>
-<h3 id="infovalues"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>Info(values...)</code></h3>
-<p>Logs at INFO level. If arguments are key/value pairs (<code>string</code> key), they are logged as structured fields. Otherwise, they are joined into a message.</p>
-<p><strong>Returns:</strong>
-- <code>(None, error)</code></p>
-<p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import log
-
-log.Info(&quot;service started&quot;)
-log.Info(&quot;user&quot;, &quot;42&quot;, &quot;action&quot;, &quot;login&quot;, &quot;ok&quot;, true)
-</code></pre></div></p>
-<hr />
-<h3 id="warnvalues"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>Warn(values...)</code></h3>
-<p>Logs at WARN level.</p>
-<p><strong>Returns:</strong>
-- <code>(None, error)</code></p>
-<p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import log
-
-log.Warn(&quot;cache miss&quot;, &quot;key&quot;, &quot;sess:1&quot;)
-</code></pre></div></p>
-<hr />
-<h3 id="errorvalues"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>Error(values...)</code></h3>
-<p>Logs at ERROR level.</p>
-<p><strong>Returns:</strong>
-- <code>(None, error)</code></p>
-<p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import log
-
-log.Error(&quot;db down&quot;, &quot;retries&quot;, 3)
-</code></pre></div></p>
-<hr />
-<h3 id="debugvalues"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>Debug(values...)</code></h3>
-<p>Logs at DEBUG level.</p>
-<p><strong>Returns:</strong>
-- <code>(None, error)</code></p>
-<p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import log
-
-log.Debug(&quot;details&quot;, &quot;module&quot;, &quot;auth&quot;)
-</code></pre></div></p>
-<hr />
-<h3 id="setlevellevel"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>SetLevel(level)</code></h3>
-<p>Sets the current log level. Supported values: <code>DEBUG</code>, <code>INFO</code>, <code>WARN</code>, <code>ERROR</code>.</p>
+<h1 id="sync-module"><code>sync</code> Module</h1>
+<p>The <code>sync</code> module provides synchronization primitives for concurrent programming, including mutexes and read-write mutexes. These primitives help protect shared data structures from race conditions when using Harneet's <code>do</code>/<code>await</code> concurrency model.</p>
+<h2 id="overview">Overview</h2>
+<p>The sync module offers two main types of synchronization primitives:</p>
+<ul>
+<li><strong>Mutex</strong>: Provides mutual exclusion for protecting shared resources</li>
+<li><strong>RWMutex</strong>: Optimized for scenarios with frequent reads and infrequent writes</li>
+</ul>
+<p>All sync operations follow Harneet's error handling patterns, returning <code>(result, error)</code> tuples.</p>
+<h2 id="factory-functions">Factory Functions</h2>
+<h3 id="newmutex"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>NewMutex()</code></h3>
+<p>Creates a new mutex for mutual exclusion.</p>
 <p><strong>Parameters:</strong>
-- <code>level</code> (string)</p>
+- None</p>
 <p><strong>Returns:</strong>
-- <code>(None, error)</code></p>
+- <code>(mutex, error)</code>: A new mutex instance and error status</p>
 <p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import log
+<div class="highlight"><pre><span></span><code>package main
+import sync, fmt
 
-log.SetLevel(&quot;WARN&quot;)
-log.Info(&quot;hidden&quot;)     // below WARN
-log.Warn(&quot;visible&quot;)
+var mutex, err = sync.NewMutex()
+if err != None {
+    fmt.Println(&quot;Error creating mutex:&quot;, err)
+    return
+}
+
+var success, lockErr = mutex.Lock()
+if lockErr != None {
+    fmt.Println(&quot;Lock failed:&quot;, lockErr)
+    return
+}
+
+// Protected code section
+fmt.Println(&quot;Critical section&quot;)
+
+var unlockSuccess, unlockErr = mutex.Unlock()
+if unlockErr != None {
+    fmt.Println(&quot;Unlock failed:&quot;, unlockErr)
+}
 </code></pre></div></p>
 <hr />
-<h3 id="setoutputpath"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>SetOutput(path)</code></h3>
-<p>Directs logs to a rotating file with text format using defaults: <code>10MB</code> max size, <code>5</code> backups, <code>7</code> days retention, no compression.</p>
+<h3 id="newrwmutex"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>NewRWMutex()</code></h3>
+<p>Creates a new read-write mutex optimized for concurrent reads.</p>
 <p><strong>Parameters:</strong>
-- <code>path</code> (string): Log file path.</p>
+- None</p>
 <p><strong>Returns:</strong>
-- <code>(None, error)</code></p>
+- <code>(rwmutex, error)</code>: A new read-write mutex instance and error status</p>
 <p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import log
+<div class="highlight"><pre><span></span><code>package main
+import sync, fmt
 
-log.SetOutput(&quot;./logs/app.log&quot;)
-log.Info(&quot;file output configured&quot;)
+var rwmutex, err = sync.NewRWMutex()
+if err != None {
+    fmt.Println(&quot;Error creating rwmutex:&quot;, err)
+    return
+}
+
+// Multiple readers can acquire read locks simultaneously
+var readSuccess, readErr = rwmutex.RLock()
+if readErr != None {
+    fmt.Println(&quot;Read lock failed:&quot;, readErr)
+    return
+}
+
+// Read from shared resource
+fmt.Println(&quot;Reading data&quot;)
+
+var readUnlockSuccess, readUnlockErr = rwmutex.RUnlock()
+if readUnlockErr != None {
+    fmt.Println(&quot;Read unlock failed:&quot;, readUnlockErr)
+}
 </code></pre></div></p>
 <hr />
-<h3 id="configurerotationformat-path-maxsizemb-maxbackups-maxagedays-compress"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>ConfigureRotation(format, path, maxSizeMB, maxBackups, maxAgeDays, compress)</code></h3>
-<p>Configures rotation and output format.</p>
+<h2 id="mutex-operations">Mutex Operations</h2>
+<h3 id="mutexlock"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>mutex.Lock()</code></h3>
+<p>Acquires the mutex lock, blocking until available.</p>
 <p><strong>Parameters:</strong>
-- <code>format</code> (string): <code>text</code> or <code>json</code>.
-- <code>path</code> (string): Log file path.
-- <code>maxSizeMB</code> (int): Max file size in MB before rotation.
-- <code>maxBackups</code> (int): Number of rotated files to keep.
-- <code>maxAgeDays</code> (int): Delete files older than this many days (0 disables).
-- <code>compress</code> (boolean): Gzip rotated files.</p>
+- None</p>
 <p><strong>Returns:</strong>
-- <code>(None, error)</code></p>
+- <code>(bool, error)</code>: Success status and error information</p>
 <p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import log
-
-// Text handler
-log.ConfigureRotation(&quot;text&quot;, &quot;./logs/app-rotating.log&quot;, 50, 10, 14, false)
-log.Info(&quot;rotation configured&quot;)
-
-// JSON handler
-log.ConfigureRotation(&quot;json&quot;, &quot;./logs/app.jsonl&quot;, 50, 10, 14, true)
-log.Error(&quot;failure&quot;, &quot;code&quot;, 500)
+<div class="highlight"><pre><span></span><code>var success, err = mutex.Lock()
+if err != None {
+    fmt.Println(&quot;Lock failed:&quot;, err)
+} else {
+    fmt.Println(&quot;Lock acquired successfully&quot;)
+}
 </code></pre></div></p>
 <hr />
-<h3 id="withkey-value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>With(key, value)</code></h3>
-<p>Adds a persistent structured attribute to the logger. Subsequent logs include this field.</p>
+<h3 id="mutexunlock"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>mutex.Unlock()</code></h3>
+<p>Releases the mutex lock.</p>
 <p><strong>Parameters:</strong>
-- <code>key</code> (string)
-- <code>value</code> (any)</p>
+- None</p>
 <p><strong>Returns:</strong>
-- <code>(None, error)</code></p>
+- <code>(bool, error)</code>: Success status and error information</p>
 <p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import log
-
-log.With(&quot;service&quot;, &quot;payments&quot;)
-log.With(&quot;instance&quot;, &quot;i-12345&quot;)
-log.Info(&quot;startup&quot;, true)
+<div class="highlight"><pre><span></span><code>var success, err = mutex.Unlock()
+if err != None {
+    fmt.Println(&quot;Unlock failed:&quot;, err)
+} else {
+    fmt.Println(&quot;Lock released successfully&quot;)
+}
 </code></pre></div></p>
+<hr />
+<h3 id="mutextrylock"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>mutex.TryLock()</code></h3>
+<p>Attempts to acquire the mutex lock without blocking.</p>
+<p><strong>Parameters:</strong>
+- None</p>
+<p><strong>Returns:</strong>
+- <code>(bool, error)</code>: Lock acquisition status and error information</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code>var acquired, err = mutex.TryLock()
+if err != None {
+    fmt.Println(&quot;TryLock error:&quot;, err)
+} else if acquired {
+    fmt.Println(&quot;Lock acquired immediately&quot;)
+    // Use protected resource
+    var _, unlockErr = mutex.Unlock()
+} else {
+    fmt.Println(&quot;Lock not available&quot;)
+}
+</code></pre></div></p>
+<hr />
+<h2 id="rwmutex-operations">RWMutex Operations</h2>
+<h3 id="rwmutexrlock"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>rwmutex.RLock()</code></h3>
+<p>Acquires a read lock, allowing concurrent readers.</p>
+<p><strong>Parameters:</strong>
+- None</p>
+<p><strong>Returns:</strong>
+- <code>(bool, error)</code>: Success status and error information</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code>var success, err = rwmutex.RLock()
+if err != None {
+    fmt.Println(&quot;Read lock failed:&quot;, err)
+} else {
+    fmt.Println(&quot;Read lock acquired&quot;)
+}
+</code></pre></div></p>
+<hr />
+<h3 id="rwmutexrunlock"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>rwmutex.RUnlock()</code></h3>
+<p>Releases a read lock.</p>
+<p><strong>Parameters:</strong>
+- None</p>
+<p><strong>Returns:</strong>
+- <code>(bool, error)</code>: Success status and error information</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code>var success, err = rwmutex.RUnlock()
+if err != None {
+    fmt.Println(&quot;Read unlock failed:&quot;, err)
+} else {
+    fmt.Println(&quot;Read lock released&quot;)
+}
+</code></pre></div></p>
+<hr />
+<h3 id="rwmutexlock"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>rwmutex.Lock()</code></h3>
+<p>Acquires an exclusive write lock, blocking all other access.</p>
+<p><strong>Parameters:</strong>
+- None</p>
+<p><strong>Returns:</strong>
+- <code>(bool, error)</code>: Success status and error information</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code>var success, err = rwmutex.Lock()
+if err != None {
+    fmt.Println(&quot;Write lock failed:&quot;, err)
+} else {
+    fmt.Println(&quot;Write lock acquired&quot;)
+}
+</code></pre></div></p>
+<hr />
+<h3 id="rwmutexunlock"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>rwmutex.Unlock()</code></h3>
+<p>Releases the write lock.</p>
+<p><strong>Parameters:</strong>
+- None</p>
+<p><strong>Returns:</strong>
+- <code>(bool, error)</code>: Success status and error information</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code>var success, err = rwmutex.Unlock()
+if err != None {
+    fmt.Println(&quot;Write unlock failed:&quot;, err)
+} else {
+    fmt.Println(&quot;Write lock released&quot;)
+}
+</code></pre></div></p>
+<hr />
+<h3 id="rwmutextryrlock"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>rwmutex.TryRLock()</code></h3>
+<p>Attempts to acquire a read lock without blocking.</p>
+<p><strong>Parameters:</strong>
+- None</p>
+<p><strong>Returns:</strong>
+- <code>(bool, error)</code>: Lock acquisition status and error information</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code>var acquired, err = rwmutex.TryRLock()
+if err != None {
+    fmt.Println(&quot;TryRLock error:&quot;, err)
+} else if acquired {
+    fmt.Println(&quot;Read lock acquired immediately&quot;)
+    // Read from resource
+    var _, unlockErr = rwmutex.RUnlock()
+} else {
+    fmt.Println(&quot;Read lock not available&quot;)
+}
+</code></pre></div></p>
+<hr />
+<h3 id="rwmutextrylock"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>rwmutex.TryLock()</code></h3>
+<p>Attempts to acquire a write lock without blocking.</p>
+<p><strong>Parameters:</strong>
+- None</p>
+<p><strong>Returns:</strong>
+- <code>(bool, error)</code>: Lock acquisition status and error information</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code>var acquired, err = rwmutex.TryLock()
+if err != None {
+    fmt.Println(&quot;TryLock error:&quot;, err)
+} else if acquired {
+    fmt.Println(&quot;Write lock acquired immediately&quot;)
+    // Modify resource
+    var _, unlockErr = rwmutex.Unlock()
+} else {
+    fmt.Println(&quot;Write lock not available&quot;)
+}
+</code></pre></div></p>
+<hr />
+<h2 id="integration-with-concurrency">Integration with Concurrency</h2>
+<p>The sync module integrates seamlessly with Harneet's <code>do</code>/<code>await</code> concurrency model:</p>
+<div class="highlight"><pre><span></span><code>package main
+import sync, fmt
+
+var sharedCounter = 0
+var counterMutex, _ = sync.NewMutex()
+
+function incrementCounter(name string, times int) string {
+    for i := 0; i &lt; times; i = i + 1 {
+        var _, err = counterMutex.Lock()
+        if err != None {
+            return &quot;lock error: &quot; + err.Error()
+        }
+
+        sharedCounter = sharedCounter + 1
+        fmt.Printf(&quot;%s: counter = %d\n&quot;, name, sharedCounter)
+
+        var _, unlockErr = counterMutex.Unlock()
+        if unlockErr != None {
+            return &quot;unlock error: &quot; + unlockErr.Error()
+        }
+    }
+    return name + &quot; completed&quot;
+}
+
+function main() {
+    // Use with existing concurrency
+    var task1 = do incrementCounter(&quot;Task1&quot;, 5)
+    var task2 = do incrementCounter(&quot;Task2&quot;, 5)
+
+    var result1 = await(task1)
+    var result2 = await(task2)
+
+    fmt.Println(&quot;Results:&quot;, result1, result2)
+    fmt.Println(&quot;Final counter:&quot;, sharedCounter)
+}
+</code></pre></div>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="avoiding-deadlocks">Avoiding Deadlocks</h3>
+<ol>
+<li><strong>Consistent Lock Ordering</strong>: Always acquire multiple locks in the same order</li>
+<li><strong>Timeout Patterns</strong>: Use <code>TryLock</code> operations with retry logic</li>
+<li><strong>Minimal Critical Sections</strong>: Keep locked sections as short as possible</li>
+</ol>
+<h3 id="performance-considerations">Performance Considerations</h3>
+<ol>
+<li><strong>Use RWMutex for Read-Heavy Workloads</strong>: When reads significantly outnumber writes</li>
+<li><strong>Avoid Lock Contention</strong>: Design data structures to minimize shared state</li>
+<li><strong>Consider Lock-Free Alternatives</strong>: For simple operations like counters</li>
+</ol>
+<h3 id="error-handling">Error Handling</h3>
+<p>Always check error returns from mutex operations:</p>
+<div class="highlight"><pre><span></span><code>var success, err = mutex.Lock()
+if err != None {
+    // Handle error appropriately
+    fmt.Println(&quot;Lock failed:&quot;, err)
+    return
+}
+
+// Use blank identifier only when errors can be safely ignored
+var _, _ = mutex.Unlock()
+</code></pre></div>
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="producer-consumer">Producer-Consumer</h3>
+<div class="highlight"><pre><span></span><code>import sync, fmt
+
+var buffer = []
+var bufferMutex, _ = sync.NewMutex()
+
+function producer(id int, items int) {
+    for i := 0; i &lt; items; i = i + 1 {
+        var _, _ = bufferMutex.Lock()
+        buffer = append(buffer, fmt.Sprintf(&quot;item-%d-%d&quot;, id, i))
+        var _, _ = bufferMutex.Unlock()
+    }
+}
+
+function consumer(id int) {
+    for {
+        var _, _ = bufferMutex.Lock()
+        if len(buffer) &gt; 0 {
+            var item = buffer[0]
+            buffer = buffer[1:]
+            var _, _ = bufferMutex.Unlock()
+            fmt.Printf(&quot;Consumer %d got: %s\n&quot;, id, item)
+        } else {
+            var _, _ = bufferMutex.Unlock()
+            break
+        }
+    }
+}
+</code></pre></div>
+<h3 id="shared-counter">Shared Counter</h3>
+<div class="highlight"><pre><span></span><code>import sync
+
+var counter = 0
+var counterMutex, _ = sync.NewMutex()
+
+function safeIncrement() int {
+    var _, _ = counterMutex.Lock()
+    counter = counter + 1
+    var result = counter
+    var _, _ = counterMutex.Unlock()
+    return result
+}
+
+function safeGet() int {
+    var _, _ = counterMutex.Lock()
+    var result = counter
+    var _, _ = counterMutex.Unlock()
+    return result
+}
+</code></pre></div>
 
 
 
@@ -2423,7 +2951,7 @@ log.Info(&quot;startup&quot;, true)
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../errors/" class="md-footer__link md-footer__link--prev" aria-label="Previous: errors">
+          <a href="../regex/" class="md-footer__link md-footer__link--prev" aria-label="Previous: regex">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2433,20 +2961,20 @@ log.Info(&quot;startup&quot;, true)
                 Previous
               </span>
               <div class="md-ellipsis">
-                errors
+                regex
               </div>
             </div>
           </a>
         
         
           
-          <a href="../file/" class="md-footer__link md-footer__link--next" aria-label="Next: file">
+          <a href="../uuid/" class="md-footer__link md-footer__link--next" aria-label="Next: uuid">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                file
+                uuid
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../errors/">
+        <link rel="prev" href="../arrow_functions/">
       
       
-        <link rel="next" href="../file/">
+        <link rel="next" href="../functional/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>log - Harneet Programming Language</title>
+        <title>Defer Statements - Harneet Programming Language</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#log-module" class="md-skip">
+        <a href="#defer-statements" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              log
+              Defer Statements
             
           </span>
         </div>
@@ -569,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../break_continue/" class="md-nav__link">
+      <a href="../../stdlib/break_continue/" class="md-nav__link">
         
   
   
@@ -638,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cast/" class="md-nav__link">
+      <a href="../../stdlib/cast/" class="md-nav__link">
         
   
   
@@ -756,20 +756,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -785,7 +785,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Functions
@@ -799,7 +799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../functions/introduction/" class="md-nav__link">
+      <a href="../introduction/" class="md-nav__link">
         
   
   
@@ -822,7 +822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../functions/arrow_functions/" class="md-nav__link">
+      <a href="../arrow_functions/" class="md-nav__link">
         
   
   
@@ -842,10 +842,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../functions/defer_statements/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Defer Statements
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -856,6 +878,269 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Syntax
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-defer-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Defer Works
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resource-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defer-with-multiple-return-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defer with Multiple Return Paths
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#argument-capture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Argument Capture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defer-with-anonymous-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defer with Anonymous Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defer-in-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defer in Loops
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling-with-defer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling with Defer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprehensive-error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprehensive Error Handling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-use-defer-for-cleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Use Defer for Cleanup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-defer-immediately-after-resource-acquisition" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Defer Immediately After Resource Acquisition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-be-careful-with-loop-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Be Careful with Loop Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-order-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Order Matters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stack-overflow-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stack Overflow Protection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-aggregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Aggregation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lock-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lock Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging-and-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging and Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Recovery
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -868,7 +1153,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../functions/functional/" class="md-nav__link">
+      <a href="../functional/" class="md-nav__link">
         
   
   
@@ -891,7 +1176,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../functions/advanced_features/" class="md-nav__link">
+      <a href="../advanced_features/" class="md-nav__link">
         
   
   
@@ -918,20 +1203,20 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -947,7 +1232,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Standard Library
@@ -961,7 +1246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fmt/" class="md-nav__link">
+      <a href="../../stdlib/fmt/" class="md-nav__link">
         
   
   
@@ -984,7 +1269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../input/" class="md-nav__link">
+      <a href="../../stdlib/input/" class="md-nav__link">
         
   
   
@@ -1047,7 +1332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../strings/" class="md-nav__link">
+      <a href="../../stdlib/strings/" class="md-nav__link">
         
   
   
@@ -1101,7 +1386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../math/" class="md-nav__link">
+      <a href="../../stdlib/math/" class="md-nav__link">
         
   
   
@@ -1124,7 +1409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../arrays/" class="md-nav__link">
+      <a href="../../stdlib/arrays/" class="md-nav__link">
         
   
   
@@ -1147,7 +1432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../collections/" class="md-nav__link">
+      <a href="../../stdlib/collections/" class="md-nav__link">
         
   
   
@@ -1170,7 +1455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/" class="md-nav__link">
+      <a href="../../stdlib/config/" class="md-nav__link">
         
   
   
@@ -1193,7 +1478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db/" class="md-nav__link">
+      <a href="../../stdlib/db/" class="md-nav__link">
         
   
   
@@ -1256,7 +1541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../structs/" class="md-nav__link">
+      <a href="../../stdlib/structs/" class="md-nav__link">
         
   
   
@@ -1310,7 +1595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../json/" class="md-nav__link">
+      <a href="../../stdlib/json/" class="md-nav__link">
         
   
   
@@ -1373,7 +1658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../http/overview/" class="md-nav__link">
+      <a href="../../stdlib/http/overview/" class="md-nav__link">
         
   
   
@@ -1396,7 +1681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../http/client/" class="md-nav__link">
+      <a href="../../stdlib/http/client/" class="md-nav__link">
         
   
   
@@ -1419,7 +1704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../http/requests/" class="md-nav__link">
+      <a href="../../stdlib/http/requests/" class="md-nav__link">
         
   
   
@@ -1442,7 +1727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../http/responses/" class="md-nav__link">
+      <a href="../../stdlib/http/responses/" class="md-nav__link">
         
   
   
@@ -1465,7 +1750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../http/server/" class="md-nav__link">
+      <a href="../../stdlib/http/server/" class="md-nav__link">
         
   
   
@@ -1488,7 +1773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../http/routing/" class="md-nav__link">
+      <a href="../../stdlib/http/routing/" class="md-nav__link">
         
   
   
@@ -1511,7 +1796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../http/middleware/" class="md-nav__link">
+      <a href="../../stdlib/http/middleware/" class="md-nav__link">
         
   
   
@@ -1534,7 +1819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../http/auth/" class="md-nav__link">
+      <a href="../../stdlib/http/auth/" class="md-nav__link">
         
   
   
@@ -1557,7 +1842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../http/cookies/" class="md-nav__link">
+      <a href="../../stdlib/http/cookies/" class="md-nav__link">
         
   
   
@@ -1580,7 +1865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../http/advanced/" class="md-nav__link">
+      <a href="../../stdlib/http/advanced/" class="md-nav__link">
         
   
   
@@ -1603,7 +1888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../http/examples/" class="md-nav__link">
+      <a href="../../stdlib/http/examples/" class="md-nav__link">
         
   
   
@@ -1634,7 +1919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../assert/" class="md-nav__link">
+      <a href="../../stdlib/assert/" class="md-nav__link">
         
   
   
@@ -1657,7 +1942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../errors/" class="md-nav__link">
+      <a href="../../stdlib/errors/" class="md-nav__link">
         
   
   
@@ -1677,32 +1962,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    log
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../stdlib/log/" class="md-nav__link">
         
   
   
@@ -1713,113 +1976,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Functions
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Functions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#infovalues" class="md-nav__link">
-    <span class="md-ellipsis">
-       Info(values...)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#warnvalues" class="md-nav__link">
-    <span class="md-ellipsis">
-       Warn(values...)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#errorvalues" class="md-nav__link">
-    <span class="md-ellipsis">
-       Error(values...)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#debugvalues" class="md-nav__link">
-    <span class="md-ellipsis">
-       Debug(values...)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#setlevellevel" class="md-nav__link">
-    <span class="md-ellipsis">
-       SetLevel(level)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#setoutputpath" class="md-nav__link">
-    <span class="md-ellipsis">
-       SetOutput(path)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configurerotationformat-path-maxsizemb-maxbackups-maxagedays-compress" class="md-nav__link">
-    <span class="md-ellipsis">
-       ConfigureRotation(format, path, maxSizeMB, maxBackups, maxAgeDays, compress)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#withkey-value" class="md-nav__link">
-    <span class="md-ellipsis">
-       With(key, value)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1832,7 +1988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../file/" class="md-nav__link">
+      <a href="../../stdlib/file/" class="md-nav__link">
         
   
   
@@ -1855,7 +2011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../path/" class="md-nav__link">
+      <a href="../../stdlib/path/" class="md-nav__link">
         
   
   
@@ -1878,7 +2034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../os/" class="md-nav__link">
+      <a href="../../stdlib/os/" class="md-nav__link">
         
   
   
@@ -1901,7 +2057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datetime/" class="md-nav__link">
+      <a href="../../stdlib/datetime/" class="md-nav__link">
         
   
   
@@ -1924,7 +2080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../flags/" class="md-nav__link">
+      <a href="../../stdlib/flags/" class="md-nav__link">
         
   
   
@@ -1947,7 +2103,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../exec/" class="md-nav__link">
+      <a href="../../stdlib/exec/" class="md-nav__link">
         
   
   
@@ -1970,7 +2126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../regex/" class="md-nav__link">
+      <a href="../../stdlib/regex/" class="md-nav__link">
         
   
   
@@ -1993,7 +2149,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sync/" class="md-nav__link">
+      <a href="../../stdlib/sync/" class="md-nav__link">
         
   
   
@@ -2016,7 +2172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../uuid/" class="md-nav__link">
+      <a href="../../stdlib/uuid/" class="md-nav__link">
         
   
   
@@ -2046,7 +2202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../box/" class="md-nav__link">
+      <a href="../../stdlib/box/" class="md-nav__link">
         
   
   
@@ -2068,7 +2224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reflect/" class="md-nav__link">
+      <a href="../../stdlib/reflect/" class="md-nav__link">
         
   
   
@@ -2176,82 +2332,136 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#functions" class="md-nav__link">
+  <a href="#basic-syntax" class="md-nav__link">
     <span class="md-ellipsis">
-      Functions
+      Basic Syntax
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Functions">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-defer-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Defer Works
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resource-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defer-with-multiple-return-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defer with Multiple Return Paths
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#argument-capture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Argument Capture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defer-with-anonymous-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defer with Anonymous Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defer-in-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defer in Loops
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling-with-defer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling with Defer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprehensive-error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprehensive Error Handling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#infovalues" class="md-nav__link">
+  <a href="#1-use-defer-for-cleanup" class="md-nav__link">
     <span class="md-ellipsis">
-       Info(values...)
+      1. Use Defer for Cleanup
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#warnvalues" class="md-nav__link">
+  <a href="#2-defer-immediately-after-resource-acquisition" class="md-nav__link">
     <span class="md-ellipsis">
-       Warn(values...)
+      2. Defer Immediately After Resource Acquisition
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#errorvalues" class="md-nav__link">
+  <a href="#3-be-careful-with-loop-variables" class="md-nav__link">
     <span class="md-ellipsis">
-       Error(values...)
+      3. Be Careful with Loop Variables
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#debugvalues" class="md-nav__link">
+  <a href="#4-order-matters" class="md-nav__link">
     <span class="md-ellipsis">
-       Debug(values...)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#setlevellevel" class="md-nav__link">
-    <span class="md-ellipsis">
-       SetLevel(level)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#setoutputpath" class="md-nav__link">
-    <span class="md-ellipsis">
-       SetOutput(path)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configurerotationformat-path-maxsizemb-maxbackups-maxagedays-compress" class="md-nav__link">
-    <span class="md-ellipsis">
-       ConfigureRotation(format, path, maxSizeMB, maxBackups, maxAgeDays, compress)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#withkey-value" class="md-nav__link">
-    <span class="md-ellipsis">
-       With(key, value)
+      4. Order Matters
     </span>
   </a>
   
@@ -2259,6 +2469,108 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stack-overflow-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stack Overflow Protection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-aggregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Aggregation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lock-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lock Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging-and-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging and Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Recovery
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
   
 </li>
       
@@ -2278,114 +2590,265 @@
 
 
 
-<h1 id="log-module"><code>log</code> Module</h1>
-<p>The <code>log</code> module provides structured logging powered by Go's <code>slog</code>. It supports levels, structured fields, persistent context, and file rotation in text or JSON format.</p>
-<h2 id="functions">Functions</h2>
-<h3 id="infovalues"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>Info(values...)</code></h3>
-<p>Logs at INFO level. If arguments are key/value pairs (<code>string</code> key), they are logged as structured fields. Otherwise, they are joined into a message.</p>
-<p><strong>Returns:</strong>
-- <code>(None, error)</code></p>
-<p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import log
+<h1 id="defer-statements">Defer Statements</h1>
+<p>Defer statements in Harneet provide a powerful mechanism for ensuring cleanup code runs when a function exits, regardless of how it exits (normal return, early return, or error). This is particularly useful for resource management, cleanup operations, and ensuring consistent program behavior.</p>
+<h2 id="basic-syntax">Basic Syntax</h2>
+<div class="highlight"><pre><span></span><code>defer functionCall()
+defer fmt.Println(&quot;This runs when function exits&quot;)
+</code></pre></div>
+<h2 id="how-defer-works">How Defer Works</h2>
+<ul>
+<li><strong>Execution Order</strong>: Deferred calls execute in <strong>LIFO (Last In, First Out)</strong> order</li>
+<li><strong>Timing</strong>: Deferred calls execute just before the function returns</li>
+<li><strong>Argument Capture</strong>: Arguments are evaluated and captured when the defer statement is encountered</li>
+<li><strong>Guaranteed Execution</strong>: Deferred calls execute regardless of how the function exits</li>
+</ul>
+<h2 id="basic-example">Basic Example</h2>
+<div class="highlight"><pre><span></span><code>package main
+import fmt
 
-log.Info(&quot;service started&quot;)
-log.Info(&quot;user&quot;, &quot;42&quot;, &quot;action&quot;, &quot;login&quot;, &quot;ok&quot;, true)
+func basicDeferExample() {
+    fmt.Println(&quot;Function start&quot;)
+
+    defer fmt.Println(&quot;This will execute last&quot;)
+    defer fmt.Println(&quot;This will execute second to last&quot;)
+
+    fmt.Println(&quot;Function middle&quot;)
+    fmt.Println(&quot;Function end&quot;)
+}
+
+func main() {
+    basicDeferExample()
+}
+</code></pre></div>
+<p><strong>Output:</strong>
+<div class="highlight"><pre><span></span><code>Function start
+Function middle
+Function end
+This will execute second to last
+This will execute last
 </code></pre></div></p>
-<hr />
-<h3 id="warnvalues"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>Warn(values...)</code></h3>
-<p>Logs at WARN level.</p>
-<p><strong>Returns:</strong>
-- <code>(None, error)</code></p>
-<p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import log
+<h2 id="resource-management">Resource Management</h2>
+<p>Defer is commonly used for cleanup and resource management:</p>
+<div class="highlight"><pre><span></span><code>func resourceManagementExample() {
+    fmt.Println(&quot;Opening resource...&quot;)
 
-log.Warn(&quot;cache miss&quot;, &quot;key&quot;, &quot;sess:1&quot;)
+    defer fmt.Println(&quot;Closing resource (cleanup)&quot;)
+    defer fmt.Println(&quot;Releasing memory&quot;)
+    defer fmt.Println(&quot;Logging operation complete&quot;)
+
+    fmt.Println(&quot;Using resource...&quot;)
+    fmt.Println(&quot;Processing data...&quot;)
+
+    // Resource is automatically cleaned up via defer
+}
+</code></pre></div>
+<h2 id="defer-with-multiple-return-paths">Defer with Multiple Return Paths</h2>
+<p>Defer ensures cleanup happens regardless of which return path is taken:</p>
+<div class="highlight"><pre><span></span><code>func multipleReturnPaths(condition bool) {
+    defer fmt.Println(&quot;Cleanup always happens&quot;)
+
+    if condition {
+        fmt.Println(&quot;Taking early return path&quot;)
+        return  // Defer still executes
+    }
+
+    fmt.Println(&quot;Taking normal execution path&quot;)
+    // Defer executes here too
+}
+</code></pre></div>
+<h2 id="argument-capture">Argument Capture</h2>
+<p>Arguments to deferred functions are captured when the defer statement is encountered:</p>
+<div class="highlight"><pre><span></span><code>func deferWithCapturedVariables() {
+    var message = &quot;Initial message&quot;
+
+    // This defer captures the current value of message
+    defer fmt.Printf(&quot;Deferred message: %s\n&quot;, message)
+
+    // Change the message after defer
+    message = &quot;Modified message&quot;
+    fmt.Printf(&quot;Current message: %s\n&quot;, message)
+
+    // The deferred call will still use &quot;Initial message&quot;
+}
+</code></pre></div>
+<h2 id="defer-with-anonymous-functions">Defer with Anonymous Functions</h2>
+<p>You can defer user-defined functions for more complex cleanup logic:</p>
+<div class="highlight"><pre><span></span><code>func cleanupFunction() {
+    fmt.Println(&quot;Performing cleanup operations&quot;)
+}
+
+func deferWithUserFunctions() {
+    var counter = 0
+
+    defer cleanupFunction()
+    defer fmt.Printf(&quot;Final counter value: %d\n&quot;, counter)
+
+    counter = 5
+    fmt.Printf(&quot;Counter set to: %d\n&quot;, counter)
+}
+</code></pre></div>
+<h2 id="defer-in-loops">Defer in Loops</h2>
+<p>Each iteration of a loop creates a separate deferred call:</p>
+<div class="highlight"><pre><span></span><code>func deferInLoop() {
+    fmt.Println(&quot;Starting loop with defer&quot;)
+
+    for i := 0; i &lt; 3; i = i + 1 {
+        defer fmt.Printf(&quot;Deferred from iteration %d\n&quot;, i)
+        fmt.Printf(&quot;Loop iteration %d\n&quot;, i)
+    }
+
+    fmt.Println(&quot;Loop completed&quot;)
+}
+</code></pre></div>
+<p><strong>Output:</strong>
+<div class="highlight"><pre><span></span><code>Starting loop with defer
+Loop iteration 0
+Loop iteration 1
+Loop iteration 2
+Loop completed
+Deferred from iteration 2
+Deferred from iteration 1
+Deferred from iteration 0
 </code></pre></div></p>
-<hr />
-<h3 id="errorvalues"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>Error(values...)</code></h3>
-<p>Logs at ERROR level.</p>
-<p><strong>Returns:</strong>
-- <code>(None, error)</code></p>
-<p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import log
+<h2 id="error-handling-with-defer">Error Handling with Defer</h2>
+<p>Defer statements execute even when errors occur:</p>
+<div class="highlight"><pre><span></span><code>func functionWithError() {
+    defer fmt.Println(&quot;Cleanup happens even with errors&quot;)
 
-log.Error(&quot;db down&quot;, &quot;retries&quot;, 3)
-</code></pre></div></p>
-<hr />
-<h3 id="debugvalues"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>Debug(values...)</code></h3>
-<p>Logs at DEBUG level.</p>
-<p><strong>Returns:</strong>
-- <code>(None, error)</code></p>
-<p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import log
+    fmt.Println(&quot;About to cause an error...&quot;)
+    var result = 10 / 0  // This will cause an error
 
-log.Debug(&quot;details&quot;, &quot;module&quot;, &quot;auth&quot;)
-</code></pre></div></p>
-<hr />
-<h3 id="setlevellevel"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>SetLevel(level)</code></h3>
-<p>Sets the current log level. Supported values: <code>DEBUG</code>, <code>INFO</code>, <code>WARN</code>, <code>ERROR</code>.</p>
-<p><strong>Parameters:</strong>
-- <code>level</code> (string)</p>
-<p><strong>Returns:</strong>
-- <code>(None, error)</code></p>
-<p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import log
+    fmt.Printf(&quot;Result: %d\n&quot;, result)  // This won&#39;t execute
+    // But defer still executes
+}
+</code></pre></div>
+<h2 id="comprehensive-error-handling">Comprehensive Error Handling</h2>
+<p>Harneet's defer implementation includes advanced error handling:</p>
+<ul>
+<li><strong>Error Aggregation</strong>: Multiple defer errors are collected and reported together</li>
+<li><strong>Stack Trace Preservation</strong>: Error stack traces are maintained for debugging</li>
+<li><strong>Panic Recovery</strong>: Panics in deferred calls are caught and converted to errors</li>
+<li><strong>Resource Limits</strong>: Protection against excessive defer stack usage</li>
+</ul>
+<div class="highlight"><pre><span></span><code>func errorFunction() {
+    var x = 1 / 0  // Error in defer
+}
 
-log.SetLevel(&quot;WARN&quot;)
-log.Info(&quot;hidden&quot;)     // below WARN
-log.Warn(&quot;visible&quot;)
-</code></pre></div></p>
-<hr />
-<h3 id="setoutputpath"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>SetOutput(path)</code></h3>
-<p>Directs logs to a rotating file with text format using defaults: <code>10MB</code> max size, <code>5</code> backups, <code>7</code> days retention, no compression.</p>
-<p><strong>Parameters:</strong>
-- <code>path</code> (string): Log file path.</p>
-<p><strong>Returns:</strong>
-- <code>(None, error)</code></p>
-<p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import log
+func multipleDeferredErrors() {
+    defer fmt.Println(&quot;This defer works&quot;)
+    defer errorFunction()  // This will fail
+    defer fmt.Println(&quot;This defer also works&quot;)
 
-log.SetOutput(&quot;./logs/app.log&quot;)
-log.Info(&quot;file output configured&quot;)
-</code></pre></div></p>
-<hr />
-<h3 id="configurerotationformat-path-maxsizemb-maxbackups-maxagedays-compress"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>ConfigureRotation(format, path, maxSizeMB, maxBackups, maxAgeDays, compress)</code></h3>
-<p>Configures rotation and output format.</p>
-<p><strong>Parameters:</strong>
-- <code>format</code> (string): <code>text</code> or <code>json</code>.
-- <code>path</code> (string): Log file path.
-- <code>maxSizeMB</code> (int): Max file size in MB before rotation.
-- <code>maxBackups</code> (int): Number of rotated files to keep.
-- <code>maxAgeDays</code> (int): Delete files older than this many days (0 disables).
-- <code>compress</code> (boolean): Gzip rotated files.</p>
-<p><strong>Returns:</strong>
-- <code>(None, error)</code></p>
-<p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import log
+    fmt.Println(&quot;Main function completes&quot;)
+    // All working defers execute, errors are aggregated
+}
+</code></pre></div>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="1-use-defer-for-cleanup">1. Use Defer for Cleanup</h3>
+<div class="highlight"><pre><span></span><code>func processFile(filename string) {
+    // Open file
+    defer closeFile()  // Ensure file is closed
 
-// Text handler
-log.ConfigureRotation(&quot;text&quot;, &quot;./logs/app-rotating.log&quot;, 50, 10, 14, false)
-log.Info(&quot;rotation configured&quot;)
+    // Process file...
+}
+</code></pre></div>
+<h3 id="2-defer-immediately-after-resource-acquisition">2. Defer Immediately After Resource Acquisition</h3>
+<div class="highlight"><pre><span></span><code>func acquireResource() {
+    resource := openResource()
+    defer resource.close()  // Defer immediately after acquisition
 
-// JSON handler
-log.ConfigureRotation(&quot;json&quot;, &quot;./logs/app.jsonl&quot;, 50, 10, 14, true)
-log.Error(&quot;failure&quot;, &quot;code&quot;, 500)
-</code></pre></div></p>
-<hr />
-<h3 id="withkey-value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span> <code>With(key, value)</code></h3>
-<p>Adds a persistent structured attribute to the logger. Subsequent logs include this field.</p>
-<p><strong>Parameters:</strong>
-- <code>key</code> (string)
-- <code>value</code> (any)</p>
-<p><strong>Returns:</strong>
-- <code>(None, error)</code></p>
-<p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code>import log
+    // Use resource...
+}
+</code></pre></div>
+<h3 id="3-be-careful-with-loop-variables">3. Be Careful with Loop Variables</h3>
+<div class="highlight"><pre><span></span><code>// Correct: Capture loop variable
+for i := 0; i &lt; 5; i++ {
+    defer fmt.Printf(&quot;Iteration %d\n&quot;, i)  // Captures current value of i
+}
 
-log.With(&quot;service&quot;, &quot;payments&quot;)
-log.With(&quot;instance&quot;, &quot;i-12345&quot;)
-log.Info(&quot;startup&quot;, true)
-</code></pre></div></p>
+// Alternative: Use a helper function if you need final value
+var finalI = 0
+func printFinalI() {
+    fmt.Printf(&quot;Final i: %d\n&quot;, finalI)
+}
+
+for i := 0; i &lt; 5; i = i + 1 {
+    finalI = i
+    defer printFinalI()  // Uses final value of i
+}
+</code></pre></div>
+<h3 id="4-order-matters">4. Order Matters</h3>
+<div class="highlight"><pre><span></span><code>func setupAndCleanup() {
+    setupA()
+    defer cleanupA()  // Executes second
+
+    setupB()
+    defer cleanupB()  // Executes first
+
+    // Use resources...
+}
+</code></pre></div>
+<h2 id="advanced-features">Advanced Features</h2>
+<h3 id="stack-overflow-protection">Stack Overflow Protection</h3>
+<p>Harneet includes protection against excessive defer usage:
+- Maximum defer stack size limits
+- Recursive defer call detection
+- Emergency cleanup procedures</p>
+<h3 id="error-aggregation">Error Aggregation</h3>
+<p>When multiple deferred calls fail, Harneet aggregates the errors:
+- Detailed error reporting for each failed defer
+- Stack trace preservation
+- Continued execution of remaining defers</p>
+<h3 id="performance-considerations">Performance Considerations</h3>
+<ul>
+<li>Defer has minimal runtime overhead</li>
+<li>Arguments are captured efficiently</li>
+<li>Stack management is optimized for typical usage patterns</li>
+</ul>
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="file-operations">File Operations</h3>
+<div class="highlight"><pre><span></span><code>func processFile(filename string) {
+    file := openFile(filename)
+    defer file.close()
+
+    // Process file safely
+}
+</code></pre></div>
+<h3 id="lock-management">Lock Management</h3>
+<div class="highlight"><pre><span></span><code>func criticalSection() {
+    mutex.lock()
+    defer mutex.unlock()
+
+    // Critical section code
+}
+</code></pre></div>
+<h3 id="logging-and-monitoring">Logging and Monitoring</h3>
+<div class="highlight"><pre><span></span><code>func trackedOperation(name string) {
+    fmt.Printf(&quot;Starting %s\n&quot;, name)
+    defer fmt.Printf(&quot;Completed %s\n&quot;, name)
+
+    // Operation code
+}
+</code></pre></div>
+<h3 id="error-recovery">Error Recovery</h3>
+<div class="highlight"><pre><span></span><code>func cleanupOperation() {
+    fmt.Println(&quot;Operation cleanup&quot;)
+}
+
+func safeOperation() {
+    defer cleanupOperation()
+
+    // Potentially risky operation
+}
+</code></pre></div>
+<h2 id="summary">Summary</h2>
+<p>Defer statements provide a robust mechanism for:
+- <strong>Resource Management</strong>: Automatic cleanup of resources
+- <strong>Error Safety</strong>: Guaranteed execution even with errors
+- <strong>Code Organization</strong>: Clean separation of setup and teardown
+- <strong>Reliability</strong>: Consistent behavior across all exit paths</p>
+<p>The defer mechanism in Harneet is designed to be both powerful and safe, with comprehensive error handling and protection against common pitfalls.</p>
 
 
 
@@ -2423,7 +2886,7 @@ log.Info(&quot;startup&quot;, true)
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../errors/" class="md-footer__link md-footer__link--prev" aria-label="Previous: errors">
+          <a href="../arrow_functions/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Arrow Functions">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2433,20 +2896,20 @@ log.Info(&quot;startup&quot;, true)
                 Previous
               </span>
               <div class="md-ellipsis">
-                errors
+                Arrow Functions
               </div>
             </div>
           </a>
         
         
           
-          <a href="../file/" class="md-footer__link md-footer__link--next" aria-label="Next: file">
+          <a href="../functional/" class="md-footer__link md-footer__link--next" aria-label="Next: Functional features">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                file
+                Functional features
               </div>
             </div>
             <div class="md-footer__button md-icon">

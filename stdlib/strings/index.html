@@ -12,7 +12,7 @@
         <link rel="prev" href="../input/">
       
       
-        <link rel="next" href="../math/">
+        <link rel="next" href="../../general/multiline_strings_migration/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>strings - Harneet Programming Language</title>
+        <title>Overview - Harneet Programming Language</title>
       
     
     
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              strings
+              Overview
             
           </span>
         </div>
@@ -845,6 +845,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../functions/defer_statements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Defer Statements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../functions/functional/" class="md-nav__link">
         
   
@@ -985,6 +1008,46 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    strings
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            strings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
@@ -998,7 +1061,7 @@
   
   
   <span class="md-ellipsis">
-    strings
+    Overview
     
   </span>
   
@@ -1011,7 +1074,7 @@
   
   
   <span class="md-ellipsis">
-    strings
+    Overview
     
   </span>
   
@@ -1032,6 +1095,195 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#multiline-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiline Strings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multiline Strings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Syntax
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Use Cases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sql-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQL Queries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSON Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTML Templates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raw-string-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Raw String Examples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-with-string-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration with String Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migration-from-regular-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migration from Regular Strings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-gotchas-and-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Gotchas and Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Gotchas and Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gotcha-1-literal-vs-interpreted-escape-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gotcha 1: Literal vs Interpreted Escape Sequences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gotcha-2-leading-and-trailing-whitespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gotcha 2: Leading and Trailing Whitespace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gotcha-3-backticks-in-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gotcha 3: Backticks in Content
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practice-1-consistent-indentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practice 1: Consistent Indentation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practice-2-choose-the-right-string-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practice 2: Choose the Right String Type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practice-3-string-operations-work-identically" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practice 3: String Operations Work Identically
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#slicing-strings" class="md-nav__link">
@@ -1271,6 +1523,37 @@
   
   
     <li class="md-nav__item">
+      <a href="../../general/multiline_strings_migration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multiline strings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../math/" class="md-nav__link">
         
   
@@ -1385,13 +1668,53 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    structs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_9">
+            <span class="md-nav__icon md-icon"></span>
+            structs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../structs/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    structs
+    Overview
     
   </span>
   
@@ -1420,6 +1743,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1465,15 +1796,15 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_12" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_11" >
         
           
-          <label class="md-nav__link" for="__nav_6_12" id="__nav_6_12_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6_11" id="__nav_6_11_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
-    HTTP
+    http
     
   </span>
   
@@ -1481,10 +1812,10 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_12">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_11">
             <span class="md-nav__icon md-icon"></span>
-            HTTP
+            http
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1523,7 +1854,7 @@
   
   
   <span class="md-ellipsis">
-    HTTP Client
+    Http Client
     
   </span>
   
@@ -1979,6 +2310,52 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sync/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    sync
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uuid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    uuid
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1998,7 +2375,7 @@
   
   
   <span class="md-ellipsis">
-    box
+    Box
     
   </span>
   
@@ -2020,7 +2397,7 @@
   
   
   <span class="md-ellipsis">
-    reflect
+    Reflect
     
   </span>
   
@@ -2121,6 +2498,195 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#multiline-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiline Strings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multiline Strings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Syntax
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Use Cases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sql-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQL Queries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSON Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTML Templates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raw-string-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Raw String Examples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-with-string-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration with String Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migration-from-regular-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migration from Regular Strings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-gotchas-and-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Gotchas and Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Gotchas and Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gotcha-1-literal-vs-interpreted-escape-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gotcha 1: Literal vs Interpreted Escape Sequences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gotcha-2-leading-and-trailing-whitespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gotcha 2: Leading and Trailing Whitespace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gotcha-3-backticks-in-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gotcha 3: Backticks in Content
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practice-1-consistent-indentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practice 1: Consistent Indentation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practice-2-choose-the-right-string-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practice 2: Choose the Right String Type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practice-3-string-operations-work-identically" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practice 3: String Operations Work Identically
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#slicing-strings" class="md-nav__link">
@@ -2362,6 +2928,226 @@
 
 <h1 id="strings-module"><code>strings</code> Module</h1>
 <p>The <code>strings</code> module provides functions for string manipulation.</p>
+<h2 id="multiline-strings">Multiline Strings</h2>
+<p>Harneet supports multiline strings using backtick (<code>`</code>) delimiters. These are raw strings that preserve formatting and don't interpret escape sequences, making them perfect for SQL queries, HTML templates, JSON data, and configuration files.</p>
+<h3 id="basic-syntax">Basic Syntax</h3>
+<div class="highlight"><pre><span></span><code>var multilineString = `This is a multiline string
+that spans multiple lines
+and preserves all formatting`
+</code></pre></div>
+<h3 id="key-features">Key Features</h3>
+<ul>
+<li><strong>Raw String Behavior</strong>: No escape sequence processing - backslashes, quotes, and other special characters are treated literally</li>
+<li><strong>Formatting Preservation</strong>: All whitespace, indentation, and line breaks are preserved exactly as written</li>
+<li><strong>No Escaping Required</strong>: Include quotes, backslashes, and other special characters without escaping</li>
+</ul>
+<h3 id="common-use-cases">Common Use Cases</h3>
+<h4 id="sql-queries">SQL Queries</h4>
+<div class="highlight"><pre><span></span><code>var createTableSQL = `
+    CREATE TABLE users (
+        id INTEGER PRIMARY KEY,
+        username VARCHAR(50) NOT NULL,
+        email VARCHAR(100) NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )
+`
+
+var complexQuery = `
+    SELECT u.username, p.title, COUNT(c.id) as comment_count
+    FROM users u
+    LEFT JOIN posts p ON u.id = p.author_id
+    LEFT JOIN comments c ON p.id = c.post_id
+    WHERE u.is_active = TRUE
+    GROUP BY u.id, p.id
+    ORDER BY comment_count DESC
+`
+</code></pre></div>
+<h4 id="json-data">JSON Data</h4>
+<div class="highlight"><pre><span></span><code>var userJSON = `{
+    &quot;id&quot;: 12345,
+    &quot;name&quot;: &quot;John Doe&quot;,
+    &quot;email&quot;: &quot;john@example.com&quot;,
+    &quot;preferences&quot;: {
+        &quot;theme&quot;: &quot;dark&quot;,
+        &quot;notifications&quot;: true
+    },
+    &quot;tags&quot;: [&quot;developer&quot;, &quot;premium&quot;]
+}`
+</code></pre></div>
+<h4 id="html-templates">HTML Templates</h4>
+<div class="highlight"><pre><span></span><code>var htmlTemplate = `&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Welcome&lt;/title&gt;
+    &lt;style&gt;
+        .container { margin: 20px; }
+        .header { color: #333; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;h1 class=&quot;header&quot;&gt;Hello, World!&lt;/h1&gt;
+        &lt;p&gt;This is a &quot;quoted&quot; string with &#39;mixed&#39; quotes.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;`
+</code></pre></div>
+<h4 id="configuration-files">Configuration Files</h4>
+<div class="highlight"><pre><span></span><code>var configYAML = `
+server:
+  host: &quot;0.0.0.0&quot;
+  port: 8080
+  ssl:
+    enabled: true
+    cert_path: &quot;/etc/ssl/certs/app.crt&quot;
+    key_path: &quot;/etc/ssl/private/app.key&quot;
+
+database:
+  host: &quot;localhost&quot;
+  port: 5432
+  name: &quot;myapp&quot;
+  user: &quot;dbuser&quot;
+`
+</code></pre></div>
+<h3 id="raw-string-examples">Raw String Examples</h3>
+<p>Multiline strings are raw strings, meaning special characters are treated literally:</p>
+<div class="highlight"><pre><span></span><code>// File paths with backslashes (no escaping needed)
+var windowsPath = `C:\Users\John\Documents\file.txt`
+
+// Regular expressions with backslashes
+var regexPattern = `\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}`
+
+// Mixed quotes without escaping
+var mixedQuotes = `He said &quot;Hello&quot; and she replied &#39;Hi there!&#39;`
+
+// Literal backslash sequences
+var literalEscapes = `These are literal: \n \t \r \&quot; \&#39;`
+</code></pre></div>
+<h3 id="integration-with-string-functions">Integration with String Functions</h3>
+<p>Multiline strings work seamlessly with all existing string functions:</p>
+<div class="highlight"><pre><span></span><code>import fmt
+import strings
+
+var multilineText = `Line 1
+Line 2
+Line 3`
+
+// Get length
+var length, _ = strings.Len(multilineText)
+fmt.Printf(&quot;Length: %d\n&quot;, length)
+
+// Convert to uppercase
+var upper, _ = strings.Upper(multilineText)
+fmt.Println(&quot;Uppercase:&quot;, upper)
+
+// Split by newlines
+var lines, _ = strings.Split(multilineText, &quot;\n&quot;)
+fmt.Println(&quot;Lines:&quot;, lines)
+
+// Check if contains text
+var hasLine2, _ = strings.Contains(multilineText, &quot;Line 2&quot;)
+fmt.Printf(&quot;Contains &#39;Line 2&#39;: %t\n&quot;, hasLine2)
+</code></pre></div>
+<h3 id="best-practices">Best Practices</h3>
+<ol>
+<li><strong>Use for Formatted Content</strong>: Perfect for SQL, HTML, JSON, YAML, and other structured text</li>
+<li><strong>Preserve Indentation</strong>: Maintain consistent indentation for readability</li>
+<li><strong>No Escape Sequences</strong>: Remember that <code>\n</code>, <code>\t</code>, etc. are literal characters, not escape sequences</li>
+<li><strong>String Operations</strong>: All existing string functions work normally with multiline strings</li>
+</ol>
+<h3 id="migration-from-regular-strings">Migration from Regular Strings</h3>
+<p>If you have existing code with escaped strings, you can easily migrate to multiline strings:</p>
+<div class="highlight"><pre><span></span><code>// Before (with escaping)
+var oldSQL = &quot;SELECT *\nFROM users\nWHERE id = 1&quot;
+
+// After (multiline string)
+var newSQL = `SELECT *
+FROM users
+WHERE id = 1`
+</code></pre></div>
+<h3 id="common-gotchas-and-best-practices">Common Gotchas and Best Practices</h3>
+<h4 id="gotcha-1-literal-vs-interpreted-escape-sequences">Gotcha 1: Literal vs Interpreted Escape Sequences</h4>
+<div class="highlight"><pre><span></span><code>// Regular string - \n creates actual newline
+var regular = &quot;Line 1\nLine 2&quot;
+
+// Multiline string - \n is literal text
+var multiline = `Line 1\nLine 2`
+
+// For actual newlines in multiline strings, use line breaks
+var actualNewlines = `Line 1
+Line 2`
+</code></pre></div>
+<h4 id="gotcha-2-leading-and-trailing-whitespace">Gotcha 2: Leading and Trailing Whitespace</h4>
+<div class="highlight"><pre><span></span><code>// This includes leading and trailing newlines
+var withWhitespace = `
+    Content here
+`
+
+// This doesn&#39;t include extra newlines
+var cleanContent = `Content here`
+
+// This preserves indentation but no extra newlines
+var indentedClean = `    Content here
+    More content`
+</code></pre></div>
+<h4 id="gotcha-3-backticks-in-content">Gotcha 3: Backticks in Content</h4>
+<div class="highlight"><pre><span></span><code>// If you need literal backticks, use regular strings
+var codeExample = &quot;Use `backticks` for multiline strings in Harneet&quot;
+
+// Or in documentation contexts
+var docExample = &quot;Multiline strings use `` ` `` delimiters&quot;
+</code></pre></div>
+<h4 id="best-practice-1-consistent-indentation">Best Practice 1: Consistent Indentation</h4>
+<div class="highlight"><pre><span></span><code>// ✅ Good: Consistent indentation for readability
+var wellFormatted = `
+    SELECT u.name, u.email
+    FROM users u
+    WHERE u.active = TRUE
+    ORDER BY u.created_at DESC
+`
+
+// ❌ Avoid: Inconsistent indentation
+var poorlyFormatted = `
+SELECT u.name, u.email
+    FROM users u
+WHERE u.active = TRUE
+        ORDER BY u.created_at DESC
+`
+</code></pre></div>
+<h4 id="best-practice-2-choose-the-right-string-type">Best Practice 2: Choose the Right String Type</h4>
+<div class="highlight"><pre><span></span><code>// ✅ Use regular strings for simple text
+var simpleMessage = &quot;Hello, World!&quot;
+
+// ✅ Use multiline strings for formatted content
+var formattedContent = `{
+    &quot;message&quot;: &quot;Hello, World!&quot;,
+    &quot;timestamp&quot;: &quot;2024-01-20T10:30:00Z&quot;
+}`
+
+// ✅ Use regular strings when you need escape sequences
+var withNewlines = &quot;First line\nSecond line\nThird line&quot;
+
+// ✅ Use multiline strings when you want literal backslashes
+var filePath = `C:\Users\John\Documents\file.txt`
+</code></pre></div>
+<h4 id="best-practice-3-string-operations-work-identically">Best Practice 3: String Operations Work Identically</h4>
+<div class="highlight"><pre><span></span><code>import strings
+
+var multilineData = `{
+    &quot;users&quot;: [
+        {&quot;name&quot;: &quot;Alice&quot;, &quot;age&quot;: 30},
+        {&quot;name&quot;: &quot;Bob&quot;, &quot;age&quot;: 25}
+    ]
+}`
+
+// All string functions work normally
+var length, _ = strings.Len(multilineData)
+var hasUsers, _ = strings.Contains(multilineData, &quot;users&quot;)
+var upperData, _ = strings.Upper(multilineData)
+
+// Split by actual newlines (not \n characters)
+var lines, _ = strings.Split(multilineData, &quot;\n&quot;)
+</code></pre></div>
 <h2 id="slicing-strings">Slicing strings</h2>
 <p>Strings in Harneet support Go-like slicing using the <code>s[a:b]</code> syntax (and the shorthand forms <code>[:b]</code>, <code>[a:]</code>, and <code>[:]</code>).</p>
 <p>Rules and semantics:
@@ -2800,13 +3586,13 @@ fmt.Println(c2) // 0
         
         
           
-          <a href="../math/" class="md-footer__link md-footer__link--next" aria-label="Next: math">
+          <a href="../../general/multiline_strings_migration/" class="md-footer__link md-footer__link--next" aria-label="Next: Multiline strings">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                math
+                Multiline strings
               </div>
             </div>
             <div class="md-footer__button md-icon">
