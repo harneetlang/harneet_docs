@@ -1,3653 +1,517 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-      
-      
-      
-        <link rel="prev" href="../../error_handling_system/">
-      
-      
-        <link rel="next" href="../arrow_functions/">
-      
-      
-      <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
-    
-    
-      
-        <title>Introduction - Harneet Programming Language</title>
-      
-    
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
-      
-        
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
-      
-      
-
-
-    
-    
-      
-    
-    
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
-    
-    
-      <link rel="stylesheet" href="../../assets/css/custom.css">
-    
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
-
-    
-    
-    
-  </head>
-  
-  
-    
-    
-      
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
-  
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-        
-        <a href="#introduction-to-functions" class="md-skip">
-          Skip to content
-        </a>
-      
-    </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-    
-      
-
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Harneet Programming Language" class="md-header__button md-logo" aria-label="Harneet Programming Language" data-md-component="logo">
-      
-  <img src="../../assets/images/harneet.png" alt="logo">
-
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
-            Harneet Programming Language
-          </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
-            
-              Introduction
-            
-          </span>
-        </div>
-      </div>
-    </div>
-    
-      
-        <form class="md-header__option" data-md-component="palette">
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Light Mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
-      </label>
-    
-  
-</form>
-      
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
-    
-    
-    
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-      
-    
-    
-  </nav>
-  
-</header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-        
-          
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-
-
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Harneet Programming Language" class="md-nav__button md-logo" aria-label="Harneet Programming Language" data-md-component="logo">
-      
-  <img src="../../assets/images/harneet.png" alt="logo">
-
-    </a>
-    Harneet Programming Language
-  </label>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Home
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../repl/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    REPL
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../command_line/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Command Line
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    General
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            General
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../general/comments/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Comments
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../general/data_types/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Data Types
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../general/variable_declaration/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Variable Declaration & Assignment
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../general/const/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Const Declarations
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../general/keywords_identifiers/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Keywords and Identifiers
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../general/operators_and_expressions/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Operators and Expressions
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../general/pipe_operator/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Pipe Operator (|>)
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_8" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Advanced Arithmetic Operations
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_8">
-            <span class="md-nav__icon md-icon"></span>
-            Advanced Arithmetic Operations
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../general/advanced-arithmetic-operators/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Operator Reference
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../general/bitwise-operations-guide/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Bitwise Operations Guide
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../general/compound-assignment-guide/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Compound Assignment Guide
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../general/arrays/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Arrays
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../general/maps/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Maps
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../general/control_flow/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Control Flow
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../general/concurrency/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Concurrency (do / await / sleep)
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../general/pattern_matching/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Pattern Matching
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/break_continue/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Break & Continue
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../general/block_structure/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Block Structure
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../general/scoping_variable_management/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Scoping and Variable Management
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/cast/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Cast
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../general/import_system/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Import System
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../modules/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Module System
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../general/unicode_support/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Unicode Support
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_21" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_21" id="__nav_4_21_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Builtins
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_21_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_21">
-            <span class="md-nav__icon md-icon"></span>
-            Builtins
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../append/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Append
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../len/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Len
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../error_handling_system/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Error Handling System
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Functions
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Functions
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Introduction
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    Introduction
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#declaration-syntax" class="md-nav__link">
-    <span class="md-ellipsis">
-      Declaration Syntax
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#basic-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Basic Examples
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Basic Examples">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#function-with-a-single-return-value" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function with a single return value
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-with-no-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function with no parameters
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-with-no-return-value" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function with no return value
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#returning-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Returning Functions
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Returning Functions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#basic-function-return" class="md-nav__link">
-    <span class="md-ellipsis">
-      Basic Function Return
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#closures-with-variable-capture" class="md-nav__link">
-    <span class="md-ellipsis">
-      Closures with Variable Capture
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#returning-arrow-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Returning Arrow Functions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#higher-order-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Higher-Order Functions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#conditional-function-returns" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conditional Function Returns
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#function-type-annotations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function Type Annotations
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Function Type Annotations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#function-parameters-with-function-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function Parameters with Function Types
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-variables-with-type-annotations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function Variables with Type Annotations
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#multiple-parameter-function-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      Multiple Parameter Function Types
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#arrow-functions-with-type-annotations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Arrow Functions with Type Annotations
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#type-safety-and-error-detection" class="md-nav__link">
-    <span class="md-ellipsis">
-      Type Safety and Error Detection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#advanced-function-type-patterns" class="md-nav__link">
-    <span class="md-ellipsis">
-      Advanced Function Type Patterns
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Advanced Function Type Patterns">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#factory-functions-with-type-safety" class="md-nav__link">
-    <span class="md-ellipsis">
-      Factory Functions with Type Safety
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#callback-pattern-with-type-validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Callback Pattern with Type Validation
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-benefits" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Benefits
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Key Benefits">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#type-safety" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔒 Type Safety
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#performance" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 Performance
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#code-clarity" class="md-nav__link">
-    <span class="md-ellipsis">
-      📖 Code Clarity
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#flexibility" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔧 Flexibility
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../arrow_functions/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Arrow Functions
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../defer_statements/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Defer Statements
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../functional/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Functional features
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../advanced_features/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Advanced Features
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Standard Library
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            Standard Library
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/fmt/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    fmt
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/input/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    input
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    strings
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_3">
-            <span class="md-nav__icon md-icon"></span>
-            strings
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/strings/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Overview
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../general/multiline_strings_migration/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Multiline strings
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/math/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    math
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/arrays/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    arrays
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_7_6" id="__nav_7_6_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    collections
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_6">
-            <span class="md-nav__icon md-icon"></span>
-            collections
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/collections/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Overview
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_6_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_7_6_2" id="__nav_7_6_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Enhanced Collections
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_6_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_6_2">
-            <span class="md-nav__icon md-icon"></span>
-            Enhanced Collections
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../collections/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Overview
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../collections/stacks-queues/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Stacks & Queues
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../collections/sets/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Sets
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../collections/linked-lists/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Linked Lists
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../collections/trees/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Trees
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../collections/concurrent/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Concurrent Collections
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../collections/performance/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Performance Guide
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../collections/migration/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Migration Guide
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../collections/api-reference/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    API Reference
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/config/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    config
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/db/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    db
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_9" >
-        
-          
-          <label class="md-nav__link" for="__nav_7_9" id="__nav_7_9_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    structs
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_9">
-            <span class="md-nav__icon md-icon"></span>
-            structs
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/structs/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Overview
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../general/struct_field_assignment/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Struct Field Assignment
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/json/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    json
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_11" >
-        
-          
-          <label class="md-nav__link" for="__nav_7_11" id="__nav_7_11_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    http
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_11">
-            <span class="md-nav__icon md-icon"></span>
-            http
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/http/overview/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Overview
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/http/client/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Http Client
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/http/requests/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Request Building
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/http/responses/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Response Handling
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/http/server/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    HTTP Server
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/http/routing/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Routing & Mux
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/http/middleware/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Middleware
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/http/auth/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Authentication
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/http/cookies/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Cookies & Sessions
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/http/advanced/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Advanced
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/http/examples/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Examples & Patterns
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/assert/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    assert
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/errors/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    errors
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/log/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    log
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/file/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    file
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/path/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    path
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/os/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    os
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/datetime/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    datetime
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/flags/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    flags
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/exec/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    exec
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/regex/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    regex
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/sync/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    sync
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/uuid/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    uuid
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/encoding/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    encoding
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/box/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Box
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../stdlib/reflect/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Reflect
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../type_system_safety/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Type System & Safety
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../any_type/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    The any Type
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../comprehensive_examples/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Comprehensive Language Examples
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-  </ul>
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#declaration-syntax" class="md-nav__link">
-    <span class="md-ellipsis">
-      Declaration Syntax
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#basic-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Basic Examples
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Basic Examples">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#function-with-a-single-return-value" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function with a single return value
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-with-no-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function with no parameters
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-with-no-return-value" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function with no return value
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#returning-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Returning Functions
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Returning Functions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#basic-function-return" class="md-nav__link">
-    <span class="md-ellipsis">
-      Basic Function Return
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#closures-with-variable-capture" class="md-nav__link">
-    <span class="md-ellipsis">
-      Closures with Variable Capture
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#returning-arrow-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Returning Arrow Functions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#higher-order-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Higher-Order Functions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#conditional-function-returns" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conditional Function Returns
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#function-type-annotations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function Type Annotations
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Function Type Annotations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#function-parameters-with-function-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function Parameters with Function Types
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-variables-with-type-annotations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function Variables with Type Annotations
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#multiple-parameter-function-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      Multiple Parameter Function Types
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#arrow-functions-with-type-annotations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Arrow Functions with Type Annotations
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#type-safety-and-error-detection" class="md-nav__link">
-    <span class="md-ellipsis">
-      Type Safety and Error Detection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#advanced-function-type-patterns" class="md-nav__link">
-    <span class="md-ellipsis">
-      Advanced Function Type Patterns
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Advanced Function Type Patterns">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#factory-functions-with-type-safety" class="md-nav__link">
-    <span class="md-ellipsis">
-      Factory Functions with Type Safety
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#callback-pattern-with-type-validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Callback Pattern with Type Validation
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-benefits" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Benefits
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Key Benefits">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#type-safety" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔒 Type Safety
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#performance" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 Performance
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#code-clarity" class="md-nav__link">
-    <span class="md-ellipsis">
-      📖 Code Clarity
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#flexibility" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔧 Flexibility
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-
-
-<h1 id="introduction-to-functions">Introduction to Functions</h1>
-<p>Functions are reusable blocks of code that perform a specific task. They are a fundamental building block of Harneet programs and support advanced features like returning other functions, closures, and higher-order programming.</p>
-<h2 id="declaration-syntax">Declaration Syntax</h2>
-<p>The basic syntax for declaring a function is as follows:</p>
-<div class="highlight"><pre><span></span><code>package main
-function functionName(param1 type1, param2 type2) returnType {
-    // function body
-    return value
-}
-</code></pre></div>
-<ul>
-<li><code>function</code>: The keyword to declare a function.</li>
-<li><code>functionName</code>: The name of the function.</li>
-<li><code>(param1 type1, param2 type2)</code>: The list of parameters with their types.</li>
-<li><code>returnType</code>: The type of the value returned by the function.</li>
-<li><code>{ ... }</code>: The body of the function containing the code to be executed.</li>
-<li><code>return</code>: The keyword to return a value from the function.</li>
-</ul>
-<h2 id="basic-examples">Basic Examples</h2>
-<h3 id="function-with-a-single-return-value">Function with a single return value</h3>
-<div class="highlight"><pre><span></span><code>package main
-import fmt
-
-function square(x int) int {
-    return x * x
-}
-
-var result = square(5)
-fmt.Println(result) // Output: 25
-</code></pre></div>
-<h3 id="function-with-no-parameters">Function with no parameters</h3>
-<div class="highlight"><pre><span></span><code>package main
-import fmt
-
-function getAnswer() int {
-    return 42
-}
-
-var answer = getAnswer()
-fmt.Println(answer) // Output: 42
-</code></pre></div>
-<h3 id="function-with-no-return-value">Function with no return value</h3>
-<div class="highlight"><pre><span></span><code>package main
-import fmt
-
-function printMessage() {
-    fmt.Println(&quot;Hello, Harneet!&quot;)
-}
-
-printMessage() // Output: Hello, Harneet!
-</code></pre></div>
-<h2 id="returning-functions">Returning Functions</h2>
-<p>Harneet supports returning functions from other functions, enabling powerful functional programming patterns like closures and higher-order functions.</p>
-<h3 id="basic-function-return">Basic Function Return</h3>
-<div class="highlight"><pre><span></span><code>package main
-import fmt
-
-function getGreeter() function(string) string {
-    function greet(name string) string {
-        return &quot;Hello, &quot; + name + &quot;!&quot;
-    }
-    return greet
-}
-
-var greeter = getGreeter()
-var message = greeter(&quot;World&quot;)
-fmt.Println(message) // Output: Hello, World!
-</code></pre></div>
-<h3 id="closures-with-variable-capture">Closures with Variable Capture</h3>
-<p>Functions can capture variables from their enclosing scope, creating closures:</p>
-<div class="highlight"><pre><span></span><code>package main
-import fmt
-
-function createAdder(x int) function(int) int {
-    function inner(y int) int {
-        return x + y  // Captures &#39;x&#39; from outer scope
-    }
-    return inner
-}
-
-var add5 = createAdder(5)
-var result = add5(3)
-fmt.Println(result) // Output: 8
-</code></pre></div>
-<h3 id="returning-arrow-functions">Returning Arrow Functions</h3>
-<p>You can also return arrow functions for more concise syntax:</p>
-<div class="highlight"><pre><span></span><code>package main
-import fmt
-
-function createMultiplier(factor int) function(int) int {
-    return x =&gt; x * factor
-}
-
-var double = createMultiplier(2)
-var triple = createMultiplier(3)
-
-fmt.Printf(&quot;Double 5: %d\n&quot;, double(5))   // Output: Double 5: 10
-fmt.Printf(&quot;Triple 4: %d\n&quot;, triple(4))  // Output: Triple 4: 12
-</code></pre></div>
-<h3 id="higher-order-functions">Higher-Order Functions</h3>
-<p>Functions can return functions that themselves return functions, enabling complex functional patterns:</p>
-<div class="highlight"><pre><span></span><code>package main
-import fmt
-
-function createCalculator() function(string) function(int, int) int {
-    function getOperation(op string) function(int, int) int {
-        if op == &quot;add&quot; {
-            return (a, b) =&gt; a + b
-        } else if op == &quot;subtract&quot; {
-            return (a, b) =&gt; a - b
-        } else {
-            return (a, b) =&gt; a * b
-        }
-    }
-    return getOperation
-}
-
-var calculator = createCalculator()
-var addFunc = calculator(&quot;add&quot;)
-var subFunc = calculator(&quot;subtract&quot;)
-
-fmt.Printf(&quot;10 + 5 = %d\n&quot;, addFunc(10, 5))  // Output: 10 + 5 = 15
-fmt.Printf(&quot;10 - 5 = %d\n&quot;, subFunc(10, 5))  // Output: 10 - 5 = 5
-</code></pre></div>
-<h3 id="conditional-function-returns">Conditional Function Returns</h3>
-<p>Functions can return different functions based on runtime conditions:</p>
-<div class="highlight"><pre><span></span><code>package main
-import fmt
-
-function createMathOperation(operation string) function(int, int) int {
-    if operation == &quot;add&quot; {
-        function add(a int, b int) int {
-            return a + b
-        }
-        return add
-    } else {
-        function multiply(a int, b int) int {
-            return a * b
-        }
-        return multiply
-    }
-}
-
-var addOp = createMathOperation(&quot;add&quot;)
-var multiplyOp = createMathOperation(&quot;multiply&quot;)
-
-fmt.Printf(&quot;Add: %d\n&quot;, addOp(10, 20))        // Output: Add: 30
-fmt.Printf(&quot;Multiply: %d\n&quot;, multiplyOp(4, 5)) // Output: Multiply: 20
-</code></pre></div>
-<h2 id="function-type-annotations">Function Type Annotations</h2>
-<p>Harneet provides comprehensive support for function type annotations, enabling strong type safety for higher-order functions and functional programming patterns.</p>
-<h3 id="function-parameters-with-function-types">Function Parameters with Function Types</h3>
-<p>You can specify function types as parameters, enabling type-safe higher-order functions:</p>
-<div class="highlight"><pre><span></span><code>package main
-import fmt
-
-// Function that takes another function as a parameter
-function apply(f function(int) int, value int) int {
-    return f(value)
-}
-
-// Function that takes multiple function parameters
-function compose(f function(int) int, g function(int) int, value int) int {
-    return f(g(value))
-}
-
-// Test functions
-function double(x int) int {
-    return x * 2
-}
-
-function addTen(x int) int {
-    return x + 10
-}
-
-// Usage with full type validation
-var result1 = apply(double, 5)           // Output: 10
-var result2 = compose(double, addTen, 5) // Output: 30
-
-fmt.Printf(&quot;apply(double, 5) = %d\n&quot;, result1)
-fmt.Printf(&quot;compose(double, addTen, 5) = %d\n&quot;, result2)
-</code></pre></div>
-<h3 id="function-variables-with-type-annotations">Function Variables with Type Annotations</h3>
-<p>Variables can be declared with specific function types:</p>
-<div class="highlight"><pre><span></span><code>package main
-import fmt
-
-// Declare a function variable with a specific signature
-var handler function(int) int
-
-// Helper function
-function increment(x int) int {
-    return x + 1
-}
-
-// Assign function to typed variable
-handler = increment
-
-// Use the function variable
-var result = handler(7)
-fmt.Printf(&quot;handler(7) = %d\n&quot;, result) // Output: 8
-</code></pre></div>
-<h3 id="multiple-parameter-function-types">Multiple Parameter Function Types</h3>
-<p>Function types can specify multiple parameters and different return types:</p>
-<div class="highlight"><pre><span></span><code>package main
-import fmt
-
-// Function expecting a binary operation
-function calculate(op function(int, int) int, a int, b int) int {
-    return op(a, b)
-}
-
-// Function expecting a string transformation
-function transform(fn function(string) string, text string) string {
-    return fn(text)
-}
-
-// Test functions
-function add(x int, y int) int {
-    return x + y
-}
-
-function toUpper(s string) string {
-    return &quot;[UPPER]&quot; + s
-}
-
-// Usage with type validation
-var sum = calculate(add, 10, 5)
-var upper = transform(toUpper, &quot;hello&quot;)
-
-fmt.Printf(&quot;calculate(add, 10, 5) = %d\n&quot;, sum)      // Output: 15
-fmt.Printf(&quot;transform(toUpper, \&quot;hello\&quot;) = %s\n&quot;, upper) // Output: [UPPER]hello
-</code></pre></div>
-<h3 id="arrow-functions-with-type-annotations">Arrow Functions with Type Annotations</h3>
-<p>Arrow functions work seamlessly with function type annotations:</p>
-<div class="highlight"><pre><span></span><code>package main
-import fmt
-
-// Function expecting a function parameter
-function processNumbers(processor function(int) int, numbers []int) []int {
-    var results []int
-    for _, num := range numbers {
-        results = append(results, processor(num))
-    }
-    return results
-}
-
-// Arrow functions can be passed directly
-var doubled = processNumbers(x =&gt; x * 2, [1, 2, 3, 4])
-var squared = processNumbers(x =&gt; x * x, [1, 2, 3, 4])
-
-fmt.Printf(&quot;Doubled: %v\n&quot;, doubled) // Output: [2, 4, 6, 8]
-fmt.Printf(&quot;Squared: %v\n&quot;, squared) // Output: [1, 4, 9, 16]
-</code></pre></div>
-<h3 id="type-safety-and-error-detection">Type Safety and Error Detection</h3>
-<p>Harneet's function type system provides comprehensive compile-time validation:</p>
-<div class="highlight"><pre><span></span><code>package main
-import fmt
-
-function apply(f function(int) int, value int) int {
-    return f(value)
-}
-
-function double(x int) int {
-    return x * 2
-}
-
-function toUpper(s string) string {
-    return &quot;[UPPER]&quot; + s
-}
-
-// ✅ This works - correct types
-var result1 = apply(double, 5)
-
-// ❌ These would cause compile-time errors:
-// apply(toUpper, 5)     // Error: toUpper expects string, not int
-// apply(5, 10)          // Error: 5 is not a function
-// apply(double, &quot;text&quot;) // Error: double expects int, not string
-</code></pre></div>
-<h3 id="advanced-function-type-patterns">Advanced Function Type Patterns</h3>
-<h4 id="factory-functions-with-type-safety">Factory Functions with Type Safety</h4>
-<div class="highlight"><pre><span></span><code>package main
-import fmt
-
-// Factory function returning typed function
-function createValidator(minLength int) function(string) bool {
-    function validate(input string) bool {
-        // In practice, you&#39;d check string length
-        return input != &quot;&quot;
-    }
-    return validate
-}
-
-// Type-safe usage
-var passwordValidator = createValidator(8)
-var isValid = passwordValidator(&quot;mypassword&quot;)
-fmt.Printf(&quot;Password valid: %t\n&quot;, isValid)
-</code></pre></div>
-<h4 id="callback-pattern-with-type-validation">Callback Pattern with Type Validation</h4>
-<div class="highlight"><pre><span></span><code>package main
-import fmt
-
-// Function with callback parameter
-function processData(data int, callback function(int) int, errorHandler function(string)) int {
-    if data &lt; 0 {
-        errorHandler(&quot;Invalid data: negative number&quot;)
-        return 0
-    }
-    return callback(data)
-}
-
-// Callback functions
-function processValue(x int) int {
-    return x * 2
-}
-
-function handleError(msg string) {
-    fmt.Printf(&quot;Error: %s\n&quot;, msg)
-}
-
-// Type-safe callback usage
-var result = processData(10, processValue, handleError)
-fmt.Printf(&quot;Processed result: %d\n&quot;, result)
-</code></pre></div>
-<h2 id="key-benefits">Key Benefits</h2>
-<h3 id="type-safety">🔒 <strong>Type Safety</strong></h3>
-<ul>
-<li>Compile-time validation of function signatures</li>
-<li>Prevention of runtime type errors</li>
-<li>Clear error messages for type mismatches</li>
-</ul>
-<h3 id="performance">🚀 <strong>Performance</strong></h3>
-<ul>
-<li>No runtime type checking overhead</li>
-<li>Optimized function calls</li>
-<li>Early error detection</li>
-</ul>
-<h3 id="code-clarity">📖 <strong>Code Clarity</strong></h3>
-<ul>
-<li>Self-documenting function interfaces</li>
-<li>Clear expectations for function parameters</li>
-<li>Better IDE support and tooling</li>
-</ul>
-<h3 id="flexibility">🔧 <strong>Flexibility</strong></h3>
-<ul>
-<li>Works with all function types (named, anonymous, arrow)</li>
-<li>Supports complex nested function signatures</li>
-<li>Compatible with existing code patterns</li>
-</ul>
-<p>The function type system in Harneet provides the perfect balance of type safety and flexibility, enabling robust functional programming while maintaining code clarity and performance.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-                
-              </article>
-            </div>
-          
-          
-  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
-
-<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
-        </div>
-        
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Back to top
-</button>
-        
-      </main>
-      
-        <footer class="md-footer">
-  
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../../error_handling_system/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Error Handling System">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Error Handling System
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../arrow_functions/" class="md-footer__link md-footer__link--next" aria-label="Next: Arrow Functions">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Arrow Functions
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
-  
-    <div class="md-copyright__highlight">
-      © 2025 Harneet Programming Language — Built with ❤️ by Gagan Janjua
-    </div>
-  
-  
-</div>
-      
-    </div>
-  </div>
-</footer>
-      
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    
-      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
-    
-    
-    
-      
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.collapse", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.footer", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
-    
-    
-      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
-      
-    
-  </body>
-</html>
+<!doctype html><html lang=en class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link href=../../stdlib/cast/ rel=prev><link href=../arrow_functions/ rel=next><link rel=icon href=../../assets/images/harneet.png><meta name=generator content="mkdocs-1.6.1, mkdocs-material-9.6.20"><title>Introduction - Harneet Programming Language</title><link rel=stylesheet href=../../assets/stylesheets/main.e53b48f4.min.css><link rel=stylesheet href=../../assets/stylesheets/palette.06af60db.min.css><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback"><style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style><link rel=stylesheet href=../../assets/css/custom.css><script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script></head> <body dir=ltr data-md-color-scheme=slate data-md-color-primary=black data-md-color-accent=blue> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#introduction-to-functions class=md-skip> Skip to content </a> </div> <div data-md-component=announce> </div> <header class="md-header md-header--shadow" data-md-component=header> <nav class="md-header__inner md-grid" aria-label=Header> <a href=../.. title="Harneet Programming Language" class="md-header__button md-logo" aria-label="Harneet Programming Language" data-md-component=logo> <img src=../../assets/images/harneet.png alt=logo> </a> <label class="md-header__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg> </label> <div class=md-header__title data-md-component=header-title> <div class=md-header__ellipsis> <div class=md-header__topic> <span class=md-ellipsis> Harneet Programming Language </span> </div> <div class=md-header__topic data-md-component=header-topic> <span class=md-ellipsis> Introduction </span> </div> </div> </div> <form class=md-header__option data-md-component=palette> <input class=md-option data-md-color-media data-md-color-scheme=slate data-md-color-primary=black data-md-color-accent=blue aria-hidden=true type=radio name=__palette id=__palette_0> </form> <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script> <label class="md-header__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=Search placeholder=Search autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg> </label> <nav class=md-search__options aria-label=Search> <a href=javascript:void(0) class="md-search__icon md-icon" title=Share aria-label=Share data-clipboard data-clipboard-text data-md-component=search-share tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg> </a> <button type=reset class="md-search__icon md-icon" title=Clear aria-label=Clear tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg> </button> </nav> <div class=md-search__suggest data-md-component=search-suggest></div> </form> <div class=md-search__output> <div class=md-search__scrollwrap tabindex=0 data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> Initializing search </div> <ol class=md-search-result__list role=presentation></ol> </div> </div> </div> </div> </div> </nav> </header> <div class=md-container data-md-component=container> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=sidebar data-md-type=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary md-nav--integrated" aria-label=Navigation data-md-level=0> <label class=md-nav__title for=__drawer> <a href=../.. title="Harneet Programming Language" class="md-nav__button md-logo" aria-label="Harneet Programming Language" data-md-component=logo> <img src=../../assets/images/harneet.png alt=logo> </a> Harneet Programming Language </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../.. class=md-nav__link> <span class=md-ellipsis> Home </span> </a> </li> <li class=md-nav__item> <a href=../../repl/ class=md-nav__link> <span class=md-ellipsis> REPL </span> </a> </li> <li class=md-nav__item> <a href=../../command_line/ class=md-nav__link> <span class=md-ellipsis> Command Line </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_4> <label class=md-nav__link for=__nav_4 id=__nav_4_label tabindex=0> <span class=md-ellipsis> Getting Started </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_4_label aria-expanded=false> <label class=md-nav__title for=__nav_4> <span class="md-nav__icon md-icon"></span> Getting Started </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../general/comments/ class=md-nav__link> <span class=md-ellipsis> Comments </span> </a> </li> <li class=md-nav__item> <a href=../../general/data_types/ class=md-nav__link> <span class=md-ellipsis> Data Types </span> </a> </li> <li class=md-nav__item> <a href=../../general/variable_declaration/ class=md-nav__link> <span class=md-ellipsis> Variable Declaration & Assignment </span> </a> </li> <li class=md-nav__item> <a href=../../general/const/ class=md-nav__link> <span class=md-ellipsis> Const Declarations </span> </a> </li> <li class=md-nav__item> <a href=../../general/keywords_identifiers/ class=md-nav__link> <span class=md-ellipsis> Keywords and Identifiers </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_5> <label class=md-nav__link for=__nav_5 id=__nav_5_label tabindex=0> <span class=md-ellipsis> Language Basics </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_5_label aria-expanded=false> <label class=md-nav__title for=__nav_5> <span class="md-nav__icon md-icon"></span> Language Basics </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../general/operators_and_expressions/ class=md-nav__link> <span class=md-ellipsis> Operators and Expressions </span> </a> </li> <li class=md-nav__item> <a href=../../general/pipe_operator/ class=md-nav__link> <span class=md-ellipsis> Pipe Operator (|>) </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_5_3> <label class=md-nav__link for=__nav_5_3 id=__nav_5_3_label tabindex=0> <span class=md-ellipsis> Advanced Arithmetic Operations </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_5_3_label aria-expanded=false> <label class=md-nav__title for=__nav_5_3> <span class="md-nav__icon md-icon"></span> Advanced Arithmetic Operations </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../general/advanced-arithmetic-operators/ class=md-nav__link> <span class=md-ellipsis> Operator Reference </span> </a> </li> <li class=md-nav__item> <a href=../../general/bitwise-operations-guide/ class=md-nav__link> <span class=md-ellipsis> Bitwise Operations Guide </span> </a> </li> <li class=md-nav__item> <a href=../../general/compound-assignment-guide/ class=md-nav__link> <span class=md-ellipsis> Compound Assignment Guide </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../general/arrays/ class=md-nav__link> <span class=md-ellipsis> Arrays </span> </a> </li> <li class=md-nav__item> <a href=../../general/maps/ class=md-nav__link> <span class=md-ellipsis> Maps </span> </a> </li> <li class=md-nav__item> <a href=../../general/control_flow/ class=md-nav__link> <span class=md-ellipsis> Control Flow </span> </a> </li> <li class=md-nav__item> <a href=../../stdlib/break_continue/ class=md-nav__link> <span class=md-ellipsis> Break & Continue </span> </a> </li> <li class=md-nav__item> <a href=../../general/pattern_matching/ class=md-nav__link> <span class=md-ellipsis> Pattern Matching </span> </a> </li> <li class=md-nav__item> <a href=../../general/block_structure/ class=md-nav__link> <span class=md-ellipsis> Block Structure </span> </a> </li> <li class=md-nav__item> <a href=../../general/scoping_variable_management/ class=md-nav__link> <span class=md-ellipsis> Scoping and Variable Management </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_6> <label class=md-nav__link for=__nav_6 id=__nav_6_label tabindex=0> <span class=md-ellipsis> Type System </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_6_label aria-expanded=false> <label class=md-nav__title for=__nav_6> <span class="md-nav__icon md-icon"></span> Type System </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../type_system_safety/ class=md-nav__link> <span class=md-ellipsis> Type System & Safety </span> </a> </li> <li class=md-nav__item> <a href=../../any_type/ class=md-nav__link> <span class=md-ellipsis> The Any Type </span> </a> </li> <li class=md-nav__item> <a href=../../stdlib/cast/ class=md-nav__link> <span class=md-ellipsis> Cast </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_7 checked> <label class=md-nav__link for=__nav_7 id=__nav_7_label tabindex=0> <span class=md-ellipsis> Functions </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_7_label aria-expanded=true> <label class=md-nav__title for=__nav_7> <span class="md-nav__icon md-icon"></span> Functions </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> <span class=md-ellipsis> Introduction </span> <span class="md-nav__icon md-icon"></span> </label> <a href=./ class="md-nav__link md-nav__link--active"> <span class=md-ellipsis> Introduction </span> </a> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> Table of contents </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#declaration-syntax class=md-nav__link> <span class=md-ellipsis> Declaration Syntax </span> </a> </li> <li class=md-nav__item> <a href=#basic-examples class=md-nav__link> <span class=md-ellipsis> Basic Examples </span> </a> <nav class=md-nav aria-label="Basic Examples"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#function-with-a-single-return-value class=md-nav__link> <span class=md-ellipsis> Function with a single return value </span> </a> </li> <li class=md-nav__item> <a href=#function-with-no-parameters class=md-nav__link> <span class=md-ellipsis> Function with no parameters </span> </a> </li> <li class=md-nav__item> <a href=#function-with-no-return-value class=md-nav__link> <span class=md-ellipsis> Function with no return value </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#returning-functions class=md-nav__link> <span class=md-ellipsis> Returning Functions </span> </a> <nav class=md-nav aria-label="Returning Functions"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#basic-function-return class=md-nav__link> <span class=md-ellipsis> Basic Function Return </span> </a> </li> <li class=md-nav__item> <a href=#closures-with-variable-capture class=md-nav__link> <span class=md-ellipsis> Closures with Variable Capture </span> </a> </li> <li class=md-nav__item> <a href=#returning-arrow-functions class=md-nav__link> <span class=md-ellipsis> Returning Arrow Functions </span> </a> </li> <li class=md-nav__item> <a href=#higher-order-functions class=md-nav__link> <span class=md-ellipsis> Higher-Order Functions </span> </a> </li> <li class=md-nav__item> <a href=#conditional-function-returns class=md-nav__link> <span class=md-ellipsis> Conditional Function Returns </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#function-type-annotations class=md-nav__link> <span class=md-ellipsis> Function Type Annotations </span> </a> <nav class=md-nav aria-label="Function Type Annotations"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#function-parameters-with-function-types class=md-nav__link> <span class=md-ellipsis> Function Parameters with Function Types </span> </a> </li> <li class=md-nav__item> <a href=#function-variables-with-type-annotations class=md-nav__link> <span class=md-ellipsis> Function Variables with Type Annotations </span> </a> </li> <li class=md-nav__item> <a href=#multiple-parameter-function-types class=md-nav__link> <span class=md-ellipsis> Multiple Parameter Function Types </span> </a> </li> <li class=md-nav__item> <a href=#arrow-functions-with-type-annotations class=md-nav__link> <span class=md-ellipsis> Arrow Functions with Type Annotations </span> </a> </li> <li class=md-nav__item> <a href=#type-safety-and-error-detection class=md-nav__link> <span class=md-ellipsis> Type Safety and Error Detection </span> </a> </li> <li class=md-nav__item> <a href=#advanced-function-type-patterns class=md-nav__link> <span class=md-ellipsis> Advanced Function Type Patterns </span> </a> <nav class=md-nav aria-label="Advanced Function Type Patterns"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#factory-functions-with-type-safety class=md-nav__link> <span class=md-ellipsis> Factory Functions with Type Safety </span> </a> </li> <li class=md-nav__item> <a href=#callback-pattern-with-type-validation class=md-nav__link> <span class=md-ellipsis> Callback Pattern with Type Validation </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#key-benefits class=md-nav__link> <span class=md-ellipsis> Key Benefits </span> </a> <nav class=md-nav aria-label="Key Benefits"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#type-safety class=md-nav__link> <span class=md-ellipsis> 🔒 Type Safety </span> </a> </li> <li class=md-nav__item> <a href=#performance class=md-nav__link> <span class=md-ellipsis> 🚀 Performance </span> </a> </li> <li class=md-nav__item> <a href=#code-clarity class=md-nav__link> <span class=md-ellipsis> 📖 Code Clarity </span> </a> </li> <li class=md-nav__item> <a href=#flexibility class=md-nav__link> <span class=md-ellipsis> 🔧 Flexibility </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../arrow_functions/ class=md-nav__link> <span class=md-ellipsis> Arrow Functions </span> </a> </li> <li class=md-nav__item> <a href=../defer_statements/ class=md-nav__link> <span class=md-ellipsis> Defer Statements </span> </a> </li> <li class=md-nav__item> <a href=../functional/ class=md-nav__link> <span class=md-ellipsis> Functional Features </span> </a> </li> <li class=md-nav__item> <a href=../advanced_features/ class=md-nav__link> <span class=md-ellipsis> Advanced Features </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_7_6> <label class=md-nav__link for=__nav_7_6 id=__nav_7_6_label tabindex=0> <span class=md-ellipsis> Builtins </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_7_6_label aria-expanded=false> <label class=md-nav__title for=__nav_7_6> <span class="md-nav__icon md-icon"></span> Builtins </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../append/ class=md-nav__link> <span class=md-ellipsis> Append </span> </a> </li> <li class=md-nav__item> <a href=../len/ class=md-nav__link> <span class=md-ellipsis> Len </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_8> <label class=md-nav__link for=__nav_8 id=__nav_8_label tabindex=0> <span class=md-ellipsis> Concurrency </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_8_label aria-expanded=false> <label class=md-nav__title for=__nav_8> <span class="md-nav__icon md-icon"></span> Concurrency </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../general/concurrency/ class=md-nav__link> <span class=md-ellipsis> Concurrency (do / await / sleep) </span> </a> </li> <li class=md-nav__item> <a href=../../stdlib/sync/ class=md-nav__link> <span class=md-ellipsis> Sync </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_9> <label class=md-nav__link for=__nav_9 id=__nav_9_label tabindex=0> <span class=md-ellipsis> Error Handling </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_9_label aria-expanded=false> <label class=md-nav__title for=__nav_9> <span class="md-nav__icon md-icon"></span> Error Handling </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../error_handling_system/ class=md-nav__link> <span class=md-ellipsis> Error Handling System </span> </a> </li> <li class=md-nav__item> <a href=../../stdlib/errors/ class=md-nav__link> <span class=md-ellipsis> Errors </span> </a> </li> <li class=md-nav__item> <a href=../../stdlib/assert/ class=md-nav__link> <span class=md-ellipsis> Assert </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_10> <label class=md-nav__link for=__nav_10 id=__nav_10_label tabindex=0> <span class=md-ellipsis> Modules & Imports </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_10_label aria-expanded=false> <label class=md-nav__title for=__nav_10> <span class="md-nav__icon md-icon"></span> Modules & Imports </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../general/import_system/ class=md-nav__link> <span class=md-ellipsis> Import System </span> </a> </li> <li class=md-nav__item> <a href=../../modules/ class=md-nav__link> <span class=md-ellipsis> Module System </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11> <label class=md-nav__link for=__nav_11 id=__nav_11_label tabindex=0> <span class=md-ellipsis> Standard Library </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_11_label aria-expanded=false> <label class=md-nav__title for=__nav_11> <span class="md-nav__icon md-icon"></span> Standard Library </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_1> <label class=md-nav__link for=__nav_11_1 id=__nav_11_1_label tabindex=0> <span class=md-ellipsis> I/O & Formatting </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_1_label aria-expanded=false> <label class=md-nav__title for=__nav_11_1> <span class="md-nav__icon md-icon"></span> I/O & Formatting </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../stdlib/fmt/ class=md-nav__link> <span class=md-ellipsis> Fmt </span> </a> </li> <li class=md-nav__item> <a href=../../stdlib/input/ class=md-nav__link> <span class=md-ellipsis> Input </span> </a> </li> <li class=md-nav__item> <a href=../../stdlib/log/ class=md-nav__link> <span class=md-ellipsis> Log </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_2> <label class=md-nav__link for=__nav_11_2 id=__nav_11_2_label tabindex=0> <span class=md-ellipsis> Strings & Text </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_2_label aria-expanded=false> <label class=md-nav__title for=__nav_11_2> <span class="md-nav__icon md-icon"></span> Strings & Text </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_2_1> <label class=md-nav__link for=__nav_11_2_1 id=__nav_11_2_1_label tabindex=0> <span class=md-ellipsis> Strings </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=3 aria-labelledby=__nav_11_2_1_label aria-expanded=false> <label class=md-nav__title for=__nav_11_2_1> <span class="md-nav__icon md-icon"></span> Strings </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../stdlib/strings/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class=md-nav__item> <a href=../../general/multiline_strings_migration/ class=md-nav__link> <span class=md-ellipsis> Multiline Strings </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../stdlib/regex/ class=md-nav__link> <span class=md-ellipsis> Regex </span> </a> </li> <li class=md-nav__item> <a href=../../general/unicode_support/ class=md-nav__link> <span class=md-ellipsis> Unicode Support </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_3> <label class=md-nav__link for=__nav_11_3 id=__nav_11_3_label tabindex=0> <span class=md-ellipsis> Math & Numbers </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_3_label aria-expanded=false> <label class=md-nav__title for=__nav_11_3> <span class="md-nav__icon md-icon"></span> Math & Numbers </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../stdlib/math/ class=md-nav__link> <span class=md-ellipsis> Math </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_4> <label class=md-nav__link for=__nav_11_4 id=__nav_11_4_label tabindex=0> <span class=md-ellipsis> Collections & Data Structures </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_4_label aria-expanded=false> <label class=md-nav__title for=__nav_11_4> <span class="md-nav__icon md-icon"></span> Collections & Data Structures </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../stdlib/arrays/ class=md-nav__link> <span class=md-ellipsis> Arrays </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_4_2> <label class=md-nav__link for=__nav_11_4_2 id=__nav_11_4_2_label tabindex=0> <span class=md-ellipsis> Collections </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=3 aria-labelledby=__nav_11_4_2_label aria-expanded=false> <label class=md-nav__title for=__nav_11_4_2> <span class="md-nav__icon md-icon"></span> Collections </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../stdlib/collections/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_4_2_2> <label class=md-nav__link for=__nav_11_4_2_2 id=__nav_11_4_2_2_label tabindex=0> <span class=md-ellipsis> Enhanced Collections </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=4 aria-labelledby=__nav_11_4_2_2_label aria-expanded=false> <label class=md-nav__title for=__nav_11_4_2_2> <span class="md-nav__icon md-icon"></span> Enhanced Collections </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../collections/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class=md-nav__item> <a href=../../collections/stacks-queues/ class=md-nav__link> <span class=md-ellipsis> Stacks & Queues </span> </a> </li> <li class=md-nav__item> <a href=../../collections/sets/ class=md-nav__link> <span class=md-ellipsis> Sets </span> </a> </li> <li class=md-nav__item> <a href=../../collections/linked-lists/ class=md-nav__link> <span class=md-ellipsis> Linked Lists </span> </a> </li> <li class=md-nav__item> <a href=../../collections/trees/ class=md-nav__link> <span class=md-ellipsis> Trees </span> </a> </li> <li class=md-nav__item> <a href=../../collections/concurrent/ class=md-nav__link> <span class=md-ellipsis> Concurrent Collections </span> </a> </li> <li class=md-nav__item> <a href=../../collections/performance/ class=md-nav__link> <span class=md-ellipsis> Performance Guide </span> </a> </li> <li class=md-nav__item> <a href=../../collections/migration/ class=md-nav__link> <span class=md-ellipsis> Migration Guide </span> </a> </li> <li class=md-nav__item> <a href=../../collections/api-reference/ class=md-nav__link> <span class=md-ellipsis> API Reference </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_5> <label class=md-nav__link for=__nav_11_5 id=__nav_11_5_label tabindex=0> <span class=md-ellipsis> Data Formats </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_5_label aria-expanded=false> <label class=md-nav__title for=__nav_11_5> <span class="md-nav__icon md-icon"></span> Data Formats </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../stdlib/json/ class=md-nav__link> <span class=md-ellipsis> JSON </span> </a> </li> <li class=md-nav__item> <a href=../../stdlib/encoding/ class=md-nav__link> <span class=md-ellipsis> Encoding </span> </a> </li> <li class=md-nav__item> <a href=../../stdlib/config/ class=md-nav__link> <span class=md-ellipsis> Config </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_6> <label class=md-nav__link for=__nav_11_6 id=__nav_11_6_label tabindex=0> <span class=md-ellipsis> Structs & Types </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_6_label aria-expanded=false> <label class=md-nav__title for=__nav_11_6> <span class="md-nav__icon md-icon"></span> Structs & Types </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_6_1> <label class=md-nav__link for=__nav_11_6_1 id=__nav_11_6_1_label tabindex=0> <span class=md-ellipsis> Structs </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=3 aria-labelledby=__nav_11_6_1_label aria-expanded=false> <label class=md-nav__title for=__nav_11_6_1> <span class="md-nav__icon md-icon"></span> Structs </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../stdlib/structs/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class=md-nav__item> <a href=../../general/struct_field_assignment/ class=md-nav__link> <span class=md-ellipsis> Struct Field Assignment </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../stdlib/box/ class=md-nav__link> <span class=md-ellipsis> Box </span> </a> </li> <li class=md-nav__item> <a href=../../stdlib/reflect/ class=md-nav__link> <span class=md-ellipsis> Reflect </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_7> <label class=md-nav__link for=__nav_11_7 id=__nav_11_7_label tabindex=0> <span class=md-ellipsis> File System & OS </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_7_label aria-expanded=false> <label class=md-nav__title for=__nav_11_7> <span class="md-nav__icon md-icon"></span> File System & OS </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../stdlib/file/ class=md-nav__link> <span class=md-ellipsis> File </span> </a> </li> <li class=md-nav__item> <a href=../../stdlib/path/ class=md-nav__link> <span class=md-ellipsis> Path </span> </a> </li> <li class=md-nav__item> <a href=../../stdlib/os/ class=md-nav__link> <span class=md-ellipsis> OS </span> </a> </li> <li class=md-nav__item> <a href=../../stdlib/exec/ class=md-nav__link> <span class=md-ellipsis> Exec </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_8> <label class=md-nav__link for=__nav_11_8 id=__nav_11_8_label tabindex=0> <span class=md-ellipsis> Networking & HTTP </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_8_label aria-expanded=false> <label class=md-nav__title for=__nav_11_8> <span class="md-nav__icon md-icon"></span> Networking & HTTP </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_8_1> <label class=md-nav__link for=__nav_11_8_1 id=__nav_11_8_1_label tabindex=0> <span class=md-ellipsis> HTTP </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=3 aria-labelledby=__nav_11_8_1_label aria-expanded=false> <label class=md-nav__title for=__nav_11_8_1> <span class="md-nav__icon md-icon"></span> HTTP </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../stdlib/http/overview/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class=md-nav__item> <a href=../../stdlib/http/client/ class=md-nav__link> <span class=md-ellipsis> HTTP Client </span> </a> </li> <li class=md-nav__item> <a href=../../stdlib/http/requests/ class=md-nav__link> <span class=md-ellipsis> Request Building </span> </a> </li> <li class=md-nav__item> <a href=../../stdlib/http/responses/ class=md-nav__link> <span class=md-ellipsis> Response Handling </span> </a> </li> <li class=md-nav__item> <a href=../../stdlib/http/server/ class=md-nav__link> <span class=md-ellipsis> HTTP Server </span> </a> </li> <li class=md-nav__item> <a href=../../stdlib/http/routing/ class=md-nav__link> <span class=md-ellipsis> Routing & Mux </span> </a> </li> <li class=md-nav__item> <a href=../../stdlib/http/middleware/ class=md-nav__link> <span class=md-ellipsis> Middleware </span> </a> </li> <li class=md-nav__item> <a href=../../stdlib/http/auth/ class=md-nav__link> <span class=md-ellipsis> Authentication </span> </a> </li> <li class=md-nav__item> <a href=../../stdlib/http/cookies/ class=md-nav__link> <span class=md-ellipsis> Cookies & Sessions </span> </a> </li> <li class=md-nav__item> <a href=../../stdlib/http/advanced/ class=md-nav__link> <span class=md-ellipsis> Advanced </span> </a> </li> <li class=md-nav__item> <a href=../../stdlib/http/examples/ class=md-nav__link> <span class=md-ellipsis> Examples & Patterns </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_9> <label class=md-nav__link for=__nav_11_9 id=__nav_11_9_label tabindex=0> <span class=md-ellipsis> Database </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_9_label aria-expanded=false> <label class=md-nav__title for=__nav_11_9> <span class="md-nav__icon md-icon"></span> Database </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../stdlib/db/ class=md-nav__link> <span class=md-ellipsis> DB </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_10> <label class=md-nav__link for=__nav_11_10 id=__nav_11_10_label tabindex=0> <span class=md-ellipsis> Utilities </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_10_label aria-expanded=false> <label class=md-nav__title for=__nav_11_10> <span class="md-nav__icon md-icon"></span> Utilities </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../stdlib/datetime/ class=md-nav__link> <span class=md-ellipsis> Datetime </span> </a> </li> <li class=md-nav__item> <a href=../../stdlib/flags/ class=md-nav__link> <span class=md-ellipsis> Flags </span> </a> </li> <li class=md-nav__item> <a href=../../stdlib/uuid/ class=md-nav__link> <span class=md-ellipsis> UUID </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_12> <label class=md-nav__link for=__nav_12 id=__nav_12_label tabindex=0> <span class=md-ellipsis> Examples </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_12_label aria-expanded=false> <label class=md-nav__title for=__nav_12> <span class="md-nav__icon md-icon"></span> Examples </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../comprehensive_examples/ class=md-nav__link> <span class=md-ellipsis> Comprehensive Language Examples </span> </a> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class=md-content data-md-component=content> <article class="md-content__inner md-typeset"> <h1 id=introduction-to-functions>Introduction to Functions</h1> <p>Functions are reusable blocks of code that perform a specific task. They are a fundamental building block of Harneet programs and support advanced features like returning other functions, closures, and higher-order programming.</p> <h2 id=declaration-syntax>Declaration Syntax</h2> <p>The basic syntax for declaring a function is as follows:</p> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Function Declaration Syntax</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-0-1>1</a></span>
+<span class=normal><a href=#__codelineno-0-2>2</a></span>
+<span class=normal><a href=#__codelineno-0-3>3</a></span>
+<span class=normal><a href=#__codelineno-0-4>4</a></span>
+<span class=normal><a href=#__codelineno-0-5>5</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-0-1 name=__codelineno-0-1></a>package main
+<a id=__codelineno-0-2 name=__codelineno-0-2></a>function functionName(param1 type1, param2 type2) returnType {
+<a id=__codelineno-0-3 name=__codelineno-0-3></a>    // function body
+<a id=__codelineno-0-4 name=__codelineno-0-4></a>    return value
+<a id=__codelineno-0-5 name=__codelineno-0-5></a>}
+</code></pre></div></td></tr></table></div> <ul> <li><code>function</code>: The keyword to declare a function.</li> <li><code>functionName</code>: The name of the function.</li> <li><code>(param1 type1, param2 type2)</code>: The list of parameters with their types.</li> <li><code>returnType</code>: The type of the value returned by the function.</li> <li><code>{ ... }</code>: The body of the function containing the code to be executed.</li> <li><code>return</code>: The keyword to return a value from the function.</li> </ul> <h2 id=basic-examples>Basic Examples</h2> <h3 id=function-with-a-single-return-value>Function with a single return value</h3> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Single Return Value</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-1-1>1</a></span>
+<span class=normal><a href=#__codelineno-1-2>2</a></span>
+<span class=normal><a href=#__codelineno-1-3>3</a></span>
+<span class=normal><a href=#__codelineno-1-4>4</a></span>
+<span class=normal><a href=#__codelineno-1-5>5</a></span>
+<span class=normal><a href=#__codelineno-1-6>6</a></span>
+<span class=normal><a href=#__codelineno-1-7>7</a></span>
+<span class=normal><a href=#__codelineno-1-8>8</a></span>
+<span class=normal><a href=#__codelineno-1-9>9</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-1-1 name=__codelineno-1-1></a>package main
+<a id=__codelineno-1-2 name=__codelineno-1-2></a>import fmt
+<a id=__codelineno-1-3 name=__codelineno-1-3></a>
+<a id=__codelineno-1-4 name=__codelineno-1-4></a>function square(x int) int {
+<a id=__codelineno-1-5 name=__codelineno-1-5></a>    return x * x
+<a id=__codelineno-1-6 name=__codelineno-1-6></a>}
+<a id=__codelineno-1-7 name=__codelineno-1-7></a>
+<a id=__codelineno-1-8 name=__codelineno-1-8></a>var result = square(5)
+<a id=__codelineno-1-9 name=__codelineno-1-9></a>fmt.Println(result) // Output: 25
+</code></pre></div></td></tr></table></div> <h3 id=function-with-no-parameters>Function with no parameters</h3> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>No Parameters</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-2-1>1</a></span>
+<span class=normal><a href=#__codelineno-2-2>2</a></span>
+<span class=normal><a href=#__codelineno-2-3>3</a></span>
+<span class=normal><a href=#__codelineno-2-4>4</a></span>
+<span class=normal><a href=#__codelineno-2-5>5</a></span>
+<span class=normal><a href=#__codelineno-2-6>6</a></span>
+<span class=normal><a href=#__codelineno-2-7>7</a></span>
+<span class=normal><a href=#__codelineno-2-8>8</a></span>
+<span class=normal><a href=#__codelineno-2-9>9</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-2-1 name=__codelineno-2-1></a>package main
+<a id=__codelineno-2-2 name=__codelineno-2-2></a>import fmt
+<a id=__codelineno-2-3 name=__codelineno-2-3></a>
+<a id=__codelineno-2-4 name=__codelineno-2-4></a>function getAnswer() int {
+<a id=__codelineno-2-5 name=__codelineno-2-5></a>    return 42
+<a id=__codelineno-2-6 name=__codelineno-2-6></a>}
+<a id=__codelineno-2-7 name=__codelineno-2-7></a>
+<a id=__codelineno-2-8 name=__codelineno-2-8></a>var answer = getAnswer()
+<a id=__codelineno-2-9 name=__codelineno-2-9></a>fmt.Println(answer) // Output: 42
+</code></pre></div></td></tr></table></div> <h3 id=function-with-no-return-value>Function with no return value</h3> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>No Return Value</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-3-1>1</a></span>
+<span class=normal><a href=#__codelineno-3-2>2</a></span>
+<span class=normal><a href=#__codelineno-3-3>3</a></span>
+<span class=normal><a href=#__codelineno-3-4>4</a></span>
+<span class=normal><a href=#__codelineno-3-5>5</a></span>
+<span class=normal><a href=#__codelineno-3-6>6</a></span>
+<span class=normal><a href=#__codelineno-3-7>7</a></span>
+<span class=normal><a href=#__codelineno-3-8>8</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-3-1 name=__codelineno-3-1></a>package main
+<a id=__codelineno-3-2 name=__codelineno-3-2></a>import fmt
+<a id=__codelineno-3-3 name=__codelineno-3-3></a>
+<a id=__codelineno-3-4 name=__codelineno-3-4></a>function printMessage() {
+<a id=__codelineno-3-5 name=__codelineno-3-5></a>    fmt.Println(&quot;Hello, Harneet!&quot;)
+<a id=__codelineno-3-6 name=__codelineno-3-6></a>}
+<a id=__codelineno-3-7 name=__codelineno-3-7></a>
+<a id=__codelineno-3-8 name=__codelineno-3-8></a>printMessage() // Output: Hello, Harneet!
+</code></pre></div></td></tr></table></div> <h2 id=returning-functions>Returning Functions</h2> <p>Harneet supports returning functions from other functions, enabling powerful functional programming patterns like closures and higher-order functions.</p> <h3 id=basic-function-return>Basic Function Return</h3> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Basic Function Return</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-4-1> 1</a></span>
+<span class=normal><a href=#__codelineno-4-2> 2</a></span>
+<span class=normal><a href=#__codelineno-4-3> 3</a></span>
+<span class=normal><a href=#__codelineno-4-4> 4</a></span>
+<span class=normal><a href=#__codelineno-4-5> 5</a></span>
+<span class=normal><a href=#__codelineno-4-6> 6</a></span>
+<span class=normal><a href=#__codelineno-4-7> 7</a></span>
+<span class=normal><a href=#__codelineno-4-8> 8</a></span>
+<span class=normal><a href=#__codelineno-4-9> 9</a></span>
+<span class=normal><a href=#__codelineno-4-10>10</a></span>
+<span class=normal><a href=#__codelineno-4-11>11</a></span>
+<span class=normal><a href=#__codelineno-4-12>12</a></span>
+<span class=normal><a href=#__codelineno-4-13>13</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-4-1 name=__codelineno-4-1></a>package main
+<a id=__codelineno-4-2 name=__codelineno-4-2></a>import fmt
+<a id=__codelineno-4-3 name=__codelineno-4-3></a>
+<a id=__codelineno-4-4 name=__codelineno-4-4></a>function getGreeter() function(string) string {
+<a id=__codelineno-4-5 name=__codelineno-4-5></a>    function greet(name string) string {
+<a id=__codelineno-4-6 name=__codelineno-4-6></a>        return &quot;Hello, &quot; + name + &quot;!&quot;
+<a id=__codelineno-4-7 name=__codelineno-4-7></a>    }
+<a id=__codelineno-4-8 name=__codelineno-4-8></a>    return greet
+<a id=__codelineno-4-9 name=__codelineno-4-9></a>}
+<a id=__codelineno-4-10 name=__codelineno-4-10></a>
+<a id=__codelineno-4-11 name=__codelineno-4-11></a>var greeter = getGreeter()
+<a id=__codelineno-4-12 name=__codelineno-4-12></a>var message = greeter(&quot;World&quot;)
+<a id=__codelineno-4-13 name=__codelineno-4-13></a>fmt.Println(message) // Output: Hello, World!
+</code></pre></div></td></tr></table></div> <h3 id=closures-with-variable-capture>Closures with Variable Capture</h3> <p>Functions can capture variables from their enclosing scope, creating closures:</p> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Closure with Variable Capture</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-5-1> 1</a></span>
+<span class=normal><a href=#__codelineno-5-2> 2</a></span>
+<span class=normal><a href=#__codelineno-5-3> 3</a></span>
+<span class=normal><a href=#__codelineno-5-4> 4</a></span>
+<span class=normal><a href=#__codelineno-5-5> 5</a></span>
+<span class=normal><a href=#__codelineno-5-6> 6</a></span>
+<span class=normal><a href=#__codelineno-5-7> 7</a></span>
+<span class=normal><a href=#__codelineno-5-8> 8</a></span>
+<span class=normal><a href=#__codelineno-5-9> 9</a></span>
+<span class=normal><a href=#__codelineno-5-10>10</a></span>
+<span class=normal><a href=#__codelineno-5-11>11</a></span>
+<span class=normal><a href=#__codelineno-5-12>12</a></span>
+<span class=normal><a href=#__codelineno-5-13>13</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-5-1 name=__codelineno-5-1></a>package main
+<a id=__codelineno-5-2 name=__codelineno-5-2></a>import fmt
+<a id=__codelineno-5-3 name=__codelineno-5-3></a>
+<a id=__codelineno-5-4 name=__codelineno-5-4></a>function createAdder(x int) function(int) int {
+<a id=__codelineno-5-5 name=__codelineno-5-5></a>    function inner(y int) int {
+<a id=__codelineno-5-6 name=__codelineno-5-6></a>        return x + y  // Captures &#39;x&#39; from outer scope
+<a id=__codelineno-5-7 name=__codelineno-5-7></a>    }
+<a id=__codelineno-5-8 name=__codelineno-5-8></a>    return inner
+<a id=__codelineno-5-9 name=__codelineno-5-9></a>}
+<a id=__codelineno-5-10 name=__codelineno-5-10></a>
+<a id=__codelineno-5-11 name=__codelineno-5-11></a>var add5 = createAdder(5)
+<a id=__codelineno-5-12 name=__codelineno-5-12></a>var result = add5(3)
+<a id=__codelineno-5-13 name=__codelineno-5-13></a>fmt.Println(result) // Output: 8
+</code></pre></div></td></tr></table></div> <h3 id=returning-arrow-functions>Returning Arrow Functions</h3> <p>You can also return arrow functions for more concise syntax:</p> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Return Arrow Function</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-6-1> 1</a></span>
+<span class=normal><a href=#__codelineno-6-2> 2</a></span>
+<span class=normal><a href=#__codelineno-6-3> 3</a></span>
+<span class=normal><a href=#__codelineno-6-4> 4</a></span>
+<span class=normal><a href=#__codelineno-6-5> 5</a></span>
+<span class=normal><a href=#__codelineno-6-6> 6</a></span>
+<span class=normal><a href=#__codelineno-6-7> 7</a></span>
+<span class=normal><a href=#__codelineno-6-8> 8</a></span>
+<span class=normal><a href=#__codelineno-6-9> 9</a></span>
+<span class=normal><a href=#__codelineno-6-10>10</a></span>
+<span class=normal><a href=#__codelineno-6-11>11</a></span>
+<span class=normal><a href=#__codelineno-6-12>12</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-6-1 name=__codelineno-6-1></a>package main
+<a id=__codelineno-6-2 name=__codelineno-6-2></a>import fmt
+<a id=__codelineno-6-3 name=__codelineno-6-3></a>
+<a id=__codelineno-6-4 name=__codelineno-6-4></a>function createMultiplier(factor int) function(int) int {
+<a id=__codelineno-6-5 name=__codelineno-6-5></a>    return x =&gt; x * factor
+<a id=__codelineno-6-6 name=__codelineno-6-6></a>}
+<a id=__codelineno-6-7 name=__codelineno-6-7></a>
+<a id=__codelineno-6-8 name=__codelineno-6-8></a>var double = createMultiplier(2)
+<a id=__codelineno-6-9 name=__codelineno-6-9></a>var triple = createMultiplier(3)
+<a id=__codelineno-6-10 name=__codelineno-6-10></a>
+<a id=__codelineno-6-11 name=__codelineno-6-11></a>fmt.Printf(&quot;Double 5: %d\n&quot;, double(5))   // Output: Double 5: 10
+<a id=__codelineno-6-12 name=__codelineno-6-12></a>fmt.Printf(&quot;Triple 4: %d\n&quot;, triple(4))  // Output: Triple 4: 12
+</code></pre></div></td></tr></table></div> <h3 id=higher-order-functions>Higher-Order Functions</h3> <p>Functions can return functions that themselves return functions, enabling complex functional patterns:</p> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Higher-Order Function</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-7-1> 1</a></span>
+<span class=normal><a href=#__codelineno-7-2> 2</a></span>
+<span class=normal><a href=#__codelineno-7-3> 3</a></span>
+<span class=normal><a href=#__codelineno-7-4> 4</a></span>
+<span class=normal><a href=#__codelineno-7-5> 5</a></span>
+<span class=normal><a href=#__codelineno-7-6> 6</a></span>
+<span class=normal><a href=#__codelineno-7-7> 7</a></span>
+<span class=normal><a href=#__codelineno-7-8> 8</a></span>
+<span class=normal><a href=#__codelineno-7-9> 9</a></span>
+<span class=normal><a href=#__codelineno-7-10>10</a></span>
+<span class=normal><a href=#__codelineno-7-11>11</a></span>
+<span class=normal><a href=#__codelineno-7-12>12</a></span>
+<span class=normal><a href=#__codelineno-7-13>13</a></span>
+<span class=normal><a href=#__codelineno-7-14>14</a></span>
+<span class=normal><a href=#__codelineno-7-15>15</a></span>
+<span class=normal><a href=#__codelineno-7-16>16</a></span>
+<span class=normal><a href=#__codelineno-7-17>17</a></span>
+<span class=normal><a href=#__codelineno-7-18>18</a></span>
+<span class=normal><a href=#__codelineno-7-19>19</a></span>
+<span class=normal><a href=#__codelineno-7-20>20</a></span>
+<span class=normal><a href=#__codelineno-7-21>21</a></span>
+<span class=normal><a href=#__codelineno-7-22>22</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-7-1 name=__codelineno-7-1></a>package main
+<a id=__codelineno-7-2 name=__codelineno-7-2></a>import fmt
+<a id=__codelineno-7-3 name=__codelineno-7-3></a>
+<a id=__codelineno-7-4 name=__codelineno-7-4></a>function createCalculator() function(string) function(int, int) int {
+<a id=__codelineno-7-5 name=__codelineno-7-5></a>    function getOperation(op string) function(int, int) int {
+<a id=__codelineno-7-6 name=__codelineno-7-6></a>        if op == &quot;add&quot; {
+<a id=__codelineno-7-7 name=__codelineno-7-7></a>            return (a int, b int) int =&gt; a + b
+<a id=__codelineno-7-8 name=__codelineno-7-8></a>        } else if op == &quot;subtract&quot; {
+<a id=__codelineno-7-9 name=__codelineno-7-9></a>            return (a int, b int) int =&gt; a - b
+<a id=__codelineno-7-10 name=__codelineno-7-10></a>        } else {
+<a id=__codelineno-7-11 name=__codelineno-7-11></a>            return (a int, b int) int =&gt; a * b
+<a id=__codelineno-7-12 name=__codelineno-7-12></a>        }
+<a id=__codelineno-7-13 name=__codelineno-7-13></a>    }
+<a id=__codelineno-7-14 name=__codelineno-7-14></a>    return getOperation
+<a id=__codelineno-7-15 name=__codelineno-7-15></a>}
+<a id=__codelineno-7-16 name=__codelineno-7-16></a>
+<a id=__codelineno-7-17 name=__codelineno-7-17></a>var calculator = createCalculator()
+<a id=__codelineno-7-18 name=__codelineno-7-18></a>var addFunc = calculator(&quot;add&quot;)
+<a id=__codelineno-7-19 name=__codelineno-7-19></a>var subFunc = calculator(&quot;subtract&quot;)
+<a id=__codelineno-7-20 name=__codelineno-7-20></a>
+<a id=__codelineno-7-21 name=__codelineno-7-21></a>fmt.Printf(&quot;10 + 5 = %d\n&quot;, addFunc(10, 5))  // Output: 10 + 5 = 15
+<a id=__codelineno-7-22 name=__codelineno-7-22></a>fmt.Printf(&quot;10 - 5 = %d\n&quot;, subFunc(10, 5))  // Output: 10 - 5 = 5
+</code></pre></div></td></tr></table></div> <h3 id=conditional-function-returns>Conditional Function Returns</h3> <p>Functions can return different functions based on runtime conditions:</p> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Conditional Function Returns</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-8-1> 1</a></span>
+<span class=normal><a href=#__codelineno-8-2> 2</a></span>
+<span class=normal><a href=#__codelineno-8-3> 3</a></span>
+<span class=normal><a href=#__codelineno-8-4> 4</a></span>
+<span class=normal><a href=#__codelineno-8-5> 5</a></span>
+<span class=normal><a href=#__codelineno-8-6> 6</a></span>
+<span class=normal><a href=#__codelineno-8-7> 7</a></span>
+<span class=normal><a href=#__codelineno-8-8> 8</a></span>
+<span class=normal><a href=#__codelineno-8-9> 9</a></span>
+<span class=normal><a href=#__codelineno-8-10>10</a></span>
+<span class=normal><a href=#__codelineno-8-11>11</a></span>
+<span class=normal><a href=#__codelineno-8-12>12</a></span>
+<span class=normal><a href=#__codelineno-8-13>13</a></span>
+<span class=normal><a href=#__codelineno-8-14>14</a></span>
+<span class=normal><a href=#__codelineno-8-15>15</a></span>
+<span class=normal><a href=#__codelineno-8-16>16</a></span>
+<span class=normal><a href=#__codelineno-8-17>17</a></span>
+<span class=normal><a href=#__codelineno-8-18>18</a></span>
+<span class=normal><a href=#__codelineno-8-19>19</a></span>
+<span class=normal><a href=#__codelineno-8-20>20</a></span>
+<span class=normal><a href=#__codelineno-8-21>21</a></span>
+<span class=normal><a href=#__codelineno-8-22>22</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-8-1 name=__codelineno-8-1></a>package main
+<a id=__codelineno-8-2 name=__codelineno-8-2></a>import fmt
+<a id=__codelineno-8-3 name=__codelineno-8-3></a>
+<a id=__codelineno-8-4 name=__codelineno-8-4></a>function createMathOperation(operation string) function(int, int) int {
+<a id=__codelineno-8-5 name=__codelineno-8-5></a>    if operation == &quot;add&quot; {
+<a id=__codelineno-8-6 name=__codelineno-8-6></a>        function add(a int, b int) int {
+<a id=__codelineno-8-7 name=__codelineno-8-7></a>            return a + b
+<a id=__codelineno-8-8 name=__codelineno-8-8></a>        }
+<a id=__codelineno-8-9 name=__codelineno-8-9></a>        return add
+<a id=__codelineno-8-10 name=__codelineno-8-10></a>    } else {
+<a id=__codelineno-8-11 name=__codelineno-8-11></a>        function multiply(a int, b int) int {
+<a id=__codelineno-8-12 name=__codelineno-8-12></a>            return a * b
+<a id=__codelineno-8-13 name=__codelineno-8-13></a>        }
+<a id=__codelineno-8-14 name=__codelineno-8-14></a>        return multiply
+<a id=__codelineno-8-15 name=__codelineno-8-15></a>    }
+<a id=__codelineno-8-16 name=__codelineno-8-16></a>}
+<a id=__codelineno-8-17 name=__codelineno-8-17></a>
+<a id=__codelineno-8-18 name=__codelineno-8-18></a>var addOp = createMathOperation(&quot;add&quot;)
+<a id=__codelineno-8-19 name=__codelineno-8-19></a>var multiplyOp = createMathOperation(&quot;multiply&quot;)
+<a id=__codelineno-8-20 name=__codelineno-8-20></a>
+<a id=__codelineno-8-21 name=__codelineno-8-21></a>fmt.Printf(&quot;Add: %d\n&quot;, addOp(10, 20))        // Output: Add: 30
+<a id=__codelineno-8-22 name=__codelineno-8-22></a>fmt.Printf(&quot;Multiply: %d\n&quot;, multiplyOp(4, 5)) // Output: Multiply: 20
+</code></pre></div></td></tr></table></div> <h2 id=function-type-annotations>Function Type Annotations</h2> <p>Harneet provides comprehensive support for function type annotations, enabling strong type safety for higher-order functions and functional programming patterns.</p> <h3 id=function-parameters-with-function-types>Function Parameters with Function Types</h3> <p>You can specify function types as parameters, enabling type-safe higher-order functions:</p> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Function Parameter Types</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-9-1> 1</a></span>
+<span class=normal><a href=#__codelineno-9-2> 2</a></span>
+<span class=normal><a href=#__codelineno-9-3> 3</a></span>
+<span class=normal><a href=#__codelineno-9-4> 4</a></span>
+<span class=normal><a href=#__codelineno-9-5> 5</a></span>
+<span class=normal><a href=#__codelineno-9-6> 6</a></span>
+<span class=normal><a href=#__codelineno-9-7> 7</a></span>
+<span class=normal><a href=#__codelineno-9-8> 8</a></span>
+<span class=normal><a href=#__codelineno-9-9> 9</a></span>
+<span class=normal><a href=#__codelineno-9-10>10</a></span>
+<span class=normal><a href=#__codelineno-9-11>11</a></span>
+<span class=normal><a href=#__codelineno-9-12>12</a></span>
+<span class=normal><a href=#__codelineno-9-13>13</a></span>
+<span class=normal><a href=#__codelineno-9-14>14</a></span>
+<span class=normal><a href=#__codelineno-9-15>15</a></span>
+<span class=normal><a href=#__codelineno-9-16>16</a></span>
+<span class=normal><a href=#__codelineno-9-17>17</a></span>
+<span class=normal><a href=#__codelineno-9-18>18</a></span>
+<span class=normal><a href=#__codelineno-9-19>19</a></span>
+<span class=normal><a href=#__codelineno-9-20>20</a></span>
+<span class=normal><a href=#__codelineno-9-21>21</a></span>
+<span class=normal><a href=#__codelineno-9-22>22</a></span>
+<span class=normal><a href=#__codelineno-9-23>23</a></span>
+<span class=normal><a href=#__codelineno-9-24>24</a></span>
+<span class=normal><a href=#__codelineno-9-25>25</a></span>
+<span class=normal><a href=#__codelineno-9-26>26</a></span>
+<span class=normal><a href=#__codelineno-9-27>27</a></span>
+<span class=normal><a href=#__codelineno-9-28>28</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-9-1 name=__codelineno-9-1></a>package main
+<a id=__codelineno-9-2 name=__codelineno-9-2></a>import fmt
+<a id=__codelineno-9-3 name=__codelineno-9-3></a>
+<a id=__codelineno-9-4 name=__codelineno-9-4></a>// Function that takes another function as a parameter
+<a id=__codelineno-9-5 name=__codelineno-9-5></a>function apply(f function(int) int, value int) int {
+<a id=__codelineno-9-6 name=__codelineno-9-6></a>    return f(value)
+<a id=__codelineno-9-7 name=__codelineno-9-7></a>}
+<a id=__codelineno-9-8 name=__codelineno-9-8></a>
+<a id=__codelineno-9-9 name=__codelineno-9-9></a>// Function that takes multiple function parameters
+<a id=__codelineno-9-10 name=__codelineno-9-10></a>function compose(f function(int) int, g function(int) int, value int) int {
+<a id=__codelineno-9-11 name=__codelineno-9-11></a>    return f(g(value))
+<a id=__codelineno-9-12 name=__codelineno-9-12></a>}
+<a id=__codelineno-9-13 name=__codelineno-9-13></a>
+<a id=__codelineno-9-14 name=__codelineno-9-14></a>// Test functions
+<a id=__codelineno-9-15 name=__codelineno-9-15></a>function double(x int) int {
+<a id=__codelineno-9-16 name=__codelineno-9-16></a>    return x * 2
+<a id=__codelineno-9-17 name=__codelineno-9-17></a>}
+<a id=__codelineno-9-18 name=__codelineno-9-18></a>
+<a id=__codelineno-9-19 name=__codelineno-9-19></a>function addTen(x int) int {
+<a id=__codelineno-9-20 name=__codelineno-9-20></a>    return x + 10
+<a id=__codelineno-9-21 name=__codelineno-9-21></a>}
+<a id=__codelineno-9-22 name=__codelineno-9-22></a>
+<a id=__codelineno-9-23 name=__codelineno-9-23></a>// Usage with full type validation
+<a id=__codelineno-9-24 name=__codelineno-9-24></a>var result1 = apply(double, 5)           // Output: 10
+<a id=__codelineno-9-25 name=__codelineno-9-25></a>var result2 = compose(double, addTen, 5) // Output: 30
+<a id=__codelineno-9-26 name=__codelineno-9-26></a>
+<a id=__codelineno-9-27 name=__codelineno-9-27></a>fmt.Printf(&quot;apply(double, 5) = %d\n&quot;, result1)
+<a id=__codelineno-9-28 name=__codelineno-9-28></a>fmt.Printf(&quot;compose(double, addTen, 5) = %d\n&quot;, result2)
+</code></pre></div></td></tr></table></div> <h3 id=function-variables-with-type-annotations>Function Variables with Type Annotations</h3> <p>Variables can be declared with specific function types:</p> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Function Variable Declaration</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-10-1> 1</a></span>
+<span class=normal><a href=#__codelineno-10-2> 2</a></span>
+<span class=normal><a href=#__codelineno-10-3> 3</a></span>
+<span class=normal><a href=#__codelineno-10-4> 4</a></span>
+<span class=normal><a href=#__codelineno-10-5> 5</a></span>
+<span class=normal><a href=#__codelineno-10-6> 6</a></span>
+<span class=normal><a href=#__codelineno-10-7> 7</a></span>
+<span class=normal><a href=#__codelineno-10-8> 8</a></span>
+<span class=normal><a href=#__codelineno-10-9> 9</a></span>
+<span class=normal><a href=#__codelineno-10-10>10</a></span>
+<span class=normal><a href=#__codelineno-10-11>11</a></span>
+<span class=normal><a href=#__codelineno-10-12>12</a></span>
+<span class=normal><a href=#__codelineno-10-13>13</a></span>
+<span class=normal><a href=#__codelineno-10-14>14</a></span>
+<span class=normal><a href=#__codelineno-10-15>15</a></span>
+<span class=normal><a href=#__codelineno-10-16>16</a></span>
+<span class=normal><a href=#__codelineno-10-17>17</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-10-1 name=__codelineno-10-1></a>package main
+<a id=__codelineno-10-2 name=__codelineno-10-2></a>import fmt
+<a id=__codelineno-10-3 name=__codelineno-10-3></a>
+<a id=__codelineno-10-4 name=__codelineno-10-4></a>// Declare a function variable with a specific signature
+<a id=__codelineno-10-5 name=__codelineno-10-5></a>var handler function(int) int
+<a id=__codelineno-10-6 name=__codelineno-10-6></a>
+<a id=__codelineno-10-7 name=__codelineno-10-7></a>// Helper function
+<a id=__codelineno-10-8 name=__codelineno-10-8></a>function increment(x int) int {
+<a id=__codelineno-10-9 name=__codelineno-10-9></a>    return x + 1
+<a id=__codelineno-10-10 name=__codelineno-10-10></a>}
+<a id=__codelineno-10-11 name=__codelineno-10-11></a>
+<a id=__codelineno-10-12 name=__codelineno-10-12></a>// Assign function to typed variable
+<a id=__codelineno-10-13 name=__codelineno-10-13></a>handler = increment
+<a id=__codelineno-10-14 name=__codelineno-10-14></a>
+<a id=__codelineno-10-15 name=__codelineno-10-15></a>// Use the function variable
+<a id=__codelineno-10-16 name=__codelineno-10-16></a>var result = handler(7)
+<a id=__codelineno-10-17 name=__codelineno-10-17></a>fmt.Printf(&quot;handler(7) = %d\n&quot;, result) // Output: 8
+</code></pre></div></td></tr></table></div> <h3 id=multiple-parameter-function-types>Multiple Parameter Function Types</h3> <p>Function types can specify multiple parameters and different return types:</p> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Multiple Parameter Function Types</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-11-1> 1</a></span>
+<span class=normal><a href=#__codelineno-11-2> 2</a></span>
+<span class=normal><a href=#__codelineno-11-3> 3</a></span>
+<span class=normal><a href=#__codelineno-11-4> 4</a></span>
+<span class=normal><a href=#__codelineno-11-5> 5</a></span>
+<span class=normal><a href=#__codelineno-11-6> 6</a></span>
+<span class=normal><a href=#__codelineno-11-7> 7</a></span>
+<span class=normal><a href=#__codelineno-11-8> 8</a></span>
+<span class=normal><a href=#__codelineno-11-9> 9</a></span>
+<span class=normal><a href=#__codelineno-11-10>10</a></span>
+<span class=normal><a href=#__codelineno-11-11>11</a></span>
+<span class=normal><a href=#__codelineno-11-12>12</a></span>
+<span class=normal><a href=#__codelineno-11-13>13</a></span>
+<span class=normal><a href=#__codelineno-11-14>14</a></span>
+<span class=normal><a href=#__codelineno-11-15>15</a></span>
+<span class=normal><a href=#__codelineno-11-16>16</a></span>
+<span class=normal><a href=#__codelineno-11-17>17</a></span>
+<span class=normal><a href=#__codelineno-11-18>18</a></span>
+<span class=normal><a href=#__codelineno-11-19>19</a></span>
+<span class=normal><a href=#__codelineno-11-20>20</a></span>
+<span class=normal><a href=#__codelineno-11-21>21</a></span>
+<span class=normal><a href=#__codelineno-11-22>22</a></span>
+<span class=normal><a href=#__codelineno-11-23>23</a></span>
+<span class=normal><a href=#__codelineno-11-24>24</a></span>
+<span class=normal><a href=#__codelineno-11-25>25</a></span>
+<span class=normal><a href=#__codelineno-11-26>26</a></span>
+<span class=normal><a href=#__codelineno-11-27>27</a></span>
+<span class=normal><a href=#__codelineno-11-28>28</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-11-1 name=__codelineno-11-1></a>package main
+<a id=__codelineno-11-2 name=__codelineno-11-2></a>import fmt
+<a id=__codelineno-11-3 name=__codelineno-11-3></a>
+<a id=__codelineno-11-4 name=__codelineno-11-4></a>// Function expecting a binary operation
+<a id=__codelineno-11-5 name=__codelineno-11-5></a>function calculate(op function(int, int) int, a int, b int) int {
+<a id=__codelineno-11-6 name=__codelineno-11-6></a>    return op(a, b)
+<a id=__codelineno-11-7 name=__codelineno-11-7></a>}
+<a id=__codelineno-11-8 name=__codelineno-11-8></a>
+<a id=__codelineno-11-9 name=__codelineno-11-9></a>// Function expecting a string transformation
+<a id=__codelineno-11-10 name=__codelineno-11-10></a>function transform(fn function(string) string, text string) string {
+<a id=__codelineno-11-11 name=__codelineno-11-11></a>    return fn(text)
+<a id=__codelineno-11-12 name=__codelineno-11-12></a>}
+<a id=__codelineno-11-13 name=__codelineno-11-13></a>
+<a id=__codelineno-11-14 name=__codelineno-11-14></a>// Test functions
+<a id=__codelineno-11-15 name=__codelineno-11-15></a>function add(x int, y int) int {
+<a id=__codelineno-11-16 name=__codelineno-11-16></a>    return x + y
+<a id=__codelineno-11-17 name=__codelineno-11-17></a>}
+<a id=__codelineno-11-18 name=__codelineno-11-18></a>
+<a id=__codelineno-11-19 name=__codelineno-11-19></a>function toUpper(s string) string {
+<a id=__codelineno-11-20 name=__codelineno-11-20></a>    return &quot;[UPPER]&quot; + s
+<a id=__codelineno-11-21 name=__codelineno-11-21></a>}
+<a id=__codelineno-11-22 name=__codelineno-11-22></a>
+<a id=__codelineno-11-23 name=__codelineno-11-23></a>// Usage with type validation
+<a id=__codelineno-11-24 name=__codelineno-11-24></a>var sum = calculate(add, 10, 5)
+<a id=__codelineno-11-25 name=__codelineno-11-25></a>var upper = transform(toUpper, &quot;hello&quot;)
+<a id=__codelineno-11-26 name=__codelineno-11-26></a>
+<a id=__codelineno-11-27 name=__codelineno-11-27></a>fmt.Printf(&quot;calculate(add, 10, 5) = %d\n&quot;, sum)      // Output: 15
+<a id=__codelineno-11-28 name=__codelineno-11-28></a>fmt.Printf(&quot;transform(toUpper, \&quot;hello\&quot;) = %s\n&quot;, upper) // Output: [UPPER]hello
+</code></pre></div></td></tr></table></div> <h3 id=arrow-functions-with-type-annotations>Arrow Functions with Type Annotations</h3> <p>Arrow functions work seamlessly with function type annotations:</p> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Arrow Functions with Types</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-12-1> 1</a></span>
+<span class=normal><a href=#__codelineno-12-2> 2</a></span>
+<span class=normal><a href=#__codelineno-12-3> 3</a></span>
+<span class=normal><a href=#__codelineno-12-4> 4</a></span>
+<span class=normal><a href=#__codelineno-12-5> 5</a></span>
+<span class=normal><a href=#__codelineno-12-6> 6</a></span>
+<span class=normal><a href=#__codelineno-12-7> 7</a></span>
+<span class=normal><a href=#__codelineno-12-8> 8</a></span>
+<span class=normal><a href=#__codelineno-12-9> 9</a></span>
+<span class=normal><a href=#__codelineno-12-10>10</a></span>
+<span class=normal><a href=#__codelineno-12-11>11</a></span>
+<span class=normal><a href=#__codelineno-12-12>12</a></span>
+<span class=normal><a href=#__codelineno-12-13>13</a></span>
+<span class=normal><a href=#__codelineno-12-14>14</a></span>
+<span class=normal><a href=#__codelineno-12-15>15</a></span>
+<span class=normal><a href=#__codelineno-12-16>16</a></span>
+<span class=normal><a href=#__codelineno-12-17>17</a></span>
+<span class=normal><a href=#__codelineno-12-18>18</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-12-1 name=__codelineno-12-1></a>package main
+<a id=__codelineno-12-2 name=__codelineno-12-2></a>import fmt
+<a id=__codelineno-12-3 name=__codelineno-12-3></a>
+<a id=__codelineno-12-4 name=__codelineno-12-4></a>// Function expecting a function parameter
+<a id=__codelineno-12-5 name=__codelineno-12-5></a>function processNumbers(processor function(int) int, numbers []int) []int {
+<a id=__codelineno-12-6 name=__codelineno-12-6></a>    var results []int
+<a id=__codelineno-12-7 name=__codelineno-12-7></a>    for _, num := range numbers {
+<a id=__codelineno-12-8 name=__codelineno-12-8></a>        results = append(results, processor(num))
+<a id=__codelineno-12-9 name=__codelineno-12-9></a>    }
+<a id=__codelineno-12-10 name=__codelineno-12-10></a>    return results
+<a id=__codelineno-12-11 name=__codelineno-12-11></a>}
+<a id=__codelineno-12-12 name=__codelineno-12-12></a>
+<a id=__codelineno-12-13 name=__codelineno-12-13></a>// Arrow functions can be passed directly
+<a id=__codelineno-12-14 name=__codelineno-12-14></a>var doubled = processNumbers(x =&gt; x * 2, [1, 2, 3, 4])
+<a id=__codelineno-12-15 name=__codelineno-12-15></a>var squared = processNumbers(x =&gt; x * x, [1, 2, 3, 4])
+<a id=__codelineno-12-16 name=__codelineno-12-16></a>
+<a id=__codelineno-12-17 name=__codelineno-12-17></a>fmt.Printf(&quot;Doubled: %v\n&quot;, doubled) // Output: [2, 4, 6, 8]
+<a id=__codelineno-12-18 name=__codelineno-12-18></a>fmt.Printf(&quot;Squared: %v\n&quot;, squared) // Output: [1, 4, 9, 16]
+</code></pre></div></td></tr></table></div> <h3 id=type-safety-and-error-detection>Type Safety and Error Detection</h3> <p>Harneet's function type system provides comprehensive compile-time validation:</p> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Type Safety Examples</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-13-1> 1</a></span>
+<span class=normal><a href=#__codelineno-13-2> 2</a></span>
+<span class=normal><a href=#__codelineno-13-3> 3</a></span>
+<span class=normal><a href=#__codelineno-13-4> 4</a></span>
+<span class=normal><a href=#__codelineno-13-5> 5</a></span>
+<span class=normal><a href=#__codelineno-13-6> 6</a></span>
+<span class=normal><a href=#__codelineno-13-7> 7</a></span>
+<span class=normal><a href=#__codelineno-13-8> 8</a></span>
+<span class=normal><a href=#__codelineno-13-9> 9</a></span>
+<span class=normal><a href=#__codelineno-13-10>10</a></span>
+<span class=normal><a href=#__codelineno-13-11>11</a></span>
+<span class=normal><a href=#__codelineno-13-12>12</a></span>
+<span class=normal><a href=#__codelineno-13-13>13</a></span>
+<span class=normal><a href=#__codelineno-13-14>14</a></span>
+<span class=normal><a href=#__codelineno-13-15>15</a></span>
+<span class=normal><a href=#__codelineno-13-16>16</a></span>
+<span class=normal><a href=#__codelineno-13-17>17</a></span>
+<span class=normal><a href=#__codelineno-13-18>18</a></span>
+<span class=normal><a href=#__codelineno-13-19>19</a></span>
+<span class=normal><a href=#__codelineno-13-20>20</a></span>
+<span class=normal><a href=#__codelineno-13-21>21</a></span>
+<span class=normal><a href=#__codelineno-13-22>22</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-13-1 name=__codelineno-13-1></a>package main
+<a id=__codelineno-13-2 name=__codelineno-13-2></a>import fmt
+<a id=__codelineno-13-3 name=__codelineno-13-3></a>
+<a id=__codelineno-13-4 name=__codelineno-13-4></a>function apply(f function(int) int, value int) int {
+<a id=__codelineno-13-5 name=__codelineno-13-5></a>    return f(value)
+<a id=__codelineno-13-6 name=__codelineno-13-6></a>}
+<a id=__codelineno-13-7 name=__codelineno-13-7></a>
+<a id=__codelineno-13-8 name=__codelineno-13-8></a>function double(x int) int {
+<a id=__codelineno-13-9 name=__codelineno-13-9></a>    return x * 2
+<a id=__codelineno-13-10 name=__codelineno-13-10></a>}
+<a id=__codelineno-13-11 name=__codelineno-13-11></a>
+<a id=__codelineno-13-12 name=__codelineno-13-12></a>function toUpper(s string) string {
+<a id=__codelineno-13-13 name=__codelineno-13-13></a>    return &quot;[UPPER]&quot; + s
+<a id=__codelineno-13-14 name=__codelineno-13-14></a>}
+<a id=__codelineno-13-15 name=__codelineno-13-15></a>
+<a id=__codelineno-13-16 name=__codelineno-13-16></a>// ✅ This works - correct types
+<a id=__codelineno-13-17 name=__codelineno-13-17></a>var result1 = apply(double, 5)
+<a id=__codelineno-13-18 name=__codelineno-13-18></a>
+<a id=__codelineno-13-19 name=__codelineno-13-19></a>// ❌ These would cause compile-time errors:
+<a id=__codelineno-13-20 name=__codelineno-13-20></a>// apply(toUpper, 5)     // Error: toUpper expects string, not int
+<a id=__codelineno-13-21 name=__codelineno-13-21></a>// apply(5, 10)          // Error: 5 is not a function
+<a id=__codelineno-13-22 name=__codelineno-13-22></a>// apply(double, &quot;text&quot;) // Error: double expects int, not string
+</code></pre></div></td></tr></table></div> <h3 id=advanced-function-type-patterns>Advanced Function Type Patterns</h3> <h4 id=factory-functions-with-type-safety>Factory Functions with Type Safety</h4> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Factory Function Validator</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-14-1> 1</a></span>
+<span class=normal><a href=#__codelineno-14-2> 2</a></span>
+<span class=normal><a href=#__codelineno-14-3> 3</a></span>
+<span class=normal><a href=#__codelineno-14-4> 4</a></span>
+<span class=normal><a href=#__codelineno-14-5> 5</a></span>
+<span class=normal><a href=#__codelineno-14-6> 6</a></span>
+<span class=normal><a href=#__codelineno-14-7> 7</a></span>
+<span class=normal><a href=#__codelineno-14-8> 8</a></span>
+<span class=normal><a href=#__codelineno-14-9> 9</a></span>
+<span class=normal><a href=#__codelineno-14-10>10</a></span>
+<span class=normal><a href=#__codelineno-14-11>11</a></span>
+<span class=normal><a href=#__codelineno-14-12>12</a></span>
+<span class=normal><a href=#__codelineno-14-13>13</a></span>
+<span class=normal><a href=#__codelineno-14-14>14</a></span>
+<span class=normal><a href=#__codelineno-14-15>15</a></span>
+<span class=normal><a href=#__codelineno-14-16>16</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-14-1 name=__codelineno-14-1></a>package main
+<a id=__codelineno-14-2 name=__codelineno-14-2></a>import fmt
+<a id=__codelineno-14-3 name=__codelineno-14-3></a>
+<a id=__codelineno-14-4 name=__codelineno-14-4></a>// Factory function returning typed function
+<a id=__codelineno-14-5 name=__codelineno-14-5></a>function createValidator(minLength int) function(string) bool {
+<a id=__codelineno-14-6 name=__codelineno-14-6></a>    function validate(input string) bool {
+<a id=__codelineno-14-7 name=__codelineno-14-7></a>        // In practice, you&#39;d check string length
+<a id=__codelineno-14-8 name=__codelineno-14-8></a>        return input != &quot;&quot;
+<a id=__codelineno-14-9 name=__codelineno-14-9></a>    }
+<a id=__codelineno-14-10 name=__codelineno-14-10></a>    return validate
+<a id=__codelineno-14-11 name=__codelineno-14-11></a>}
+<a id=__codelineno-14-12 name=__codelineno-14-12></a>
+<a id=__codelineno-14-13 name=__codelineno-14-13></a>// Type-safe usage
+<a id=__codelineno-14-14 name=__codelineno-14-14></a>var passwordValidator = createValidator(8)
+<a id=__codelineno-14-15 name=__codelineno-14-15></a>var isValid = passwordValidator(&quot;mypassword&quot;)
+<a id=__codelineno-14-16 name=__codelineno-14-16></a>fmt.Printf(&quot;Password valid: %t\n&quot;, isValid)
+</code></pre></div></td></tr></table></div> <h4 id=callback-pattern-with-type-validation>Callback Pattern with Type Validation</h4> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Callback Pattern</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-15-1> 1</a></span>
+<span class=normal><a href=#__codelineno-15-2> 2</a></span>
+<span class=normal><a href=#__codelineno-15-3> 3</a></span>
+<span class=normal><a href=#__codelineno-15-4> 4</a></span>
+<span class=normal><a href=#__codelineno-15-5> 5</a></span>
+<span class=normal><a href=#__codelineno-15-6> 6</a></span>
+<span class=normal><a href=#__codelineno-15-7> 7</a></span>
+<span class=normal><a href=#__codelineno-15-8> 8</a></span>
+<span class=normal><a href=#__codelineno-15-9> 9</a></span>
+<span class=normal><a href=#__codelineno-15-10>10</a></span>
+<span class=normal><a href=#__codelineno-15-11>11</a></span>
+<span class=normal><a href=#__codelineno-15-12>12</a></span>
+<span class=normal><a href=#__codelineno-15-13>13</a></span>
+<span class=normal><a href=#__codelineno-15-14>14</a></span>
+<span class=normal><a href=#__codelineno-15-15>15</a></span>
+<span class=normal><a href=#__codelineno-15-16>16</a></span>
+<span class=normal><a href=#__codelineno-15-17>17</a></span>
+<span class=normal><a href=#__codelineno-15-18>18</a></span>
+<span class=normal><a href=#__codelineno-15-19>19</a></span>
+<span class=normal><a href=#__codelineno-15-20>20</a></span>
+<span class=normal><a href=#__codelineno-15-21>21</a></span>
+<span class=normal><a href=#__codelineno-15-22>22</a></span>
+<span class=normal><a href=#__codelineno-15-23>23</a></span>
+<span class=normal><a href=#__codelineno-15-24>24</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-15-1 name=__codelineno-15-1></a>package main
+<a id=__codelineno-15-2 name=__codelineno-15-2></a>import fmt
+<a id=__codelineno-15-3 name=__codelineno-15-3></a>
+<a id=__codelineno-15-4 name=__codelineno-15-4></a>// Function with callback parameter
+<a id=__codelineno-15-5 name=__codelineno-15-5></a>function processData(data int, callback function(int) int, errorHandler function(string)) int {
+<a id=__codelineno-15-6 name=__codelineno-15-6></a>    if data &lt; 0 {
+<a id=__codelineno-15-7 name=__codelineno-15-7></a>        errorHandler(&quot;Invalid data: negative number&quot;)
+<a id=__codelineno-15-8 name=__codelineno-15-8></a>        return 0
+<a id=__codelineno-15-9 name=__codelineno-15-9></a>    }
+<a id=__codelineno-15-10 name=__codelineno-15-10></a>    return callback(data)
+<a id=__codelineno-15-11 name=__codelineno-15-11></a>}
+<a id=__codelineno-15-12 name=__codelineno-15-12></a>
+<a id=__codelineno-15-13 name=__codelineno-15-13></a>// Callback functions
+<a id=__codelineno-15-14 name=__codelineno-15-14></a>function processValue(x int) int {
+<a id=__codelineno-15-15 name=__codelineno-15-15></a>    return x * 2
+<a id=__codelineno-15-16 name=__codelineno-15-16></a>}
+<a id=__codelineno-15-17 name=__codelineno-15-17></a>
+<a id=__codelineno-15-18 name=__codelineno-15-18></a>function handleError(msg string) {
+<a id=__codelineno-15-19 name=__codelineno-15-19></a>    fmt.Printf(&quot;Error: %s\n&quot;, msg)
+<a id=__codelineno-15-20 name=__codelineno-15-20></a>}
+<a id=__codelineno-15-21 name=__codelineno-15-21></a>
+<a id=__codelineno-15-22 name=__codelineno-15-22></a>// Type-safe callback usage
+<a id=__codelineno-15-23 name=__codelineno-15-23></a>var result = processData(10, processValue, handleError)
+<a id=__codelineno-15-24 name=__codelineno-15-24></a>fmt.Printf(&quot;Processed result: %d\n&quot;, result)
+</code></pre></div></td></tr></table></div> <h2 id=key-benefits>Key Benefits</h2> <h3 id=type-safety>🔒 <strong>Type Safety</strong></h3> <ul> <li>Compile-time validation of function signatures</li> <li>Prevention of runtime type errors</li> <li>Clear error messages for type mismatches</li> </ul> <h3 id=performance>🚀 <strong>Performance</strong></h3> <ul> <li>No runtime type checking overhead</li> <li>Optimized function calls</li> <li>Early error detection</li> </ul> <h3 id=code-clarity>📖 <strong>Code Clarity</strong></h3> <ul> <li>Self-documenting function interfaces</li> <li>Clear expectations for function parameters</li> <li>Better IDE support and tooling</li> </ul> <h3 id=flexibility>🔧 <strong>Flexibility</strong></h3> <ul> <li>Works with all function types (named, anonymous, arrow)</li> <li>Supports complex nested function signatures</li> <li>Compatible with existing code patterns</li> </ul> <p>The function type system in Harneet provides the perfect balance of type safety and flexibility, enabling robust functional programming while maintaining code clarity and performance.</p> </article> </div> <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script> <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script> </div> <button type=button class="md-top md-icon" data-md-component=top hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg> Back to top </button> </main> <footer class=md-footer> <nav class="md-footer__inner md-grid" aria-label=Footer> <a href=../../stdlib/cast/ class="md-footer__link md-footer__link--prev" aria-label="Previous: Cast"> <div class="md-footer__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg> </div> <div class=md-footer__title> <span class=md-footer__direction> Previous </span> <div class=md-ellipsis> Cast </div> </div> </a> <a href=../arrow_functions/ class="md-footer__link md-footer__link--next" aria-label="Next: Arrow Functions"> <div class=md-footer__title> <span class=md-footer__direction> Next </span> <div class=md-ellipsis> Arrow Functions </div> </div> <div class="md-footer__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg> </div> </a> </nav> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-copyright> <div class=md-copyright__highlight> © 2025 Harneet Programming Language — Built with ❤️ by Gagan Janjua </div> </div> </div> </div> </footer> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <div class=md-progress data-md-component=progress role=progressbar></div> <script id=__config type=application/json>{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.expand", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "toc.integrate", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.tabs.link", "content.code.copy", "content.code.annotate", "content.code.select", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script> <script src=../../assets/javascripts/bundle.f55a23d4.min.js></script> </body> </html>

@@ -1,3 +1,39 @@
 .md-logo img {
   height: 2rem !important;
 }
+
+body {
+  background-color: #111112;
+}
+
+.md-typeset .highlight,
+.md-typeset .highlight *,
+.md-typeset .highlighttable,
+.md-typeset .highlighttable * {
+  background-color: #1d1d1f !important;
+}
+
+.md-typeset table,
+.md-typeset table *,
+.md-typeset thead,
+.md-typeset tbody,
+.md-typeset tr,
+.md-typeset th,
+.md-typeset td {
+  background-color: #1d1d1f !important;
+}
+
+.md-footer {
+  background-color: #111112 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.md-footer-meta  {
+    background-color: #111112 !important;
+}
+
+/* Hide the main page title */
+.md-nav__title {
+  display: none;
+}
