@@ -1,0 +1,4309 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../concurrent/">
+      
+      
+        <link rel="next" href="../migration/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Performance Guide - Harneet Programming Language</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#performance-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Harneet Programming Language" class="md-header__button md-logo" aria-label="Harneet Programming Language" data-md-component="logo">
+      
+  <img src="../../assets/images/harneet.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Harneet Programming Language
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Performance Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light Mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Harneet Programming Language" class="md-nav__button md-logo" aria-label="Harneet Programming Language" data-md-component="logo">
+      
+  <img src="../../assets/images/harneet.png" alt="logo">
+
+    </a>
+    Harneet Programming Language
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../repl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    REPL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../command_line/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Command Line
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    General
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/comments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/data_types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Types
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/variable_declaration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variable Declaration & Assignment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/const/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Const Declarations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/keywords_identifiers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Keywords and Identifiers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/operators_and_expressions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operators and Expressions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/pipe_operator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pipe Operator (|>)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Advanced Arithmetic Operations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced Arithmetic Operations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/advanced-arithmetic-operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operator Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/bitwise-operations-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bitwise Operations Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/compound-assignment-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Compound Assignment Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/arrays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrays
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/maps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Maps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/control_flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Control Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/concurrency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Concurrency (do / await / sleep)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/pattern_matching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pattern Matching
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/break_continue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Break & Continue
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/block_structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Block Structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/scoping_variable_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scoping and Variable Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/cast/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cast
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/import_system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Import System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Module System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/unicode_support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unicode Support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_21" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_21" id="__nav_4_21_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Builtins
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_21">
+            <span class="md-nav__icon md-icon"></span>
+            Builtins
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functions/append/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Append
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functions/len/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Len
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../error_handling_system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Error Handling System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Functions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Functions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functions/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functions/arrow_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrow Functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functions/defer_statements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Defer Statements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functions/functional/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Functional features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functions/advanced_features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Standard Library
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Standard Library
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/fmt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    fmt
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    input
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    strings
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            strings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/strings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/multiline_strings_migration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multiline strings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/math/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    math
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/arrays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    arrays
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_6" id="__nav_7_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    collections
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            collections
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/collections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_6_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_6_2" id="__nav_7_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Enhanced Collections
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_6_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Enhanced Collections
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stacks-queues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stacks & Queues
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linked-lists/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linked Lists
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trees
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concurrent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Concurrent Collections
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Performance Guide
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Performance Guide
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#performance-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#time-complexity-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time Complexity Summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-overhead-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory Overhead Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benchmarking-and-measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benchmarking and Measurement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Benchmarking and Measurement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-performance-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Performance Testing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-usage-profiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory Usage Profiling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concurrent-performance-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concurrent Performance Testing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimization-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimization Techniques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optimization Techniques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-pre-allocation-and-capacity-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Pre-allocation and Capacity Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-batch-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Batch Operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-iterator-vs-index-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Iterator vs Index Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-choosing-the-right-data-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Choosing the Right Data Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-memory-pool-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Memory Pool Optimization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-patterns-and-anti-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Patterns and Anti-patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Patterns and Anti-patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#good-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Good Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Good Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-cache-friendly-access-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Cache-Friendly Access Patterns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-minimize-object-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Minimize Object Creation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-lazy-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Lazy Evaluation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anti-patterns-to-avoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anti-patterns to Avoid
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anti-patterns to Avoid">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-inappropriate-data-structure-choice" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Inappropriate Data Structure Choice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-excessive-memory-allocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Excessive Memory Allocation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-ignoring-amortized-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Ignoring Amortized Costs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-performance-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-World Performance Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-World Performance Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-web-server-request-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Web Server Request Cache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-log-processing-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Log Processing Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-monitoring-and-profiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Monitoring and Profiling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Monitoring and Profiling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-collection-performance-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Collection Performance Metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-automated-performance-regression-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Automated Performance Regression Testing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Migration Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    config
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    db
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_9" id="__nav_7_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    structs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_9">
+            <span class="md-nav__icon md-icon"></span>
+            structs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/structs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/struct_field_assignment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Struct Field Assignment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    json
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_11" id="__nav_7_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    http
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_11">
+            <span class="md-nav__icon md-icon"></span>
+            http
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/http/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/http/client/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Http Client
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/http/requests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Request Building
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/http/responses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Response Handling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/http/server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTTP Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/http/routing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Routing & Mux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/http/middleware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Middleware
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/http/auth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Authentication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/http/cookies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cookies & Sessions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/http/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/http/examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examples & Patterns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/assert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    assert
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    errors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    file
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    path
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/os/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    os
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/datetime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    datetime
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/flags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    flags
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/exec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    exec
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/regex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    regex
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/sync/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    sync
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/uuid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    uuid
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/encoding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    encoding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/box/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Box
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/reflect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reflect
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../type_system_safety/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Type System & Safety
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../any_type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The any Type
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../comprehensive_examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comprehensive Language Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#performance-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#time-complexity-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time Complexity Summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-overhead-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory Overhead Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benchmarking-and-measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benchmarking and Measurement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Benchmarking and Measurement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-performance-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Performance Testing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-usage-profiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory Usage Profiling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concurrent-performance-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concurrent Performance Testing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimization-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimization Techniques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optimization Techniques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-pre-allocation-and-capacity-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Pre-allocation and Capacity Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-batch-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Batch Operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-iterator-vs-index-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Iterator vs Index Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-choosing-the-right-data-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Choosing the Right Data Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-memory-pool-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Memory Pool Optimization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-patterns-and-anti-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Patterns and Anti-patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Patterns and Anti-patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#good-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Good Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Good Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-cache-friendly-access-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Cache-Friendly Access Patterns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-minimize-object-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Minimize Object Creation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-lazy-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Lazy Evaluation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anti-patterns-to-avoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anti-patterns to Avoid
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anti-patterns to Avoid">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-inappropriate-data-structure-choice" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Inappropriate Data Structure Choice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-excessive-memory-allocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Excessive Memory Allocation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-ignoring-amortized-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Ignoring Amortized Costs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-performance-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-World Performance Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-World Performance Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-web-server-request-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Web Server Request Cache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-log-processing-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Log Processing Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-monitoring-and-profiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Monitoring and Profiling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Monitoring and Profiling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-collection-performance-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Collection Performance Metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-automated-performance-regression-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Automated Performance Regression Testing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="performance-guide">Performance Guide</h1>
+<p>This guide covers performance characteristics, optimization techniques, and benchmarking for Harneet's enhanced collections. Understanding these concepts will help you choose the right data structure and optimize your applications.</p>
+<h2 id="performance-overview">Performance Overview</h2>
+<h3 id="time-complexity-summary">Time Complexity Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Data Structure</th>
+<th>Access</th>
+<th>Search</th>
+<th>Insert</th>
+<th>Delete</th>
+<th>Space</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Array</strong></td>
+<td>O(1)</td>
+<td>O(n)</td>
+<td>O(n)*</td>
+<td>O(n)*</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td><strong>Stack</strong></td>
+<td>O(1)†</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>O(1)</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td><strong>Queue</strong></td>
+<td>O(1)†</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>O(1)</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td><strong>Set</strong></td>
+<td>N/A</td>
+<td>O(1)‡</td>
+<td>O(1)‡</td>
+<td>O(1)‡</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td><strong>Map</strong></td>
+<td>O(1)‡</td>
+<td>O(1)‡</td>
+<td>O(1)‡</td>
+<td>O(1)‡</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td><strong>LinkedList</strong></td>
+<td>O(n)</td>
+<td>O(n)</td>
+<td>O(1)§</td>
+<td>O(1)§</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td><strong>BinarySearchTree</strong></td>
+<td>N/A</td>
+<td>O(log n)</td>
+<td>O(log n)</td>
+<td>O(log n)</td>
+<td>O(n)</td>
+</tr>
+</tbody>
+</table>
+<p>*Amortized for dynamic arrays<br />
+†Top/front element only<br />
+‡Average case, O(n) worst case<br />
+§Head/tail operations only</p>
+<h3 id="memory-overhead-comparison">Memory Overhead Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Data Structure</th>
+<th>Memory Overhead</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Array</strong></td>
+<td>~0-50%</td>
+<td>Growth factor dependent</td>
+</tr>
+<tr>
+<td><strong>Stack</strong></td>
+<td>~0-50%</td>
+<td>Pre-allocated capacity</td>
+</tr>
+<tr>
+<td><strong>Queue</strong></td>
+<td>~25-50%</td>
+<td>Circular buffer overhead</td>
+</tr>
+<tr>
+<td><strong>Set</strong></td>
+<td>~25-75%</td>
+<td>Hash table load factor</td>
+</tr>
+<tr>
+<td><strong>Map</strong></td>
+<td>~25-75%</td>
+<td>Hash table load factor</td>
+</tr>
+<tr>
+<td><strong>LinkedList</strong></td>
+<td>~100-200%</td>
+<td>Pointer overhead per node</td>
+</tr>
+<tr>
+<td><strong>BinarySearchTree</strong></td>
+<td>~100-200%</td>
+<td>Pointer overhead per node</td>
+</tr>
+</tbody>
+</table>
+<h2 id="benchmarking-and-measurement">Benchmarking and Measurement</h2>
+<h3 id="basic-performance-testing">Basic Performance Testing</h3>
+<div class="highlight"><pre><span></span><code>import collections
+import time
+
+func benchmark_operation(name, operation) {
+    let start_time = time.now_millis()
+    operation()
+    let end_time = time.now_millis()
+
+    let duration = end_time - start_time
+    fmt.Println(name, &quot;took&quot;, duration, &quot;ms&quot;)
+    return duration
+}
+
+func benchmark_insertions() {
+    let size = 100000
+
+    // Array insertions
+    benchmark_operation(&quot;Array append&quot;, || {
+        let array = collections.new_array()
+        for i in range(size) {
+            array.append(i)
+        }
+    })
+
+    // Stack insertions
+    benchmark_operation(&quot;Stack push&quot;, || {
+        let stack = collections.new_stack()
+        for i in range(size) {
+            stack.push(i)
+        }
+    })
+
+    // Set insertions
+    benchmark_operation(&quot;Set add&quot;, || {
+        let set = collections.new_set()
+        for i in range(size) {
+            set.add(i)
+        }
+    })
+
+    // LinkedList insertions
+    benchmark_operation(&quot;LinkedList add_last&quot;, || {
+        let list = collections.new_linked_list()
+        for i in range(size) {
+            list.add_last(i)
+        }
+    })
+}
+
+benchmark_insertions()
+</code></pre></div>
+<h3 id="memory-usage-profiling">Memory Usage Profiling</h3>
+<div class="highlight"><pre><span></span><code>func profile_memory_usage() {
+    let sizes = [1000, 10000, 100000, 1000000]
+
+    for size in sizes {
+        fmt.Println(&quot;Size:&quot;, size)
+
+        // Array memory usage
+        let array = collections.new_array()
+        array.reserve(size)
+        let array_memory = get_memory_usage()
+
+        for i in range(size) {
+            array.append(i)
+        }
+        let array_filled_memory = get_memory_usage()
+
+        fmt.Println(&quot;  Array reserved:&quot;, array_memory, &quot;bytes&quot;)
+        fmt.Println(&quot;  Array filled:&quot;, array_filled_memory, &quot;bytes&quot;)
+        fmt.Println(&quot;  Array overhead:&quot;, (array_filled_memory - array_memory) / size, &quot;bytes per element&quot;)
+
+        // LinkedList memory usage
+        let list = collections.new_linked_list()
+        let list_start_memory = get_memory_usage()
+
+        for i in range(size) {
+            list.add_last(i)
+        }
+        let list_filled_memory = get_memory_usage()
+
+        fmt.Println(&quot;  LinkedList:&quot;, list_filled_memory - list_start_memory, &quot;bytes&quot;)
+        fmt.Println(&quot;  LinkedList overhead:&quot;, (list_filled_memory - list_start_memory) / size, &quot;bytes per element&quot;)
+
+        fmt.Println()
+    }
+}
+</code></pre></div>
+<h3 id="concurrent-performance-testing">Concurrent Performance Testing</h3>
+<div class="highlight"><pre><span></span><code>func benchmark_concurrent_operations() {
+    let iterations = 10000
+    let thread_count = 4
+
+    // Regular map (not thread-safe)
+    let regular_map = collections.new_map()
+
+    // Concurrent map
+    let concurrent_map = collections.new_concurrent_map()
+
+    // Benchmark concurrent writes
+    benchmark_operation(&quot;Concurrent map writes&quot;, || {
+        let workers = []
+
+        for i in range(thread_count) {
+            workers.append(do {
+                for j in range(iterations / thread_count) {
+                    let key = &quot;key_&quot; + (i * 1000 + j).to_string()
+                    concurrent_map.set(key, j)
+                }
+            })
+        }
+
+        // Wait for all workers
+        for worker in workers {
+            await worker
+        }
+    })
+
+    // Benchmark concurrent reads
+    benchmark_operation(&quot;Concurrent map reads&quot;, || {
+        let workers = []
+
+        for i in range(thread_count) {
+            workers.append(do {
+                for j in range(iterations / thread_count) {
+                    let key = &quot;key_&quot; + (i * 1000 + j).to_string()
+                    let value = concurrent_map.get(key)
+                }
+            })
+        }
+
+        for worker in workers {
+            await worker
+        }
+    })
+}
+</code></pre></div>
+<h2 id="optimization-techniques">Optimization Techniques</h2>
+<h3 id="1-pre-allocation-and-capacity-management">1. Pre-allocation and Capacity Management</h3>
+<div class="highlight"><pre><span></span><code>// Bad: frequent reallocations
+func inefficient_array_building() {
+    let array = collections.new_array()  // Starts small
+
+    for i in range(100000) {
+        array.append(i)  // May trigger multiple reallocations
+    }
+
+    return array
+}
+
+// Good: pre-allocate known capacity
+func efficient_array_building() {
+    let array = collections.new_array()
+    array.reserve(100000)  // Pre-allocate space
+
+    for i in range(100000) {
+        array.append(i)  // No reallocations needed
+    }
+
+    return array
+}
+
+// Benchmark the difference
+benchmark_operation(&quot;Without pre-allocation&quot;, inefficient_array_building)
+benchmark_operation(&quot;With pre-allocation&quot;, efficient_array_building)
+</code></pre></div>
+<h3 id="2-batch-operations">2. Batch Operations</h3>
+<div class="highlight"><pre><span></span><code>// Inefficient: individual operations
+func individual_operations(set, items) {
+    for item in items {
+        set.add(item)  // Individual hash computation and insertion
+    }
+}
+
+// Efficient: batch operations
+func batch_operations(set, items) {
+    set.add_all(items)  // Optimized batch insertion
+}
+
+let large_dataset = range(50000)
+let set1 = collections.new_set()
+let set2 = collections.new_set()
+
+benchmark_operation(&quot;Individual adds&quot;, || individual_operations(set1, large_dataset))
+benchmark_operation(&quot;Batch add&quot;, || batch_operations(set2, large_dataset))
+</code></pre></div>
+<h3 id="3-iterator-vs-index-access">3. Iterator vs Index Access</h3>
+<div class="highlight"><pre><span></span><code>let large_list = collections.new_linked_list()
+for i in range(10000) {
+    large_list.add_last(i)
+}
+
+// Inefficient: index-based access (O(n²) total)
+benchmark_operation(&quot;Index-based access&quot;, || {
+    let sum = 0
+    for i in range(large_list.size()) {
+        sum += large_list.get(i)  // O(n) for each access
+    }
+})
+
+// Efficient: iterator-based access (O(n) total)
+benchmark_operation(&quot;Iterator access&quot;, || {
+    let sum = 0
+    let iter = large_list.iterator()
+    for iter.has_next() {
+        sum += iter.next()  // O(1) for each access
+    }
+})
+</code></pre></div>
+<h3 id="4-choosing-the-right-data-structure">4. Choosing the Right Data Structure</h3>
+<div class="highlight"><pre><span></span><code>func compare_lookup_performance() {
+    let size = 100000
+    let lookup_count = 10000
+
+    // Prepare data
+    let array = collections.new_array()
+    let set = collections.new_set()
+    let tree = collections.new_bst()
+
+    for i in range(size) {
+        array.append(i)
+        set.add(i)
+        tree.insert(i)
+    }
+
+    let random_keys = []
+    for i in range(lookup_count) {
+        random_keys.append(random_int(0, size))
+    }
+
+    // Array linear search: O(n) per lookup
+    benchmark_operation(&quot;Array contains&quot;, || {
+        for key in random_keys {
+            array.contains(key)
+        }
+    })
+
+    // Set hash lookup: O(1) average per lookup
+    benchmark_operation(&quot;Set contains&quot;, || {
+        for key in random_keys {
+            set.contains(key)
+        }
+    })
+
+    // Tree binary search: O(log n) per lookup
+    benchmark_operation(&quot;Tree contains&quot;, || {
+        for key in random_keys {
+            tree.contains(key)
+        }
+    })
+}
+
+compare_lookup_performance()
+</code></pre></div>
+<h3 id="5-memory-pool-optimization">5. Memory Pool Optimization</h3>
+<div class="highlight"><pre><span></span><code>// Custom memory pool for frequent allocations
+struct ObjectPool {
+    available: Stack
+    create_func: func()
+    reset_func: func(obj)
+}
+
+func new_object_pool(create_func, reset_func, initial_size) {
+    let pool = ObjectPool{
+        available: collections.new_stack(),
+        create_func: create_func,
+        reset_func: reset_func
+    }
+
+    // Pre-populate pool
+    for i in range(initial_size) {
+        pool.available.push(create_func())
+    }
+
+    return pool
+}
+
+func (pool *ObjectPool) acquire() {
+    if !pool.available.is_empty() {
+        return pool.available.pop()
+    }
+    return pool.create_func()
+}
+
+func (pool *ObjectPool) release(obj) {
+    pool.reset_func(obj)
+    pool.available.push(obj)
+}
+
+// Usage example
+let list_pool = new_object_pool(
+    || collections.new_linked_list(),  // Create function
+    |list| list.clear(),               // Reset function
+    10                                 // Initial pool size
+)
+
+func process_with_pool() {
+    let temp_list = list_pool.acquire()
+
+    // Use the list
+    for i in range(100) {
+        temp_list.add_last(i)
+    }
+
+    // Process data...
+
+    // Return to pool
+    list_pool.release(temp_list)
+}
+</code></pre></div>
+<h2 id="performance-patterns-and-anti-patterns">Performance Patterns and Anti-patterns</h2>
+<h3 id="good-patterns">Good Patterns</h3>
+<h4 id="1-cache-friendly-access-patterns">1. Cache-Friendly Access Patterns</h4>
+<div class="highlight"><pre><span></span><code>// Good: sequential access (cache-friendly)
+func sequential_sum(array) {
+    let sum = 0
+    for i in range(array.size()) {
+        sum += array.get(i)
+    }
+    return sum
+}
+
+// Bad: random access (cache-unfriendly)
+func random_sum(array) {
+    let sum = 0
+    let indices = range(array.size()).shuffle()
+    for i in indices {
+        sum += array.get(i)
+    }
+    return sum
+}
+</code></pre></div>
+<h4 id="2-minimize-object-creation">2. Minimize Object Creation</h4>
+<div class="highlight"><pre><span></span><code>// Good: reuse objects
+func efficient_string_building(words) {
+    let builder = collections.new_array()
+    builder.reserve(words.size())
+
+    for word in words {
+        builder.append(word)
+    }
+
+    return builder.join(&quot;&quot;)
+}
+
+// Bad: create many temporary objects
+func inefficient_string_building(words) {
+    let result = &quot;&quot;
+    for word in words {
+        result = result + word  // Creates new string each time
+    }
+    return result
+}
+</code></pre></div>
+<h4 id="3-lazy-evaluation">3. Lazy Evaluation</h4>
+<div class="highlight"><pre><span></span><code>// Good: lazy evaluation for large datasets
+func lazy_filter_map(collection, filter_func, map_func) {
+    return LazyIterator{
+        source: collection.iterator(),
+        filter: filter_func,
+        mapper: map_func
+    }
+}
+
+// Bad: eager evaluation
+func eager_filter_map(collection, filter_func, map_func) {
+    let filtered = collection.filter(filter_func)  // Full pass
+    let mapped = filtered.map(map_func)            // Another full pass
+    return mapped
+}
+</code></pre></div>
+<h3 id="anti-patterns-to-avoid">Anti-patterns to Avoid</h3>
+<h4 id="1-inappropriate-data-structure-choice">1. Inappropriate Data Structure Choice</h4>
+<div class="highlight"><pre><span></span><code>// Anti-pattern: using LinkedList for random access
+func bad_random_access() {
+    let list = collections.new_linked_list()
+    for i in range(10000) {
+        list.add_last(i)
+    }
+
+    // This is O(n²) - very slow!
+    for i in range(100) {
+        let random_index = random_int(0, list.size())
+        let value = list.get(random_index)  // O(n) each time
+    }
+}
+
+// Better: use Array for random access
+func good_random_access() {
+    let array = collections.new_array()
+    for i in range(10000) {
+        array.append(i)
+    }
+
+    // This is O(1) per access
+    for i in range(100) {
+        let random_index = random_int(0, array.size())
+        let value = array.get(random_index)  // O(1) each time
+    }
+}
+</code></pre></div>
+<h4 id="2-excessive-memory-allocation">2. Excessive Memory Allocation</h4>
+<div class="highlight"><pre><span></span><code>// Anti-pattern: creating many temporary collections
+func wasteful_processing(data) {
+    let temp1 = collections.new_array()
+    let temp2 = collections.new_array()
+    let temp3 = collections.new_array()
+
+    // Multiple passes with temporary collections
+    for item in data {
+        if condition1(item) {
+            temp1.append(item)
+        }
+    }
+
+    for item in temp1 {
+        if condition2(item) {
+            temp2.append(transform(item))
+        }
+    }
+
+    for item in temp2 {
+        if condition3(item) {
+            temp3.append(finalize(item))
+        }
+    }
+
+    return temp3
+}
+
+// Better: single pass with streaming
+func efficient_processing(data) {
+    let result = collections.new_array()
+
+    for item in data {
+        if condition1(item) &amp;&amp; condition2(item) &amp;&amp; condition3(item) {
+            result.append(finalize(transform(item)))
+        }
+    }
+
+    return result
+}
+</code></pre></div>
+<h4 id="3-ignoring-amortized-costs">3. Ignoring Amortized Costs</h4>
+<div class="highlight"><pre><span></span><code>// Anti-pattern: frequent size changes
+func bad_dynamic_sizing() {
+    let array = collections.new_array()
+
+    for i in range(1000) {
+        // Grow
+        for j in range(100) {
+            array.append(j)
+        }
+
+        // Shrink
+        for j in range(50) {
+            array.pop()
+        }
+    }
+}
+
+// Better: stable sizing or pre-allocation
+func good_sizing() {
+    let array = collections.new_array()
+    array.reserve(5000)  // Pre-allocate expected maximum
+
+    for i in range(1000) {
+        // Operations within pre-allocated space
+        let start_size = array.size()
+
+        for j in range(100) {
+            array.append(j)
+        }
+
+        // Shrink back to original size
+        array.resize(start_size)
+    }
+}
+</code></pre></div>
+<h2 id="real-world-performance-examples">Real-World Performance Examples</h2>
+<h3 id="1-web-server-request-cache">1. Web Server Request Cache</h3>
+<div class="highlight"><pre><span></span><code>struct RequestCache {
+    cache: ConcurrentMap
+    max_size: int
+    hit_count: int
+    miss_count: int
+}
+
+func new_request_cache(max_size) {
+    return RequestCache{
+        cache: collections.new_concurrent_map(),
+        max_size: max_size,
+        hit_count: 0,
+        miss_count: 0
+    }
+}
+
+func (rc *RequestCache) get(key) {
+    let value = rc.cache.get(key)
+    if value != null {
+        rc.hit_count++
+        return value
+    }
+
+    rc.miss_count++
+    return null
+}
+
+func (rc *RequestCache) put(key, value) {
+    // Simple LRU eviction when full
+    if rc.cache.size() &gt;= rc.max_size {
+        // Remove oldest entries (simplified)
+        let keys = rc.cache.keys()
+        let to_remove = keys.slice(0, rc.max_size / 4)  // Remove 25%
+        for key in to_remove {
+            rc.cache.remove(key)
+        }
+    }
+
+    rc.cache.set(key, value)
+}
+
+func (rc *RequestCache) get_hit_rate() {
+    let total = rc.hit_count + rc.miss_count
+    if total == 0 {
+        return 0.0
+    }
+    return rc.hit_count.to_float() / total.to_float()
+}
+
+// Performance testing
+func test_cache_performance() {
+    let cache = new_request_cache(1000)
+    let request_count = 10000
+
+    benchmark_operation(&quot;Cache operations&quot;, || {
+        for i in range(request_count) {
+            let key = &quot;request_&quot; + (i % 500).to_string()  // 50% hit rate expected
+
+            let cached = cache.get(key)
+            if cached == null {
+                let response = &quot;response_for_&quot; + key
+                cache.put(key, response)
+            }
+        }
+    })
+
+    fmt.Println(&quot;Cache hit rate:&quot;, cache.get_hit_rate())
+}
+</code></pre></div>
+<h3 id="2-log-processing-pipeline">2. Log Processing Pipeline</h3>
+<div class="highlight"><pre><span></span><code>struct LogProcessor {
+    buffer: ConcurrentQueue
+    processed_count: int
+    error_count: int
+}
+
+func new_log_processor() {
+    return LogProcessor{
+        buffer: collections.new_concurrent_queue(),
+        processed_count: 0,
+        error_count: 0
+    }
+}
+
+func (lp *LogProcessor) add_log_entry(entry) {
+    lp.buffer.enqueue(entry)
+}
+
+func (lp *LogProcessor) process_batch(batch_size) {
+    let batch = []
+
+    // Collect batch
+    for i in range(batch_size) {
+        if lp.buffer.is_empty() {
+            break
+        }
+        batch.append(lp.buffer.dequeue())
+    }
+
+    if batch.size() == 0 {
+        return
+    }
+
+    // Process batch efficiently
+    benchmark_operation(&quot;Process batch of &quot; + batch.size().to_string(), || {
+        for entry in batch {
+            if process_log_entry(entry) {
+                lp.processed_count++
+            } else {
+                lp.error_count++
+            }
+        }
+    })
+}
+
+func process_log_entry(entry) {
+    // Simulate log processing
+    return entry.length() &gt; 0
+}
+
+// Performance test
+func test_log_processing() {
+    let processor = new_log_processor()
+
+    // Generate test logs
+    for i in range(100000) {
+        processor.add_log_entry(&quot;log entry &quot; + i.to_string())
+    }
+
+    // Process in batches for better performance
+    benchmark_operation(&quot;Batch processing&quot;, || {
+        for processor.buffer.size() &gt; 0 {
+            processor.process_batch(1000)  // Process 1000 at a time
+        }
+    })
+
+    fmt.Println(&quot;Processed:&quot;, processor.processed_count)
+    fmt.Println(&quot;Errors:&quot;, processor.error_count)
+}
+</code></pre></div>
+<h2 id="performance-monitoring-and-profiling">Performance Monitoring and Profiling</h2>
+<h3 id="1-collection-performance-metrics">1. Collection Performance Metrics</h3>
+<div class="highlight"><pre><span></span><code>struct CollectionMetrics {
+    operation_counts: Map
+    operation_times: Map
+    memory_usage: int
+}
+
+func new_collection_metrics() {
+    return CollectionMetrics{
+        operation_counts: collections.new_map(),
+        operation_times: collections.new_map(),
+        memory_usage: 0
+    }
+}
+
+func (cm *CollectionMetrics) record_operation(operation, duration) {
+    // Count operations
+    let current_count = cm.operation_counts.get(operation) || 0
+    cm.operation_counts.set(operation, current_count + 1)
+
+    // Track timing
+    let times = cm.operation_times.get(operation) || []
+    times.append(duration)
+    cm.operation_times.set(operation, times)
+}
+
+func (cm *CollectionMetrics) get_average_time(operation) {
+    let times = cm.operation_times.get(operation)
+    if times == null || times.size() == 0 {
+        return 0
+    }
+
+    let sum = times.reduce(|acc, time| acc + time, 0)
+    return sum / times.size()
+}
+
+func (cm *CollectionMetrics) print_report() {
+    fmt.Println(&quot;Collection Performance Report&quot;)
+    fmt.Println(&quot;============================&quot;)
+
+    let operations = cm.operation_counts.keys()
+    for op in operations {
+        let count = cm.operation_counts.get(op)
+        let avg_time = cm.get_average_time(op)
+        fmt.Println(op + &quot;:&quot;, count, &quot;operations, avg&quot;, avg_time, &quot;ms&quot;)
+    }
+}
+
+// Instrumented collection wrapper
+struct InstrumentedMap {
+    map: Map
+    metrics: CollectionMetrics
+}
+
+func new_instrumented_map() {
+    return InstrumentedMap{
+        map: collections.new_map(),
+        metrics: new_collection_metrics()
+    }
+}
+
+func (im *InstrumentedMap) set(key, value) {
+    let start = time.now_millis()
+    im.map.set(key, value)
+    let duration = time.now_millis() - start
+    im.metrics.record_operation(&quot;set&quot;, duration)
+}
+
+func (im *InstrumentedMap) get(key) {
+    let start = time.now_millis()
+    let result = im.map.get(key)
+    let duration = time.now_millis() - start
+    im.metrics.record_operation(&quot;get&quot;, duration)
+    return result
+}
+</code></pre></div>
+<h3 id="2-automated-performance-regression-testing">2. Automated Performance Regression Testing</h3>
+<div class="highlight"><pre><span></span><code>struct PerformanceBenchmark {
+    name: string
+    setup_func: func()
+    test_func: func()
+    expected_max_time: int  // milliseconds
+}
+
+func run_performance_suite(benchmarks) {
+    fmt.Println(&quot;Running Performance Regression Tests&quot;)
+    fmt.Println(&quot;===================================&quot;)
+
+    let results = []
+
+    for benchmark in benchmarks {
+        fmt.Println(&quot;Running:&quot;, benchmark.name)
+
+        // Setup
+        benchmark.setup_func()
+
+        // Run test
+        let start_time = time.now_millis()
+        benchmark.test_func()
+        let duration = time.now_millis() - start_time
+
+        // Check against expected performance
+        let passed = duration &lt;= benchmark.expected_max_time
+        let status = if passed { &quot;PASS&quot; } else { &quot;FAIL&quot; }
+
+        fmt.Println(&quot;  Result:&quot;, status, &quot;-&quot;, duration, &quot;ms (expected &lt;=&quot;, benchmark.expected_max_time, &quot;ms)&quot;)
+
+        results.append({
+            name: benchmark.name,
+            duration: duration,
+            expected: benchmark.expected_max_time,
+            passed: passed
+        })
+    }
+
+    // Summary
+    let passed_count = results.filter(|r| r.passed).size()
+    fmt.Println()
+    fmt.Println(&quot;Summary:&quot;, passed_count, &quot;/&quot;, results.size(), &quot;tests passed&quot;)
+
+    return results
+}
+
+// Define benchmarks
+let performance_benchmarks = [
+    PerformanceBenchmark{
+        name: &quot;Array 100k insertions&quot;,
+        setup_func: || {},
+        test_func: || {
+            let array = collections.new_array()
+            array.reserve(100000)
+            for i in range(100000) {
+                array.append(i)
+            }
+        },
+        expected_max_time: 100
+    },
+
+    PerformanceBenchmark{
+        name: &quot;Set 50k unique insertions&quot;,
+        setup_func: || {},
+        test_func: || {
+            let set = collections.new_set()
+            for i in range(50000) {
+                set.add(i)
+            }
+        },
+        expected_max_time: 200
+    },
+
+    PerformanceBenchmark{
+        name: &quot;Map 50k key-value pairs&quot;,
+        setup_func: || {},
+        test_func: || {
+            let map = collections.new_map()
+            for i in range(50000) {
+                map.set(&quot;key_&quot; + i.to_string(), i)
+            }
+        },
+        expected_max_time: 250
+    }
+]
+
+// Run the performance suite
+run_performance_suite(performance_benchmarks)
+</code></pre></div>
+<p>This comprehensive performance guide provides the tools and knowledge needed to optimize collection usage in Harneet applications, from basic benchmarking to advanced performance monitoring and regression testing.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../concurrent/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Concurrent Collections">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Concurrent Collections
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../migration/" class="md-footer__link md-footer__link--next" aria-label="Next: Migration Guide">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Migration Guide
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2025 Harneet Programming Language — Built with ❤️ by Gagan Janjua
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.collapse", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.footer", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

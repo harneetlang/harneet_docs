@@ -1,0 +1,4226 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../linked-lists/">
+      
+      
+        <link rel="next" href="../concurrent/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Trees - Harneet Programming Language</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#trees" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Harneet Programming Language" class="md-header__button md-logo" aria-label="Harneet Programming Language" data-md-component="logo">
+      
+  <img src="../../assets/images/harneet.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Harneet Programming Language
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Trees
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light Mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Harneet Programming Language" class="md-nav__button md-logo" aria-label="Harneet Programming Language" data-md-component="logo">
+      
+  <img src="../../assets/images/harneet.png" alt="logo">
+
+    </a>
+    Harneet Programming Language
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../repl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    REPL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../command_line/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Command Line
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    General
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/comments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/data_types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Types
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/variable_declaration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variable Declaration & Assignment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/const/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Const Declarations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/keywords_identifiers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Keywords and Identifiers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/operators_and_expressions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operators and Expressions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/pipe_operator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pipe Operator (|>)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Advanced Arithmetic Operations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced Arithmetic Operations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/advanced-arithmetic-operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operator Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/bitwise-operations-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bitwise Operations Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/compound-assignment-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Compound Assignment Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/arrays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrays
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/maps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Maps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/control_flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Control Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/concurrency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Concurrency (do / await / sleep)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/pattern_matching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pattern Matching
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/break_continue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Break & Continue
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/block_structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Block Structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/scoping_variable_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scoping and Variable Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/cast/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cast
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/import_system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Import System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Module System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/unicode_support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unicode Support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_21" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_21" id="__nav_4_21_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Builtins
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_21">
+            <span class="md-nav__icon md-icon"></span>
+            Builtins
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functions/append/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Append
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functions/len/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Len
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../error_handling_system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Error Handling System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Functions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Functions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functions/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functions/arrow_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrow Functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functions/defer_statements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Defer Statements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functions/functional/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Functional features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functions/advanced_features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Standard Library
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Standard Library
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/fmt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    fmt
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    input
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    strings
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            strings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/strings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/multiline_strings_migration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multiline strings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/math/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    math
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/arrays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    arrays
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_6" id="__nav_7_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    collections
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            collections
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/collections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_6_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_6_2" id="__nav_7_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Enhanced Collections
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_6_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Enhanced Collections
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stacks-queues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stacks & Queues
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linked-lists/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linked Lists
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Trees
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trees
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-binary-search-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Binary Search Tree
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Operations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inserting-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inserting Elements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#searching-for-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Searching for Elements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removing-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removing Elements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tree-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tree Information
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tree-traversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tree Traversal
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tree Traversal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#in-order-traversal-sorted-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      In-Order Traversal (Sorted Order)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pre-order-traversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-Order Traversal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-order-traversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-Order Traversal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-order-traversal-breadth-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level-Order Traversal (Breadth-First)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterator-based-traversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iterator-Based Traversal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#range-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Range Queries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#successor-and-predecessor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Successor and Predecessor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tree-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tree Statistics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversion-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversion Operations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-comparison-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Comparison Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Custom Comparison Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#string-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      String Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-object-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Object Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Cases and Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use Cases and Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-dictionaryspell-checker" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Dictionary/Spell Checker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-event-scheduling-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Event Scheduling System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-database-index-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Database Index Simulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-expression-tree-evaluator" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Expression Tree Evaluator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Characteristics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Characteristics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#time-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time Complexity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#space-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Space Complexity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#balancing-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Balancing Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-choose-appropriate-data-for-bst" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Choose Appropriate Data for BST
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-consider-input-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Consider Input Order
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-use-appropriate-traversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Use Appropriate Traversal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-monitor-tree-balance" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Monitor Tree Balance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-handle-concurrent-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Handle Concurrent Access
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concurrent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Concurrent Collections
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../performance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Performance Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Migration Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    config
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    db
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_9" id="__nav_7_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    structs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_9">
+            <span class="md-nav__icon md-icon"></span>
+            structs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/structs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/struct_field_assignment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Struct Field Assignment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    json
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_11" id="__nav_7_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    http
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_11">
+            <span class="md-nav__icon md-icon"></span>
+            http
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/http/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/http/client/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Http Client
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/http/requests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Request Building
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/http/responses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Response Handling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/http/server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTTP Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/http/routing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Routing & Mux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/http/middleware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Middleware
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/http/auth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Authentication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/http/cookies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cookies & Sessions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/http/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/http/examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examples & Patterns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/assert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    assert
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    errors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    file
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    path
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/os/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    os
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/datetime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    datetime
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/flags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    flags
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/exec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    exec
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/regex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    regex
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/sync/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    sync
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/uuid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    uuid
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/encoding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    encoding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/box/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Box
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/reflect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reflect
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../type_system_safety/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Type System & Safety
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../any_type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The any Type
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../comprehensive_examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comprehensive Language Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-binary-search-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Binary Search Tree
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Operations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inserting-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inserting Elements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#searching-for-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Searching for Elements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removing-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removing Elements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tree-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tree Information
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tree-traversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tree Traversal
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tree Traversal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#in-order-traversal-sorted-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      In-Order Traversal (Sorted Order)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pre-order-traversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-Order Traversal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-order-traversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-Order Traversal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-order-traversal-breadth-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level-Order Traversal (Breadth-First)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterator-based-traversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iterator-Based Traversal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#range-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Range Queries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#successor-and-predecessor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Successor and Predecessor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tree-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tree Statistics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversion-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversion Operations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-comparison-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Comparison Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Custom Comparison Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#string-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      String Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-object-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Object Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Cases and Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use Cases and Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-dictionaryspell-checker" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Dictionary/Spell Checker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-event-scheduling-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Event Scheduling System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-database-index-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Database Index Simulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-expression-tree-evaluator" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Expression Tree Evaluator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Characteristics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Characteristics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#time-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time Complexity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#space-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Space Complexity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#balancing-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Balancing Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-choose-appropriate-data-for-bst" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Choose Appropriate Data for BST
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-consider-input-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Consider Input Order
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-use-appropriate-traversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Use Appropriate Traversal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-monitor-tree-balance" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Monitor Tree Balance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-handle-concurrent-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Handle Concurrent Access
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="trees">Trees</h1>
+<p>Trees are hierarchical data structures that provide efficient searching, insertion, and deletion operations on sorted data. Harneet's BinarySearchTree implementation maintains the BST property automatically and provides various traversal methods.</p>
+<h2 id="overview">Overview</h2>
+<p>A Binary Search Tree (BST) is a tree data structure where:
+- Each node has at most two children (left and right)
+- Left subtree contains only nodes with values less than the parent
+- Right subtree contains only nodes with values greater than the parent
+- This property applies recursively to all nodes</p>
+<p>Benefits:
+- O(log n) average case for search, insert, and delete operations
+- Maintains sorted order automatically
+- Supports range queries and ordered traversal
+- Self-balancing variants prevent worst-case O(n) performance</p>
+<h2 id="creating-a-binary-search-tree">Creating a Binary Search Tree</h2>
+<div class="highlight"><pre><span></span><code>import collections
+
+// Create with default comparison (for numbers, strings)
+let tree = collections.new_bst()
+
+// Create with custom comparison function
+let custom_tree = collections.new_bst(|a, b| {
+    if a &lt; b { return -1 }
+    if a &gt; b { return 1 }
+    return 0
+})
+</code></pre></div>
+<h2 id="basic-operations">Basic Operations</h2>
+<h3 id="inserting-elements">Inserting Elements</h3>
+<div class="highlight"><pre><span></span><code>let tree = collections.new_bst()
+
+// Insert numbers
+tree.insert(50)
+tree.insert(30)
+tree.insert(70)
+tree.insert(20)
+tree.insert(40)
+tree.insert(60)
+tree.insert(80)
+
+fmt.Println(&quot;Tree size:&quot;, tree.size())  // 7
+</code></pre></div>
+<h3 id="searching-for-elements">Searching for Elements</h3>
+<div class="highlight"><pre><span></span><code>// Check if element exists
+if tree.contains(40) {
+    fmt.Println(&quot;Tree contains 40&quot;)
+}
+
+if !tree.contains(90) {
+    fmt.Println(&quot;Tree does not contain 90&quot;)
+}
+
+// Find minimum and maximum values
+let min_val = tree.min()
+let max_val = tree.max()
+fmt.Println(&quot;Min:&quot;, min_val, &quot;Max:&quot;, max_val)  // Min: 20 Max: 80
+</code></pre></div>
+<h3 id="removing-elements">Removing Elements</h3>
+<div class="highlight"><pre><span></span><code>// Remove specific element
+let removed = tree.remove(30)
+fmt.Println(&quot;Removed 30:&quot;, removed)  // true
+
+// Try to remove non-existent element
+let not_found = tree.remove(100)
+fmt.Println(&quot;Removed 100:&quot;, not_found)  // false
+
+fmt.Println(&quot;Size after removal:&quot;, tree.size())
+</code></pre></div>
+<h3 id="tree-information">Tree Information</h3>
+<div class="highlight"><pre><span></span><code>fmt.Println(&quot;Tree size:&quot;, tree.size())
+fmt.Println(&quot;Is empty:&quot;, tree.is_empty())
+fmt.Println(&quot;Height:&quot;, tree.height())
+
+// Clear all elements
+tree.clear()
+fmt.Println(&quot;After clear:&quot;, tree.is_empty())  // true
+</code></pre></div>
+<h2 id="tree-traversal">Tree Traversal</h2>
+<h3 id="in-order-traversal-sorted-order">In-Order Traversal (Sorted Order)</h3>
+<div class="highlight"><pre><span></span><code>let tree = collections.new_bst()
+let values = [50, 30, 70, 20, 40, 60, 80]
+for val in values {
+    tree.insert(val)
+}
+
+// In-order traversal gives sorted sequence
+fmt.Println(&quot;In-order traversal:&quot;)
+let in_order = tree.in_order_traversal()
+for val in in_order {
+    fmt.Println(&quot;  &quot;, val)  // 20, 30, 40, 50, 60, 70, 80
+}
+</code></pre></div>
+<h3 id="pre-order-traversal">Pre-Order Traversal</h3>
+<div class="highlight"><pre><span></span><code>// Pre-order: root, left subtree, right subtree
+fmt.Println(&quot;Pre-order traversal:&quot;)
+let pre_order = tree.pre_order_traversal()
+for val in pre_order {
+    fmt.Println(&quot;  &quot;, val)  // 50, 30, 20, 40, 70, 60, 80
+}
+</code></pre></div>
+<h3 id="post-order-traversal">Post-Order Traversal</h3>
+<div class="highlight"><pre><span></span><code>// Post-order: left subtree, right subtree, root
+fmt.Println(&quot;Post-order traversal:&quot;)
+let post_order = tree.post_order_traversal()
+for val in post_order {
+    fmt.Println(&quot;  &quot;, val)  // 20, 40, 30, 60, 80, 70, 50
+}
+</code></pre></div>
+<h3 id="level-order-traversal-breadth-first">Level-Order Traversal (Breadth-First)</h3>
+<div class="highlight"><pre><span></span><code>// Level-order: visit nodes level by level
+fmt.Println(&quot;Level-order traversal:&quot;)
+let level_order = tree.level_order_traversal()
+for val in level_order {
+    fmt.Println(&quot;  &quot;, val)  // 50, 30, 70, 20, 40, 60, 80
+}
+</code></pre></div>
+<h3 id="iterator-based-traversal">Iterator-Based Traversal</h3>
+<div class="highlight"><pre><span></span><code>// Using iterators for memory-efficient traversal
+let iter = tree.in_order_iterator()
+fmt.Println(&quot;Iterator traversal:&quot;)
+for iter.has_next() {
+    let val = iter.next()
+    fmt.Println(&quot;  &quot;, val)
+
+    // Can break early if needed
+    if val &gt; 50 {
+        break
+    }
+}
+</code></pre></div>
+<h2 id="advanced-features">Advanced Features</h2>
+<h3 id="range-queries">Range Queries</h3>
+<div class="highlight"><pre><span></span><code>let tree = collections.new_bst()
+for i in range(1, 101) {  // Insert 1 to 100
+    tree.insert(i)
+}
+
+// Find all values in range [25, 75]
+let range_values = tree.range_query(25, 75)
+fmt.Println(&quot;Values between 25 and 75:&quot;, range_values.size())
+
+// Find values less than 50
+let less_than_50 = tree.values_less_than(50)
+fmt.Println(&quot;Values &lt; 50:&quot;, less_than_50.size())
+
+// Find values greater than 75
+let greater_than_75 = tree.values_greater_than(75)
+fmt.Println(&quot;Values &gt; 75:&quot;, greater_than_75.size())
+</code></pre></div>
+<h3 id="successor-and-predecessor">Successor and Predecessor</h3>
+<div class="highlight"><pre><span></span><code>// Find next larger element
+let successor = tree.successor(40)
+fmt.Println(&quot;Successor of 40:&quot;, successor)  // Next larger value
+
+// Find next smaller element
+let predecessor = tree.predecessor(40)
+fmt.Println(&quot;Predecessor of 40:&quot;, predecessor)  // Next smaller value
+</code></pre></div>
+<h3 id="tree-statistics">Tree Statistics</h3>
+<div class="highlight"><pre><span></span><code>// Get various tree statistics
+fmt.Println(&quot;Tree height:&quot;, tree.height())
+fmt.Println(&quot;Is balanced:&quot;, tree.is_balanced())
+fmt.Println(&quot;Node count:&quot;, tree.size())
+
+// Get depth of specific value
+let depth = tree.depth(40)
+fmt.Println(&quot;Depth of 40:&quot;, depth)
+</code></pre></div>
+<h3 id="conversion-operations">Conversion Operations</h3>
+<div class="highlight"><pre><span></span><code>// Convert to sorted array
+let sorted_array = tree.to_array()
+fmt.Println(&quot;As sorted array:&quot;, sorted_array)
+
+// Create tree from array
+let values = [64, 32, 96, 16, 48, 80, 112]
+let new_tree = collections.bst_from_array(values)
+</code></pre></div>
+<h2 id="custom-comparison-functions">Custom Comparison Functions</h2>
+<h3 id="string-comparison">String Comparison</h3>
+<div class="highlight"><pre><span></span><code>// Case-insensitive string tree
+let string_tree = collections.new_bst(|a, b| {
+    let lower_a = a.to_lower()
+    let lower_b = b.to_lower()
+    if lower_a &lt; lower_b { return -1 }
+    if lower_a &gt; lower_b { return 1 }
+    return 0
+})
+
+string_tree.insert(&quot;apple&quot;)
+string_tree.insert(&quot;Banana&quot;)
+string_tree.insert(&quot;cherry&quot;)
+string_tree.insert(&quot;Apple&quot;)  // Treated as duplicate due to case-insensitive comparison
+
+let sorted_strings = string_tree.in_order_traversal()
+fmt.Println(&quot;Sorted strings:&quot;, sorted_strings)
+</code></pre></div>
+<h3 id="custom-object-comparison">Custom Object Comparison</h3>
+<div class="highlight"><pre><span></span><code>struct Person {
+    name: string
+    age: int
+}
+
+// Tree sorted by age
+let person_tree = collections.new_bst(|a, b| {
+    if a.age &lt; b.age { return -1 }
+    if a.age &gt; b.age { return 1 }
+    return 0
+})
+
+person_tree.insert(Person{name: &quot;Alice&quot;, age: 30})
+person_tree.insert(Person{name: &quot;Bob&quot;, age: 25})
+person_tree.insert(Person{name: &quot;Charlie&quot;, age: 35})
+
+// Traverse in age order
+let people_by_age = person_tree.in_order_traversal()
+for person in people_by_age {
+    fmt.Println(person.name, &quot;age&quot;, person.age)
+}
+</code></pre></div>
+<h2 id="use-cases-and-examples">Use Cases and Examples</h2>
+<h3 id="1-dictionaryspell-checker">1. Dictionary/Spell Checker</h3>
+<div class="highlight"><pre><span></span><code>struct Dictionary {
+    words: BinarySearchTree
+}
+
+func new_dictionary() {
+    return Dictionary{
+        words: collections.new_bst()
+    }
+}
+
+func (d *Dictionary) add_word(word) {
+    d.words.insert(word.to_lower())
+}
+
+func (d *Dictionary) is_valid_word(word) {
+    return d.words.contains(word.to_lower())
+}
+
+func (d *Dictionary) get_suggestions(prefix) {
+    let suggestions = []
+    let all_words = d.words.in_order_traversal()
+
+    for word in all_words {
+        if word.starts_with(prefix.to_lower()) {
+            suggestions.append(word)
+        }
+    }
+
+    return suggestions
+}
+
+func (d *Dictionary) words_in_range(start, end) {
+    return d.words.range_query(start.to_lower(), end.to_lower())
+}
+
+// Usage
+let dict = new_dictionary()
+dict.add_word(&quot;apple&quot;)
+dict.add_word(&quot;application&quot;)
+dict.add_word(&quot;apply&quot;)
+dict.add_word(&quot;banana&quot;)
+dict.add_word(&quot;band&quot;)
+
+fmt.Println(&quot;Is &#39;apple&#39; valid:&quot;, dict.is_valid_word(&quot;apple&quot;))  // true
+fmt.Println(&quot;Suggestions for &#39;app&#39;:&quot;, dict.get_suggestions(&quot;app&quot;))  // [apple, application, apply]
+fmt.Println(&quot;Words from &#39;a&#39; to &#39;b&#39;:&quot;, dict.words_in_range(&quot;a&quot;, &quot;b&quot;))
+</code></pre></div>
+<h3 id="2-event-scheduling-system">2. Event Scheduling System</h3>
+<div class="highlight"><pre><span></span><code>struct Event {
+    name: string
+    start_time: int  // Unix timestamp
+    duration: int    // minutes
+}
+
+struct EventScheduler {
+    events: BinarySearchTree
+}
+
+func new_event_scheduler() {
+    return EventScheduler{
+        events: collections.new_bst(|a, b| {
+            if a.start_time &lt; b.start_time { return -1 }
+            if a.start_time &gt; b.start_time { return 1 }
+            return 0
+        })
+    }
+}
+
+func (es *EventScheduler) schedule_event(event) {
+    // Check for conflicts
+    if es.has_conflict(event) {
+        return false
+    }
+
+    es.events.insert(event)
+    return true
+}
+
+func (es *EventScheduler) has_conflict(new_event) {
+    let new_start = new_event.start_time
+    let new_end = new_event.start_time + new_event.duration * 60
+
+    let all_events = es.events.in_order_traversal()
+    for event in all_events {
+        let event_start = event.start_time
+        let event_end = event.start_time + event.duration * 60
+
+        // Check for overlap
+        if (new_start &lt; event_end &amp;&amp; new_end &gt; event_start) {
+            return true
+        }
+    }
+
+    return false
+}
+
+func (es *EventScheduler) get_events_in_range(start_time, end_time) {
+    let events_in_range = []
+    let all_events = es.events.in_order_traversal()
+
+    for event in all_events {
+        if event.start_time &gt;= start_time &amp;&amp; event.start_time &lt;= end_time {
+            events_in_range.append(event)
+        }
+    }
+
+    return events_in_range
+}
+
+func (es *EventScheduler) get_next_event(current_time) {
+    let all_events = es.events.in_order_traversal()
+    for event in all_events {
+        if event.start_time &gt; current_time {
+            return event
+        }
+    }
+    return null
+}
+
+// Usage
+let scheduler = new_event_scheduler()
+let meeting1 = Event{name: &quot;Team Meeting&quot;, start_time: 1640995200, duration: 60}
+let meeting2 = Event{name: &quot;Client Call&quot;, start_time: 1640998800, duration: 30}
+
+fmt.Println(&quot;Scheduled meeting1:&quot;, scheduler.schedule_event(meeting1))  // true
+fmt.Println(&quot;Scheduled meeting2:&quot;, scheduler.schedule_event(meeting2))  // true
+
+let conflicting = Event{name: &quot;Conflict&quot;, start_time: 1640996000, duration: 60}
+fmt.Println(&quot;Scheduled conflicting:&quot;, scheduler.schedule_event(conflicting))  // false
+</code></pre></div>
+<h3 id="3-database-index-simulation">3. Database Index Simulation</h3>
+<div class="highlight"><pre><span></span><code>struct Record {
+    id: int
+    name: string
+    data: any
+}
+
+struct DatabaseIndex {
+    primary_index: BinarySearchTree    // Index by ID
+    name_index: BinarySearchTree       // Index by name
+    records: Map                       // Actual record storage
+}
+
+func new_database_index() {
+    return DatabaseIndex{
+        primary_index: collections.new_bst(|a, b| {
+            if a.id &lt; b.id { return -1 }
+            if a.id &gt; b.id { return 1 }
+            return 0
+        }),
+        name_index: collections.new_bst(|a, b| {
+            if a.name &lt; b.name { return -1 }
+            if a.name &gt; b.name { return 1 }
+            return 0
+        }),
+        records: collections.new_map()
+    }
+}
+
+func (db *DatabaseIndex) insert_record(record) {
+    // Check if ID already exists
+    if db.primary_index.contains(record) {
+        return false  // Duplicate ID
+    }
+
+    // Insert into indexes
+    db.primary_index.insert(record)
+    db.name_index.insert(record)
+
+    // Store actual record
+    db.records.set(record.id, record)
+
+    return true
+}
+
+func (db *DatabaseIndex) find_by_id(id) {
+    let dummy = Record{id: id, name: &quot;&quot;, data: null}
+    if db.primary_index.contains(dummy) {
+        return db.records.get(id)
+    }
+    return null
+}
+
+func (db *DatabaseIndex) find_by_name(name) {
+    let dummy = Record{id: 0, name: name, data: null}
+    if db.name_index.contains(dummy) {
+        // Linear search through name index to find actual record
+        let name_records = db.name_index.in_order_traversal()
+        for record in name_records {
+            if record.name == name {
+                return db.records.get(record.id)
+            }
+        }
+    }
+    return null
+}
+
+func (db *DatabaseIndex) find_records_in_id_range(min_id, max_id) {
+    let min_record = Record{id: min_id, name: &quot;&quot;, data: null}
+    let max_record = Record{id: max_id, name: &quot;&quot;, data: null}
+
+    let range_records = db.primary_index.range_query(min_record, max_record)
+    let results = []
+
+    for record in range_records {
+        results.append(db.records.get(record.id))
+    }
+
+    return results
+}
+
+func (db *DatabaseIndex) delete_record(id) {
+    let record = db.find_by_id(id)
+    if record != null {
+        db.primary_index.remove(record)
+        db.name_index.remove(record)
+        db.records.remove(id)
+        return true
+    }
+    return false
+}
+
+// Usage
+let db = new_database_index()
+db.insert_record(Record{id: 1, name: &quot;Alice&quot;, data: {&quot;age&quot;: 30}})
+db.insert_record(Record{id: 3, name: &quot;Charlie&quot;, data: {&quot;age&quot;: 25}})
+db.insert_record(Record{id: 2, name: &quot;Bob&quot;, data: {&quot;age&quot;: 35}})
+
+let alice = db.find_by_name(&quot;Alice&quot;)
+fmt.Println(&quot;Found Alice:&quot;, alice.id, alice.data)
+
+let records_1_to_2 = db.find_records_in_id_range(1, 2)
+fmt.Println(&quot;Records 1-2:&quot;, records_1_to_2.size())
+</code></pre></div>
+<h3 id="4-expression-tree-evaluator">4. Expression Tree Evaluator</h3>
+<div class="highlight"><pre><span></span><code>struct ExpressionNode {
+    value: string
+    left: ExpressionNode
+    right: ExpressionNode
+    is_operator: bool
+}
+
+func new_expression_node(value, is_operator) {
+    return ExpressionNode{
+        value: value,
+        left: null,
+        right: null,
+        is_operator: is_operator
+    }
+}
+
+struct ExpressionTree {
+    root: ExpressionNode
+}
+
+func build_expression_tree(postfix_tokens) {
+    let stack = collections.new_stack()
+
+    for token in postfix_tokens {
+        if is_operator(token) {
+            let node = new_expression_node(token, true)
+            node.right = stack.pop()
+            node.left = stack.pop()
+            stack.push(node)
+        } else {
+            let node = new_expression_node(token, false)
+            stack.push(node)
+        }
+    }
+
+    return ExpressionTree{root: stack.pop()}
+}
+
+func (et *ExpressionTree) evaluate() {
+    return evaluate_node(et.root)
+}
+
+func evaluate_node(node) {
+    if node == null {
+        return 0
+    }
+
+    if !node.is_operator {
+        return node.value.to_int()
+    }
+
+    let left_val = evaluate_node(node.left)
+    let right_val = evaluate_node(node.right)
+
+    switch node.value {
+        case &quot;+&quot;: return left_val + right_val
+        case &quot;-&quot;: return left_val - right_val
+        case &quot;*&quot;: return left_val * right_val
+        case &quot;/&quot;: return left_val / right_val
+        default: return 0
+    }
+}
+
+func (et *ExpressionTree) to_infix() {
+    return infix_traversal(et.root)
+}
+
+func infix_traversal(node) {
+    if node == null {
+        return &quot;&quot;
+    }
+
+    if !node.is_operator {
+        return node.value
+    }
+
+    return &quot;(&quot; + infix_traversal(node.left) + &quot; &quot; + node.value + &quot; &quot; + infix_traversal(node.right) + &quot;)&quot;
+}
+
+// Usage
+let postfix = [&quot;3&quot;, &quot;4&quot;, &quot;+&quot;, &quot;2&quot;, &quot;*&quot;]  // (3 + 4) * 2
+let expr_tree = build_expression_tree(postfix)
+fmt.Println(&quot;Result:&quot;, expr_tree.evaluate())      // 14
+fmt.Println(&quot;Infix:&quot;, expr_tree.to_infix())       // ((3 + 4) * 2)
+</code></pre></div>
+<h2 id="performance-characteristics">Performance Characteristics</h2>
+<h3 id="time-complexity">Time Complexity</h3>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Average Case</th>
+<th>Worst Case</th>
+<th>Best Case</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Insert</td>
+<td>O(log n)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>Worst case for unbalanced tree</td>
+</tr>
+<tr>
+<td>Remove</td>
+<td>O(log n)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>Worst case for unbalanced tree</td>
+</tr>
+<tr>
+<td>Search</td>
+<td>O(log n)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>Worst case for unbalanced tree</td>
+</tr>
+<tr>
+<td>Min/Max</td>
+<td>O(log n)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>Leftmost/rightmost node</td>
+</tr>
+<tr>
+<td>Traversal</td>
+<td>O(n)</td>
+<td>O(n)</td>
+<td>O(n)</td>
+<td>Must visit all nodes</td>
+</tr>
+<tr>
+<td>Range Query</td>
+<td>O(log n + k)</td>
+<td>O(n)</td>
+<td>O(k)</td>
+<td>k is number of results</td>
+</tr>
+</tbody>
+</table>
+<h3 id="space-complexity">Space Complexity</h3>
+<ul>
+<li><strong>Storage</strong>: O(n) where n is the number of nodes</li>
+<li><strong>Node Overhead</strong>: Each node requires memory for value and two pointers</li>
+<li><strong>Recursion Stack</strong>: O(log n) average, O(n) worst case for recursive operations</li>
+</ul>
+<h3 id="balancing-considerations">Balancing Considerations</h3>
+<div class="highlight"><pre><span></span><code>// Worst case: inserting sorted data creates a linear tree
+let bad_tree = collections.new_bst()
+for i in range(1, 1001) {
+    bad_tree.insert(i)  // Creates right-skewed tree, O(n) operations
+}
+
+// Better: insert in random order or use self-balancing tree
+let values = range(1, 1001).shuffle()
+let good_tree = collections.new_bst()
+for val in values {
+    good_tree.insert(val)  // More balanced, closer to O(log n)
+}
+
+// Check balance
+fmt.Println(&quot;Bad tree height:&quot;, bad_tree.height())    // ~1000
+fmt.Println(&quot;Good tree height:&quot;, good_tree.height())  // ~10
+</code></pre></div>
+<h2 id="error-handling">Error Handling</h2>
+<p>Trees handle errors consistently:</p>
+<div class="highlight"><pre><span></span><code>let tree = collections.new_bst()
+
+// Operations on empty tree
+let min_result = tree.min()
+if min_result == null {
+    fmt.Println(&quot;Tree is empty&quot;)
+}
+
+// Remove non-existent element
+let removed = tree.remove(100)
+fmt.Println(&quot;Removed 100:&quot;, removed)  // false
+
+// Invalid comparison function
+let invalid_tree = collections.new_bst(|a, b| {
+    // Inconsistent comparison can break BST property
+    return random_int(-1, 1)  // Don&#39;t do this!
+})
+</code></pre></div>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="1-choose-appropriate-data-for-bst">1. Choose Appropriate Data for BST</h3>
+<div class="highlight"><pre><span></span><code>// Good: comparable data types
+let number_tree = collections.new_bst()  // Numbers
+let string_tree = collections.new_bst()  // Strings
+
+// Provide comparison for custom types
+let custom_tree = collections.new_bst(comparison_function)
+</code></pre></div>
+<h3 id="2-consider-input-order">2. Consider Input Order</h3>
+<div class="highlight"><pre><span></span><code>// Avoid sorted input for better balance
+let values = [1, 2, 3, 4, 5, 6, 7]  // Bad: creates skewed tree
+values.shuffle()  // Better: random order
+
+let tree = collections.new_bst()
+for val in values {
+    tree.insert(val)
+}
+</code></pre></div>
+<h3 id="3-use-appropriate-traversal">3. Use Appropriate Traversal</h3>
+<div class="highlight"><pre><span></span><code>// Use in-order for sorted output
+let sorted = tree.in_order_traversal()
+
+// Use level-order for breadth-first processing
+let level_order = tree.level_order_traversal()
+
+// Use iterators for memory efficiency
+let iter = tree.in_order_iterator()
+</code></pre></div>
+<h3 id="4-monitor-tree-balance">4. Monitor Tree Balance</h3>
+<div class="highlight"><pre><span></span><code>// Check balance periodically
+if tree.height() &gt; 2 * log2(tree.size()) {
+    fmt.Println(&quot;Tree may be unbalanced&quot;)
+    // Consider rebuilding or using self-balancing tree
+}
+</code></pre></div>
+<h3 id="5-handle-concurrent-access">5. Handle Concurrent Access</h3>
+<div class="highlight"><pre><span></span><code>// For concurrent access, use appropriate synchronization
+let shared_tree = collections.new_concurrent_bst()
+// Or implement proper locking around tree operations
+</code></pre></div>
+<p>Binary Search Trees provide efficient sorted data management with logarithmic performance for most operations, making them ideal for applications requiring fast search, insertion, and ordered traversal of data.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../linked-lists/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Linked Lists">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Linked Lists
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../concurrent/" class="md-footer__link md-footer__link--next" aria-label="Next: Concurrent Collections">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Concurrent Collections
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2025 Harneet Programming Language — Built with ❤️ by Gagan Janjua
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.collapse", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.footer", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
