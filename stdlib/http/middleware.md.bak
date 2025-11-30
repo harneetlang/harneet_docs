@@ -1,0 +1,794 @@
+# Middleware
+
+Middleware provides a way to execute code before and after your main request handlers. This is essential for cross-cutting concerns like logging, authentication, CORS, rate limiting, and error handling.
+
+## Middleware Concepts
+
+Middleware functions wrap around your handlers, allowing you to:
+- **Log requests and responses**
+- **Authenticate and authorize users**
+- **Handle CORS (Cross-Origin Resource Sharing)**
+- **Rate limit requests**
+- **Compress responses**
+- **Handle errors gracefully**
+- **Add security headers**
+- **Parse request bodies**
+
+## Basic Middleware Pattern
+
+### http.Middleware(middlewareFunc)
+
+Creates a middleware wrapper for handlers.
+
+**Syntax:**
+```harneet title="Middleware Syntax"
+http.Middleware(middlewareFunc) (middleware, error)
+```
+
+**Parameters:**
+- `middlewareFunc` (function) - Middleware function that wraps handlers
+
+**Examples:**
+
+*Basic Middleware Structure:*
+```harneet title="Basic Middleware Structure"
+import http
+import fmt
+
+// Basic middleware function
+function loggingMiddleware(next function) {
+    return function(request map, response map) {
+        var method = request["method"]
+        var path = request["path"]
+        var userAgent = request["headers"]["User-Agent"]
+        
+        fmt.Printf("📝 %s %s from %s\n", method, path, userAgent)
+        
+        // Call the next handler
+        next(request, response)
+        
+        fmt.Printf("✅ %s %s completed\n", method, path)
+    }
+}
+
+// Apply middleware to a handler
+function createLoggedHandler(handler function) {
+    return loggingMiddleware(handler)
+}
+
+// Usage
+function homeHandler(request map, response map) {
+    http.WriteResponse(response, 200, "text/html", "<h1>Home Page</h1>")
+}
+
+var loggedHomeHandler = createLoggedHandler(homeHandler)
+
+// Register with mux
+var mux = http.NewMux()[0]
+http.HandleFunc(mux, "/", loggedHomeHandler)
+```
+
+## Common Middleware Patterns
+
+### Logging Middleware
+
+```harneet title="Logging Middleware"
+import http
+import fmt
+import log
+
+// Comprehensive logging middleware
+function requestLoggingMiddleware(next function) {
+    return function(request map, response map) {
+        var startTime = getCurrentTime()  // Simplified time function
+        var method = request["method"]
+        var path = request["path"]
+        var userAgent = request["headers"]["User-Agent"]
+        var remoteAddr = request["remoteAddr"]
+        
+        // Log request start
+        log.Printf("→ %s %s from %s (%s)", method, path, remoteAddr, userAgent)
+        
+        // Call next handler
+        next(request, response)
+        
+        // Log request completion
+        var endTime = getCurrentTime()
+        var duration = endTime - startTime
+        log.Printf("← %s %s completed in %dms", method, path, duration)
+    }
+}
+
+// Structured logging middleware
+function structuredLoggingMiddleware(next function) {
+    return function(request map, response map) {
+        var logData = {
+            "timestamp": getCurrentTimestamp(),
+            "method": request["method"],
+            "path": request["path"],
+            "userAgent": request["headers"]["User-Agent"],
+            "remoteAddr": request["remoteAddr"],
+            "referer": request["headers"]["Referer"]
+        }
+        
+        var jsonLog, _ = json.Marshal(logData)
+        log.Println(jsonLog)
+        
+        next(request, response)
+    }
+}
+```
+
+### Authentication Middleware
+
+```harneet title="Authentication Middleware"
+import http
+import json
+import strings
+import fmt
+
+// JWT authentication middleware
+function jwtAuthMiddleware(next function) {
+    return function(request map, response map) {
+        var authHeader = request["headers"]["Authorization"]
+        
+        if authHeader == None or authHeader == "" {
+            unauthorizedResponse(response, "Missing Authorization header")
+            return
+        }
+        
+        if !strings.HasPrefix(authHeader, "Bearer ") {
+            unauthorizedResponse(response, "Invalid Authorization header format")
+            return
+        }
+        
+        var token = strings.TrimPrefix(authHeader, "Bearer ")
+        var user = validateJWTToken(token)
+        
+        if user == None {
+            unauthorizedResponse(response, "Invalid or expired token")
+            return
+        }
+        
+        // Add user to request context
+        request["user"] = user
+        
+        // Call next handler
+        next(request, response)
+    }
+}
+
+// API key authentication middleware
+function apiKeyAuthMiddleware(next function) {
+    return function(request map, response map) {
+        var apiKey = request["headers"]["X-API-Key"]
+        
+        if apiKey == None or apiKey == "" {
+            unauthorizedResponse(response, "Missing API key")
+            return
+        }
+        
+        if !isValidAPIKey(apiKey) {
+            unauthorizedResponse(response, "Invalid API key")
+            return
+        }
+        
+        // Add API key info to request
+        request["apiKey"] = apiKey
+        request["authenticated"] = true
+        
+        next(request, response)
+    }
+}
+
+// Helper functions
+function unauthorizedResponse(response map, message string) {
+    var errorResponse = {
+        "error": "Unauthorized",
+        "message": message,
+        "status": 401
+    }
+    var jsonData, _ = json.Marshal(errorResponse)
+    http.WriteResponse(response, 401, "application/json", jsonData)
+}
+
+function validateJWTToken(token string) {
+    // Simplified JWT validation
+    if token == "valid-jwt-token" {
+        return {"id": 1, "username": "alice", "role": "admin"}
+    }
+    return None
+}
+
+function isValidAPIKey(apiKey string) {
+    var validKeys = ["key123", "key456", "key789"]
+    for key in validKeys {
+        if key == apiKey {
+            return true
+        }
+    }
+    return false
+}
+```
+
+### CORS Middleware
+
+```harneet title="CORS Middleware"
+import http
+import strings
+
+// CORS middleware for cross-origin requests
+function corsMiddleware(next function) {
+    return function(request map, response map) {
+        var origin = request["headers"]["Origin"]
+        var method = request["method"]
+        
+        // Set CORS headers
+        if origin != None {
+            http.SetResponseHeader(response, "Access-Control-Allow-Origin", origin)
+        } else {
+            http.SetResponseHeader(response, "Access-Control-Allow-Origin", "*")
+        }
+        
+        http.SetResponseHeader(response, "Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS")
+        http.SetResponseHeader(response, "Access-Control-Allow-Headers", "Content-Type, Authorization, X-API-Key")
+        http.SetResponseHeader(response, "Access-Control-Allow-Credentials", "true")
+        http.SetResponseHeader(response, "Access-Control-Max-Age", "86400")
+        
+        // Handle preflight OPTIONS request
+        if method == "OPTIONS" {
+            http.WriteResponse(response, 200, "", "")
+            return
+        }
+        
+        // Call next handler
+        next(request, response)
+    }
+}
+
+// Configurable CORS middleware
+function configurableCORSMiddleware(config map) {
+    return function(next function) {
+        return function(request map, response map) {
+            var origin = request["headers"]["Origin"]
+            var method = request["method"]
+            
+            // Check allowed origins
+            var allowedOrigins = config["allowedOrigins"]
+            var originAllowed = false
+            
+            if allowedOrigins == None {
+                originAllowed = true
+                http.SetResponseHeader(response, "Access-Control-Allow-Origin", "*")
+            } else {
+                for allowedOrigin in allowedOrigins {
+                    if origin == allowedOrigin {
+                        originAllowed = true
+                        http.SetResponseHeader(response, "Access-Control-Allow-Origin", origin)
+                        break
+                    }
+                }
+            }
+            
+            if !originAllowed {
+                http.WriteResponse(response, 403, "application/json", "{\"error\": \"Origin not allowed\"}")
+                return
+            }
+            
+            // Set other CORS headers
+            var allowedMethods = config["allowedMethods"]
+            if allowedMethods != None {
+                var methodsStr = strings.Join(allowedMethods, ", ")
+                http.SetResponseHeader(response, "Access-Control-Allow-Methods", methodsStr)
+            }
+            
+            var allowedHeaders = config["allowedHeaders"]
+            if allowedHeaders != None {
+                var headersStr = strings.Join(allowedHeaders, ", ")
+                http.SetResponseHeader(response, "Access-Control-Allow-Headers", headersStr)
+            }
+            
+            // Handle preflight
+            if method == "OPTIONS" {
+                http.WriteResponse(response, 200, "", "")
+                return
+            }
+            
+            next(request, response)
+        }
+    }
+}
+
+// Usage
+var corsConfig = {
+    "allowedOrigins": ["https://example.com", "https://app.example.com"],
+    "allowedMethods": ["GET", "POST", "PUT", "DELETE"],
+    "allowedHeaders": ["Content-Type", "Authorization"]
+}
+
+var corsHandler = configurableCORSMiddleware(corsConfig)
+```
+
+### Rate Limiting Middleware
+
+```harneet title="Rate Limiting Middleware"
+import http
+import json
+import fmt
+
+// Simple rate limiting middleware
+function rateLimitMiddleware(requestsPerMinute int) {
+    // In a real implementation, this would use a proper rate limiter
+    var requestCounts = {}  // Map to track request counts per IP
+    
+    return function(next function) {
+        return function(request map, response map) {
+            var clientIP = getClientIP(request)
+            var currentTime = getCurrentMinute()  // Simplified time function
+            var key = clientIP + ":" + currentTime
+            
+            // Get current request count for this IP/minute
+            var count = requestCounts[key]
+            if count == None {
+                count = 0
+            }
+            
+            if count >= requestsPerMinute {
+                rateLimitExceeded(response, requestsPerMinute)
+                return
+            }
+            
+            // Increment request count
+            requestCounts[key] = count + 1
+            
+            // Add rate limit headers
+            http.SetResponseHeader(response, "X-RateLimit-Limit", requestsPerMinute)
+            http.SetResponseHeader(response, "X-RateLimit-Remaining", requestsPerMinute - count - 1)
+            
+            next(request, response)
+        }
+    }
+}
+
+// Advanced rate limiting with different limits
+function tieredRateLimitMiddleware(limits map) {
+    return function(next function) {
+        return function(request map, response map) {
+            var clientIP = getClientIP(request)
+            var userType = getUserType(request)  // e.g., "free", "premium", "admin"
+            
+            var limit = limits[userType]
+            if limit == None {
+                limit = limits["default"]
+            }
+            
+            if !checkRateLimit(clientIP, limit) {
+                rateLimitExceeded(response, limit)
+                return
+            }
+            
+            next(request, response)
+        }
+    }
+}
+
+function rateLimitExceeded(response map, limit int) {
+    var errorResponse = {
+        "error": "Rate limit exceeded",
+        "message": "Too many requests",
+        "limit": limit,
+        "retryAfter": 60
+    }
+    
+    http.SetResponseHeader(response, "Retry-After", "60")
+    var jsonData, _ = json.Marshal(errorResponse)
+    http.WriteResponse(response, 429, "application/json", jsonData)
+}
+
+function getClientIP(request map) {
+    // Check X-Forwarded-For header first
+    var forwardedFor = request["headers"]["X-Forwarded-For"]
+    if forwardedFor != None and forwardedFor != "" {
+        var ips = strings.Split(forwardedFor, ",")
+        return strings.TrimSpace(ips[0])
+    }
+    
+    // Fall back to remote address
+    var remoteAddr = request["remoteAddr"]
+    var parts = strings.Split(remoteAddr, ":")
+    return parts[0]
+}
+```
+
+### Security Headers Middleware
+
+```harneet title="Security Headers Middleware"
+import http
+
+// Security headers middleware
+function securityHeadersMiddleware(next function) {
+    return function(request map, response map) {
+        // Content Security Policy
+        http.SetResponseHeader(response, "Content-Security-Policy", 
+            "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'")
+        
+        // Prevent MIME type sniffing
+        http.SetResponseHeader(response, "X-Content-Type-Options", "nosniff")
+        
+        // Prevent clickjacking
+        http.SetResponseHeader(response, "X-Frame-Options", "DENY")
+        
+        // XSS protection
+        http.SetResponseHeader(response, "X-XSS-Protection", "1; mode=block")
+        
+        // HTTPS enforcement (if using HTTPS)
+        if isHTTPS(request) {
+            http.SetResponseHeader(response, "Strict-Transport-Security", "max-age=31536000; includeSubDomains")
+        }
+        
+        // Referrer policy
+        http.SetResponseHeader(response, "Referrer-Policy", "strict-origin-when-cross-origin")
+        
+        // Permissions policy
+        http.SetResponseHeader(response, "Permissions-Policy", "geolocation=(), microphone=(), camera=()")
+        
+        next(request, response)
+    }
+}
+
+function isHTTPS(request map) {
+    // Check if request is HTTPS
+    var proto = request["headers"]["X-Forwarded-Proto"]
+    return proto == "https" or strings.HasPrefix(request["url"], "https://")
+}
+```
+
+### Error Handling Middleware
+
+```harneet title="Error Handling Middleware"
+import http
+import json
+import fmt
+import log
+
+// Error recovery middleware
+function errorRecoveryMiddleware(next function) {
+    return function(request map, response map) {
+        // In a real implementation, this would use proper error recovery
+        var success = callHandlerSafely(next, request, response)
+        
+        if !success {
+            handlePanic(request, response)
+        }
+    }
+}
+
+function callHandlerSafely(handler function, request map, response map) {
+    // Simplified error recovery - in real implementation would use proper panic recovery
+    var success = true
+    
+    // Try to call the handler
+    handler(request, response)
+    
+    return success
+}
+
+function handlePanic(request map, response map) {
+    var method = request["method"]
+    var path = request["path"]
+    
+    log.Printf("PANIC: %s %s - Internal server error", method, path)
+    
+    var errorResponse = {
+        "error": "Internal Server Error",
+        "message": "An unexpected error occurred",
+        "timestamp": getCurrentTimestamp()
+    }
+    
+    var jsonData, _ = json.Marshal(errorResponse)
+    http.WriteResponse(response, 500, "application/json", jsonData)
+}
+
+// Structured error handling middleware
+function errorHandlingMiddleware(next function) {
+    return function(request map, response map) {
+        // Add error handling context to request
+        request["errorHandler"] = handleRequestError
+        
+        next(request, response)
+    }
+}
+
+function handleRequestError(error string, request map, response map) {
+    var errorType = classifyError(error)
+    var statusCode = getStatusCodeForError(errorType)
+    
+    var errorResponse = {
+        "error": errorType,
+        "message": error,
+        "path": request["path"],
+        "method": request["method"],
+        "timestamp": getCurrentTimestamp()
+    }
+    
+    var jsonData, _ = json.Marshal(errorResponse)
+    http.WriteResponse(response, statusCode, "application/json", jsonData)
+}
+```
+
+## Middleware Composition
+
+### Chaining Multiple Middleware
+
+```harneet title="Middleware Chaining"
+import http
+
+// Middleware chain helper
+function chainMiddleware(middlewares array) {
+    return function(handler function) {
+        var result = handler
+        
+        // Apply middleware in reverse order
+        for i in range(len(middlewares) - 1, -1, -1) {
+            var middleware = middlewares[i]
+            result = middleware(result)
+        }
+        
+        return result
+    }
+}
+
+// Usage
+function setupMiddlewareChain() {
+    var middlewares = [
+        loggingMiddleware,
+        corsMiddleware,
+        securityHeadersMiddleware,
+        rateLimitMiddleware(100),  // 100 requests per minute
+        jwtAuthMiddleware
+    ]
+    
+    var chain = chainMiddleware(middlewares)
+    
+    // Apply to handlers
+    var protectedHandler = chain(apiHandler)
+    var publicHandler = chainMiddleware([loggingMiddleware, corsMiddleware])(homeHandler)
+    
+    var mux = http.NewMux()[0]
+    http.HandleFunc(mux, "/api/protected", protectedHandler)
+    http.HandleFunc(mux, "/", publicHandler)
+    
+    return mux
+}
+```
+
+### Conditional Middleware
+
+```harneet title="Conditional Middleware"
+import http
+import strings
+
+// Conditional middleware application
+function conditionalMiddleware(condition function, middleware function) {
+    return function(next function) {
+        return function(request map, response map) {
+            if condition(request) {
+                var wrappedHandler = middleware(next)
+                wrappedHandler(request, response)
+            } else {
+                next(request, response)
+            }
+        }
+    }
+}
+
+// Usage examples
+function isAPIRequest(request map) {
+    return strings.HasPrefix(request["path"], "/api/")
+}
+
+function isAdminRequest(request map) {
+    return strings.HasPrefix(request["path"], "/admin/")
+}
+
+function setupConditionalMiddleware() {
+    var mux = http.NewMux()[0]
+    
+    // Apply auth middleware only to API requests
+    var apiAuthMiddleware = conditionalMiddleware(isAPIRequest, jwtAuthMiddleware)
+    
+    // Apply admin middleware only to admin requests
+    var adminAuthMiddleware = conditionalMiddleware(isAdminRequest, adminAuthMiddleware)
+    
+    var handler = chainMiddleware([
+        loggingMiddleware,
+        corsMiddleware,
+        apiAuthMiddleware,
+        adminAuthMiddleware
+    ])(baseHandler)
+    
+    http.HandleFunc(mux, "/", handler)
+    
+    return mux
+}
+```
+
+## Advanced Middleware Patterns
+
+### Request/Response Transformation
+
+```harneet title="Request Transformation"
+import http
+import json
+import strings
+
+// JSON request parsing middleware
+function jsonParsingMiddleware(next function) {
+    return function(request map, response map) {
+        var contentType = request["headers"]["Content-Type"]
+        
+        if contentType == "application/json" and request["body"] != "" {
+            var parsedBody, parseErr = json.Unmarshal(request["body"])
+            if parseErr != None {
+                var errorResponse = {"error": "Invalid JSON", "message": parseErr}
+                var jsonError, _ = json.Marshal(errorResponse)
+                http.WriteResponse(response, 400, "application/json", jsonError)
+                return
+            }
+            
+            request["jsonBody"] = parsedBody
+        }
+        
+        next(request, response)
+    }
+}
+
+// Response compression middleware
+function compressionMiddleware(next function) {
+    return function(request map, response map) {
+        var acceptEncoding = request["headers"]["Accept-Encoding"]
+        var supportsGzip = strings.Contains(acceptEncoding, "gzip")
+        
+        if supportsGzip {
+            http.SetResponseHeader(response, "Content-Encoding", "gzip")
+            // In real implementation, would wrap response writer with gzip
+        }
+        
+        next(request, response)
+    }
+}
+```
+
+### Caching Middleware
+
+```harneet title="Caching Middleware"
+import http
+import json
+import fmt
+
+// Simple response caching middleware
+function cachingMiddleware(ttlSeconds int) {
+    var cache = {}  // Simple in-memory cache
+    
+    return function(next function) {
+        return function(request map, response map) {
+            var method = request["method"]
+            var path = request["path"]
+            
+            // Only cache GET requests
+            if method != "GET" {
+                next(request, response)
+                return
+            }
+            
+            var cacheKey = method + ":" + path
+            var cachedResponse = cache[cacheKey]
+            
+            if cachedResponse != None and !isCacheExpired(cachedResponse, ttlSeconds) {
+                // Serve from cache
+                http.SetResponseHeader(response, "X-Cache", "HIT")
+                var cached = cachedResponse["response"]
+                http.WriteResponse(response, cached["status"], cached["contentType"], cached["body"])
+                return
+            }
+            
+            // Capture response for caching
+            var capturedResponse = captureResponse(next, request, response)
+            
+            // Cache the response
+            cache[cacheKey] = {
+                "response": capturedResponse,
+                "timestamp": getCurrentTimestamp()
+            }
+            
+            http.SetResponseHeader(response, "X-Cache", "MISS")
+        }
+    }
+}
+
+function isCacheExpired(cachedItem map, ttlSeconds int) {
+    var timestamp = cachedItem["timestamp"]
+    var currentTime = getCurrentTimestamp()
+    return (currentTime - timestamp) > ttlSeconds
+}
+```
+
+## Best Practices
+
+### 1. Order Middleware Correctly
+```harneet title="Middleware Ordering"
+// Correct order: logging -> CORS -> auth -> business logic
+var middlewares = [
+    loggingMiddleware,          // First - log everything
+    corsMiddleware,             // Early - handle CORS
+    securityHeadersMiddleware,  // Security headers
+    rateLimitMiddleware(100),   // Rate limiting
+    jwtAuthMiddleware,          // Authentication
+    jsonParsingMiddleware       // Last - parse request body
+]
+```
+
+### 2. Keep Middleware Focused
+```harneet title="Focused Middleware"
+// Good - single responsibility
+function loggingMiddleware(next function) { /* ... */ }
+function authMiddleware(next function) { /* ... */ }
+function corsMiddleware(next function) { /* ... */ }
+
+// Bad - multiple responsibilities
+function megaMiddleware(next function) {
+    // Don't do logging, auth, CORS all in one middleware
+}
+```
+
+### 3. Make Middleware Configurable
+```harneet title="Configurable Middleware"
+// Good - configurable
+function rateLimitMiddleware(requestsPerMinute int) { /* ... */ }
+function corsMiddleware(allowedOrigins array) { /* ... */ }
+
+// Bad - hardcoded values
+function rateLimitMiddleware() {
+    var limit = 100  // Hardcoded
+}
+```
+
+### 4. Handle Errors Gracefully
+```harneet title="Graceful Error Handling"
+function safeMiddleware(next function) {
+    return function(request map, response map) {
+        var success = performMiddlewareOperation()
+        
+        if !success {
+            // Log error but don't break the chain
+            log.Printf("Middleware error, continuing...")
+        }
+        
+        next(request, response)
+    }
+}
+```
+
+### 5. Use Context for Request Data
+```harneet title="Context Pattern"
+function authMiddleware(next function) {
+    return function(request map, response map) {
+        var user = authenticateUser(request)
+        
+        if user != None {
+            // Add user to request context
+            request["user"] = user
+            request["authenticated"] = true
+        }
+        
+        next(request, response)
+    }
+}
+```
+
+## Next Steps
+
+- **[Authentication](auth.md)** - Deep dive into authentication and authorization
+- **[Cookies & Sessions](cookies.md)** - Handle user sessions and cookies
+- **[Routing & Mux](routing.md)** - Go back to routing concepts
+- **[HTTP Server](server.md)** - Server fundamentals

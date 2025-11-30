@@ -1,4 +1,4 @@
-<!doctype html><html lang=en class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link href=../routing/ rel=prev><link href=../auth/ rel=next><link rel=icon href=../../../assets/images/harneet.png><meta name=generator content="mkdocs-1.6.1, mkdocs-material-9.6.20"><title>Middleware - Harneet Programming Language</title><link rel=stylesheet href=../../../assets/stylesheets/main.e53b48f4.min.css><link rel=stylesheet href=../../../assets/stylesheets/palette.06af60db.min.css><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback"><style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style><link rel=stylesheet href=../../../assets/css/custom.css><script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script></head> <body dir=ltr data-md-color-scheme=slate data-md-color-primary=black data-md-color-accent=blue> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#middleware class=md-skip> Skip to content </a> </div> <div data-md-component=announce> </div> <header class="md-header md-header--shadow" data-md-component=header> <nav class="md-header__inner md-grid" aria-label=Header> <a href=../../.. title="Harneet Programming Language" class="md-header__button md-logo" aria-label="Harneet Programming Language" data-md-component=logo> <img src=../../../assets/images/harneet.png alt=logo> </a> <label class="md-header__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg> </label> <div class=md-header__title data-md-component=header-title> <div class=md-header__ellipsis> <div class=md-header__topic> <span class=md-ellipsis> Harneet Programming Language </span> </div> <div class=md-header__topic data-md-component=header-topic> <span class=md-ellipsis> Middleware </span> </div> </div> </div> <form class=md-header__option data-md-component=palette> <input class=md-option data-md-color-media data-md-color-scheme=slate data-md-color-primary=black data-md-color-accent=blue aria-hidden=true type=radio name=__palette id=__palette_0> </form> <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script> <label class="md-header__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=Search placeholder=Search autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg> </label> <nav class=md-search__options aria-label=Search> <a href=javascript:void(0) class="md-search__icon md-icon" title=Share aria-label=Share data-clipboard data-clipboard-text data-md-component=search-share tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg> </a> <button type=reset class="md-search__icon md-icon" title=Clear aria-label=Clear tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg> </button> </nav> <div class=md-search__suggest data-md-component=search-suggest></div> </form> <div class=md-search__output> <div class=md-search__scrollwrap tabindex=0 data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> Initializing search </div> <ol class=md-search-result__list role=presentation></ol> </div> </div> </div> </div> </div> </nav> </header> <div class=md-container data-md-component=container> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=sidebar data-md-type=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary md-nav--integrated" aria-label=Navigation data-md-level=0> <label class=md-nav__title for=__drawer> <a href=../../.. title="Harneet Programming Language" class="md-nav__button md-logo" aria-label="Harneet Programming Language" data-md-component=logo> <img src=../../../assets/images/harneet.png alt=logo> </a> Harneet Programming Language </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../.. class=md-nav__link> <span class=md-ellipsis> Home </span> </a> </li> <li class=md-nav__item> <a href=../../../repl/ class=md-nav__link> <span class=md-ellipsis> REPL </span> </a> </li> <li class=md-nav__item> <a href=../../../command_line/ class=md-nav__link> <span class=md-ellipsis> Command Line </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_4> <label class=md-nav__link for=__nav_4 id=__nav_4_label tabindex=0> <span class=md-ellipsis> Getting Started </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_4_label aria-expanded=false> <label class=md-nav__title for=__nav_4> <span class="md-nav__icon md-icon"></span> Getting Started </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../general/comments/ class=md-nav__link> <span class=md-ellipsis> Comments </span> </a> </li> <li class=md-nav__item> <a href=../../../general/data_types/ class=md-nav__link> <span class=md-ellipsis> Data Types </span> </a> </li> <li class=md-nav__item> <a href=../../../general/variable_declaration/ class=md-nav__link> <span class=md-ellipsis> Variable Declaration & Assignment </span> </a> </li> <li class=md-nav__item> <a href=../../../general/const/ class=md-nav__link> <span class=md-ellipsis> Const Declarations </span> </a> </li> <li class=md-nav__item> <a href=../../../general/keywords_identifiers/ class=md-nav__link> <span class=md-ellipsis> Keywords and Identifiers </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_5> <label class=md-nav__link for=__nav_5 id=__nav_5_label tabindex=0> <span class=md-ellipsis> Language Basics </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_5_label aria-expanded=false> <label class=md-nav__title for=__nav_5> <span class="md-nav__icon md-icon"></span> Language Basics </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../general/operators_and_expressions/ class=md-nav__link> <span class=md-ellipsis> Operators and Expressions </span> </a> </li> <li class=md-nav__item> <a href=../../../general/pipe_operator/ class=md-nav__link> <span class=md-ellipsis> Pipe Operator (|>) </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_5_3> <label class=md-nav__link for=__nav_5_3 id=__nav_5_3_label tabindex=0> <span class=md-ellipsis> Advanced Arithmetic Operations </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_5_3_label aria-expanded=false> <label class=md-nav__title for=__nav_5_3> <span class="md-nav__icon md-icon"></span> Advanced Arithmetic Operations </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../general/advanced-arithmetic-operators/ class=md-nav__link> <span class=md-ellipsis> Operator Reference </span> </a> </li> <li class=md-nav__item> <a href=../../../general/bitwise-operations-guide/ class=md-nav__link> <span class=md-ellipsis> Bitwise Operations Guide </span> </a> </li> <li class=md-nav__item> <a href=../../../general/compound-assignment-guide/ class=md-nav__link> <span class=md-ellipsis> Compound Assignment Guide </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../../general/arrays/ class=md-nav__link> <span class=md-ellipsis> Arrays </span> </a> </li> <li class=md-nav__item> <a href=../../../general/maps/ class=md-nav__link> <span class=md-ellipsis> Maps </span> </a> </li> <li class=md-nav__item> <a href=../../../general/control_flow/ class=md-nav__link> <span class=md-ellipsis> Control Flow </span> </a> </li> <li class=md-nav__item> <a href=../../break_continue/ class=md-nav__link> <span class=md-ellipsis> Break & Continue </span> </a> </li> <li class=md-nav__item> <a href=../../../general/pattern_matching/ class=md-nav__link> <span class=md-ellipsis> Pattern Matching </span> </a> </li> <li class=md-nav__item> <a href=../../../general/block_structure/ class=md-nav__link> <span class=md-ellipsis> Block Structure </span> </a> </li> <li class=md-nav__item> <a href=../../../general/scoping_variable_management/ class=md-nav__link> <span class=md-ellipsis> Scoping and Variable Management </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_6> <label class=md-nav__link for=__nav_6 id=__nav_6_label tabindex=0> <span class=md-ellipsis> Type System </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_6_label aria-expanded=false> <label class=md-nav__title for=__nav_6> <span class="md-nav__icon md-icon"></span> Type System </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../type_system_safety/ class=md-nav__link> <span class=md-ellipsis> Type System & Safety </span> </a> </li> <li class=md-nav__item> <a href=../../../any_type/ class=md-nav__link> <span class=md-ellipsis> The Any Type </span> </a> </li> <li class=md-nav__item> <a href=../../cast/ class=md-nav__link> <span class=md-ellipsis> Cast </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_7> <label class=md-nav__link for=__nav_7 id=__nav_7_label tabindex=0> <span class=md-ellipsis> Functions </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_7_label aria-expanded=false> <label class=md-nav__title for=__nav_7> <span class="md-nav__icon md-icon"></span> Functions </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../functions/introduction/ class=md-nav__link> <span class=md-ellipsis> Introduction </span> </a> </li> <li class=md-nav__item> <a href=../../../functions/arrow_functions/ class=md-nav__link> <span class=md-ellipsis> Arrow Functions </span> </a> </li> <li class=md-nav__item> <a href=../../../functions/defer_statements/ class=md-nav__link> <span class=md-ellipsis> Defer Statements </span> </a> </li> <li class=md-nav__item> <a href=../../../functions/functional/ class=md-nav__link> <span class=md-ellipsis> Functional Features </span> </a> </li> <li class=md-nav__item> <a href=../../../functions/advanced_features/ class=md-nav__link> <span class=md-ellipsis> Advanced Features </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_7_6> <label class=md-nav__link for=__nav_7_6 id=__nav_7_6_label tabindex=0> <span class=md-ellipsis> Builtins </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_7_6_label aria-expanded=false> <label class=md-nav__title for=__nav_7_6> <span class="md-nav__icon md-icon"></span> Builtins </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../functions/append/ class=md-nav__link> <span class=md-ellipsis> Append </span> </a> </li> <li class=md-nav__item> <a href=../../../functions/len/ class=md-nav__link> <span class=md-ellipsis> Len </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_8> <label class=md-nav__link for=__nav_8 id=__nav_8_label tabindex=0> <span class=md-ellipsis> Concurrency </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_8_label aria-expanded=false> <label class=md-nav__title for=__nav_8> <span class="md-nav__icon md-icon"></span> Concurrency </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../general/concurrency/ class=md-nav__link> <span class=md-ellipsis> Concurrency (do / await / sleep) </span> </a> </li> <li class=md-nav__item> <a href=../../sync/ class=md-nav__link> <span class=md-ellipsis> Sync </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_9> <label class=md-nav__link for=__nav_9 id=__nav_9_label tabindex=0> <span class=md-ellipsis> Error Handling </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_9_label aria-expanded=false> <label class=md-nav__title for=__nav_9> <span class="md-nav__icon md-icon"></span> Error Handling </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../error_handling_system/ class=md-nav__link> <span class=md-ellipsis> Error Handling System </span> </a> </li> <li class=md-nav__item> <a href=../../errors/ class=md-nav__link> <span class=md-ellipsis> Errors </span> </a> </li> <li class=md-nav__item> <a href=../../assert/ class=md-nav__link> <span class=md-ellipsis> Assert </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_10> <label class=md-nav__link for=__nav_10 id=__nav_10_label tabindex=0> <span class=md-ellipsis> Modules & Imports </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_10_label aria-expanded=false> <label class=md-nav__title for=__nav_10> <span class="md-nav__icon md-icon"></span> Modules & Imports </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../general/import_system/ class=md-nav__link> <span class=md-ellipsis> Import System </span> </a> </li> <li class=md-nav__item> <a href=../../../modules/ class=md-nav__link> <span class=md-ellipsis> Module System </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_11 checked> <label class=md-nav__link for=__nav_11 id=__nav_11_label tabindex=0> <span class=md-ellipsis> Standard Library </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_11_label aria-expanded=true> <label class=md-nav__title for=__nav_11> <span class="md-nav__icon md-icon"></span> Standard Library </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_1> <label class=md-nav__link for=__nav_11_1 id=__nav_11_1_label tabindex=0> <span class=md-ellipsis> I/O & Formatting </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_1_label aria-expanded=false> <label class=md-nav__title for=__nav_11_1> <span class="md-nav__icon md-icon"></span> I/O & Formatting </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../fmt/ class=md-nav__link> <span class=md-ellipsis> Fmt </span> </a> </li> <li class=md-nav__item> <a href=../../input/ class=md-nav__link> <span class=md-ellipsis> Input </span> </a> </li> <li class=md-nav__item> <a href=../../log/ class=md-nav__link> <span class=md-ellipsis> Log </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_2> <label class=md-nav__link for=__nav_11_2 id=__nav_11_2_label tabindex=0> <span class=md-ellipsis> Strings & Text </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_2_label aria-expanded=false> <label class=md-nav__title for=__nav_11_2> <span class="md-nav__icon md-icon"></span> Strings & Text </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_2_1> <label class=md-nav__link for=__nav_11_2_1 id=__nav_11_2_1_label tabindex=0> <span class=md-ellipsis> Strings </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=3 aria-labelledby=__nav_11_2_1_label aria-expanded=false> <label class=md-nav__title for=__nav_11_2_1> <span class="md-nav__icon md-icon"></span> Strings </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../strings/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class=md-nav__item> <a href=../../../general/multiline_strings_migration/ class=md-nav__link> <span class=md-ellipsis> Multiline Strings </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../regex/ class=md-nav__link> <span class=md-ellipsis> Regex </span> </a> </li> <li class=md-nav__item> <a href=../../../general/unicode_support/ class=md-nav__link> <span class=md-ellipsis> Unicode Support </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_3> <label class=md-nav__link for=__nav_11_3 id=__nav_11_3_label tabindex=0> <span class=md-ellipsis> Math & Numbers </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_3_label aria-expanded=false> <label class=md-nav__title for=__nav_11_3> <span class="md-nav__icon md-icon"></span> Math & Numbers </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../math/ class=md-nav__link> <span class=md-ellipsis> Math </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_4> <label class=md-nav__link for=__nav_11_4 id=__nav_11_4_label tabindex=0> <span class=md-ellipsis> Collections & Data Structures </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_4_label aria-expanded=false> <label class=md-nav__title for=__nav_11_4> <span class="md-nav__icon md-icon"></span> Collections & Data Structures </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../arrays/ class=md-nav__link> <span class=md-ellipsis> Arrays </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_4_2> <label class=md-nav__link for=__nav_11_4_2 id=__nav_11_4_2_label tabindex=0> <span class=md-ellipsis> Collections </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=3 aria-labelledby=__nav_11_4_2_label aria-expanded=false> <label class=md-nav__title for=__nav_11_4_2> <span class="md-nav__icon md-icon"></span> Collections </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../collections/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_4_2_2> <label class=md-nav__link for=__nav_11_4_2_2 id=__nav_11_4_2_2_label tabindex=0> <span class=md-ellipsis> Enhanced Collections </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=4 aria-labelledby=__nav_11_4_2_2_label aria-expanded=false> <label class=md-nav__title for=__nav_11_4_2_2> <span class="md-nav__icon md-icon"></span> Enhanced Collections </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../collections/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/stacks-queues/ class=md-nav__link> <span class=md-ellipsis> Stacks & Queues </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/sets/ class=md-nav__link> <span class=md-ellipsis> Sets </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/linked-lists/ class=md-nav__link> <span class=md-ellipsis> Linked Lists </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/trees/ class=md-nav__link> <span class=md-ellipsis> Trees </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/concurrent/ class=md-nav__link> <span class=md-ellipsis> Concurrent Collections </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/performance/ class=md-nav__link> <span class=md-ellipsis> Performance Guide </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/migration/ class=md-nav__link> <span class=md-ellipsis> Migration Guide </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/api-reference/ class=md-nav__link> <span class=md-ellipsis> API Reference </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_5> <label class=md-nav__link for=__nav_11_5 id=__nav_11_5_label tabindex=0> <span class=md-ellipsis> Data Formats </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_5_label aria-expanded=false> <label class=md-nav__title for=__nav_11_5> <span class="md-nav__icon md-icon"></span> Data Formats </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../json/ class=md-nav__link> <span class=md-ellipsis> JSON </span> </a> </li> <li class=md-nav__item> <a href=../../encoding/ class=md-nav__link> <span class=md-ellipsis> Encoding </span> </a> </li> <li class=md-nav__item> <a href=../../config/ class=md-nav__link> <span class=md-ellipsis> Config </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_6> <label class=md-nav__link for=__nav_11_6 id=__nav_11_6_label tabindex=0> <span class=md-ellipsis> Structs & Types </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_6_label aria-expanded=false> <label class=md-nav__title for=__nav_11_6> <span class="md-nav__icon md-icon"></span> Structs & Types </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_6_1> <label class=md-nav__link for=__nav_11_6_1 id=__nav_11_6_1_label tabindex=0> <span class=md-ellipsis> Structs </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=3 aria-labelledby=__nav_11_6_1_label aria-expanded=false> <label class=md-nav__title for=__nav_11_6_1> <span class="md-nav__icon md-icon"></span> Structs </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../structs/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class=md-nav__item> <a href=../../../general/struct_field_assignment/ class=md-nav__link> <span class=md-ellipsis> Struct Field Assignment </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../box/ class=md-nav__link> <span class=md-ellipsis> Box </span> </a> </li> <li class=md-nav__item> <a href=../../reflect/ class=md-nav__link> <span class=md-ellipsis> Reflect </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_7> <label class=md-nav__link for=__nav_11_7 id=__nav_11_7_label tabindex=0> <span class=md-ellipsis> File System & OS </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_7_label aria-expanded=false> <label class=md-nav__title for=__nav_11_7> <span class="md-nav__icon md-icon"></span> File System & OS </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../file/ class=md-nav__link> <span class=md-ellipsis> File </span> </a> </li> <li class=md-nav__item> <a href=../../path/ class=md-nav__link> <span class=md-ellipsis> Path </span> </a> </li> <li class=md-nav__item> <a href=../../os/ class=md-nav__link> <span class=md-ellipsis> OS </span> </a> </li> <li class=md-nav__item> <a href=../../exec/ class=md-nav__link> <span class=md-ellipsis> Exec </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_11_8 checked> <label class=md-nav__link for=__nav_11_8 id=__nav_11_8_label tabindex=0> <span class=md-ellipsis> Networking & HTTP </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_8_label aria-expanded=true> <label class=md-nav__title for=__nav_11_8> <span class="md-nav__icon md-icon"></span> Networking & HTTP </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_11_8_1 checked> <label class=md-nav__link for=__nav_11_8_1 id=__nav_11_8_1_label tabindex=0> <span class=md-ellipsis> HTTP </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=3 aria-labelledby=__nav_11_8_1_label aria-expanded=true> <label class=md-nav__title for=__nav_11_8_1> <span class="md-nav__icon md-icon"></span> HTTP </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../overview/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class=md-nav__item> <a href=../client/ class=md-nav__link> <span class=md-ellipsis> HTTP Client </span> </a> </li> <li class=md-nav__item> <a href=../requests/ class=md-nav__link> <span class=md-ellipsis> Request Building </span> </a> </li> <li class=md-nav__item> <a href=../responses/ class=md-nav__link> <span class=md-ellipsis> Response Handling </span> </a> </li> <li class=md-nav__item> <a href=../server/ class=md-nav__link> <span class=md-ellipsis> HTTP Server </span> </a> </li> <li class=md-nav__item> <a href=../routing/ class=md-nav__link> <span class=md-ellipsis> Routing & Mux </span> </a> </li> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> <span class=md-ellipsis> Middleware </span> <span class="md-nav__icon md-icon"></span> </label> <a href=./ class="md-nav__link md-nav__link--active"> <span class=md-ellipsis> Middleware </span> </a> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> Table of contents </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#middleware-concepts class=md-nav__link> <span class=md-ellipsis> Middleware Concepts </span> </a> </li> <li class=md-nav__item> <a href=#basic-middleware-pattern class=md-nav__link> <span class=md-ellipsis> Basic Middleware Pattern </span> </a> <nav class=md-nav aria-label="Basic Middleware Pattern"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#httpmiddlewaremiddlewarefunc class=md-nav__link> <span class=md-ellipsis> http.Middleware(middlewareFunc) </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#common-middleware-patterns class=md-nav__link> <span class=md-ellipsis> Common Middleware Patterns </span> </a> <nav class=md-nav aria-label="Common Middleware Patterns"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#logging-middleware class=md-nav__link> <span class=md-ellipsis> Logging Middleware </span> </a> </li> <li class=md-nav__item> <a href=#authentication-middleware class=md-nav__link> <span class=md-ellipsis> Authentication Middleware </span> </a> </li> <li class=md-nav__item> <a href=#cors-middleware class=md-nav__link> <span class=md-ellipsis> CORS Middleware </span> </a> </li> <li class=md-nav__item> <a href=#rate-limiting-middleware class=md-nav__link> <span class=md-ellipsis> Rate Limiting Middleware </span> </a> </li> <li class=md-nav__item> <a href=#security-headers-middleware class=md-nav__link> <span class=md-ellipsis> Security Headers Middleware </span> </a> </li> <li class=md-nav__item> <a href=#error-handling-middleware class=md-nav__link> <span class=md-ellipsis> Error Handling Middleware </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#middleware-composition class=md-nav__link> <span class=md-ellipsis> Middleware Composition </span> </a> <nav class=md-nav aria-label="Middleware Composition"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#chaining-multiple-middleware class=md-nav__link> <span class=md-ellipsis> Chaining Multiple Middleware </span> </a> </li> <li class=md-nav__item> <a href=#conditional-middleware class=md-nav__link> <span class=md-ellipsis> Conditional Middleware </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#advanced-middleware-patterns class=md-nav__link> <span class=md-ellipsis> Advanced Middleware Patterns </span> </a> <nav class=md-nav aria-label="Advanced Middleware Patterns"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#requestresponse-transformation class=md-nav__link> <span class=md-ellipsis> Request/Response Transformation </span> </a> </li> <li class=md-nav__item> <a href=#caching-middleware class=md-nav__link> <span class=md-ellipsis> Caching Middleware </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#best-practices class=md-nav__link> <span class=md-ellipsis> Best Practices </span> </a> <nav class=md-nav aria-label="Best Practices"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#1-order-middleware-correctly class=md-nav__link> <span class=md-ellipsis> 1. Order Middleware Correctly </span> </a> </li> <li class=md-nav__item> <a href=#2-keep-middleware-focused class=md-nav__link> <span class=md-ellipsis> 2. Keep Middleware Focused </span> </a> </li> <li class=md-nav__item> <a href=#3-make-middleware-configurable class=md-nav__link> <span class=md-ellipsis> 3. Make Middleware Configurable </span> </a> </li> <li class=md-nav__item> <a href=#4-handle-errors-gracefully class=md-nav__link> <span class=md-ellipsis> 4. Handle Errors Gracefully </span> </a> </li> <li class=md-nav__item> <a href=#5-use-context-for-request-data class=md-nav__link> <span class=md-ellipsis> 5. Use Context for Request Data </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#next-steps class=md-nav__link> <span class=md-ellipsis> Next Steps </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../auth/ class=md-nav__link> <span class=md-ellipsis> Authentication </span> </a> </li> <li class=md-nav__item> <a href=../cookies/ class=md-nav__link> <span class=md-ellipsis> Cookies & Sessions </span> </a> </li> <li class=md-nav__item> <a href=../advanced/ class=md-nav__link> <span class=md-ellipsis> Advanced </span> </a> </li> <li class=md-nav__item> <a href=../examples/ class=md-nav__link> <span class=md-ellipsis> Examples & Patterns </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_9> <label class=md-nav__link for=__nav_11_9 id=__nav_11_9_label tabindex=0> <span class=md-ellipsis> Database </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_9_label aria-expanded=false> <label class=md-nav__title for=__nav_11_9> <span class="md-nav__icon md-icon"></span> Database </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../db/ class=md-nav__link> <span class=md-ellipsis> DB </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_10> <label class=md-nav__link for=__nav_11_10 id=__nav_11_10_label tabindex=0> <span class=md-ellipsis> Utilities </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_10_label aria-expanded=false> <label class=md-nav__title for=__nav_11_10> <span class="md-nav__icon md-icon"></span> Utilities </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../datetime/ class=md-nav__link> <span class=md-ellipsis> Datetime </span> </a> </li> <li class=md-nav__item> <a href=../../flags/ class=md-nav__link> <span class=md-ellipsis> Flags </span> </a> </li> <li class=md-nav__item> <a href=../../uuid/ class=md-nav__link> <span class=md-ellipsis> UUID </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_12> <label class=md-nav__link for=__nav_12 id=__nav_12_label tabindex=0> <span class=md-ellipsis> Examples </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_12_label aria-expanded=false> <label class=md-nav__title for=__nav_12> <span class="md-nav__icon md-icon"></span> Examples </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../comprehensive_examples/ class=md-nav__link> <span class=md-ellipsis> Comprehensive Language Examples </span> </a> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class=md-content data-md-component=content> <article class="md-content__inner md-typeset"> <h1 id=middleware>Middleware</h1> <p>Middleware provides a way to execute code before and after your main request handlers. This is essential for cross-cutting concerns like logging, authentication, CORS, rate limiting, and error handling.</p> <h2 id=middleware-concepts>Middleware Concepts</h2> <p>Middleware functions wrap around your handlers, allowing you to: - <strong>Log requests and responses</strong> - <strong>Authenticate and authorize users</strong> - <strong>Handle CORS (Cross-Origin Resource Sharing)</strong> - <strong>Rate limit requests</strong> - <strong>Compress responses</strong> - <strong>Handle errors gracefully</strong> - <strong>Add security headers</strong> - <strong>Parse request bodies</strong></p> <h2 id=basic-middleware-pattern>Basic Middleware Pattern</h2> <h3 id=httpmiddlewaremiddlewarefunc>http.Middleware(middlewareFunc)</h3> <p>Creates a middleware wrapper for handlers.</p> <p><strong>Syntax:</strong> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Middleware Syntax</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-0-1>1</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-0-1 name=__codelineno-0-1></a>http.Middleware(middlewareFunc) (middleware, error)
+<!doctype html><html lang=en class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link href=../routing/ rel=prev><link href=../auth/ rel=next><link rel=icon href=../../../assets/images/harneet.png><meta name=generator content="mkdocs-1.6.1, mkdocs-material-9.6.20"><title>Middleware - Harneet Programming Language</title><link rel=stylesheet href=../../../assets/stylesheets/main.e53b48f4.min.css><link rel=stylesheet href=../../../assets/stylesheets/palette.06af60db.min.css><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback"><style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style><link rel=stylesheet href=../../../assets/css/custom.css><script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script></head> <body dir=ltr data-md-color-scheme=slate data-md-color-primary=black data-md-color-accent=blue> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#middleware class=md-skip> Skip to content </a> </div> <div data-md-component=announce> </div> <header class="md-header md-header--shadow" data-md-component=header> <nav class="md-header__inner md-grid" aria-label=Header> <a href=../../.. title="Harneet Programming Language" class="md-header__button md-logo" aria-label="Harneet Programming Language" data-md-component=logo> <img src=../../../assets/images/harneet.png alt=logo> </a> <label class="md-header__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg> </label> <div class=md-header__title data-md-component=header-title> <div class=md-header__ellipsis> <div class=md-header__topic> <span class=md-ellipsis> Harneet Programming Language </span> </div> <div class=md-header__topic data-md-component=header-topic> <span class=md-ellipsis> Middleware </span> </div> </div> </div> <form class=md-header__option data-md-component=palette> <input class=md-option data-md-color-media data-md-color-scheme=slate data-md-color-primary=black data-md-color-accent=blue aria-hidden=true type=radio name=__palette id=__palette_0> </form> <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script> <label class="md-header__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=Search placeholder=Search autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg> </label> <nav class=md-search__options aria-label=Search> <a href=javascript:void(0) class="md-search__icon md-icon" title=Share aria-label=Share data-clipboard data-clipboard-text data-md-component=search-share tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg> </a> <button type=reset class="md-search__icon md-icon" title=Clear aria-label=Clear tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg> </button> </nav> <div class=md-search__suggest data-md-component=search-suggest></div> </form> <div class=md-search__output> <div class=md-search__scrollwrap tabindex=0 data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> Initializing search </div> <ol class=md-search-result__list role=presentation></ol> </div> </div> </div> </div> </div> </nav> </header> <div class=md-container data-md-component=container> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=sidebar data-md-type=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary md-nav--integrated" aria-label=Navigation data-md-level=0> <label class=md-nav__title for=__drawer> <a href=../../.. title="Harneet Programming Language" class="md-nav__button md-logo" aria-label="Harneet Programming Language" data-md-component=logo> <img src=../../../assets/images/harneet.png alt=logo> </a> Harneet Programming Language </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../.. class=md-nav__link> <span class=md-ellipsis> Home </span> </a> </li> <li class=md-nav__item> <a href=../../../repl/ class=md-nav__link> <span class=md-ellipsis> REPL </span> </a> </li> <li class=md-nav__item> <a href=../../../command_line/ class=md-nav__link> <span class=md-ellipsis> Command Line </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_4> <label class=md-nav__link for=__nav_4 id=__nav_4_label tabindex=0> <span class=md-ellipsis> Getting Started </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_4_label aria-expanded=false> <label class=md-nav__title for=__nav_4> <span class="md-nav__icon md-icon"></span> Getting Started </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../general/comments/ class=md-nav__link> <span class=md-ellipsis> Comments </span> </a> </li> <li class=md-nav__item> <a href=../../../general/data_types/ class=md-nav__link> <span class=md-ellipsis> Data Types </span> </a> </li> <li class=md-nav__item> <a href=../../../general/variable_declaration/ class=md-nav__link> <span class=md-ellipsis> Variable Declaration & Assignment </span> </a> </li> <li class=md-nav__item> <a href=../../../general/const/ class=md-nav__link> <span class=md-ellipsis> Const Declarations </span> </a> </li> <li class=md-nav__item> <a href=../../../general/keywords_identifiers/ class=md-nav__link> <span class=md-ellipsis> Keywords and Identifiers </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_5> <label class=md-nav__link for=__nav_5 id=__nav_5_label tabindex=0> <span class=md-ellipsis> Core Types </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_5_label aria-expanded=false> <label class=md-nav__title for=__nav_5> <span class="md-nav__icon md-icon"></span> Core Types </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../general/numbers/ class=md-nav__link> <span class=md-ellipsis> Numbers </span> </a> </li> <li class=md-nav__item> <a href=../../../general/runes/ class=md-nav__link> <span class=md-ellipsis> Runes </span> </a> </li> <li class=md-nav__item> <a href=../../../general/strings/ class=md-nav__link> <span class=md-ellipsis> Strings </span> </a> </li> <li class=md-nav__item> <a href=../../../general/booleans/ class=md-nav__link> <span class=md-ellipsis> Booleans </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_5_5> <label class=md-nav__link for=__nav_5_5 id=__nav_5_5_label tabindex=0> <span class=md-ellipsis> Arrays </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_5_5_label aria-expanded=false> <label class=md-nav__title for=__nav_5_5> <span class="md-nav__icon md-icon"></span> Arrays </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../general/arrays/ class=md-nav__link> <span class=md-ellipsis> Arrays </span> </a> </li> <li class=md-nav__item> <a href=../../../general/slices/ class=md-nav__link> <span class=md-ellipsis> Slicing </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../../general/maps/ class=md-nav__link> <span class=md-ellipsis> Maps </span> </a> </li> <li class=md-nav__item> <a href=../../../general/tuples/ class=md-nav__link> <span class=md-ellipsis> Tuples </span> </a> </li> <li class=md-nav__item> <a href=../../../general/error/ class=md-nav__link> <span class=md-ellipsis> Errors </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_6> <label class=md-nav__link for=__nav_6 id=__nav_6_label tabindex=0> <span class=md-ellipsis> Language Basics </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_6_label aria-expanded=false> <label class=md-nav__title for=__nav_6> <span class="md-nav__icon md-icon"></span> Language Basics </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../general/operators_and_expressions/ class=md-nav__link> <span class=md-ellipsis> Operators and Expressions </span> </a> </li> <li class=md-nav__item> <a href=../../../general/pipe_operator/ class=md-nav__link> <span class=md-ellipsis> Pipe Operator (|>) </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_6_3> <label class=md-nav__link for=__nav_6_3 id=__nav_6_3_label tabindex=0> <span class=md-ellipsis> Advanced Arithmetic Operations </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_6_3_label aria-expanded=false> <label class=md-nav__title for=__nav_6_3> <span class="md-nav__icon md-icon"></span> Advanced Arithmetic Operations </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../general/advanced-arithmetic-operators/ class=md-nav__link> <span class=md-ellipsis> Operator Reference </span> </a> </li> <li class=md-nav__item> <a href=../../../general/bitwise-operations-guide/ class=md-nav__link> <span class=md-ellipsis> Bitwise Operations Guide </span> </a> </li> <li class=md-nav__item> <a href=../../../general/compound-assignment-guide/ class=md-nav__link> <span class=md-ellipsis> Compound Assignment Guide </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../../general/control_flow/ class=md-nav__link> <span class=md-ellipsis> Control Flow </span> </a> </li> <li class=md-nav__item> <a href=../../break_continue/ class=md-nav__link> <span class=md-ellipsis> Break & Continue </span> </a> </li> <li class=md-nav__item> <a href=../../../general/pattern_matching/ class=md-nav__link> <span class=md-ellipsis> Pattern Matching </span> </a> </li> <li class=md-nav__item> <a href=../../../general/block_structure/ class=md-nav__link> <span class=md-ellipsis> Block Structure </span> </a> </li> <li class=md-nav__item> <a href=../../../general/scoping_variable_management/ class=md-nav__link> <span class=md-ellipsis> Scoping and Variable Management </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_7> <label class=md-nav__link for=__nav_7 id=__nav_7_label tabindex=0> <span class=md-ellipsis> Type System </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_7_label aria-expanded=false> <label class=md-nav__title for=__nav_7> <span class="md-nav__icon md-icon"></span> Type System </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../type_system_safety/ class=md-nav__link> <span class=md-ellipsis> Type System & Safety </span> </a> </li> <li class=md-nav__item> <a href=../../../any_type/ class=md-nav__link> <span class=md-ellipsis> The Any Type </span> </a> </li> <li class=md-nav__item> <a href=../../../general/unit_type/ class=md-nav__link> <span class=md-ellipsis> The Unit Type </span> </a> </li> <li class=md-nav__item> <a href=../../../general/interfaces/ class=md-nav__link> <span class=md-ellipsis> Interfaces </span> </a> </li> <li class=md-nav__item> <a href=../../cast/ class=md-nav__link> <span class=md-ellipsis> Cast </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_8> <label class=md-nav__link for=__nav_8 id=__nav_8_label tabindex=0> <span class=md-ellipsis> Functions </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_8_label aria-expanded=false> <label class=md-nav__title for=__nav_8> <span class="md-nav__icon md-icon"></span> Functions </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../functions/introduction/ class=md-nav__link> <span class=md-ellipsis> Introduction </span> </a> </li> <li class=md-nav__item> <a href=../../../functions/arrow_functions/ class=md-nav__link> <span class=md-ellipsis> Arrow Functions </span> </a> </li> <li class=md-nav__item> <a href=../../../functions/defer_statements/ class=md-nav__link> <span class=md-ellipsis> Defer Statements </span> </a> </li> <li class=md-nav__item> <a href=../../../functions/functional/ class=md-nav__link> <span class=md-ellipsis> Functional Features </span> </a> </li> <li class=md-nav__item> <a href=../../../functions/advanced_features/ class=md-nav__link> <span class=md-ellipsis> Advanced Features </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_8_6> <label class=md-nav__link for=__nav_8_6 id=__nav_8_6_label tabindex=0> <span class=md-ellipsis> Builtins </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_8_6_label aria-expanded=false> <label class=md-nav__title for=__nav_8_6> <span class="md-nav__icon md-icon"></span> Builtins </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../functions/append/ class=md-nav__link> <span class=md-ellipsis> Append </span> </a> </li> <li class=md-nav__item> <a href=../../../functions/len/ class=md-nav__link> <span class=md-ellipsis> Len </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_9> <label class=md-nav__link for=__nav_9 id=__nav_9_label tabindex=0> <span class=md-ellipsis> Concurrency </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_9_label aria-expanded=false> <label class=md-nav__title for=__nav_9> <span class="md-nav__icon md-icon"></span> Concurrency </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../general/concurrency/ class=md-nav__link> <span class=md-ellipsis> Concurrency (do / await / sleep) </span> </a> </li> <li class=md-nav__item> <a href=../../sync/ class=md-nav__link> <span class=md-ellipsis> Sync </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_10> <label class=md-nav__link for=__nav_10 id=__nav_10_label tabindex=0> <span class=md-ellipsis> Error Handling </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_10_label aria-expanded=false> <label class=md-nav__title for=__nav_10> <span class="md-nav__icon md-icon"></span> Error Handling </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../error_handling_system/ class=md-nav__link> <span class=md-ellipsis> Error Handling System </span> </a> </li> <li class=md-nav__item> <a href=../../errors/ class=md-nav__link> <span class=md-ellipsis> Errors </span> </a> </li> <li class=md-nav__item> <a href=../../assert/ class=md-nav__link> <span class=md-ellipsis> Assert </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11> <label class=md-nav__link for=__nav_11 id=__nav_11_label tabindex=0> <span class=md-ellipsis> Modules & Imports </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_11_label aria-expanded=false> <label class=md-nav__title for=__nav_11> <span class="md-nav__icon md-icon"></span> Modules & Imports </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../general/import_system/ class=md-nav__link> <span class=md-ellipsis> Import System </span> </a> </li> <li class=md-nav__item> <a href=../../../modules/ class=md-nav__link> <span class=md-ellipsis> Module System </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_12 checked> <label class=md-nav__link for=__nav_12 id=__nav_12_label tabindex=0> <span class=md-ellipsis> Standard Library </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_12_label aria-expanded=true> <label class=md-nav__title for=__nav_12> <span class="md-nav__icon md-icon"></span> Standard Library </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_12_1> <label class=md-nav__link for=__nav_12_1 id=__nav_12_1_label tabindex=0> <span class=md-ellipsis> I/O & Formatting </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_12_1_label aria-expanded=false> <label class=md-nav__title for=__nav_12_1> <span class="md-nav__icon md-icon"></span> I/O & Formatting </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../fmt/ class=md-nav__link> <span class=md-ellipsis> Fmt </span> </a> </li> <li class=md-nav__item> <a href=../../input/ class=md-nav__link> <span class=md-ellipsis> Input </span> </a> </li> <li class=md-nav__item> <a href=../../log/ class=md-nav__link> <span class=md-ellipsis> Log </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_12_2> <label class=md-nav__link for=__nav_12_2 id=__nav_12_2_label tabindex=0> <span class=md-ellipsis> Strings & Text </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_12_2_label aria-expanded=false> <label class=md-nav__title for=__nav_12_2> <span class="md-nav__icon md-icon"></span> Strings & Text </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_12_2_1> <label class=md-nav__link for=__nav_12_2_1 id=__nav_12_2_1_label tabindex=0> <span class=md-ellipsis> Strings </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=3 aria-labelledby=__nav_12_2_1_label aria-expanded=false> <label class=md-nav__title for=__nav_12_2_1> <span class="md-nav__icon md-icon"></span> Strings </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../strings/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class=md-nav__item> <a href=../../../general/multiline_strings_migration/ class=md-nav__link> <span class=md-ellipsis> Multiline Strings </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../regex/ class=md-nav__link> <span class=md-ellipsis> Regex </span> </a> </li> <li class=md-nav__item> <a href=../../../general/unicode_support/ class=md-nav__link> <span class=md-ellipsis> Unicode Support </span> </a> </li> <li class=md-nav__item> <a href=../../utf8/ class=md-nav__link> <span class=md-ellipsis> Utf8 </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_12_3> <label class=md-nav__link for=__nav_12_3 id=__nav_12_3_label tabindex=0> <span class=md-ellipsis> Math & Numbers </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_12_3_label aria-expanded=false> <label class=md-nav__title for=__nav_12_3> <span class="md-nav__icon md-icon"></span> Math & Numbers </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../math/ class=md-nav__link> <span class=md-ellipsis> Math </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_12_4> <label class=md-nav__link for=__nav_12_4 id=__nav_12_4_label tabindex=0> <span class=md-ellipsis> Collections & Data Structures </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_12_4_label aria-expanded=false> <label class=md-nav__title for=__nav_12_4> <span class="md-nav__icon md-icon"></span> Collections & Data Structures </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../arrays/ class=md-nav__link> <span class=md-ellipsis> Arrays </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_12_4_2> <label class=md-nav__link for=__nav_12_4_2 id=__nav_12_4_2_label tabindex=0> <span class=md-ellipsis> Collections </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=3 aria-labelledby=__nav_12_4_2_label aria-expanded=false> <label class=md-nav__title for=__nav_12_4_2> <span class="md-nav__icon md-icon"></span> Collections </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../collections/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_12_4_2_2> <label class=md-nav__link for=__nav_12_4_2_2 id=__nav_12_4_2_2_label tabindex=0> <span class=md-ellipsis> Enhanced Collections </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=4 aria-labelledby=__nav_12_4_2_2_label aria-expanded=false> <label class=md-nav__title for=__nav_12_4_2_2> <span class="md-nav__icon md-icon"></span> Enhanced Collections </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../collections/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/stacks-queues/ class=md-nav__link> <span class=md-ellipsis> Stacks & Queues </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/sets/ class=md-nav__link> <span class=md-ellipsis> Sets </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/linked-lists/ class=md-nav__link> <span class=md-ellipsis> Linked Lists </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/trees/ class=md-nav__link> <span class=md-ellipsis> Trees </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/bulk-operations/ class=md-nav__link> <span class=md-ellipsis> Bulk Operations </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/concurrent/ class=md-nav__link> <span class=md-ellipsis> Concurrent Collections </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/performance/ class=md-nav__link> <span class=md-ellipsis> Performance Guide </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/migration/ class=md-nav__link> <span class=md-ellipsis> Migration Guide </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/api-reference/ class=md-nav__link> <span class=md-ellipsis> API Reference </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_12_5> <label class=md-nav__link for=__nav_12_5 id=__nav_12_5_label tabindex=0> <span class=md-ellipsis> Data Formats </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_12_5_label aria-expanded=false> <label class=md-nav__title for=__nav_12_5> <span class="md-nav__icon md-icon"></span> Data Formats </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../json/ class=md-nav__link> <span class=md-ellipsis> JSON </span> </a> </li> <li class=md-nav__item> <a href=../../encoding/ class=md-nav__link> <span class=md-ellipsis> Encoding </span> </a> </li> <li class=md-nav__item> <a href=../../config/ class=md-nav__link> <span class=md-ellipsis> Config </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_12_6> <label class=md-nav__link for=__nav_12_6 id=__nav_12_6_label tabindex=0> <span class=md-ellipsis> Structs & Types </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_12_6_label aria-expanded=false> <label class=md-nav__title for=__nav_12_6> <span class="md-nav__icon md-icon"></span> Structs & Types </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_12_6_1> <label class=md-nav__link for=__nav_12_6_1 id=__nav_12_6_1_label tabindex=0> <span class=md-ellipsis> Structs </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=3 aria-labelledby=__nav_12_6_1_label aria-expanded=false> <label class=md-nav__title for=__nav_12_6_1> <span class="md-nav__icon md-icon"></span> Structs </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../structs/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class=md-nav__item> <a href=../../../general/struct_field_assignment/ class=md-nav__link> <span class=md-ellipsis> Struct Field Assignment </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../box/ class=md-nav__link> <span class=md-ellipsis> Box </span> </a> </li> <li class=md-nav__item> <a href=../../reflect/ class=md-nav__link> <span class=md-ellipsis> Reflect </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_12_7> <label class=md-nav__link for=__nav_12_7 id=__nav_12_7_label tabindex=0> <span class=md-ellipsis> File System & OS </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_12_7_label aria-expanded=false> <label class=md-nav__title for=__nav_12_7> <span class="md-nav__icon md-icon"></span> File System & OS </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../file/ class=md-nav__link> <span class=md-ellipsis> File </span> </a> </li> <li class=md-nav__item> <a href=../../path/ class=md-nav__link> <span class=md-ellipsis> Path </span> </a> </li> <li class=md-nav__item> <a href=../../os/ class=md-nav__link> <span class=md-ellipsis> OS </span> </a> </li> <li class=md-nav__item> <a href=../../exec/ class=md-nav__link> <span class=md-ellipsis> Exec </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_12_8 checked> <label class=md-nav__link for=__nav_12_8 id=__nav_12_8_label tabindex=0> <span class=md-ellipsis> Networking & HTTP </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_12_8_label aria-expanded=true> <label class=md-nav__title for=__nav_12_8> <span class="md-nav__icon md-icon"></span> Networking & HTTP </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_12_8_1 checked> <label class=md-nav__link for=__nav_12_8_1 id=__nav_12_8_1_label tabindex=0> <span class=md-ellipsis> HTTP </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=3 aria-labelledby=__nav_12_8_1_label aria-expanded=true> <label class=md-nav__title for=__nav_12_8_1> <span class="md-nav__icon md-icon"></span> HTTP </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../overview/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class=md-nav__item> <a href=../client/ class=md-nav__link> <span class=md-ellipsis> HTTP Client </span> </a> </li> <li class=md-nav__item> <a href=../requests/ class=md-nav__link> <span class=md-ellipsis> Request Building </span> </a> </li> <li class=md-nav__item> <a href=../responses/ class=md-nav__link> <span class=md-ellipsis> Response Handling </span> </a> </li> <li class=md-nav__item> <a href=../server/ class=md-nav__link> <span class=md-ellipsis> HTTP Server </span> </a> </li> <li class=md-nav__item> <a href=../routing/ class=md-nav__link> <span class=md-ellipsis> Routing & Mux </span> </a> </li> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> <span class=md-ellipsis> Middleware </span> <span class="md-nav__icon md-icon"></span> </label> <a href=./ class="md-nav__link md-nav__link--active"> <span class=md-ellipsis> Middleware </span> </a> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> Table of contents </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#middleware-concepts class=md-nav__link> <span class=md-ellipsis> Middleware Concepts </span> </a> </li> <li class=md-nav__item> <a href=#basic-middleware-pattern class=md-nav__link> <span class=md-ellipsis> Basic Middleware Pattern </span> </a> <nav class=md-nav aria-label="Basic Middleware Pattern"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#httpmiddlewaremiddlewarefunc class=md-nav__link> <span class=md-ellipsis> http.Middleware(middlewareFunc) </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#common-middleware-patterns class=md-nav__link> <span class=md-ellipsis> Common Middleware Patterns </span> </a> <nav class=md-nav aria-label="Common Middleware Patterns"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#logging-middleware class=md-nav__link> <span class=md-ellipsis> Logging Middleware </span> </a> </li> <li class=md-nav__item> <a href=#authentication-middleware class=md-nav__link> <span class=md-ellipsis> Authentication Middleware </span> </a> </li> <li class=md-nav__item> <a href=#cors-middleware class=md-nav__link> <span class=md-ellipsis> CORS Middleware </span> </a> </li> <li class=md-nav__item> <a href=#rate-limiting-middleware class=md-nav__link> <span class=md-ellipsis> Rate Limiting Middleware </span> </a> </li> <li class=md-nav__item> <a href=#security-headers-middleware class=md-nav__link> <span class=md-ellipsis> Security Headers Middleware </span> </a> </li> <li class=md-nav__item> <a href=#error-handling-middleware class=md-nav__link> <span class=md-ellipsis> Error Handling Middleware </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#middleware-composition class=md-nav__link> <span class=md-ellipsis> Middleware Composition </span> </a> <nav class=md-nav aria-label="Middleware Composition"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#chaining-multiple-middleware class=md-nav__link> <span class=md-ellipsis> Chaining Multiple Middleware </span> </a> </li> <li class=md-nav__item> <a href=#conditional-middleware class=md-nav__link> <span class=md-ellipsis> Conditional Middleware </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#advanced-middleware-patterns class=md-nav__link> <span class=md-ellipsis> Advanced Middleware Patterns </span> </a> <nav class=md-nav aria-label="Advanced Middleware Patterns"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#requestresponse-transformation class=md-nav__link> <span class=md-ellipsis> Request/Response Transformation </span> </a> </li> <li class=md-nav__item> <a href=#caching-middleware class=md-nav__link> <span class=md-ellipsis> Caching Middleware </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#best-practices class=md-nav__link> <span class=md-ellipsis> Best Practices </span> </a> <nav class=md-nav aria-label="Best Practices"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#1-order-middleware-correctly class=md-nav__link> <span class=md-ellipsis> 1. Order Middleware Correctly </span> </a> </li> <li class=md-nav__item> <a href=#2-keep-middleware-focused class=md-nav__link> <span class=md-ellipsis> 2. Keep Middleware Focused </span> </a> </li> <li class=md-nav__item> <a href=#3-make-middleware-configurable class=md-nav__link> <span class=md-ellipsis> 3. Make Middleware Configurable </span> </a> </li> <li class=md-nav__item> <a href=#4-handle-errors-gracefully class=md-nav__link> <span class=md-ellipsis> 4. Handle Errors Gracefully </span> </a> </li> <li class=md-nav__item> <a href=#5-use-context-for-request-data class=md-nav__link> <span class=md-ellipsis> 5. Use Context for Request Data </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#next-steps class=md-nav__link> <span class=md-ellipsis> Next Steps </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../auth/ class=md-nav__link> <span class=md-ellipsis> Authentication </span> </a> </li> <li class=md-nav__item> <a href=../cookies/ class=md-nav__link> <span class=md-ellipsis> Cookies & Sessions </span> </a> </li> <li class=md-nav__item> <a href=../advanced/ class=md-nav__link> <span class=md-ellipsis> Advanced </span> </a> </li> <li class=md-nav__item> <a href=../examples/ class=md-nav__link> <span class=md-ellipsis> Examples & Patterns </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_12_9> <label class=md-nav__link for=__nav_12_9 id=__nav_12_9_label tabindex=0> <span class=md-ellipsis> Database </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_12_9_label aria-expanded=false> <label class=md-nav__title for=__nav_12_9> <span class="md-nav__icon md-icon"></span> Database </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../db/ class=md-nav__link> <span class=md-ellipsis> DB </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_12_10> <label class=md-nav__link for=__nav_12_10 id=__nav_12_10_label tabindex=0> <span class=md-ellipsis> Utilities </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_12_10_label aria-expanded=false> <label class=md-nav__title for=__nav_12_10> <span class="md-nav__icon md-icon"></span> Utilities </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../datetime/ class=md-nav__link> <span class=md-ellipsis> Datetime </span> </a> </li> <li class=md-nav__item> <a href=../../flags/ class=md-nav__link> <span class=md-ellipsis> Flags </span> </a> </li> <li class=md-nav__item> <a href=../../uuid/ class=md-nav__link> <span class=md-ellipsis> UUID </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_13> <label class=md-nav__link for=__nav_13 id=__nav_13_label tabindex=0> <span class=md-ellipsis> Examples </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_13_label aria-expanded=false> <label class=md-nav__title for=__nav_13> <span class="md-nav__icon md-icon"></span> Examples </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../comprehensive_examples/ class=md-nav__link> <span class=md-ellipsis> Comprehensive Language Examples </span> </a> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class=md-content data-md-component=content> <article class="md-content__inner md-typeset"> <h1 id=middleware>Middleware</h1> <p>Middleware provides a way to execute code before and after your main request handlers. This is essential for cross-cutting concerns like logging, authentication, CORS, rate limiting, and error handling.</p> <h2 id=middleware-concepts>Middleware Concepts</h2> <p>Middleware functions wrap around your handlers, allowing you to: - <strong>Log requests and responses</strong> - <strong>Authenticate and authorize users</strong> - <strong>Handle CORS (Cross-Origin Resource Sharing)</strong> - <strong>Rate limit requests</strong> - <strong>Compress responses</strong> - <strong>Handle errors gracefully</strong> - <strong>Add security headers</strong> - <strong>Parse request bodies</strong></p> <h2 id=basic-middleware-pattern>Basic Middleware Pattern</h2> <h3 id=httpmiddlewaremiddlewarefunc>http.Middleware(middlewareFunc)</h3> <p>Creates a middleware wrapper for handlers.</p> <p><strong>Syntax:</strong> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Middleware Syntax</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-0-1>1</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-0-1 name=__codelineno-0-1></a>http.Middleware(middlewareFunc) (middleware, error)
 </code></pre></div></td></tr></table></div></p> <p><strong>Parameters:</strong> - <code>middlewareFunc</code> (function) - Middleware function that wraps handlers</p> <p><strong>Examples:</strong></p> <p><em>Basic Middleware Structure:</em> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Basic Middleware Structure</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-1-1> 1</a></span>
 <span class=normal><a href=#__codelineno-1-2> 2</a></span>
 <span class=normal><a href=#__codelineno-1-3> 3</a></span>
@@ -32,40 +32,42 @@
 <span class=normal><a href=#__codelineno-1-31>31</a></span>
 <span class=normal><a href=#__codelineno-1-32>32</a></span>
 <span class=normal><a href=#__codelineno-1-33>33</a></span>
-<span class=normal><a href=#__codelineno-1-34>34</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-1-1 name=__codelineno-1-1></a>import http
-<a id=__codelineno-1-2 name=__codelineno-1-2></a>import fmt
-<a id=__codelineno-1-3 name=__codelineno-1-3></a>
-<a id=__codelineno-1-4 name=__codelineno-1-4></a>// Basic middleware function
-<a id=__codelineno-1-5 name=__codelineno-1-5></a>function loggingMiddleware(next function(any) any) function(any) any {
-<a id=__codelineno-1-6 name=__codelineno-1-6></a>    return function(request map, response map) {
-<a id=__codelineno-1-7 name=__codelineno-1-7></a>        var method = request[&quot;method&quot;]
-<a id=__codelineno-1-8 name=__codelineno-1-8></a>        var path = request[&quot;path&quot;]
-<a id=__codelineno-1-9 name=__codelineno-1-9></a>        var userAgent = request[&quot;headers&quot;][&quot;User-Agent&quot;]
-<a id=__codelineno-1-10 name=__codelineno-1-10></a>
-<a id=__codelineno-1-11 name=__codelineno-1-11></a>        fmt.Printf(&quot;📝 %s %s from %s\n&quot;, method, path, userAgent)
-<a id=__codelineno-1-12 name=__codelineno-1-12></a>
-<a id=__codelineno-1-13 name=__codelineno-1-13></a>        // Call the next handler
-<a id=__codelineno-1-14 name=__codelineno-1-14></a>        next(request, response)
-<a id=__codelineno-1-15 name=__codelineno-1-15></a>
-<a id=__codelineno-1-16 name=__codelineno-1-16></a>        fmt.Printf(&quot;✅ %s %s completed\n&quot;, method, path)
-<a id=__codelineno-1-17 name=__codelineno-1-17></a>    }
-<a id=__codelineno-1-18 name=__codelineno-1-18></a>}
-<a id=__codelineno-1-19 name=__codelineno-1-19></a>
-<a id=__codelineno-1-20 name=__codelineno-1-20></a>// Apply middleware to a handler
-<a id=__codelineno-1-21 name=__codelineno-1-21></a>function createLoggedHandler(handler function) {
-<a id=__codelineno-1-22 name=__codelineno-1-22></a>    return loggingMiddleware(handler)
-<a id=__codelineno-1-23 name=__codelineno-1-23></a>}
-<a id=__codelineno-1-24 name=__codelineno-1-24></a>
-<a id=__codelineno-1-25 name=__codelineno-1-25></a>// Usage
-<a id=__codelineno-1-26 name=__codelineno-1-26></a>function homeHandler(request map, response map) {
-<a id=__codelineno-1-27 name=__codelineno-1-27></a>    http.WriteResponse(response, 200, &quot;text/html&quot;, &quot;&lt;h1&gt;Home Page&lt;/h1&gt;&quot;)
-<a id=__codelineno-1-28 name=__codelineno-1-28></a>}
-<a id=__codelineno-1-29 name=__codelineno-1-29></a>
-<a id=__codelineno-1-30 name=__codelineno-1-30></a>var loggedHomeHandler = createLoggedHandler(homeHandler)
-<a id=__codelineno-1-31 name=__codelineno-1-31></a>
-<a id=__codelineno-1-32 name=__codelineno-1-32></a>// Register with mux
-<a id=__codelineno-1-33 name=__codelineno-1-33></a>var mux = http.NewMux()[0]
-<a id=__codelineno-1-34 name=__codelineno-1-34></a>http.HandleFunc(mux, &quot;/&quot;, loggedHomeHandler)
+<span class=normal><a href=#__codelineno-1-34>34</a></span>
+<span class=normal><a href=#__codelineno-1-35>35</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-1-1 name=__codelineno-1-1></a>package main
+<a id=__codelineno-1-2 name=__codelineno-1-2></a>import http
+<a id=__codelineno-1-3 name=__codelineno-1-3></a>import fmt
+<a id=__codelineno-1-4 name=__codelineno-1-4></a>
+<a id=__codelineno-1-5 name=__codelineno-1-5></a>// Basic middleware function
+<a id=__codelineno-1-6 name=__codelineno-1-6></a>function loggingMiddleware(next function(any) any) function(any) any {
+<a id=__codelineno-1-7 name=__codelineno-1-7></a>    return function(request map, response map) {
+<a id=__codelineno-1-8 name=__codelineno-1-8></a>        var method = request[&quot;method&quot;]
+<a id=__codelineno-1-9 name=__codelineno-1-9></a>        var path = request[&quot;path&quot;]
+<a id=__codelineno-1-10 name=__codelineno-1-10></a>        var userAgent = request[&quot;headers&quot;][&quot;User-Agent&quot;]
+<a id=__codelineno-1-11 name=__codelineno-1-11></a>
+<a id=__codelineno-1-12 name=__codelineno-1-12></a>        fmt.Printf(&quot;📝 %s %s from %s\n&quot;, method, path, userAgent)
+<a id=__codelineno-1-13 name=__codelineno-1-13></a>
+<a id=__codelineno-1-14 name=__codelineno-1-14></a>        // Call the next handler
+<a id=__codelineno-1-15 name=__codelineno-1-15></a>        next(request, response)
+<a id=__codelineno-1-16 name=__codelineno-1-16></a>
+<a id=__codelineno-1-17 name=__codelineno-1-17></a>        fmt.Printf(&quot;✅ %s %s completed\n&quot;, method, path)
+<a id=__codelineno-1-18 name=__codelineno-1-18></a>    }
+<a id=__codelineno-1-19 name=__codelineno-1-19></a>}
+<a id=__codelineno-1-20 name=__codelineno-1-20></a>
+<a id=__codelineno-1-21 name=__codelineno-1-21></a>// Apply middleware to a handler
+<a id=__codelineno-1-22 name=__codelineno-1-22></a>function createLoggedHandler(handler function) {
+<a id=__codelineno-1-23 name=__codelineno-1-23></a>    return loggingMiddleware(handler)
+<a id=__codelineno-1-24 name=__codelineno-1-24></a>}
+<a id=__codelineno-1-25 name=__codelineno-1-25></a>
+<a id=__codelineno-1-26 name=__codelineno-1-26></a>// Usage
+<a id=__codelineno-1-27 name=__codelineno-1-27></a>function homeHandler(request map, response map) {
+<a id=__codelineno-1-28 name=__codelineno-1-28></a>    http.WriteResponse(response, 200, &quot;text/html&quot;, &quot;&lt;h1&gt;Home Page&lt;/h1&gt;&quot;)
+<a id=__codelineno-1-29 name=__codelineno-1-29></a>}
+<a id=__codelineno-1-30 name=__codelineno-1-30></a>
+<a id=__codelineno-1-31 name=__codelineno-1-31></a>var loggedHomeHandler = createLoggedHandler(homeHandler)
+<a id=__codelineno-1-32 name=__codelineno-1-32></a>
+<a id=__codelineno-1-33 name=__codelineno-1-33></a>// Register with mux
+<a id=__codelineno-1-34 name=__codelineno-1-34></a>var mux = http.NewMux()[0]
+<a id=__codelineno-1-35 name=__codelineno-1-35></a>http.HandleFunc(mux, &quot;/&quot;, loggedHomeHandler)
 </code></pre></div></td></tr></table></div></p> <h2 id=common-middleware-patterns>Common Middleware Patterns</h2> <h3 id=logging-middleware>Logging Middleware</h3> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Logging Middleware</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-2-1> 1</a></span>
 <span class=normal><a href=#__codelineno-2-2> 2</a></span>
 <span class=normal><a href=#__codelineno-2-3> 3</a></span>
@@ -109,50 +111,52 @@
 <span class=normal><a href=#__codelineno-2-41>41</a></span>
 <span class=normal><a href=#__codelineno-2-42>42</a></span>
 <span class=normal><a href=#__codelineno-2-43>43</a></span>
-<span class=normal><a href=#__codelineno-2-44>44</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-2-1 name=__codelineno-2-1></a>import http
-<a id=__codelineno-2-2 name=__codelineno-2-2></a>import fmt
-<a id=__codelineno-2-3 name=__codelineno-2-3></a>import log
-<a id=__codelineno-2-4 name=__codelineno-2-4></a>
-<a id=__codelineno-2-5 name=__codelineno-2-5></a>// Comprehensive logging middleware
-<a id=__codelineno-2-6 name=__codelineno-2-6></a>function requestLoggingMiddleware(next function(any) any) function(any) any {
-<a id=__codelineno-2-7 name=__codelineno-2-7></a>    return function(request map, response map) {
-<a id=__codelineno-2-8 name=__codelineno-2-8></a>        var startTime = getCurrentTime()  // Simplified time function
-<a id=__codelineno-2-9 name=__codelineno-2-9></a>        var method = request[&quot;method&quot;]
-<a id=__codelineno-2-10 name=__codelineno-2-10></a>        var path = request[&quot;path&quot;]
-<a id=__codelineno-2-11 name=__codelineno-2-11></a>        var userAgent = request[&quot;headers&quot;][&quot;User-Agent&quot;]
-<a id=__codelineno-2-12 name=__codelineno-2-12></a>        var remoteAddr = request[&quot;remoteAddr&quot;]
-<a id=__codelineno-2-13 name=__codelineno-2-13></a>
-<a id=__codelineno-2-14 name=__codelineno-2-14></a>        // Log request start
-<a id=__codelineno-2-15 name=__codelineno-2-15></a>        log.Printf(&quot;→ %s %s from %s (%s)&quot;, method, path, remoteAddr, userAgent)
-<a id=__codelineno-2-16 name=__codelineno-2-16></a>
-<a id=__codelineno-2-17 name=__codelineno-2-17></a>        // Call next handler
-<a id=__codelineno-2-18 name=__codelineno-2-18></a>        next(request, response)
-<a id=__codelineno-2-19 name=__codelineno-2-19></a>
-<a id=__codelineno-2-20 name=__codelineno-2-20></a>        // Log request completion
-<a id=__codelineno-2-21 name=__codelineno-2-21></a>        var endTime = getCurrentTime()
-<a id=__codelineno-2-22 name=__codelineno-2-22></a>        var duration = endTime - startTime
-<a id=__codelineno-2-23 name=__codelineno-2-23></a>        log.Printf(&quot;← %s %s completed in %dms&quot;, method, path, duration)
-<a id=__codelineno-2-24 name=__codelineno-2-24></a>    }
-<a id=__codelineno-2-25 name=__codelineno-2-25></a>}
-<a id=__codelineno-2-26 name=__codelineno-2-26></a>
-<a id=__codelineno-2-27 name=__codelineno-2-27></a>// Structured logging middleware
-<a id=__codelineno-2-28 name=__codelineno-2-28></a>function structuredLoggingMiddleware(next function(any) any) function(any) any {
-<a id=__codelineno-2-29 name=__codelineno-2-29></a>    return function(request map, response map) {
-<a id=__codelineno-2-30 name=__codelineno-2-30></a>        var logData = {
-<a id=__codelineno-2-31 name=__codelineno-2-31></a>            &quot;timestamp&quot;: getCurrentTimestamp(),
-<a id=__codelineno-2-32 name=__codelineno-2-32></a>            &quot;method&quot;: request[&quot;method&quot;],
-<a id=__codelineno-2-33 name=__codelineno-2-33></a>            &quot;path&quot;: request[&quot;path&quot;],
-<a id=__codelineno-2-34 name=__codelineno-2-34></a>            &quot;userAgent&quot;: request[&quot;headers&quot;][&quot;User-Agent&quot;],
-<a id=__codelineno-2-35 name=__codelineno-2-35></a>            &quot;remoteAddr&quot;: request[&quot;remoteAddr&quot;],
-<a id=__codelineno-2-36 name=__codelineno-2-36></a>            &quot;referer&quot;: request[&quot;headers&quot;][&quot;Referer&quot;]
-<a id=__codelineno-2-37 name=__codelineno-2-37></a>        }
-<a id=__codelineno-2-38 name=__codelineno-2-38></a>
-<a id=__codelineno-2-39 name=__codelineno-2-39></a>        var jsonLog, _ = json.Marshal(logData)
-<a id=__codelineno-2-40 name=__codelineno-2-40></a>        log.Println(jsonLog)
-<a id=__codelineno-2-41 name=__codelineno-2-41></a>
-<a id=__codelineno-2-42 name=__codelineno-2-42></a>        next(request, response)
-<a id=__codelineno-2-43 name=__codelineno-2-43></a>    }
-<a id=__codelineno-2-44 name=__codelineno-2-44></a>}
+<span class=normal><a href=#__codelineno-2-44>44</a></span>
+<span class=normal><a href=#__codelineno-2-45>45</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-2-1 name=__codelineno-2-1></a>package main
+<a id=__codelineno-2-2 name=__codelineno-2-2></a>import http
+<a id=__codelineno-2-3 name=__codelineno-2-3></a>import fmt
+<a id=__codelineno-2-4 name=__codelineno-2-4></a>import log
+<a id=__codelineno-2-5 name=__codelineno-2-5></a>
+<a id=__codelineno-2-6 name=__codelineno-2-6></a>// Comprehensive logging middleware
+<a id=__codelineno-2-7 name=__codelineno-2-7></a>function requestLoggingMiddleware(next function(any) any) function(any) any {
+<a id=__codelineno-2-8 name=__codelineno-2-8></a>    return function(request map, response map) {
+<a id=__codelineno-2-9 name=__codelineno-2-9></a>        var startTime = getCurrentTime()  // Simplified time function
+<a id=__codelineno-2-10 name=__codelineno-2-10></a>        var method = request[&quot;method&quot;]
+<a id=__codelineno-2-11 name=__codelineno-2-11></a>        var path = request[&quot;path&quot;]
+<a id=__codelineno-2-12 name=__codelineno-2-12></a>        var userAgent = request[&quot;headers&quot;][&quot;User-Agent&quot;]
+<a id=__codelineno-2-13 name=__codelineno-2-13></a>        var remoteAddr = request[&quot;remoteAddr&quot;]
+<a id=__codelineno-2-14 name=__codelineno-2-14></a>
+<a id=__codelineno-2-15 name=__codelineno-2-15></a>        // Log request start
+<a id=__codelineno-2-16 name=__codelineno-2-16></a>        log.Printf(&quot;→ %s %s from %s (%s)&quot;, method, path, remoteAddr, userAgent)
+<a id=__codelineno-2-17 name=__codelineno-2-17></a>
+<a id=__codelineno-2-18 name=__codelineno-2-18></a>        // Call next handler
+<a id=__codelineno-2-19 name=__codelineno-2-19></a>        next(request, response)
+<a id=__codelineno-2-20 name=__codelineno-2-20></a>
+<a id=__codelineno-2-21 name=__codelineno-2-21></a>        // Log request completion
+<a id=__codelineno-2-22 name=__codelineno-2-22></a>        var endTime = getCurrentTime()
+<a id=__codelineno-2-23 name=__codelineno-2-23></a>        var duration = endTime - startTime
+<a id=__codelineno-2-24 name=__codelineno-2-24></a>        log.Printf(&quot;← %s %s completed in %dms&quot;, method, path, duration)
+<a id=__codelineno-2-25 name=__codelineno-2-25></a>    }
+<a id=__codelineno-2-26 name=__codelineno-2-26></a>}
+<a id=__codelineno-2-27 name=__codelineno-2-27></a>
+<a id=__codelineno-2-28 name=__codelineno-2-28></a>// Structured logging middleware
+<a id=__codelineno-2-29 name=__codelineno-2-29></a>function structuredLoggingMiddleware(next function(any) any) function(any) any {
+<a id=__codelineno-2-30 name=__codelineno-2-30></a>    return function(request map, response map) {
+<a id=__codelineno-2-31 name=__codelineno-2-31></a>        var logData = {
+<a id=__codelineno-2-32 name=__codelineno-2-32></a>            &quot;timestamp&quot;: getCurrentTimestamp(),
+<a id=__codelineno-2-33 name=__codelineno-2-33></a>            &quot;method&quot;: request[&quot;method&quot;],
+<a id=__codelineno-2-34 name=__codelineno-2-34></a>            &quot;path&quot;: request[&quot;path&quot;],
+<a id=__codelineno-2-35 name=__codelineno-2-35></a>            &quot;userAgent&quot;: request[&quot;headers&quot;][&quot;User-Agent&quot;],
+<a id=__codelineno-2-36 name=__codelineno-2-36></a>            &quot;remoteAddr&quot;: request[&quot;remoteAddr&quot;],
+<a id=__codelineno-2-37 name=__codelineno-2-37></a>            &quot;referer&quot;: request[&quot;headers&quot;][&quot;Referer&quot;]
+<a id=__codelineno-2-38 name=__codelineno-2-38></a>        }
+<a id=__codelineno-2-39 name=__codelineno-2-39></a>
+<a id=__codelineno-2-40 name=__codelineno-2-40></a>        var jsonLog, _ = json.Marshal(logData)
+<a id=__codelineno-2-41 name=__codelineno-2-41></a>        log.Println(jsonLog)
+<a id=__codelineno-2-42 name=__codelineno-2-42></a>
+<a id=__codelineno-2-43 name=__codelineno-2-43></a>        next(request, response)
+<a id=__codelineno-2-44 name=__codelineno-2-44></a>    }
+<a id=__codelineno-2-45 name=__codelineno-2-45></a>}
 </code></pre></div></td></tr></table></div> <h3 id=authentication-middleware>Authentication Middleware</h3> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Authentication Middleware</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-3-1> 1</a></span>
 <span class=normal><a href=#__codelineno-3-2> 2</a></span>
 <span class=normal><a href=#__codelineno-3-3> 3</a></span>
@@ -239,93 +243,95 @@
 <span class=normal><a href=#__codelineno-3-84>84</a></span>
 <span class=normal><a href=#__codelineno-3-85>85</a></span>
 <span class=normal><a href=#__codelineno-3-86>86</a></span>
-<span class=normal><a href=#__codelineno-3-87>87</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-3-1 name=__codelineno-3-1></a>import http
-<a id=__codelineno-3-2 name=__codelineno-3-2></a>import json
-<a id=__codelineno-3-3 name=__codelineno-3-3></a>import strings
-<a id=__codelineno-3-4 name=__codelineno-3-4></a>import fmt
-<a id=__codelineno-3-5 name=__codelineno-3-5></a>
-<a id=__codelineno-3-6 name=__codelineno-3-6></a>// JWT authentication middleware
-<a id=__codelineno-3-7 name=__codelineno-3-7></a>function jwtAuthMiddleware(next function(any) any) function(any) any {
-<a id=__codelineno-3-8 name=__codelineno-3-8></a>    return function(request map, response map) {
-<a id=__codelineno-3-9 name=__codelineno-3-9></a>        var authHeader = request[&quot;headers&quot;][&quot;Authorization&quot;]
-<a id=__codelineno-3-10 name=__codelineno-3-10></a>
-<a id=__codelineno-3-11 name=__codelineno-3-11></a>        if authHeader == None or authHeader == &quot;&quot; {
-<a id=__codelineno-3-12 name=__codelineno-3-12></a>            unauthorizedResponse(response, &quot;Missing Authorization header&quot;)
-<a id=__codelineno-3-13 name=__codelineno-3-13></a>            return
-<a id=__codelineno-3-14 name=__codelineno-3-14></a>        }
-<a id=__codelineno-3-15 name=__codelineno-3-15></a>
-<a id=__codelineno-3-16 name=__codelineno-3-16></a>        if !strings.HasPrefix(authHeader, &quot;Bearer &quot;) {
-<a id=__codelineno-3-17 name=__codelineno-3-17></a>            unauthorizedResponse(response, &quot;Invalid Authorization header format&quot;)
-<a id=__codelineno-3-18 name=__codelineno-3-18></a>            return
-<a id=__codelineno-3-19 name=__codelineno-3-19></a>        }
-<a id=__codelineno-3-20 name=__codelineno-3-20></a>
-<a id=__codelineno-3-21 name=__codelineno-3-21></a>        var token = strings.TrimPrefix(authHeader, &quot;Bearer &quot;)
-<a id=__codelineno-3-22 name=__codelineno-3-22></a>        var user = validateJWTToken(token)
-<a id=__codelineno-3-23 name=__codelineno-3-23></a>
-<a id=__codelineno-3-24 name=__codelineno-3-24></a>        if user == None {
-<a id=__codelineno-3-25 name=__codelineno-3-25></a>            unauthorizedResponse(response, &quot;Invalid or expired token&quot;)
-<a id=__codelineno-3-26 name=__codelineno-3-26></a>            return
-<a id=__codelineno-3-27 name=__codelineno-3-27></a>        }
-<a id=__codelineno-3-28 name=__codelineno-3-28></a>
-<a id=__codelineno-3-29 name=__codelineno-3-29></a>        // Add user to request context
-<a id=__codelineno-3-30 name=__codelineno-3-30></a>        request[&quot;user&quot;] = user
-<a id=__codelineno-3-31 name=__codelineno-3-31></a>
-<a id=__codelineno-3-32 name=__codelineno-3-32></a>        // Call next handler
-<a id=__codelineno-3-33 name=__codelineno-3-33></a>        next(request, response)
-<a id=__codelineno-3-34 name=__codelineno-3-34></a>    }
-<a id=__codelineno-3-35 name=__codelineno-3-35></a>}
-<a id=__codelineno-3-36 name=__codelineno-3-36></a>
-<a id=__codelineno-3-37 name=__codelineno-3-37></a>// API key authentication middleware
-<a id=__codelineno-3-38 name=__codelineno-3-38></a>function apiKeyAuthMiddleware(next function(any) any) function(any) any {
-<a id=__codelineno-3-39 name=__codelineno-3-39></a>    return function(request map, response map) {
-<a id=__codelineno-3-40 name=__codelineno-3-40></a>        var apiKey = request[&quot;headers&quot;][&quot;X-API-Key&quot;]
-<a id=__codelineno-3-41 name=__codelineno-3-41></a>
-<a id=__codelineno-3-42 name=__codelineno-3-42></a>        if apiKey == None or apiKey == &quot;&quot; {
-<a id=__codelineno-3-43 name=__codelineno-3-43></a>            unauthorizedResponse(response, &quot;Missing API key&quot;)
-<a id=__codelineno-3-44 name=__codelineno-3-44></a>            return
-<a id=__codelineno-3-45 name=__codelineno-3-45></a>        }
-<a id=__codelineno-3-46 name=__codelineno-3-46></a>
-<a id=__codelineno-3-47 name=__codelineno-3-47></a>        if !isValidAPIKey(apiKey) {
-<a id=__codelineno-3-48 name=__codelineno-3-48></a>            unauthorizedResponse(response, &quot;Invalid API key&quot;)
-<a id=__codelineno-3-49 name=__codelineno-3-49></a>            return
-<a id=__codelineno-3-50 name=__codelineno-3-50></a>        }
-<a id=__codelineno-3-51 name=__codelineno-3-51></a>
-<a id=__codelineno-3-52 name=__codelineno-3-52></a>        // Add API key info to request
-<a id=__codelineno-3-53 name=__codelineno-3-53></a>        request[&quot;apiKey&quot;] = apiKey
-<a id=__codelineno-3-54 name=__codelineno-3-54></a>        request[&quot;authenticated&quot;] = true
-<a id=__codelineno-3-55 name=__codelineno-3-55></a>
-<a id=__codelineno-3-56 name=__codelineno-3-56></a>        next(request, response)
-<a id=__codelineno-3-57 name=__codelineno-3-57></a>    }
-<a id=__codelineno-3-58 name=__codelineno-3-58></a>}
-<a id=__codelineno-3-59 name=__codelineno-3-59></a>
-<a id=__codelineno-3-60 name=__codelineno-3-60></a>// Helper functions
-<a id=__codelineno-3-61 name=__codelineno-3-61></a>function unauthorizedResponse(response map, message string) {
-<a id=__codelineno-3-62 name=__codelineno-3-62></a>    var errorResponse = {
-<a id=__codelineno-3-63 name=__codelineno-3-63></a>        &quot;error&quot;: &quot;Unauthorized&quot;,
-<a id=__codelineno-3-64 name=__codelineno-3-64></a>        &quot;message&quot;: message,
-<a id=__codelineno-3-65 name=__codelineno-3-65></a>        &quot;status&quot;: 401
-<a id=__codelineno-3-66 name=__codelineno-3-66></a>    }
-<a id=__codelineno-3-67 name=__codelineno-3-67></a>    var jsonData, _ = json.Marshal(errorResponse)
-<a id=__codelineno-3-68 name=__codelineno-3-68></a>    http.WriteResponse(response, 401, &quot;application/json&quot;, jsonData)
-<a id=__codelineno-3-69 name=__codelineno-3-69></a>}
-<a id=__codelineno-3-70 name=__codelineno-3-70></a>
-<a id=__codelineno-3-71 name=__codelineno-3-71></a>function validateJWTToken(token string) {
-<a id=__codelineno-3-72 name=__codelineno-3-72></a>    // Simplified JWT validation
-<a id=__codelineno-3-73 name=__codelineno-3-73></a>    if token == &quot;valid-jwt-token&quot; {
-<a id=__codelineno-3-74 name=__codelineno-3-74></a>        return {&quot;id&quot;: 1, &quot;username&quot;: &quot;alice&quot;, &quot;role&quot;: &quot;admin&quot;}
-<a id=__codelineno-3-75 name=__codelineno-3-75></a>    }
-<a id=__codelineno-3-76 name=__codelineno-3-76></a>    return None
-<a id=__codelineno-3-77 name=__codelineno-3-77></a>}
-<a id=__codelineno-3-78 name=__codelineno-3-78></a>
-<a id=__codelineno-3-79 name=__codelineno-3-79></a>function isValidAPIKey(apiKey string) {
-<a id=__codelineno-3-80 name=__codelineno-3-80></a>    var validKeys = [&quot;key123&quot;, &quot;key456&quot;, &quot;key789&quot;]
-<a id=__codelineno-3-81 name=__codelineno-3-81></a>    for key in validKeys {
-<a id=__codelineno-3-82 name=__codelineno-3-82></a>        if key == apiKey {
-<a id=__codelineno-3-83 name=__codelineno-3-83></a>            return true
-<a id=__codelineno-3-84 name=__codelineno-3-84></a>        }
-<a id=__codelineno-3-85 name=__codelineno-3-85></a>    }
-<a id=__codelineno-3-86 name=__codelineno-3-86></a>    return false
-<a id=__codelineno-3-87 name=__codelineno-3-87></a>}
+<span class=normal><a href=#__codelineno-3-87>87</a></span>
+<span class=normal><a href=#__codelineno-3-88>88</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-3-1 name=__codelineno-3-1></a>package main
+<a id=__codelineno-3-2 name=__codelineno-3-2></a>import http
+<a id=__codelineno-3-3 name=__codelineno-3-3></a>import json
+<a id=__codelineno-3-4 name=__codelineno-3-4></a>import strings
+<a id=__codelineno-3-5 name=__codelineno-3-5></a>import fmt
+<a id=__codelineno-3-6 name=__codelineno-3-6></a>
+<a id=__codelineno-3-7 name=__codelineno-3-7></a>// JWT authentication middleware
+<a id=__codelineno-3-8 name=__codelineno-3-8></a>function jwtAuthMiddleware(next function(any) any) function(any) any {
+<a id=__codelineno-3-9 name=__codelineno-3-9></a>    return function(request map, response map) {
+<a id=__codelineno-3-10 name=__codelineno-3-10></a>        var authHeader = request[&quot;headers&quot;][&quot;Authorization&quot;]
+<a id=__codelineno-3-11 name=__codelineno-3-11></a>
+<a id=__codelineno-3-12 name=__codelineno-3-12></a>        if authHeader == None or authHeader == &quot;&quot; {
+<a id=__codelineno-3-13 name=__codelineno-3-13></a>            unauthorizedResponse(response, &quot;Missing Authorization header&quot;)
+<a id=__codelineno-3-14 name=__codelineno-3-14></a>            return
+<a id=__codelineno-3-15 name=__codelineno-3-15></a>        }
+<a id=__codelineno-3-16 name=__codelineno-3-16></a>
+<a id=__codelineno-3-17 name=__codelineno-3-17></a>        if !strings.HasPrefix(authHeader, &quot;Bearer &quot;) {
+<a id=__codelineno-3-18 name=__codelineno-3-18></a>            unauthorizedResponse(response, &quot;Invalid Authorization header format&quot;)
+<a id=__codelineno-3-19 name=__codelineno-3-19></a>            return
+<a id=__codelineno-3-20 name=__codelineno-3-20></a>        }
+<a id=__codelineno-3-21 name=__codelineno-3-21></a>
+<a id=__codelineno-3-22 name=__codelineno-3-22></a>        var token = strings.TrimPrefix(authHeader, &quot;Bearer &quot;)
+<a id=__codelineno-3-23 name=__codelineno-3-23></a>        var user = validateJWTToken(token)
+<a id=__codelineno-3-24 name=__codelineno-3-24></a>
+<a id=__codelineno-3-25 name=__codelineno-3-25></a>        if user == None {
+<a id=__codelineno-3-26 name=__codelineno-3-26></a>            unauthorizedResponse(response, &quot;Invalid or expired token&quot;)
+<a id=__codelineno-3-27 name=__codelineno-3-27></a>            return
+<a id=__codelineno-3-28 name=__codelineno-3-28></a>        }
+<a id=__codelineno-3-29 name=__codelineno-3-29></a>
+<a id=__codelineno-3-30 name=__codelineno-3-30></a>        // Add user to request context
+<a id=__codelineno-3-31 name=__codelineno-3-31></a>        request[&quot;user&quot;] = user
+<a id=__codelineno-3-32 name=__codelineno-3-32></a>
+<a id=__codelineno-3-33 name=__codelineno-3-33></a>        // Call next handler
+<a id=__codelineno-3-34 name=__codelineno-3-34></a>        next(request, response)
+<a id=__codelineno-3-35 name=__codelineno-3-35></a>    }
+<a id=__codelineno-3-36 name=__codelineno-3-36></a>}
+<a id=__codelineno-3-37 name=__codelineno-3-37></a>
+<a id=__codelineno-3-38 name=__codelineno-3-38></a>// API key authentication middleware
+<a id=__codelineno-3-39 name=__codelineno-3-39></a>function apiKeyAuthMiddleware(next function(any) any) function(any) any {
+<a id=__codelineno-3-40 name=__codelineno-3-40></a>    return function(request map, response map) {
+<a id=__codelineno-3-41 name=__codelineno-3-41></a>        var apiKey = request[&quot;headers&quot;][&quot;X-API-Key&quot;]
+<a id=__codelineno-3-42 name=__codelineno-3-42></a>
+<a id=__codelineno-3-43 name=__codelineno-3-43></a>        if apiKey == None or apiKey == &quot;&quot; {
+<a id=__codelineno-3-44 name=__codelineno-3-44></a>            unauthorizedResponse(response, &quot;Missing API key&quot;)
+<a id=__codelineno-3-45 name=__codelineno-3-45></a>            return
+<a id=__codelineno-3-46 name=__codelineno-3-46></a>        }
+<a id=__codelineno-3-47 name=__codelineno-3-47></a>
+<a id=__codelineno-3-48 name=__codelineno-3-48></a>        if !isValidAPIKey(apiKey) {
+<a id=__codelineno-3-49 name=__codelineno-3-49></a>            unauthorizedResponse(response, &quot;Invalid API key&quot;)
+<a id=__codelineno-3-50 name=__codelineno-3-50></a>            return
+<a id=__codelineno-3-51 name=__codelineno-3-51></a>        }
+<a id=__codelineno-3-52 name=__codelineno-3-52></a>
+<a id=__codelineno-3-53 name=__codelineno-3-53></a>        // Add API key info to request
+<a id=__codelineno-3-54 name=__codelineno-3-54></a>        request[&quot;apiKey&quot;] = apiKey
+<a id=__codelineno-3-55 name=__codelineno-3-55></a>        request[&quot;authenticated&quot;] = true
+<a id=__codelineno-3-56 name=__codelineno-3-56></a>
+<a id=__codelineno-3-57 name=__codelineno-3-57></a>        next(request, response)
+<a id=__codelineno-3-58 name=__codelineno-3-58></a>    }
+<a id=__codelineno-3-59 name=__codelineno-3-59></a>}
+<a id=__codelineno-3-60 name=__codelineno-3-60></a>
+<a id=__codelineno-3-61 name=__codelineno-3-61></a>// Helper functions
+<a id=__codelineno-3-62 name=__codelineno-3-62></a>function unauthorizedResponse(response map, message string) {
+<a id=__codelineno-3-63 name=__codelineno-3-63></a>    var errorResponse = {
+<a id=__codelineno-3-64 name=__codelineno-3-64></a>        &quot;error&quot;: &quot;Unauthorized&quot;,
+<a id=__codelineno-3-65 name=__codelineno-3-65></a>        &quot;message&quot;: message,
+<a id=__codelineno-3-66 name=__codelineno-3-66></a>        &quot;status&quot;: 401
+<a id=__codelineno-3-67 name=__codelineno-3-67></a>    }
+<a id=__codelineno-3-68 name=__codelineno-3-68></a>    var jsonData, _ = json.Marshal(errorResponse)
+<a id=__codelineno-3-69 name=__codelineno-3-69></a>    http.WriteResponse(response, 401, &quot;application/json&quot;, jsonData)
+<a id=__codelineno-3-70 name=__codelineno-3-70></a>}
+<a id=__codelineno-3-71 name=__codelineno-3-71></a>
+<a id=__codelineno-3-72 name=__codelineno-3-72></a>function validateJWTToken(token string) {
+<a id=__codelineno-3-73 name=__codelineno-3-73></a>    // Simplified JWT validation
+<a id=__codelineno-3-74 name=__codelineno-3-74></a>    if token == &quot;valid-jwt-token&quot; {
+<a id=__codelineno-3-75 name=__codelineno-3-75></a>        return {&quot;id&quot;: 1, &quot;username&quot;: &quot;alice&quot;, &quot;role&quot;: &quot;admin&quot;}
+<a id=__codelineno-3-76 name=__codelineno-3-76></a>    }
+<a id=__codelineno-3-77 name=__codelineno-3-77></a>    return None
+<a id=__codelineno-3-78 name=__codelineno-3-78></a>}
+<a id=__codelineno-3-79 name=__codelineno-3-79></a>
+<a id=__codelineno-3-80 name=__codelineno-3-80></a>function isValidAPIKey(apiKey string) {
+<a id=__codelineno-3-81 name=__codelineno-3-81></a>    var validKeys = [&quot;key123&quot;, &quot;key456&quot;, &quot;key789&quot;]
+<a id=__codelineno-3-82 name=__codelineno-3-82></a>    for key in validKeys {
+<a id=__codelineno-3-83 name=__codelineno-3-83></a>        if key == apiKey {
+<a id=__codelineno-3-84 name=__codelineno-3-84></a>            return true
+<a id=__codelineno-3-85 name=__codelineno-3-85></a>        }
+<a id=__codelineno-3-86 name=__codelineno-3-86></a>    }
+<a id=__codelineno-3-87 name=__codelineno-3-87></a>    return false
+<a id=__codelineno-3-88 name=__codelineno-3-88></a>}
 </code></pre></div></td></tr></table></div> <h3 id=cors-middleware>CORS Middleware</h3> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>CORS Middleware</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-4-1> 1</a></span>
 <span class=normal><a href=#__codelineno-4-2> 2</a></span>
 <span class=normal><a href=#__codelineno-4-3> 3</a></span>
@@ -418,99 +424,101 @@
 <span class=normal><a href=#__codelineno-4-90>90</a></span>
 <span class=normal><a href=#__codelineno-4-91>91</a></span>
 <span class=normal><a href=#__codelineno-4-92>92</a></span>
-<span class=normal><a href=#__codelineno-4-93>93</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-4-1 name=__codelineno-4-1></a>import http
-<a id=__codelineno-4-2 name=__codelineno-4-2></a>import strings
-<a id=__codelineno-4-3 name=__codelineno-4-3></a>
-<a id=__codelineno-4-4 name=__codelineno-4-4></a>// CORS middleware for cross-origin requests
-<a id=__codelineno-4-5 name=__codelineno-4-5></a>function corsMiddleware(next function(any) any) function(any) any {
-<a id=__codelineno-4-6 name=__codelineno-4-6></a>    return function(request map, response map) {
-<a id=__codelineno-4-7 name=__codelineno-4-7></a>        var origin = request[&quot;headers&quot;][&quot;Origin&quot;]
-<a id=__codelineno-4-8 name=__codelineno-4-8></a>        var method = request[&quot;method&quot;]
-<a id=__codelineno-4-9 name=__codelineno-4-9></a>
-<a id=__codelineno-4-10 name=__codelineno-4-10></a>        // Set CORS headers
-<a id=__codelineno-4-11 name=__codelineno-4-11></a>        if origin != None {
-<a id=__codelineno-4-12 name=__codelineno-4-12></a>            http.SetResponseHeader(response, &quot;Access-Control-Allow-Origin&quot;, origin)
-<a id=__codelineno-4-13 name=__codelineno-4-13></a>        } else {
-<a id=__codelineno-4-14 name=__codelineno-4-14></a>            http.SetResponseHeader(response, &quot;Access-Control-Allow-Origin&quot;, &quot;*&quot;)
-<a id=__codelineno-4-15 name=__codelineno-4-15></a>        }
-<a id=__codelineno-4-16 name=__codelineno-4-16></a>
-<a id=__codelineno-4-17 name=__codelineno-4-17></a>        http.SetResponseHeader(response, &quot;Access-Control-Allow-Methods&quot;, &quot;GET, POST, PUT, DELETE, OPTIONS&quot;)
-<a id=__codelineno-4-18 name=__codelineno-4-18></a>        http.SetResponseHeader(response, &quot;Access-Control-Allow-Headers&quot;, &quot;Content-Type, Authorization, X-API-Key&quot;)
-<a id=__codelineno-4-19 name=__codelineno-4-19></a>        http.SetResponseHeader(response, &quot;Access-Control-Allow-Credentials&quot;, &quot;true&quot;)
-<a id=__codelineno-4-20 name=__codelineno-4-20></a>        http.SetResponseHeader(response, &quot;Access-Control-Max-Age&quot;, &quot;86400&quot;)
-<a id=__codelineno-4-21 name=__codelineno-4-21></a>
-<a id=__codelineno-4-22 name=__codelineno-4-22></a>        // Handle preflight OPTIONS request
-<a id=__codelineno-4-23 name=__codelineno-4-23></a>        if method == &quot;OPTIONS&quot; {
-<a id=__codelineno-4-24 name=__codelineno-4-24></a>            http.WriteResponse(response, 200, &quot;&quot;, &quot;&quot;)
-<a id=__codelineno-4-25 name=__codelineno-4-25></a>            return
-<a id=__codelineno-4-26 name=__codelineno-4-26></a>        }
-<a id=__codelineno-4-27 name=__codelineno-4-27></a>
-<a id=__codelineno-4-28 name=__codelineno-4-28></a>        // Call next handler
-<a id=__codelineno-4-29 name=__codelineno-4-29></a>        next(request, response)
-<a id=__codelineno-4-30 name=__codelineno-4-30></a>    }
-<a id=__codelineno-4-31 name=__codelineno-4-31></a>}
-<a id=__codelineno-4-32 name=__codelineno-4-32></a>
-<a id=__codelineno-4-33 name=__codelineno-4-33></a>// Configurable CORS middleware
-<a id=__codelineno-4-34 name=__codelineno-4-34></a>function configurableCORSMiddleware(config map) {
-<a id=__codelineno-4-35 name=__codelineno-4-35></a>    return function(next function) {
-<a id=__codelineno-4-36 name=__codelineno-4-36></a>        return function(request map, response map) {
-<a id=__codelineno-4-37 name=__codelineno-4-37></a>            var origin = request[&quot;headers&quot;][&quot;Origin&quot;]
-<a id=__codelineno-4-38 name=__codelineno-4-38></a>            var method = request[&quot;method&quot;]
-<a id=__codelineno-4-39 name=__codelineno-4-39></a>
-<a id=__codelineno-4-40 name=__codelineno-4-40></a>            // Check allowed origins
-<a id=__codelineno-4-41 name=__codelineno-4-41></a>            var allowedOrigins = config[&quot;allowedOrigins&quot;]
-<a id=__codelineno-4-42 name=__codelineno-4-42></a>            var originAllowed = false
-<a id=__codelineno-4-43 name=__codelineno-4-43></a>
-<a id=__codelineno-4-44 name=__codelineno-4-44></a>            if allowedOrigins == None {
-<a id=__codelineno-4-45 name=__codelineno-4-45></a>                originAllowed = true
-<a id=__codelineno-4-46 name=__codelineno-4-46></a>                http.SetResponseHeader(response, &quot;Access-Control-Allow-Origin&quot;, &quot;*&quot;)
-<a id=__codelineno-4-47 name=__codelineno-4-47></a>            } else {
-<a id=__codelineno-4-48 name=__codelineno-4-48></a>                for allowedOrigin in allowedOrigins {
-<a id=__codelineno-4-49 name=__codelineno-4-49></a>                    if origin == allowedOrigin {
-<a id=__codelineno-4-50 name=__codelineno-4-50></a>                        originAllowed = true
-<a id=__codelineno-4-51 name=__codelineno-4-51></a>                        http.SetResponseHeader(response, &quot;Access-Control-Allow-Origin&quot;, origin)
-<a id=__codelineno-4-52 name=__codelineno-4-52></a>                        break
-<a id=__codelineno-4-53 name=__codelineno-4-53></a>                    }
-<a id=__codelineno-4-54 name=__codelineno-4-54></a>                }
-<a id=__codelineno-4-55 name=__codelineno-4-55></a>            }
-<a id=__codelineno-4-56 name=__codelineno-4-56></a>
-<a id=__codelineno-4-57 name=__codelineno-4-57></a>            if !originAllowed {
-<a id=__codelineno-4-58 name=__codelineno-4-58></a>                http.WriteResponse(response, 403, &quot;application/json&quot;, &quot;{\&quot;error\&quot;: \&quot;Origin not allowed\&quot;}&quot;)
-<a id=__codelineno-4-59 name=__codelineno-4-59></a>                return
-<a id=__codelineno-4-60 name=__codelineno-4-60></a>            }
-<a id=__codelineno-4-61 name=__codelineno-4-61></a>
-<a id=__codelineno-4-62 name=__codelineno-4-62></a>            // Set other CORS headers
-<a id=__codelineno-4-63 name=__codelineno-4-63></a>            var allowedMethods = config[&quot;allowedMethods&quot;]
-<a id=__codelineno-4-64 name=__codelineno-4-64></a>            if allowedMethods != None {
-<a id=__codelineno-4-65 name=__codelineno-4-65></a>                var methodsStr = strings.Join(allowedMethods, &quot;, &quot;)
-<a id=__codelineno-4-66 name=__codelineno-4-66></a>                http.SetResponseHeader(response, &quot;Access-Control-Allow-Methods&quot;, methodsStr)
-<a id=__codelineno-4-67 name=__codelineno-4-67></a>            }
-<a id=__codelineno-4-68 name=__codelineno-4-68></a>
-<a id=__codelineno-4-69 name=__codelineno-4-69></a>            var allowedHeaders = config[&quot;allowedHeaders&quot;]
-<a id=__codelineno-4-70 name=__codelineno-4-70></a>            if allowedHeaders != None {
-<a id=__codelineno-4-71 name=__codelineno-4-71></a>                var headersStr = strings.Join(allowedHeaders, &quot;, &quot;)
-<a id=__codelineno-4-72 name=__codelineno-4-72></a>                http.SetResponseHeader(response, &quot;Access-Control-Allow-Headers&quot;, headersStr)
-<a id=__codelineno-4-73 name=__codelineno-4-73></a>            }
-<a id=__codelineno-4-74 name=__codelineno-4-74></a>
-<a id=__codelineno-4-75 name=__codelineno-4-75></a>            // Handle preflight
-<a id=__codelineno-4-76 name=__codelineno-4-76></a>            if method == &quot;OPTIONS&quot; {
-<a id=__codelineno-4-77 name=__codelineno-4-77></a>                http.WriteResponse(response, 200, &quot;&quot;, &quot;&quot;)
-<a id=__codelineno-4-78 name=__codelineno-4-78></a>                return
-<a id=__codelineno-4-79 name=__codelineno-4-79></a>            }
-<a id=__codelineno-4-80 name=__codelineno-4-80></a>
-<a id=__codelineno-4-81 name=__codelineno-4-81></a>            next(request, response)
-<a id=__codelineno-4-82 name=__codelineno-4-82></a>        }
-<a id=__codelineno-4-83 name=__codelineno-4-83></a>    }
-<a id=__codelineno-4-84 name=__codelineno-4-84></a>}
-<a id=__codelineno-4-85 name=__codelineno-4-85></a>
-<a id=__codelineno-4-86 name=__codelineno-4-86></a>// Usage
-<a id=__codelineno-4-87 name=__codelineno-4-87></a>var corsConfig = {
-<a id=__codelineno-4-88 name=__codelineno-4-88></a>    &quot;allowedOrigins&quot;: [&quot;https://example.com&quot;, &quot;https://app.example.com&quot;],
-<a id=__codelineno-4-89 name=__codelineno-4-89></a>    &quot;allowedMethods&quot;: [&quot;GET&quot;, &quot;POST&quot;, &quot;PUT&quot;, &quot;DELETE&quot;],
-<a id=__codelineno-4-90 name=__codelineno-4-90></a>    &quot;allowedHeaders&quot;: [&quot;Content-Type&quot;, &quot;Authorization&quot;]
-<a id=__codelineno-4-91 name=__codelineno-4-91></a>}
-<a id=__codelineno-4-92 name=__codelineno-4-92></a>
-<a id=__codelineno-4-93 name=__codelineno-4-93></a>var corsHandler = configurableCORSMiddleware(corsConfig)
+<span class=normal><a href=#__codelineno-4-93>93</a></span>
+<span class=normal><a href=#__codelineno-4-94>94</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-4-1 name=__codelineno-4-1></a>package main
+<a id=__codelineno-4-2 name=__codelineno-4-2></a>import http
+<a id=__codelineno-4-3 name=__codelineno-4-3></a>import strings
+<a id=__codelineno-4-4 name=__codelineno-4-4></a>
+<a id=__codelineno-4-5 name=__codelineno-4-5></a>// CORS middleware for cross-origin requests
+<a id=__codelineno-4-6 name=__codelineno-4-6></a>function corsMiddleware(next function(any) any) function(any) any {
+<a id=__codelineno-4-7 name=__codelineno-4-7></a>    return function(request map, response map) {
+<a id=__codelineno-4-8 name=__codelineno-4-8></a>        var origin = request[&quot;headers&quot;][&quot;Origin&quot;]
+<a id=__codelineno-4-9 name=__codelineno-4-9></a>        var method = request[&quot;method&quot;]
+<a id=__codelineno-4-10 name=__codelineno-4-10></a>
+<a id=__codelineno-4-11 name=__codelineno-4-11></a>        // Set CORS headers
+<a id=__codelineno-4-12 name=__codelineno-4-12></a>        if origin != None {
+<a id=__codelineno-4-13 name=__codelineno-4-13></a>            http.SetResponseHeader(response, &quot;Access-Control-Allow-Origin&quot;, origin)
+<a id=__codelineno-4-14 name=__codelineno-4-14></a>        } else {
+<a id=__codelineno-4-15 name=__codelineno-4-15></a>            http.SetResponseHeader(response, &quot;Access-Control-Allow-Origin&quot;, &quot;*&quot;)
+<a id=__codelineno-4-16 name=__codelineno-4-16></a>        }
+<a id=__codelineno-4-17 name=__codelineno-4-17></a>
+<a id=__codelineno-4-18 name=__codelineno-4-18></a>        http.SetResponseHeader(response, &quot;Access-Control-Allow-Methods&quot;, &quot;GET, POST, PUT, DELETE, OPTIONS&quot;)
+<a id=__codelineno-4-19 name=__codelineno-4-19></a>        http.SetResponseHeader(response, &quot;Access-Control-Allow-Headers&quot;, &quot;Content-Type, Authorization, X-API-Key&quot;)
+<a id=__codelineno-4-20 name=__codelineno-4-20></a>        http.SetResponseHeader(response, &quot;Access-Control-Allow-Credentials&quot;, &quot;true&quot;)
+<a id=__codelineno-4-21 name=__codelineno-4-21></a>        http.SetResponseHeader(response, &quot;Access-Control-Max-Age&quot;, &quot;86400&quot;)
+<a id=__codelineno-4-22 name=__codelineno-4-22></a>
+<a id=__codelineno-4-23 name=__codelineno-4-23></a>        // Handle preflight OPTIONS request
+<a id=__codelineno-4-24 name=__codelineno-4-24></a>        if method == &quot;OPTIONS&quot; {
+<a id=__codelineno-4-25 name=__codelineno-4-25></a>            http.WriteResponse(response, 200, &quot;&quot;, &quot;&quot;)
+<a id=__codelineno-4-26 name=__codelineno-4-26></a>            return
+<a id=__codelineno-4-27 name=__codelineno-4-27></a>        }
+<a id=__codelineno-4-28 name=__codelineno-4-28></a>
+<a id=__codelineno-4-29 name=__codelineno-4-29></a>        // Call next handler
+<a id=__codelineno-4-30 name=__codelineno-4-30></a>        next(request, response)
+<a id=__codelineno-4-31 name=__codelineno-4-31></a>    }
+<a id=__codelineno-4-32 name=__codelineno-4-32></a>}
+<a id=__codelineno-4-33 name=__codelineno-4-33></a>
+<a id=__codelineno-4-34 name=__codelineno-4-34></a>// Configurable CORS middleware
+<a id=__codelineno-4-35 name=__codelineno-4-35></a>function configurableCORSMiddleware(config map) {
+<a id=__codelineno-4-36 name=__codelineno-4-36></a>    return function(next function) {
+<a id=__codelineno-4-37 name=__codelineno-4-37></a>        return function(request map, response map) {
+<a id=__codelineno-4-38 name=__codelineno-4-38></a>            var origin = request[&quot;headers&quot;][&quot;Origin&quot;]
+<a id=__codelineno-4-39 name=__codelineno-4-39></a>            var method = request[&quot;method&quot;]
+<a id=__codelineno-4-40 name=__codelineno-4-40></a>
+<a id=__codelineno-4-41 name=__codelineno-4-41></a>            // Check allowed origins
+<a id=__codelineno-4-42 name=__codelineno-4-42></a>            var allowedOrigins = config[&quot;allowedOrigins&quot;]
+<a id=__codelineno-4-43 name=__codelineno-4-43></a>            var originAllowed = false
+<a id=__codelineno-4-44 name=__codelineno-4-44></a>
+<a id=__codelineno-4-45 name=__codelineno-4-45></a>            if allowedOrigins == None {
+<a id=__codelineno-4-46 name=__codelineno-4-46></a>                originAllowed = true
+<a id=__codelineno-4-47 name=__codelineno-4-47></a>                http.SetResponseHeader(response, &quot;Access-Control-Allow-Origin&quot;, &quot;*&quot;)
+<a id=__codelineno-4-48 name=__codelineno-4-48></a>            } else {
+<a id=__codelineno-4-49 name=__codelineno-4-49></a>                for allowedOrigin in allowedOrigins {
+<a id=__codelineno-4-50 name=__codelineno-4-50></a>                    if origin == allowedOrigin {
+<a id=__codelineno-4-51 name=__codelineno-4-51></a>                        originAllowed = true
+<a id=__codelineno-4-52 name=__codelineno-4-52></a>                        http.SetResponseHeader(response, &quot;Access-Control-Allow-Origin&quot;, origin)
+<a id=__codelineno-4-53 name=__codelineno-4-53></a>                        break
+<a id=__codelineno-4-54 name=__codelineno-4-54></a>                    }
+<a id=__codelineno-4-55 name=__codelineno-4-55></a>                }
+<a id=__codelineno-4-56 name=__codelineno-4-56></a>            }
+<a id=__codelineno-4-57 name=__codelineno-4-57></a>
+<a id=__codelineno-4-58 name=__codelineno-4-58></a>            if !originAllowed {
+<a id=__codelineno-4-59 name=__codelineno-4-59></a>                http.WriteResponse(response, 403, &quot;application/json&quot;, &quot;{\&quot;error\&quot;: \&quot;Origin not allowed\&quot;}&quot;)
+<a id=__codelineno-4-60 name=__codelineno-4-60></a>                return
+<a id=__codelineno-4-61 name=__codelineno-4-61></a>            }
+<a id=__codelineno-4-62 name=__codelineno-4-62></a>
+<a id=__codelineno-4-63 name=__codelineno-4-63></a>            // Set other CORS headers
+<a id=__codelineno-4-64 name=__codelineno-4-64></a>            var allowedMethods = config[&quot;allowedMethods&quot;]
+<a id=__codelineno-4-65 name=__codelineno-4-65></a>            if allowedMethods != None {
+<a id=__codelineno-4-66 name=__codelineno-4-66></a>                var methodsStr = strings.Join(allowedMethods, &quot;, &quot;)
+<a id=__codelineno-4-67 name=__codelineno-4-67></a>                http.SetResponseHeader(response, &quot;Access-Control-Allow-Methods&quot;, methodsStr)
+<a id=__codelineno-4-68 name=__codelineno-4-68></a>            }
+<a id=__codelineno-4-69 name=__codelineno-4-69></a>
+<a id=__codelineno-4-70 name=__codelineno-4-70></a>            var allowedHeaders = config[&quot;allowedHeaders&quot;]
+<a id=__codelineno-4-71 name=__codelineno-4-71></a>            if allowedHeaders != None {
+<a id=__codelineno-4-72 name=__codelineno-4-72></a>                var headersStr = strings.Join(allowedHeaders, &quot;, &quot;)
+<a id=__codelineno-4-73 name=__codelineno-4-73></a>                http.SetResponseHeader(response, &quot;Access-Control-Allow-Headers&quot;, headersStr)
+<a id=__codelineno-4-74 name=__codelineno-4-74></a>            }
+<a id=__codelineno-4-75 name=__codelineno-4-75></a>
+<a id=__codelineno-4-76 name=__codelineno-4-76></a>            // Handle preflight
+<a id=__codelineno-4-77 name=__codelineno-4-77></a>            if method == &quot;OPTIONS&quot; {
+<a id=__codelineno-4-78 name=__codelineno-4-78></a>                http.WriteResponse(response, 200, &quot;&quot;, &quot;&quot;)
+<a id=__codelineno-4-79 name=__codelineno-4-79></a>                return
+<a id=__codelineno-4-80 name=__codelineno-4-80></a>            }
+<a id=__codelineno-4-81 name=__codelineno-4-81></a>
+<a id=__codelineno-4-82 name=__codelineno-4-82></a>            next(request, response)
+<a id=__codelineno-4-83 name=__codelineno-4-83></a>        }
+<a id=__codelineno-4-84 name=__codelineno-4-84></a>    }
+<a id=__codelineno-4-85 name=__codelineno-4-85></a>}
+<a id=__codelineno-4-86 name=__codelineno-4-86></a>
+<a id=__codelineno-4-87 name=__codelineno-4-87></a>// Usage
+<a id=__codelineno-4-88 name=__codelineno-4-88></a>var corsConfig = {
+<a id=__codelineno-4-89 name=__codelineno-4-89></a>    &quot;allowedOrigins&quot;: [&quot;https://example.com&quot;, &quot;https://app.example.com&quot;],
+<a id=__codelineno-4-90 name=__codelineno-4-90></a>    &quot;allowedMethods&quot;: [&quot;GET&quot;, &quot;POST&quot;, &quot;PUT&quot;, &quot;DELETE&quot;],
+<a id=__codelineno-4-91 name=__codelineno-4-91></a>    &quot;allowedHeaders&quot;: [&quot;Content-Type&quot;, &quot;Authorization&quot;]
+<a id=__codelineno-4-92 name=__codelineno-4-92></a>}
+<a id=__codelineno-4-93 name=__codelineno-4-93></a>
+<a id=__codelineno-4-94 name=__codelineno-4-94></a>var corsHandler = configurableCORSMiddleware(corsConfig)
 </code></pre></div></td></tr></table></div> <h3 id=rate-limiting-middleware>Rate Limiting Middleware</h3> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Rate Limiting Middleware</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-5-1> 1</a></span>
 <span class=normal><a href=#__codelineno-5-2> 2</a></span>
 <span class=normal><a href=#__codelineno-5-3> 3</a></span>
@@ -596,92 +604,94 @@
 <span class=normal><a href=#__codelineno-5-83>83</a></span>
 <span class=normal><a href=#__codelineno-5-84>84</a></span>
 <span class=normal><a href=#__codelineno-5-85>85</a></span>
-<span class=normal><a href=#__codelineno-5-86>86</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-5-1 name=__codelineno-5-1></a>import http
-<a id=__codelineno-5-2 name=__codelineno-5-2></a>import json
-<a id=__codelineno-5-3 name=__codelineno-5-3></a>import fmt
-<a id=__codelineno-5-4 name=__codelineno-5-4></a>
-<a id=__codelineno-5-5 name=__codelineno-5-5></a>// Simple rate limiting middleware
-<a id=__codelineno-5-6 name=__codelineno-5-6></a>function rateLimitMiddleware(requestsPerMinute int) {
-<a id=__codelineno-5-7 name=__codelineno-5-7></a>    // In a real implementation, this would use a proper rate limiter
-<a id=__codelineno-5-8 name=__codelineno-5-8></a>    var requestCounts = {}  // Map to track request counts per IP
-<a id=__codelineno-5-9 name=__codelineno-5-9></a>
-<a id=__codelineno-5-10 name=__codelineno-5-10></a>    return function(next function) {
-<a id=__codelineno-5-11 name=__codelineno-5-11></a>        return function(request map, response map) {
-<a id=__codelineno-5-12 name=__codelineno-5-12></a>            var clientIP = getClientIP(request)
-<a id=__codelineno-5-13 name=__codelineno-5-13></a>            var currentTime = getCurrentMinute()  // Simplified time function
-<a id=__codelineno-5-14 name=__codelineno-5-14></a>            var key = clientIP + &quot;:&quot; + currentTime
-<a id=__codelineno-5-15 name=__codelineno-5-15></a>
-<a id=__codelineno-5-16 name=__codelineno-5-16></a>            // Get current request count for this IP/minute
-<a id=__codelineno-5-17 name=__codelineno-5-17></a>            var count = requestCounts[key]
-<a id=__codelineno-5-18 name=__codelineno-5-18></a>            if count == None {
-<a id=__codelineno-5-19 name=__codelineno-5-19></a>                count = 0
-<a id=__codelineno-5-20 name=__codelineno-5-20></a>            }
-<a id=__codelineno-5-21 name=__codelineno-5-21></a>
-<a id=__codelineno-5-22 name=__codelineno-5-22></a>            if count &gt;= requestsPerMinute {
-<a id=__codelineno-5-23 name=__codelineno-5-23></a>                rateLimitExceeded(response, requestsPerMinute)
-<a id=__codelineno-5-24 name=__codelineno-5-24></a>                return
-<a id=__codelineno-5-25 name=__codelineno-5-25></a>            }
-<a id=__codelineno-5-26 name=__codelineno-5-26></a>
-<a id=__codelineno-5-27 name=__codelineno-5-27></a>            // Increment request count
-<a id=__codelineno-5-28 name=__codelineno-5-28></a>            requestCounts[key] = count + 1
-<a id=__codelineno-5-29 name=__codelineno-5-29></a>
-<a id=__codelineno-5-30 name=__codelineno-5-30></a>            // Add rate limit headers
-<a id=__codelineno-5-31 name=__codelineno-5-31></a>            http.SetResponseHeader(response, &quot;X-RateLimit-Limit&quot;, requestsPerMinute)
-<a id=__codelineno-5-32 name=__codelineno-5-32></a>            http.SetResponseHeader(response, &quot;X-RateLimit-Remaining&quot;, requestsPerMinute - count - 1)
-<a id=__codelineno-5-33 name=__codelineno-5-33></a>
-<a id=__codelineno-5-34 name=__codelineno-5-34></a>            next(request, response)
-<a id=__codelineno-5-35 name=__codelineno-5-35></a>        }
-<a id=__codelineno-5-36 name=__codelineno-5-36></a>    }
-<a id=__codelineno-5-37 name=__codelineno-5-37></a>}
-<a id=__codelineno-5-38 name=__codelineno-5-38></a>
-<a id=__codelineno-5-39 name=__codelineno-5-39></a>// Advanced rate limiting with different limits
-<a id=__codelineno-5-40 name=__codelineno-5-40></a>function tieredRateLimitMiddleware(limits map) {
-<a id=__codelineno-5-41 name=__codelineno-5-41></a>    return function(next function) {
-<a id=__codelineno-5-42 name=__codelineno-5-42></a>        return function(request map, response map) {
-<a id=__codelineno-5-43 name=__codelineno-5-43></a>            var clientIP = getClientIP(request)
-<a id=__codelineno-5-44 name=__codelineno-5-44></a>            var userType = getUserType(request)  // e.g., &quot;free&quot;, &quot;premium&quot;, &quot;admin&quot;
-<a id=__codelineno-5-45 name=__codelineno-5-45></a>
-<a id=__codelineno-5-46 name=__codelineno-5-46></a>            var limit = limits[userType]
-<a id=__codelineno-5-47 name=__codelineno-5-47></a>            if limit == None {
-<a id=__codelineno-5-48 name=__codelineno-5-48></a>                limit = limits[&quot;default&quot;]
-<a id=__codelineno-5-49 name=__codelineno-5-49></a>            }
-<a id=__codelineno-5-50 name=__codelineno-5-50></a>
-<a id=__codelineno-5-51 name=__codelineno-5-51></a>            if !checkRateLimit(clientIP, limit) {
-<a id=__codelineno-5-52 name=__codelineno-5-52></a>                rateLimitExceeded(response, limit)
-<a id=__codelineno-5-53 name=__codelineno-5-53></a>                return
-<a id=__codelineno-5-54 name=__codelineno-5-54></a>            }
-<a id=__codelineno-5-55 name=__codelineno-5-55></a>
-<a id=__codelineno-5-56 name=__codelineno-5-56></a>            next(request, response)
-<a id=__codelineno-5-57 name=__codelineno-5-57></a>        }
-<a id=__codelineno-5-58 name=__codelineno-5-58></a>    }
-<a id=__codelineno-5-59 name=__codelineno-5-59></a>}
-<a id=__codelineno-5-60 name=__codelineno-5-60></a>
-<a id=__codelineno-5-61 name=__codelineno-5-61></a>function rateLimitExceeded(response map, limit int) {
-<a id=__codelineno-5-62 name=__codelineno-5-62></a>    var errorResponse = {
-<a id=__codelineno-5-63 name=__codelineno-5-63></a>        &quot;error&quot;: &quot;Rate limit exceeded&quot;,
-<a id=__codelineno-5-64 name=__codelineno-5-64></a>        &quot;message&quot;: &quot;Too many requests&quot;,
-<a id=__codelineno-5-65 name=__codelineno-5-65></a>        &quot;limit&quot;: limit,
-<a id=__codelineno-5-66 name=__codelineno-5-66></a>        &quot;retryAfter&quot;: 60
-<a id=__codelineno-5-67 name=__codelineno-5-67></a>    }
-<a id=__codelineno-5-68 name=__codelineno-5-68></a>
-<a id=__codelineno-5-69 name=__codelineno-5-69></a>    http.SetResponseHeader(response, &quot;Retry-After&quot;, &quot;60&quot;)
-<a id=__codelineno-5-70 name=__codelineno-5-70></a>    var jsonData, _ = json.Marshal(errorResponse)
-<a id=__codelineno-5-71 name=__codelineno-5-71></a>    http.WriteResponse(response, 429, &quot;application/json&quot;, jsonData)
-<a id=__codelineno-5-72 name=__codelineno-5-72></a>}
-<a id=__codelineno-5-73 name=__codelineno-5-73></a>
-<a id=__codelineno-5-74 name=__codelineno-5-74></a>function getClientIP(request map) {
-<a id=__codelineno-5-75 name=__codelineno-5-75></a>    // Check X-Forwarded-For header first
-<a id=__codelineno-5-76 name=__codelineno-5-76></a>    var forwardedFor = request[&quot;headers&quot;][&quot;X-Forwarded-For&quot;]
-<a id=__codelineno-5-77 name=__codelineno-5-77></a>    if forwardedFor != None and forwardedFor != &quot;&quot; {
-<a id=__codelineno-5-78 name=__codelineno-5-78></a>        var ips = strings.Split(forwardedFor, &quot;,&quot;)
-<a id=__codelineno-5-79 name=__codelineno-5-79></a>        return strings.TrimSpace(ips[0])
-<a id=__codelineno-5-80 name=__codelineno-5-80></a>    }
-<a id=__codelineno-5-81 name=__codelineno-5-81></a>
-<a id=__codelineno-5-82 name=__codelineno-5-82></a>    // Fall back to remote address
-<a id=__codelineno-5-83 name=__codelineno-5-83></a>    var remoteAddr = request[&quot;remoteAddr&quot;]
-<a id=__codelineno-5-84 name=__codelineno-5-84></a>    var parts = strings.Split(remoteAddr, &quot;:&quot;)
-<a id=__codelineno-5-85 name=__codelineno-5-85></a>    return parts[0]
-<a id=__codelineno-5-86 name=__codelineno-5-86></a>}
+<span class=normal><a href=#__codelineno-5-86>86</a></span>
+<span class=normal><a href=#__codelineno-5-87>87</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-5-1 name=__codelineno-5-1></a>package main
+<a id=__codelineno-5-2 name=__codelineno-5-2></a>import http
+<a id=__codelineno-5-3 name=__codelineno-5-3></a>import json
+<a id=__codelineno-5-4 name=__codelineno-5-4></a>import fmt
+<a id=__codelineno-5-5 name=__codelineno-5-5></a>
+<a id=__codelineno-5-6 name=__codelineno-5-6></a>// Simple rate limiting middleware
+<a id=__codelineno-5-7 name=__codelineno-5-7></a>function rateLimitMiddleware(requestsPerMinute int) {
+<a id=__codelineno-5-8 name=__codelineno-5-8></a>    // In a real implementation, this would use a proper rate limiter
+<a id=__codelineno-5-9 name=__codelineno-5-9></a>    var requestCounts = {}  // Map to track request counts per IP
+<a id=__codelineno-5-10 name=__codelineno-5-10></a>
+<a id=__codelineno-5-11 name=__codelineno-5-11></a>    return function(next function) {
+<a id=__codelineno-5-12 name=__codelineno-5-12></a>        return function(request map, response map) {
+<a id=__codelineno-5-13 name=__codelineno-5-13></a>            var clientIP = getClientIP(request)
+<a id=__codelineno-5-14 name=__codelineno-5-14></a>            var currentTime = getCurrentMinute()  // Simplified time function
+<a id=__codelineno-5-15 name=__codelineno-5-15></a>            var key = clientIP + &quot;:&quot; + currentTime
+<a id=__codelineno-5-16 name=__codelineno-5-16></a>
+<a id=__codelineno-5-17 name=__codelineno-5-17></a>            // Get current request count for this IP/minute
+<a id=__codelineno-5-18 name=__codelineno-5-18></a>            var count = requestCounts[key]
+<a id=__codelineno-5-19 name=__codelineno-5-19></a>            if count == None {
+<a id=__codelineno-5-20 name=__codelineno-5-20></a>                count = 0
+<a id=__codelineno-5-21 name=__codelineno-5-21></a>            }
+<a id=__codelineno-5-22 name=__codelineno-5-22></a>
+<a id=__codelineno-5-23 name=__codelineno-5-23></a>            if count &gt;= requestsPerMinute {
+<a id=__codelineno-5-24 name=__codelineno-5-24></a>                rateLimitExceeded(response, requestsPerMinute)
+<a id=__codelineno-5-25 name=__codelineno-5-25></a>                return
+<a id=__codelineno-5-26 name=__codelineno-5-26></a>            }
+<a id=__codelineno-5-27 name=__codelineno-5-27></a>
+<a id=__codelineno-5-28 name=__codelineno-5-28></a>            // Increment request count
+<a id=__codelineno-5-29 name=__codelineno-5-29></a>            requestCounts[key] = count + 1
+<a id=__codelineno-5-30 name=__codelineno-5-30></a>
+<a id=__codelineno-5-31 name=__codelineno-5-31></a>            // Add rate limit headers
+<a id=__codelineno-5-32 name=__codelineno-5-32></a>            http.SetResponseHeader(response, &quot;X-RateLimit-Limit&quot;, requestsPerMinute)
+<a id=__codelineno-5-33 name=__codelineno-5-33></a>            http.SetResponseHeader(response, &quot;X-RateLimit-Remaining&quot;, requestsPerMinute - count - 1)
+<a id=__codelineno-5-34 name=__codelineno-5-34></a>
+<a id=__codelineno-5-35 name=__codelineno-5-35></a>            next(request, response)
+<a id=__codelineno-5-36 name=__codelineno-5-36></a>        }
+<a id=__codelineno-5-37 name=__codelineno-5-37></a>    }
+<a id=__codelineno-5-38 name=__codelineno-5-38></a>}
+<a id=__codelineno-5-39 name=__codelineno-5-39></a>
+<a id=__codelineno-5-40 name=__codelineno-5-40></a>// Advanced rate limiting with different limits
+<a id=__codelineno-5-41 name=__codelineno-5-41></a>function tieredRateLimitMiddleware(limits map) {
+<a id=__codelineno-5-42 name=__codelineno-5-42></a>    return function(next function) {
+<a id=__codelineno-5-43 name=__codelineno-5-43></a>        return function(request map, response map) {
+<a id=__codelineno-5-44 name=__codelineno-5-44></a>            var clientIP = getClientIP(request)
+<a id=__codelineno-5-45 name=__codelineno-5-45></a>            var userType = getUserType(request)  // e.g., &quot;free&quot;, &quot;premium&quot;, &quot;admin&quot;
+<a id=__codelineno-5-46 name=__codelineno-5-46></a>
+<a id=__codelineno-5-47 name=__codelineno-5-47></a>            var limit = limits[userType]
+<a id=__codelineno-5-48 name=__codelineno-5-48></a>            if limit == None {
+<a id=__codelineno-5-49 name=__codelineno-5-49></a>                limit = limits[&quot;default&quot;]
+<a id=__codelineno-5-50 name=__codelineno-5-50></a>            }
+<a id=__codelineno-5-51 name=__codelineno-5-51></a>
+<a id=__codelineno-5-52 name=__codelineno-5-52></a>            if !checkRateLimit(clientIP, limit) {
+<a id=__codelineno-5-53 name=__codelineno-5-53></a>                rateLimitExceeded(response, limit)
+<a id=__codelineno-5-54 name=__codelineno-5-54></a>                return
+<a id=__codelineno-5-55 name=__codelineno-5-55></a>            }
+<a id=__codelineno-5-56 name=__codelineno-5-56></a>
+<a id=__codelineno-5-57 name=__codelineno-5-57></a>            next(request, response)
+<a id=__codelineno-5-58 name=__codelineno-5-58></a>        }
+<a id=__codelineno-5-59 name=__codelineno-5-59></a>    }
+<a id=__codelineno-5-60 name=__codelineno-5-60></a>}
+<a id=__codelineno-5-61 name=__codelineno-5-61></a>
+<a id=__codelineno-5-62 name=__codelineno-5-62></a>function rateLimitExceeded(response map, limit int) {
+<a id=__codelineno-5-63 name=__codelineno-5-63></a>    var errorResponse = {
+<a id=__codelineno-5-64 name=__codelineno-5-64></a>        &quot;error&quot;: &quot;Rate limit exceeded&quot;,
+<a id=__codelineno-5-65 name=__codelineno-5-65></a>        &quot;message&quot;: &quot;Too many requests&quot;,
+<a id=__codelineno-5-66 name=__codelineno-5-66></a>        &quot;limit&quot;: limit,
+<a id=__codelineno-5-67 name=__codelineno-5-67></a>        &quot;retryAfter&quot;: 60
+<a id=__codelineno-5-68 name=__codelineno-5-68></a>    }
+<a id=__codelineno-5-69 name=__codelineno-5-69></a>
+<a id=__codelineno-5-70 name=__codelineno-5-70></a>    http.SetResponseHeader(response, &quot;Retry-After&quot;, &quot;60&quot;)
+<a id=__codelineno-5-71 name=__codelineno-5-71></a>    var jsonData, _ = json.Marshal(errorResponse)
+<a id=__codelineno-5-72 name=__codelineno-5-72></a>    http.WriteResponse(response, 429, &quot;application/json&quot;, jsonData)
+<a id=__codelineno-5-73 name=__codelineno-5-73></a>}
+<a id=__codelineno-5-74 name=__codelineno-5-74></a>
+<a id=__codelineno-5-75 name=__codelineno-5-75></a>function getClientIP(request map) {
+<a id=__codelineno-5-76 name=__codelineno-5-76></a>    // Check X-Forwarded-For header first
+<a id=__codelineno-5-77 name=__codelineno-5-77></a>    var forwardedFor = request[&quot;headers&quot;][&quot;X-Forwarded-For&quot;]
+<a id=__codelineno-5-78 name=__codelineno-5-78></a>    if forwardedFor != None and forwardedFor != &quot;&quot; {
+<a id=__codelineno-5-79 name=__codelineno-5-79></a>        var ips = strings.Split(forwardedFor, &quot;,&quot;)
+<a id=__codelineno-5-80 name=__codelineno-5-80></a>        return strings.TrimSpace(ips[0])
+<a id=__codelineno-5-81 name=__codelineno-5-81></a>    }
+<a id=__codelineno-5-82 name=__codelineno-5-82></a>
+<a id=__codelineno-5-83 name=__codelineno-5-83></a>    // Fall back to remote address
+<a id=__codelineno-5-84 name=__codelineno-5-84></a>    var remoteAddr = request[&quot;remoteAddr&quot;]
+<a id=__codelineno-5-85 name=__codelineno-5-85></a>    var parts = strings.Split(remoteAddr, &quot;:&quot;)
+<a id=__codelineno-5-86 name=__codelineno-5-86></a>    return parts[0]
+<a id=__codelineno-5-87 name=__codelineno-5-87></a>}
 </code></pre></div></td></tr></table></div> <h3 id=security-headers-middleware>Security Headers Middleware</h3> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Security Headers Middleware</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-6-1> 1</a></span>
 <span class=normal><a href=#__codelineno-6-2> 2</a></span>
 <span class=normal><a href=#__codelineno-6-3> 3</a></span>
@@ -719,44 +729,46 @@
 <span class=normal><a href=#__codelineno-6-35>35</a></span>
 <span class=normal><a href=#__codelineno-6-36>36</a></span>
 <span class=normal><a href=#__codelineno-6-37>37</a></span>
-<span class=normal><a href=#__codelineno-6-38>38</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-6-1 name=__codelineno-6-1></a>import http
-<a id=__codelineno-6-2 name=__codelineno-6-2></a>
-<a id=__codelineno-6-3 name=__codelineno-6-3></a>// Security headers middleware
-<a id=__codelineno-6-4 name=__codelineno-6-4></a>function securityHeadersMiddleware(next function(any) any) function(any) any {
-<a id=__codelineno-6-5 name=__codelineno-6-5></a>    return function(request map, response map) {
-<a id=__codelineno-6-6 name=__codelineno-6-6></a>        // Content Security Policy
-<a id=__codelineno-6-7 name=__codelineno-6-7></a>        http.SetResponseHeader(response, &quot;Content-Security-Policy&quot;, 
-<a id=__codelineno-6-8 name=__codelineno-6-8></a>            &quot;default-src &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;&quot;)
-<a id=__codelineno-6-9 name=__codelineno-6-9></a>
-<a id=__codelineno-6-10 name=__codelineno-6-10></a>        // Prevent MIME type sniffing
-<a id=__codelineno-6-11 name=__codelineno-6-11></a>        http.SetResponseHeader(response, &quot;X-Content-Type-Options&quot;, &quot;nosniff&quot;)
-<a id=__codelineno-6-12 name=__codelineno-6-12></a>
-<a id=__codelineno-6-13 name=__codelineno-6-13></a>        // Prevent clickjacking
-<a id=__codelineno-6-14 name=__codelineno-6-14></a>        http.SetResponseHeader(response, &quot;X-Frame-Options&quot;, &quot;DENY&quot;)
-<a id=__codelineno-6-15 name=__codelineno-6-15></a>
-<a id=__codelineno-6-16 name=__codelineno-6-16></a>        // XSS protection
-<a id=__codelineno-6-17 name=__codelineno-6-17></a>        http.SetResponseHeader(response, &quot;X-XSS-Protection&quot;, &quot;1; mode=block&quot;)
-<a id=__codelineno-6-18 name=__codelineno-6-18></a>
-<a id=__codelineno-6-19 name=__codelineno-6-19></a>        // HTTPS enforcement (if using HTTPS)
-<a id=__codelineno-6-20 name=__codelineno-6-20></a>        if isHTTPS(request) {
-<a id=__codelineno-6-21 name=__codelineno-6-21></a>            http.SetResponseHeader(response, &quot;Strict-Transport-Security&quot;, &quot;max-age=31536000; includeSubDomains&quot;)
-<a id=__codelineno-6-22 name=__codelineno-6-22></a>        }
-<a id=__codelineno-6-23 name=__codelineno-6-23></a>
-<a id=__codelineno-6-24 name=__codelineno-6-24></a>        // Referrer policy
-<a id=__codelineno-6-25 name=__codelineno-6-25></a>        http.SetResponseHeader(response, &quot;Referrer-Policy&quot;, &quot;strict-origin-when-cross-origin&quot;)
-<a id=__codelineno-6-26 name=__codelineno-6-26></a>
-<a id=__codelineno-6-27 name=__codelineno-6-27></a>        // Permissions policy
-<a id=__codelineno-6-28 name=__codelineno-6-28></a>        http.SetResponseHeader(response, &quot;Permissions-Policy&quot;, &quot;geolocation=(), microphone=(), camera=()&quot;)
-<a id=__codelineno-6-29 name=__codelineno-6-29></a>
-<a id=__codelineno-6-30 name=__codelineno-6-30></a>        next(request, response)
-<a id=__codelineno-6-31 name=__codelineno-6-31></a>    }
-<a id=__codelineno-6-32 name=__codelineno-6-32></a>}
-<a id=__codelineno-6-33 name=__codelineno-6-33></a>
-<a id=__codelineno-6-34 name=__codelineno-6-34></a>function isHTTPS(request map) {
-<a id=__codelineno-6-35 name=__codelineno-6-35></a>    // Check if request is HTTPS
-<a id=__codelineno-6-36 name=__codelineno-6-36></a>    var proto = request[&quot;headers&quot;][&quot;X-Forwarded-Proto&quot;]
-<a id=__codelineno-6-37 name=__codelineno-6-37></a>    return proto == &quot;https&quot; or strings.HasPrefix(request[&quot;url&quot;], &quot;https://&quot;)
-<a id=__codelineno-6-38 name=__codelineno-6-38></a>}
+<span class=normal><a href=#__codelineno-6-38>38</a></span>
+<span class=normal><a href=#__codelineno-6-39>39</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-6-1 name=__codelineno-6-1></a>package main
+<a id=__codelineno-6-2 name=__codelineno-6-2></a>import http
+<a id=__codelineno-6-3 name=__codelineno-6-3></a>
+<a id=__codelineno-6-4 name=__codelineno-6-4></a>// Security headers middleware
+<a id=__codelineno-6-5 name=__codelineno-6-5></a>function securityHeadersMiddleware(next function(any) any) function(any) any {
+<a id=__codelineno-6-6 name=__codelineno-6-6></a>    return function(request map, response map) {
+<a id=__codelineno-6-7 name=__codelineno-6-7></a>        // Content Security Policy
+<a id=__codelineno-6-8 name=__codelineno-6-8></a>        http.SetResponseHeader(response, &quot;Content-Security-Policy&quot;, 
+<a id=__codelineno-6-9 name=__codelineno-6-9></a>            &quot;default-src &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;&quot;)
+<a id=__codelineno-6-10 name=__codelineno-6-10></a>
+<a id=__codelineno-6-11 name=__codelineno-6-11></a>        // Prevent MIME type sniffing
+<a id=__codelineno-6-12 name=__codelineno-6-12></a>        http.SetResponseHeader(response, &quot;X-Content-Type-Options&quot;, &quot;nosniff&quot;)
+<a id=__codelineno-6-13 name=__codelineno-6-13></a>
+<a id=__codelineno-6-14 name=__codelineno-6-14></a>        // Prevent clickjacking
+<a id=__codelineno-6-15 name=__codelineno-6-15></a>        http.SetResponseHeader(response, &quot;X-Frame-Options&quot;, &quot;DENY&quot;)
+<a id=__codelineno-6-16 name=__codelineno-6-16></a>
+<a id=__codelineno-6-17 name=__codelineno-6-17></a>        // XSS protection
+<a id=__codelineno-6-18 name=__codelineno-6-18></a>        http.SetResponseHeader(response, &quot;X-XSS-Protection&quot;, &quot;1; mode=block&quot;)
+<a id=__codelineno-6-19 name=__codelineno-6-19></a>
+<a id=__codelineno-6-20 name=__codelineno-6-20></a>        // HTTPS enforcement (if using HTTPS)
+<a id=__codelineno-6-21 name=__codelineno-6-21></a>        if isHTTPS(request) {
+<a id=__codelineno-6-22 name=__codelineno-6-22></a>            http.SetResponseHeader(response, &quot;Strict-Transport-Security&quot;, &quot;max-age=31536000; includeSubDomains&quot;)
+<a id=__codelineno-6-23 name=__codelineno-6-23></a>        }
+<a id=__codelineno-6-24 name=__codelineno-6-24></a>
+<a id=__codelineno-6-25 name=__codelineno-6-25></a>        // Referrer policy
+<a id=__codelineno-6-26 name=__codelineno-6-26></a>        http.SetResponseHeader(response, &quot;Referrer-Policy&quot;, &quot;strict-origin-when-cross-origin&quot;)
+<a id=__codelineno-6-27 name=__codelineno-6-27></a>
+<a id=__codelineno-6-28 name=__codelineno-6-28></a>        // Permissions policy
+<a id=__codelineno-6-29 name=__codelineno-6-29></a>        http.SetResponseHeader(response, &quot;Permissions-Policy&quot;, &quot;geolocation=(), microphone=(), camera=()&quot;)
+<a id=__codelineno-6-30 name=__codelineno-6-30></a>
+<a id=__codelineno-6-31 name=__codelineno-6-31></a>        next(request, response)
+<a id=__codelineno-6-32 name=__codelineno-6-32></a>    }
+<a id=__codelineno-6-33 name=__codelineno-6-33></a>}
+<a id=__codelineno-6-34 name=__codelineno-6-34></a>
+<a id=__codelineno-6-35 name=__codelineno-6-35></a>function isHTTPS(request map) {
+<a id=__codelineno-6-36 name=__codelineno-6-36></a>    // Check if request is HTTPS
+<a id=__codelineno-6-37 name=__codelineno-6-37></a>    var proto = request[&quot;headers&quot;][&quot;X-Forwarded-Proto&quot;]
+<a id=__codelineno-6-38 name=__codelineno-6-38></a>    return proto == &quot;https&quot; or strings.HasPrefix(request[&quot;url&quot;], &quot;https://&quot;)
+<a id=__codelineno-6-39 name=__codelineno-6-39></a>}
 </code></pre></div></td></tr></table></div> <h3 id=error-handling-middleware>Error Handling Middleware</h3> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Error Handling Middleware</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-7-1> 1</a></span>
 <span class=normal><a href=#__codelineno-7-2> 2</a></span>
 <span class=normal><a href=#__codelineno-7-3> 3</a></span>
@@ -824,74 +836,76 @@
 <span class=normal><a href=#__codelineno-7-65>65</a></span>
 <span class=normal><a href=#__codelineno-7-66>66</a></span>
 <span class=normal><a href=#__codelineno-7-67>67</a></span>
-<span class=normal><a href=#__codelineno-7-68>68</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-7-1 name=__codelineno-7-1></a>import http
-<a id=__codelineno-7-2 name=__codelineno-7-2></a>import json
-<a id=__codelineno-7-3 name=__codelineno-7-3></a>import fmt
-<a id=__codelineno-7-4 name=__codelineno-7-4></a>import log
-<a id=__codelineno-7-5 name=__codelineno-7-5></a>
-<a id=__codelineno-7-6 name=__codelineno-7-6></a>// Error recovery middleware
-<a id=__codelineno-7-7 name=__codelineno-7-7></a>function errorRecoveryMiddleware(next function(any) any) function(any) any {
-<a id=__codelineno-7-8 name=__codelineno-7-8></a>    return function(request map, response map) {
-<a id=__codelineno-7-9 name=__codelineno-7-9></a>        // In a real implementation, this would use proper error recovery
-<a id=__codelineno-7-10 name=__codelineno-7-10></a>        var success = callHandlerSafely(next, request, response)
-<a id=__codelineno-7-11 name=__codelineno-7-11></a>
-<a id=__codelineno-7-12 name=__codelineno-7-12></a>        if !success {
-<a id=__codelineno-7-13 name=__codelineno-7-13></a>            handlePanic(request, response)
-<a id=__codelineno-7-14 name=__codelineno-7-14></a>        }
-<a id=__codelineno-7-15 name=__codelineno-7-15></a>    }
-<a id=__codelineno-7-16 name=__codelineno-7-16></a>}
-<a id=__codelineno-7-17 name=__codelineno-7-17></a>
-<a id=__codelineno-7-18 name=__codelineno-7-18></a>function callHandlerSafely(handler function, request map, response map) {
-<a id=__codelineno-7-19 name=__codelineno-7-19></a>    // Simplified error recovery - in real implementation would use proper panic recovery
-<a id=__codelineno-7-20 name=__codelineno-7-20></a>    var success = true
-<a id=__codelineno-7-21 name=__codelineno-7-21></a>
-<a id=__codelineno-7-22 name=__codelineno-7-22></a>    // Try to call the handler
-<a id=__codelineno-7-23 name=__codelineno-7-23></a>    handler(request, response)
-<a id=__codelineno-7-24 name=__codelineno-7-24></a>
-<a id=__codelineno-7-25 name=__codelineno-7-25></a>    return success
-<a id=__codelineno-7-26 name=__codelineno-7-26></a>}
-<a id=__codelineno-7-27 name=__codelineno-7-27></a>
-<a id=__codelineno-7-28 name=__codelineno-7-28></a>function handlePanic(request map, response map) {
-<a id=__codelineno-7-29 name=__codelineno-7-29></a>    var method = request[&quot;method&quot;]
-<a id=__codelineno-7-30 name=__codelineno-7-30></a>    var path = request[&quot;path&quot;]
-<a id=__codelineno-7-31 name=__codelineno-7-31></a>
-<a id=__codelineno-7-32 name=__codelineno-7-32></a>    log.Printf(&quot;PANIC: %s %s - Internal server error&quot;, method, path)
-<a id=__codelineno-7-33 name=__codelineno-7-33></a>
-<a id=__codelineno-7-34 name=__codelineno-7-34></a>    var errorResponse = {
-<a id=__codelineno-7-35 name=__codelineno-7-35></a>        &quot;error&quot;: &quot;Internal Server Error&quot;,
-<a id=__codelineno-7-36 name=__codelineno-7-36></a>        &quot;message&quot;: &quot;An unexpected error occurred&quot;,
-<a id=__codelineno-7-37 name=__codelineno-7-37></a>        &quot;timestamp&quot;: getCurrentTimestamp()
-<a id=__codelineno-7-38 name=__codelineno-7-38></a>    }
-<a id=__codelineno-7-39 name=__codelineno-7-39></a>
-<a id=__codelineno-7-40 name=__codelineno-7-40></a>    var jsonData, _ = json.Marshal(errorResponse)
-<a id=__codelineno-7-41 name=__codelineno-7-41></a>    http.WriteResponse(response, 500, &quot;application/json&quot;, jsonData)
-<a id=__codelineno-7-42 name=__codelineno-7-42></a>}
-<a id=__codelineno-7-43 name=__codelineno-7-43></a>
-<a id=__codelineno-7-44 name=__codelineno-7-44></a>// Structured error handling middleware
-<a id=__codelineno-7-45 name=__codelineno-7-45></a>function errorHandlingMiddleware(next function(any) any) function(any) any {
-<a id=__codelineno-7-46 name=__codelineno-7-46></a>    return function(request map, response map) {
-<a id=__codelineno-7-47 name=__codelineno-7-47></a>        // Add error handling context to request
-<a id=__codelineno-7-48 name=__codelineno-7-48></a>        request[&quot;errorHandler&quot;] = handleRequestError
-<a id=__codelineno-7-49 name=__codelineno-7-49></a>
-<a id=__codelineno-7-50 name=__codelineno-7-50></a>        next(request, response)
-<a id=__codelineno-7-51 name=__codelineno-7-51></a>    }
-<a id=__codelineno-7-52 name=__codelineno-7-52></a>}
-<a id=__codelineno-7-53 name=__codelineno-7-53></a>
-<a id=__codelineno-7-54 name=__codelineno-7-54></a>function handleRequestError(error string, request map, response map) {
-<a id=__codelineno-7-55 name=__codelineno-7-55></a>    var errorType = classifyError(error)
-<a id=__codelineno-7-56 name=__codelineno-7-56></a>    var statusCode = getStatusCodeForError(errorType)
-<a id=__codelineno-7-57 name=__codelineno-7-57></a>
-<a id=__codelineno-7-58 name=__codelineno-7-58></a>    var errorResponse = {
-<a id=__codelineno-7-59 name=__codelineno-7-59></a>        &quot;error&quot;: errorType,
-<a id=__codelineno-7-60 name=__codelineno-7-60></a>        &quot;message&quot;: error,
-<a id=__codelineno-7-61 name=__codelineno-7-61></a>        &quot;path&quot;: request[&quot;path&quot;],
-<a id=__codelineno-7-62 name=__codelineno-7-62></a>        &quot;method&quot;: request[&quot;method&quot;],
-<a id=__codelineno-7-63 name=__codelineno-7-63></a>        &quot;timestamp&quot;: getCurrentTimestamp()
-<a id=__codelineno-7-64 name=__codelineno-7-64></a>    }
-<a id=__codelineno-7-65 name=__codelineno-7-65></a>
-<a id=__codelineno-7-66 name=__codelineno-7-66></a>    var jsonData, _ = json.Marshal(errorResponse)
-<a id=__codelineno-7-67 name=__codelineno-7-67></a>    http.WriteResponse(response, statusCode, &quot;application/json&quot;, jsonData)
-<a id=__codelineno-7-68 name=__codelineno-7-68></a>}
+<span class=normal><a href=#__codelineno-7-68>68</a></span>
+<span class=normal><a href=#__codelineno-7-69>69</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-7-1 name=__codelineno-7-1></a>package main
+<a id=__codelineno-7-2 name=__codelineno-7-2></a>import http
+<a id=__codelineno-7-3 name=__codelineno-7-3></a>import json
+<a id=__codelineno-7-4 name=__codelineno-7-4></a>import fmt
+<a id=__codelineno-7-5 name=__codelineno-7-5></a>import log
+<a id=__codelineno-7-6 name=__codelineno-7-6></a>
+<a id=__codelineno-7-7 name=__codelineno-7-7></a>// Error recovery middleware
+<a id=__codelineno-7-8 name=__codelineno-7-8></a>function errorRecoveryMiddleware(next function(any) any) function(any) any {
+<a id=__codelineno-7-9 name=__codelineno-7-9></a>    return function(request map, response map) {
+<a id=__codelineno-7-10 name=__codelineno-7-10></a>        // In a real implementation, this would use proper error recovery
+<a id=__codelineno-7-11 name=__codelineno-7-11></a>        var success = callHandlerSafely(next, request, response)
+<a id=__codelineno-7-12 name=__codelineno-7-12></a>
+<a id=__codelineno-7-13 name=__codelineno-7-13></a>        if !success {
+<a id=__codelineno-7-14 name=__codelineno-7-14></a>            handlePanic(request, response)
+<a id=__codelineno-7-15 name=__codelineno-7-15></a>        }
+<a id=__codelineno-7-16 name=__codelineno-7-16></a>    }
+<a id=__codelineno-7-17 name=__codelineno-7-17></a>}
+<a id=__codelineno-7-18 name=__codelineno-7-18></a>
+<a id=__codelineno-7-19 name=__codelineno-7-19></a>function callHandlerSafely(handler function, request map, response map) {
+<a id=__codelineno-7-20 name=__codelineno-7-20></a>    // Simplified error recovery - in real implementation would use proper panic recovery
+<a id=__codelineno-7-21 name=__codelineno-7-21></a>    var success = true
+<a id=__codelineno-7-22 name=__codelineno-7-22></a>
+<a id=__codelineno-7-23 name=__codelineno-7-23></a>    // Try to call the handler
+<a id=__codelineno-7-24 name=__codelineno-7-24></a>    handler(request, response)
+<a id=__codelineno-7-25 name=__codelineno-7-25></a>
+<a id=__codelineno-7-26 name=__codelineno-7-26></a>    return success
+<a id=__codelineno-7-27 name=__codelineno-7-27></a>}
+<a id=__codelineno-7-28 name=__codelineno-7-28></a>
+<a id=__codelineno-7-29 name=__codelineno-7-29></a>function handlePanic(request map, response map) {
+<a id=__codelineno-7-30 name=__codelineno-7-30></a>    var method = request[&quot;method&quot;]
+<a id=__codelineno-7-31 name=__codelineno-7-31></a>    var path = request[&quot;path&quot;]
+<a id=__codelineno-7-32 name=__codelineno-7-32></a>
+<a id=__codelineno-7-33 name=__codelineno-7-33></a>    log.Printf(&quot;PANIC: %s %s - Internal server error&quot;, method, path)
+<a id=__codelineno-7-34 name=__codelineno-7-34></a>
+<a id=__codelineno-7-35 name=__codelineno-7-35></a>    var errorResponse = {
+<a id=__codelineno-7-36 name=__codelineno-7-36></a>        &quot;error&quot;: &quot;Internal Server Error&quot;,
+<a id=__codelineno-7-37 name=__codelineno-7-37></a>        &quot;message&quot;: &quot;An unexpected error occurred&quot;,
+<a id=__codelineno-7-38 name=__codelineno-7-38></a>        &quot;timestamp&quot;: getCurrentTimestamp()
+<a id=__codelineno-7-39 name=__codelineno-7-39></a>    }
+<a id=__codelineno-7-40 name=__codelineno-7-40></a>
+<a id=__codelineno-7-41 name=__codelineno-7-41></a>    var jsonData, _ = json.Marshal(errorResponse)
+<a id=__codelineno-7-42 name=__codelineno-7-42></a>    http.WriteResponse(response, 500, &quot;application/json&quot;, jsonData)
+<a id=__codelineno-7-43 name=__codelineno-7-43></a>}
+<a id=__codelineno-7-44 name=__codelineno-7-44></a>
+<a id=__codelineno-7-45 name=__codelineno-7-45></a>// Structured error handling middleware
+<a id=__codelineno-7-46 name=__codelineno-7-46></a>function errorHandlingMiddleware(next function(any) any) function(any) any {
+<a id=__codelineno-7-47 name=__codelineno-7-47></a>    return function(request map, response map) {
+<a id=__codelineno-7-48 name=__codelineno-7-48></a>        // Add error handling context to request
+<a id=__codelineno-7-49 name=__codelineno-7-49></a>        request[&quot;errorHandler&quot;] = handleRequestError
+<a id=__codelineno-7-50 name=__codelineno-7-50></a>
+<a id=__codelineno-7-51 name=__codelineno-7-51></a>        next(request, response)
+<a id=__codelineno-7-52 name=__codelineno-7-52></a>    }
+<a id=__codelineno-7-53 name=__codelineno-7-53></a>}
+<a id=__codelineno-7-54 name=__codelineno-7-54></a>
+<a id=__codelineno-7-55 name=__codelineno-7-55></a>function handleRequestError(error string, request map, response map) {
+<a id=__codelineno-7-56 name=__codelineno-7-56></a>    var errorType = classifyError(error)
+<a id=__codelineno-7-57 name=__codelineno-7-57></a>    var statusCode = getStatusCodeForError(errorType)
+<a id=__codelineno-7-58 name=__codelineno-7-58></a>
+<a id=__codelineno-7-59 name=__codelineno-7-59></a>    var errorResponse = {
+<a id=__codelineno-7-60 name=__codelineno-7-60></a>        &quot;error&quot;: errorType,
+<a id=__codelineno-7-61 name=__codelineno-7-61></a>        &quot;message&quot;: error,
+<a id=__codelineno-7-62 name=__codelineno-7-62></a>        &quot;path&quot;: request[&quot;path&quot;],
+<a id=__codelineno-7-63 name=__codelineno-7-63></a>        &quot;method&quot;: request[&quot;method&quot;],
+<a id=__codelineno-7-64 name=__codelineno-7-64></a>        &quot;timestamp&quot;: getCurrentTimestamp()
+<a id=__codelineno-7-65 name=__codelineno-7-65></a>    }
+<a id=__codelineno-7-66 name=__codelineno-7-66></a>
+<a id=__codelineno-7-67 name=__codelineno-7-67></a>    var jsonData, _ = json.Marshal(errorResponse)
+<a id=__codelineno-7-68 name=__codelineno-7-68></a>    http.WriteResponse(response, statusCode, &quot;application/json&quot;, jsonData)
+<a id=__codelineno-7-69 name=__codelineno-7-69></a>}
 </code></pre></div></td></tr></table></div> <h2 id=middleware-composition>Middleware Composition</h2> <h3 id=chaining-multiple-middleware>Chaining Multiple Middleware</h3> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Middleware Chaining</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-8-1> 1</a></span>
 <span class=normal><a href=#__codelineno-8-2> 2</a></span>
 <span class=normal><a href=#__codelineno-8-3> 3</a></span>
@@ -930,45 +944,47 @@
 <span class=normal><a href=#__codelineno-8-36>36</a></span>
 <span class=normal><a href=#__codelineno-8-37>37</a></span>
 <span class=normal><a href=#__codelineno-8-38>38</a></span>
-<span class=normal><a href=#__codelineno-8-39>39</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-8-1 name=__codelineno-8-1></a>import http
-<a id=__codelineno-8-2 name=__codelineno-8-2></a>
-<a id=__codelineno-8-3 name=__codelineno-8-3></a>// Middleware chain helper
-<a id=__codelineno-8-4 name=__codelineno-8-4></a>function chainMiddleware(middlewares array) {
-<a id=__codelineno-8-5 name=__codelineno-8-5></a>    return function(handler function) {
-<a id=__codelineno-8-6 name=__codelineno-8-6></a>        var result = handler
-<a id=__codelineno-8-7 name=__codelineno-8-7></a>
-<a id=__codelineno-8-8 name=__codelineno-8-8></a>        // Apply middleware in reverse order
-<a id=__codelineno-8-9 name=__codelineno-8-9></a>        for i in range(len(middlewares) - 1, -1, -1) {
-<a id=__codelineno-8-10 name=__codelineno-8-10></a>            var middleware = middlewares[i]
-<a id=__codelineno-8-11 name=__codelineno-8-11></a>            result = middleware(result)
-<a id=__codelineno-8-12 name=__codelineno-8-12></a>        }
-<a id=__codelineno-8-13 name=__codelineno-8-13></a>
-<a id=__codelineno-8-14 name=__codelineno-8-14></a>        return result
-<a id=__codelineno-8-15 name=__codelineno-8-15></a>    }
-<a id=__codelineno-8-16 name=__codelineno-8-16></a>}
-<a id=__codelineno-8-17 name=__codelineno-8-17></a>
-<a id=__codelineno-8-18 name=__codelineno-8-18></a>// Usage
-<a id=__codelineno-8-19 name=__codelineno-8-19></a>function setupMiddlewareChain() {
-<a id=__codelineno-8-20 name=__codelineno-8-20></a>    var middlewares = [
-<a id=__codelineno-8-21 name=__codelineno-8-21></a>        loggingMiddleware,
-<a id=__codelineno-8-22 name=__codelineno-8-22></a>        corsMiddleware,
-<a id=__codelineno-8-23 name=__codelineno-8-23></a>        securityHeadersMiddleware,
-<a id=__codelineno-8-24 name=__codelineno-8-24></a>        rateLimitMiddleware(100),  // 100 requests per minute
-<a id=__codelineno-8-25 name=__codelineno-8-25></a>        jwtAuthMiddleware
-<a id=__codelineno-8-26 name=__codelineno-8-26></a>    ]
-<a id=__codelineno-8-27 name=__codelineno-8-27></a>
-<a id=__codelineno-8-28 name=__codelineno-8-28></a>    var chain = chainMiddleware(middlewares)
-<a id=__codelineno-8-29 name=__codelineno-8-29></a>
-<a id=__codelineno-8-30 name=__codelineno-8-30></a>    // Apply to handlers
-<a id=__codelineno-8-31 name=__codelineno-8-31></a>    var protectedHandler = chain(apiHandler)
-<a id=__codelineno-8-32 name=__codelineno-8-32></a>    var publicHandler = chainMiddleware([loggingMiddleware, corsMiddleware])(homeHandler)
-<a id=__codelineno-8-33 name=__codelineno-8-33></a>
-<a id=__codelineno-8-34 name=__codelineno-8-34></a>    var mux = http.NewMux()[0]
-<a id=__codelineno-8-35 name=__codelineno-8-35></a>    http.HandleFunc(mux, &quot;/api/protected&quot;, protectedHandler)
-<a id=__codelineno-8-36 name=__codelineno-8-36></a>    http.HandleFunc(mux, &quot;/&quot;, publicHandler)
-<a id=__codelineno-8-37 name=__codelineno-8-37></a>
-<a id=__codelineno-8-38 name=__codelineno-8-38></a>    return mux
-<a id=__codelineno-8-39 name=__codelineno-8-39></a>}
+<span class=normal><a href=#__codelineno-8-39>39</a></span>
+<span class=normal><a href=#__codelineno-8-40>40</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-8-1 name=__codelineno-8-1></a>package main
+<a id=__codelineno-8-2 name=__codelineno-8-2></a>import http
+<a id=__codelineno-8-3 name=__codelineno-8-3></a>
+<a id=__codelineno-8-4 name=__codelineno-8-4></a>// Middleware chain helper
+<a id=__codelineno-8-5 name=__codelineno-8-5></a>function chainMiddleware(middlewares array) {
+<a id=__codelineno-8-6 name=__codelineno-8-6></a>    return function(handler function) {
+<a id=__codelineno-8-7 name=__codelineno-8-7></a>        var result = handler
+<a id=__codelineno-8-8 name=__codelineno-8-8></a>
+<a id=__codelineno-8-9 name=__codelineno-8-9></a>        // Apply middleware in reverse order
+<a id=__codelineno-8-10 name=__codelineno-8-10></a>        for i in range(len(middlewares) - 1, -1, -1) {
+<a id=__codelineno-8-11 name=__codelineno-8-11></a>            var middleware = middlewares[i]
+<a id=__codelineno-8-12 name=__codelineno-8-12></a>            result = middleware(result)
+<a id=__codelineno-8-13 name=__codelineno-8-13></a>        }
+<a id=__codelineno-8-14 name=__codelineno-8-14></a>
+<a id=__codelineno-8-15 name=__codelineno-8-15></a>        return result
+<a id=__codelineno-8-16 name=__codelineno-8-16></a>    }
+<a id=__codelineno-8-17 name=__codelineno-8-17></a>}
+<a id=__codelineno-8-18 name=__codelineno-8-18></a>
+<a id=__codelineno-8-19 name=__codelineno-8-19></a>// Usage
+<a id=__codelineno-8-20 name=__codelineno-8-20></a>function setupMiddlewareChain() {
+<a id=__codelineno-8-21 name=__codelineno-8-21></a>    var middlewares = [
+<a id=__codelineno-8-22 name=__codelineno-8-22></a>        loggingMiddleware,
+<a id=__codelineno-8-23 name=__codelineno-8-23></a>        corsMiddleware,
+<a id=__codelineno-8-24 name=__codelineno-8-24></a>        securityHeadersMiddleware,
+<a id=__codelineno-8-25 name=__codelineno-8-25></a>        rateLimitMiddleware(100),  // 100 requests per minute
+<a id=__codelineno-8-26 name=__codelineno-8-26></a>        jwtAuthMiddleware
+<a id=__codelineno-8-27 name=__codelineno-8-27></a>    ]
+<a id=__codelineno-8-28 name=__codelineno-8-28></a>
+<a id=__codelineno-8-29 name=__codelineno-8-29></a>    var chain = chainMiddleware(middlewares)
+<a id=__codelineno-8-30 name=__codelineno-8-30></a>
+<a id=__codelineno-8-31 name=__codelineno-8-31></a>    // Apply to handlers
+<a id=__codelineno-8-32 name=__codelineno-8-32></a>    var protectedHandler = chain(apiHandler)
+<a id=__codelineno-8-33 name=__codelineno-8-33></a>    var publicHandler = chainMiddleware([loggingMiddleware, corsMiddleware])(homeHandler)
+<a id=__codelineno-8-34 name=__codelineno-8-34></a>
+<a id=__codelineno-8-35 name=__codelineno-8-35></a>    var mux = http.NewMux()[0]
+<a id=__codelineno-8-36 name=__codelineno-8-36></a>    http.HandleFunc(mux, &quot;/api/protected&quot;, protectedHandler)
+<a id=__codelineno-8-37 name=__codelineno-8-37></a>    http.HandleFunc(mux, &quot;/&quot;, publicHandler)
+<a id=__codelineno-8-38 name=__codelineno-8-38></a>
+<a id=__codelineno-8-39 name=__codelineno-8-39></a>    return mux
+<a id=__codelineno-8-40 name=__codelineno-8-40></a>}
 </code></pre></div></td></tr></table></div> <h3 id=conditional-middleware>Conditional Middleware</h3> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Conditional Middleware</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-9-1> 1</a></span>
 <span class=normal><a href=#__codelineno-9-2> 2</a></span>
 <span class=normal><a href=#__codelineno-9-3> 3</a></span>
@@ -1014,52 +1030,54 @@
 <span class=normal><a href=#__codelineno-9-43>43</a></span>
 <span class=normal><a href=#__codelineno-9-44>44</a></span>
 <span class=normal><a href=#__codelineno-9-45>45</a></span>
-<span class=normal><a href=#__codelineno-9-46>46</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-9-1 name=__codelineno-9-1></a>import http
-<a id=__codelineno-9-2 name=__codelineno-9-2></a>import strings
-<a id=__codelineno-9-3 name=__codelineno-9-3></a>
-<a id=__codelineno-9-4 name=__codelineno-9-4></a>// Conditional middleware application
-<a id=__codelineno-9-5 name=__codelineno-9-5></a>function conditionalMiddleware(condition function, middleware function) {
-<a id=__codelineno-9-6 name=__codelineno-9-6></a>    return function(next function) {
-<a id=__codelineno-9-7 name=__codelineno-9-7></a>        return function(request map, response map) {
-<a id=__codelineno-9-8 name=__codelineno-9-8></a>            if condition(request) {
-<a id=__codelineno-9-9 name=__codelineno-9-9></a>                var wrappedHandler = middleware(next)
-<a id=__codelineno-9-10 name=__codelineno-9-10></a>                wrappedHandler(request, response)
-<a id=__codelineno-9-11 name=__codelineno-9-11></a>            } else {
-<a id=__codelineno-9-12 name=__codelineno-9-12></a>                next(request, response)
-<a id=__codelineno-9-13 name=__codelineno-9-13></a>            }
-<a id=__codelineno-9-14 name=__codelineno-9-14></a>        }
-<a id=__codelineno-9-15 name=__codelineno-9-15></a>    }
-<a id=__codelineno-9-16 name=__codelineno-9-16></a>}
-<a id=__codelineno-9-17 name=__codelineno-9-17></a>
-<a id=__codelineno-9-18 name=__codelineno-9-18></a>// Usage examples
-<a id=__codelineno-9-19 name=__codelineno-9-19></a>function isAPIRequest(request map) {
-<a id=__codelineno-9-20 name=__codelineno-9-20></a>    return strings.HasPrefix(request[&quot;path&quot;], &quot;/api/&quot;)
-<a id=__codelineno-9-21 name=__codelineno-9-21></a>}
-<a id=__codelineno-9-22 name=__codelineno-9-22></a>
-<a id=__codelineno-9-23 name=__codelineno-9-23></a>function isAdminRequest(request map) {
-<a id=__codelineno-9-24 name=__codelineno-9-24></a>    return strings.HasPrefix(request[&quot;path&quot;], &quot;/admin/&quot;)
-<a id=__codelineno-9-25 name=__codelineno-9-25></a>}
-<a id=__codelineno-9-26 name=__codelineno-9-26></a>
-<a id=__codelineno-9-27 name=__codelineno-9-27></a>function setupConditionalMiddleware() {
-<a id=__codelineno-9-28 name=__codelineno-9-28></a>    var mux = http.NewMux()[0]
-<a id=__codelineno-9-29 name=__codelineno-9-29></a>
-<a id=__codelineno-9-30 name=__codelineno-9-30></a>    // Apply auth middleware only to API requests
-<a id=__codelineno-9-31 name=__codelineno-9-31></a>    var apiAuthMiddleware = conditionalMiddleware(isAPIRequest, jwtAuthMiddleware)
-<a id=__codelineno-9-32 name=__codelineno-9-32></a>
-<a id=__codelineno-9-33 name=__codelineno-9-33></a>    // Apply admin middleware only to admin requests
-<a id=__codelineno-9-34 name=__codelineno-9-34></a>    var adminAuthMiddleware = conditionalMiddleware(isAdminRequest, adminAuthMiddleware)
-<a id=__codelineno-9-35 name=__codelineno-9-35></a>
-<a id=__codelineno-9-36 name=__codelineno-9-36></a>    var handler = chainMiddleware([
-<a id=__codelineno-9-37 name=__codelineno-9-37></a>        loggingMiddleware,
-<a id=__codelineno-9-38 name=__codelineno-9-38></a>        corsMiddleware,
-<a id=__codelineno-9-39 name=__codelineno-9-39></a>        apiAuthMiddleware,
-<a id=__codelineno-9-40 name=__codelineno-9-40></a>        adminAuthMiddleware
-<a id=__codelineno-9-41 name=__codelineno-9-41></a>    ])(baseHandler)
-<a id=__codelineno-9-42 name=__codelineno-9-42></a>
-<a id=__codelineno-9-43 name=__codelineno-9-43></a>    http.HandleFunc(mux, &quot;/&quot;, handler)
-<a id=__codelineno-9-44 name=__codelineno-9-44></a>
-<a id=__codelineno-9-45 name=__codelineno-9-45></a>    return mux
-<a id=__codelineno-9-46 name=__codelineno-9-46></a>}
+<span class=normal><a href=#__codelineno-9-46>46</a></span>
+<span class=normal><a href=#__codelineno-9-47>47</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-9-1 name=__codelineno-9-1></a>package main
+<a id=__codelineno-9-2 name=__codelineno-9-2></a>import http
+<a id=__codelineno-9-3 name=__codelineno-9-3></a>import strings
+<a id=__codelineno-9-4 name=__codelineno-9-4></a>
+<a id=__codelineno-9-5 name=__codelineno-9-5></a>// Conditional middleware application
+<a id=__codelineno-9-6 name=__codelineno-9-6></a>function conditionalMiddleware(condition function, middleware function) {
+<a id=__codelineno-9-7 name=__codelineno-9-7></a>    return function(next function) {
+<a id=__codelineno-9-8 name=__codelineno-9-8></a>        return function(request map, response map) {
+<a id=__codelineno-9-9 name=__codelineno-9-9></a>            if condition(request) {
+<a id=__codelineno-9-10 name=__codelineno-9-10></a>                var wrappedHandler = middleware(next)
+<a id=__codelineno-9-11 name=__codelineno-9-11></a>                wrappedHandler(request, response)
+<a id=__codelineno-9-12 name=__codelineno-9-12></a>            } else {
+<a id=__codelineno-9-13 name=__codelineno-9-13></a>                next(request, response)
+<a id=__codelineno-9-14 name=__codelineno-9-14></a>            }
+<a id=__codelineno-9-15 name=__codelineno-9-15></a>        }
+<a id=__codelineno-9-16 name=__codelineno-9-16></a>    }
+<a id=__codelineno-9-17 name=__codelineno-9-17></a>}
+<a id=__codelineno-9-18 name=__codelineno-9-18></a>
+<a id=__codelineno-9-19 name=__codelineno-9-19></a>// Usage examples
+<a id=__codelineno-9-20 name=__codelineno-9-20></a>function isAPIRequest(request map) {
+<a id=__codelineno-9-21 name=__codelineno-9-21></a>    return strings.HasPrefix(request[&quot;path&quot;], &quot;/api/&quot;)
+<a id=__codelineno-9-22 name=__codelineno-9-22></a>}
+<a id=__codelineno-9-23 name=__codelineno-9-23></a>
+<a id=__codelineno-9-24 name=__codelineno-9-24></a>function isAdminRequest(request map) {
+<a id=__codelineno-9-25 name=__codelineno-9-25></a>    return strings.HasPrefix(request[&quot;path&quot;], &quot;/admin/&quot;)
+<a id=__codelineno-9-26 name=__codelineno-9-26></a>}
+<a id=__codelineno-9-27 name=__codelineno-9-27></a>
+<a id=__codelineno-9-28 name=__codelineno-9-28></a>function setupConditionalMiddleware() {
+<a id=__codelineno-9-29 name=__codelineno-9-29></a>    var mux = http.NewMux()[0]
+<a id=__codelineno-9-30 name=__codelineno-9-30></a>
+<a id=__codelineno-9-31 name=__codelineno-9-31></a>    // Apply auth middleware only to API requests
+<a id=__codelineno-9-32 name=__codelineno-9-32></a>    var apiAuthMiddleware = conditionalMiddleware(isAPIRequest, jwtAuthMiddleware)
+<a id=__codelineno-9-33 name=__codelineno-9-33></a>
+<a id=__codelineno-9-34 name=__codelineno-9-34></a>    // Apply admin middleware only to admin requests
+<a id=__codelineno-9-35 name=__codelineno-9-35></a>    var adminAuthMiddleware = conditionalMiddleware(isAdminRequest, adminAuthMiddleware)
+<a id=__codelineno-9-36 name=__codelineno-9-36></a>
+<a id=__codelineno-9-37 name=__codelineno-9-37></a>    var handler = chainMiddleware([
+<a id=__codelineno-9-38 name=__codelineno-9-38></a>        loggingMiddleware,
+<a id=__codelineno-9-39 name=__codelineno-9-39></a>        corsMiddleware,
+<a id=__codelineno-9-40 name=__codelineno-9-40></a>        apiAuthMiddleware,
+<a id=__codelineno-9-41 name=__codelineno-9-41></a>        adminAuthMiddleware
+<a id=__codelineno-9-42 name=__codelineno-9-42></a>    ])(baseHandler)
+<a id=__codelineno-9-43 name=__codelineno-9-43></a>
+<a id=__codelineno-9-44 name=__codelineno-9-44></a>    http.HandleFunc(mux, &quot;/&quot;, handler)
+<a id=__codelineno-9-45 name=__codelineno-9-45></a>
+<a id=__codelineno-9-46 name=__codelineno-9-46></a>    return mux
+<a id=__codelineno-9-47 name=__codelineno-9-47></a>}
 </code></pre></div></td></tr></table></div> <h2 id=advanced-middleware-patterns>Advanced Middleware Patterns</h2> <h3 id=requestresponse-transformation>Request/Response Transformation</h3> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Request Transformation</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-10-1> 1</a></span>
 <span class=normal><a href=#__codelineno-10-2> 2</a></span>
 <span class=normal><a href=#__codelineno-10-3> 3</a></span>
@@ -1098,45 +1116,47 @@
 <span class=normal><a href=#__codelineno-10-36>36</a></span>
 <span class=normal><a href=#__codelineno-10-37>37</a></span>
 <span class=normal><a href=#__codelineno-10-38>38</a></span>
-<span class=normal><a href=#__codelineno-10-39>39</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-10-1 name=__codelineno-10-1></a>import http
-<a id=__codelineno-10-2 name=__codelineno-10-2></a>import json
-<a id=__codelineno-10-3 name=__codelineno-10-3></a>import strings
-<a id=__codelineno-10-4 name=__codelineno-10-4></a>
-<a id=__codelineno-10-5 name=__codelineno-10-5></a>// JSON request parsing middleware
-<a id=__codelineno-10-6 name=__codelineno-10-6></a>function jsonParsingMiddleware(next function(any) any) function(any) any {
-<a id=__codelineno-10-7 name=__codelineno-10-7></a>    return function(request map, response map) {
-<a id=__codelineno-10-8 name=__codelineno-10-8></a>        var contentType = request[&quot;headers&quot;][&quot;Content-Type&quot;]
-<a id=__codelineno-10-9 name=__codelineno-10-9></a>
-<a id=__codelineno-10-10 name=__codelineno-10-10></a>        if contentType == &quot;application/json&quot; and request[&quot;body&quot;] != &quot;&quot; {
-<a id=__codelineno-10-11 name=__codelineno-10-11></a>            var parsedBody, parseErr = json.Unmarshal(request[&quot;body&quot;])
-<a id=__codelineno-10-12 name=__codelineno-10-12></a>            if parseErr != None {
-<a id=__codelineno-10-13 name=__codelineno-10-13></a>                var errorResponse = {&quot;error&quot;: &quot;Invalid JSON&quot;, &quot;message&quot;: parseErr}
-<a id=__codelineno-10-14 name=__codelineno-10-14></a>                var jsonError, _ = json.Marshal(errorResponse)
-<a id=__codelineno-10-15 name=__codelineno-10-15></a>                http.WriteResponse(response, 400, &quot;application/json&quot;, jsonError)
-<a id=__codelineno-10-16 name=__codelineno-10-16></a>                return
-<a id=__codelineno-10-17 name=__codelineno-10-17></a>            }
-<a id=__codelineno-10-18 name=__codelineno-10-18></a>
-<a id=__codelineno-10-19 name=__codelineno-10-19></a>            request[&quot;jsonBody&quot;] = parsedBody
-<a id=__codelineno-10-20 name=__codelineno-10-20></a>        }
-<a id=__codelineno-10-21 name=__codelineno-10-21></a>
-<a id=__codelineno-10-22 name=__codelineno-10-22></a>        next(request, response)
-<a id=__codelineno-10-23 name=__codelineno-10-23></a>    }
-<a id=__codelineno-10-24 name=__codelineno-10-24></a>}
-<a id=__codelineno-10-25 name=__codelineno-10-25></a>
-<a id=__codelineno-10-26 name=__codelineno-10-26></a>// Response compression middleware
-<a id=__codelineno-10-27 name=__codelineno-10-27></a>function compressionMiddleware(next function(any) any) function(any) any {
-<a id=__codelineno-10-28 name=__codelineno-10-28></a>    return function(request map, response map) {
-<a id=__codelineno-10-29 name=__codelineno-10-29></a>        var acceptEncoding = request[&quot;headers&quot;][&quot;Accept-Encoding&quot;]
-<a id=__codelineno-10-30 name=__codelineno-10-30></a>        var supportsGzip = strings.Contains(acceptEncoding, &quot;gzip&quot;)
-<a id=__codelineno-10-31 name=__codelineno-10-31></a>
-<a id=__codelineno-10-32 name=__codelineno-10-32></a>        if supportsGzip {
-<a id=__codelineno-10-33 name=__codelineno-10-33></a>            http.SetResponseHeader(response, &quot;Content-Encoding&quot;, &quot;gzip&quot;)
-<a id=__codelineno-10-34 name=__codelineno-10-34></a>            // In real implementation, would wrap response writer with gzip
-<a id=__codelineno-10-35 name=__codelineno-10-35></a>        }
-<a id=__codelineno-10-36 name=__codelineno-10-36></a>
-<a id=__codelineno-10-37 name=__codelineno-10-37></a>        next(request, response)
-<a id=__codelineno-10-38 name=__codelineno-10-38></a>    }
-<a id=__codelineno-10-39 name=__codelineno-10-39></a>}
+<span class=normal><a href=#__codelineno-10-39>39</a></span>
+<span class=normal><a href=#__codelineno-10-40>40</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-10-1 name=__codelineno-10-1></a>package main
+<a id=__codelineno-10-2 name=__codelineno-10-2></a>import http
+<a id=__codelineno-10-3 name=__codelineno-10-3></a>import json
+<a id=__codelineno-10-4 name=__codelineno-10-4></a>import strings
+<a id=__codelineno-10-5 name=__codelineno-10-5></a>
+<a id=__codelineno-10-6 name=__codelineno-10-6></a>// JSON request parsing middleware
+<a id=__codelineno-10-7 name=__codelineno-10-7></a>function jsonParsingMiddleware(next function(any) any) function(any) any {
+<a id=__codelineno-10-8 name=__codelineno-10-8></a>    return function(request map, response map) {
+<a id=__codelineno-10-9 name=__codelineno-10-9></a>        var contentType = request[&quot;headers&quot;][&quot;Content-Type&quot;]
+<a id=__codelineno-10-10 name=__codelineno-10-10></a>
+<a id=__codelineno-10-11 name=__codelineno-10-11></a>        if contentType == &quot;application/json&quot; and request[&quot;body&quot;] != &quot;&quot; {
+<a id=__codelineno-10-12 name=__codelineno-10-12></a>            var parsedBody, parseErr = json.Unmarshal(request[&quot;body&quot;])
+<a id=__codelineno-10-13 name=__codelineno-10-13></a>            if parseErr != None {
+<a id=__codelineno-10-14 name=__codelineno-10-14></a>                var errorResponse = {&quot;error&quot;: &quot;Invalid JSON&quot;, &quot;message&quot;: parseErr}
+<a id=__codelineno-10-15 name=__codelineno-10-15></a>                var jsonError, _ = json.Marshal(errorResponse)
+<a id=__codelineno-10-16 name=__codelineno-10-16></a>                http.WriteResponse(response, 400, &quot;application/json&quot;, jsonError)
+<a id=__codelineno-10-17 name=__codelineno-10-17></a>                return
+<a id=__codelineno-10-18 name=__codelineno-10-18></a>            }
+<a id=__codelineno-10-19 name=__codelineno-10-19></a>
+<a id=__codelineno-10-20 name=__codelineno-10-20></a>            request[&quot;jsonBody&quot;] = parsedBody
+<a id=__codelineno-10-21 name=__codelineno-10-21></a>        }
+<a id=__codelineno-10-22 name=__codelineno-10-22></a>
+<a id=__codelineno-10-23 name=__codelineno-10-23></a>        next(request, response)
+<a id=__codelineno-10-24 name=__codelineno-10-24></a>    }
+<a id=__codelineno-10-25 name=__codelineno-10-25></a>}
+<a id=__codelineno-10-26 name=__codelineno-10-26></a>
+<a id=__codelineno-10-27 name=__codelineno-10-27></a>// Response compression middleware
+<a id=__codelineno-10-28 name=__codelineno-10-28></a>function compressionMiddleware(next function(any) any) function(any) any {
+<a id=__codelineno-10-29 name=__codelineno-10-29></a>    return function(request map, response map) {
+<a id=__codelineno-10-30 name=__codelineno-10-30></a>        var acceptEncoding = request[&quot;headers&quot;][&quot;Accept-Encoding&quot;]
+<a id=__codelineno-10-31 name=__codelineno-10-31></a>        var supportsGzip = strings.Contains(acceptEncoding, &quot;gzip&quot;)
+<a id=__codelineno-10-32 name=__codelineno-10-32></a>
+<a id=__codelineno-10-33 name=__codelineno-10-33></a>        if supportsGzip {
+<a id=__codelineno-10-34 name=__codelineno-10-34></a>            http.SetResponseHeader(response, &quot;Content-Encoding&quot;, &quot;gzip&quot;)
+<a id=__codelineno-10-35 name=__codelineno-10-35></a>            // In real implementation, would wrap response writer with gzip
+<a id=__codelineno-10-36 name=__codelineno-10-36></a>        }
+<a id=__codelineno-10-37 name=__codelineno-10-37></a>
+<a id=__codelineno-10-38 name=__codelineno-10-38></a>        next(request, response)
+<a id=__codelineno-10-39 name=__codelineno-10-39></a>    }
+<a id=__codelineno-10-40 name=__codelineno-10-40></a>}
 </code></pre></div></td></tr></table></div> <h3 id=caching-middleware>Caching Middleware</h3> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Caching Middleware</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-11-1> 1</a></span>
 <span class=normal><a href=#__codelineno-11-2> 2</a></span>
 <span class=normal><a href=#__codelineno-11-3> 3</a></span>
@@ -1185,55 +1205,57 @@
 <span class=normal><a href=#__codelineno-11-46>46</a></span>
 <span class=normal><a href=#__codelineno-11-47>47</a></span>
 <span class=normal><a href=#__codelineno-11-48>48</a></span>
-<span class=normal><a href=#__codelineno-11-49>49</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-11-1 name=__codelineno-11-1></a>import http
-<a id=__codelineno-11-2 name=__codelineno-11-2></a>import json
-<a id=__codelineno-11-3 name=__codelineno-11-3></a>import fmt
-<a id=__codelineno-11-4 name=__codelineno-11-4></a>
-<a id=__codelineno-11-5 name=__codelineno-11-5></a>// Simple response caching middleware
-<a id=__codelineno-11-6 name=__codelineno-11-6></a>function cachingMiddleware(ttlSeconds int) {
-<a id=__codelineno-11-7 name=__codelineno-11-7></a>    var cache = {}  // Simple in-memory cache
-<a id=__codelineno-11-8 name=__codelineno-11-8></a>
-<a id=__codelineno-11-9 name=__codelineno-11-9></a>    return function(next function) {
-<a id=__codelineno-11-10 name=__codelineno-11-10></a>        return function(request map, response map) {
-<a id=__codelineno-11-11 name=__codelineno-11-11></a>            var method = request[&quot;method&quot;]
-<a id=__codelineno-11-12 name=__codelineno-11-12></a>            var path = request[&quot;path&quot;]
-<a id=__codelineno-11-13 name=__codelineno-11-13></a>
-<a id=__codelineno-11-14 name=__codelineno-11-14></a>            // Only cache GET requests
-<a id=__codelineno-11-15 name=__codelineno-11-15></a>            if method != &quot;GET&quot; {
-<a id=__codelineno-11-16 name=__codelineno-11-16></a>                next(request, response)
-<a id=__codelineno-11-17 name=__codelineno-11-17></a>                return
-<a id=__codelineno-11-18 name=__codelineno-11-18></a>            }
-<a id=__codelineno-11-19 name=__codelineno-11-19></a>
-<a id=__codelineno-11-20 name=__codelineno-11-20></a>            var cacheKey = method + &quot;:&quot; + path
-<a id=__codelineno-11-21 name=__codelineno-11-21></a>            var cachedResponse = cache[cacheKey]
-<a id=__codelineno-11-22 name=__codelineno-11-22></a>
-<a id=__codelineno-11-23 name=__codelineno-11-23></a>            if cachedResponse != None and !isCacheExpired(cachedResponse, ttlSeconds) {
-<a id=__codelineno-11-24 name=__codelineno-11-24></a>                // Serve from cache
-<a id=__codelineno-11-25 name=__codelineno-11-25></a>                http.SetResponseHeader(response, &quot;X-Cache&quot;, &quot;HIT&quot;)
-<a id=__codelineno-11-26 name=__codelineno-11-26></a>                var cached = cachedResponse[&quot;response&quot;]
-<a id=__codelineno-11-27 name=__codelineno-11-27></a>                http.WriteResponse(response, cached[&quot;status&quot;], cached[&quot;contentType&quot;], cached[&quot;body&quot;])
-<a id=__codelineno-11-28 name=__codelineno-11-28></a>                return
-<a id=__codelineno-11-29 name=__codelineno-11-29></a>            }
-<a id=__codelineno-11-30 name=__codelineno-11-30></a>
-<a id=__codelineno-11-31 name=__codelineno-11-31></a>            // Capture response for caching
-<a id=__codelineno-11-32 name=__codelineno-11-32></a>            var capturedResponse = captureResponse(next, request, response)
-<a id=__codelineno-11-33 name=__codelineno-11-33></a>
-<a id=__codelineno-11-34 name=__codelineno-11-34></a>            // Cache the response
-<a id=__codelineno-11-35 name=__codelineno-11-35></a>            cache[cacheKey] = {
-<a id=__codelineno-11-36 name=__codelineno-11-36></a>                &quot;response&quot;: capturedResponse,
-<a id=__codelineno-11-37 name=__codelineno-11-37></a>                &quot;timestamp&quot;: getCurrentTimestamp()
-<a id=__codelineno-11-38 name=__codelineno-11-38></a>            }
-<a id=__codelineno-11-39 name=__codelineno-11-39></a>
-<a id=__codelineno-11-40 name=__codelineno-11-40></a>            http.SetResponseHeader(response, &quot;X-Cache&quot;, &quot;MISS&quot;)
-<a id=__codelineno-11-41 name=__codelineno-11-41></a>        }
-<a id=__codelineno-11-42 name=__codelineno-11-42></a>    }
-<a id=__codelineno-11-43 name=__codelineno-11-43></a>}
-<a id=__codelineno-11-44 name=__codelineno-11-44></a>
-<a id=__codelineno-11-45 name=__codelineno-11-45></a>function isCacheExpired(cachedItem map, ttlSeconds int) {
-<a id=__codelineno-11-46 name=__codelineno-11-46></a>    var timestamp = cachedItem[&quot;timestamp&quot;]
-<a id=__codelineno-11-47 name=__codelineno-11-47></a>    var currentTime = getCurrentTimestamp()
-<a id=__codelineno-11-48 name=__codelineno-11-48></a>    return (currentTime - timestamp) &gt; ttlSeconds
-<a id=__codelineno-11-49 name=__codelineno-11-49></a>}
+<span class=normal><a href=#__codelineno-11-49>49</a></span>
+<span class=normal><a href=#__codelineno-11-50>50</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-11-1 name=__codelineno-11-1></a>package main
+<a id=__codelineno-11-2 name=__codelineno-11-2></a>import http
+<a id=__codelineno-11-3 name=__codelineno-11-3></a>import json
+<a id=__codelineno-11-4 name=__codelineno-11-4></a>import fmt
+<a id=__codelineno-11-5 name=__codelineno-11-5></a>
+<a id=__codelineno-11-6 name=__codelineno-11-6></a>// Simple response caching middleware
+<a id=__codelineno-11-7 name=__codelineno-11-7></a>function cachingMiddleware(ttlSeconds int) {
+<a id=__codelineno-11-8 name=__codelineno-11-8></a>    var cache = {}  // Simple in-memory cache
+<a id=__codelineno-11-9 name=__codelineno-11-9></a>
+<a id=__codelineno-11-10 name=__codelineno-11-10></a>    return function(next function) {
+<a id=__codelineno-11-11 name=__codelineno-11-11></a>        return function(request map, response map) {
+<a id=__codelineno-11-12 name=__codelineno-11-12></a>            var method = request[&quot;method&quot;]
+<a id=__codelineno-11-13 name=__codelineno-11-13></a>            var path = request[&quot;path&quot;]
+<a id=__codelineno-11-14 name=__codelineno-11-14></a>
+<a id=__codelineno-11-15 name=__codelineno-11-15></a>            // Only cache GET requests
+<a id=__codelineno-11-16 name=__codelineno-11-16></a>            if method != &quot;GET&quot; {
+<a id=__codelineno-11-17 name=__codelineno-11-17></a>                next(request, response)
+<a id=__codelineno-11-18 name=__codelineno-11-18></a>                return
+<a id=__codelineno-11-19 name=__codelineno-11-19></a>            }
+<a id=__codelineno-11-20 name=__codelineno-11-20></a>
+<a id=__codelineno-11-21 name=__codelineno-11-21></a>            var cacheKey = method + &quot;:&quot; + path
+<a id=__codelineno-11-22 name=__codelineno-11-22></a>            var cachedResponse = cache[cacheKey]
+<a id=__codelineno-11-23 name=__codelineno-11-23></a>
+<a id=__codelineno-11-24 name=__codelineno-11-24></a>            if cachedResponse != None and !isCacheExpired(cachedResponse, ttlSeconds) {
+<a id=__codelineno-11-25 name=__codelineno-11-25></a>                // Serve from cache
+<a id=__codelineno-11-26 name=__codelineno-11-26></a>                http.SetResponseHeader(response, &quot;X-Cache&quot;, &quot;HIT&quot;)
+<a id=__codelineno-11-27 name=__codelineno-11-27></a>                var cached = cachedResponse[&quot;response&quot;]
+<a id=__codelineno-11-28 name=__codelineno-11-28></a>                http.WriteResponse(response, cached[&quot;status&quot;], cached[&quot;contentType&quot;], cached[&quot;body&quot;])
+<a id=__codelineno-11-29 name=__codelineno-11-29></a>                return
+<a id=__codelineno-11-30 name=__codelineno-11-30></a>            }
+<a id=__codelineno-11-31 name=__codelineno-11-31></a>
+<a id=__codelineno-11-32 name=__codelineno-11-32></a>            // Capture response for caching
+<a id=__codelineno-11-33 name=__codelineno-11-33></a>            var capturedResponse = captureResponse(next, request, response)
+<a id=__codelineno-11-34 name=__codelineno-11-34></a>
+<a id=__codelineno-11-35 name=__codelineno-11-35></a>            // Cache the response
+<a id=__codelineno-11-36 name=__codelineno-11-36></a>            cache[cacheKey] = {
+<a id=__codelineno-11-37 name=__codelineno-11-37></a>                &quot;response&quot;: capturedResponse,
+<a id=__codelineno-11-38 name=__codelineno-11-38></a>                &quot;timestamp&quot;: getCurrentTimestamp()
+<a id=__codelineno-11-39 name=__codelineno-11-39></a>            }
+<a id=__codelineno-11-40 name=__codelineno-11-40></a>
+<a id=__codelineno-11-41 name=__codelineno-11-41></a>            http.SetResponseHeader(response, &quot;X-Cache&quot;, &quot;MISS&quot;)
+<a id=__codelineno-11-42 name=__codelineno-11-42></a>        }
+<a id=__codelineno-11-43 name=__codelineno-11-43></a>    }
+<a id=__codelineno-11-44 name=__codelineno-11-44></a>}
+<a id=__codelineno-11-45 name=__codelineno-11-45></a>
+<a id=__codelineno-11-46 name=__codelineno-11-46></a>function isCacheExpired(cachedItem map, ttlSeconds int) {
+<a id=__codelineno-11-47 name=__codelineno-11-47></a>    var timestamp = cachedItem[&quot;timestamp&quot;]
+<a id=__codelineno-11-48 name=__codelineno-11-48></a>    var currentTime = getCurrentTimestamp()
+<a id=__codelineno-11-49 name=__codelineno-11-49></a>    return (currentTime - timestamp) &gt; ttlSeconds
+<a id=__codelineno-11-50 name=__codelineno-11-50></a>}
 </code></pre></div></td></tr></table></div> <h2 id=best-practices>Best Practices</h2> <h3 id=1-order-middleware-correctly>1. Order Middleware Correctly</h3> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Middleware Ordering</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-12-1>1</a></span>
 <span class=normal><a href=#__codelineno-12-2>2</a></span>
 <span class=normal><a href=#__codelineno-12-3>3</a></span>

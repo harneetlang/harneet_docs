@@ -1,4 +1,4 @@
-<!doctype html><html lang=en class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link href=../responses/ rel=prev><link href=../routing/ rel=next><link rel=icon href=../../../assets/images/harneet.png><meta name=generator content="mkdocs-1.6.1, mkdocs-material-9.6.20"><title>HTTP Server - Harneet Programming Language</title><link rel=stylesheet href=../../../assets/stylesheets/main.e53b48f4.min.css><link rel=stylesheet href=../../../assets/stylesheets/palette.06af60db.min.css><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback"><style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style><link rel=stylesheet href=../../../assets/css/custom.css><script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script></head> <body dir=ltr data-md-color-scheme=slate data-md-color-primary=black data-md-color-accent=blue> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#http-server class=md-skip> Skip to content </a> </div> <div data-md-component=announce> </div> <header class="md-header md-header--shadow" data-md-component=header> <nav class="md-header__inner md-grid" aria-label=Header> <a href=../../.. title="Harneet Programming Language" class="md-header__button md-logo" aria-label="Harneet Programming Language" data-md-component=logo> <img src=../../../assets/images/harneet.png alt=logo> </a> <label class="md-header__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg> </label> <div class=md-header__title data-md-component=header-title> <div class=md-header__ellipsis> <div class=md-header__topic> <span class=md-ellipsis> Harneet Programming Language </span> </div> <div class=md-header__topic data-md-component=header-topic> <span class=md-ellipsis> HTTP Server </span> </div> </div> </div> <form class=md-header__option data-md-component=palette> <input class=md-option data-md-color-media data-md-color-scheme=slate data-md-color-primary=black data-md-color-accent=blue aria-hidden=true type=radio name=__palette id=__palette_0> </form> <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script> <label class="md-header__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=Search placeholder=Search autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg> </label> <nav class=md-search__options aria-label=Search> <a href=javascript:void(0) class="md-search__icon md-icon" title=Share aria-label=Share data-clipboard data-clipboard-text data-md-component=search-share tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg> </a> <button type=reset class="md-search__icon md-icon" title=Clear aria-label=Clear tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg> </button> </nav> <div class=md-search__suggest data-md-component=search-suggest></div> </form> <div class=md-search__output> <div class=md-search__scrollwrap tabindex=0 data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> Initializing search </div> <ol class=md-search-result__list role=presentation></ol> </div> </div> </div> </div> </div> </nav> </header> <div class=md-container data-md-component=container> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=sidebar data-md-type=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary md-nav--integrated" aria-label=Navigation data-md-level=0> <label class=md-nav__title for=__drawer> <a href=../../.. title="Harneet Programming Language" class="md-nav__button md-logo" aria-label="Harneet Programming Language" data-md-component=logo> <img src=../../../assets/images/harneet.png alt=logo> </a> Harneet Programming Language </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../.. class=md-nav__link> <span class=md-ellipsis> Home </span> </a> </li> <li class=md-nav__item> <a href=../../../repl/ class=md-nav__link> <span class=md-ellipsis> REPL </span> </a> </li> <li class=md-nav__item> <a href=../../../command_line/ class=md-nav__link> <span class=md-ellipsis> Command Line </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_4> <label class=md-nav__link for=__nav_4 id=__nav_4_label tabindex=0> <span class=md-ellipsis> Getting Started </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_4_label aria-expanded=false> <label class=md-nav__title for=__nav_4> <span class="md-nav__icon md-icon"></span> Getting Started </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../general/comments/ class=md-nav__link> <span class=md-ellipsis> Comments </span> </a> </li> <li class=md-nav__item> <a href=../../../general/data_types/ class=md-nav__link> <span class=md-ellipsis> Data Types </span> </a> </li> <li class=md-nav__item> <a href=../../../general/variable_declaration/ class=md-nav__link> <span class=md-ellipsis> Variable Declaration & Assignment </span> </a> </li> <li class=md-nav__item> <a href=../../../general/const/ class=md-nav__link> <span class=md-ellipsis> Const Declarations </span> </a> </li> <li class=md-nav__item> <a href=../../../general/keywords_identifiers/ class=md-nav__link> <span class=md-ellipsis> Keywords and Identifiers </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_5> <label class=md-nav__link for=__nav_5 id=__nav_5_label tabindex=0> <span class=md-ellipsis> Language Basics </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_5_label aria-expanded=false> <label class=md-nav__title for=__nav_5> <span class="md-nav__icon md-icon"></span> Language Basics </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../general/operators_and_expressions/ class=md-nav__link> <span class=md-ellipsis> Operators and Expressions </span> </a> </li> <li class=md-nav__item> <a href=../../../general/pipe_operator/ class=md-nav__link> <span class=md-ellipsis> Pipe Operator (|>) </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_5_3> <label class=md-nav__link for=__nav_5_3 id=__nav_5_3_label tabindex=0> <span class=md-ellipsis> Advanced Arithmetic Operations </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_5_3_label aria-expanded=false> <label class=md-nav__title for=__nav_5_3> <span class="md-nav__icon md-icon"></span> Advanced Arithmetic Operations </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../general/advanced-arithmetic-operators/ class=md-nav__link> <span class=md-ellipsis> Operator Reference </span> </a> </li> <li class=md-nav__item> <a href=../../../general/bitwise-operations-guide/ class=md-nav__link> <span class=md-ellipsis> Bitwise Operations Guide </span> </a> </li> <li class=md-nav__item> <a href=../../../general/compound-assignment-guide/ class=md-nav__link> <span class=md-ellipsis> Compound Assignment Guide </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../../general/arrays/ class=md-nav__link> <span class=md-ellipsis> Arrays </span> </a> </li> <li class=md-nav__item> <a href=../../../general/maps/ class=md-nav__link> <span class=md-ellipsis> Maps </span> </a> </li> <li class=md-nav__item> <a href=../../../general/control_flow/ class=md-nav__link> <span class=md-ellipsis> Control Flow </span> </a> </li> <li class=md-nav__item> <a href=../../break_continue/ class=md-nav__link> <span class=md-ellipsis> Break & Continue </span> </a> </li> <li class=md-nav__item> <a href=../../../general/pattern_matching/ class=md-nav__link> <span class=md-ellipsis> Pattern Matching </span> </a> </li> <li class=md-nav__item> <a href=../../../general/block_structure/ class=md-nav__link> <span class=md-ellipsis> Block Structure </span> </a> </li> <li class=md-nav__item> <a href=../../../general/scoping_variable_management/ class=md-nav__link> <span class=md-ellipsis> Scoping and Variable Management </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_6> <label class=md-nav__link for=__nav_6 id=__nav_6_label tabindex=0> <span class=md-ellipsis> Type System </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_6_label aria-expanded=false> <label class=md-nav__title for=__nav_6> <span class="md-nav__icon md-icon"></span> Type System </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../type_system_safety/ class=md-nav__link> <span class=md-ellipsis> Type System & Safety </span> </a> </li> <li class=md-nav__item> <a href=../../../any_type/ class=md-nav__link> <span class=md-ellipsis> The Any Type </span> </a> </li> <li class=md-nav__item> <a href=../../cast/ class=md-nav__link> <span class=md-ellipsis> Cast </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_7> <label class=md-nav__link for=__nav_7 id=__nav_7_label tabindex=0> <span class=md-ellipsis> Functions </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_7_label aria-expanded=false> <label class=md-nav__title for=__nav_7> <span class="md-nav__icon md-icon"></span> Functions </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../functions/introduction/ class=md-nav__link> <span class=md-ellipsis> Introduction </span> </a> </li> <li class=md-nav__item> <a href=../../../functions/arrow_functions/ class=md-nav__link> <span class=md-ellipsis> Arrow Functions </span> </a> </li> <li class=md-nav__item> <a href=../../../functions/defer_statements/ class=md-nav__link> <span class=md-ellipsis> Defer Statements </span> </a> </li> <li class=md-nav__item> <a href=../../../functions/functional/ class=md-nav__link> <span class=md-ellipsis> Functional Features </span> </a> </li> <li class=md-nav__item> <a href=../../../functions/advanced_features/ class=md-nav__link> <span class=md-ellipsis> Advanced Features </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_7_6> <label class=md-nav__link for=__nav_7_6 id=__nav_7_6_label tabindex=0> <span class=md-ellipsis> Builtins </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_7_6_label aria-expanded=false> <label class=md-nav__title for=__nav_7_6> <span class="md-nav__icon md-icon"></span> Builtins </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../functions/append/ class=md-nav__link> <span class=md-ellipsis> Append </span> </a> </li> <li class=md-nav__item> <a href=../../../functions/len/ class=md-nav__link> <span class=md-ellipsis> Len </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_8> <label class=md-nav__link for=__nav_8 id=__nav_8_label tabindex=0> <span class=md-ellipsis> Concurrency </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_8_label aria-expanded=false> <label class=md-nav__title for=__nav_8> <span class="md-nav__icon md-icon"></span> Concurrency </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../general/concurrency/ class=md-nav__link> <span class=md-ellipsis> Concurrency (do / await / sleep) </span> </a> </li> <li class=md-nav__item> <a href=../../sync/ class=md-nav__link> <span class=md-ellipsis> Sync </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_9> <label class=md-nav__link for=__nav_9 id=__nav_9_label tabindex=0> <span class=md-ellipsis> Error Handling </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_9_label aria-expanded=false> <label class=md-nav__title for=__nav_9> <span class="md-nav__icon md-icon"></span> Error Handling </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../error_handling_system/ class=md-nav__link> <span class=md-ellipsis> Error Handling System </span> </a> </li> <li class=md-nav__item> <a href=../../errors/ class=md-nav__link> <span class=md-ellipsis> Errors </span> </a> </li> <li class=md-nav__item> <a href=../../assert/ class=md-nav__link> <span class=md-ellipsis> Assert </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_10> <label class=md-nav__link for=__nav_10 id=__nav_10_label tabindex=0> <span class=md-ellipsis> Modules & Imports </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_10_label aria-expanded=false> <label class=md-nav__title for=__nav_10> <span class="md-nav__icon md-icon"></span> Modules & Imports </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../general/import_system/ class=md-nav__link> <span class=md-ellipsis> Import System </span> </a> </li> <li class=md-nav__item> <a href=../../../modules/ class=md-nav__link> <span class=md-ellipsis> Module System </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_11 checked> <label class=md-nav__link for=__nav_11 id=__nav_11_label tabindex=0> <span class=md-ellipsis> Standard Library </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_11_label aria-expanded=true> <label class=md-nav__title for=__nav_11> <span class="md-nav__icon md-icon"></span> Standard Library </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_1> <label class=md-nav__link for=__nav_11_1 id=__nav_11_1_label tabindex=0> <span class=md-ellipsis> I/O & Formatting </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_1_label aria-expanded=false> <label class=md-nav__title for=__nav_11_1> <span class="md-nav__icon md-icon"></span> I/O & Formatting </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../fmt/ class=md-nav__link> <span class=md-ellipsis> Fmt </span> </a> </li> <li class=md-nav__item> <a href=../../input/ class=md-nav__link> <span class=md-ellipsis> Input </span> </a> </li> <li class=md-nav__item> <a href=../../log/ class=md-nav__link> <span class=md-ellipsis> Log </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_2> <label class=md-nav__link for=__nav_11_2 id=__nav_11_2_label tabindex=0> <span class=md-ellipsis> Strings & Text </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_2_label aria-expanded=false> <label class=md-nav__title for=__nav_11_2> <span class="md-nav__icon md-icon"></span> Strings & Text </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_2_1> <label class=md-nav__link for=__nav_11_2_1 id=__nav_11_2_1_label tabindex=0> <span class=md-ellipsis> Strings </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=3 aria-labelledby=__nav_11_2_1_label aria-expanded=false> <label class=md-nav__title for=__nav_11_2_1> <span class="md-nav__icon md-icon"></span> Strings </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../strings/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class=md-nav__item> <a href=../../../general/multiline_strings_migration/ class=md-nav__link> <span class=md-ellipsis> Multiline Strings </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../regex/ class=md-nav__link> <span class=md-ellipsis> Regex </span> </a> </li> <li class=md-nav__item> <a href=../../../general/unicode_support/ class=md-nav__link> <span class=md-ellipsis> Unicode Support </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_3> <label class=md-nav__link for=__nav_11_3 id=__nav_11_3_label tabindex=0> <span class=md-ellipsis> Math & Numbers </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_3_label aria-expanded=false> <label class=md-nav__title for=__nav_11_3> <span class="md-nav__icon md-icon"></span> Math & Numbers </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../math/ class=md-nav__link> <span class=md-ellipsis> Math </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_4> <label class=md-nav__link for=__nav_11_4 id=__nav_11_4_label tabindex=0> <span class=md-ellipsis> Collections & Data Structures </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_4_label aria-expanded=false> <label class=md-nav__title for=__nav_11_4> <span class="md-nav__icon md-icon"></span> Collections & Data Structures </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../arrays/ class=md-nav__link> <span class=md-ellipsis> Arrays </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_4_2> <label class=md-nav__link for=__nav_11_4_2 id=__nav_11_4_2_label tabindex=0> <span class=md-ellipsis> Collections </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=3 aria-labelledby=__nav_11_4_2_label aria-expanded=false> <label class=md-nav__title for=__nav_11_4_2> <span class="md-nav__icon md-icon"></span> Collections </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../collections/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_4_2_2> <label class=md-nav__link for=__nav_11_4_2_2 id=__nav_11_4_2_2_label tabindex=0> <span class=md-ellipsis> Enhanced Collections </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=4 aria-labelledby=__nav_11_4_2_2_label aria-expanded=false> <label class=md-nav__title for=__nav_11_4_2_2> <span class="md-nav__icon md-icon"></span> Enhanced Collections </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../collections/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/stacks-queues/ class=md-nav__link> <span class=md-ellipsis> Stacks & Queues </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/sets/ class=md-nav__link> <span class=md-ellipsis> Sets </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/linked-lists/ class=md-nav__link> <span class=md-ellipsis> Linked Lists </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/trees/ class=md-nav__link> <span class=md-ellipsis> Trees </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/concurrent/ class=md-nav__link> <span class=md-ellipsis> Concurrent Collections </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/performance/ class=md-nav__link> <span class=md-ellipsis> Performance Guide </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/migration/ class=md-nav__link> <span class=md-ellipsis> Migration Guide </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/api-reference/ class=md-nav__link> <span class=md-ellipsis> API Reference </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_5> <label class=md-nav__link for=__nav_11_5 id=__nav_11_5_label tabindex=0> <span class=md-ellipsis> Data Formats </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_5_label aria-expanded=false> <label class=md-nav__title for=__nav_11_5> <span class="md-nav__icon md-icon"></span> Data Formats </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../json/ class=md-nav__link> <span class=md-ellipsis> JSON </span> </a> </li> <li class=md-nav__item> <a href=../../encoding/ class=md-nav__link> <span class=md-ellipsis> Encoding </span> </a> </li> <li class=md-nav__item> <a href=../../config/ class=md-nav__link> <span class=md-ellipsis> Config </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_6> <label class=md-nav__link for=__nav_11_6 id=__nav_11_6_label tabindex=0> <span class=md-ellipsis> Structs & Types </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_6_label aria-expanded=false> <label class=md-nav__title for=__nav_11_6> <span class="md-nav__icon md-icon"></span> Structs & Types </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_6_1> <label class=md-nav__link for=__nav_11_6_1 id=__nav_11_6_1_label tabindex=0> <span class=md-ellipsis> Structs </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=3 aria-labelledby=__nav_11_6_1_label aria-expanded=false> <label class=md-nav__title for=__nav_11_6_1> <span class="md-nav__icon md-icon"></span> Structs </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../structs/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class=md-nav__item> <a href=../../../general/struct_field_assignment/ class=md-nav__link> <span class=md-ellipsis> Struct Field Assignment </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../box/ class=md-nav__link> <span class=md-ellipsis> Box </span> </a> </li> <li class=md-nav__item> <a href=../../reflect/ class=md-nav__link> <span class=md-ellipsis> Reflect </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_7> <label class=md-nav__link for=__nav_11_7 id=__nav_11_7_label tabindex=0> <span class=md-ellipsis> File System & OS </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_7_label aria-expanded=false> <label class=md-nav__title for=__nav_11_7> <span class="md-nav__icon md-icon"></span> File System & OS </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../file/ class=md-nav__link> <span class=md-ellipsis> File </span> </a> </li> <li class=md-nav__item> <a href=../../path/ class=md-nav__link> <span class=md-ellipsis> Path </span> </a> </li> <li class=md-nav__item> <a href=../../os/ class=md-nav__link> <span class=md-ellipsis> OS </span> </a> </li> <li class=md-nav__item> <a href=../../exec/ class=md-nav__link> <span class=md-ellipsis> Exec </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_11_8 checked> <label class=md-nav__link for=__nav_11_8 id=__nav_11_8_label tabindex=0> <span class=md-ellipsis> Networking & HTTP </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_8_label aria-expanded=true> <label class=md-nav__title for=__nav_11_8> <span class="md-nav__icon md-icon"></span> Networking & HTTP </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_11_8_1 checked> <label class=md-nav__link for=__nav_11_8_1 id=__nav_11_8_1_label tabindex=0> <span class=md-ellipsis> HTTP </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=3 aria-labelledby=__nav_11_8_1_label aria-expanded=true> <label class=md-nav__title for=__nav_11_8_1> <span class="md-nav__icon md-icon"></span> HTTP </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../overview/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class=md-nav__item> <a href=../client/ class=md-nav__link> <span class=md-ellipsis> HTTP Client </span> </a> </li> <li class=md-nav__item> <a href=../requests/ class=md-nav__link> <span class=md-ellipsis> Request Building </span> </a> </li> <li class=md-nav__item> <a href=../responses/ class=md-nav__link> <span class=md-ellipsis> Response Handling </span> </a> </li> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> <span class=md-ellipsis> HTTP Server </span> <span class="md-nav__icon md-icon"></span> </label> <a href=./ class="md-nav__link md-nav__link--active"> <span class=md-ellipsis> HTTP Server </span> </a> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> Table of contents </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#quick-start class=md-nav__link> <span class=md-ellipsis> Quick Start </span> </a> </li> <li class=md-nav__item> <a href=#server-creation class=md-nav__link> <span class=md-ellipsis> Server Creation </span> </a> <nav class=md-nav aria-label="Server Creation"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#httpnewserveraddr class=md-nav__link> <span class=md-ellipsis> http.NewServer(addr) </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#server-object-structure class=md-nav__link> <span class=md-ellipsis> Server Object Structure </span> </a> </li> <li class=md-nav__item> <a href=#server-lifecycle class=md-nav__link> <span class=md-ellipsis> Server Lifecycle </span> </a> <nav class=md-nav aria-label="Server Lifecycle"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#httplistenandserveserver class=md-nav__link> <span class=md-ellipsis> http.ListenAndServe(server) </span> </a> </li> <li class=md-nav__item> <a href=#httplistenandservetlsserver-certfile-keyfile class=md-nav__link> <span class=md-ellipsis> http.ListenAndServeTLS(server, certFile, keyFile) </span> </a> </li> <li class=md-nav__item> <a href=#httpshutdownserver class=md-nav__link> <span class=md-ellipsis> http.Shutdown(server) </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#handler-management class=md-nav__link> <span class=md-ellipsis> Handler Management </span> </a> <nav class=md-nav aria-label="Handler Management"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#httpsethandlerserver-handler class=md-nav__link> <span class=md-ellipsis> http.SetHandler(server, handler) </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#response-writing class=md-nav__link> <span class=md-ellipsis> Response Writing </span> </a> <nav class=md-nav aria-label="Response Writing"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#httpwriteresponseresponse-status-contenttype-body class=md-nav__link> <span class=md-ellipsis> http.WriteResponse(response, status, contentType, body) </span> </a> </li> <li class=md-nav__item> <a href=#httpsetresponseheaderresponse-key-value class=md-nav__link> <span class=md-ellipsis> http.SetResponseHeader(response, key, value) </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#request-processing class=md-nav__link> <span class=md-ellipsis> Request Processing </span> </a> <nav class=md-nav aria-label="Request Processing"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#request-object-structure class=md-nav__link> <span class=md-ellipsis> Request Object Structure </span> </a> </li> <li class=md-nav__item> <a href=#accessing-request-data class=md-nav__link> <span class=md-ellipsis> Accessing Request Data </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#server-configuration class=md-nav__link> <span class=md-ellipsis> Server Configuration </span> </a> <nav class=md-nav aria-label="Server Configuration"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#timeout-configuration class=md-nav__link> <span class=md-ellipsis> Timeout Configuration </span> </a> </li> <li class=md-nav__item> <a href=#tls-configuration class=md-nav__link> <span class=md-ellipsis> TLS Configuration </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#error-handling class=md-nav__link> <span class=md-ellipsis> Error Handling </span> </a> <nav class=md-nav aria-label="Error Handling"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#server-error-handling class=md-nav__link> <span class=md-ellipsis> Server Error Handling </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#best-practices class=md-nav__link> <span class=md-ellipsis> Best Practices </span> </a> <nav class=md-nav aria-label="Best Practices"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#1-always-set-content-type class=md-nav__link> <span class=md-ellipsis> 1. Always Set Content-Type </span> </a> </li> <li class=md-nav__item> <a href=#2-handle-errors-gracefully class=md-nav__link> <span class=md-ellipsis> 2. Handle Errors Gracefully </span> </a> </li> <li class=md-nav__item> <a href=#3-use-appropriate-status-codes class=md-nav__link> <span class=md-ellipsis> 3. Use Appropriate Status Codes </span> </a> </li> <li class=md-nav__item> <a href=#4-set-security-headers class=md-nav__link> <span class=md-ellipsis> 4. Set Security Headers </span> </a> </li> <li class=md-nav__item> <a href=#5-log-requests class=md-nav__link> <span class=md-ellipsis> 5. Log Requests </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#next-steps class=md-nav__link> <span class=md-ellipsis> Next Steps </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../routing/ class=md-nav__link> <span class=md-ellipsis> Routing & Mux </span> </a> </li> <li class=md-nav__item> <a href=../middleware/ class=md-nav__link> <span class=md-ellipsis> Middleware </span> </a> </li> <li class=md-nav__item> <a href=../auth/ class=md-nav__link> <span class=md-ellipsis> Authentication </span> </a> </li> <li class=md-nav__item> <a href=../cookies/ class=md-nav__link> <span class=md-ellipsis> Cookies & Sessions </span> </a> </li> <li class=md-nav__item> <a href=../advanced/ class=md-nav__link> <span class=md-ellipsis> Advanced </span> </a> </li> <li class=md-nav__item> <a href=../examples/ class=md-nav__link> <span class=md-ellipsis> Examples & Patterns </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_9> <label class=md-nav__link for=__nav_11_9 id=__nav_11_9_label tabindex=0> <span class=md-ellipsis> Database </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_9_label aria-expanded=false> <label class=md-nav__title for=__nav_11_9> <span class="md-nav__icon md-icon"></span> Database </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../db/ class=md-nav__link> <span class=md-ellipsis> DB </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11_10> <label class=md-nav__link for=__nav_11_10 id=__nav_11_10_label tabindex=0> <span class=md-ellipsis> Utilities </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_11_10_label aria-expanded=false> <label class=md-nav__title for=__nav_11_10> <span class="md-nav__icon md-icon"></span> Utilities </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../datetime/ class=md-nav__link> <span class=md-ellipsis> Datetime </span> </a> </li> <li class=md-nav__item> <a href=../../flags/ class=md-nav__link> <span class=md-ellipsis> Flags </span> </a> </li> <li class=md-nav__item> <a href=../../uuid/ class=md-nav__link> <span class=md-ellipsis> UUID </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_12> <label class=md-nav__link for=__nav_12 id=__nav_12_label tabindex=0> <span class=md-ellipsis> Examples </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_12_label aria-expanded=false> <label class=md-nav__title for=__nav_12> <span class="md-nav__icon md-icon"></span> Examples </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../comprehensive_examples/ class=md-nav__link> <span class=md-ellipsis> Comprehensive Language Examples </span> </a> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class=md-content data-md-component=content> <article class="md-content__inner md-typeset"> <h1 id=http-server>HTTP Server</h1> <p>The HTTP server functionality provides comprehensive server-side HTTP capabilities, allowing you to build web servers, APIs, and web applications in Harneet. This wraps Go's powerful <code>net/http</code> server with Harneet's simple and consistent API.</p> <h2 id=quick-start>Quick Start</h2> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Quick Start Server</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-0-1> 1</a></span>
+<!doctype html><html lang=en class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link href=../responses/ rel=prev><link href=../routing/ rel=next><link rel=icon href=../../../assets/images/harneet.png><meta name=generator content="mkdocs-1.6.1, mkdocs-material-9.6.20"><title>HTTP Server - Harneet Programming Language</title><link rel=stylesheet href=../../../assets/stylesheets/main.e53b48f4.min.css><link rel=stylesheet href=../../../assets/stylesheets/palette.06af60db.min.css><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback"><style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style><link rel=stylesheet href=../../../assets/css/custom.css><script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script></head> <body dir=ltr data-md-color-scheme=slate data-md-color-primary=black data-md-color-accent=blue> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#http-server class=md-skip> Skip to content </a> </div> <div data-md-component=announce> </div> <header class="md-header md-header--shadow" data-md-component=header> <nav class="md-header__inner md-grid" aria-label=Header> <a href=../../.. title="Harneet Programming Language" class="md-header__button md-logo" aria-label="Harneet Programming Language" data-md-component=logo> <img src=../../../assets/images/harneet.png alt=logo> </a> <label class="md-header__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg> </label> <div class=md-header__title data-md-component=header-title> <div class=md-header__ellipsis> <div class=md-header__topic> <span class=md-ellipsis> Harneet Programming Language </span> </div> <div class=md-header__topic data-md-component=header-topic> <span class=md-ellipsis> HTTP Server </span> </div> </div> </div> <form class=md-header__option data-md-component=palette> <input class=md-option data-md-color-media data-md-color-scheme=slate data-md-color-primary=black data-md-color-accent=blue aria-hidden=true type=radio name=__palette id=__palette_0> </form> <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script> <label class="md-header__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=Search placeholder=Search autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg> </label> <nav class=md-search__options aria-label=Search> <a href=javascript:void(0) class="md-search__icon md-icon" title=Share aria-label=Share data-clipboard data-clipboard-text data-md-component=search-share tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg> </a> <button type=reset class="md-search__icon md-icon" title=Clear aria-label=Clear tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg> </button> </nav> <div class=md-search__suggest data-md-component=search-suggest></div> </form> <div class=md-search__output> <div class=md-search__scrollwrap tabindex=0 data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> Initializing search </div> <ol class=md-search-result__list role=presentation></ol> </div> </div> </div> </div> </div> </nav> </header> <div class=md-container data-md-component=container> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=sidebar data-md-type=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary md-nav--integrated" aria-label=Navigation data-md-level=0> <label class=md-nav__title for=__drawer> <a href=../../.. title="Harneet Programming Language" class="md-nav__button md-logo" aria-label="Harneet Programming Language" data-md-component=logo> <img src=../../../assets/images/harneet.png alt=logo> </a> Harneet Programming Language </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../.. class=md-nav__link> <span class=md-ellipsis> Home </span> </a> </li> <li class=md-nav__item> <a href=../../../repl/ class=md-nav__link> <span class=md-ellipsis> REPL </span> </a> </li> <li class=md-nav__item> <a href=../../../command_line/ class=md-nav__link> <span class=md-ellipsis> Command Line </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_4> <label class=md-nav__link for=__nav_4 id=__nav_4_label tabindex=0> <span class=md-ellipsis> Getting Started </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_4_label aria-expanded=false> <label class=md-nav__title for=__nav_4> <span class="md-nav__icon md-icon"></span> Getting Started </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../general/comments/ class=md-nav__link> <span class=md-ellipsis> Comments </span> </a> </li> <li class=md-nav__item> <a href=../../../general/data_types/ class=md-nav__link> <span class=md-ellipsis> Data Types </span> </a> </li> <li class=md-nav__item> <a href=../../../general/variable_declaration/ class=md-nav__link> <span class=md-ellipsis> Variable Declaration & Assignment </span> </a> </li> <li class=md-nav__item> <a href=../../../general/const/ class=md-nav__link> <span class=md-ellipsis> Const Declarations </span> </a> </li> <li class=md-nav__item> <a href=../../../general/keywords_identifiers/ class=md-nav__link> <span class=md-ellipsis> Keywords and Identifiers </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_5> <label class=md-nav__link for=__nav_5 id=__nav_5_label tabindex=0> <span class=md-ellipsis> Core Types </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_5_label aria-expanded=false> <label class=md-nav__title for=__nav_5> <span class="md-nav__icon md-icon"></span> Core Types </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../general/numbers/ class=md-nav__link> <span class=md-ellipsis> Numbers </span> </a> </li> <li class=md-nav__item> <a href=../../../general/runes/ class=md-nav__link> <span class=md-ellipsis> Runes </span> </a> </li> <li class=md-nav__item> <a href=../../../general/strings/ class=md-nav__link> <span class=md-ellipsis> Strings </span> </a> </li> <li class=md-nav__item> <a href=../../../general/booleans/ class=md-nav__link> <span class=md-ellipsis> Booleans </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_5_5> <label class=md-nav__link for=__nav_5_5 id=__nav_5_5_label tabindex=0> <span class=md-ellipsis> Arrays </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_5_5_label aria-expanded=false> <label class=md-nav__title for=__nav_5_5> <span class="md-nav__icon md-icon"></span> Arrays </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../general/arrays/ class=md-nav__link> <span class=md-ellipsis> Arrays </span> </a> </li> <li class=md-nav__item> <a href=../../../general/slices/ class=md-nav__link> <span class=md-ellipsis> Slicing </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../../general/maps/ class=md-nav__link> <span class=md-ellipsis> Maps </span> </a> </li> <li class=md-nav__item> <a href=../../../general/tuples/ class=md-nav__link> <span class=md-ellipsis> Tuples </span> </a> </li> <li class=md-nav__item> <a href=../../../general/error/ class=md-nav__link> <span class=md-ellipsis> Errors </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_6> <label class=md-nav__link for=__nav_6 id=__nav_6_label tabindex=0> <span class=md-ellipsis> Language Basics </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_6_label aria-expanded=false> <label class=md-nav__title for=__nav_6> <span class="md-nav__icon md-icon"></span> Language Basics </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../general/operators_and_expressions/ class=md-nav__link> <span class=md-ellipsis> Operators and Expressions </span> </a> </li> <li class=md-nav__item> <a href=../../../general/pipe_operator/ class=md-nav__link> <span class=md-ellipsis> Pipe Operator (|>) </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_6_3> <label class=md-nav__link for=__nav_6_3 id=__nav_6_3_label tabindex=0> <span class=md-ellipsis> Advanced Arithmetic Operations </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_6_3_label aria-expanded=false> <label class=md-nav__title for=__nav_6_3> <span class="md-nav__icon md-icon"></span> Advanced Arithmetic Operations </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../general/advanced-arithmetic-operators/ class=md-nav__link> <span class=md-ellipsis> Operator Reference </span> </a> </li> <li class=md-nav__item> <a href=../../../general/bitwise-operations-guide/ class=md-nav__link> <span class=md-ellipsis> Bitwise Operations Guide </span> </a> </li> <li class=md-nav__item> <a href=../../../general/compound-assignment-guide/ class=md-nav__link> <span class=md-ellipsis> Compound Assignment Guide </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../../general/control_flow/ class=md-nav__link> <span class=md-ellipsis> Control Flow </span> </a> </li> <li class=md-nav__item> <a href=../../break_continue/ class=md-nav__link> <span class=md-ellipsis> Break & Continue </span> </a> </li> <li class=md-nav__item> <a href=../../../general/pattern_matching/ class=md-nav__link> <span class=md-ellipsis> Pattern Matching </span> </a> </li> <li class=md-nav__item> <a href=../../../general/block_structure/ class=md-nav__link> <span class=md-ellipsis> Block Structure </span> </a> </li> <li class=md-nav__item> <a href=../../../general/scoping_variable_management/ class=md-nav__link> <span class=md-ellipsis> Scoping and Variable Management </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_7> <label class=md-nav__link for=__nav_7 id=__nav_7_label tabindex=0> <span class=md-ellipsis> Type System </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_7_label aria-expanded=false> <label class=md-nav__title for=__nav_7> <span class="md-nav__icon md-icon"></span> Type System </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../type_system_safety/ class=md-nav__link> <span class=md-ellipsis> Type System & Safety </span> </a> </li> <li class=md-nav__item> <a href=../../../any_type/ class=md-nav__link> <span class=md-ellipsis> The Any Type </span> </a> </li> <li class=md-nav__item> <a href=../../../general/unit_type/ class=md-nav__link> <span class=md-ellipsis> The Unit Type </span> </a> </li> <li class=md-nav__item> <a href=../../../general/interfaces/ class=md-nav__link> <span class=md-ellipsis> Interfaces </span> </a> </li> <li class=md-nav__item> <a href=../../cast/ class=md-nav__link> <span class=md-ellipsis> Cast </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_8> <label class=md-nav__link for=__nav_8 id=__nav_8_label tabindex=0> <span class=md-ellipsis> Functions </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_8_label aria-expanded=false> <label class=md-nav__title for=__nav_8> <span class="md-nav__icon md-icon"></span> Functions </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../functions/introduction/ class=md-nav__link> <span class=md-ellipsis> Introduction </span> </a> </li> <li class=md-nav__item> <a href=../../../functions/arrow_functions/ class=md-nav__link> <span class=md-ellipsis> Arrow Functions </span> </a> </li> <li class=md-nav__item> <a href=../../../functions/defer_statements/ class=md-nav__link> <span class=md-ellipsis> Defer Statements </span> </a> </li> <li class=md-nav__item> <a href=../../../functions/functional/ class=md-nav__link> <span class=md-ellipsis> Functional Features </span> </a> </li> <li class=md-nav__item> <a href=../../../functions/advanced_features/ class=md-nav__link> <span class=md-ellipsis> Advanced Features </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_8_6> <label class=md-nav__link for=__nav_8_6 id=__nav_8_6_label tabindex=0> <span class=md-ellipsis> Builtins </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_8_6_label aria-expanded=false> <label class=md-nav__title for=__nav_8_6> <span class="md-nav__icon md-icon"></span> Builtins </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../functions/append/ class=md-nav__link> <span class=md-ellipsis> Append </span> </a> </li> <li class=md-nav__item> <a href=../../../functions/len/ class=md-nav__link> <span class=md-ellipsis> Len </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_9> <label class=md-nav__link for=__nav_9 id=__nav_9_label tabindex=0> <span class=md-ellipsis> Concurrency </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_9_label aria-expanded=false> <label class=md-nav__title for=__nav_9> <span class="md-nav__icon md-icon"></span> Concurrency </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../general/concurrency/ class=md-nav__link> <span class=md-ellipsis> Concurrency (do / await / sleep) </span> </a> </li> <li class=md-nav__item> <a href=../../sync/ class=md-nav__link> <span class=md-ellipsis> Sync </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_10> <label class=md-nav__link for=__nav_10 id=__nav_10_label tabindex=0> <span class=md-ellipsis> Error Handling </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_10_label aria-expanded=false> <label class=md-nav__title for=__nav_10> <span class="md-nav__icon md-icon"></span> Error Handling </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../error_handling_system/ class=md-nav__link> <span class=md-ellipsis> Error Handling System </span> </a> </li> <li class=md-nav__item> <a href=../../errors/ class=md-nav__link> <span class=md-ellipsis> Errors </span> </a> </li> <li class=md-nav__item> <a href=../../assert/ class=md-nav__link> <span class=md-ellipsis> Assert </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_11> <label class=md-nav__link for=__nav_11 id=__nav_11_label tabindex=0> <span class=md-ellipsis> Modules & Imports </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_11_label aria-expanded=false> <label class=md-nav__title for=__nav_11> <span class="md-nav__icon md-icon"></span> Modules & Imports </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../general/import_system/ class=md-nav__link> <span class=md-ellipsis> Import System </span> </a> </li> <li class=md-nav__item> <a href=../../../modules/ class=md-nav__link> <span class=md-ellipsis> Module System </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_12 checked> <label class=md-nav__link for=__nav_12 id=__nav_12_label tabindex=0> <span class=md-ellipsis> Standard Library </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_12_label aria-expanded=true> <label class=md-nav__title for=__nav_12> <span class="md-nav__icon md-icon"></span> Standard Library </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_12_1> <label class=md-nav__link for=__nav_12_1 id=__nav_12_1_label tabindex=0> <span class=md-ellipsis> I/O & Formatting </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_12_1_label aria-expanded=false> <label class=md-nav__title for=__nav_12_1> <span class="md-nav__icon md-icon"></span> I/O & Formatting </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../fmt/ class=md-nav__link> <span class=md-ellipsis> Fmt </span> </a> </li> <li class=md-nav__item> <a href=../../input/ class=md-nav__link> <span class=md-ellipsis> Input </span> </a> </li> <li class=md-nav__item> <a href=../../log/ class=md-nav__link> <span class=md-ellipsis> Log </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_12_2> <label class=md-nav__link for=__nav_12_2 id=__nav_12_2_label tabindex=0> <span class=md-ellipsis> Strings & Text </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_12_2_label aria-expanded=false> <label class=md-nav__title for=__nav_12_2> <span class="md-nav__icon md-icon"></span> Strings & Text </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_12_2_1> <label class=md-nav__link for=__nav_12_2_1 id=__nav_12_2_1_label tabindex=0> <span class=md-ellipsis> Strings </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=3 aria-labelledby=__nav_12_2_1_label aria-expanded=false> <label class=md-nav__title for=__nav_12_2_1> <span class="md-nav__icon md-icon"></span> Strings </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../strings/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class=md-nav__item> <a href=../../../general/multiline_strings_migration/ class=md-nav__link> <span class=md-ellipsis> Multiline Strings </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../regex/ class=md-nav__link> <span class=md-ellipsis> Regex </span> </a> </li> <li class=md-nav__item> <a href=../../../general/unicode_support/ class=md-nav__link> <span class=md-ellipsis> Unicode Support </span> </a> </li> <li class=md-nav__item> <a href=../../utf8/ class=md-nav__link> <span class=md-ellipsis> Utf8 </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_12_3> <label class=md-nav__link for=__nav_12_3 id=__nav_12_3_label tabindex=0> <span class=md-ellipsis> Math & Numbers </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_12_3_label aria-expanded=false> <label class=md-nav__title for=__nav_12_3> <span class="md-nav__icon md-icon"></span> Math & Numbers </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../math/ class=md-nav__link> <span class=md-ellipsis> Math </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_12_4> <label class=md-nav__link for=__nav_12_4 id=__nav_12_4_label tabindex=0> <span class=md-ellipsis> Collections & Data Structures </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_12_4_label aria-expanded=false> <label class=md-nav__title for=__nav_12_4> <span class="md-nav__icon md-icon"></span> Collections & Data Structures </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../arrays/ class=md-nav__link> <span class=md-ellipsis> Arrays </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_12_4_2> <label class=md-nav__link for=__nav_12_4_2 id=__nav_12_4_2_label tabindex=0> <span class=md-ellipsis> Collections </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=3 aria-labelledby=__nav_12_4_2_label aria-expanded=false> <label class=md-nav__title for=__nav_12_4_2> <span class="md-nav__icon md-icon"></span> Collections </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../collections/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_12_4_2_2> <label class=md-nav__link for=__nav_12_4_2_2 id=__nav_12_4_2_2_label tabindex=0> <span class=md-ellipsis> Enhanced Collections </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=4 aria-labelledby=__nav_12_4_2_2_label aria-expanded=false> <label class=md-nav__title for=__nav_12_4_2_2> <span class="md-nav__icon md-icon"></span> Enhanced Collections </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../collections/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/stacks-queues/ class=md-nav__link> <span class=md-ellipsis> Stacks & Queues </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/sets/ class=md-nav__link> <span class=md-ellipsis> Sets </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/linked-lists/ class=md-nav__link> <span class=md-ellipsis> Linked Lists </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/trees/ class=md-nav__link> <span class=md-ellipsis> Trees </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/bulk-operations/ class=md-nav__link> <span class=md-ellipsis> Bulk Operations </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/concurrent/ class=md-nav__link> <span class=md-ellipsis> Concurrent Collections </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/performance/ class=md-nav__link> <span class=md-ellipsis> Performance Guide </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/migration/ class=md-nav__link> <span class=md-ellipsis> Migration Guide </span> </a> </li> <li class=md-nav__item> <a href=../../../collections/api-reference/ class=md-nav__link> <span class=md-ellipsis> API Reference </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_12_5> <label class=md-nav__link for=__nav_12_5 id=__nav_12_5_label tabindex=0> <span class=md-ellipsis> Data Formats </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_12_5_label aria-expanded=false> <label class=md-nav__title for=__nav_12_5> <span class="md-nav__icon md-icon"></span> Data Formats </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../json/ class=md-nav__link> <span class=md-ellipsis> JSON </span> </a> </li> <li class=md-nav__item> <a href=../../encoding/ class=md-nav__link> <span class=md-ellipsis> Encoding </span> </a> </li> <li class=md-nav__item> <a href=../../config/ class=md-nav__link> <span class=md-ellipsis> Config </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_12_6> <label class=md-nav__link for=__nav_12_6 id=__nav_12_6_label tabindex=0> <span class=md-ellipsis> Structs & Types </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_12_6_label aria-expanded=false> <label class=md-nav__title for=__nav_12_6> <span class="md-nav__icon md-icon"></span> Structs & Types </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_12_6_1> <label class=md-nav__link for=__nav_12_6_1 id=__nav_12_6_1_label tabindex=0> <span class=md-ellipsis> Structs </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=3 aria-labelledby=__nav_12_6_1_label aria-expanded=false> <label class=md-nav__title for=__nav_12_6_1> <span class="md-nav__icon md-icon"></span> Structs </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../structs/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class=md-nav__item> <a href=../../../general/struct_field_assignment/ class=md-nav__link> <span class=md-ellipsis> Struct Field Assignment </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../box/ class=md-nav__link> <span class=md-ellipsis> Box </span> </a> </li> <li class=md-nav__item> <a href=../../reflect/ class=md-nav__link> <span class=md-ellipsis> Reflect </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_12_7> <label class=md-nav__link for=__nav_12_7 id=__nav_12_7_label tabindex=0> <span class=md-ellipsis> File System & OS </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_12_7_label aria-expanded=false> <label class=md-nav__title for=__nav_12_7> <span class="md-nav__icon md-icon"></span> File System & OS </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../file/ class=md-nav__link> <span class=md-ellipsis> File </span> </a> </li> <li class=md-nav__item> <a href=../../path/ class=md-nav__link> <span class=md-ellipsis> Path </span> </a> </li> <li class=md-nav__item> <a href=../../os/ class=md-nav__link> <span class=md-ellipsis> OS </span> </a> </li> <li class=md-nav__item> <a href=../../exec/ class=md-nav__link> <span class=md-ellipsis> Exec </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_12_8 checked> <label class=md-nav__link for=__nav_12_8 id=__nav_12_8_label tabindex=0> <span class=md-ellipsis> Networking & HTTP </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_12_8_label aria-expanded=true> <label class=md-nav__title for=__nav_12_8> <span class="md-nav__icon md-icon"></span> Networking & HTTP </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_12_8_1 checked> <label class=md-nav__link for=__nav_12_8_1 id=__nav_12_8_1_label tabindex=0> <span class=md-ellipsis> HTTP </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=3 aria-labelledby=__nav_12_8_1_label aria-expanded=true> <label class=md-nav__title for=__nav_12_8_1> <span class="md-nav__icon md-icon"></span> HTTP </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../overview/ class=md-nav__link> <span class=md-ellipsis> Overview </span> </a> </li> <li class=md-nav__item> <a href=../client/ class=md-nav__link> <span class=md-ellipsis> HTTP Client </span> </a> </li> <li class=md-nav__item> <a href=../requests/ class=md-nav__link> <span class=md-ellipsis> Request Building </span> </a> </li> <li class=md-nav__item> <a href=../responses/ class=md-nav__link> <span class=md-ellipsis> Response Handling </span> </a> </li> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> <span class=md-ellipsis> HTTP Server </span> <span class="md-nav__icon md-icon"></span> </label> <a href=./ class="md-nav__link md-nav__link--active"> <span class=md-ellipsis> HTTP Server </span> </a> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> Table of contents </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#quick-start class=md-nav__link> <span class=md-ellipsis> Quick Start </span> </a> </li> <li class=md-nav__item> <a href=#server-creation class=md-nav__link> <span class=md-ellipsis> Server Creation </span> </a> <nav class=md-nav aria-label="Server Creation"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#httpnewserveraddr class=md-nav__link> <span class=md-ellipsis> http.NewServer(addr) </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#server-object-structure class=md-nav__link> <span class=md-ellipsis> Server Object Structure </span> </a> </li> <li class=md-nav__item> <a href=#server-lifecycle class=md-nav__link> <span class=md-ellipsis> Server Lifecycle </span> </a> <nav class=md-nav aria-label="Server Lifecycle"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#httplistenandserveserver class=md-nav__link> <span class=md-ellipsis> http.ListenAndServe(server) </span> </a> </li> <li class=md-nav__item> <a href=#httplistenandservetlsserver-certfile-keyfile class=md-nav__link> <span class=md-ellipsis> http.ListenAndServeTLS(server, certFile, keyFile) </span> </a> </li> <li class=md-nav__item> <a href=#httpshutdownserver class=md-nav__link> <span class=md-ellipsis> http.Shutdown(server) </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#handler-management class=md-nav__link> <span class=md-ellipsis> Handler Management </span> </a> <nav class=md-nav aria-label="Handler Management"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#httpsethandlerserver-handler class=md-nav__link> <span class=md-ellipsis> http.SetHandler(server, handler) </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#response-writing class=md-nav__link> <span class=md-ellipsis> Response Writing </span> </a> <nav class=md-nav aria-label="Response Writing"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#httpwriteresponseresponse-status-contenttype-body class=md-nav__link> <span class=md-ellipsis> http.WriteResponse(response, status, contentType, body) </span> </a> </li> <li class=md-nav__item> <a href=#httpsetresponseheaderresponse-key-value class=md-nav__link> <span class=md-ellipsis> http.SetResponseHeader(response, key, value) </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#request-processing class=md-nav__link> <span class=md-ellipsis> Request Processing </span> </a> <nav class=md-nav aria-label="Request Processing"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#request-object-structure class=md-nav__link> <span class=md-ellipsis> Request Object Structure </span> </a> </li> <li class=md-nav__item> <a href=#accessing-request-data class=md-nav__link> <span class=md-ellipsis> Accessing Request Data </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#server-configuration class=md-nav__link> <span class=md-ellipsis> Server Configuration </span> </a> <nav class=md-nav aria-label="Server Configuration"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#timeout-configuration class=md-nav__link> <span class=md-ellipsis> Timeout Configuration </span> </a> </li> <li class=md-nav__item> <a href=#tls-configuration class=md-nav__link> <span class=md-ellipsis> TLS Configuration </span> </a> </li> <li class=md-nav__item> <a href=#request-ids class=md-nav__link> <span class=md-ellipsis> Request IDs </span> </a> </li> <li class=md-nav__item> <a href=#metrics-hooks class=md-nav__link> <span class=md-ellipsis> Metrics Hooks </span> </a> </li> <li class=md-nav__item> <a href=#context-cancellation class=md-nav__link> <span class=md-ellipsis> Context Cancellation </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#error-handling class=md-nav__link> <span class=md-ellipsis> Error Handling </span> </a> <nav class=md-nav aria-label="Error Handling"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#server-error-handling class=md-nav__link> <span class=md-ellipsis> Server Error Handling </span> </a> </li> <li class=md-nav__item> <a href=#combined-production-setup class=md-nav__link> <span class=md-ellipsis> Combined Production Setup </span> </a> </li> <li class=md-nav__item> <a href=#cors-configuration-with-httpwithcors class=md-nav__link> <span class=md-ellipsis> CORS Configuration with http.WithCORS </span> </a> </li> <li class=md-nav__item> <a href=#authentication-rate-limiting-helpers class=md-nav__link> <span class=md-ellipsis> Authentication &amp; Rate Limiting Helpers </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#best-practices class=md-nav__link> <span class=md-ellipsis> Best Practices </span> </a> <nav class=md-nav aria-label="Best Practices"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#1-always-set-content-type class=md-nav__link> <span class=md-ellipsis> 1. Always Set Content-Type </span> </a> </li> <li class=md-nav__item> <a href=#2-handle-errors-gracefully class=md-nav__link> <span class=md-ellipsis> 2. Handle Errors Gracefully </span> </a> </li> <li class=md-nav__item> <a href=#3-use-appropriate-status-codes class=md-nav__link> <span class=md-ellipsis> 3. Use Appropriate Status Codes </span> </a> </li> <li class=md-nav__item> <a href=#4-set-security-headers class=md-nav__link> <span class=md-ellipsis> 4. Set Security Headers </span> </a> </li> <li class=md-nav__item> <a href=#5-log-requests class=md-nav__link> <span class=md-ellipsis> 5. Log Requests </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#next-steps class=md-nav__link> <span class=md-ellipsis> Next Steps </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../routing/ class=md-nav__link> <span class=md-ellipsis> Routing & Mux </span> </a> </li> <li class=md-nav__item> <a href=../middleware/ class=md-nav__link> <span class=md-ellipsis> Middleware </span> </a> </li> <li class=md-nav__item> <a href=../auth/ class=md-nav__link> <span class=md-ellipsis> Authentication </span> </a> </li> <li class=md-nav__item> <a href=../cookies/ class=md-nav__link> <span class=md-ellipsis> Cookies & Sessions </span> </a> </li> <li class=md-nav__item> <a href=../advanced/ class=md-nav__link> <span class=md-ellipsis> Advanced </span> </a> </li> <li class=md-nav__item> <a href=../examples/ class=md-nav__link> <span class=md-ellipsis> Examples & Patterns </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_12_9> <label class=md-nav__link for=__nav_12_9 id=__nav_12_9_label tabindex=0> <span class=md-ellipsis> Database </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_12_9_label aria-expanded=false> <label class=md-nav__title for=__nav_12_9> <span class="md-nav__icon md-icon"></span> Database </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../db/ class=md-nav__link> <span class=md-ellipsis> DB </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_12_10> <label class=md-nav__link for=__nav_12_10 id=__nav_12_10_label tabindex=0> <span class=md-ellipsis> Utilities </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_12_10_label aria-expanded=false> <label class=md-nav__title for=__nav_12_10> <span class="md-nav__icon md-icon"></span> Utilities </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../datetime/ class=md-nav__link> <span class=md-ellipsis> Datetime </span> </a> </li> <li class=md-nav__item> <a href=../../flags/ class=md-nav__link> <span class=md-ellipsis> Flags </span> </a> </li> <li class=md-nav__item> <a href=../../uuid/ class=md-nav__link> <span class=md-ellipsis> UUID </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_13> <label class=md-nav__link for=__nav_13 id=__nav_13_label tabindex=0> <span class=md-ellipsis> Examples </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_13_label aria-expanded=false> <label class=md-nav__title for=__nav_13> <span class="md-nav__icon md-icon"></span> Examples </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../comprehensive_examples/ class=md-nav__link> <span class=md-ellipsis> Comprehensive Language Examples </span> </a> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class=md-content data-md-component=content> <article class="md-content__inner md-typeset"> <h1 id=http-server>HTTP Server</h1> <p>The HTTP server functionality provides comprehensive server-side HTTP capabilities, allowing you to build web servers, APIs, and web applications in Harneet. This wraps Go's powerful <code>net/http</code> server with Harneet's simple and consistent API.</p> <h2 id=quick-start>Quick Start</h2> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Quick Start Server</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-0-1> 1</a></span>
 <span class=normal><a href=#__codelineno-0-2> 2</a></span>
 <span class=normal><a href=#__codelineno-0-3> 3</a></span>
 <span class=normal><a href=#__codelineno-0-4> 4</a></span>
@@ -689,7 +689,7 @@
 <a id=__codelineno-20-13 name=__codelineno-20-13></a>
 <a id=__codelineno-20-14 name=__codelineno-20-14></a>    return server
 <a id=__codelineno-20-15 name=__codelineno-20-15></a>}
-</code></pre></div></td></tr></table></div> <h2 id=error-handling>Error Handling</h2> <h3 id=server-error-handling>Server Error Handling</h3> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Server Error Handling</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-21-1> 1</a></span>
+</code></pre></div></td></tr></table></div> <h3 id=request-ids>Request IDs</h3> <p>Every request automatically receives a unique <code>requestID</code> that can be used for logging, tracing, and correlation.</p> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Using Request IDs</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-21-1> 1</a></span>
 <span class=normal><a href=#__codelineno-21-2> 2</a></span>
 <span class=normal><a href=#__codelineno-21-3> 3</a></span>
 <span class=normal><a href=#__codelineno-21-4> 4</a></span>
@@ -706,95 +706,43 @@
 <span class=normal><a href=#__codelineno-21-15>15</a></span>
 <span class=normal><a href=#__codelineno-21-16>16</a></span>
 <span class=normal><a href=#__codelineno-21-17>17</a></span>
-<span class=normal><a href=#__codelineno-21-18>18</a></span>
-<span class=normal><a href=#__codelineno-21-19>19</a></span>
-<span class=normal><a href=#__codelineno-21-20>20</a></span>
-<span class=normal><a href=#__codelineno-21-21>21</a></span>
-<span class=normal><a href=#__codelineno-21-22>22</a></span>
-<span class=normal><a href=#__codelineno-21-23>23</a></span>
-<span class=normal><a href=#__codelineno-21-24>24</a></span>
-<span class=normal><a href=#__codelineno-21-25>25</a></span>
-<span class=normal><a href=#__codelineno-21-26>26</a></span>
-<span class=normal><a href=#__codelineno-21-27>27</a></span>
-<span class=normal><a href=#__codelineno-21-28>28</a></span>
-<span class=normal><a href=#__codelineno-21-29>29</a></span>
-<span class=normal><a href=#__codelineno-21-30>30</a></span>
-<span class=normal><a href=#__codelineno-21-31>31</a></span>
-<span class=normal><a href=#__codelineno-21-32>32</a></span>
-<span class=normal><a href=#__codelineno-21-33>33</a></span>
-<span class=normal><a href=#__codelineno-21-34>34</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-21-1 name=__codelineno-21-1></a>import http
+<span class=normal><a href=#__codelineno-21-18>18</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-21-1 name=__codelineno-21-1></a>import http
 <a id=__codelineno-21-2 name=__codelineno-21-2></a>import fmt
 <a id=__codelineno-21-3 name=__codelineno-21-3></a>
-<a id=__codelineno-21-4 name=__codelineno-21-4></a>function errorHandlingServer() {
-<a id=__codelineno-21-5 name=__codelineno-21-5></a>    var server = http.NewServer(&quot;:8080&quot;)[0]
-<a id=__codelineno-21-6 name=__codelineno-21-6></a>    var mux = http.NewMux()[0]
+<a id=__codelineno-21-4 name=__codelineno-21-4></a>function tracedHandler(request map, response map) {
+<a id=__codelineno-21-5 name=__codelineno-21-5></a>    // Access the auto-generated request ID
+<a id=__codelineno-21-6 name=__codelineno-21-6></a>    var requestID = request[&quot;requestID&quot;]
 <a id=__codelineno-21-7 name=__codelineno-21-7></a>
-<a id=__codelineno-21-8 name=__codelineno-21-8></a>    // Add error handling middleware
-<a id=__codelineno-21-9 name=__codelineno-21-9></a>    var errorMux = http.WithErrorHandling(mux, errorHandler)[0]
-<a id=__codelineno-21-10 name=__codelineno-21-10></a>
-<a id=__codelineno-21-11 name=__codelineno-21-11></a>    http.HandleFunc(errorMux, &quot;/&quot;, homeHandler)
-<a id=__codelineno-21-12 name=__codelineno-21-12></a>    http.HandleFunc(errorMux, &quot;/error&quot;, triggerErrorHandler)
-<a id=__codelineno-21-13 name=__codelineno-21-13></a>
-<a id=__codelineno-21-14 name=__codelineno-21-14></a>    http.SetHandler(server, errorMux)
-<a id=__codelineno-21-15 name=__codelineno-21-15></a>    http.ListenAndServe(server)
-<a id=__codelineno-21-16 name=__codelineno-21-16></a>}
-<a id=__codelineno-21-17 name=__codelineno-21-17></a>
-<a id=__codelineno-21-18 name=__codelineno-21-18></a>function errorHandler(error string, request map, response map) {
-<a id=__codelineno-21-19 name=__codelineno-21-19></a>    fmt.Printf(&quot;Server error: %s\n&quot;, error)
-<a id=__codelineno-21-20 name=__codelineno-21-20></a>
-<a id=__codelineno-21-21 name=__codelineno-21-21></a>    var errorResponse = {
-<a id=__codelineno-21-22 name=__codelineno-21-22></a>        &quot;error&quot;: &quot;Internal server error&quot;,
-<a id=__codelineno-21-23 name=__codelineno-21-23></a>        &quot;message&quot;: &quot;Something went wrong&quot;,
-<a id=__codelineno-21-24 name=__codelineno-21-24></a>        &quot;timestamp&quot;: &quot;2024-01-01T12:00:00Z&quot;
-<a id=__codelineno-21-25 name=__codelineno-21-25></a>    }
-<a id=__codelineno-21-26 name=__codelineno-21-26></a>
-<a id=__codelineno-21-27 name=__codelineno-21-27></a>    var jsonData, _ = json.Marshal(errorResponse)
-<a id=__codelineno-21-28 name=__codelineno-21-28></a>    http.WriteResponse(response, 500, &quot;application/json&quot;, jsonData)
-<a id=__codelineno-21-29 name=__codelineno-21-29></a>}
-<a id=__codelineno-21-30 name=__codelineno-21-30></a>
-<a id=__codelineno-21-31 name=__codelineno-21-31></a>function triggerErrorHandler(request map, response map) {
-<a id=__codelineno-21-32 name=__codelineno-21-32></a>    // Simulate an error
-<a id=__codelineno-21-33 name=__codelineno-21-33></a>    panic(&quot;Something went wrong!&quot;)
-<a id=__codelineno-21-34 name=__codelineno-21-34></a>}
-</code></pre></div></td></tr></table></div> <h2 id=best-practices>Best Practices</h2> <h3 id=1-always-set-content-type>1. Always Set Content-Type</h3> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Always Set Content-Type</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-22-1>1</a></span>
-<span class=normal><a href=#__codelineno-22-2>2</a></span>
-<span class=normal><a href=#__codelineno-22-3>3</a></span>
-<span class=normal><a href=#__codelineno-22-4>4</a></span>
-<span class=normal><a href=#__codelineno-22-5>5</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-22-1 name=__codelineno-22-1></a>// Good
-<a id=__codelineno-22-2 name=__codelineno-22-2></a>http.WriteResponse(response, 200, &quot;application/json&quot;, jsonData)
-<a id=__codelineno-22-3 name=__codelineno-22-3></a>
-<a id=__codelineno-22-4 name=__codelineno-22-4></a>// Bad
-<a id=__codelineno-22-5 name=__codelineno-22-5></a>http.WriteResponse(response, 200, &quot;&quot;, jsonData)
-</code></pre></div></td></tr></table></div> <h3 id=2-handle-errors-gracefully>2. Handle Errors Gracefully</h3> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Handle Errors Gracefully</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-23-1> 1</a></span>
-<span class=normal><a href=#__codelineno-23-2> 2</a></span>
-<span class=normal><a href=#__codelineno-23-3> 3</a></span>
-<span class=normal><a href=#__codelineno-23-4> 4</a></span>
-<span class=normal><a href=#__codelineno-23-5> 5</a></span>
-<span class=normal><a href=#__codelineno-23-6> 6</a></span>
-<span class=normal><a href=#__codelineno-23-7> 7</a></span>
-<span class=normal><a href=#__codelineno-23-8> 8</a></span>
-<span class=normal><a href=#__codelineno-23-9> 9</a></span>
-<span class=normal><a href=#__codelineno-23-10>10</a></span>
-<span class=normal><a href=#__codelineno-23-11>11</a></span>
-<span class=normal><a href=#__codelineno-23-12>12</a></span>
-<span class=normal><a href=#__codelineno-23-13>13</a></span>
-<span class=normal><a href=#__codelineno-23-14>14</a></span>
-<span class=normal><a href=#__codelineno-23-15>15</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-23-1 name=__codelineno-23-1></a>function safeHandler(request map, response map) {
-<a id=__codelineno-23-2 name=__codelineno-23-2></a>    var data, err = processRequest(request)
-<a id=__codelineno-23-3 name=__codelineno-23-3></a>    if err != None {
-<a id=__codelineno-23-4 name=__codelineno-23-4></a>        http.WriteResponse(response, 500, &quot;application/json&quot;, &quot;{\&quot;error\&quot;: \&quot;Processing failed\&quot;}&quot;)
-<a id=__codelineno-23-5 name=__codelineno-23-5></a>        return
-<a id=__codelineno-23-6 name=__codelineno-23-6></a>    }
-<a id=__codelineno-23-7 name=__codelineno-23-7></a>
-<a id=__codelineno-23-8 name=__codelineno-23-8></a>    var jsonData, jsonErr = json.Marshal(data)
-<a id=__codelineno-23-9 name=__codelineno-23-9></a>    if jsonErr != None {
-<a id=__codelineno-23-10 name=__codelineno-23-10></a>        http.WriteResponse(response, 500, &quot;application/json&quot;, &quot;{\&quot;error\&quot;: \&quot;JSON encoding failed\&quot;}&quot;)
-<a id=__codelineno-23-11 name=__codelineno-23-11></a>        return
-<a id=__codelineno-23-12 name=__codelineno-23-12></a>    }
-<a id=__codelineno-23-13 name=__codelineno-23-13></a>
-<a id=__codelineno-23-14 name=__codelineno-23-14></a>    http.WriteResponse(response, 200, &quot;application/json&quot;, jsonData)
-<a id=__codelineno-23-15 name=__codelineno-23-15></a>}
-</code></pre></div></td></tr></table></div> <h3 id=3-use-appropriate-status-codes>3. Use Appropriate Status Codes</h3> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Appropriate Status Codes</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-24-1> 1</a></span>
+<a id=__codelineno-21-8 name=__codelineno-21-8></a>    fmt.Printf(&quot;[%s] Processing request: %s %s\n&quot;, requestID, request[&quot;method&quot;], request[&quot;path&quot;])
+<a id=__codelineno-21-9 name=__codelineno-21-9></a>
+<a id=__codelineno-21-10 name=__codelineno-21-10></a>    // Include request ID in response for client correlation
+<a id=__codelineno-21-11 name=__codelineno-21-11></a>    response.setHeader(&quot;X-Request-ID&quot;, requestID)
+<a id=__codelineno-21-12 name=__codelineno-21-12></a>
+<a id=__codelineno-21-13 name=__codelineno-21-13></a>    var data = {
+<a id=__codelineno-21-14 name=__codelineno-21-14></a>        &quot;message&quot;: &quot;Request processed&quot;,
+<a id=__codelineno-21-15 name=__codelineno-21-15></a>        &quot;requestID&quot;: requestID
+<a id=__codelineno-21-16 name=__codelineno-21-16></a>    }
+<a id=__codelineno-21-17 name=__codelineno-21-17></a>    response.json(data)
+<a id=__codelineno-21-18 name=__codelineno-21-18></a>}
+</code></pre></div></td></tr></table></div> <h3 id=metrics-hooks>Metrics Hooks</h3> <p>Use <code>http.WithMetrics</code> to attach a metrics handler that receives detailed information about each request.</p> <p><strong>Syntax:</strong> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>WithMetrics Syntax</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-22-1>1</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-22-1 name=__codelineno-22-1></a>http.WithMetrics(mux, metricsHandler) (mux, error)
+</code></pre></div></td></tr></table></div></p> <p><strong>Parameters:</strong> - <code>mux</code> (map) - Multiplexer object created by http.NewMux() - <code>metricsHandler</code> (function) - Metrics handler function with signature <code>function(event map)</code></p> <p><strong>Event Object Structure:</strong> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Metrics Event Structure</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-23-1>1</a></span>
+<span class=normal><a href=#__codelineno-23-2>2</a></span>
+<span class=normal><a href=#__codelineno-23-3>3</a></span>
+<span class=normal><a href=#__codelineno-23-4>4</a></span>
+<span class=normal><a href=#__codelineno-23-5>5</a></span>
+<span class=normal><a href=#__codelineno-23-6>6</a></span>
+<span class=normal><a href=#__codelineno-23-7>7</a></span>
+<span class=normal><a href=#__codelineno-23-8>8</a></span>
+<span class=normal><a href=#__codelineno-23-9>9</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-23-1 name=__codelineno-23-1></a>{
+<a id=__codelineno-23-2 name=__codelineno-23-2></a>    &quot;type&quot;: &quot;request&quot;,           // Event type
+<a id=__codelineno-23-3 name=__codelineno-23-3></a>    &quot;method&quot;: &quot;GET&quot;,             // HTTP method
+<a id=__codelineno-23-4 name=__codelineno-23-4></a>    &quot;path&quot;: &quot;/api/users&quot;,        // Request path
+<a id=__codelineno-23-5 name=__codelineno-23-5></a>    &quot;status&quot;: 200,               // HTTP status code
+<a id=__codelineno-23-6 name=__codelineno-23-6></a>    &quot;durationMs&quot;: 45,            // Request duration in milliseconds
+<a id=__codelineno-23-7 name=__codelineno-23-7></a>    &quot;requestID&quot;: &quot;abc123...&quot;,    // Unique request ID
+<a id=__codelineno-23-8 name=__codelineno-23-8></a>    &quot;error&quot;: None                // Error message if any, None otherwise
+<a id=__codelineno-23-9 name=__codelineno-23-9></a>}
+</code></pre></div></td></tr></table></div></p> <p><strong>Example:</strong> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Metrics Handler Example</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-24-1> 1</a></span>
 <span class=normal><a href=#__codelineno-24-2> 2</a></span>
 <span class=normal><a href=#__codelineno-24-3> 3</a></span>
 <span class=normal><a href=#__codelineno-24-4> 4</a></span>
@@ -805,38 +753,60 @@
 <span class=normal><a href=#__codelineno-24-9> 9</a></span>
 <span class=normal><a href=#__codelineno-24-10>10</a></span>
 <span class=normal><a href=#__codelineno-24-11>11</a></span>
-<span class=normal><a href=#__codelineno-24-12>12</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-24-1 name=__codelineno-24-1></a>// Success responses
-<a id=__codelineno-24-2 name=__codelineno-24-2></a>http.WriteResponse(response, 200, contentType, data)  // OK
-<a id=__codelineno-24-3 name=__codelineno-24-3></a>http.WriteResponse(response, 201, contentType, data)  // Created
-<a id=__codelineno-24-4 name=__codelineno-24-4></a>http.WriteResponse(response, 204, &quot;&quot;, &quot;&quot;)             // No Content
-<a id=__codelineno-24-5 name=__codelineno-24-5></a>
-<a id=__codelineno-24-6 name=__codelineno-24-6></a>// Client error responses
-<a id=__codelineno-24-7 name=__codelineno-24-7></a>http.WriteResponse(response, 400, contentType, error) // Bad Request
-<a id=__codelineno-24-8 name=__codelineno-24-8></a>http.WriteResponse(response, 401, contentType, error) // Unauthorized
-<a id=__codelineno-24-9 name=__codelineno-24-9></a>http.WriteResponse(response, 404, contentType, error) // Not Found
-<a id=__codelineno-24-10 name=__codelineno-24-10></a>
-<a id=__codelineno-24-11 name=__codelineno-24-11></a>// Server error responses
-<a id=__codelineno-24-12 name=__codelineno-24-12></a>http.WriteResponse(response, 500, contentType, error) // Internal Server Error
-</code></pre></div></td></tr></table></div> <h3 id=4-set-security-headers>4. Set Security Headers</h3> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Set Security Headers</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-25-1> 1</a></span>
-<span class=normal><a href=#__codelineno-25-2> 2</a></span>
-<span class=normal><a href=#__codelineno-25-3> 3</a></span>
-<span class=normal><a href=#__codelineno-25-4> 4</a></span>
-<span class=normal><a href=#__codelineno-25-5> 5</a></span>
-<span class=normal><a href=#__codelineno-25-6> 6</a></span>
-<span class=normal><a href=#__codelineno-25-7> 7</a></span>
-<span class=normal><a href=#__codelineno-25-8> 8</a></span>
-<span class=normal><a href=#__codelineno-25-9> 9</a></span>
-<span class=normal><a href=#__codelineno-25-10>10</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-25-1 name=__codelineno-25-1></a>function secureHandler(request map, response map) {
-<a id=__codelineno-25-2 name=__codelineno-25-2></a>    // Security headers
-<a id=__codelineno-25-3 name=__codelineno-25-3></a>    http.SetResponseHeader(response, &quot;X-Content-Type-Options&quot;, &quot;nosniff&quot;)
-<a id=__codelineno-25-4 name=__codelineno-25-4></a>    http.SetResponseHeader(response, &quot;X-Frame-Options&quot;, &quot;DENY&quot;)
-<a id=__codelineno-25-5 name=__codelineno-25-5></a>    http.SetResponseHeader(response, &quot;X-XSS-Protection&quot;, &quot;1; mode=block&quot;)
-<a id=__codelineno-25-6 name=__codelineno-25-6></a>    http.SetResponseHeader(response, &quot;Strict-Transport-Security&quot;, &quot;max-age=31536000&quot;)
-<a id=__codelineno-25-7 name=__codelineno-25-7></a>
-<a id=__codelineno-25-8 name=__codelineno-25-8></a>    // Your handler logic here
-<a id=__codelineno-25-9 name=__codelineno-25-9></a>    http.WriteResponse(response, 200, &quot;text/html&quot;, &quot;&lt;h1&gt;Secure Page&lt;/h1&gt;&quot;)
-<a id=__codelineno-25-10 name=__codelineno-25-10></a>}
-</code></pre></div></td></tr></table></div> <h3 id=5-log-requests>5. Log Requests</h3> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Log Requests</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-26-1> 1</a></span>
+<span class=normal><a href=#__codelineno-24-12>12</a></span>
+<span class=normal><a href=#__codelineno-24-13>13</a></span>
+<span class=normal><a href=#__codelineno-24-14>14</a></span>
+<span class=normal><a href=#__codelineno-24-15>15</a></span>
+<span class=normal><a href=#__codelineno-24-16>16</a></span>
+<span class=normal><a href=#__codelineno-24-17>17</a></span>
+<span class=normal><a href=#__codelineno-24-18>18</a></span>
+<span class=normal><a href=#__codelineno-24-19>19</a></span>
+<span class=normal><a href=#__codelineno-24-20>20</a></span>
+<span class=normal><a href=#__codelineno-24-21>21</a></span>
+<span class=normal><a href=#__codelineno-24-22>22</a></span>
+<span class=normal><a href=#__codelineno-24-23>23</a></span>
+<span class=normal><a href=#__codelineno-24-24>24</a></span>
+<span class=normal><a href=#__codelineno-24-25>25</a></span>
+<span class=normal><a href=#__codelineno-24-26>26</a></span>
+<span class=normal><a href=#__codelineno-24-27>27</a></span>
+<span class=normal><a href=#__codelineno-24-28>28</a></span>
+<span class=normal><a href=#__codelineno-24-29>29</a></span>
+<span class=normal><a href=#__codelineno-24-30>30</a></span>
+<span class=normal><a href=#__codelineno-24-31>31</a></span>
+<span class=normal><a href=#__codelineno-24-32>32</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-24-1 name=__codelineno-24-1></a>import http
+<a id=__codelineno-24-2 name=__codelineno-24-2></a>import fmt
+<a id=__codelineno-24-3 name=__codelineno-24-3></a>
+<a id=__codelineno-24-4 name=__codelineno-24-4></a>function metricsHandler(event map) {
+<a id=__codelineno-24-5 name=__codelineno-24-5></a>    fmt.Printf(&quot;METRICS: %s %s -&gt; %d (%dms) [%s]\n&quot;,
+<a id=__codelineno-24-6 name=__codelineno-24-6></a>        event[&quot;method&quot;],
+<a id=__codelineno-24-7 name=__codelineno-24-7></a>        event[&quot;path&quot;],
+<a id=__codelineno-24-8 name=__codelineno-24-8></a>        event[&quot;status&quot;],
+<a id=__codelineno-24-9 name=__codelineno-24-9></a>        event[&quot;durationMs&quot;],
+<a id=__codelineno-24-10 name=__codelineno-24-10></a>        event[&quot;requestID&quot;]
+<a id=__codelineno-24-11 name=__codelineno-24-11></a>    )
+<a id=__codelineno-24-12 name=__codelineno-24-12></a>
+<a id=__codelineno-24-13 name=__codelineno-24-13></a>    // In production, you might send this to a metrics service
+<a id=__codelineno-24-14 name=__codelineno-24-14></a>    // e.g., Prometheus, DataDog, etc.
+<a id=__codelineno-24-15 name=__codelineno-24-15></a>    if event[&quot;error&quot;] != None {
+<a id=__codelineno-24-16 name=__codelineno-24-16></a>        fmt.Printf(&quot;ERROR: %s\n&quot;, event[&quot;error&quot;])
+<a id=__codelineno-24-17 name=__codelineno-24-17></a>    }
+<a id=__codelineno-24-18 name=__codelineno-24-18></a>}
+<a id=__codelineno-24-19 name=__codelineno-24-19></a>
+<a id=__codelineno-24-20 name=__codelineno-24-20></a>function setupMetricsServer() {
+<a id=__codelineno-24-21 name=__codelineno-24-21></a>    var server = http.NewServer(&quot;:8080&quot;)[0]
+<a id=__codelineno-24-22 name=__codelineno-24-22></a>    var mux = http.NewMux()[0]
+<a id=__codelineno-24-23 name=__codelineno-24-23></a>
+<a id=__codelineno-24-24 name=__codelineno-24-24></a>    // Attach metrics handler
+<a id=__codelineno-24-25 name=__codelineno-24-25></a>    var metricsMux = http.WithMetrics(mux, metricsHandler)[0]
+<a id=__codelineno-24-26 name=__codelineno-24-26></a>
+<a id=__codelineno-24-27 name=__codelineno-24-27></a>    http.HandleFunc(metricsMux, &quot;/&quot;, homeHandler)
+<a id=__codelineno-24-28 name=__codelineno-24-28></a>    http.HandleFunc(metricsMux, &quot;/api/users&quot;, usersHandler)
+<a id=__codelineno-24-29 name=__codelineno-24-29></a>
+<a id=__codelineno-24-30 name=__codelineno-24-30></a>    http.SetHandler(server, metricsMux)
+<a id=__codelineno-24-31 name=__codelineno-24-31></a>    http.ListenAndServe(server)
+<a id=__codelineno-24-32 name=__codelineno-24-32></a>}
+</code></pre></div></td></tr></table></div></p> <h3 id=context-cancellation>Context Cancellation</h3> <p>Use <code>http.IsCancelled</code> to check if a request has been cancelled by the client.</p> <p><strong>Syntax:</strong> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>IsCancelled Syntax</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-25-1>1</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-25-1 name=__codelineno-25-1></a>http.IsCancelled(request) (cancelled, error)
+</code></pre></div></td></tr></table></div></p> <p><strong>Parameters:</strong> - <code>request</code> (map) - Request object from the handler</p> <p><strong>Returns:</strong> - <code>cancelled</code> (bool) - True if the request context has been cancelled - <code>error</code> - None on success, error on failure</p> <p><strong>Example:</strong> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Context Cancellation Example</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-26-1> 1</a></span>
 <span class=normal><a href=#__codelineno-26-2> 2</a></span>
 <span class=normal><a href=#__codelineno-26-3> 3</a></span>
 <span class=normal><a href=#__codelineno-26-4> 4</a></span>
@@ -847,16 +817,612 @@
 <span class=normal><a href=#__codelineno-26-9> 9</a></span>
 <span class=normal><a href=#__codelineno-26-10>10</a></span>
 <span class=normal><a href=#__codelineno-26-11>11</a></span>
-<span class=normal><a href=#__codelineno-26-12>12</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-26-1 name=__codelineno-26-1></a>import log
-<a id=__codelineno-26-2 name=__codelineno-26-2></a>
-<a id=__codelineno-26-3 name=__codelineno-26-3></a>function loggedHandler(request map, response map) {
-<a id=__codelineno-26-4 name=__codelineno-26-4></a>    var method = request[&quot;method&quot;]
-<a id=__codelineno-26-5 name=__codelineno-26-5></a>    var path = request[&quot;path&quot;]
-<a id=__codelineno-26-6 name=__codelineno-26-6></a>    var userAgent = request[&quot;headers&quot;][&quot;User-Agent&quot;]
-<a id=__codelineno-26-7 name=__codelineno-26-7></a>
-<a id=__codelineno-26-8 name=__codelineno-26-8></a>    log.Printf(&quot;Request: %s %s from %s&quot;, method, path, userAgent)
-<a id=__codelineno-26-9 name=__codelineno-26-9></a>
-<a id=__codelineno-26-10 name=__codelineno-26-10></a>    // Your handler logic here
-<a id=__codelineno-26-11 name=__codelineno-26-11></a>    http.WriteResponse(response, 200, &quot;application/json&quot;, &quot;{\&quot;status\&quot;: \&quot;ok\&quot;}&quot;)
-<a id=__codelineno-26-12 name=__codelineno-26-12></a>}
+<span class=normal><a href=#__codelineno-26-12>12</a></span>
+<span class=normal><a href=#__codelineno-26-13>13</a></span>
+<span class=normal><a href=#__codelineno-26-14>14</a></span>
+<span class=normal><a href=#__codelineno-26-15>15</a></span>
+<span class=normal><a href=#__codelineno-26-16>16</a></span>
+<span class=normal><a href=#__codelineno-26-17>17</a></span>
+<span class=normal><a href=#__codelineno-26-18>18</a></span>
+<span class=normal><a href=#__codelineno-26-19>19</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-26-1 name=__codelineno-26-1></a>import http
+<a id=__codelineno-26-2 name=__codelineno-26-2></a>import fmt
+<a id=__codelineno-26-3 name=__codelineno-26-3></a>
+<a id=__codelineno-26-4 name=__codelineno-26-4></a>function longRunningHandler(request map, response map) {
+<a id=__codelineno-26-5 name=__codelineno-26-5></a>    // Simulate a long-running operation with cancellation checks
+<a id=__codelineno-26-6 name=__codelineno-26-6></a>    for i in range(100) {
+<a id=__codelineno-26-7 name=__codelineno-26-7></a>        // Check if client disconnected
+<a id=__codelineno-26-8 name=__codelineno-26-8></a>        var cancelled, _ = http.IsCancelled(request)
+<a id=__codelineno-26-9 name=__codelineno-26-9></a>        if cancelled {
+<a id=__codelineno-26-10 name=__codelineno-26-10></a>            fmt.Printf(&quot;[%s] Request cancelled by client\n&quot;, request[&quot;requestID&quot;])
+<a id=__codelineno-26-11 name=__codelineno-26-11></a>            return
+<a id=__codelineno-26-12 name=__codelineno-26-12></a>        }
+<a id=__codelineno-26-13 name=__codelineno-26-13></a>
+<a id=__codelineno-26-14 name=__codelineno-26-14></a>        // Do some work...
+<a id=__codelineno-26-15 name=__codelineno-26-15></a>        processChunk(i)
+<a id=__codelineno-26-16 name=__codelineno-26-16></a>    }
+<a id=__codelineno-26-17 name=__codelineno-26-17></a>
+<a id=__codelineno-26-18 name=__codelineno-26-18></a>    response.json({&quot;status&quot;: &quot;completed&quot;})
+<a id=__codelineno-26-19 name=__codelineno-26-19></a>}
+</code></pre></div></td></tr></table></div></p> <h2 id=error-handling>Error Handling</h2> <h3 id=server-error-handling>Server Error Handling</h3> <p>Use <code>http.WithErrorHandling</code> to attach a centralized error handler to a mux.</p> <p><strong>Syntax:</strong> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>WithErrorHandling Syntax</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-27-1>1</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-27-1 name=__codelineno-27-1></a>http.WithErrorHandling(mux, errorHandler) (mux, error)
+</code></pre></div></td></tr></table></div></p> <p><strong>Parameters:</strong> - <code>mux</code> (map) - Multiplexer object created by http.NewMux() - <code>errorHandler</code> (function) - Error handler function with signature <code>function(error string, request map, response map)</code></p> <p><strong>Example:</strong> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Server Error Handling</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-28-1> 1</a></span>
+<span class=normal><a href=#__codelineno-28-2> 2</a></span>
+<span class=normal><a href=#__codelineno-28-3> 3</a></span>
+<span class=normal><a href=#__codelineno-28-4> 4</a></span>
+<span class=normal><a href=#__codelineno-28-5> 5</a></span>
+<span class=normal><a href=#__codelineno-28-6> 6</a></span>
+<span class=normal><a href=#__codelineno-28-7> 7</a></span>
+<span class=normal><a href=#__codelineno-28-8> 8</a></span>
+<span class=normal><a href=#__codelineno-28-9> 9</a></span>
+<span class=normal><a href=#__codelineno-28-10>10</a></span>
+<span class=normal><a href=#__codelineno-28-11>11</a></span>
+<span class=normal><a href=#__codelineno-28-12>12</a></span>
+<span class=normal><a href=#__codelineno-28-13>13</a></span>
+<span class=normal><a href=#__codelineno-28-14>14</a></span>
+<span class=normal><a href=#__codelineno-28-15>15</a></span>
+<span class=normal><a href=#__codelineno-28-16>16</a></span>
+<span class=normal><a href=#__codelineno-28-17>17</a></span>
+<span class=normal><a href=#__codelineno-28-18>18</a></span>
+<span class=normal><a href=#__codelineno-28-19>19</a></span>
+<span class=normal><a href=#__codelineno-28-20>20</a></span>
+<span class=normal><a href=#__codelineno-28-21>21</a></span>
+<span class=normal><a href=#__codelineno-28-22>22</a></span>
+<span class=normal><a href=#__codelineno-28-23>23</a></span>
+<span class=normal><a href=#__codelineno-28-24>24</a></span>
+<span class=normal><a href=#__codelineno-28-25>25</a></span>
+<span class=normal><a href=#__codelineno-28-26>26</a></span>
+<span class=normal><a href=#__codelineno-28-27>27</a></span>
+<span class=normal><a href=#__codelineno-28-28>28</a></span>
+<span class=normal><a href=#__codelineno-28-29>29</a></span>
+<span class=normal><a href=#__codelineno-28-30>30</a></span>
+<span class=normal><a href=#__codelineno-28-31>31</a></span>
+<span class=normal><a href=#__codelineno-28-32>32</a></span>
+<span class=normal><a href=#__codelineno-28-33>33</a></span>
+<span class=normal><a href=#__codelineno-28-34>34</a></span>
+<span class=normal><a href=#__codelineno-28-35>35</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-28-1 name=__codelineno-28-1></a>import http
+<a id=__codelineno-28-2 name=__codelineno-28-2></a>import fmt
+<a id=__codelineno-28-3 name=__codelineno-28-3></a>
+<a id=__codelineno-28-4 name=__codelineno-28-4></a>function errorHandlingServer() {
+<a id=__codelineno-28-5 name=__codelineno-28-5></a>    var server = http.NewServer(&quot;:8080&quot;)[0]
+<a id=__codelineno-28-6 name=__codelineno-28-6></a>    var mux = http.NewMux()[0]
+<a id=__codelineno-28-7 name=__codelineno-28-7></a>
+<a id=__codelineno-28-8 name=__codelineno-28-8></a>    // Add error handling middleware
+<a id=__codelineno-28-9 name=__codelineno-28-9></a>    var errorMux = http.WithErrorHandling(mux, errorHandler)[0]
+<a id=__codelineno-28-10 name=__codelineno-28-10></a>
+<a id=__codelineno-28-11 name=__codelineno-28-11></a>    http.HandleFunc(errorMux, &quot;/&quot;, homeHandler)
+<a id=__codelineno-28-12 name=__codelineno-28-12></a>    http.HandleFunc(errorMux, &quot;/error&quot;, triggerErrorHandler)
+<a id=__codelineno-28-13 name=__codelineno-28-13></a>
+<a id=__codelineno-28-14 name=__codelineno-28-14></a>    http.SetHandler(server, errorMux)
+<a id=__codelineno-28-15 name=__codelineno-28-15></a>    http.ListenAndServe(server)
+<a id=__codelineno-28-16 name=__codelineno-28-16></a>}
+<a id=__codelineno-28-17 name=__codelineno-28-17></a>
+<a id=__codelineno-28-18 name=__codelineno-28-18></a>function errorHandler(error string, request map, response map) {
+<a id=__codelineno-28-19 name=__codelineno-28-19></a>    fmt.Printf(&quot;Server error [%s]: %s\n&quot;, request[&quot;requestID&quot;], error)
+<a id=__codelineno-28-20 name=__codelineno-28-20></a>
+<a id=__codelineno-28-21 name=__codelineno-28-21></a>    var errorResponse = {
+<a id=__codelineno-28-22 name=__codelineno-28-22></a>        &quot;error&quot;: &quot;Internal server error&quot;,
+<a id=__codelineno-28-23 name=__codelineno-28-23></a>        &quot;message&quot;: &quot;Something went wrong&quot;,
+<a id=__codelineno-28-24 name=__codelineno-28-24></a>        &quot;requestID&quot;: request[&quot;requestID&quot;],
+<a id=__codelineno-28-25 name=__codelineno-28-25></a>        &quot;timestamp&quot;: &quot;2024-01-01T12:00:00Z&quot;
+<a id=__codelineno-28-26 name=__codelineno-28-26></a>    }
+<a id=__codelineno-28-27 name=__codelineno-28-27></a>
+<a id=__codelineno-28-28 name=__codelineno-28-28></a>    var jsonData, _ = json.Marshal(errorResponse)
+<a id=__codelineno-28-29 name=__codelineno-28-29></a>    http.WriteResponse(response, 500, &quot;application/json&quot;, jsonData)
+<a id=__codelineno-28-30 name=__codelineno-28-30></a>}
+<a id=__codelineno-28-31 name=__codelineno-28-31></a>
+<a id=__codelineno-28-32 name=__codelineno-28-32></a>function triggerErrorHandler(request map, response map) {
+<a id=__codelineno-28-33 name=__codelineno-28-33></a>    // Simulate an error
+<a id=__codelineno-28-34 name=__codelineno-28-34></a>    panic(&quot;Something went wrong!&quot;)
+<a id=__codelineno-28-35 name=__codelineno-28-35></a>}
+</code></pre></div></td></tr></table></div></p> <h3 id=combined-production-setup>Combined Production Setup</h3> <p>Here's a complete example combining all production features:</p> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Production Server Setup</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-29-1> 1</a></span>
+<span class=normal><a href=#__codelineno-29-2> 2</a></span>
+<span class=normal><a href=#__codelineno-29-3> 3</a></span>
+<span class=normal><a href=#__codelineno-29-4> 4</a></span>
+<span class=normal><a href=#__codelineno-29-5> 5</a></span>
+<span class=normal><a href=#__codelineno-29-6> 6</a></span>
+<span class=normal><a href=#__codelineno-29-7> 7</a></span>
+<span class=normal><a href=#__codelineno-29-8> 8</a></span>
+<span class=normal><a href=#__codelineno-29-9> 9</a></span>
+<span class=normal><a href=#__codelineno-29-10>10</a></span>
+<span class=normal><a href=#__codelineno-29-11>11</a></span>
+<span class=normal><a href=#__codelineno-29-12>12</a></span>
+<span class=normal><a href=#__codelineno-29-13>13</a></span>
+<span class=normal><a href=#__codelineno-29-14>14</a></span>
+<span class=normal><a href=#__codelineno-29-15>15</a></span>
+<span class=normal><a href=#__codelineno-29-16>16</a></span>
+<span class=normal><a href=#__codelineno-29-17>17</a></span>
+<span class=normal><a href=#__codelineno-29-18>18</a></span>
+<span class=normal><a href=#__codelineno-29-19>19</a></span>
+<span class=normal><a href=#__codelineno-29-20>20</a></span>
+<span class=normal><a href=#__codelineno-29-21>21</a></span>
+<span class=normal><a href=#__codelineno-29-22>22</a></span>
+<span class=normal><a href=#__codelineno-29-23>23</a></span>
+<span class=normal><a href=#__codelineno-29-24>24</a></span>
+<span class=normal><a href=#__codelineno-29-25>25</a></span>
+<span class=normal><a href=#__codelineno-29-26>26</a></span>
+<span class=normal><a href=#__codelineno-29-27>27</a></span>
+<span class=normal><a href=#__codelineno-29-28>28</a></span>
+<span class=normal><a href=#__codelineno-29-29>29</a></span>
+<span class=normal><a href=#__codelineno-29-30>30</a></span>
+<span class=normal><a href=#__codelineno-29-31>31</a></span>
+<span class=normal><a href=#__codelineno-29-32>32</a></span>
+<span class=normal><a href=#__codelineno-29-33>33</a></span>
+<span class=normal><a href=#__codelineno-29-34>34</a></span>
+<span class=normal><a href=#__codelineno-29-35>35</a></span>
+<span class=normal><a href=#__codelineno-29-36>36</a></span>
+<span class=normal><a href=#__codelineno-29-37>37</a></span>
+<span class=normal><a href=#__codelineno-29-38>38</a></span>
+<span class=normal><a href=#__codelineno-29-39>39</a></span>
+<span class=normal><a href=#__codelineno-29-40>40</a></span>
+<span class=normal><a href=#__codelineno-29-41>41</a></span>
+<span class=normal><a href=#__codelineno-29-42>42</a></span>
+<span class=normal><a href=#__codelineno-29-43>43</a></span>
+<span class=normal><a href=#__codelineno-29-44>44</a></span>
+<span class=normal><a href=#__codelineno-29-45>45</a></span>
+<span class=normal><a href=#__codelineno-29-46>46</a></span>
+<span class=normal><a href=#__codelineno-29-47>47</a></span>
+<span class=normal><a href=#__codelineno-29-48>48</a></span>
+<span class=normal><a href=#__codelineno-29-49>49</a></span>
+<span class=normal><a href=#__codelineno-29-50>50</a></span>
+<span class=normal><a href=#__codelineno-29-51>51</a></span>
+<span class=normal><a href=#__codelineno-29-52>52</a></span>
+<span class=normal><a href=#__codelineno-29-53>53</a></span>
+<span class=normal><a href=#__codelineno-29-54>54</a></span>
+<span class=normal><a href=#__codelineno-29-55>55</a></span>
+<span class=normal><a href=#__codelineno-29-56>56</a></span>
+<span class=normal><a href=#__codelineno-29-57>57</a></span>
+<span class=normal><a href=#__codelineno-29-58>58</a></span>
+<span class=normal><a href=#__codelineno-29-59>59</a></span>
+<span class=normal><a href=#__codelineno-29-60>60</a></span>
+<span class=normal><a href=#__codelineno-29-61>61</a></span>
+<span class=normal><a href=#__codelineno-29-62>62</a></span>
+<span class=normal><a href=#__codelineno-29-63>63</a></span>
+<span class=normal><a href=#__codelineno-29-64>64</a></span>
+<span class=normal><a href=#__codelineno-29-65>65</a></span>
+<span class=normal><a href=#__codelineno-29-66>66</a></span>
+<span class=normal><a href=#__codelineno-29-67>67</a></span>
+<span class=normal><a href=#__codelineno-29-68>68</a></span>
+<span class=normal><a href=#__codelineno-29-69>69</a></span>
+<span class=normal><a href=#__codelineno-29-70>70</a></span>
+<span class=normal><a href=#__codelineno-29-71>71</a></span>
+<span class=normal><a href=#__codelineno-29-72>72</a></span>
+<span class=normal><a href=#__codelineno-29-73>73</a></span>
+<span class=normal><a href=#__codelineno-29-74>74</a></span>
+<span class=normal><a href=#__codelineno-29-75>75</a></span>
+<span class=normal><a href=#__codelineno-29-76>76</a></span>
+<span class=normal><a href=#__codelineno-29-77>77</a></span>
+<span class=normal><a href=#__codelineno-29-78>78</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-29-1 name=__codelineno-29-1></a>import http
+<a id=__codelineno-29-2 name=__codelineno-29-2></a>import fmt
+<a id=__codelineno-29-3 name=__codelineno-29-3></a>import json
+<a id=__codelineno-29-4 name=__codelineno-29-4></a>
+<a id=__codelineno-29-5 name=__codelineno-29-5></a>// Metrics handler for observability
+<a id=__codelineno-29-6 name=__codelineno-29-6></a>function metricsHandler(event map) {
+<a id=__codelineno-29-7 name=__codelineno-29-7></a>    fmt.Printf(&quot;METRIC: method=%s path=%s status=%d duration=%dms request_id=%s\n&quot;,
+<a id=__codelineno-29-8 name=__codelineno-29-8></a>        event[&quot;method&quot;],
+<a id=__codelineno-29-9 name=__codelineno-29-9></a>        event[&quot;path&quot;],
+<a id=__codelineno-29-10 name=__codelineno-29-10></a>        event[&quot;status&quot;],
+<a id=__codelineno-29-11 name=__codelineno-29-11></a>        event[&quot;durationMs&quot;],
+<a id=__codelineno-29-12 name=__codelineno-29-12></a>        event[&quot;requestID&quot;]
+<a id=__codelineno-29-13 name=__codelineno-29-13></a>    )
+<a id=__codelineno-29-14 name=__codelineno-29-14></a>}
+<a id=__codelineno-29-15 name=__codelineno-29-15></a>
+<a id=__codelineno-29-16 name=__codelineno-29-16></a>// Error handler for centralized error management
+<a id=__codelineno-29-17 name=__codelineno-29-17></a>function errorHandler(error string, request map, response map) {
+<a id=__codelineno-29-18 name=__codelineno-29-18></a>    fmt.Printf(&quot;ERROR: request_id=%s error=%s\n&quot;, request[&quot;requestID&quot;], error)
+<a id=__codelineno-29-19 name=__codelineno-29-19></a>
+<a id=__codelineno-29-20 name=__codelineno-29-20></a>    var errorData = {
+<a id=__codelineno-29-21 name=__codelineno-29-21></a>        &quot;error&quot;: &quot;Internal server error&quot;,
+<a id=__codelineno-29-22 name=__codelineno-29-22></a>        &quot;requestID&quot;: request[&quot;requestID&quot;]
+<a id=__codelineno-29-23 name=__codelineno-29-23></a>    }
+<a id=__codelineno-29-24 name=__codelineno-29-24></a>    var jsonData, _ = json.Marshal(errorData)
+<a id=__codelineno-29-25 name=__codelineno-29-25></a>    http.WriteResponse(response, 500, &quot;application/json&quot;, jsonData)
+<a id=__codelineno-29-26 name=__codelineno-29-26></a>}
+<a id=__codelineno-29-27 name=__codelineno-29-27></a>
+<a id=__codelineno-29-28 name=__codelineno-29-28></a>// API handler with request ID logging
+<a id=__codelineno-29-29 name=__codelineno-29-29></a>function apiHandler(request map, response map) {
+<a id=__codelineno-29-30 name=__codelineno-29-30></a>    fmt.Printf(&quot;[%s] Handling API request\n&quot;, request[&quot;requestID&quot;])
+<a id=__codelineno-29-31 name=__codelineno-29-31></a>
+<a id=__codelineno-29-32 name=__codelineno-29-32></a>    response.setHeader(&quot;X-Request-ID&quot;, request[&quot;requestID&quot;])
+<a id=__codelineno-29-33 name=__codelineno-29-33></a>    response.json({&quot;status&quot;: &quot;ok&quot;, &quot;requestID&quot;: request[&quot;requestID&quot;]})
+<a id=__codelineno-29-34 name=__codelineno-29-34></a>}
+<a id=__codelineno-29-35 name=__codelineno-29-35></a>
+<a id=__codelineno-29-36 name=__codelineno-29-36></a>function startProductionServer() {
+<a id=__codelineno-29-37 name=__codelineno-29-37></a>    var server, serverErr = http.NewServer(&quot;:8080&quot;)
+<a id=__codelineno-29-38 name=__codelineno-29-38></a>    if serverErr != None {
+<a id=__codelineno-29-39 name=__codelineno-29-39></a>        fmt.Printf(&quot;Failed to create server: %s\n&quot;, serverErr)
+<a id=__codelineno-29-40 name=__codelineno-29-40></a>        return
+<a id=__codelineno-29-41 name=__codelineno-29-41></a>    }
+<a id=__codelineno-29-42 name=__codelineno-29-42></a>
+<a id=__codelineno-29-43 name=__codelineno-29-43></a>    var mux, muxErr = http.NewMux()
+<a id=__codelineno-29-44 name=__codelineno-29-44></a>    if muxErr != None {
+<a id=__codelineno-29-45 name=__codelineno-29-45></a>        fmt.Printf(&quot;Failed to create mux: %s\n&quot;, muxErr)
+<a id=__codelineno-29-46 name=__codelineno-29-46></a>        return
+<a id=__codelineno-29-47 name=__codelineno-29-47></a>    }
+<a id=__codelineno-29-48 name=__codelineno-29-48></a>
+<a id=__codelineno-29-49 name=__codelineno-29-49></a>    // Chain production features
+<a id=__codelineno-29-50 name=__codelineno-29-50></a>    var errMux, err1 = http.WithErrorHandling(mux, errorHandler)
+<a id=__codelineno-29-51 name=__codelineno-29-51></a>    if err1 != None {
+<a id=__codelineno-29-52 name=__codelineno-29-52></a>        fmt.Printf(&quot;Failed to attach error handler: %s\n&quot;, err1)
+<a id=__codelineno-29-53 name=__codelineno-29-53></a>        return
+<a id=__codelineno-29-54 name=__codelineno-29-54></a>    }
+<a id=__codelineno-29-55 name=__codelineno-29-55></a>    var metricsMux, err2 = http.WithMetrics(errMux, metricsHandler)
+<a id=__codelineno-29-56 name=__codelineno-29-56></a>    if err2 != None {
+<a id=__codelineno-29-57 name=__codelineno-29-57></a>        fmt.Printf(&quot;Failed to attach metrics handler: %s\n&quot;, err2)
+<a id=__codelineno-29-58 name=__codelineno-29-58></a>        return
+<a id=__codelineno-29-59 name=__codelineno-29-59></a>    }
+<a id=__codelineno-29-60 name=__codelineno-29-60></a>
+<a id=__codelineno-29-61 name=__codelineno-29-61></a>    // Register routes
+<a id=__codelineno-29-62 name=__codelineno-29-62></a>    var _, routeErr = http.HandleFunc(metricsMux, &quot;/api/health&quot;, apiHandler)
+<a id=__codelineno-29-63 name=__codelineno-29-63></a>    if routeErr != None {
+<a id=__codelineno-29-64 name=__codelineno-29-64></a>        fmt.Printf(&quot;Failed to register route: %s\n&quot;, routeErr)
+<a id=__codelineno-29-65 name=__codelineno-29-65></a>        return
+<a id=__codelineno-29-66 name=__codelineno-29-66></a>    }
+<a id=__codelineno-29-67 name=__codelineno-29-67></a>
+<a id=__codelineno-29-68 name=__codelineno-29-68></a>    var setErr = http.SetHandler(server, metricsMux)[1]
+<a id=__codelineno-29-69 name=__codelineno-29-69></a>    if setErr != None {
+<a id=__codelineno-29-70 name=__codelineno-29-70></a>        fmt.Printf(&quot;Failed to set handler: %s\n&quot;, setErr)
+<a id=__codelineno-29-71 name=__codelineno-29-71></a>        return
+<a id=__codelineno-29-72 name=__codelineno-29-72></a>    }
+<a id=__codelineno-29-73 name=__codelineno-29-73></a>
+<a id=__codelineno-29-74 name=__codelineno-29-74></a>    fmt.Println(&quot;Production server starting on :8080&quot;)
+<a id=__codelineno-29-75 name=__codelineno-29-75></a>    http.ListenAndServe(server)
+<a id=__codelineno-29-76 name=__codelineno-29-76></a>}
+<a id=__codelineno-29-77 name=__codelineno-29-77></a>
+<a id=__codelineno-29-78 name=__codelineno-29-78></a>startProductionServer()
+</code></pre></div></td></tr></table></div> <h3 id=cors-configuration-with-httpwithcors>CORS Configuration with http.WithCORS</h3> <p>Use <code>http.WithCORS</code> to attach Cross-Origin Resource Sharing (CORS) settings to a mux. The CORS configuration is applied to all routes registered on that mux.</p> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>CORS Configuration</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-30-1> 1</a></span>
+<span class=normal><a href=#__codelineno-30-2> 2</a></span>
+<span class=normal><a href=#__codelineno-30-3> 3</a></span>
+<span class=normal><a href=#__codelineno-30-4> 4</a></span>
+<span class=normal><a href=#__codelineno-30-5> 5</a></span>
+<span class=normal><a href=#__codelineno-30-6> 6</a></span>
+<span class=normal><a href=#__codelineno-30-7> 7</a></span>
+<span class=normal><a href=#__codelineno-30-8> 8</a></span>
+<span class=normal><a href=#__codelineno-30-9> 9</a></span>
+<span class=normal><a href=#__codelineno-30-10>10</a></span>
+<span class=normal><a href=#__codelineno-30-11>11</a></span>
+<span class=normal><a href=#__codelineno-30-12>12</a></span>
+<span class=normal><a href=#__codelineno-30-13>13</a></span>
+<span class=normal><a href=#__codelineno-30-14>14</a></span>
+<span class=normal><a href=#__codelineno-30-15>15</a></span>
+<span class=normal><a href=#__codelineno-30-16>16</a></span>
+<span class=normal><a href=#__codelineno-30-17>17</a></span>
+<span class=normal><a href=#__codelineno-30-18>18</a></span>
+<span class=normal><a href=#__codelineno-30-19>19</a></span>
+<span class=normal><a href=#__codelineno-30-20>20</a></span>
+<span class=normal><a href=#__codelineno-30-21>21</a></span>
+<span class=normal><a href=#__codelineno-30-22>22</a></span>
+<span class=normal><a href=#__codelineno-30-23>23</a></span>
+<span class=normal><a href=#__codelineno-30-24>24</a></span>
+<span class=normal><a href=#__codelineno-30-25>25</a></span>
+<span class=normal><a href=#__codelineno-30-26>26</a></span>
+<span class=normal><a href=#__codelineno-30-27>27</a></span>
+<span class=normal><a href=#__codelineno-30-28>28</a></span>
+<span class=normal><a href=#__codelineno-30-29>29</a></span>
+<span class=normal><a href=#__codelineno-30-30>30</a></span>
+<span class=normal><a href=#__codelineno-30-31>31</a></span>
+<span class=normal><a href=#__codelineno-30-32>32</a></span>
+<span class=normal><a href=#__codelineno-30-33>33</a></span>
+<span class=normal><a href=#__codelineno-30-34>34</a></span>
+<span class=normal><a href=#__codelineno-30-35>35</a></span>
+<span class=normal><a href=#__codelineno-30-36>36</a></span>
+<span class=normal><a href=#__codelineno-30-37>37</a></span>
+<span class=normal><a href=#__codelineno-30-38>38</a></span>
+<span class=normal><a href=#__codelineno-30-39>39</a></span>
+<span class=normal><a href=#__codelineno-30-40>40</a></span>
+<span class=normal><a href=#__codelineno-30-41>41</a></span>
+<span class=normal><a href=#__codelineno-30-42>42</a></span>
+<span class=normal><a href=#__codelineno-30-43>43</a></span>
+<span class=normal><a href=#__codelineno-30-44>44</a></span>
+<span class=normal><a href=#__codelineno-30-45>45</a></span>
+<span class=normal><a href=#__codelineno-30-46>46</a></span>
+<span class=normal><a href=#__codelineno-30-47>47</a></span>
+<span class=normal><a href=#__codelineno-30-48>48</a></span>
+<span class=normal><a href=#__codelineno-30-49>49</a></span>
+<span class=normal><a href=#__codelineno-30-50>50</a></span>
+<span class=normal><a href=#__codelineno-30-51>51</a></span>
+<span class=normal><a href=#__codelineno-30-52>52</a></span>
+<span class=normal><a href=#__codelineno-30-53>53</a></span>
+<span class=normal><a href=#__codelineno-30-54>54</a></span>
+<span class=normal><a href=#__codelineno-30-55>55</a></span>
+<span class=normal><a href=#__codelineno-30-56>56</a></span>
+<span class=normal><a href=#__codelineno-30-57>57</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-30-1 name=__codelineno-30-1></a>import http
+<a id=__codelineno-30-2 name=__codelineno-30-2></a>import fmt
+<a id=__codelineno-30-3 name=__codelineno-30-3></a>
+<a id=__codelineno-30-4 name=__codelineno-30-4></a>function corsExampleHandler(request any, response any) {
+<a id=__codelineno-30-5 name=__codelineno-30-5></a>    response.setStatus(200)
+<a id=__codelineno-30-6 name=__codelineno-30-6></a>    response.write(&quot;CORS is configured correctly&quot;)
+<a id=__codelineno-30-7 name=__codelineno-30-7></a>}
+<a id=__codelineno-30-8 name=__codelineno-30-8></a>
+<a id=__codelineno-30-9 name=__codelineno-30-9></a>function startServerWithCORS() {
+<a id=__codelineno-30-10 name=__codelineno-30-10></a>    var server, serverErr = http.NewServer(&quot;:8080&quot;)
+<a id=__codelineno-30-11 name=__codelineno-30-11></a>    if serverErr != None {
+<a id=__codelineno-30-12 name=__codelineno-30-12></a>        fmt.Printf(&quot;Server error: %s\n&quot;, serverErr)
+<a id=__codelineno-30-13 name=__codelineno-30-13></a>        return
+<a id=__codelineno-30-14 name=__codelineno-30-14></a>    }
+<a id=__codelineno-30-15 name=__codelineno-30-15></a>
+<a id=__codelineno-30-16 name=__codelineno-30-16></a>    var mux, muxErr = http.NewMux()
+<a id=__codelineno-30-17 name=__codelineno-30-17></a>    if muxErr != None {
+<a id=__codelineno-30-18 name=__codelineno-30-18></a>        fmt.Printf(&quot;Mux error: %s\n&quot;, muxErr)
+<a id=__codelineno-30-19 name=__codelineno-30-19></a>        return
+<a id=__codelineno-30-20 name=__codelineno-30-20></a>    }
+<a id=__codelineno-30-21 name=__codelineno-30-21></a>
+<a id=__codelineno-30-22 name=__codelineno-30-22></a>    // Attach default CORS configuration (suitable for development)
+<a id=__codelineno-30-23 name=__codelineno-30-23></a>    var corsMux, corsErr = http.WithCORS(mux)
+<a id=__codelineno-30-24 name=__codelineno-30-24></a>    if corsErr != None {
+<a id=__codelineno-30-25 name=__codelineno-30-25></a>        fmt.Printf(&quot;CORS error: %s\n&quot;, corsErr)
+<a id=__codelineno-30-26 name=__codelineno-30-26></a>        return
+<a id=__codelineno-30-27 name=__codelineno-30-27></a>    }
+<a id=__codelineno-30-28 name=__codelineno-30-28></a>
+<a id=__codelineno-30-29 name=__codelineno-30-29></a>    // Optionally override with a stricter configuration
+<a id=__codelineno-30-30 name=__codelineno-30-30></a>    var config = {
+<a id=__codelineno-30-31 name=__codelineno-30-31></a>        &quot;allowedOrigins&quot;: [&quot;https://example.com&quot;],
+<a id=__codelineno-30-32 name=__codelineno-30-32></a>        &quot;allowedMethods&quot;: [&quot;GET&quot;, &quot;POST&quot;],
+<a id=__codelineno-30-33 name=__codelineno-30-33></a>        &quot;allowedHeaders&quot;: [&quot;Content-Type&quot;, &quot;Authorization&quot;],
+<a id=__codelineno-30-34 name=__codelineno-30-34></a>        &quot;allowCredentials&quot;: true,
+<a id=__codelineno-30-35 name=__codelineno-30-35></a>        &quot;maxAge&quot;: 600,
+<a id=__codelineno-30-36 name=__codelineno-30-36></a>    }
+<a id=__codelineno-30-37 name=__codelineno-30-37></a>    var strictMux, strictErr = http.WithCORS(corsMux, config)
+<a id=__codelineno-30-38 name=__codelineno-30-38></a>    if strictErr != None {
+<a id=__codelineno-30-39 name=__codelineno-30-39></a>        fmt.Printf(&quot;Strict CORS error: %s\n&quot;, strictErr)
+<a id=__codelineno-30-40 name=__codelineno-30-40></a>        return
+<a id=__codelineno-30-41 name=__codelineno-30-41></a>    }
+<a id=__codelineno-30-42 name=__codelineno-30-42></a>
+<a id=__codelineno-30-43 name=__codelineno-30-43></a>    var _, routeErr = http.HandleFunc(strictMux, &quot;/cors-demo&quot;, corsExampleHandler)
+<a id=__codelineno-30-44 name=__codelineno-30-44></a>    if routeErr != None {
+<a id=__codelineno-30-45 name=__codelineno-30-45></a>        fmt.Printf(&quot;Route error: %s\n&quot;, routeErr)
+<a id=__codelineno-30-46 name=__codelineno-30-46></a>        return
+<a id=__codelineno-30-47 name=__codelineno-30-47></a>    }
+<a id=__codelineno-30-48 name=__codelineno-30-48></a>
+<a id=__codelineno-30-49 name=__codelineno-30-49></a>    var setErr = http.SetHandler(server, strictMux)[1]
+<a id=__codelineno-30-50 name=__codelineno-30-50></a>    if setErr != None {
+<a id=__codelineno-30-51 name=__codelineno-30-51></a>        fmt.Printf(&quot;SetHandler error: %s\n&quot;, setErr)
+<a id=__codelineno-30-52 name=__codelineno-30-52></a>        return
+<a id=__codelineno-30-53 name=__codelineno-30-53></a>    }
+<a id=__codelineno-30-54 name=__codelineno-30-54></a>
+<a id=__codelineno-30-55 name=__codelineno-30-55></a>    fmt.Println(&quot;Server with CORS starting on :8080&quot;)
+<a id=__codelineno-30-56 name=__codelineno-30-56></a>    http.ListenAndServe(server)
+<a id=__codelineno-30-57 name=__codelineno-30-57></a>}
+</code></pre></div></td></tr></table></div> <h3 id=authentication-rate-limiting-helpers>Authentication &amp; Rate Limiting Helpers</h3> <p>The HTTP server exposes mux-level helpers for authentication and rate limiting:</p> <ul> <li><code>http.WithAuth(mux, authHandler) (mux, error)</code></li> <li><code>http.WithRateLimit(mux, rateLimitHandler) (mux, error)</code></li> <li><code>http.WithAPIKeyAuth(mux, headerName, requiredValue) (mux, error)</code></li> <li><code>http.WithSimpleIPRateLimit(mux, requestsPerMinute) (mux, error)</code></li> </ul> <p>These hooks are evaluated for routes registered with <code>http.HandleRoute</code> before your main handler.</p> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Mux-Level Auth and Rate Limiting</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-31-1> 1</a></span>
+<span class=normal><a href=#__codelineno-31-2> 2</a></span>
+<span class=normal><a href=#__codelineno-31-3> 3</a></span>
+<span class=normal><a href=#__codelineno-31-4> 4</a></span>
+<span class=normal><a href=#__codelineno-31-5> 5</a></span>
+<span class=normal><a href=#__codelineno-31-6> 6</a></span>
+<span class=normal><a href=#__codelineno-31-7> 7</a></span>
+<span class=normal><a href=#__codelineno-31-8> 8</a></span>
+<span class=normal><a href=#__codelineno-31-9> 9</a></span>
+<span class=normal><a href=#__codelineno-31-10>10</a></span>
+<span class=normal><a href=#__codelineno-31-11>11</a></span>
+<span class=normal><a href=#__codelineno-31-12>12</a></span>
+<span class=normal><a href=#__codelineno-31-13>13</a></span>
+<span class=normal><a href=#__codelineno-31-14>14</a></span>
+<span class=normal><a href=#__codelineno-31-15>15</a></span>
+<span class=normal><a href=#__codelineno-31-16>16</a></span>
+<span class=normal><a href=#__codelineno-31-17>17</a></span>
+<span class=normal><a href=#__codelineno-31-18>18</a></span>
+<span class=normal><a href=#__codelineno-31-19>19</a></span>
+<span class=normal><a href=#__codelineno-31-20>20</a></span>
+<span class=normal><a href=#__codelineno-31-21>21</a></span>
+<span class=normal><a href=#__codelineno-31-22>22</a></span>
+<span class=normal><a href=#__codelineno-31-23>23</a></span>
+<span class=normal><a href=#__codelineno-31-24>24</a></span>
+<span class=normal><a href=#__codelineno-31-25>25</a></span>
+<span class=normal><a href=#__codelineno-31-26>26</a></span>
+<span class=normal><a href=#__codelineno-31-27>27</a></span>
+<span class=normal><a href=#__codelineno-31-28>28</a></span>
+<span class=normal><a href=#__codelineno-31-29>29</a></span>
+<span class=normal><a href=#__codelineno-31-30>30</a></span>
+<span class=normal><a href=#__codelineno-31-31>31</a></span>
+<span class=normal><a href=#__codelineno-31-32>32</a></span>
+<span class=normal><a href=#__codelineno-31-33>33</a></span>
+<span class=normal><a href=#__codelineno-31-34>34</a></span>
+<span class=normal><a href=#__codelineno-31-35>35</a></span>
+<span class=normal><a href=#__codelineno-31-36>36</a></span>
+<span class=normal><a href=#__codelineno-31-37>37</a></span>
+<span class=normal><a href=#__codelineno-31-38>38</a></span>
+<span class=normal><a href=#__codelineno-31-39>39</a></span>
+<span class=normal><a href=#__codelineno-31-40>40</a></span>
+<span class=normal><a href=#__codelineno-31-41>41</a></span>
+<span class=normal><a href=#__codelineno-31-42>42</a></span>
+<span class=normal><a href=#__codelineno-31-43>43</a></span>
+<span class=normal><a href=#__codelineno-31-44>44</a></span>
+<span class=normal><a href=#__codelineno-31-45>45</a></span>
+<span class=normal><a href=#__codelineno-31-46>46</a></span>
+<span class=normal><a href=#__codelineno-31-47>47</a></span>
+<span class=normal><a href=#__codelineno-31-48>48</a></span>
+<span class=normal><a href=#__codelineno-31-49>49</a></span>
+<span class=normal><a href=#__codelineno-31-50>50</a></span>
+<span class=normal><a href=#__codelineno-31-51>51</a></span>
+<span class=normal><a href=#__codelineno-31-52>52</a></span>
+<span class=normal><a href=#__codelineno-31-53>53</a></span>
+<span class=normal><a href=#__codelineno-31-54>54</a></span>
+<span class=normal><a href=#__codelineno-31-55>55</a></span>
+<span class=normal><a href=#__codelineno-31-56>56</a></span>
+<span class=normal><a href=#__codelineno-31-57>57</a></span>
+<span class=normal><a href=#__codelineno-31-58>58</a></span>
+<span class=normal><a href=#__codelineno-31-59>59</a></span>
+<span class=normal><a href=#__codelineno-31-60>60</a></span>
+<span class=normal><a href=#__codelineno-31-61>61</a></span>
+<span class=normal><a href=#__codelineno-31-62>62</a></span>
+<span class=normal><a href=#__codelineno-31-63>63</a></span>
+<span class=normal><a href=#__codelineno-31-64>64</a></span>
+<span class=normal><a href=#__codelineno-31-65>65</a></span>
+<span class=normal><a href=#__codelineno-31-66>66</a></span>
+<span class=normal><a href=#__codelineno-31-67>67</a></span>
+<span class=normal><a href=#__codelineno-31-68>68</a></span>
+<span class=normal><a href=#__codelineno-31-69>69</a></span>
+<span class=normal><a href=#__codelineno-31-70>70</a></span>
+<span class=normal><a href=#__codelineno-31-71>71</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-31-1 name=__codelineno-31-1></a>import http
+<a id=__codelineno-31-2 name=__codelineno-31-2></a>import fmt
+<a id=__codelineno-31-3 name=__codelineno-31-3></a>
+<a id=__codelineno-31-4 name=__codelineno-31-4></a>// Custom auth handler used with http.WithAuth
+<a id=__codelineno-31-5 name=__codelineno-31-5></a>function authHandler(request any, response any) {
+<a id=__codelineno-31-6 name=__codelineno-31-6></a>    var headers = request[&quot;headers&quot;]
+<a id=__codelineno-31-7 name=__codelineno-31-7></a>    var token = headers[&quot;X-Auth-Token&quot;]
+<a id=__codelineno-31-8 name=__codelineno-31-8></a>    if token == None or token == &quot;&quot; {
+<a id=__codelineno-31-9 name=__codelineno-31-9></a>        response.setStatus(401)
+<a id=__codelineno-31-10 name=__codelineno-31-10></a>        response.write(&quot;missing auth token&quot;)
+<a id=__codelineno-31-11 name=__codelineno-31-11></a>        return
+<a id=__codelineno-31-12 name=__codelineno-31-12></a>    }
+<a id=__codelineno-31-13 name=__codelineno-31-13></a>    // In a real app, validate the token here
+<a id=__codelineno-31-14 name=__codelineno-31-14></a>    response.setHeader(&quot;X-Auth-Checked&quot;, &quot;1&quot;)
+<a id=__codelineno-31-15 name=__codelineno-31-15></a>}
+<a id=__codelineno-31-16 name=__codelineno-31-16></a>
+<a id=__codelineno-31-17 name=__codelineno-31-17></a>// Simple handler for a protected route
+<a id=__codelineno-31-18 name=__codelineno-31-18></a>function protectedHandler(request any, response any) {
+<a id=__codelineno-31-19 name=__codelineno-31-19></a>    response.json({&quot;status&quot;: &quot;ok&quot;, &quot;path&quot;: request[&quot;path&quot;]})
+<a id=__codelineno-31-20 name=__codelineno-31-20></a>}
+<a id=__codelineno-31-21 name=__codelineno-31-21></a>
+<a id=__codelineno-31-22 name=__codelineno-31-22></a>function startSecureServer() {
+<a id=__codelineno-31-23 name=__codelineno-31-23></a>    var server, serverErr = http.NewServer(&quot;:8080&quot;)
+<a id=__codelineno-31-24 name=__codelineno-31-24></a>    if serverErr != None {
+<a id=__codelineno-31-25 name=__codelineno-31-25></a>        fmt.Printf(&quot;Server error: %s\n&quot;, serverErr)
+<a id=__codelineno-31-26 name=__codelineno-31-26></a>        return
+<a id=__codelineno-31-27 name=__codelineno-31-27></a>    }
+<a id=__codelineno-31-28 name=__codelineno-31-28></a>
+<a id=__codelineno-31-29 name=__codelineno-31-29></a>    var mux, muxErr = http.NewMux()
+<a id=__codelineno-31-30 name=__codelineno-31-30></a>    if muxErr != None {
+<a id=__codelineno-31-31 name=__codelineno-31-31></a>        fmt.Printf(&quot;Mux error: %s\n&quot;, muxErr)
+<a id=__codelineno-31-32 name=__codelineno-31-32></a>        return
+<a id=__codelineno-31-33 name=__codelineno-31-33></a>    }
+<a id=__codelineno-31-34 name=__codelineno-31-34></a>
+<a id=__codelineno-31-35 name=__codelineno-31-35></a>    // Attach built-in helpers
+<a id=__codelineno-31-36 name=__codelineno-31-36></a>    var mux1, err1 = http.WithAPIKeyAuth(mux, &quot;X-API-Key&quot;, &quot;secret-123&quot;)
+<a id=__codelineno-31-37 name=__codelineno-31-37></a>    if err1 != None {
+<a id=__codelineno-31-38 name=__codelineno-31-38></a>        fmt.Printf(&quot;API key auth error: %s\n&quot;, err1)
+<a id=__codelineno-31-39 name=__codelineno-31-39></a>        return
+<a id=__codelineno-31-40 name=__codelineno-31-40></a>    }
+<a id=__codelineno-31-41 name=__codelineno-31-41></a>
+<a id=__codelineno-31-42 name=__codelineno-31-42></a>    var mux2, err2 = http.WithSimpleIPRateLimit(mux1, 60)  // 60 requests/min per IP
+<a id=__codelineno-31-43 name=__codelineno-31-43></a>    if err2 != None {
+<a id=__codelineno-31-44 name=__codelineno-31-44></a>        fmt.Printf(&quot;Rate limit error: %s\n&quot;, err2)
+<a id=__codelineno-31-45 name=__codelineno-31-45></a>        return
+<a id=__codelineno-31-46 name=__codelineno-31-46></a>    }
+<a id=__codelineno-31-47 name=__codelineno-31-47></a>
+<a id=__codelineno-31-48 name=__codelineno-31-48></a>    // Optionally layer a custom auth policy as well
+<a id=__codelineno-31-49 name=__codelineno-31-49></a>    var mux3, err3 = http.WithAuth(mux2, authHandler)
+<a id=__codelineno-31-50 name=__codelineno-31-50></a>    if err3 != None {
+<a id=__codelineno-31-51 name=__codelineno-31-51></a>        fmt.Printf(&quot;Custom auth error: %s\n&quot;, err3)
+<a id=__codelineno-31-52 name=__codelineno-31-52></a>        return
+<a id=__codelineno-31-53 name=__codelineno-31-53></a>    }
+<a id=__codelineno-31-54 name=__codelineno-31-54></a>
+<a id=__codelineno-31-55 name=__codelineno-31-55></a>    // Register a method-aware route using HandleRoute
+<a id=__codelineno-31-56 name=__codelineno-31-56></a>    var _, routeErr = http.HandleRoute(mux3, &quot;GET&quot;, &quot;/secure/{id}&quot;, protectedHandler)
+<a id=__codelineno-31-57 name=__codelineno-31-57></a>    if routeErr != None {
+<a id=__codelineno-31-58 name=__codelineno-31-58></a>        fmt.Printf(&quot;Route error: %s\n&quot;, routeErr)
+<a id=__codelineno-31-59 name=__codelineno-31-59></a>        return
+<a id=__codelineno-31-60 name=__codelineno-31-60></a>    }
+<a id=__codelineno-31-61 name=__codelineno-31-61></a>
+<a id=__codelineno-31-62 name=__codelineno-31-62></a>    var setErr = http.SetHandler(server, mux3)[1]
+<a id=__codelineno-31-63 name=__codelineno-31-63></a>    if setErr != None {
+<a id=__codelineno-31-64 name=__codelineno-31-64></a>        fmt.Printf(&quot;SetHandler error: %s\n&quot;, setErr)
+<a id=__codelineno-31-65 name=__codelineno-31-65></a>        return
+<a id=__codelineno-31-66 name=__codelineno-31-66></a>    }
+<a id=__codelineno-31-67 name=__codelineno-31-67></a>
+<a id=__codelineno-31-68 name=__codelineno-31-68></a>    fmt.Println(&quot;Secure server starting on :8080&quot;)
+<a id=__codelineno-31-69 name=__codelineno-31-69></a>    fmt.Println(&quot;Try: curl -H &#39;X-API-Key: secret-123&#39; http://localhost:8080/secure/42&quot;)
+<a id=__codelineno-31-70 name=__codelineno-31-70></a>    http.ListenAndServe(server)
+<a id=__codelineno-31-71 name=__codelineno-31-71></a>}
+</code></pre></div></td></tr></table></div> <h2 id=best-practices>Best Practices</h2> <h3 id=1-always-set-content-type>1. Always Set Content-Type</h3> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Always Set Content-Type</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-32-1>1</a></span>
+<span class=normal><a href=#__codelineno-32-2>2</a></span>
+<span class=normal><a href=#__codelineno-32-3>3</a></span>
+<span class=normal><a href=#__codelineno-32-4>4</a></span>
+<span class=normal><a href=#__codelineno-32-5>5</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-32-1 name=__codelineno-32-1></a>// Good
+<a id=__codelineno-32-2 name=__codelineno-32-2></a>http.WriteResponse(response, 200, &quot;application/json&quot;, jsonData)
+<a id=__codelineno-32-3 name=__codelineno-32-3></a>
+<a id=__codelineno-32-4 name=__codelineno-32-4></a>// Bad
+<a id=__codelineno-32-5 name=__codelineno-32-5></a>http.WriteResponse(response, 200, &quot;&quot;, jsonData)
+</code></pre></div></td></tr></table></div> <h3 id=2-handle-errors-gracefully>2. Handle Errors Gracefully</h3> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Handle Errors Gracefully</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-33-1> 1</a></span>
+<span class=normal><a href=#__codelineno-33-2> 2</a></span>
+<span class=normal><a href=#__codelineno-33-3> 3</a></span>
+<span class=normal><a href=#__codelineno-33-4> 4</a></span>
+<span class=normal><a href=#__codelineno-33-5> 5</a></span>
+<span class=normal><a href=#__codelineno-33-6> 6</a></span>
+<span class=normal><a href=#__codelineno-33-7> 7</a></span>
+<span class=normal><a href=#__codelineno-33-8> 8</a></span>
+<span class=normal><a href=#__codelineno-33-9> 9</a></span>
+<span class=normal><a href=#__codelineno-33-10>10</a></span>
+<span class=normal><a href=#__codelineno-33-11>11</a></span>
+<span class=normal><a href=#__codelineno-33-12>12</a></span>
+<span class=normal><a href=#__codelineno-33-13>13</a></span>
+<span class=normal><a href=#__codelineno-33-14>14</a></span>
+<span class=normal><a href=#__codelineno-33-15>15</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-33-1 name=__codelineno-33-1></a>function safeHandler(request map, response map) {
+<a id=__codelineno-33-2 name=__codelineno-33-2></a>    var data, err = processRequest(request)
+<a id=__codelineno-33-3 name=__codelineno-33-3></a>    if err != None {
+<a id=__codelineno-33-4 name=__codelineno-33-4></a>        http.WriteResponse(response, 500, &quot;application/json&quot;, &quot;{\&quot;error\&quot;: \&quot;Processing failed\&quot;}&quot;)
+<a id=__codelineno-33-5 name=__codelineno-33-5></a>        return
+<a id=__codelineno-33-6 name=__codelineno-33-6></a>    }
+<a id=__codelineno-33-7 name=__codelineno-33-7></a>
+<a id=__codelineno-33-8 name=__codelineno-33-8></a>    var jsonData, jsonErr = json.Marshal(data)
+<a id=__codelineno-33-9 name=__codelineno-33-9></a>    if jsonErr != None {
+<a id=__codelineno-33-10 name=__codelineno-33-10></a>        http.WriteResponse(response, 500, &quot;application/json&quot;, &quot;{\&quot;error\&quot;: \&quot;JSON encoding failed\&quot;}&quot;)
+<a id=__codelineno-33-11 name=__codelineno-33-11></a>        return
+<a id=__codelineno-33-12 name=__codelineno-33-12></a>    }
+<a id=__codelineno-33-13 name=__codelineno-33-13></a>
+<a id=__codelineno-33-14 name=__codelineno-33-14></a>    http.WriteResponse(response, 200, &quot;application/json&quot;, jsonData)
+<a id=__codelineno-33-15 name=__codelineno-33-15></a>}
+</code></pre></div></td></tr></table></div> <h3 id=3-use-appropriate-status-codes>3. Use Appropriate Status Codes</h3> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Appropriate Status Codes</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-34-1> 1</a></span>
+<span class=normal><a href=#__codelineno-34-2> 2</a></span>
+<span class=normal><a href=#__codelineno-34-3> 3</a></span>
+<span class=normal><a href=#__codelineno-34-4> 4</a></span>
+<span class=normal><a href=#__codelineno-34-5> 5</a></span>
+<span class=normal><a href=#__codelineno-34-6> 6</a></span>
+<span class=normal><a href=#__codelineno-34-7> 7</a></span>
+<span class=normal><a href=#__codelineno-34-8> 8</a></span>
+<span class=normal><a href=#__codelineno-34-9> 9</a></span>
+<span class=normal><a href=#__codelineno-34-10>10</a></span>
+<span class=normal><a href=#__codelineno-34-11>11</a></span>
+<span class=normal><a href=#__codelineno-34-12>12</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-34-1 name=__codelineno-34-1></a>// Success responses
+<a id=__codelineno-34-2 name=__codelineno-34-2></a>http.WriteResponse(response, 200, contentType, data)  // OK
+<a id=__codelineno-34-3 name=__codelineno-34-3></a>http.WriteResponse(response, 201, contentType, data)  // Created
+<a id=__codelineno-34-4 name=__codelineno-34-4></a>http.WriteResponse(response, 204, &quot;&quot;, &quot;&quot;)             // No Content
+<a id=__codelineno-34-5 name=__codelineno-34-5></a>
+<a id=__codelineno-34-6 name=__codelineno-34-6></a>// Client error responses
+<a id=__codelineno-34-7 name=__codelineno-34-7></a>http.WriteResponse(response, 400, contentType, error) // Bad Request
+<a id=__codelineno-34-8 name=__codelineno-34-8></a>http.WriteResponse(response, 401, contentType, error) // Unauthorized
+<a id=__codelineno-34-9 name=__codelineno-34-9></a>http.WriteResponse(response, 404, contentType, error) // Not Found
+<a id=__codelineno-34-10 name=__codelineno-34-10></a>
+<a id=__codelineno-34-11 name=__codelineno-34-11></a>// Server error responses
+<a id=__codelineno-34-12 name=__codelineno-34-12></a>http.WriteResponse(response, 500, contentType, error) // Internal Server Error
+</code></pre></div></td></tr></table></div> <h3 id=4-set-security-headers>4. Set Security Headers</h3> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Set Security Headers</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-35-1> 1</a></span>
+<span class=normal><a href=#__codelineno-35-2> 2</a></span>
+<span class=normal><a href=#__codelineno-35-3> 3</a></span>
+<span class=normal><a href=#__codelineno-35-4> 4</a></span>
+<span class=normal><a href=#__codelineno-35-5> 5</a></span>
+<span class=normal><a href=#__codelineno-35-6> 6</a></span>
+<span class=normal><a href=#__codelineno-35-7> 7</a></span>
+<span class=normal><a href=#__codelineno-35-8> 8</a></span>
+<span class=normal><a href=#__codelineno-35-9> 9</a></span>
+<span class=normal><a href=#__codelineno-35-10>10</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-35-1 name=__codelineno-35-1></a>function secureHandler(request map, response map) {
+<a id=__codelineno-35-2 name=__codelineno-35-2></a>    // Security headers
+<a id=__codelineno-35-3 name=__codelineno-35-3></a>    http.SetResponseHeader(response, &quot;X-Content-Type-Options&quot;, &quot;nosniff&quot;)
+<a id=__codelineno-35-4 name=__codelineno-35-4></a>    http.SetResponseHeader(response, &quot;X-Frame-Options&quot;, &quot;DENY&quot;)
+<a id=__codelineno-35-5 name=__codelineno-35-5></a>    http.SetResponseHeader(response, &quot;X-XSS-Protection&quot;, &quot;1; mode=block&quot;)
+<a id=__codelineno-35-6 name=__codelineno-35-6></a>    http.SetResponseHeader(response, &quot;Strict-Transport-Security&quot;, &quot;max-age=31536000&quot;)
+<a id=__codelineno-35-7 name=__codelineno-35-7></a>
+<a id=__codelineno-35-8 name=__codelineno-35-8></a>    // Your handler logic here
+<a id=__codelineno-35-9 name=__codelineno-35-9></a>    http.WriteResponse(response, 200, &quot;text/html&quot;, &quot;&lt;h1&gt;Secure Page&lt;/h1&gt;&quot;)
+<a id=__codelineno-35-10 name=__codelineno-35-10></a>}
+</code></pre></div></td></tr></table></div> <h3 id=5-log-requests>5. Log Requests</h3> <div class=highlight><table class=highlighttable><tr><th colspan=2 class=filename><span class=filename>Log Requests</span></th></tr><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-36-1> 1</a></span>
+<span class=normal><a href=#__codelineno-36-2> 2</a></span>
+<span class=normal><a href=#__codelineno-36-3> 3</a></span>
+<span class=normal><a href=#__codelineno-36-4> 4</a></span>
+<span class=normal><a href=#__codelineno-36-5> 5</a></span>
+<span class=normal><a href=#__codelineno-36-6> 6</a></span>
+<span class=normal><a href=#__codelineno-36-7> 7</a></span>
+<span class=normal><a href=#__codelineno-36-8> 8</a></span>
+<span class=normal><a href=#__codelineno-36-9> 9</a></span>
+<span class=normal><a href=#__codelineno-36-10>10</a></span>
+<span class=normal><a href=#__codelineno-36-11>11</a></span>
+<span class=normal><a href=#__codelineno-36-12>12</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-36-1 name=__codelineno-36-1></a>import log
+<a id=__codelineno-36-2 name=__codelineno-36-2></a>
+<a id=__codelineno-36-3 name=__codelineno-36-3></a>function loggedHandler(request map, response map) {
+<a id=__codelineno-36-4 name=__codelineno-36-4></a>    var method = request[&quot;method&quot;]
+<a id=__codelineno-36-5 name=__codelineno-36-5></a>    var path = request[&quot;path&quot;]
+<a id=__codelineno-36-6 name=__codelineno-36-6></a>    var userAgent = request[&quot;headers&quot;][&quot;User-Agent&quot;]
+<a id=__codelineno-36-7 name=__codelineno-36-7></a>
+<a id=__codelineno-36-8 name=__codelineno-36-8></a>    log.Printf(&quot;Request: %s %s from %s&quot;, method, path, userAgent)
+<a id=__codelineno-36-9 name=__codelineno-36-9></a>
+<a id=__codelineno-36-10 name=__codelineno-36-10></a>    // Your handler logic here
+<a id=__codelineno-36-11 name=__codelineno-36-11></a>    http.WriteResponse(response, 200, &quot;application/json&quot;, &quot;{\&quot;status\&quot;: \&quot;ok\&quot;}&quot;)
+<a id=__codelineno-36-12 name=__codelineno-36-12></a>}
 </code></pre></div></td></tr></table></div> <h2 id=next-steps>Next Steps</h2> <ul> <li><strong><a href=../routing/ >Routing &amp; Mux</a></strong> - Learn about URL routing and request multiplexing</li> <li><strong><a href=../middleware/ >Middleware</a></strong> - Implement middleware for cross-cutting concerns</li> <li><strong><a href=../auth/ >Authentication</a></strong> - Handle authentication and authorization</li> <li><strong><a href=../cookies/ >Cookies &amp; Sessions</a></strong> - Manage cookies and user sessions</li> </ul> </article> </div> <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script> <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script> </div> <button type=button class="md-top md-icon" data-md-component=top hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg> Back to top </button> </main> <footer class=md-footer> <nav class="md-footer__inner md-grid" aria-label=Footer> <a href=../responses/ class="md-footer__link md-footer__link--prev" aria-label="Previous: Response Handling"> <div class="md-footer__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg> </div> <div class=md-footer__title> <span class=md-footer__direction> Previous </span> <div class=md-ellipsis> Response Handling </div> </div> </a> <a href=../routing/ class="md-footer__link md-footer__link--next" aria-label="Next: Routing & Mux"> <div class=md-footer__title> <span class=md-footer__direction> Next </span> <div class=md-ellipsis> Routing & Mux </div> </div> <div class="md-footer__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg> </div> </a> </nav> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-copyright> <div class=md-copyright__highlight> © 2025 Harneet Programming Language — Built with ❤️ by Gagan Janjua </div> </div> </div> </div> </footer> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <div class=md-progress data-md-component=progress role=progressbar></div> <script id=__config type=application/json>{"base": "../../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.expand", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "toc.integrate", "search.suggest", "search.highlight", "search.share", "header.autohide", "content.tabs.link", "content.code.copy", "content.code.annotate", "content.code.select", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script> <script src=../../../assets/javascripts/bundle.f55a23d4.min.js></script> </body> </html>
